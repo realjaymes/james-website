@@ -29,11 +29,20 @@
   --radius-sm: 12px;
   --serif: "Fraunces", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
   --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
 
   /* Warm, pink-tinted shadows instead of neutral grey — a felt brand touch, not just a color swap */
   --shadow: 0 16px 40px rgba(194, 49, 143, 0.14), 0 4px 14px rgba(28, 20, 34, 0.06);
   --shadow-sm: 0 6px 18px rgba(194, 49, 143, 0.10);
+
+  /* Dark section tokens — alternating rhythm, borrowed legitimately from
+     James's own MIA site (dark hero -> cream body), not from WG/Jasmine */
+  --ink-bg: #17101c;
+  --ink-bg-2: #1f1626;
+  --cream-on-ink: #F3EEE8;
+  --cream-on-ink-dim: rgba(243, 238, 232, 0.66);
+  --line-on-ink: rgba(243, 238, 232, 0.14);
 }
 
 * { box-sizing: border-box; }
@@ -99,6 +108,87 @@ p { margin: 0; }
   text-transform: uppercase;
   color: var(--accent);
 }
+
+/* ---------- Systems motif: numbered labels + node-line dividers ----------
+   James's own positioning is "systems, not tactics" — this is the visual
+   translation of that: numbered sections wired together by a dotted
+   connector line, like a diagram, instead of a generic uppercase eyebrow. */
+
+.num-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+.num-label .num {
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+}
+.num-label .num-line {
+  flex: 1;
+  max-width: 120px;
+  height: 1px;
+  background-image: linear-gradient(to right, var(--line-strong) 0 4px, transparent 4px 9px);
+  background-size: 9px 1px;
+  background-repeat: repeat-x;
+}
+.num-label .num-tag {
+  font-family: var(--sans);
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+:root[data-ink-section] .num-label .num-tag,
+.section-dark .num-label .num-tag { color: var(--cream-on-ink-dim); }
+.section-dark .num-label .num-line { background-image: linear-gradient(to right, var(--line-on-ink) 0 4px, transparent 4px 9px); }
+
+.node-dot {
+  position: relative;
+}
+.node-dot::before {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  left: -3px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* A reusable dotted node-line rule, standing in for a section divider */
+.node-rule {
+  border: none;
+  height: 1px;
+  margin: 0;
+  background-image: radial-gradient(circle, var(--line-strong) 1.4px, transparent 1.6px), linear-gradient(to right, var(--line) 0 6px, transparent 6px 14px);
+  background-size: 14px 100%, 14px 1px;
+  background-repeat: repeat-x;
+  background-position: center;
+}
+
+/* ---------- Dark section rhythm ---------- */
+
+.section-dark {
+  background: var(--ink-bg);
+  background-image: radial-gradient(circle at 15% 20%, rgba(194, 49, 143, 0.16), transparent 45%), radial-gradient(circle at 85% 80%, rgba(241, 222, 113, 0.08), transparent 45%);
+  color: var(--cream-on-ink);
+}
+.section-dark h1, .section-dark h2, .section-dark h3, .section-dark h4 { color: var(--cream-on-ink); }
+.section-dark p, .section-dark .lede { color: var(--cream-on-ink-dim); }
+.section-dark .eyebrow { color: var(--yellow); }
+.section-dark .stat-strip { border-color: var(--line-on-ink); }
+.section-dark .stat-strip div { border-color: var(--line-on-ink); }
+.section-dark .stat-strip strong { color: var(--yellow); }
+.section-dark .stat-strip span { color: var(--cream-on-ink-dim); }
+.section-dark .btn-ghost { border-color: rgba(243, 238, 232, 0.3); color: var(--cream-on-ink); }
+.section-dark .btn-ghost:hover { border-color: var(--yellow); }
 
 /* ---------- Nav ---------- */
 
@@ -240,6 +330,15 @@ section { padding: 96px 0; }
   max-width: 15ch;
 }
 
+.hero h1 .hl {
+  color: var(--accent-strong);
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+}
+
 .hero .lede {
   margin-top: 24px;
   font-size: 19px;
@@ -295,6 +394,8 @@ section { padding: 96px 0; }
 
 /* ---------- Cards ---------- */
 
+.case-list { display: flex; flex-direction: column; gap: 16px; }
+
 .card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
 @media (max-width: 980px) { .card-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 640px) { .card-grid { grid-template-columns: 1fr; } }
@@ -311,44 +412,73 @@ section { padding: 96px 0; }
 @media (max-width: 760px) { .two-col { grid-template-columns: 1fr; gap: 32px; } }
 
 .case-card {
-  display: block;
+  display: grid;
+  grid-template-columns: 34% 1fr;
   background: var(--bg-card);
   border: 1px solid var(--line);
+  border-left: 3px solid transparent;
   border-radius: var(--radius);
   overflow: hidden;
+  position: relative;
   transition: border-color 0.25s var(--ease), box-shadow 0.25s var(--ease);
   will-change: transform;
 }
-.case-card:hover { border-color: var(--line-strong); }
+.case-card:hover { border-color: var(--line-strong); border-left-color: var(--accent); }
 
 .case-card .thumb {
-  aspect-ratio: 16 / 10;
   overflow: hidden;
   background: var(--bg);
+  position: relative;
 }
-.case-card .thumb img { width: 100%; height: 100%; object-fit: cover; }
+.case-card .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; min-height: 140px; }
 
-.case-card .body { padding: 22px; }
+.case-card .body { padding: 22px 22px 22px 20px; position: relative; display: flex; flex-direction: column; }
+.case-card .idx {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-family: var(--serif);
+  font-size: 34px;
+  font-weight: 500;
+  color: var(--line-strong);
+  line-height: 1;
+}
 .case-card .tag {
-  font-size: 11.5px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--accent);
 }
 .case-card h3 {
-  font-size: 18px;
+  font-size: 17px;
   margin-top: 10px;
   color: var(--ink);
   font-family: var(--sans);
   font-weight: 600;
   line-height: 1.4;
+  padding-right: 30px;
 }
-.case-card h3 strong { color: var(--ink); font-weight: 700; }
+.case-card h3 strong {
+  display: block;
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--accent-strong);
+  margin-bottom: 2px;
+}
 .case-card .credit {
-  margin-top: 10px;
-  font-size: 13.5px;
+  margin-top: auto;
+  padding-top: 10px;
+  font-size: 13px;
   color: var(--text-faint);
+  border-top: 1px dashed var(--line);
+}
+
+@media (max-width: 760px) {
+  .case-card { grid-template-columns: 1fr; }
+  .case-card .thumb { aspect-ratio: 16 / 9; }
 }
 
 .proj-card {
@@ -494,13 +624,27 @@ section { padding: 96px 0; }
   border: 1px solid var(--line);
   border-left: 4px solid var(--yellow);
   border-radius: var(--radius);
-  padding: 32px;
+  padding: 40px 32px 32px;
   margin: 48px 0;
   display: flex;
   gap: 22px;
   align-items: flex-start;
+  position: relative;
+  overflow: hidden;
 }
-.case-quote img { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+.case-quote::before {
+  content: "\201C";
+  position: absolute;
+  top: -18px;
+  left: 20px;
+  font-family: var(--serif);
+  font-size: 110px;
+  color: var(--accent-dim);
+  line-height: 1;
+  z-index: 0;
+}
+.case-quote img { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; flex-shrink: 0; position: relative; z-index: 1; }
+.case-quote > div { position: relative; z-index: 1; }
 .case-quote p { font-family: var(--serif); font-size: 21px; color: var(--ink); line-height: 1.5; font-style: italic; }
 .case-quote cite { display: block; margin-top: 16px; font-size: 14px; color: var(--text-faint); font-style: normal; }
 @media (max-width: 600px) { .case-quote { flex-direction: column; } }
