@@ -5,17 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Work — James Praise</title>
 <meta name="description" content="Client case studies, self-built side projects, and job-application pitch microsites from James Praise." />
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+<link rel="canonical" href="https://jamespraise.xyz/work/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Work — James Praise" />
+<meta property="og:description" content="Client case studies, self-built side projects, and job-application pitch microsites from James Praise." />
+<meta property="og:url" content="https://jamespraise.xyz/work/" />
+<meta property="og:image" content="https://jamespraise.xyz/assets/images/james-headshot.jpeg" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Work — James Praise" />
+<meta name="twitter:description" content="Client case studies, self-built side projects, and job-application pitch microsites from James Praise." />
+<meta name="twitter:image" content="https://jamespraise.xyz/assets/images/james-headshot.jpeg" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
+<a href="#main" class="skip-link">Skip to content</a>
 
 <nav class="site-nav">
   <div class="wrap">
     <a href="/" class="nav-name">James Praise</a>
-    <ul class="nav-links">
+    <ul class="nav-links" id="primary-nav">
       <li><a href="/">Home</a></li>
       <li><a href="/work/" aria-current="page">Work</a></li>
       <li><a href="/about/">About</a></li>
@@ -24,21 +36,26 @@
       <li><a href="/reviews/">Reviews</a></li>
     </ul>
     <a href="mailto:james@marketinginaction.xyz" class="nav-cta">Get in touch</a>
-    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">☰</button>
   </div>
 </nav>
 
+<main id="main">
+
 <header class="hero" style="padding-bottom: 56px;">
-  <div class="wrap reveal-blur">
-    <h1 style="max-width: 24ch;">Hi, I'm James.</h1>
-    <p class="lede">I'm a Product &amp; Growth Marketing consultant with 7+ years of experience helping SaaS startups launch, scale, and grow with clarity and execution.</p>
-    <ul style="margin-top: 22px; color: var(--text-dim); font-size: 16px; line-height: 1.7; max-width: 60ch; padding-left: 20px;">
-      <li>15+ product launches across SaaS teams in the US, Africa, and Europe.</li>
-      <li>$10M+ in revenue pipeline generated through positioning, GTM, and lifecycle programs.</li>
-      <li>500%+ customer growth and 35% lift in SQLs across projects.</li>
-      <li>Built and open-sourced 30+ AI agent skills for marketing &amp; GTM, now used by AI-native GTM teams worldwide.</li>
-      <li>Published 50+ playbooks, templates, and breakdowns across product marketing, growth marketing, GTM engineering, AI, strategy, content, lifecycle, demand generation, and PLG.</li>
-    </ul>
+  <div class="wrap reveal-blur" style="display: flex; gap: 28px; align-items: center; flex-wrap: wrap;">
+    <img src="/assets/images/james-headshot.jpeg" alt="James Praise" style="width: 84px; height: 84px; border-radius: 50%; object-fit: cover; border: 3px solid var(--yellow); flex-shrink: 0;" />
+    <div style="min-width: 0;">
+      <h1 style="max-width: 24ch;">Hi, I'm James.</h1>
+      <p class="lede">I'm a Product &amp; Growth Marketing consultant with 7+ years of experience helping SaaS startups launch, scale, and grow with clarity and execution.</p>
+      <ul style="margin-top: 22px; color: var(--text-dim); font-size: 16px; line-height: 1.7; max-width: 60ch; padding-left: 20px;">
+        <li>15+ product launches across SaaS teams in the US, Africa, and Europe.</li>
+        <li>$10M+ in revenue pipeline generated through positioning, GTM, and lifecycle programs.</li>
+        <li>500%+ customer growth and 35% lift in SQLs across projects.</li>
+        <li>Built and open-sourced 30+ AI agent skills for marketing &amp; GTM, now used by AI-native GTM teams worldwide.</li>
+        <li>Published 50+ playbooks, templates, and breakdowns across product marketing, growth marketing, GTM engineering, AI, strategy, content, lifecycle, demand generation, and PLG.</li>
+      </ul>
+    </div>
   </div>
 </header>
 
@@ -48,8 +65,15 @@
       <p class="eyebrow">My background</p>
       <p class="lede" style="max-width: 68ch;">Over the past 7 years, I've worked with early to growth stage companies across 3 continents (Africa, North America, and Europe), leading go-to-market (GTM) strategy, customer acquisition, and demand generation efforts. I've partnered with bootstrapped, seed, and Series A startups across B2B, SaaS, Fintech, HRTech, EdTech, HealthTech and MarTech. I've also been a founding marketer multiple times, building marketing functions from the ground up at Reform, FunnelEnvy, Bujeti, Distrobird, and Cecure Intelligence, while mentoring founders through SBC Afritech and PAADC accelerators.</p>
     </div>
-    <div class="skills-fig reveal-blur" style="margin-bottom: 64px;">
+    <div class="skills-fig reveal-blur">
       <img src="/assets/images/t-shaped-marketer.png" alt="James's T-shaped marketing skill map" loading="lazy" />
+    </div>
+
+    <div class="reveal-blur" style="margin: 40px 0 64px; text-align: center;">
+      <a href="https://marketinginaction.xyz/consulting/" class="btn btn-primary" target="_blank" rel="noopener">Engage me for Product Marketing Services →</a>
+      <div style="margin-top: 40px; opacity: 0.7;">
+        <img src="/assets/images/social-proof-logos.png" alt="Trusted by 30+ founders, GTM operators and accelerators" loading="lazy" style="max-width: 100%; margin: 0 auto;" />
+      </div>
     </div>
 
     <div class="work-tabs reveal-blur">
@@ -223,15 +247,44 @@
       </div>
     </div>
 
+    <div class="section-head reveal-blur" style="margin-top: 40px;">
+      <h2>Get in touch</h2>
+      <p class="lede" style="font-style: italic; margin-top: 8px;">Let's build something meaningful together.</p>
+    </div>
+    <div class="hero-actions reveal-blur">
+      <a href="https://forms.gle/uYCF8qH48GKc1VTm9" class="btn btn-primary" target="_blank" rel="noopener">📞 Book a call to get started</a>
+      <a href="mailto:james@marketinginaction.xyz" class="btn btn-ghost">📧 Email me</a>
+    </div>
+
+    <div class="section-head reveal-blur" style="margin-top: 64px;">
+      <h2>Marketing agent skills on GitHub</h2>
+      <p class="lede">I have built and open-sourced 25+ marketing skills (and constantly adding more) that cover the core workflows marketers and GTM operators run every week. They are free, and anyone can install them.</p>
+    </div>
+    <a href="https://github.com/realjaymes/marketingagentskills" class="btn btn-ghost reveal-blur" target="_blank" rel="noopener">github.com/realjaymes/marketingagentskills →</a>
+
+    <div class="section-head reveal-blur" style="margin-top: 64px;">
+      <h2>Get product &amp; growth marketing resources</h2>
+      <p class="lede">I've published 50+ playbooks, templates, and breakdowns across product marketing, growth marketing, GTM engineering, AI, strategy, content, lifecycle, demand generation, and PLG.</p>
+    </div>
+    <a href="https://marketinginaction.xyz/resources/" class="btn btn-ghost reveal-blur" target="_blank" rel="noopener">MIA Resources →</a>
+
+    <div class="section-head reveal-blur" style="margin-top: 64px; margin-bottom: 0;">
+      <h2>Ask me anything</h2>
+      <p class="lede">I built an AI version of myself that can give you answers to questions about positioning, messaging, GTM strategy, lifecycle setups, growth experiments, tools, and templates, with context-rich answers that reflect how I think and work.</p>
+    </div>
+    <a href="https://www.superme.ai/realjaymes" class="btn btn-primary reveal-blur" style="margin-top: 24px;" target="_blank" rel="noopener">Ask my AI clone →</a>
+
   </div>
 </section>
+
+</main>
 
 <footer class="site-footer">
   <div class="wrap">
     <div class="footer-grid">
       <div>
         <div class="footer-name">James Praise</div>
-        <p class="footer-tag">Product marketing and GTM operator. Founder of Marketing In Action, cofounder at Titaja.</p>
+        <p class="footer-tag">Product marketing and GTM operator. Founder of Marketing In Action, cofounder at <a href="https://www.titaja.com" target="_blank" rel="noopener">Titaja</a>.</p>
       </div>
       <div class="footer-links">
         <a href="mailto:james@marketinginaction.xyz">Email</a>

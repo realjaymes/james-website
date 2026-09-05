@@ -6,17 +6,29 @@ document.addEventListener("DOMContentLoaded", function () {
   var toggle = document.querySelector(".menu-toggle");
   var links = document.querySelector(".nav-links");
   if (toggle && links) {
+    var closeMenu = function () {
+      links.classList.remove("is-open");
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.textContent = "☰";
+    };
     toggle.addEventListener("click", function () {
       var open = links.classList.toggle("is-open");
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
       toggle.textContent = open ? "✕" : "☰";
     });
     links.querySelectorAll("a").forEach(function (a) {
-      a.addEventListener("click", function () {
-        links.classList.remove("is-open");
-        toggle.setAttribute("aria-expanded", "false");
-        toggle.textContent = "☰";
-      });
+      a.addEventListener("click", closeMenu);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && links.classList.contains("is-open")) {
+        closeMenu();
+        toggle.focus();
+      }
+    });
+    document.addEventListener("click", function (e) {
+      if (links.classList.contains("is-open") && !links.contains(e.target) && e.target !== toggle) {
+        closeMenu();
+      }
     });
   }
 
@@ -61,9 +73,14 @@ document.addEventListener("DOMContentLoaded", function () {
   if (tabs.length) {
     var categories = document.querySelectorAll("[data-work-category]");
     tabs.forEach(function (tab) {
+      tab.setAttribute("aria-pressed", tab.classList.contains("is-active") ? "true" : "false");
       tab.addEventListener("click", function () {
-        tabs.forEach(function (t) { t.classList.remove("is-active"); });
+        tabs.forEach(function (t) {
+          t.classList.remove("is-active");
+          t.setAttribute("aria-pressed", "false");
+        });
         tab.classList.add("is-active");
+        tab.setAttribute("aria-pressed", "true");
         var target = tab.getAttribute("data-target");
         categories.forEach(function (cat) {
           if (target === "all" || cat.getAttribute("data-work-category") === target) {
