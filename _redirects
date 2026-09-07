@@ -1,0 +1,8 @@
+# Old Notion-era paths, redirected to their new home now that this domain
+# serves the real coded site instead of the "notion" Cloudflare Worker.
+/blog  /writing/  301!
+/learn  https://marketinginaction.xyz/academy/  301!
+/reviews  /about/  301!
+/services  https://marketinginaction.xyz/services/  301!
+/partners  https://marketinginaction.xyz/  301!
+/miaresources  https://marketinginaction.xyz/resources/  301!
