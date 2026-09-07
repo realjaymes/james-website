@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+# Legacy Notion-era redirect stubs and the personalized hiring pitch card: keep out of search crawl.
+Disallow: /blog/
+Disallow: /learn/
+Disallow: /reviews/
+Disallow: /services/
+Disallow: /partners/
+Disallow: /miaresources/
+Disallow: /work/why-hire-me/
+
+Sitemap: https://jamespraise.xyz/sitemap.xml
