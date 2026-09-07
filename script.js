@@ -312,4 +312,54 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
+
+  // ---- Pitch deck: interactive slide navigation for personalized job-pitch pages ----
+  var pitchDeck = document.querySelector(".pitch-deck");
+  if (pitchDeck) {
+    var slides = Array.prototype.slice.call(pitchDeck.querySelectorAll(".pitch-slide"));
+    var current = 0;
+
+    var prevBtn = document.createElement("button");
+    prevBtn.className = "pitch-nav-arrow pitch-nav-prev";
+    prevBtn.setAttribute("aria-label", "Previous slide");
+    prevBtn.innerHTML = "&#8592;";
+
+    var nextBtn = document.createElement("button");
+    nextBtn.className = "pitch-nav-arrow pitch-nav-next";
+    nextBtn.setAttribute("aria-label", "Next slide");
+    nextBtn.innerHTML = "&#8594;";
+
+    var progress = document.createElement("div");
+    progress.className = "pitch-progress";
+    var dots = slides.map(function (_, i) {
+      var dot = document.createElement("button");
+      dot.className = "pitch-progress-dot";
+      dot.setAttribute("aria-label", "Go to slide " + (i + 1));
+      dot.addEventListener("click", function () { goTo(i); });
+      progress.appendChild(dot);
+      return dot;
+    });
+
+    document.body.appendChild(prevBtn);
+    document.body.appendChild(nextBtn);
+    document.body.appendChild(progress);
+
+    function goTo(i) {
+      current = Math.max(0, Math.min(slides.length - 1, i));
+      slides.forEach(function (s, idx) { s.classList.toggle("is-active", idx === current); });
+      dots.forEach(function (d, idx) { d.classList.toggle("is-active", idx === current); });
+      prevBtn.disabled = current === 0;
+      nextBtn.disabled = current === slides.length - 1;
+    }
+
+    prevBtn.addEventListener("click", function () { goTo(current - 1); });
+    nextBtn.addEventListener("click", function () { goTo(current + 1); });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowRight") goTo(current + 1);
+      if (e.key === "ArrowLeft") goTo(current - 1);
+    });
+
+    goTo(0);
+  }
 });

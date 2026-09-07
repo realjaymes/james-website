@@ -8,5 +8,9 @@ Disallow: /services/
 Disallow: /partners/
 Disallow: /miaresources/
 Disallow: /work/why-hire-me/
+# Personalized job-pitch pages and their resume/cover-letter PDFs: private
+# links sent to one company, never indexed. The pages also carry their own
+# noindex meta tag; this covers the PDF files, which meta tags can't reach.
+Disallow: /work/*/files/
 
 Sitemap: https://jamespraise.xyz/sitemap.xml

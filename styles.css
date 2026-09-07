@@ -5313,3 +5313,203 @@ body.panel-open {
 body:has(.portrait-hero--flush) {
   background: #100a16;
 }
+
+/* =========================================
+   Pitch Deck (interactive personalized job-pitch pages)
+   ========================================= */
+.pitch-deck {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(1200px 600px at 30% 10%, rgba(241, 222, 113, 0.06), transparent 60%),
+    radial-gradient(900px 600px at 80% 20%, rgba(113, 132, 241, 0.10), transparent 55%),
+    var(--color-black);
+  z-index: 100;
+}
+
+.pitch-slide {
+  position: absolute;
+  inset: 0;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: safe center;
+  padding: 90px var(--space-lg) 80px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.pitch-slide.is-active { display: flex; }
+
+.pitch-slide-inner {
+  max-width: 680px;
+  width: 100%;
+  margin: auto;
+}
+
+.pitch-eyebrow {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-sm);
+}
+
+.pitch-slide h1 {
+  color: #fff;
+  font-size: clamp(28px, 4.5vw, 42px);
+  line-height: 1.15;
+  margin-bottom: var(--space-md);
+}
+
+.pitch-slide h2 {
+  color: #fff;
+  font-size: clamp(22px, 3.5vw, 30px);
+  margin-bottom: var(--space-md);
+}
+
+.pitch-slide p {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: var(--space-md);
+}
+
+.pitch-slide p a {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+.pitch-credit {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: var(--space-lg) 0;
+}
+
+.pitch-credit img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.pitch-credit span {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 14px;
+}
+
+.pitch-credit strong { color: #fff; }
+
+.pitch-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+}
+
+.pitch-stat {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  text-align: center;
+}
+
+.pitch-stat strong {
+  display: block;
+  font-size: 26px;
+  color: var(--color-accent);
+  margin-bottom: 4px;
+}
+
+.pitch-stat span {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 640px) {
+  .pitch-stats { grid-template-columns: 1fr; }
+  .pitch-slide { padding: 80px var(--space-md) 70px; }
+}
+
+.pitch-exit {
+  position: fixed;
+  top: var(--space-md);
+  left: var(--space-md);
+  z-index: 110;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  display: block;
+}
+
+.pitch-exit img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.pitch-nav-arrow {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 110;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background var(--ease), opacity var(--ease);
+}
+
+.pitch-nav-arrow:hover { background: rgba(255, 255, 255, 0.16); }
+.pitch-nav-arrow[disabled] { opacity: 0.2; cursor: default; pointer-events: none; }
+.pitch-nav-prev { left: var(--space-md); }
+.pitch-nav-next { right: var(--space-md); }
+
+@media (max-width: 640px) {
+  .pitch-nav-arrow { width: 38px; height: 38px; }
+}
+
+.pitch-progress {
+  position: fixed;
+  bottom: var(--space-md);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 110;
+  display: flex;
+  gap: 8px;
+}
+
+.pitch-progress-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.22);
+  transition: background var(--ease), transform var(--ease);
+  cursor: pointer;
+}
+
+.pitch-progress-dot.is-active {
+  background: var(--color-accent);
+  transform: scale(1.3);
+}
+
+.pitch-deck .button-secondary {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.pitch-deck .button-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
