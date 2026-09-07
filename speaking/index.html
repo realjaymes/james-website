@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Speaking — James Praise</title>
 <meta name="description" content="Panels, podcasts, webinars, and masterclasses James Praise has spoken at or moderated." />
-<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
 <link rel="canonical" href="https://jamespraise.xyz/speaking/" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Speaking — James Praise" />
@@ -16,402 +18,521 @@
 <meta name="twitter:title" content="Speaking — James Praise" />
 <meta name="twitter:description" content="Panels, podcasts, webinars, and masterclasses James Praise has spoken at or moderated." />
 <meta name="twitter:image" content="https://jamespraise.xyz/assets/images/james-headshot.jpeg" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/styles.css" />
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=18" />
 </head>
-<body>
+<body class="has-dark-hero">
 <a href="#main" class="skip-link">Skip to content</a>
 
-<nav class="site-nav">
-  <div class="wrap">
-    <a href="/" class="nav-name">James Praise</a>
-    <ul class="nav-links" id="primary-nav">
-      <li><a href="/">Home</a></li>
-      <li><a href="/work/">Work</a></li>
-      <li><a href="/about/">About</a></li>
-      <li><a href="/speaking/" aria-current="page">Speaking</a></li>
-      <li><a href="/writing/">Writing</a></li>
-      <li><a href="/reviews/">Reviews</a></li>
-    </ul>
-    <a href="mailto:james@marketinginaction.xyz" class="nav-cta">Get in touch</a>
-    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">☰</button>
-  </div>
-</nav>
+<header>
+  <div class="container nav">
+    <a class="logo" href="/" aria-label="James Praise Home">
+      <img src="/assets/images/james-headshot.jpeg" alt="James Praise" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; display: block;" />
+    </a>
 
-<main id="main">
+    <button class="menu-button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+      <span class="menu-icon" aria-hidden="true"></span>
+    </button>
 
-<header class="hero" style="padding-bottom: 56px;">
-  <div class="wrap reveal-blur">
-    <p class="eyebrow">Community Builder | Marketing Strategist | Teacher | Mentor</p>
-    <h1 style="max-width: 20ch;">Here are some of my contributions as a Speaker and Mentor.</h1>
-    <p class="lede">I believe that the best ideas are those that move people to action. My talks are rooted in real-world experience, practical frameworks, and a deep passion for helping others grow.</p>
-    <div class="hero-actions">
-      <a href="https://youtube.com/playlist?list=PL9hp_79BJlXqbvW2hS12O_q8Aq35nn9rg&si=QEQi1UzpUTFwpWMY" class="btn btn-ghost" target="_blank" rel="noopener">Watch the playlist on YouTube →</a>
-    </div>
+    <nav id="primary-nav" class="nav-links" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/work/">Work</a>
+      <a href="/about/">About</a>
+      <a href="/speaking/" aria-current="page">Speaking</a>
+      <a href="/writing/">Writing</a>
+    </nav>
+
+    <a href="mailto:james@marketinginaction.xyz?subject=Speaking%20Inquiry&body=Hi%20James%2C%0A%0AI%27d%20like%20to%20book%20you%20to%20speak%20at%20an%20upcoming%20event.%20Here%20are%20some%20details%3A%0A%0AEvent%20name%3A%0ADate%3A%0AFormat%20%28panel%2C%20keynote%2C%20workshop%2C%20or%20podcast%29%3A%0AAudience%3A%0A%0ALet%20me%20know%20if%20you%27re%20available." class="button nav-cta">Talk to James</a>
   </div>
 </header>
 
-<section style="padding-top: 0;">
-  <div class="wrap">
-    <div class="talk-list reveal-blur">
-      <div class="talk-item">
-        <div><span class="talk-role">Moderator</span><br>MarTech Africa 3.0</div>
-        <div>
-          <h3>Customer Retention Panel</h3>
+<main id="main">
+
+<section class="portrait-hero portrait-hero--photo-bg" style="background-image: url('/assets/images/james-speaking-1.jpg');">
+  <div class="container">
+    <div class="portrait-hero-text reveal-blur">
+      <p class="eyebrow">Community Builder | Marketing Strategist | Teacher | Mentor</p>
+      <h1 style="max-width: 20ch;">Some of my contributions as a Speaker and Mentor</h1>
+      <p style="font-size: 18px; max-width: 68ch;">I believe that the best ideas are those that move people to action. My talks are rooted in real-world experience, practical frameworks, and a deep passion for helping others grow.</p>
+      <div class="button-row">
+        <a href="/speaking/speaker-profile/" class="button button-secondary">Speaker Profile</a>
+        <a href="/speaking/press-kit/" class="button button-secondary">Press Kit</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="talk-tabs reveal-blur" data-tabs>
+      <button type="button" class="talk-tab is-active" data-tab-target="engagements">Speaking Engagements</button>
+      <button type="button" class="talk-tab" data-tab-target="media">Media Features</button>
+    </div>
+
+    <p class="muted" data-tab-panel="engagements" style="margin-top: var(--space-md);">I've said a lot of things on a lot of stages. Here's some of it.</p>
+    <p class="muted" data-tab-panel="media" hidden style="margin-top: var(--space-md);">People say a lot of things about a lot of things. Here's what they say about me.</p>
+
+    <div class="talk-year-filter" data-tab-panel="engagements" data-year-filter="engagements">
+      <button type="button" class="year-pill is-active" data-year="all">All</button>
+      <button type="button" class="year-pill" data-year="2026">2026</button>
+      <button type="button" class="year-pill" data-year="2025">2025</button>
+      <button type="button" class="year-pill" data-year="2024">2024</button>
+      <button type="button" class="year-pill" data-year="2023">2023</button>
+    </div>
+    <div class="talk-year-filter" data-tab-panel="media" data-year-filter="media" hidden>
+      <button type="button" class="year-pill is-active" data-year="all">All</button>
+      <button type="button" class="year-pill" data-year="2026">2026</button>
+      <button type="button" class="year-pill" data-year="2025">2025</button>
+      <button type="button" class="year-pill" data-year="2024">2024</button>
+      <button type="button" class="year-pill" data-year="2023">2023</button>
+    </div>
+
+    <div data-tab-panel="engagements">
+      <div class="talk-grid" style="margin-top: var(--space-lg);">
+      <a class="talk-card" href="https://www.linkedin.com/posts/martechafrica_martechafrica-customerretention-b2bsaas-activity-7429184073828306945-KLEj?utm_source=share&utm_medium=member_desktop&rcm=ACoAACka5a0BB-i2OGZUu4f4L8Xmy6Fd5-KCOkA" target="_blank" rel="noopener" data-year-card="2026">
+          <div class="csc-card-meta">
+            <span class="csc-tag">Moderator</span>
+            <span class="csc-date">2026</span>
+          </div>
+          <h3 class="csc-headline">Customer Retention Panel</h3>
           <p>Moderated a panel discussion on customer retention, guiding a conversation on lifecycle marketing, customer experience, and long-term growth strategies for African startups and digital businesses.</p>
-          <a class="talk-link" href="https://www.linkedin.com/posts/martechafrica_martechafrica-customerretention-b2bsaas-activity-7429184073828306945-KLEj?utm_source=share&utm_medium=member_desktop&rcm=ACoAACka5a0BB-i2OGZUu4f4L8Xmy6Fd5-KCOkA" target="_blank" rel="noopener">Watch / read →</a>
-        </div>
-      </div>
+          <p class="csc-credit">MarTech Africa 3.0</p>
+          <span class="csc-link">View More &rarr;</span>
+      </a>
 
-      <div class="talk-item">
-        <div><span class="talk-role">Guest</span><br>Tech Talk Podcast</div>
-        <div>
-          <h3>Tech Talk Podcast</h3>
-          <p>I joined the Tech Talk Podcast to discuss how technology is reshaping B2B relationships and revenue, from CRM strategy to automation and leadership thinking.</p>
-          <a class="talk-link" href="https://youtu.be/K0Jb7SExkY8?si=e8l9Hp5St2CwvChs" target="_blank" rel="noopener">Watch / read →</a>
-        </div>
-      </div>
-
-      <div class="talk-item">
-        <div><span class="talk-role">MIA Webinar Host</span><br>AI Prompt Frameworks for Marketers</div>
-        <div>
-          <h3>AI Prompt Frameworks for Marketers</h3>
-          <p>I hosted a workshop where I taught the prompt engineering framework behind my 40 plus Custom GPTs. I showed marketers how to build clear, reusable prompts using my nine-step structure and shared examples from real projects.</p>
-          <a class="talk-link" href="https://luma.com/toamdyhv" target="_blank" rel="noopener">Watch / read →</a>
-        </div>
-      </div>
-
-      <div class="talk-item">
-        <div><span class="talk-role">Panelist</span><br>Break Into Product Marketing</div>
-        <div>
-          <h3>Building GTM Motion as a Solo PMM in B2B and B2C</h3>
+      <a class="talk-card" href="https://productmarketingclinic.substack.com/p/break-into-product-marketing-part-82c" target="_blank" rel="noopener" data-year-card="2025">
+          <div class="csc-card-meta">
+            <span class="csc-tag">Panelist</span>
+            <span class="csc-date">November 2025</span>
+          </div>
+          <h3 class="csc-headline">Building GTM Motion as a Solo PMM in B2B and B2C</h3>
           <p>Contributed to a live panel discussion on "Building GTM Motion as a Solo PMM in B2B and B2C," and shared practical frameworks and personal experiences on designing GTM strategy, managing cross-functional alignment, and creating impact as a solo PMM in both B2B and B2C contexts.</p>
-          <a class="talk-link" href="https://productmarketingclinic.substack.com/p/break-into-product-marketing-part-82c" target="_blank" rel="noopener">Watch / read →</a>
-        </div>
-      </div>
+          <p class="csc-credit">Break Into Product Marketing</p>
+          <span class="csc-link">View More &rarr;</span>
+      </a>
 
-      <div class="talk-item">
-        <div><span class="talk-role">Guest</span><br>Early Stage Marketer Podcast</div>
-        <div>
-          <h3>Early Stage Marketer Podcast</h3>
+      <a class="talk-card" href="https://luma.com/toamdyhv" target="_blank" rel="noopener" data-year-card="2025">
+          <div class="csc-card-meta">
+            <span class="csc-tag">MIA Webinar Host</span>
+            <span class="csc-date">November 2025</span>
+          </div>
+          <h3 class="csc-headline">AI Prompt Frameworks for Marketers</h3>
+          <p>I hosted a workshop where I taught the prompt engineering framework behind my 40 plus Custom GPTs. I showed marketers how to build clear, reusable prompts using my nine-step structure and shared examples from real projects.</p>
+          <p class="csc-credit">AI Prompt Frameworks for Marketers</p>
+          <span class="csc-link">View More &rarr;</span>
+      </a>
+
+      <a class="talk-card" href="https://youtu.be/K0Jb7SExkY8?si=e8l9Hp5St2CwvChs" target="_blank" rel="noopener" data-year-card="2025">
+          <div class="csc-card-meta">
+            <span class="csc-tag">Guest</span>
+            <span class="csc-date">October 2025</span>
+          </div>
+          <h3 class="csc-headline">Tech Talk Podcast</h3>
+          <p>I joined the Tech Talk Podcast to discuss how technology is reshaping B2B relationships and revenue, from CRM strategy to automation and leadership thinking.</p>
+          <p class="csc-credit">Tech Talk Podcast</p>
+          <span class="csc-link">View More &rarr;</span>
+      </a>
+
+      <a class="talk-card" href="https://youtu.be/K0Jb7SExkY8?si=e8l9Hp5St2CwvChs" target="_blank" rel="noopener" data-year-card="2025">
+          <div class="csc-card-meta">
+            <span class="csc-tag">Guest</span>
+            <span class="csc-date">October 2025</span>
+          </div>
+          <h3 class="csc-headline">Early Stage Marketer Podcast</h3>
           <p>I had a thoughtful conversation with Onyinye Nwankwo on the Early Stage Marketer Podcast. We explored what it feels like to be the first or only marketing hire at early stage startups and how the responsibility forces you to build structure from day one.</p>
-          <a class="talk-link" href="https://youtu.be/K0Jb7SExkY8?si=e8l9Hp5St2CwvChs" target="_blank" rel="noopener">Watch / read →</a>
-        </div>
-      </div>
+          <p class="csc-credit">Early Stage Marketer Podcast</p>
+          <span class="csc-link">View More &rarr;</span>
+      </a>
 
-      <div class="talk-item">
-        <div><span class="talk-role">Panelist</span><br>Data Storytelling Webinar by CareerBuddy</div>
-        <div>
-          <h3>Data Storytelling with CareerBuddy</h3>
+      <a class="talk-card" href="https://www.youtube.com/live/C1xOWMgq7RM" target="_blank" rel="noopener" data-year-card="2025">
+          <div class="csc-card-meta">
+            <span class="csc-tag">Panelist</span>
+            <span class="csc-date">September 2025</span>
+          </div>
+          <h3 class="csc-headline">Data Storytelling with CareerBuddy</h3>
           <p>I joined a panel discussion on Data Storytelling, sharing insights on how marketers can transform raw data into compelling stories that connect, persuade, and drive results.</p>
-          <a class="talk-link" href="https://www.youtube.com/live/C1xOWMgq7RM" target="_blank" rel="noopener">Watch / read →</a>
-        </div>
-      </div>
+          <p class="csc-credit">Data Storytelling Webinar by CareerBuddy</p>
+          <span class="csc-link">View More &rarr;</span>
+      </a>
 
-      <div class="talk-item">
-        <div><span class="talk-role">Speaker</span><br>Engineering for Marketers Podcast & Newsletter</div>
-        <div>
-          <h3>The Future of Marketing is Technical</h3>
+      <a class="talk-card" href="https://www.youtube.com/watch?v=XNiUvzotXbs" target="_blank" rel="noopener" data-year-card="2025">
+          <div class="csc-card-meta">
+            <span class="csc-tag">Speaker</span>
+            <span class="csc-date">September 2025</span>
+          </div>
+          <h3 class="csc-headline">The Future of Marketing is Technical</h3>
           <p>On this podcast, I shared my insights on why today's marketers must lean into the technicalities of AI and GTM engineering, alongside creative skills, to succeed in the marketing industry's next big shift.</p>
-          <a class="talk-link" href="https://www.youtube.com/watch?v=XNiUvzotXbs" target="_blank" rel="noopener">Watch / read →</a>
-        </div>
-      </div>
+          <p class="csc-credit">Engineering for Marketers Podcast & Newsletter</p>
+          <span class="csc-link">View More &rarr;</span>
+      </a>
 
-      <div class="talk-item">
-        <div><span class="talk-role">Pre-Event Judge & Masterclass Trainer</span><br>PAADC 8.0</div>
-        <div>
-          <h3>Public Speaking: The Art of Pitching</h3>
+      <a class="talk-card" href="https://docs.google.com/presentation/d/1f6e0waEyxWcP1vn5ltZiTrVPhyjysu5WydV8TcSk07o/edit?usp=drive_link" target="_blank" rel="noopener" data-year-card="2024">
+          <div class="csc-card-meta">
+            <span class="csc-tag">Pre-Event Judge &amp; Masterclass Trainer</span>
+            <span class="csc-date">2024</span>
+          </div>
+          <h3 class="csc-headline">Public Speaking: The Art of Pitching</h3>
           <p>Served as a pre-event judge for the Professor Ayodele Awojobi Design Competition (PAADC) for the second consecutive year. Also delivered a masterclass titled "Public Speaking: The Art of Pitching," training finalists to pitch their innovations with confidence and clarity.</p>
-          <a class="talk-link" href="https://docs.google.com/presentation/d/1f6e0waEyxWcP1vn5ltZiTrVPhyjysu5WydV8TcSk07o/edit?usp=drive_link" target="_blank" rel="noopener">Watch / read →</a>
-        </div>
-      </div>
+          <p class="csc-credit">PAADC 8.0</p>
+          <span class="csc-link">View More &rarr;</span>
+      </a>
 
-      <div class="talk-item">
-        <div><span class="talk-role">Speaker</span><br>Growth Skool Webinar</div>
-        <div>
-          <h3>Effective Strategies for Driving Product-Led Growth</h3>
+      <a class="talk-card" href="https://www.growthskool.co.uk/event/effective-strategies-for-driving-product-led-growth" target="_blank" rel="noopener" data-year-card="2024">
+          <div class="csc-card-meta">
+            <span class="csc-tag">Speaker</span>
+            <span class="csc-date">August 2024</span>
+          </div>
+          <h3 class="csc-headline">Effective Strategies for Driving Product-Led Growth</h3>
           <p>Delivered a session on Effective Strategies for Driving Product-Led Growth, illustrating how product teams can activate growth loops, improve retention, and scale adoption through experimentation and customer insight.</p>
-          <a class="talk-link" href="https://www.growthskool.co.uk/event/effective-strategies-for-driving-product-led-growth" target="_blank" rel="noopener">Watch / read →</a>
-        </div>
-      </div>
+          <p class="csc-credit">Growth Skool Webinar</p>
+          <span class="csc-link">View More &rarr;</span>
+      </a>
 
-      <div class="talk-item">
-        <div><span class="talk-role">Speaker</span><br>Intense Group Webinar</div>
-        <div>
-          <h3>Building a Customer Acquisition Engine</h3>
+      <a class="talk-card" href="https://www.linkedin.com/events/buildingarobustcustomeracquisit7215002686306283520/theater/" target="_blank" rel="noopener" data-year-card="2024">
+          <div class="csc-card-meta">
+            <span class="csc-tag">Speaker</span>
+            <span class="csc-date">July 2024</span>
+          </div>
+          <h3 class="csc-headline">Building a Customer Acquisition Engine</h3>
           <p>Spoke on Building a Robust Customer Acquisition Engine for B2C Digital Businesses, sharing actionable playbooks for creating repeatable systems that attract, convert, and retain customers at scale.</p>
-          <a class="talk-link" href="https://www.linkedin.com/events/buildingarobustcustomeracquisit7215002686306283520/theater/" target="_blank" rel="noopener">Watch / read →</a>
-        </div>
-      </div>
+          <p class="csc-credit">Intense Group Webinar</p>
+          <span class="csc-link">View More &rarr;</span>
+      </a>
 
-      <div class="talk-item">
-        <div><span class="talk-role">Panelist</span><br>Landmark University LUBACA Conference</div>
-        <div>
-          <h3>Building a Borderless Career</h3>
+      <a class="talk-card" href="https://www.linkedin.com/posts/jamespraise_honored-to-accept-the-call-by-landmark-university-activity-7199794834214174722-ugM5?utm_source=share&utm_medium=member_desktop" target="_blank" rel="noopener" data-year-card="2024">
+          <div class="csc-card-meta">
+            <span class="csc-tag">Panelist</span>
+            <span class="csc-date">2024</span>
+          </div>
+          <h3 class="csc-headline">Building a Borderless Career</h3>
           <p>Offered career guidance to students during a panel themed "How to Build a Borderless Career in the World of Work," sharing lessons on global thinking, transferable skills, and leveraging digital platforms for opportunity.</p>
-          <a class="talk-link" href="https://www.linkedin.com/posts/jamespraise_honored-to-accept-the-call-by-landmark-university-activity-7199794834214174722-ugM5?utm_source=share&utm_medium=member_desktop" target="_blank" rel="noopener">Watch / read →</a>
-        </div>
-      </div>
+          <p class="csc-credit">Landmark University LUBACA Conference</p>
+          <span class="csc-link">View More &rarr;</span>
+      </a>
 
-      <div class="talk-item">
-        <div><span class="talk-role">Speaker</span><br>Innovating In The Right Direction</div>
-        <div>
-          <h3>Innovating In The Right Direction</h3>
+      <a class="talk-card" href="https://youtu.be/_cuSSMq7FAc?si=wxhCbUv_ZpbpoZ7r" target="_blank" rel="noopener" data-year-card="2024">
+          <div class="csc-card-meta">
+            <span class="csc-tag">Speaker</span>
+            <span class="csc-date">May 2024</span>
+          </div>
+          <h3 class="csc-headline">Innovating In The Right Direction</h3>
           <p>Joined a panel of industry experts to discuss how startups can innovate with focus, building products that align with customer needs, viable business models, and the realities of their target markets.</p>
-          <a class="talk-link" href="https://youtu.be/_cuSSMq7FAc?si=wxhCbUv_ZpbpoZ7r" target="_blank" rel="noopener">Watch / read →</a>
-        </div>
-      </div>
+          <p class="csc-credit">Innovating In The Right Direction</p>
+          <span class="csc-link">View More &rarr;</span>
+      </a>
 
-      <div class="talk-item">
-        <div><span class="talk-role">Panelist</span><br>Tech Sales Conference (Utiva)</div>
-        <div>
-          <h3>Utiva Tech Sales Conference</h3>
+      <a class="talk-card" href="https://www.linkedin.com/posts/utiva_utiva-conferencereminder-lastchance-activity-7173993207679062016-1Hqx?utm_source=share&utm_medium=member_ios" target="_blank" rel="noopener" data-year-card="2024">
+          <div class="csc-card-meta">
+            <span class="csc-tag">Panelist</span>
+            <span class="csc-date">2024</span>
+          </div>
+          <h3 class="csc-headline">Utiva Tech Sales Conference</h3>
           <p>Participated as a panelist at Utiva's Tech Sales Conference, discussing how founders and professionals can navigate market disruptions, align sales and marketing teams, and drive sustainable revenue growth.</p>
-          <a class="talk-link" href="https://www.linkedin.com/posts/utiva_utiva-conferencereminder-lastchance-activity-7173993207679062016-1Hqx?utm_source=share&utm_medium=member_ios" target="_blank" rel="noopener">Watch / read →</a>
-        </div>
-      </div>
+          <p class="csc-credit">Tech Sales Conference (Utiva)</p>
+          <span class="csc-link">View More &rarr;</span>
+      </a>
 
-      <div class="talk-item">
-        <div><span class="talk-role">Moderator</span><br>Regulatory Compliance Webinar</div>
-        <div>
-          <h3>Bujeti Regulatory Compliance Webinar</h3>
-          <p>Moderated Bujeti's second webinar on Regulatory Compliance, leading a conversation with experts on navigating compliance frameworks, risk management, and business registration for startups in Africa.</p>
-          <a class="talk-link" href="https://blog.bujeti.com/how-to-set-up-a-business-entity-in-nigeria-business-registration-regulatory-compliance-management/" target="_blank" rel="noopener">Watch / read →</a>
-        </div>
-      </div>
-
-      <div class="talk-item">
-        <div><span class="talk-role">Speaker</span><br>Revenue Growth Community Session</div>
-        <div>
-          <h3>RevGrowth Community Session</h3>
-          <p>Served as a panelist in a session on AI's role in transforming Sales and Marketing, explaining how data and automation can improve targeting, personalization, and revenue acceleration.</p>
-          <a class="talk-link" href="https://www.linkedin.com/company/revgrowth-network/" target="_blank" rel="noopener">Watch / read →</a>
-        </div>
-      </div>
-
-      <div class="talk-item">
-        <div><span class="talk-role">Moderator</span><br>Financial Literacy Webinar</div>
-        <div>
-          <h3>Bujeti Financial Literacy Webinar</h3>
-          <p>Moderated Bujeti's first Financial Literacy Webinar, facilitating an engaging conversation on the fundamentals of financial management, access to capital, and growth strategies for entrepreneurs in Africa.</p>
-          <a class="talk-link" href="https://blog.bujeti.com/how-to-scale-your-business-in-africa-financial-literacy-and-growth-secrets/" target="_blank" rel="noopener">Watch / read →</a>
-        </div>
-      </div>
-
-      <div class="talk-item">
-        <div><span class="talk-role">Speaker</span><br>Product Marketing Masterclass (Utiva)</div>
-        <div>
-          <h3>Utiva Product Marketing Masterclass</h3>
+      <a class="talk-card" href="https://www.linkedin.com/posts/utiva_utiva-techmasterclass-freelearning-activity-7153013326145323008-B1bX?utm_source=share&utm_medium=member_desktop" target="_blank" rel="noopener" data-year-card="2024">
+          <div class="csc-card-meta">
+            <span class="csc-tag">Speaker</span>
+            <span class="csc-date">2024</span>
+          </div>
+          <h3 class="csc-headline">Utiva Product Marketing Masterclass</h3>
           <p>Led a masterclass on Product Marketing for beginners in tech, guiding participants through positioning, messaging, and GTM frameworks to help them break into the field with confidence.</p>
-          <a class="talk-link" href="https://www.linkedin.com/posts/utiva_utiva-techmasterclass-freelearning-activity-7153013326145323008-B1bX?utm_source=share&utm_medium=member_desktop" target="_blank" rel="noopener">Watch / read →</a>
-        </div>
-      </div>
+          <p class="csc-credit">Product Marketing Masterclass (Utiva)</p>
+          <span class="csc-link">View More &rarr;</span>
+      </a>
 
-      <div class="talk-item">
-        <div><span class="talk-role">Pre-Event Judge</span><br>PAADC 7.0</div>
-        <div>
-          <h3>PAADC Design Competition 7.0</h3>
-          <p>Served as a pre-event judge for the Professor Ayodele Awojobi Design Competition (PAADC 7.0), evaluating early-stage innovation concepts from undergraduate teams across Nigeria.</p>
-          <a class="talk-link" href="https://www.youtube.com/watch?v=1HoJPQUFHr8" target="_blank" rel="noopener">Watch / read →</a>
-        </div>
-      </div>
+      <a class="talk-card" href="https://blog.bujeti.com/how-to-set-up-a-business-entity-in-nigeria-business-registration-regulatory-compliance-management/" target="_blank" rel="noopener" data-year-card="unknown">
+          <div class="csc-card-meta">
+            <span class="csc-tag">Moderator</span>
+            <span class="csc-date">Date unknown</span>
+          </div>
+          <h3 class="csc-headline">Bujeti Regulatory Compliance Webinar</h3>
+          <p>Moderated Bujeti's second webinar on Regulatory Compliance, leading a conversation with experts on navigating compliance frameworks, risk management, and business registration for startups in Africa.</p>
+          <p class="csc-credit">Regulatory Compliance Webinar</p>
+          <span class="csc-link">View More &rarr;</span>
+      </a>
 
-      <div class="talk-item">
-        <div><span class="talk-role">Event Judge</span><br>Product Innovation Pitches 2023 (PAADC)</div>
-        <div>
-          <h3>Product Innovation Pitches – PAADC 2023</h3>
-          <p>Acted as an event judge for the Product Innovation Pitches, assessing technical feasibility, business potential, and storytelling quality of finalist presentations.</p>
-          <a class="talk-link" href="https://www.linkedin.com/posts/jamespraise_innovation-entrepreneurship-paadc-activity-7138597160274620416-k5d-?utm_source=share&utm_medium=member_ios" target="_blank" rel="noopener">Watch / read →</a>
-        </div>
-      </div>
+      <a class="talk-card" href="https://blog.bujeti.com/how-to-scale-your-business-in-africa-financial-literacy-and-growth-secrets/" target="_blank" rel="noopener" data-year-card="unknown">
+          <div class="csc-card-meta">
+            <span class="csc-tag">Moderator</span>
+            <span class="csc-date">Date unknown</span>
+          </div>
+          <h3 class="csc-headline">Bujeti Financial Literacy Webinar</h3>
+          <p>Moderated Bujeti's first Financial Literacy Webinar, facilitating an engaging conversation on the fundamentals of financial management, access to capital, and growth strategies for entrepreneurs in Africa.</p>
+          <p class="csc-credit">Financial Literacy Webinar</p>
+          <span class="csc-link">View More &rarr;</span>
+      </a>
 
-      <div class="talk-item">
-        <div><span class="talk-role">Panelist</span><br>Bujeti x TheCANS</div>
-        <div>
-          <h3>Business Sustainability, Growth & Scale</h3>
+      <a class="talk-card" href="https://www.linkedin.com/company/revgrowth-network/" target="_blank" rel="noopener" data-year-card="unknown">
+          <div class="csc-card-meta">
+            <span class="csc-tag">Speaker</span>
+            <span class="csc-date">Date unknown</span>
+          </div>
+          <h3 class="csc-headline">RevGrowth Community Session</h3>
+          <p>Served as a panelist in a session on AI's role in transforming Sales and Marketing, explaining how data and automation can improve targeting, personalization, and revenue acceleration.</p>
+          <p class="csc-credit">Revenue Growth Community Session</p>
+          <span class="csc-link">View More &rarr;</span>
+      </a>
+
+      <a class="talk-card" href="https://www.linkedin.com/events/thebujetisolutionshowcase7138857279856041984/about/" target="_blank" rel="noopener" data-year-card="2024">
+          <div class="csc-card-meta">
+            <span class="csc-tag">Panelist</span>
+            <span class="csc-date">2024</span>
+          </div>
+          <h3 class="csc-headline">Business Sustainability, Growth &amp; Scale</h3>
           <p>Contributed to a panel discussion on business sustainability and scaling strategies, sharing lessons from helping startups align revenue models, operations, and brand storytelling for long-term growth.</p>
-          <a class="talk-link" href="https://www.linkedin.com/events/thebujetisolutionshowcase7138857279856041984/about/" target="_blank" rel="noopener">Watch / read →</a>
-        </div>
-      </div>
+          <p class="csc-credit">Bujeti x TheCANS</p>
+          <span class="csc-link">View More &rarr;</span>
+      </a>
 
-      <div class="talk-item">
-        <div><span class="talk-role">Panelist</span><br>Lagos Startup Week 2023</div>
-        <div>
-          <h3>Lagos Startup Week 2023</h3>
+      <a class="talk-card" href="https://www.linkedin.com/posts/jamespraise_innovation-entrepreneurship-paadc-activity-7138597160274620416-k5d-?utm_source=share&utm_medium=member_ios" target="_blank" rel="noopener" data-year-card="2023">
+          <div class="csc-card-meta">
+            <span class="csc-tag">Event Judge</span>
+            <span class="csc-date">2023</span>
+          </div>
+          <h3 class="csc-headline">Product Innovation Pitches &ndash; PAADC 2023</h3>
+          <p>Acted as an event judge for the Product Innovation Pitches, assessing technical feasibility, business potential, and storytelling quality of finalist presentations.</p>
+          <p class="csc-credit">Product Innovation Pitches 2023 (PAADC)</p>
+          <span class="csc-link">View More &rarr;</span>
+      </a>
+
+      <a class="talk-card" href="https://www.youtube.com/watch?v=1HoJPQUFHr8" target="_blank" rel="noopener" data-year-card="2023">
+          <div class="csc-card-meta">
+            <span class="csc-tag">Pre-Event Judge</span>
+            <span class="csc-date">December 2023</span>
+          </div>
+          <h3 class="csc-headline">PAADC Design Competition 7.0</h3>
+          <p>Served as a pre-event judge for the Professor Ayodele Awojobi Design Competition (PAADC 7.0), evaluating early-stage innovation concepts from undergraduate teams across Nigeria.</p>
+          <p class="csc-credit">PAADC 7.0</p>
+          <span class="csc-link">View More &rarr;</span>
+      </a>
+
+      <a class="talk-card" href="https://www.linkedin.com/posts/prime-startups_lsw23-startups-primestartups-activity-7085919486012223488-5O3R/?utm_source=share&utm_medium=member_ios" target="_blank" rel="noopener" data-year-card="2023">
+          <div class="csc-card-meta">
+            <span class="csc-tag">Panelist</span>
+            <span class="csc-date">July 2023</span>
+          </div>
+          <h3 class="csc-headline">Lagos Startup Week 2023</h3>
           <p>Participated in Lagos Startup Week as a panelist, discussing ecosystem growth and startup resilience within Africa's rapidly evolving tech and innovation landscape.</p>
-          <a class="talk-link" href="https://www.linkedin.com/posts/prime-startups_lsw23-startups-primestartups-activity-7085919486012223488-5O3R/?utm_source=share&utm_medium=member_ios" target="_blank" rel="noopener">Watch / read →</a>
-        </div>
-      </div>
+          <p class="csc-credit">Lagos Startup Week 2023</p>
+          <span class="csc-link">View More &rarr;</span>
+      </a>
 
-      <div class="talk-item">
-        <div><span class="talk-role">Panel Contributor</span><br>Prime Startups LSW 2023</div>
-        <div>
-          <h3>Prime Startups LSW 2023</h3>
+      <a class="talk-card" href="https://www.linkedin.com/posts/prime-startups_lsw23-startups-primestartups-activity-7085853083066363904-w2du/?utm_source=share&utm_medium=member_ios" target="_blank" rel="noopener" data-year-card="2023">
+          <div class="csc-card-meta">
+            <span class="csc-tag">Panel Contributor</span>
+            <span class="csc-date">July 2023</span>
+          </div>
+          <h3 class="csc-headline">Prime Startups LSW 2023</h3>
           <p>Joined the Prime Startups panel at Lagos Startup Week 2023, contributing insights on building scalable businesses and fostering community-driven innovation.</p>
-          <a class="talk-link" href="https://www.linkedin.com/posts/prime-startups_lsw23-startups-primestartups-activity-7085853083066363904-w2du/?utm_source=share&utm_medium=member_ios" target="_blank" rel="noopener">Watch / read →</a>
-        </div>
-      </div>
+          <p class="csc-credit">Prime Startups LSW 2023</p>
+          <span class="csc-link">View More &rarr;</span>
+      </a>
 
-      <div class="talk-item">
-        <div><span class="talk-role">Panelist</span><br>LSW 23: Remote Work & Migration for Techies</div>
-        <div>
-          <h3>Remote Working & Better Migration Experience for Techies</h3>
+      <a class="talk-card" href="https://www.instagram.com/p/CutP7mmIMNo/?igshid=ODhhZWM5NmIwOQ%3D%3D" target="_blank" rel="noopener" data-year-card="2023">
+          <div class="csc-card-meta">
+            <span class="csc-tag">Panelist</span>
+            <span class="csc-date">July 2023</span>
+          </div>
+          <h3 class="csc-headline">Remote Working &amp; Better Migration Experience for Techies</h3>
           <p>Shared personal and professional insights on remote work and migration, highlighting how African tech talent can access global opportunities while remaining locally impactful.</p>
-          <a class="talk-link" href="https://www.instagram.com/p/CutP7mmIMNo/?igshid=ODhhZWM5NmIwOQ%3D%3D" target="_blank" rel="noopener">Watch / read →</a>
-        </div>
-      </div>
+          <p class="csc-credit">LSW 23: Remote Work &amp; Migration for Techies</p>
+          <span class="csc-link">View More &rarr;</span>
+      </a>
 
-      <div class="talk-item">
-        <div><span class="talk-role">Speaker</span><br>CIL x AWS: Lagos Executive Cloud Technology Summit 2023</div>
-        <div>
-          <h3>CIL x AWS – Lagos Executive Cloud Technology Summit 2023</h3>
+      <a class="talk-card" href="https://www.youtube.com/watch?v=OOR4W-Z6t9w" target="_blank" rel="noopener" data-year-card="2023">
+          <div class="csc-card-meta">
+            <span class="csc-tag">Speaker</span>
+            <span class="csc-date">July 2023</span>
+          </div>
+          <h3 class="csc-headline">CIL x AWS &ndash; Lagos Executive Cloud Technology Summit 2023</h3>
           <p>Spoke at the Lagos Executive Cloud Technology Summit by CIL and AWS, sharing practical strategies for digital transformation, product innovation, and cloud-led business growth.</p>
-          <a class="talk-link" href="https://www.youtube.com/watch?v=OOR4W-Z6t9w" target="_blank" rel="noopener">Watch / read →</a>
-        </div>
-      </div>
+          <p class="csc-credit">CIL x AWS: Lagos Executive Cloud Technology Summit 2023</p>
+          <span class="csc-link">View More &rarr;</span>
+      </a>
 
-      <div class="talk-item">
-        <div><span class="talk-role">Keynote Speaker</span><br>CIL x AWS: LECS 2023</div>
-        <div>
-          <h3>CIL x AWS: LECS 2023</h3>
+      <a class="talk-card" href="https://www.linkedin.com/posts/cecureintelligence_lagosexecutivecloudtechnologysummit-lagosexecutivecloudsummit-activity-7087099505958907904-2oMD?utm_source=share&utm_medium=member_desktop" target="_blank" rel="noopener" data-year-card="2023">
+          <div class="csc-card-meta">
+            <span class="csc-tag">Keynote Speaker</span>
+            <span class="csc-date">July 2023</span>
+          </div>
+          <h3 class="csc-headline">CIL x AWS: LECS 2023</h3>
           <p>Delivered a keynote session at the Lagos Executive Cloud Technology Summit 2023 on how African enterprises can harness cloud technology and go-to-market innovation to scale sustainably.</p>
-          <a class="talk-link" href="https://www.linkedin.com/posts/cecureintelligence_lagosexecutivecloudtechnologysummit-lagosexecutivecloudsummit-activity-7087099505958907904-2oMD?utm_source=share&utm_medium=member_desktop" target="_blank" rel="noopener">Watch / read →</a>
-        </div>
-      </div>
+          <p class="csc-credit">CIL x AWS: LECS 2023</p>
+          <span class="csc-link">View More &rarr;</span>
+      </a>
 
-      <div class="talk-item">
-        <div><span class="talk-role">Guest</span><br>Tech Tuesday Conversation: Univacity</div>
-        <div>
-          <h3>Tech Tuesday Conversation: Univacity</h3>
+      <a class="talk-card" href="https://twitter.com/univacitil/status/1640393772570689537?s=46&t=0fcqlqq3TEqhLw3927u8AA" target="_blank" rel="noopener" data-year-card="2023">
+          <div class="csc-card-meta">
+            <span class="csc-tag">Guest</span>
+            <span class="csc-date">March 2023</span>
+          </div>
+          <h3 class="csc-headline">Tech Tuesday Conversation: Univacity</h3>
           <p>Joined Univacity's Tech Tuesday Conversation to discuss how young professionals can navigate career growth in tech, marketing, and entrepreneurship by building leverage through learning.</p>
-          <a class="talk-link" href="https://twitter.com/univacitil/status/1640393772570689537?s=46&t=0fcqlqq3TEqhLw3927u8AA" target="_blank" rel="noopener">Watch / read →</a>
-        </div>
-      </div>
+          <p class="csc-credit">Tech Tuesday Conversation: Univacity</p>
+          <span class="csc-link">View More &rarr;</span>
+      </a>
 
-      <div class="talk-item">
-        <div><span class="talk-role">Panelist</span><br>Univacity Twitter Space</div>
-        <div>
-          <h3>Female Staff vs Female Bosses: Unresolved Issues</h3>
+      <a class="talk-card" href="https://www.instagram.com/p/CqTNvsIsnRh/?igshid=ODhhZWM5NmIwOQ%3D%3D" target="_blank" rel="noopener" data-year-card="2023">
+          <div class="csc-card-meta">
+            <span class="csc-tag">Panelist</span>
+            <span class="csc-date">March 2023</span>
+          </div>
+          <h3 class="csc-headline">Female Staff vs Female Bosses: Unresolved Issues</h3>
           <p>Participated in Univacity's Twitter Space discussion on "Female Staff vs Female Bosses: Unresolved Issues – Myth or Fact", contributing perspective on leadership, inclusion, and organizational culture.</p>
-          <a class="talk-link" href="https://www.instagram.com/p/CqTNvsIsnRh/?igshid=ODhhZWM5NmIwOQ%3D%3D" target="_blank" rel="noopener">Watch / read →</a>
-        </div>
+          <p class="csc-credit">Univacity Twitter Space</p>
+          <span class="csc-link">View More &rarr;</span>
+      </a>
+
       </div>
-
     </div>
 
-    <div class="section-head reveal-blur" style="margin-top: 64px;">
-      <h2>Media Features</h2>
-    </div>
-
-    <div class="talk-list reveal-blur">
-
-      <div class="talk-item">
-        <div><span class="talk-role">Media Feature</span></div>
-        <div>
-          <h3>Claude Skills Marketplace – AI Marketing Workflow Library</h3>
+    <div data-tab-panel="media" hidden>
+      <div class="talk-grid" style="margin-top: var(--space-lg);">
+      <a class="talk-card" href="https://claude-skills-marketplace.vercel.app/" target="_blank" rel="noopener" data-year-card="2026">
+          <div class="csc-card-meta">
+            <span class="csc-tag">Media Feature</span>
+            <span class="csc-date">March 2026</span>
+          </div>
+          <h3 class="csc-headline">Claude Skills Marketplace &ndash; AI Marketing Workflow Library</h3>
           <p>My 25+ open-sourced Claude Skills GitHub project was recognized in a curated marketplace aggregating high-quality AI workflows and agents for B2B marketers.</p>
-          <a class="talk-link" href="https://claude-skills-marketplace.vercel.app/" target="_blank" rel="noopener">Read →</a>
-        </div>
-      </div>
+          <span class="csc-link">View More &rarr;</span>
+      </a>
 
-      <div class="talk-item">
-        <div><span class="talk-role">Media Feature</span></div>
-        <div>
-          <h3>Recognized Marketing Leader 2026 – Cleva (YC W24)</h3>
+      <a class="talk-card" href="https://www.linkedin.com/posts/cleva-banking_top-10-people-to-follow-in-2026-marketing-activity-7420021172274176000-xr-o/" target="_blank" rel="noopener" data-year-card="2026">
+          <div class="csc-card-meta">
+            <span class="csc-tag">Media Feature</span>
+            <span class="csc-date">2026</span>
+          </div>
+          <h3 class="csc-headline">Recognized Marketing Leader 2026 &ndash; Cleva (YC W24)</h3>
           <p>I was named by Cleva as one of the Top 10 People to Follow in 2026 within the Marketing category, spotlighting individuals influencing how marketing knowledge is shared and applied.</p>
-          <a class="talk-link" href="https://www.linkedin.com/posts/cleva-banking_top-10-people-to-follow-in-2026-marketing-activity-7420021172274176000-xr-o/" target="_blank" rel="noopener">Read →</a>
-        </div>
-      </div>
+          <span class="csc-link">View More &rarr;</span>
+      </a>
 
-      <div class="talk-item">
-        <div><span class="talk-role">Media Feature</span></div>
-        <div>
-          <h3>Awarded – Africa's Top 20 Marketing Leaders of 2025</h3>
-          <p>Recognized as one of Africa's Top 20 Marketing Leaders for 2025, an honor that celebrates individuals who are driving product-led growth across the continent.</p>
-          <a class="talk-link" href="https://www.apmpioneers.com/leaders.html" target="_blank" rel="noopener">Read →</a>
-        </div>
-      </div>
-
-      <div class="talk-item">
-        <div><span class="talk-role">Media Feature</span></div>
-        <div>
-          <h3>Techcabal – African Marketing Operators Feature</h3>
+      <a class="talk-card" href="https://techcabal.com/2025/12/17/the-architects-of-scale-apmas-inaugural-index-identifies-the-top-20-product-marketing-leaders-driving-africas-unicorn-pipeline/" target="_blank" rel="noopener" data-year-card="2025">
+          <div class="csc-card-meta">
+            <span class="csc-tag">Media Feature</span>
+            <span class="csc-date">December 2025</span>
+          </div>
+          <h3 class="csc-headline">Techcabal &ndash; African Marketing Operators Feature</h3>
           <p>TechCabal included me among the operators shaping how African startups move from innovation to market adoption in APMP's Top 20 Index.</p>
-          <a class="talk-link" href="https://techcabal.com/2025/12/17/the-architects-of-scale-apmas-inaugural-index-identifies-the-top-20-product-marketing-leaders-driving-africas-unicorn-pipeline/" target="_blank" rel="noopener">Read →</a>
-        </div>
-      </div>
+          <span class="csc-link">View More &rarr;</span>
+      </a>
 
-      <div class="talk-item">
-        <div><span class="talk-role">Media Feature</span></div>
-        <div>
-          <h3>Condia – Product Marketing Leader Feature</h3>
+      <a class="talk-card" href="https://thecondia.com/partners/africa-product-marketing-pioneers-apmp-index/" target="_blank" rel="noopener" data-year-card="2025">
+          <div class="csc-card-meta">
+            <span class="csc-tag">Media Feature</span>
+            <span class="csc-date">December 2025</span>
+          </div>
+          <h3 class="csc-headline">Condia &ndash; Product Marketing Leader Feature</h3>
           <p>The Condia/Benjamin Dada feature lists me among Africa's leading product marketing voices for my work driving GTM clarity and measurable growth outcomes for SaaS companies.</p>
-          <a class="talk-link" href="https://thecondia.com/partners/africa-product-marketing-pioneers-apmp-index/" target="_blank" rel="noopener">Read →</a>
-        </div>
-      </div>
+          <span class="csc-link">View More &rarr;</span>
+      </a>
 
-      <div class="talk-item">
-        <div><span class="talk-role">Media Feature</span></div>
-        <div>
-          <h3>BusinessDay – African Operator Impact Feature</h3>
+      <a class="talk-card" href="https://www.apmpioneers.com/leaders.html" target="_blank" rel="noopener" data-year-card="2025">
+          <div class="csc-card-meta">
+            <span class="csc-tag">Media Feature</span>
+            <span class="csc-date">2025</span>
+          </div>
+          <h3 class="csc-headline">Awarded &ndash; Africa's Top 20 Marketing Leaders of 2025</h3>
+          <p>Recognized as one of Africa's Top 20 Marketing Leaders for 2025, an honor that celebrates individuals who are driving product-led growth across the continent.</p>
+          <span class="csc-link">View More &rarr;</span>
+      </a>
+
+      <a class="talk-card" href="https://businessday.ng/news/article/apmp-release-2025-top-20-marketing-leaders-in-africa/" target="_blank" rel="noopener" data-year-card="2025">
+          <div class="csc-card-meta">
+            <span class="csc-tag">Media Feature</span>
+            <span class="csc-date">2025</span>
+          </div>
+          <h3 class="csc-headline">BusinessDay &ndash; African Operator Impact Feature</h3>
           <p>BusinessDay recognized my continental contributions in shaping strategy, product adoption, and revenue growth across technology-driven businesses, as part of APMP 2025 Top 20 Marketing Leaders in Africa.</p>
-          <a class="talk-link" href="https://businessday.ng/news/article/apmp-release-2025-top-20-marketing-leaders-in-africa/" target="_blank" rel="noopener">Read →</a>
-        </div>
-      </div>
+          <span class="csc-link">View More &rarr;</span>
+      </a>
 
-      <div class="talk-item">
-        <div><span class="talk-role">Media Feature</span></div>
-        <div>
-          <h3>Smarketers Hub – African AI Competence Feature</h3>
+      <a class="talk-card" href="https://www.smarketershub.com/blog/ai-competence-gap-marketing-africa" target="_blank" rel="noopener" data-year-card="2025">
+          <div class="csc-card-meta">
+            <span class="csc-tag">Media Feature</span>
+            <span class="csc-date">November 2025</span>
+          </div>
+          <h3 class="csc-headline">Smarketers Hub &ndash; African AI Competence Feature</h3>
           <p>Smarketers Hub featured my perspective on the skills gap in AI adoption across African marketing teams.</p>
-          <a class="talk-link" href="https://www.smarketershub.com/blog/ai-competence-gap-marketing-africa" target="_blank" rel="noopener">Read →</a>
-        </div>
-      </div>
+          <span class="csc-link">View More &rarr;</span>
+      </a>
 
-      <div class="talk-item">
-        <div><span class="talk-role">Media Feature</span></div>
-        <div>
-          <h3>Tech Sales & Partnerships Community (TSPC) – GTM Philosophy Feature</h3>
+      <a class="talk-card" href="https://medium.com/@tspcommunity/my-tech-sales-journey-james-praise-95c4582a7b71" target="_blank" rel="noopener" data-year-card="2025">
+          <div class="csc-card-meta">
+            <span class="csc-tag">Media Feature</span>
+            <span class="csc-date">June 2025</span>
+          </div>
+          <h3 class="csc-headline">Tech Sales &amp; Partnerships Community (TSPC) &ndash; GTM Philosophy Feature</h3>
           <p>TSPC invited me to share my perspective on the evolving relationship between marketing and sales teams, emphasizing why modern organizations must adopt a unified GTM philosophy.</p>
-          <a class="talk-link" href="https://medium.com/@tspcommunity/my-tech-sales-journey-james-praise-95c4582a7b71" target="_blank" rel="noopener">Read →</a>
-        </div>
-      </div>
+          <span class="csc-link">View More &rarr;</span>
+      </a>
 
-      <div class="talk-item">
-        <div><span class="talk-role">Media Feature</span></div>
-        <div>
-          <h3>Marketing In Action – "T-Shaped Marketer" Feature</h3>
+      <a class="talk-card" href="https://www.marketinginaction.xyz/p/james-praise-t-shaped-marketer" target="_blank" rel="noopener" data-year-card="2024">
+          <div class="csc-card-meta">
+            <span class="csc-tag">Media Feature</span>
+            <span class="csc-date">July 2024</span>
+          </div>
+          <h3 class="csc-headline">Marketing In Action &ndash; "T-Shaped Marketer" Feature</h3>
           <p>Featured in the Marketing In Action Newsletter as part of the T-Shaped Marketers in Africa series, spotlighting practitioners who combine breadth in marketing knowledge with deep expertise in execution.</p>
-          <a class="talk-link" href="https://www.marketinginaction.xyz/p/james-praise-t-shaped-marketer" target="_blank" rel="noopener">Read →</a>
-        </div>
-      </div>
+          <span class="csc-link">View More &rarr;</span>
+      </a>
 
-      <div class="talk-item">
-        <div><span class="talk-role">Media Feature</span></div>
-        <div>
-          <h3>Africa Fintech Summit – Fintech Marketing Outlook (Nigeria) 2024</h3>
+      <a class="talk-card" href="https://www.linkedin.com/posts/the-africa-fintech-summit_fintech-financialservices-africa-activity-7176161084339339264-WjXJ?utm_source=share&utm_medium=member_desktop" target="_blank" rel="noopener" data-year-card="2024">
+          <div class="csc-card-meta">
+            <span class="csc-tag">Media Feature</span>
+            <span class="csc-date">2024</span>
+          </div>
+          <h3 class="csc-headline">Africa Fintech Summit &ndash; Fintech Marketing Outlook (Nigeria) 2024</h3>
           <p>The Africa Fintech Summit spotlighted my insights from leading marketing and growth at a B2B fintech company in Nigeria.</p>
-          <a class="talk-link" href="https://www.linkedin.com/posts/the-africa-fintech-summit_fintech-financialservices-africa-activity-7176161084339339264-WjXJ?utm_source=share&utm_medium=member_desktop" target="_blank" rel="noopener">Read →</a>
-        </div>
-      </div>
+          <span class="csc-link">View More &rarr;</span>
+      </a>
 
-      <div class="talk-item">
-        <div><span class="talk-role">Media Feature</span></div>
-        <div>
-          <h3>BusinessDay – AI & Customer-Centric Marketing Feature</h3>
+      <a class="talk-card" href="https://businessday.ng/bd-weekender/article/we-leverage-ai-to-unlock-customer-centric-marketing-praise/" target="_blank" rel="noopener" data-year-card="2023">
+          <div class="csc-card-meta">
+            <span class="csc-tag">Media Feature</span>
+            <span class="csc-date">2023</span>
+          </div>
+          <h3 class="csc-headline">BusinessDay &ndash; AI &amp; Customer-Centric Marketing Feature</h3>
           <p>Interviewed by BusinessDay on how AI is reshaping customer-centric marketing in Africa, and why marketing leaders must balance human empathy with machine efficiency.</p>
-          <a class="talk-link" href="https://businessday.ng/bd-weekender/article/we-leverage-ai-to-unlock-customer-centric-marketing-praise/" target="_blank" rel="noopener">Read →</a>
-        </div>
-      </div>
+          <span class="csc-link">View More &rarr;</span>
+      </a>
 
-      <div class="talk-item">
-        <div><span class="talk-role">Media Feature</span></div>
-        <div>
-          <h3>Vanguard News – Africa's Fintech Ecosystem Feature</h3>
+      <a class="talk-card" href="https://www.vanguardngr.com/2023/12/why-fintech-sectors-becoming-thriving-ecosystem/" target="_blank" rel="noopener" data-year-card="2023">
+          <div class="csc-card-meta">
+            <span class="csc-tag">Media Feature</span>
+            <span class="csc-date">December 2023</span>
+          </div>
+          <h3 class="csc-headline">Vanguard News &ndash; Africa's Fintech Ecosystem Feature</h3>
           <p>Featured by Vanguard News for commentary on the growth and resilience of Africa's fintech ecosystem.</p>
-          <a class="talk-link" href="https://www.vanguardngr.com/2023/12/why-fintech-sectors-becoming-thriving-ecosystem/" target="_blank" rel="noopener">Read →</a>
+          <span class="csc-link">View More &rarr;</span>
+      </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cs-final-card">
+      <div class="cs-final-top">
+        <div class="cs-final-main">
+          <h2>Bring me in for your next event.</h2>
+          <p>I speak on GTM strategy, marketing systems, and building a career or business without a playbook. Send over your event details and I'll get back to you.</p>
+          <div class="button-row">
+            <a href="mailto:james@marketinginaction.xyz?subject=Speaking%20Inquiry&body=Hi%20James%2C%0A%0AI%27d%20like%20to%20book%20you%20to%20speak%20at%20an%20upcoming%20event.%20Here%20are%20some%20details%3A%0A%0AEvent%20name%3A%0ADate%3A%0AFormat%20%28panel%2C%20keynote%2C%20workshop%2C%20or%20podcast%29%3A%0AAudience%3A%0A%0ALet%20me%20know%20if%20you%27re%20available." class="button button-primary">Get in Touch</a>
+          </div>
+        </div>
+        <div class="cs-final-preview">
+          <div class="cs-final-preview-name">More about James</div>
+          <div class="button-row" style="flex-direction: column; align-items: flex-start; margin-top: var(--space-sm);">
+            <a href="/speaking/speaker-profile/" class="button button-secondary">Speaker Profile &rarr;</a>
+            <a href="/speaking/press-kit/" class="button button-secondary">Press Kit &rarr;</a>
+          </div>
         </div>
       </div>
     </div>
@@ -420,29 +541,80 @@
 
 </main>
 
-<footer class="site-footer">
-  <div class="wrap">
+<footer>
+  <div class="container">
     <div class="footer-grid">
       <div>
-        <div class="footer-name">James Praise</div>
-        <p class="footer-tag">Product marketing and GTM operator. Founder of Marketing In Action, cofounder at <a href="https://www.titaja.com" target="_blank" rel="noopener">Titaja</a>.</p>
+        <div class="footer-title">James Praise</div>
+        <p class="muted">
+          Marketing and GTM operator since 2018. Founder of Marketing In Action.
+        </p>
+
+        <div class="footer-social">
+          <a href="https://linkedin.com/in/jamespraise" aria-label="LinkedIn" target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24">
+              <path d="M4.98 3.5a2.48 2.48 0 110 4.96 2.48 2.48 0 010-4.96zM3 8.98h3.96V21H3zM9.5 8.98h3.8v1.64h.05c.53-1 1.82-2.05 3.75-2.05 4.01 0 4.75 2.64 4.75 6.08V21h-3.96v-5.45c0-1.3-.03-2.98-1.82-2.98-1.83 0-2.11 1.42-2.11 2.89V21H9.5z" />
+            </svg>
+          </a>
+          <a href="https://x.com/realjaymes" aria-label="Twitter" target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24">
+              <path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.27 4.27 0 001.88-2.36 8.48 8.48 0 01-2.7 1.03A4.24 4.24 0 0016.1 4c-2.36 0-4.27 1.91-4.27 4.27 0 .33.04.66.11.97A12.05 12.05 0 013 5.1a4.27 4.27 0 001.32 5.69 4.2 4.2 0 01-1.93-.53v.05c0 2.07 1.47 3.8 3.42 4.19a4.3 4.3 0 01-1.92.07 4.27 4.27 0 003.99 2.96A8.5 8.5 0 012 19.54a12.02 12.02 0 006.53 1.91c7.84 0 12.13-6.5 12.13-12.13l-.01-.55A8.7 8.7 0 0022.46 6z" />
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/realjaymes" aria-label="Instagram" target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.97.24 2.43.4.6.23 1.03.5 1.48.95.45.45.72.88.95 1.48.16.46.35 1.26.4 2.43.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.24 1.97-.4 2.43-.23.6-.5 1.03-.95 1.48-.45.45-.88.72-1.48.95-.46.16-1.26.35-2.43.4-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.97-.24-2.43-.4-.6-.23-1.03-.5-1.48-.95-.45-.45-.72-.88-.95-1.48-.16-.46-.35-1.26-.4-2.43-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.24-1.97.4-2.43.23-.6.5-1.03.95-1.48.45-.45.88-.72 1.48-.95.46-.16 1.26-.35 2.43-.4 1.27-.06 1.65-.07 4.85-.07zm0 3.24a6.6 6.6 0 100 13.2 6.6 6.6 0 000-13.2zm0 10.88a4.28 4.28 0 110-8.56 4.28 4.28 0 010 8.56zm6.84-11.14a1.54 1.54 0 110 3.08 1.54 1.54 0 010-3.08z" />
+            </svg>
+          </a>
+          <a href="https://www.youtube.com/@realjaymes" aria-label="YouTube" target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24">
+              <path d="M23.5 6.5s-.23-1.62-.93-2.34c-.88-.93-1.87-.93-2.33-.98C16.97 3 12 3 12 3h-.01s-4.97 0-8.24.18c-.46.05-1.45.05-2.33.98C.72 4.88.5 6.5.5 6.5S0 8.41 0 10.33v1.34c0 1.91.5 3.83.5 3.83s.23 1.62.93 2.34c.88.93 2.04.9 2.56 1C5.86 19 12 19 12 19s4.97 0 8.24-.18c.46-.05 1.45-.05 2.33-.98.7-.72.93-2.34.93-2.34s.5-1.91.5-3.83v-1.34c0-1.91-.5-3.83-.5-3.83zM9.75 14.57V8.93l5.5 2.82-5.5 2.82z" />
+            </svg>
+          </a>
+          <a href="https://github.com/realjaymes" aria-label="GitHub" target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.58 2 12.2c0 4.5 2.87 8.32 6.84 9.67.5.1.68-.22.68-.49 0-.24-.01-1.05-.01-1.9-2.78.62-3.37-1.2-3.37-1.2-.45-1.18-1.1-1.49-1.1-1.49-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.55 2.34 1.1 2.91.84.09-.66.35-1.1.63-1.36-2.22-.26-4.55-1.13-4.55-5.03 0-1.11.38-2.02 1.02-2.73-.1-.26-.44-1.3.1-2.7 0 0 .84-.27 2.75 1.05a9.36 9.36 0 015 0c1.9-1.32 2.74-1.05 2.74-1.05.55 1.4.2 2.44.1 2.7.64.71 1.03 1.62 1.03 2.73 0 3.91-2.34 4.77-4.57 5.02.36.32.68.94.68 1.9 0 1.37-.01 2.48-.01 2.82 0 .27.18.6.69.49A10.02 10.02 0 0022 12.2C22 6.58 17.52 2 12 2z" />
+            </svg>
+          </a>
+          <a href="mailto:james@marketinginaction.xyz?subject=Speaking%20Inquiry&body=Hi%20James%2C%0A%0AI%27d%20like%20to%20book%20you%20to%20speak%20at%20an%20upcoming%20event.%20Here%20are%20some%20details%3A%0A%0AEvent%20name%3A%0ADate%3A%0AFormat%20%28panel%2C%20keynote%2C%20workshop%2C%20or%20podcast%29%3A%0AAudience%3A%0A%0ALet%20me%20know%20if%20you%27re%20available." aria-label="Email">
+            <svg viewBox="0 0 24 24">
+              <path d="M2 5a2 2 0 012-2h16a2 2 0 012 2v14a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm2 .383V6l8 5.333L20 6v-.617L12 10 4 5.383zM20 8.383l-7.4 4.934a1 1 0 01-1.2 0L4 8.383V19h16V8.383z" />
+            </svg>
+          </a>
+        </div>
       </div>
-      <div class="footer-links">
-        <a href="mailto:james@marketinginaction.xyz">Email</a>
-        <a href="https://linkedin.com/in/jamespraise">LinkedIn</a>
-        <a href="https://x.com/realjaymes">X</a>
-        <a href="https://www.youtube.com/@realjaymes">YouTube</a>
-        <a href="https://www.instagram.com/realjaymes">Instagram</a>
-        <a href="https://github.com/realjaymes">GitHub</a>
+
+      <div>
+        <div class="footer-title">Explore</div>
+        <ul class="footer-list">
+          <li><a href="/work/">Work</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/speaking/">Speaking</a></li>
+          <li><a href="/writing/">Writing</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-title">Community</div>
+        <ul class="footer-list">
+          <li><a href="https://marketinginaction.xyz" target="_blank" rel="noreferrer">Marketing In Action</a></li>
+          <li><a href="https://realjaymes.substack.com" target="_blank" rel="noreferrer">RealTalk</a></li>
+        </ul>
       </div>
     </div>
+
     <div class="footer-bottom">
-      <span>© 2026 James Praise</span>
-      <span>Built by hand, no page builder.</span>
+      <div class="muted">Copyright <span id="year"></span>, James Praise.</div>
+      <div class="footer-legal">
+        <span class="muted">We're all here to contribute to the collective human experience.</span>
+      </div>
     </div>
   </div>
 </footer>
 
-<script src="/script.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+<script src="/script.js?v=8"></script>
 </body>
 </html>
