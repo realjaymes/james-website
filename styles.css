@@ -315,6 +315,14 @@ nav a:hover {
 
   .nav-links.is-open { display: flex; }
 
+  .nav-links.is-open ~ .nav-cta {
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: var(--space-sm);
+    padding: 12px 16px;
+  }
+
   nav a { padding: 10px 12px; }
 
   .nav-dropdown-trigger {
