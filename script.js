@@ -298,4 +298,18 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
+
+  // ---- Case study card click tracking (GA4 via GTM custom event) ----
+  document.querySelectorAll(".case-study-card-v2, .case-study-pitch-card").forEach(function (card) {
+    card.addEventListener("click", function () {
+      var href = card.getAttribute("href") || "";
+      var slug = href.replace(/^\/work\//, "").replace(/\/$/, "");
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: "case_study_click",
+        case_study_slug: slug,
+        case_study_type: card.classList.contains("case-study-pitch-card") ? "pitch" : (card.getAttribute("data-tags") || "")
+      });
+    });
+  });
 });
