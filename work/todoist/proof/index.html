@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WKSZ7DQC');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A Ramble Attribution & Measurement Plan — James Praise</title>
+<meta name="description" content="A proposed tracking and attribution plan for Ramble-specific paid acquisition at Todoist, by James Praise." />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+<link rel="canonical" href="https://jamespraise.xyz/work/todoist/proof/" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=20" />
+<style>
+  .proof-wrap { max-width: 720px; margin: 0 auto; padding: 100px 0 80px; }
+  .proof-eyebrow { color: var(--color-purple); font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; font-size: 13px; margin-bottom: 10px; }
+  .proof-credit { display: flex; align-items: center; gap: 10px; margin: 20px 0 40px; }
+  .proof-credit img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+  .proof-credit span { color: var(--text-muted); font-size: 14px; }
+  .proof-credit strong { color: var(--text-primary); }
+  .proof-note { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 8px; padding: 16px 20px; font-size: 14px; color: var(--text-muted); margin-bottom: 40px; }
+  .proof-draft { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 12px; padding: 40px; margin-bottom: 56px; }
+  .proof-draft h2 { margin-top: 32px; margin-bottom: 10px; }
+  .proof-draft h2:first-child { margin-top: 0; }
+  .proof-draft p { line-height: 1.7; }
+  .proof-body p { line-height: 1.7; }
+  .proof-body h2 { margin-top: 40px; margin-bottom: 12px; }
+  .proof-body strong { font-weight: 700; }
+  .proof-back { display: inline-block; margin-bottom: 24px; font-size: 14px; }
+  .section-label { font-size: 13px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-cards { display: grid; grid-template-columns: 1fr; gap: 14px; margin: 24px 0; }
+  .proof-card { background: var(--bg-page); border: 1px solid rgba(28,20,34,0.1); border-radius: 10px; padding: 18px; }
+  .proof-card strong { display: block; font-size: 15px; margin-bottom: 6px; color: var(--text-primary); }
+  .proof-card span { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+  .proof-quote { border-left: 3px solid var(--color-purple); padding: 4px 0 4px 22px; margin: 28px 0; font-size: 19px; font-weight: 600; line-height: 1.5; color: var(--text-primary); }
+  .proof-table-wrap { overflow-x: auto; margin: 20px 0; }
+  .proof-table { width: 100%; border-collapse: collapse; font-size: 13px; background: var(--bg-page); border-radius: 10px; overflow: hidden; }
+  .proof-table th { background: var(--bg-surface); text-align: left; padding: 10px 12px; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-muted); border-bottom: 1px solid rgba(28,20,34,0.1); }
+  .proof-table td { padding: 10px 12px; border-bottom: 1px solid rgba(28,20,34,0.08); color: var(--text-primary); line-height: 1.5; vertical-align: top; }
+  .proof-table tr:last-child td { border-bottom: none; }
+  .proof-table code { font-size: 12px; background: var(--bg-surface); padding: 2px 5px; border-radius: 4px; }
+  .proof-toc { position: fixed; top: 140px; right: 32px; width: 200px; font-size: 13px; }
+  .proof-toc-group { margin-bottom: 20px; }
+  .proof-toc-label { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-toc a { display: block; padding: 5px 0 5px 12px; border-left: 2px solid rgba(28,20,34,0.1); color: var(--text-muted); text-decoration: none; line-height: 1.4; }
+  .proof-toc a:hover { color: var(--color-purple); border-left-color: var(--color-purple); }
+  .proof-toc a.is-active { color: var(--color-purple); border-left-color: var(--color-purple); font-weight: 700; }
+  @media (max-width: 1400px) { .proof-toc { display: none; } }
+  .proof-progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(28,20,34,0.08); z-index: 200; }
+  .proof-progress-bar { height: 100%; width: 0%; background: var(--color-purple); transition: width 0.1s linear; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKSZ7DQC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="proof-progress-track"><div class="proof-progress-bar" id="proofProgressBar"></div></div>
+
+<a href="/work/todoist/" class="pitch-exit" aria-label="Back to the Todoist pitch">
+  <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+</a>
+
+<nav class="proof-toc" aria-label="Section navigation">
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The plan</p>
+    <a href="#the-question">The actual question</a>
+    <a href="#tracking-plan">The tracking plan</a>
+    <a href="#misleading">Where numbers mislead</a>
+    <a href="#how-id-build">How I'd build it</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">Why I built it this way</p>
+    <a href="#reasoning">Proposal, not an audit</a>
+  </div>
+</nav>
+
+<div class="container proof-wrap">
+  <a class="proof-back" href="/work/todoist/">&larr; Back to the Todoist pitch</a>
+
+  <p class="proof-eyebrow">A brief for Todoist</p>
+  <h1>A Ramble Attribution &amp; Measurement Plan</h1>
+
+  <div class="proof-credit">
+    <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+    <span><strong>James Praise</strong> &middot; Marketing and GTM Operator</span>
+  </div>
+
+  <p class="proof-note">This is a proposed plan, not an audit of Todoist's actual current tracking setup. Todoist's internal instrumentation isn't publicly visible, so nothing here claims to know what's currently missing. It proposes how I'd build the measurement layer for a Ramble-specific acquisition push, the same discipline behind my own paid-acquisition measurement system for Marketing In Action, applied to this feature specifically.</p>
+
+  <div class="proof-draft">
+    <p class="section-label">The plan</p>
+
+    <h2 id="the-question">The actual question</h2>
+    <p>A paid campaign built around Ramble can generate clicks and app installs easily. The harder question, and the one the JD's own "loops not campaigns" framing points at directly, is whether someone who clicked a Ramble ad actually tries Ramble, and whether trying Ramble is what pushed them to upgrade to a paid plan. Click and install numbers from Google, Meta, or TikTok can't answer that on their own, they report what happened on their platform, not what happened inside the product afterward.</p>
+    <p>Without that link, a Ramble-specific campaign either gets credited for upgrades it didn't cause, people who would have upgraded anyway, or doesn't get credited for upgrades it did cause, someone clicks, doesn't convert same-day, uses Ramble two weeks later, then upgrades. Both failure modes lead to the same bad outcome: spending against the wrong signal.</p>
+
+    <h2 id="tracking-plan">The tracking plan</h2>
+    <div class="proof-table-wrap">
+      <table class="proof-table">
+        <tr><th>Event</th><th>Trigger</th><th>Where it's captured</th><th>What question it answers</th></tr>
+        <tr><td><code>ad_click_ramble</code></td><td>Click on a Ramble-specific ad creative</td><td>Ad platform (native) + landing page URL parameter</td><td>Did the ad get clicked, and by whom (platform, creative variant)?</td></tr>
+        <tr><td><code>landing_view_ramble</code></td><td>Landing page load with the Ramble UTM parameter present</td><td>GTM, fired to GA4 and a first-party log</td><td>Did the click reach a live page, or fail somewhere?</td></tr>
+        <tr><td><code>signup_ramble_attributed</code></td><td>Account creation within the session that carried the Ramble UTM</td><td>Server-side, at signup, UTM written to the user record</td><td>Which new accounts originated from this specific campaign?</td></tr>
+        <tr><td><code>ramble_first_use</code></td><td>First voice-to-task action taken inside the product</td><td>Product event log (the one net-new instrumentation this plan needs, if it doesn't already exist)</td><td>Did the person who signed up via the ad try the feature the ad promised?</td></tr>
+        <tr><td><code>plan_upgrade</code></td><td>Free-to-paid upgrade, any plan</td><td>Billing system (Stripe or equivalent)</td><td>Did this person become a paying customer, and when?</td></tr>
+        <tr><td><code>upgrade_attributed_ramble</code></td><td>A <code>plan_upgrade</code> where the same user has both prior events</td><td>Computed, joining the three prior events by user ID</td><td>How many upgrades were actually caused by Ramble, not general brand demand?</td></tr>
+      </table>
+    </div>
+    <p class="proof-quote">The last row is the one that answers the question. The first five are just the ingredients.</p>
+
+    <h2 id="misleading">Where platform numbers are likely to mislead</h2>
+    <div class="proof-cards">
+      <div class="proof-card"><strong>Multi-touch attribution windows</strong><span>If someone clicks a Ramble ad on their phone, doesn't convert, then upgrades two weeks later on desktop after a brand search, most ad platforms will still credit that upgrade to the Ramble campaign inside their own attribution window. Requiring <code>ramble_first_use</code>, actual feature usage, sidesteps this.</span></div>
+      <div class="proof-card"><strong>View-through inflation</strong><span>Ad platforms count impressions someone never consciously registered as influencing a conversion. A campaign that looks efficient on-platform can look very different once judged against <code>ramble_first_use</code> as the bar instead of a view-through window.</span></div>
+      <div class="proof-card"><strong>Existing users mistaken for new acquisition</strong><span>If the landing page doesn't check whether the click came from an existing logged-in user before triggering the attributed-signup logic, some fraction of "new signups" will be existing users opening a new tab, inflating the apparent acquisition number for a feature they already had access to.</span></div>
+    </div>
+
+    <h2 id="how-id-build">How I'd build it</h2>
+    <p>The same stack I already run for my own business: Google Tag Manager for the client-side events, a first-party server-side layer for the events that need to survive ad blockers and iOS tracking restrictions, the signup and upgrade events specifically, and GA4 or BigQuery as the place the joined, attributed view lives, reconciled against the real billing system rather than trusting any single platform's own dashboard.</p>
+    <p>Two weeks of setup before the campaign goes live: week one wires the events and confirms <code>ramble_first_use</code> is either already logged or gets added, week two runs a small test batch of traffic through the full funnel to confirm the join logic in <code>upgrade_attributed_ramble</code> works before real budget follows it.</p>
+  </div>
+
+  <div class="proof-body">
+    <p class="section-label">Why I built it this way</p>
+
+    <h2 id="reasoning">A proposal, not an audit</h2>
+    <p>Todoist's internal tracking setup isn't publicly visible, so this plan doesn't claim to know what's currently missing or broken, that would be exactly the kind of unverifiable assumption that already went wrong once during this application's own research process. What's checkable from outside is the JD's own framing: "you'll work in loops, not campaigns," and data rigor across GA4, Tag Manager, and BigQuery named directly as a requirement. This plan answers that framing concretely, with the actual events, the actual join logic, and the actual failure modes a Ramble-specific campaign would need to watch for, rather than a general statement about caring about measurement.</p>
+    <p>The three failure modes aren't hypothetical. They're the same problem, an ad platform's own number quietly diverging from what happened, that caught a real cross-attribution error in my own Meta reporting for Marketing In Action. The fix there was the same fix proposed here: reconcile against the system that actually took the payment, not the system that served the ad.</p>
+  </div>
+
+  <div class="button-row" style="margin-top: 40px;">
+    <a href="/work/todoist/" class="button button-primary">Back to the pitch</a>
+    <a href="/work/todoist/files/james-praise-resume.pdf" target="_blank" class="button button-secondary">My Resume</a>
+  </div>
+</div>
+
+<script src="/script.js?v=11"></script>
+<script>
+(function () {
+  var bar = document.getElementById('proofProgressBar');
+  function updateProgress() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.proof-toc a'));
+  var sections = tocLinks.map(function (a) {
+    return document.getElementById(a.getAttribute('href').slice(1));
+  });
+  function updateActiveToc() {
+    var current = null;
+    sections.forEach(function (sec, i) {
+      if (sec && sec.getBoundingClientRect().top <= 140) current = i;
+    });
+    tocLinks.forEach(function (a, i) {
+      a.classList.toggle('is-active', i === current);
+    });
+  }
+  window.addEventListener('scroll', updateActiveToc, { passive: true });
+  updateActiveToc();
+})();
+</script>
+</body>
+</html>
