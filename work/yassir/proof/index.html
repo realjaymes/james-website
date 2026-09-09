@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WKSZ7DQC');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A Teardown of Yassir's Ad Account — James Praise</title>
+<meta name="description" content="A live teardown of Yassir's Meta ad account, read against the unbanked-trust problem, by James Praise." />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+<link rel="canonical" href="https://jamespraise.xyz/work/yassir/proof/" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=20" />
+<style>
+  .proof-wrap { max-width: 720px; margin: 0 auto; padding: 100px 0 80px; }
+  .proof-eyebrow { color: var(--color-purple); font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; font-size: 13px; margin-bottom: 10px; }
+  .proof-credit { display: flex; align-items: center; gap: 10px; margin: 20px 0 40px; }
+  .proof-credit img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+  .proof-credit span { color: var(--text-muted); font-size: 14px; }
+  .proof-credit strong { color: var(--text-primary); }
+  .proof-note { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 8px; padding: 16px 20px; font-size: 14px; color: var(--text-muted); margin-bottom: 40px; }
+  .proof-draft { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 12px; padding: 40px; margin-bottom: 56px; }
+  .proof-draft h2 { margin-top: 32px; margin-bottom: 10px; }
+  .proof-draft h2:first-child { margin-top: 0; }
+  .proof-draft p { line-height: 1.7; }
+  .proof-body p { line-height: 1.7; }
+  .proof-body h2 { margin-top: 40px; margin-bottom: 12px; }
+  .proof-body strong { font-weight: 700; }
+  .proof-img { border-radius: 8px; border: 1px solid rgba(0,0,0,0.08); margin: 20px 0; box-shadow: 0 4px 16px rgba(0,0,0,0.06); width: 100%; }
+  .proof-back { display: inline-block; margin-bottom: 24px; font-size: 14px; }
+  .section-label { font-size: 13px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-cards { display: grid; grid-template-columns: 1fr; gap: 14px; margin: 24px 0; }
+  .proof-card { background: var(--bg-page); border: 1px solid rgba(28,20,34,0.1); border-radius: 10px; padding: 18px; }
+  .proof-card strong { display: block; font-size: 15px; margin-bottom: 6px; color: var(--text-primary); }
+  .proof-card span { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+  .proof-quote { border-left: 3px solid var(--color-purple); padding: 4px 0 4px 22px; margin: 28px 0; font-size: 19px; font-weight: 600; line-height: 1.5; color: var(--text-primary); }
+  .proof-toc { position: fixed; top: 140px; right: 32px; width: 200px; font-size: 13px; }
+  .proof-toc-group { margin-bottom: 20px; }
+  .proof-toc-label { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-toc a { display: block; padding: 5px 0 5px 12px; border-left: 2px solid rgba(28,20,34,0.1); color: var(--text-muted); text-decoration: none; line-height: 1.4; }
+  .proof-toc a:hover { color: var(--color-purple); border-left-color: var(--color-purple); }
+  .proof-toc a.is-active { color: var(--color-purple); border-left-color: var(--color-purple); font-weight: 700; }
+  @media (max-width: 1400px) { .proof-toc { display: none; } }
+  .proof-progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(28,20,34,0.08); z-index: 200; }
+  .proof-progress-bar { height: 100%; width: 0%; background: var(--color-purple); transition: width 0.1s linear; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKSZ7DQC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="proof-progress-track"><div class="proof-progress-bar" id="proofProgressBar"></div></div>
+
+<a href="/work/yassir/" class="pitch-exit" aria-label="Back to the Yassir pitch">
+  <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+</a>
+
+<nav class="proof-toc" aria-label="Section navigation">
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The teardown</p>
+    <a href="#whats-running">What's actually running</a>
+    <a href="#the-gap">The gap</a>
+    <a href="#three-shifts">Three specific shifts</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">Why I structured it this way</p>
+    <a href="#reasoning">Reading before assuming</a>
+  </div>
+</nav>
+
+<div class="container proof-wrap">
+  <a class="proof-back" href="/work/yassir/">&larr; Back to the Yassir pitch</a>
+
+  <p class="proof-eyebrow">A brief for Yassir</p>
+  <h1>A Teardown of Yassir's Live Meta Ad Account</h1>
+
+  <div class="proof-credit">
+    <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+    <span><strong>James Praise</strong> &middot; Marketing and GTM Operator</span>
+  </div>
+
+  <p class="proof-note">Live browser research via Meta Ad Library (Algeria, active ads), verified against Yassir's Google Play listing, domain, and known sub-brands before treating any of this as evidence about the actual company.</p>
+
+  <div class="proof-draft">
+    <p class="section-label">The teardown</p>
+
+    <h2 id="whats-running">What's actually running</h2>
+    <p>Yassir's account has roughly 610 active ads. Reading through them by category:</p>
+
+    <div class="proof-cards">
+      <div class="proof-card"><strong>Yassir Cash operational ads (the largest group)</strong><span>"Where to find a top-up agent, how to load or withdraw balance, which payment cards work." Purely instructional, no framing around why handling money through the app is safe.</span></div>
+      <div class="proof-card"><strong>Category-leader claims</strong><span>The same line, "Yassir, the #1 app in Algeria," repeated near-verbatim across dozens of separate ad units.</span></div>
+      <div class="proof-card"><strong>Driver-partner recruitment</strong><span>"More than 40,000 partners trust us," specific monthly earnings figures, a concrete social-proof number used deliberately.</span></div>
+      <div class="proof-card"><strong>New-user acquisition</strong><span>50% off a first ride, one line buried mid-copy mentioning "comfort, safety," otherwise a standard discount push.</span></div>
+    </div>
+
+    <img class="proof-img" src="/assets/images/case-studies/yassir/meta-ad-library-results.jpg" alt="Yassir's live Meta Ad Library results, showing ~610 active ads dominated by Yassir Cash top-up instructions and generic #1-app claims" />
+
+    <h2 id="the-gap">The gap</h2>
+    <p>Yassir already knows how to run trust as a headline claim. It just runs that play on the driver side, not the consumer side. "40,000+ partners trust us" is doing genuine work recruiting drivers into a cash-handling relationship with the company. No equivalent claim exists anywhere in the consumer-facing account, where the same underlying question, "is my money safe here," applies at least as much to a first-time rider loading Yassir Cash.</p>
+
+    <p class="proof-quote">The claim Yassir already trusts enough to run on drivers has never been pointed at riders.</p>
+
+    <h2 id="three-shifts">Three specific shifts</h2>
+
+    <div class="proof-cards">
+      <div class="proof-card"><strong>1. Give consumer trust its own ad, using the format already proven on the driver side</strong><span>Not folded into a top-up how-to. A standalone unit built the way the partner-recruitment ads are: a specific number, transaction volume, years operating, agent network size, stated as plainly as "40,000+ partners trust us" is stated today.</span></div>
+      <div class="proof-card"><strong>2. Move safety language ahead of the instructions, not after them</strong><span>Every Yassir Cash ad currently opens with the mechanic, here's how to top up, before any word about why that's safe to do. Reversing that order costs nothing to test and puts the trust claim where a first-time user actually needs it.</span></div>
+      <div class="proof-card"><strong>3. Build out the one line that already works</strong><span>The new-user 50%-off ad's "comfort, safety" mention is the only trust language anywhere in the acquisition set, and it's a fragment inside a discount pitch. Isolated into its own hook, tested against the discount-led version, it's the cheapest experiment in the account to run.</span></div>
+    </div>
+  </div>
+
+  <div class="proof-body">
+    <p class="section-label">Why I structured it this way</p>
+
+    <h2 id="reasoning">Reading before assuming</h2>
+    <p>I read the account before writing anything, rather than assuming what a ride-hailing app in a mostly-unbanked market would say. The finding that mattered, that Yassir already runs trust-as-headline on the driver side and never carries it to the consumer side, only shows up by reading the ads directly against each other, not by reasoning about the market from the outside.</p>
+    <p>The three shifts are ordered by how cheap they are to test: a new ad, a reordered ad, and an isolated line, in that order, because a specialist role like this one gets judged on what moves fastest against a live account, not on the most ambitious idea.</p>
+  </div>
+
+  <div class="button-row" style="margin-top: 40px;">
+    <a href="/work/yassir/" class="button button-primary">Back to the pitch</a>
+    <a href="mailto:jamesspraise@gmail.com?subject=Digital%20Ads%20Specialist%20-%20James%20Praise" class="button button-secondary">Let's Talk</a>
+  </div>
+</div>
+
+<script src="/script.js?v=10"></script>
+<script>
+(function () {
+  var bar = document.getElementById('proofProgressBar');
+  function updateProgress() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.proof-toc a'));
+  var sections = tocLinks.map(function (a) {
+    return document.getElementById(a.getAttribute('href').slice(1));
+  });
+  function updateActiveToc() {
+    var current = null;
+    sections.forEach(function (sec, i) {
+      if (sec && sec.getBoundingClientRect().top <= 140) current = i;
+    });
+    tocLinks.forEach(function (a, i) {
+      a.classList.toggle('is-active', i === current);
+    });
+  }
+  window.addEventListener('scroll', updateActiveToc, { passive: true });
+  updateActiveToc();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WKSZ7DQC');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A Draft Technical Case Study for Cosine — James Praise</title>
+<meta name="description" content="A draft of Cosine's first technical case study, written by James Praise from what's already public on cosine.sh, plus the structural reasoning behind it." />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+<link rel="canonical" href="https://jamespraise.xyz/work/cosine/proof/" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=20" />
+<style>
+  .proof-wrap { max-width: 720px; margin: 0 auto; padding: 100px 0 80px; }
+  .proof-eyebrow { color: var(--color-purple); font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; font-size: 13px; margin-bottom: 10px; }
+  .proof-credit { display: flex; align-items: center; gap: 10px; margin: 20px 0 40px; }
+  .proof-credit img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+  .proof-credit span { color: var(--text-muted); font-size: 14px; }
+  .proof-credit strong { color: var(--text-primary); }
+  .proof-note { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 8px; padding: 16px 20px; font-size: 14px; color: var(--text-muted); margin-bottom: 40px; }
+  .proof-draft { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 12px; padding: 40px; margin-bottom: 56px; }
+  .proof-draft h2 { margin-top: 32px; margin-bottom: 10px; }
+  .proof-draft h2:first-child { margin-top: 0; }
+  .proof-draft p { line-height: 1.7; }
+  .proof-body p { line-height: 1.7; }
+  .proof-body h2 { margin-top: 40px; margin-bottom: 12px; }
+  .proof-body strong { font-weight: 700; }
+  .proof-img { border-radius: 8px; border: 1px solid rgba(0,0,0,0.08); margin: 20px 0; box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+  .proof-back { display: inline-block; margin-bottom: 24px; font-size: 14px; }
+  .section-label { font-size: 13px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 24px 0; }
+  .proof-card { background: var(--bg-page); border: 1px solid rgba(28,20,34,0.1); border-radius: 10px; padding: 18px; }
+  .proof-card strong { display: block; font-size: 15px; margin-bottom: 6px; color: var(--text-primary); }
+  .proof-card span { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+  .proof-stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin: 24px 0; }
+  .proof-stat { background: var(--bg-page); border: 1px solid rgba(28,20,34,0.1); border-radius: 10px; padding: 16px 6px; text-align: center; }
+  .proof-stat.is-winner { border-color: var(--color-purple); background: rgba(113,132,241,0.08); }
+  .proof-stat strong { display: block; font-size: 21px; color: var(--text-primary); margin-bottom: 4px; }
+  .proof-stat.is-winner strong { color: var(--color-purple); }
+  .proof-stat span { font-size: 11px; color: var(--text-muted); line-height: 1.3; display: block; }
+  .proof-quote { border-left: 3px solid var(--color-purple); padding: 4px 0 4px 22px; margin: 28px 0; font-size: 19px; font-weight: 600; line-height: 1.5; color: var(--text-primary); }
+  .proof-ba { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 24px 0; }
+  .proof-ba-col { border-radius: 10px; padding: 20px; }
+  .proof-ba-col.is-before { background: var(--bg-page); border: 1px solid rgba(28,20,34,0.1); }
+  .proof-ba-col.is-after { background: rgba(113,132,241,0.08); border: 1px solid var(--color-purple); }
+  .proof-ba-label { font-size: 12px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 10px; color: var(--text-muted); }
+  .proof-ba-col.is-after .proof-ba-label { color: var(--color-purple); }
+  .proof-ba-col ul { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; color: var(--text-primary); }
+  @media (max-width: 640px) {
+    .proof-cards { grid-template-columns: 1fr; }
+    .proof-stats { grid-template-columns: repeat(2, 1fr); }
+    .proof-ba { grid-template-columns: 1fr; }
+  }
+  .proof-progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(28,20,34,0.08); z-index: 200; }
+  .proof-progress-bar { height: 100%; width: 0%; background: var(--color-purple); transition: width 0.1s linear; }
+  .proof-toc { position: fixed; top: 140px; right: 32px; width: 200px; font-size: 13px; }
+  .proof-toc-group { margin-bottom: 20px; }
+  .proof-toc-label { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-toc a { display: block; padding: 5px 0 5px 12px; border-left: 2px solid rgba(28,20,34,0.1); color: var(--text-muted); text-decoration: none; line-height: 1.4; }
+  .proof-toc a:hover { color: var(--color-purple); border-left-color: var(--color-purple); }
+  .proof-toc a.is-active { color: var(--color-purple); border-left-color: var(--color-purple); font-weight: 700; }
+  @media (max-width: 1400px) { .proof-toc { display: none; } }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKSZ7DQC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="proof-progress-track"><div class="proof-progress-bar" id="proofProgressBar"></div></div>
+
+<a href="/work/cosine/" class="pitch-exit" aria-label="Back to the Cosine pitch">
+  <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+</a>
+
+<nav class="proof-toc" aria-label="Section navigation">
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">Draft case study</p>
+    <a href="#evaluating">Evaluating the agent</a>
+    <a href="#governance-first">Governance first</a>
+    <a href="#capability">The capability question</a>
+    <a href="#what-changed">What changed</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">Why I structured it this way</p>
+    <a href="#lead-objection">Lead with the objection</a>
+    <a href="#answer-governance">Governance before benchmark</a>
+    <a href="#translate-benchmark">Translate the benchmark</a>
+    <a href="#close-reader">Close on the reader</a>
+    <a href="#point-of-view">The point of view</a>
+  </div>
+</nav>
+
+<div class="container proof-wrap">
+  <a class="proof-back" href="/work/cosine/">&larr; Back to the Cosine pitch</a>
+
+  <p class="proof-eyebrow">A brief for Cosine</p>
+  <h1>A Draft of Cosine's First Technical Case Study</h1>
+
+  <div class="proof-credit">
+    <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+    <span><strong>James Praise</strong> &middot; Marketing and GTM Operator</span>
+  </div>
+
+  <p class="proof-note">This is a draft, not a real customer's story, Cosine hasn't published a named case study yet. It's built entirely from what's already public on cosine.sh: the Niche-Bench numbers, the Sovereign AI governance framework, the niche-languages positioning. Swap in a customer's specifics once one is ready to go on record. The structure and the reasoning behind it hold regardless of which name goes at the top.</p>
+
+  <div class="proof-draft">
+    <p class="section-label">Draft case study</p>
+
+    <h2 id="evaluating">Evaluating an AI Coding Agent Inside a Bank That Can't Send Code Anywhere</h2>
+
+    <p>A platform engineering team inside a Tier-1 investment bank had a straightforward mandate: cut down the maintenance backlog on a legacy trading system, most of it COBOL written before anyone currently on the team joined. Every AI coding tool they'd already evaluated cleared the first bar, writing plausible-looking code, and failed the second. None of them could run inside the bank's approved environment without sending source code, prompts, or logs somewhere the security team couldn't see.</p>
+
+    <p>Before a single line of generated code got reviewed, the security team needed a written answer to three questions: where does the code go, who can govern what the agent does, and what happens when the output is wrong.</p>
+
+    <h2 id="governance-first">Governance first, capability second</h2>
+
+    <p>Cosine had a specific, checkable answer to each of the three questions before the capability conversation even started:</p>
+
+    <div class="proof-cards">
+      <div class="proof-card"><strong>Where does the code go</strong><span>Nothing leaves the approved environment. Source code, prompts, tool execution, and logs stay inside infrastructure the bank already controls, the same standard applied to every other system touching production trading code.</span></div>
+      <div class="proof-card"><strong>Who can govern the agent</strong><span>Identity, permissions, and tool execution are governed the same way the bank governs its own engineers, with full audit logs.</span></div>
+      <div class="proof-card"><strong>What happens when it's wrong</strong><span>A human-review gate sits in front of every generated change before it ships. Nothing merges unreviewed.</span></div>
+    </div>
+
+    <p>None of the three answers required a new exception to existing security policy. That's further than most AI coding tools get: they fail the first question before anyone even asks the second or third.</p>
+
+    <h2 id="capability">The capability question, once governance cleared the room</h2>
+
+    <p>Only once those three questions had answers did the conversation move to whether the agent could actually do the work. Lumen Outpost is trained on production code rather than generalist internet text, which matters directly for a codebase running COBOL: on Cosine's own Niche-Bench, a benchmark built around the kind of task developers on legacy and enterprise systems actually face, Lumen Outpost comes out ahead.</p>
+
+    <div class="proof-stats">
+      <div class="proof-stat is-winner"><strong>53.9%</strong><span>Lumen Outpost</span></div>
+      <div class="proof-stat"><strong>48.3%</strong><span>Kimi K2.6</span></div>
+      <div class="proof-stat"><strong>47.4%</strong><span>GPT-5.5</span></div>
+      <div class="proof-stat"><strong>44.9%</strong><span>Gemini 3.1 Pro</span></div>
+      <div class="proof-stat"><strong>42.4%</strong><span>GPT-5.4</span></div>
+    </div>
+
+    <p class="proof-quote">In hours, that gap means fewer wrong pull requests landing in a system where a bad merge is expensive, and less senior-engineer time spent reviewing AI output that reads like working code but doesn't hold up against twenty years of accumulated context a generalist model never saw.</p>
+
+    <h2 id="what-changed">What changed</h2>
+
+    <div class="proof-ba">
+      <div class="proof-ba-col is-before">
+        <p class="proof-ba-label">Before</p>
+        <ul>
+          <li>Maintenance backlog nobody on the team wants to touch</li>
+          <li>Every AI tool evaluated fails the environment check</li>
+          <li>No path through security policy without a new exception</li>
+        </ul>
+      </div>
+      <div class="proof-ba-col is-after">
+        <p class="proof-ba-label">After</p>
+        <ul>
+          <li>Agent does the first pass, a human reviews every change</li>
+          <li>Same governance boundary the bank already runs everything through</li>
+          <li>Three other teams ask for the same setup</li>
+        </ul>
+      </div>
+    </div>
+
+    <p>What almost stalled at the environment check became the setup three other teams inside the bank now want for their own systems.</p>
+  </div>
+
+  <div class="proof-body">
+    <p class="section-label">Why I structured it this way</p>
+
+    <h2 id="lead-objection">Lead with the objection, not the agent</h2>
+    <p>A bank's or defence prime's technical lead evaluating an AI coding agent has usually already sat through a pitch from something that turned out to be a thin wrapper around a general model. Their first worry is whether the thing will leak source code and whether anyone can govern what it does once it's running, ahead of whether it can code well. The draft opens on the evaluation itself, not on Cosine or Lumen by name, because that worry is what the reader is actually carrying into the first paragraph.</p>
+
+    <img class="proof-img" src="/assets/images/case-studies/cosine/sovereign-ai-risk-cards.jpg" alt="Cosine's Sovereign AI page naming three risk categories: code leaving approved environments, generic agents being hard to govern, and low-quality output creating operational risk" />
+
+    <p>Cosine has already written the answer to that worry. It's just sitting on the Sovereign AI solution page, not in a case study built around it. That page names the objection in three parts: code leaving approved environments, generic agents being hard to govern, and low-quality output creating operational risk. Most vendors writing a first case study for this audience invent a generic "enterprise-grade security" reassurance from scratch. Cosine doesn't have to. The objection-handling skeleton already exists on the site, unused as a narrative structure, so the draft's governance section is built directly out of Cosine's own three categories rather than a new framework invented for the occasion.</p>
+
+    <h2 id="answer-governance">Answer the governance objection before the benchmark</h2>
+    <p>Most first case studies get this order backwards. They open with the benchmark and bury the governance answer in an FAQ, when the governance answer is the actual reason a bank's security team lets the eval proceed at all. The draft holds the benchmark back until the three governance questions are answered, on the theory that a reader who hasn't cleared their own security review yet won't stay for the benchmark regardless of how good it is.</p>
+
+    <img class="proof-img" src="/assets/images/case-studies/cosine/niche-bench-chart.jpg" alt="Cosine's Niche-Bench results: Lumen Outpost at 53.9%, ahead of GPT-5.5 (47.4%), Kimi K2.6 (48.3%), Gemini 3.1 Pro (44.9%), and GPT-5.4 (42.4%)" />
+
+    <h2 id="translate-benchmark">Translate the benchmark into an operational outcome</h2>
+    <p>A technical buyer at a bank doesn't care about a six-point benchmark gap in the abstract. Stated as a percentage, it's an interesting number. Translated into fewer bad merges and less senior-engineer review time, it's a budget line. The draft does that translation itself instead of leaving the reader to work out what 53.9% actually buys them.</p>
+
+    <img class="proof-img" src="/assets/images/case-studies/cosine/homepage-hero.jpg" alt="Cosine's homepage listing its coalition of named enterprises and consultancies: BAE Systems, BT, HSBC, Lloyds Banking Group, Telefónica Tech, Leonardo, LSEG, PwC, Fujitsu, Deloitte, Vodafone, EY" />
+
+    <h2 id="close-reader">Close on the reader placing themselves in the story</h2>
+    <p>Cosine already displays a coalition of named enterprises and consultancies on its own homepage: BAE Systems, HSBC, Lloyds Banking Group, Telefónica Tech, Leonardo, LSEG, PwC, Fujitsu, Deloitte, Vodafone, EY. A first case study should put that coalition to work instead of inventing generic social proof. A reader at one of those categories of company should recognize their own compliance review and their own legacy system by the second paragraph, before the draft ever names Cosine directly.</p>
+
+    <h2 id="point-of-view">The point of view I'd defend</h2>
+    <p>For this audience specifically, governance has to come before capability in the telling, not after. A generalist AI vendor pitching a startup can open with a benchmark and treat security as a closing afterthought. A vendor pitching a bank's platform team doesn't have that option: the governance answer is what gets the capability conversation into the room at all.</p>
+  </div>
+
+  <div class="button-row" style="margin-top: 40px;">
+    <a href="/work/cosine/" class="button button-primary">Back to the pitch</a>
+    <a href="mailto:jamesspraise@gmail.com?subject=Senior%20Developer%20Evangelist%20-%20James%20Praise" class="button button-secondary">Let's Talk</a>
+  </div>
+</div>
+
+<script src="/script.js?v=10"></script>
+<script>
+(function () {
+  var bar = document.getElementById('proofProgressBar');
+  function updateProgress() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.proof-toc a'));
+  var sections = tocLinks.map(function (a) {
+    return document.getElementById(a.getAttribute('href').slice(1));
+  });
+  function updateActiveToc() {
+    var current = null;
+    sections.forEach(function (sec, i) {
+      if (sec && sec.getBoundingClientRect().top <= 140) current = i;
+    });
+    tocLinks.forEach(function (a, i) {
+      a.classList.toggle('is-active', i === current);
+    });
+  }
+  window.addEventListener('scroll', updateActiveToc, { passive: true });
+  updateActiveToc();
+})();
+</script>
+</body>
+</html>

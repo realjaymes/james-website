@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WKSZ7DQC');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lightsprint's Missing Growth Loop — James Praise</title>
+<meta name="description" content="A read of Lightsprint's live marketing site and the one acquisition loop it hasn't productized yet, by James Praise." />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+<link rel="canonical" href="https://jamespraise.xyz/work/lightsprint/proof/" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=20" />
+<style>
+  .proof-wrap { max-width: 720px; margin: 0 auto; padding: 100px 0 80px; }
+  .proof-eyebrow { color: var(--color-purple); font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; font-size: 13px; margin-bottom: 10px; }
+  .proof-credit { display: flex; align-items: center; gap: 10px; margin: 20px 0 40px; }
+  .proof-credit img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+  .proof-credit span { color: var(--text-muted); font-size: 14px; }
+  .proof-credit strong { color: var(--text-primary); }
+  .proof-note { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 8px; padding: 16px 20px; font-size: 14px; color: var(--text-muted); margin-bottom: 40px; }
+  .proof-draft { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 12px; padding: 40px; margin-bottom: 56px; }
+  .proof-draft h2 { margin-top: 32px; margin-bottom: 10px; }
+  .proof-draft h2:first-child { margin-top: 0; }
+  .proof-draft p { line-height: 1.7; }
+  .proof-body p { line-height: 1.7; }
+  .proof-body h2 { margin-top: 40px; margin-bottom: 12px; }
+  .proof-img { border-radius: 8px; border: 1px solid rgba(0,0,0,0.08); margin: 20px 0; box-shadow: 0 4px 16px rgba(0,0,0,0.06); width: 100%; }
+  .proof-back { display: inline-block; margin-bottom: 24px; font-size: 14px; }
+  .section-label { font-size: 13px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-cards { display: grid; grid-template-columns: 1fr; gap: 14px; margin: 24px 0; }
+  .proof-card { background: var(--bg-page); border: 1px solid rgba(28,20,34,0.1); border-radius: 10px; padding: 18px; }
+  .proof-card strong { display: block; font-size: 15px; margin-bottom: 6px; color: var(--text-primary); }
+  .proof-card span { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+  .proof-quote { border-left: 3px solid var(--color-purple); padding: 4px 0 4px 22px; margin: 28px 0; font-size: 19px; font-weight: 600; line-height: 1.5; color: var(--text-primary); }
+  .proof-checklist { list-style: none; margin: 20px 0; padding: 0; }
+  .proof-checklist li { padding: 10px 0 10px 30px; position: relative; border-bottom: 1px solid rgba(28,20,34,0.08); color: var(--text-primary); }
+  .proof-checklist li:last-child { border-bottom: none; }
+  .proof-checklist li::before { content: "✓"; position: absolute; left: 0; color: var(--color-purple); font-weight: 800; }
+  .proof-toc { position: fixed; top: 140px; right: 32px; width: 200px; font-size: 13px; }
+  .proof-toc-group { margin-bottom: 20px; }
+  .proof-toc-label { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-toc a { display: block; padding: 5px 0 5px 12px; border-left: 2px solid rgba(28,20,34,0.1); color: var(--text-muted); text-decoration: none; line-height: 1.4; }
+  .proof-toc a:hover { color: var(--color-purple); border-left-color: var(--color-purple); }
+  .proof-toc a.is-active { color: var(--color-purple); border-left-color: var(--color-purple); font-weight: 700; }
+  @media (max-width: 1400px) { .proof-toc { display: none; } }
+  .proof-progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(28,20,34,0.08); z-index: 200; }
+  .proof-progress-bar { height: 100%; width: 0%; background: var(--color-purple); transition: width 0.1s linear; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKSZ7DQC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="proof-progress-track"><div class="proof-progress-bar" id="proofProgressBar"></div></div>
+
+<a href="/work/lightsprint/" class="pitch-exit" aria-label="Back to the Lightsprint pitch">
+  <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+</a>
+
+<nav class="proof-toc" aria-label="Section navigation">
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The read</p>
+    <a href="#whats-strong">What's already strong</a>
+    <a href="#whats-missing">What's missing</a>
+    <a href="#what-id-build">What I'd build</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">Why I structured it this way</p>
+    <a href="#reasoning">Checking before claiming</a>
+  </div>
+</nav>
+
+<div class="container proof-wrap">
+  <a class="proof-back" href="/work/lightsprint/">&larr; Back to the Lightsprint pitch</a>
+
+  <p class="proof-eyebrow">A brief for Lightsprint</p>
+  <h1>Lightsprint's Missing Growth Loop</h1>
+
+  <div class="proof-credit">
+    <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+    <span><strong>James Praise</strong> &middot; Marketing and GTM Operator</span>
+  </div>
+
+  <p class="proof-note">Live browser research on lightsprint.ai, September 2026, cross-checked against LinkedIn and Google to confirm this is the same YC P26 company from the job posting.</p>
+
+  <div class="proof-draft">
+    <p class="section-label">The read</p>
+
+    <h2 id="whats-strong">What's already strong</h2>
+    <p>Lightsprint's marketing site is well built.</p>
+
+    <ul class="proof-checklist">
+      <li>The FAQ answers the hardest question a non-technical buyer has directly, no engineer, can I actually use this safely, with a substantive answer, not a dodge</li>
+      <li>The blog has 11+ posts on a clear, consistent thesis (agent-native engineering, the unbundling of GitHub, the new SDLC), publishing on a steady cadence through mid-2026</li>
+      <li>Named customers (Arc, TransactCloud, Didit, Fuzzy, Chirp, Carousell, Metix AI) back the positioning with specific quotes, not generic praise</li>
+      <li>"Get Started" opens a live interactive simulation of a Lightsprint session instead of a signup form</li>
+    </ul>
+
+    <img class="proof-img" src="/assets/images/case-studies/lightsprint/interactive-demo.jpg" alt="Lightsprint's interactive Get Started demo, simulating a Design/Product/Engineering session before any signup form" />
+
+    <h2 id="whats-missing">What's missing</h2>
+    <p>None of that machinery turns into an acquisition loop. Lightsprint's core product mechanic is multiple people, PM, designer, engineer, working inside one shared session. That's inherently the kind of thing that spreads by invitation: Figma, Notion, and Slack all grew because using the product with a teammate required bringing the teammate in. Lightsprint's site shows the mechanic in a UI mockup but never turns it into a moment where a visitor invites their own team as part of getting started.</p>
+
+    <p class="proof-quote">Every testimonial is a senior title with an internal champion already convinced. None of them is a shareable artifact that could recruit the next customer the way the product recruits new teammates once one person adopts it.</p>
+
+    <h2 id="what-id-build">What I'd build</h2>
+
+    <div class="proof-cards">
+      <div class="proof-card"><strong>Put team invites inside the free flow, not after it</strong><span>The interactive demo already simulates a multi-persona session. Adding an explicit "bring a teammate into this" step there, before any paywall, turns the product's own collaborative mechanic into the first acquisition loop.</span></div>
+      <div class="proof-card"><strong>Give non-technical builders something to share, not just say</strong><span>The testimonials already prove PMs and designers are the most enthusiastic evangelists. A shareable public page for what someone shipped, the same instinct behind Loom's shared recordings or Notion's public pages, turns that enthusiasm into a link.</span></div>
+      <div class="proof-card"><strong>Route the resulting case studies back into the blog's own momentum</strong><span>Customer-build pages, fed by the shareable artifacts above, are additional link-worthy pages that compound the SEO motion already running, rather than a separate initiative competing for the same time.</span></div>
+    </div>
+
+    <img class="proof-img" src="/assets/images/case-studies/lightsprint/homepage-hero.jpg" alt="Lightsprint's homepage hero: Start shipping at the speed of your ideas" />
+  </div>
+
+  <div class="proof-body">
+    <p class="section-label">Why I structured it this way</p>
+
+    <h2 id="reasoning">Checking before claiming</h2>
+    <p>I read the site before writing anything, and two of my first hypotheses, a thin FAQ, an empty blog, turned out wrong once checked directly. I kept those checks in this document instead of quietly dropping them, because verifying before claiming a gap matters more than looking right on the first guess.</p>
+    <p>The finding that survived, no invite loop on an inherently multiplayer product, only shows up by actually using the interactive demo and reading the testimonials against each other, not by describing what a dev-tool landing page usually looks like.</p>
+  </div>
+
+  <div class="button-row" style="margin-top: 40px;">
+    <a href="/work/lightsprint/" class="button button-primary">Back to the pitch</a>
+    <a href="mailto:jamesspraise@gmail.com?subject=Product%20Marketing%20/%20GTM%20Engineer%20-%20James%20Praise" class="button button-secondary">Let's Talk</a>
+  </div>
+</div>
+
+<script src="/script.js?v=10"></script>
+<script>
+(function () {
+  var bar = document.getElementById('proofProgressBar');
+  function updateProgress() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.proof-toc a'));
+  var sections = tocLinks.map(function (a) {
+    return document.getElementById(a.getAttribute('href').slice(1));
+  });
+  function updateActiveToc() {
+    var current = null;
+    sections.forEach(function (sec, i) {
+      if (sec && sec.getBoundingClientRect().top <= 140) current = i;
+    });
+    tocLinks.forEach(function (a, i) {
+      a.classList.toggle('is-active', i === current);
+    });
+  }
+  window.addEventListener('scroll', updateActiveToc, { passive: true });
+  updateActiveToc();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WKSZ7DQC');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A Teardown of Joy's Ad Account — James Praise</title>
+<meta name="description" content="A live teardown of Joy's Meta ad account, read against its own referral growth story, by James Praise." />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+<link rel="canonical" href="https://jamespraise.xyz/work/joy/proof/" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=20" />
+<style>
+  .proof-wrap { max-width: 720px; margin: 0 auto; padding: 100px 0 80px; }
+  .proof-eyebrow { color: var(--color-purple); font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; font-size: 13px; margin-bottom: 10px; }
+  .proof-credit { display: flex; align-items: center; gap: 10px; margin: 20px 0 40px; }
+  .proof-credit img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+  .proof-credit span { color: var(--text-muted); font-size: 14px; }
+  .proof-credit strong { color: var(--text-primary); }
+  .proof-note { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 8px; padding: 16px 20px; font-size: 14px; color: var(--text-muted); margin-bottom: 40px; }
+  .proof-draft { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 12px; padding: 40px; margin-bottom: 56px; }
+  .proof-draft h2 { margin-top: 32px; margin-bottom: 10px; }
+  .proof-draft h2:first-child { margin-top: 0; }
+  .proof-draft p { line-height: 1.7; }
+  .proof-body p { line-height: 1.7; }
+  .proof-body h2 { margin-top: 40px; margin-bottom: 12px; }
+  .proof-img { border-radius: 8px; border: 1px solid rgba(0,0,0,0.08); margin: 20px 0; box-shadow: 0 4px 16px rgba(0,0,0,0.06); width: 100%; }
+  .proof-back { display: inline-block; margin-bottom: 24px; font-size: 14px; }
+  .section-label { font-size: 13px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 24px 0; }
+  .proof-stat { background: var(--bg-page); border: 1px solid rgba(28,20,34,0.1); border-radius: 10px; padding: 16px 10px; text-align: center; }
+  .proof-stat.is-winner { border-color: var(--color-purple); background: rgba(113,132,241,0.08); }
+  .proof-stat strong { display: block; font-size: 20px; color: var(--text-primary); margin-bottom: 4px; }
+  .proof-stat.is-winner strong { color: var(--color-purple); }
+  .proof-stat span { font-size: 12px; color: var(--text-muted); line-height: 1.3; display: block; }
+  .proof-cards { display: grid; grid-template-columns: 1fr; gap: 14px; margin: 24px 0; }
+  .proof-card { background: var(--bg-page); border: 1px solid rgba(28,20,34,0.1); border-radius: 10px; padding: 18px; }
+  .proof-card strong { display: block; font-size: 15px; margin-bottom: 6px; color: var(--text-primary); }
+  .proof-card span { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+  .proof-quote { border-left: 3px solid var(--color-purple); padding: 4px 0 4px 22px; margin: 28px 0; font-size: 19px; font-weight: 600; line-height: 1.5; color: var(--text-primary); }
+  .proof-toc { position: fixed; top: 140px; right: 32px; width: 200px; font-size: 13px; }
+  .proof-toc-group { margin-bottom: 20px; }
+  .proof-toc-label { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-toc a { display: block; padding: 5px 0 5px 12px; border-left: 2px solid rgba(28,20,34,0.1); color: var(--text-muted); text-decoration: none; line-height: 1.4; }
+  .proof-toc a:hover { color: var(--color-purple); border-left-color: var(--color-purple); }
+  .proof-toc a.is-active { color: var(--color-purple); border-left-color: var(--color-purple); font-weight: 700; }
+  @media (max-width: 1400px) { .proof-toc { display: none; } }
+  .proof-progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(28,20,34,0.08); z-index: 200; }
+  .proof-progress-bar { height: 100%; width: 0%; background: var(--color-purple); transition: width 0.1s linear; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKSZ7DQC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="proof-progress-track"><div class="proof-progress-bar" id="proofProgressBar"></div></div>
+
+<a href="/work/joy/" class="pitch-exit" aria-label="Back to the Joy pitch">
+  <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+</a>
+
+<nav class="proof-toc" aria-label="Section navigation">
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The teardown</p>
+    <a href="#whats-running">What's actually running</a>
+    <a href="#the-gap">The gap</a>
+    <a href="#what-id-test">What I'd test</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">Why I structured it this way</p>
+    <a href="#reasoning">Reading before assuming</a>
+  </div>
+</nav>
+
+<div class="container proof-wrap">
+  <a class="proof-back" href="/work/joy/">&larr; Back to the Joy pitch</a>
+
+  <p class="proof-eyebrow">A brief for Joy</p>
+  <h1>A Teardown of Joy's Live Meta Ad Account</h1>
+
+  <div class="proof-credit">
+    <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+    <span><strong>James Praise</strong> &middot; Marketing and GTM Operator</span>
+  </div>
+
+  <p class="proof-note">Live browser research via Meta Ad Library (United States, "Joy The App" advertiser), verified against the destination domain and product description before treating any of this as evidence about the actual company.</p>
+
+  <div class="proof-draft">
+    <p class="section-label">The teardown</p>
+
+    <h2 id="whats-running">What's actually running</h2>
+    <p>Joy's Meta account has about 15 active ads. Every one of them started on the same date and points to the same landing page.</p>
+
+    <div class="proof-stats">
+      <div class="proof-stat is-winner"><strong>15</strong><span>total active ads</span></div>
+      <div class="proof-stat"><strong>1</strong><span>landing page across all of them</span></div>
+      <div class="proof-stat"><strong>&gt;1 yr</strong><span>since the set was last refreshed</span></div>
+    </div>
+
+    <img class="proof-img" src="/assets/images/case-studies/joy/meta-ad-library-results.jpg" alt="Joy's live Meta Ad Library results: 15 active ads, all started Feb 3 2025, rotating two headlines against the same free-wedding-website landing page" />
+
+    <p>The copy rotates between two headlines: "Plan the wedding of your dreams with Joy" and "Create a wedding website that's beautiful, free, and uniquely yours." That's the entire visible paid account. One offer, one landing page, running unchanged for over a year.</p>
+
+    <h2 id="the-gap">The gap</h2>
+    <p>Joy's own growth story is that every wedding on the platform produces 7 new weddings within a year, guests who attend become the next engaged couple. None of the live ads mention that.</p>
+
+    <p class="proof-quote">The paid creative sells a generic wedding-website builder, the same pitch Zola or The Knot could run, instead of the one proof point that's actually specific to Joy.</p>
+
+    <h2 id="what-id-test">What I'd test</h2>
+
+    <div class="proof-cards">
+      <div class="proof-card"><strong>Lead a variant with the referral proof point itself</strong><span>Not "beautiful, free, uniquely yours." A headline built around the actual mechanic: a wedding website that becomes the invitation your guests remember when it's their turn. That's a claim a generic website builder can't make, and it's sitting in Joy's own growth data, unused.</span></div>
+      <div class="proof-card"><strong>Treat the year-old creative set as the first quick win, not a footnote</strong><span>Fifteen ads, unchanged since February 2025, on an offer that's presumably still converting well enough to keep running. Before any bigger strategy, that's worth a fast creative refresh test on its own, cheap to run, and exactly the kind of finding a first 30 days should surface.</span></div>
+    </div>
+  </div>
+
+  <div class="proof-body">
+    <p class="section-label">Why I structured it this way</p>
+
+    <h2 id="reasoning">Reading before assuming</h2>
+    <p>I read the account instead of assuming what a wedding-website ad would say. The finding, that the paid layer never touches the referral engine the company's own growth story leads with, only shows up by checking the actual creative against the actual growth data, not by reasoning about wedding marketing in general.</p>
+    <p>I led with the cheaper test, a new headline variant against an offer that's presumably already working, rather than a bigger strategic overhaul, because a role framed around compounding an existing engine gets judged on fast, checkable wins first.</p>
+  </div>
+
+  <div class="button-row" style="margin-top: 40px;">
+    <a href="/work/joy/" class="button button-primary">Back to the pitch</a>
+    <a href="mailto:jamesspraise@gmail.com?subject=Digital%20Marketing%20Manager%20-%20James%20Praise" class="button button-secondary">Let's Talk</a>
+  </div>
+</div>
+
+<script src="/script.js?v=10"></script>
+<script>
+(function () {
+  var bar = document.getElementById('proofProgressBar');
+  function updateProgress() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.proof-toc a'));
+  var sections = tocLinks.map(function (a) {
+    return document.getElementById(a.getAttribute('href').slice(1));
+  });
+  function updateActiveToc() {
+    var current = null;
+    sections.forEach(function (sec, i) {
+      if (sec && sec.getBoundingClientRect().top <= 140) current = i;
+    });
+    tocLinks.forEach(function (a, i) {
+      a.classList.toggle('is-active', i === current);
+    });
+  }
+  window.addEventListener('scroll', updateActiveToc, { passive: true });
+  updateActiveToc();
+})();
+</script>
+</body>
+</html>

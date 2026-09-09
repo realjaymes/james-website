@@ -12,5 +12,8 @@ Disallow: /work/why-hire-me/
 # links sent to one company, never indexed. The pages also carry their own
 # noindex meta tag; this covers the PDF files, which meta tags can't reach.
 Disallow: /work/*/files/
+# Written value-artifact pages (Step 3B built deliverables), same private,
+# noindexed, one-company-only treatment as the pitch pages above.
+Disallow: /work/*/proof/
 
 Sitemap: https://jamespraise.xyz/sitemap.xml
