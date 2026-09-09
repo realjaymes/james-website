@@ -96,13 +96,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span><strong>James Praise</strong> &middot; Marketing and GTM Operator</span>
   </div>
 
-  <p class="proof-note">This is a proposed plan, not an audit of Todoist's actual current tracking setup. Todoist's internal instrumentation isn't publicly visible, so nothing here claims to know what's currently missing. It proposes how I'd build the measurement layer for a Ramble-specific acquisition push, the same discipline behind my own paid-acquisition measurement system for Marketing In Action, applied to this feature specifically.</p>
+  <p class="proof-note">This is a proposed plan, not an audit of Todoist's current tracking setup. Todoist's internal instrumentation isn't publicly visible, so nothing here claims to know what's currently missing. It proposes how I'd build the measurement layer for a Ramble-specific acquisition push, the same discipline behind my own paid-acquisition measurement system for Marketing In Action, applied to this feature specifically.</p>
 
   <div class="proof-draft">
     <p class="section-label">The plan</p>
 
     <h2 id="the-question">The actual question</h2>
-    <p>A paid campaign built around Ramble can generate clicks and app installs easily. The harder question, and the one the JD's own "loops not campaigns" framing points at directly, is whether someone who clicked a Ramble ad actually tries Ramble, and whether trying Ramble is what pushed them to upgrade to a paid plan. Click and install numbers from Google, Meta, or TikTok can't answer that on their own, they report what happened on their platform, not what happened inside the product afterward.</p>
+    <p>A paid campaign built around Ramble can generate clicks and app installs easily. The harder question, the one that actually separates a loop from a campaign, is whether someone who clicked a Ramble ad tries Ramble, and whether trying it is what pushed them to upgrade to a paid plan. Click and install numbers from Google, Meta, or TikTok can't answer that on their own, they report what happened on their platform, not what happened inside the product afterward.</p>
     <p>Without that link, a Ramble-specific campaign either gets credited for upgrades it didn't cause, people who would have upgraded anyway, or doesn't get credited for upgrades it did cause, someone clicks, doesn't convert same-day, uses Ramble two weeks later, then upgrades. Both failure modes lead to the same bad outcome: spending against the wrong signal.</p>
 
     <h2 id="tracking-plan">The tracking plan</h2>
@@ -135,7 +135,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="section-label">Why I built it this way</p>
 
     <h2 id="reasoning">A proposal, not an audit</h2>
-    <p>Todoist's internal tracking setup isn't publicly visible, so this plan doesn't claim to know what's currently missing or broken, that would be exactly the kind of unverifiable assumption that already went wrong once during this application's own research process. What's checkable from outside is the JD's own framing: "you'll work in loops, not campaigns," and data rigor across GA4, Tag Manager, and BigQuery named directly as a requirement. This plan answers that framing concretely, with the actual events, the actual join logic, and the actual failure modes a Ramble-specific campaign would need to watch for, rather than a general statement about caring about measurement.</p>
+    <p>Todoist's internal tracking setup isn't publicly visible, so this plan doesn't claim to know what's currently missing or broken. What's stated directly is the requirement for data rigor across GA4, Tag Manager, and BigQuery. This plan answers that concretely, with the events, the join logic, and the failure modes a Ramble-specific campaign would need to watch for, rather than a general statement about caring about measurement.</p>
     <p>The three failure modes aren't hypothetical. They're the same problem, an ad platform's own number quietly diverging from what happened, that caught a real cross-attribution error in my own Meta reporting for Marketing In Action. The fix there was the same fix proposed here: reconcile against the system that actually took the payment, not the system that served the ad.</p>
   </div>
 
