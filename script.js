@@ -160,16 +160,26 @@ document.addEventListener("DOMContentLoaded", function () {
     var empty = document.querySelector(".case-studies-empty");
     var active = { type: "all", service: "all" };
 
+    // "Blueprints" (pitch microsites) are private, one-company pitches: never part of
+    // the public "All" view or its count, only reachable by explicitly filtering to
+    // type=microsite (via the hidden button or a direct #type=microsite link).
+    var publicCount = 0;
+    cards.forEach(function (card) {
+      var types = (card.getAttribute("data-tags") || "").split(" ");
+      if (types.indexOf("microsite") === -1) publicCount++;
+    });
     document.querySelectorAll(".csf-count").forEach(function (el) {
-      el.textContent = "(" + cards.length + ")";
+      el.textContent = "(" + publicCount + ")";
     });
 
     function applyFilters() {
       var visibleCount = 0;
       cards.forEach(function (card) {
         var types = (card.getAttribute("data-tags") || "").split(" ");
+        var isMicrosite = types.indexOf("microsite") !== -1;
+        var matchesType =
+          active.type === "microsite" ? isMicrosite : active.type === "all" ? !isMicrosite : types.indexOf(active.type) !== -1;
         var services = (card.getAttribute("data-service") || "").split(" ");
-        var matchesType = active.type === "all" || types.indexOf(active.type) !== -1;
         var matchesService = active.service === "all" || services.indexOf(active.service) !== -1;
         var show = matchesType && matchesService;
         card.hidden = !show;
