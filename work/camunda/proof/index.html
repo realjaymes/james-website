@@ -10,8 +10,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>A Camunda vs. Appian Battlecard — James Praise</title>
-<meta name="description" content="A live-researched competitive battlecard, Camunda vs. Appian, built by James Praise." />
+<title>Camunda Proof: Battlecard &amp; CFO Narrative — James Praise</title>
+<meta name="description" content="A live-researched competitive battlecard vs. Appian, plus a CFO-legible narrative one-pager, built by James Praise for Camunda." />
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
@@ -28,23 +28,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .proof-credit span { color: var(--text-muted); font-size: 14px; }
   .proof-credit strong { color: var(--text-primary); }
   .proof-note { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 8px; padding: 16px 20px; font-size: 14px; color: var(--text-muted); margin-bottom: 40px; }
-  .proof-draft { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 12px; padding: 40px; margin-bottom: 56px; }
+  .proof-draft { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 12px; padding: 40px; margin-bottom: 32px; }
   .proof-draft h2 { margin-top: 32px; margin-bottom: 10px; }
   .proof-draft h2:first-child { margin-top: 0; }
+  .proof-draft h3 { margin-top: 24px; margin-bottom: 8px; font-size: 15px; }
   .proof-draft p { line-height: 1.7; }
+  .proof-meta { font-size: 13px; color: var(--text-muted); margin-bottom: 24px; }
   .proof-body p { line-height: 1.7; }
   .proof-body h2 { margin-top: 40px; margin-bottom: 12px; }
   .proof-body strong { font-weight: 700; }
   .proof-back { display: inline-block; margin-bottom: 24px; font-size: 14px; }
   .section-label { font-size: 13px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
-  .proof-table { width: 100%; border-collapse: collapse; margin: 20px 0 32px; font-size: 14px; }
-  .proof-table th, .proof-table td { text-align: left; padding: 10px 14px; border-bottom: 1px solid rgba(28,20,34,0.08); vertical-align: top; }
-  .proof-table th { font-size: 12px; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-muted); font-weight: 800; }
-  .proof-quote { border-left: 3px solid var(--color-purple); padding: 4px 0 4px 22px; margin: 28px 0; font-size: 19px; font-weight: 600; line-height: 1.5; color: var(--text-primary); }
-  .proof-toc { position: fixed; top: 140px; right: 32px; width: 200px; font-size: 13px; }
-  .proof-toc-group { margin-bottom: 20px; }
+  .proof-table { width: 100%; border-collapse: collapse; margin: 16px 0 28px; font-size: 13.5px; }
+  .proof-table th, .proof-table td { text-align: left; padding: 9px 12px; border-bottom: 1px solid rgba(28,20,34,0.08); vertical-align: top; }
+  .proof-table th { font-size: 11px; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-muted); font-weight: 800; }
+  .proof-cards { display: grid; grid-template-columns: 1fr; gap: 12px; margin: 16px 0 28px; }
+  .proof-card { background: var(--bg-page); border: 1px solid rgba(28,20,34,0.1); border-radius: 10px; padding: 16px; }
+  .proof-card strong { display: block; font-size: 14.5px; margin-bottom: 5px; color: var(--text-primary); }
+  .proof-card span { font-size: 13.5px; color: var(--text-muted); line-height: 1.6; }
+  .proof-quote { border-left: 3px solid var(--color-purple); padding: 4px 0 4px 22px; margin: 24px 0; font-size: 18px; font-weight: 600; line-height: 1.5; color: var(--text-primary); }
+  .proof-tag { display: inline-block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; padding: 2px 8px; border-radius: 100px; background: rgba(28,20,34,0.06); color: var(--text-muted); margin-left: 8px; }
+  .proof-divider { border: none; border-top: 1px solid rgba(28,20,34,0.1); margin: 40px 0; }
+  .proof-toc { position: fixed; top: 130px; right: 32px; width: 200px; font-size: 13px; }
+  .proof-toc-group { margin-bottom: 18px; }
   .proof-toc-label { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
-  .proof-toc a { display: block; padding: 5px 0 5px 12px; border-left: 2px solid rgba(28,20,34,0.1); color: var(--text-muted); text-decoration: none; line-height: 1.4; }
+  .proof-toc a { display: block; padding: 4px 0 4px 12px; border-left: 2px solid rgba(28,20,34,0.1); color: var(--text-muted); text-decoration: none; line-height: 1.4; }
   .proof-toc a:hover { color: var(--color-purple); border-left-color: var(--color-purple); }
   .proof-toc a.is-active { color: var(--color-purple); border-left-color: var(--color-purple); font-weight: 700; }
   @media (max-width: 1400px) { .proof-toc { display: none; } }
@@ -67,14 +75,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="proof-toc" aria-label="Section navigation">
   <div class="proof-toc-group">
     <p class="proof-toc-label">The battlecard</p>
-    <a href="#at-a-glance">At a glance</a>
-    <a href="#where-we-win">Where we win</a>
-    <a href="#where-theyre-strong">Where they're strong</a>
+    <a href="#overview">Overview</a>
+    <a href="#differentiators">Key differentiators</a>
+    <a href="#why-we-win">Why we win</a>
     <a href="#objection-handling">Objection handling</a>
+    <a href="#third-party">Third-party validation</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The CFO narrative</p>
+    <a href="#cfo-narrative">Three reframes</a>
   </div>
   <div class="proof-toc-group">
     <p class="proof-toc-label">Why I structured it this way</p>
-    <a href="#reasoning">The honest half matters</a>
+    <a href="#reasoning">Two artifacts, not one</a>
   </div>
 </nav>
 
@@ -82,7 +95,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a class="proof-back" href="/work/camunda/">&larr; Back to the Camunda pitch</a>
 
   <p class="proof-eyebrow">A brief for Camunda</p>
-  <h1>Battlecard: Camunda vs. Appian</h1>
+  <h1>Battlecard &amp; CFO Narrative: Camunda vs. Appian</h1>
 
   <div class="proof-credit">
     <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
@@ -92,42 +105,82 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <p class="proof-note">Live research pulled directly from camunda.com, appian.com, and G2.</p>
 
   <div class="proof-draft">
-    <p class="section-label">The battlecard</p>
+    <p class="section-label">The battlecard <span class="proof-tag">Last verified 2026-09-10</span></p>
 
-    <h2 id="at-a-glance">At a glance</h2>
+    <h2 id="overview">Overview</h2>
+    <p><strong>Camunda</strong> is the open platform for agentic orchestration: coordinating AI agents, people, and systems across end-to-end business processes with built-in governance, auditability, and human oversight. Top features: agent-native governance enforced from outside the agent's own reasoning, the open BPMN 2.0 standard underneath it, and flexible deployment (self-managed or SaaS). Target audience: enterprise IT and platform engineering teams at large, often regulated organizations moving AI from pilot to production.</p>
+    <p><strong>Appian, in one line:</strong> a 25-year incumbent in business process automation and low-code development, repositioning around AI agents built into that existing platform, strongest with buyers who already run on Appian's ecosystem or weight Gartner's analyst placement heavily.</p>
+
+    <h2 id="differentiators">Key differentiators</h2>
     <table class="proof-table">
-      <tr><th></th><th>Camunda</th><th>Appian</th></tr>
-      <tr><td>Category framing</td><td>"The open platform for agentic orchestration"</td><td>"AI automation for critical processes" / "Serious AI. Built on Process."</td></tr>
-      <tr><td>2025 Gartner MQ for BOAT</td><td>Visionary</td><td>Leader</td></tr>
-      <tr><td>G2 rating</td><td>4.5/5 (327 reviews), G2 Leader badge</td><td>4.5/5 (507 reviews), G2 Leader badge</td></tr>
-      <tr><td>Years in market</td><td>Rooted in the open-source Camunda BPM engine; enterprise offering scaled more recently</td><td>25+ years automating enterprise processes</td></tr>
-      <tr><td>Pricing model</td><td>Custom quote only, no public tiers</td><td>Published per-user/per-app/per-month tiers</td></tr>
-      <tr><td>Deployment</td><td>Self-Managed or Camunda SaaS</td><td>Cloud, hybrid, or on-premises</td></tr>
-      <tr><td>Recent signal</td><td>ProcessOS unveiled live on stage</td><td>AI Value Study with Harvard Business Review Analytic Services</td></tr>
-      <tr><td>Anchor proof point</td><td>12 of the 15 leading global banks</td><td>"First app delivered in 8 weeks or less" guarantee</td></tr>
+      <tr><th>Axis</th><th>Camunda</th><th>Appian</th><th>Why it matters</th></tr>
+      <tr><td>Agent governance</td><td>Policy enforced from outside the agent's reasoning</td><td>AI added onto a pre-agentic workflow engine</td><td>"Can an agent act without losing control" is an architecture answer, not a feature checkbox</td></tr>
+      <tr><td>Standards</td><td>Open (BPMN 2.0)</td><td>Proprietary</td><td>Avoids multi-year lock-in on process modeling</td></tr>
+      <tr><td>Evaluation path</td><td>Free, unrestricted self-managed dev</td><td>Sandboxed Community Edition only</td><td>Prove the architecture before any sales conversation</td></tr>
+      <tr><td>Analyst placement</td><td>Visionary, 2025 Gartner MQ (BOAT)</td><td>Leader, 2025 Gartner MQ (BOAT + Low-Code)</td><td>A disadvantage a CFO will surface unprompted</td></tr>
+      <tr><td>Pricing transparency</td><td>Custom quote only</td><td>Published tiers</td><td>Appian gives a self-serve budget number; Camunda doesn't</td></tr>
     </table>
 
-    <h2 id="where-we-win">Where we win</h2>
-    <p>Appian's platform predates agentic AI by two decades and is adding AI capability onto an existing workflow engine. Camunda's governance model, enforcing policy, approvals, and escalation paths from outside the agent's own reasoning, was built for a world where agents already act autonomously. When a prospect asks how to let agents act without losing control, that's an architecture question, and it's one Appian's own homepage doesn't really attempt to answer. Their framing is "serious AI, built on process." Ours can be "agents you don't have to trust blindly."</p>
-    <p>The open-standards angle backs this up in a more boring but durable way. Camunda runs on BPMN 2.0 and offers a genuinely free, unrestricted self-managed development path. Appian's free tier is a sandboxed personal dev environment on Appian's own infrastructure, not a route to self-hosting anything in production. For a buyer worried about a 5-10 year lock-in decision, that's structural, not a slogan.</p>
-    <p class="proof-quote">12 of the 15 leading global banks already run on Camunda, a hard credibility anchor for a challenger platform to claim.</p>
-
-    <h2 id="where-theyre-strong">Where they're strong</h2>
-    <p>Say this part out loud, don't skip it: Appian sits as a Leader on the 2025 Gartner Magic Quadrant for BOAT. Camunda sits as a Visionary on the same report. Appian also holds a second Leader placement, Enterprise Low-Code Application Platforms, that Camunda doesn't even compete in. A CFO or procurement committee reading analyst placement as a proxy for vendor risk, and that audience does exactly that, has a genuinely strong data point here, not a hollow one. This is the specific objection worth a real answer, not a deflection.</p>
-    <p>Two smaller but real gaps sit underneath that: Appian backs its 25-year track record with a public "first app in 8 weeks or less" delivery guarantee that Camunda doesn't publish an equivalent of anywhere, and Appian's pricing page shows real tiers and feature gating while Camunda's stays "talk to sales" even for self-managed production.</p>
+    <h2 id="why-we-win">Why we win</h2>
+    <div class="proof-cards">
+      <div class="proof-card"><strong>Faster time-to-market on process change</strong><span>Camunda's own published outcomes: 12x faster time to market, 93% cycle-time reduction. <em>[proof needed: a named account outperforming a live Appian deployment]</em></span></div>
+      <div class="proof-card"><strong>Regulated-industry trust at scale</strong><span>12 of the 15 leading global banks already run on Camunda, plus a direct endorsement from Atlassian's Intelligent Automation team (quoted below). <em>[proof needed: a head-to-head win against Appian specifically]</em></span></div>
+      <div class="proof-card"><strong>Governance built for how agents behave now</strong><span>No retrofit onto an older workflow engine's control model. <em>[proof needed: a specific audit/compliance scenario Camunda handled that an Appian deployment couldn't]</em></span></div>
+    </div>
 
     <h2 id="objection-handling">Objection handling</h2>
-    <p><strong>"Appian is the Gartner Leader. Why would we go with the Visionary instead?"</strong> Don't argue the placement, reframe what it measures. A Leader position on Gartner's analyst-scored axes reflects market presence and sales/support scale built over a 25-year head start, not which architecture actually suits agentic orchestration, a category that didn't exist when either vendor was first scored. The harder-to-buy counter-signal: Camunda's G2 rating sits at the same 4.5/5 as Appian's, on roughly a third of the review volume and far fewer years in market, from practitioners running real production workloads rather than analyst briefings. Then move to the real decision criterion for this deal: does the platform let agents act with enforceable policy from the outside, or is AI bolted onto a workflow engine designed before agentic execution existed.</p>
+    <p><strong>"Appian is the Gartner Leader. Why would we go with the Visionary instead?"</strong> Don't argue the placement, reframe what it measures. A Leader position on Gartner's analyst-scored axes reflects market presence and sales/support scale built over a 25-year head start, not which architecture suits agentic orchestration, a category that didn't exist when either vendor was first scored. The harder-to-buy counter-signal: Camunda's G2 rating sits at the same 4.5/5 as Appian's, on roughly a third of the review volume and far fewer years in market, from practitioners running production workloads, not analyst briefings. Then move to what decides this deal: does the platform let agents act with enforceable policy from the outside, or is AI bolted onto a workflow engine designed before agentic execution existed.</p>
     <p><strong>"Appian guarantees a first app in 8 weeks. What's your equivalent?"</strong> An 8-week low-code app build and standing up governed, auditable agentic orchestration across an existing process landscape aren't the same unit of work, so don't manufacture a matching number on the spot. Redirect to what a comparable Camunda proof-of-value looks like, and to the 93% cycle-time reduction and 12x faster time-to-market figures already in Camunda's own published customer outcomes.</p>
-    <p><strong>"Your pricing page just says 'talk to sales.' Appian shows me tiers."</strong> That's a fair hit, agree with it rather than argue it away. Then point to the actual substance: a free, unrestricted self-managed path lets a technical evaluator build and validate the real solution before any pricing conversation starts, closer to open-source evaluation norms than Appian's sandboxed Community Edition. Not a price list, but proof the architecture works before anyone pays for it.</p>
+    <p><strong>"Your pricing page just says 'talk to sales.' Appian shows me tiers."</strong> That's a fair hit, agree with it rather than argue it away. Then point to the substance: a free, unrestricted self-managed path lets a technical evaluator build and validate the product before any pricing conversation starts, closer to open-source evaluation norms than Appian's sandboxed Community Edition. Not a price list, but proof the architecture works before anyone pays for it.</p>
+
+    <h3>Key features</h3>
+    <table class="proof-table">
+      <tr><th>Feature</th><th>Benefit</th><th>vs. Appian</th></tr>
+      <tr><td>Policy enforced outside agent reasoning</td><td>Agents act autonomously without losing auditability</td><td>Beats</td></tr>
+      <tr><td>BPMN 2.0 (open standard)</td><td>Not locked to a proprietary format</td><td>Beats</td></tr>
+      <tr><td>Free self-managed development</td><td>Full evaluation before purchase</td><td>Beats</td></tr>
+      <tr><td>Published pricing tiers</td><td>Self-serve budget estimate</td><td>Concedes</td></tr>
+      <tr><td>"First app in 8 weeks" guarantee</td><td>Quantified delivery commitment</td><td>Concedes</td></tr>
+    </table>
+
+    <h3>Questions to ask</h3>
+    <p>Has the buying committee already gotten an analyst-driven shortlist that weights Gartner placement heavily? Is this AI initiative starting fresh, or layering onto an existing Appian investment? Does this deal need governance for autonomous agent decisions today, or is that a future-roadmap concern? (If today, that's Camunda's strongest wedge.)</p>
+
+    <h3>Pricing</h3>
+    <p>Camunda: fully custom-quoted, no public tiers (camunda.com/pricing/, verified 2026-09-10). Appian: published Standard/Advanced/Premium tiers, per-user/per-app/per-month, with AI Action limits per tier (appian.com/products/pricing, verified 2026-09-10).</p>
+
+    <h3>Segment note</h3>
+    <p>Large enterprise and regulated-industry accounts (financial services, banking, insurance, public sector) evaluating governed agentic AI in production, especially where the buyer already runs on Appian's platform.</p>
+
+    <h3>Relevant customers</h3>
+    <p>Atlassian and athenahealth are both named, quoted Camunda customers on Camunda's own public site. <em>[proof needed: a reference customer matched to the specific prospect's vertical and size, pulled from Camunda's account list]</em></p>
+
+    <h2 id="third-party">Third-party validation</h2>
+    <p>2025 Gartner Magic Quadrant for BOAT: Visionary. G2: 4.5/5 (327 reviews), G2 Leader badge on G2's own crowd-sourced Grid.</p>
+    <p class="proof-quote">"Teaming up with Camunda enables our IT teams to focus on shipping critical business processes with agility, visibility and efficiency." &mdash; Intelligent Automation Senior Team Lead, Atlassian</p>
+  </div>
+
+  <div class="proof-draft">
+    <p class="section-label">The CFO narrative</p>
+    <h2 id="cfo-narrative">Agentic orchestration: the budget-review version</h2>
+    <p class="proof-meta">A one-page translation layer, meant to sit alongside the technical story, not replace it.</p>
+    <p>Camunda's platform story lands immediately with the architects and engineers evaluating agentic orchestration. It doesn't yet have an equally sharp version for the person three rooms away who signs the budget. That's not a weaker story, it's a missing translation of the same one.</p>
+
+    <div class="proof-cards">
+      <div class="proof-card"><strong>1. It's an efficiency number, not a technology category</strong><span>93% reduction in cycle time, 30x return on tech spend, Camunda's own published results. The pitch isn't "we orchestrate AI agents." It's "the same work happens in a fraction of the time, measured the way finance already measures technology investment."</span></div>
+      <div class="proof-card"><strong>2. It's a risk-reduction number, not an AI feature</strong><span>The board-level question is rarely "can it do the task," it's "what happens when it's wrong, and can we prove what happened." Every process execution, every agent decision, every exception, captured automatically. That's the audit trail a compliance review asks for.</span></div>
+      <div class="proof-card"><strong>3. It's a headcount-leverage number, not a headcount-replacement claim</strong><span>The 12x faster time-to-market figure is a team shipping the same roadmap without a proportional headcount increase, the framing a CFO can defend to a board asking why technology spend keeps growing.</span></div>
+    </div>
+
+    <p>None of these three reframes require a customer to understand agentic orchestration as an architecture. They require understanding three numbers already on Camunda's own homepage. The translation work isn't inventing new proof, it's re-sequencing existing proof for a different reader.</p>
+    <p>Lead with whichever reframe maps to what's already keeping this specific buyer up at night, rather than running all three every time. Pair with the Atlassian quote above when the audience wants to hear it from a peer, not just a vendor.</p>
   </div>
 
   <div class="proof-body">
     <p class="section-label">Why I structured it this way</p>
-
-    <h2 id="reasoning">The honest half matters</h2>
-    <p>A battlecard that only says "we're better" isn't one a sales team can actually use in the room, they'll hear the Gartner-Leader objection or the pricing-transparency gap from a prospect either way. The useful version names both sides plainly: what genuinely wins the deal, and what a competitor's rep will use against you, with a real answer ready for the second one, not a script that pretends it won't come up.</p>
-    <p>The Gartner Magic Quadrant placement (Visionary vs. Leader) is the sharpest finding here on purpose. Both companies state their own standing directly on their own sites, so it's independently checkable, and it's the exact audience-legibility problem this role exists to solve: an analyst-report label a CFO already trusts, sitting on the other side of the table.</p>
+    <h2 id="reasoning">Two artifacts, not one</h2>
+    <p>A battlecard and a positioning translation answer two different questions. The battlecard is for the moment Appian is already in the room, it names what wins the deal and what a competitor's rep will use against you, including the Gartner-Leader objection, plainly enough that a sales team can use it. The narrative one-pager is for the moment before that, when the story simply hasn't reached the person who signs the budget yet. Camunda already has strong, clear positioning; rebuilding it from scratch would have missed that. The gap is translation, not invention, so that's what got built.</p>
+    <p>The battlecard follows the structure a real competitive-intelligence program uses: differentiators, proof, objections, and segment fit. Where a claim would normally come from internal win-loss data I don't have access to as an outside candidate, it's marked openly rather than invented.</p>
   </div>
 
   <div class="button-row" style="margin-top: 40px;">
