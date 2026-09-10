@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WKSZ7DQC');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>An EMEA Target-Account Framework for Ashby — James Praise</title>
+<meta name="description" content="A drafted EMEA target-account framework built on Personio displacement, using Ashby One London's own output as the proof source. By James Praise." />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+<link rel="canonical" href="https://jamespraise.xyz/work/ashby/proof/" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=20" />
+<style>
+  .proof-wrap { max-width: 720px; margin: 0 auto; padding: 100px 0 80px; }
+  .proof-eyebrow { color: var(--color-purple); font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; font-size: 13px; margin-bottom: 10px; }
+  .proof-credit { display: flex; align-items: center; gap: 10px; margin: 20px 0 40px; }
+  .proof-credit img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+  .proof-credit span { color: var(--text-muted); font-size: 14px; }
+  .proof-credit strong { color: var(--text-primary); }
+  .proof-note { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 8px; padding: 16px 20px; font-size: 14px; color: var(--text-muted); margin-bottom: 40px; }
+  .proof-draft { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 12px; padding: 40px; margin-bottom: 56px; }
+  .proof-draft h2 { margin-top: 32px; margin-bottom: 10px; }
+  .proof-draft h2:first-child { margin-top: 0; }
+  .proof-draft p { line-height: 1.7; }
+  .proof-body p { line-height: 1.7; }
+  .proof-body h2 { margin-top: 40px; margin-bottom: 12px; }
+  .proof-body strong { font-weight: 700; }
+  .proof-back { display: inline-block; margin-bottom: 24px; font-size: 14px; }
+  .section-label { font-size: 13px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-table { width: 100%; border-collapse: collapse; margin: 20px 0 32px; font-size: 14px; }
+  .proof-table th, .proof-table td { text-align: left; padding: 10px 14px; border-bottom: 1px solid rgba(28,20,34,0.08); vertical-align: top; }
+  .proof-table th { font-size: 12px; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-muted); font-weight: 800; }
+  .proof-quote { border-left: 3px solid var(--color-purple); padding: 4px 0 4px 22px; margin: 28px 0; font-size: 19px; font-weight: 600; line-height: 1.5; color: var(--text-primary); }
+  .proof-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 28px 0; }
+  .proof-stat { background: var(--bg-page); border-radius: 10px; padding: 18px; }
+  .proof-stat strong { display: block; font-size: 26px; margin-bottom: 4px; }
+  .proof-stat span { font-size: 13px; color: var(--text-muted); }
+  .proof-toc { position: fixed; top: 140px; right: 32px; width: 210px; font-size: 13px; }
+  .proof-toc-group { margin-bottom: 20px; }
+  .proof-toc-label { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-toc a { display: block; padding: 5px 0 5px 12px; border-left: 2px solid rgba(28,20,34,0.1); color: var(--text-muted); text-decoration: none; line-height: 1.4; }
+  .proof-toc a:hover { color: var(--color-purple); border-left-color: var(--color-purple); }
+  .proof-toc a.is-active { color: var(--color-purple); border-left-color: var(--color-purple); font-weight: 700; }
+  @media (max-width: 1400px) { .proof-toc { display: none; } }
+  .proof-progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(28,20,34,0.08); z-index: 200; }
+  .proof-progress-bar { height: 100%; width: 0%; background: var(--color-purple); transition: width 0.1s linear; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKSZ7DQC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="proof-progress-track"><div class="proof-progress-bar" id="proofProgressBar"></div></div>
+
+<a href="/work/ashby/" class="pitch-exit" aria-label="Back to the Ashby pitch">
+  <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+</a>
+
+<nav class="proof-toc" aria-label="Section navigation">
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The framework</p>
+    <a href="#the-trigger">This week's trigger</a>
+    <a href="#the-segment">The segment definition</a>
+    <a href="#battlecard">Battlecard outline</a>
+    <a href="#case-study">The case-study conversion plan</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">Why I structured it this way</p>
+    <a href="#reasoning">Localize, don't rebuild</a>
+  </div>
+</nav>
+
+<div class="container proof-wrap">
+  <a class="proof-back" href="/work/ashby/">&larr; Back to the Ashby pitch</a>
+
+  <p class="proof-eyebrow">A brief for Ashby</p>
+  <h1>EMEA Target-Account Framework: Personio Displacement</h1>
+
+  <div class="proof-credit">
+    <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+    <span><strong>James Praise</strong> &middot; Marketing and GTM Operator</span>
+  </div>
+
+  <p class="proof-note">Built entirely from Ashby's own public surfaces: ashbyhq.com, the two press releases from Ashby One London (September 9, 2026), and third-party comparison sites (TrustRadius, G2, PeerSpot) that already pair Ashby against Personio.</p>
+
+  <div class="proof-draft">
+    <p class="section-label">The framework</p>
+
+    <h2 id="the-trigger">This week's trigger</h2>
+    <p>Ashby One London ran two days before this was written. It produced two real assets: a proprietary dataset of 180,000+ EMEA jobs (Jan 2021&ndash;June 2026) showing applications-per-hire have roughly doubled since 2021, and inbound now drives 54.3% of EMEA hires, and a region-specific product launch (WhatsApp messaging for candidate communication). Two enterprise customers were quoted directly in the press: Amanda Johnson, Head of Global Talent Acquisition at DeepL, and C&eacute;lia Sauthier, Director of Talent Acquisition at Moss.</p>
+    <div class="proof-stats">
+      <div class="proof-stat"><strong>180K+</strong><span>EMEA jobs analyzed for the Ashby One London data report</span></div>
+      <div class="proof-stat"><strong>54.3%</strong><span>of EMEA hires now driven by inbound, per that same report</span></div>
+      <div class="proof-stat"><strong>0</strong><span>of those findings currently live as a citable, EMEA-tagged case study</span></div>
+    </div>
+    <p>Neither DeepL nor Moss appears in Ashby's 35-item customer case-study library. The press release quote and the case study are two different assets, one is what ran in the news for a week, the other is what an AE actually hands a prospect. That conversion hasn't happened yet, and this week is the shortest possible window in which acting on it reads as sharp, current thinking rather than a stock ABM exercise.</p>
+
+    <h2 id="the-segment">The segment definition</h2>
+    <p>Not "EU companies over 1,000 employees." That's Ashby's existing US Enterprise-tier logic, transplanted onto a map. The first-principles version: <strong>companies that have outgrown Personio's HR-generalist, low-volume hiring model.</strong> Third-party comparison sites (TrustRadius, G2, PeerSpot, Stackfix, SpotSaaS) already describe that exact relationship without any Ashby-authored input, Personio as the HRIS-integrated incumbent for smaller EU teams, Ashby as the analytics-heavy step-up once hiring volume and reporting needs outgrow it. That's a real, describable competitive-displacement boundary, not a headcount guess, and it's the boundary the account list should be built on.</p>
+
+    <h2 id="battlecard">Battlecard outline: Ashby vs. Personio</h2>
+    <table class="proof-table">
+      <tr><th></th><th>Ashby</th><th>Personio</th></tr>
+      <tr><td>Core positioning</td><td>Analytics-first ATS for high-volume, data-driven hiring</td><td>HRIS-first platform, hiring as one module among many</td></tr>
+      <tr><td>Job-board reach (EU)</td><td>~15 job boards</td><td>600+ EU job boards, per third-party comparison sites</td></tr>
+      <tr><td>HQ / EU-native signal</td><td>US-headquartered</td><td>Munich-headquartered</td></tr>
+      <tr><td>Existing Ashby comparison content</td><td>Greenhouse, Lever, SmartRecruiters, all US-native</td><td>No Ashby-authored comparison page exists</td></tr>
+      <tr><td>EU data residency claim</td><td>Not stated on the security page</td><td>Native EU hosting is part of the core pitch</td></tr>
+    </table>
+    <p class="proof-quote">Reps working EMEA enterprise deals, especially DACH, are very likely to hit Personio as the incumbent and currently have to work from third-party, uncontrolled comparison narratives instead of an Ashby-authored one.</p>
+    <p>The two objections this battlecard has to answer directly: "Personio already has our job-board network live, why switch," and "Personio is EU-native, is our data even staying in Europe." Both are answerable (analytics depth Personio's HRIS-first model doesn't match; an EU-hosting commitment Ashby can state plainly once it's true), but neither is answered anywhere on ashbyhq.com today.</p>
+
+    <h2 id="case-study">The case-study conversion plan</h2>
+    <p>Two press-release quotes become two real proof assets, not zero:</p>
+    <ul style="padding-left: 20px; line-height: 1.8;">
+      <li><strong>DeepL.</strong> Amanda Johnson's quote, "Our inbound has doubled since I joined in 2024," is a real, attributable result. A 15-minute follow-up interview turns it into a written case study mapped directly to the Personio-displacement segment: a scaling EU company whose inbound volume outgrew a generalist tool.</li>
+      <li><strong>Moss.</strong> C&eacute;lia Sauthier's quote, "You're spending a lot of time reviewing applicants when 5&ndash;7% progress," names the exact volume-vs-signal problem the Personio battlecard needs a proof point for. Same conversion path: interview, write, tag by segment.</li>
+    </ul>
+    <p>Both customers already said yes to being quoted publicly. The incremental ask is small: a follow-up conversation, not a fresh customer acquisition. That's the gap between what Ashby One London produced and what the standing marketing infrastructure has actually absorbed.</p>
+  </div>
+
+  <div class="proof-body">
+    <p class="section-label">Why I structured it this way</p>
+
+    <h2 id="reasoning">Localize the US motion, don't rebuild it</h2>
+    <p>The JD's own framing is "the autonomy to rethink and define the strategy and execution to fit the nuances of the different European markets," working alongside a US counterpart whose motion already works. That's a specific, narrower problem than "build ABM from scratch." Ben's motion already proves Ashby knows how to run comparison pages, case studies, and a data-report-as-lead-magnet model. The EMEA job isn't inventing that machinery, it's noticing where this week's EMEA-specific inputs haven't been run through it yet, and saying exactly what has to happen next.</p>
+    <p>I picked Personio over a generic "EU competitor" framing because it's the one buyers are already raising, verified by third-party sites, not assumed. A target-account list built on that real displacement logic is defensible in a way a size-based filter copied from the US segmentation isn't. And I picked this week specifically because Ashby One London is the freshest, most concrete evidence available that Ashby is serious about EMEA, acting on it now is the difference between a framework and a stale case study.</p>
+  </div>
+
+  <div class="button-row" style="margin-top: 40px;">
+    <a href="/work/ashby/" class="button button-primary">Back to the pitch</a>
+    <a href="mailto:james@marketinginaction.xyz?subject=Snr.%20Marketing%20Manager%2C%20Enterprise%20ABM%20EMEA%20-%20James%20Praise" class="button button-secondary">Let's Talk</a>
+  </div>
+</div>
+
+<script src="/script.js?v=11"></script>
+<script>
+(function () {
+  var bar = document.getElementById('proofProgressBar');
+  function updateProgress() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.proof-toc a'));
+  var sections = tocLinks.map(function (a) {
+    return document.getElementById(a.getAttribute('href').slice(1));
+  });
+  function updateActiveToc() {
+    var current = null;
+    sections.forEach(function (sec, i) {
+      if (sec && sec.getBoundingClientRect().top <= 140) current = i;
+    });
+    tocLinks.forEach(function (a, i) {
+      a.classList.toggle('is-active', i === current);
+    });
+  }
+  window.addEventListener('scroll', updateActiveToc, { passive: true });
+  updateActiveToc();
+})();
+</script>
+</body>
+</html>

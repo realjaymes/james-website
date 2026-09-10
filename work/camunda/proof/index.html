@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WKSZ7DQC');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A Camunda vs. Appian Battlecard — James Praise</title>
+<meta name="description" content="A live-researched competitive battlecard, Camunda vs. Appian, built by James Praise." />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+<link rel="canonical" href="https://jamespraise.xyz/work/camunda/proof/" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=20" />
+<style>
+  .proof-wrap { max-width: 720px; margin: 0 auto; padding: 100px 0 80px; }
+  .proof-eyebrow { color: var(--color-purple); font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; font-size: 13px; margin-bottom: 10px; }
+  .proof-credit { display: flex; align-items: center; gap: 10px; margin: 20px 0 40px; }
+  .proof-credit img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+  .proof-credit span { color: var(--text-muted); font-size: 14px; }
+  .proof-credit strong { color: var(--text-primary); }
+  .proof-note { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 8px; padding: 16px 20px; font-size: 14px; color: var(--text-muted); margin-bottom: 40px; }
+  .proof-draft { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 12px; padding: 40px; margin-bottom: 56px; }
+  .proof-draft h2 { margin-top: 32px; margin-bottom: 10px; }
+  .proof-draft h2:first-child { margin-top: 0; }
+  .proof-draft p { line-height: 1.7; }
+  .proof-body p { line-height: 1.7; }
+  .proof-body h2 { margin-top: 40px; margin-bottom: 12px; }
+  .proof-body strong { font-weight: 700; }
+  .proof-back { display: inline-block; margin-bottom: 24px; font-size: 14px; }
+  .section-label { font-size: 13px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-table { width: 100%; border-collapse: collapse; margin: 20px 0 32px; font-size: 14px; }
+  .proof-table th, .proof-table td { text-align: left; padding: 10px 14px; border-bottom: 1px solid rgba(28,20,34,0.08); vertical-align: top; }
+  .proof-table th { font-size: 12px; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-muted); font-weight: 800; }
+  .proof-quote { border-left: 3px solid var(--color-purple); padding: 4px 0 4px 22px; margin: 28px 0; font-size: 19px; font-weight: 600; line-height: 1.5; color: var(--text-primary); }
+  .proof-toc { position: fixed; top: 140px; right: 32px; width: 200px; font-size: 13px; }
+  .proof-toc-group { margin-bottom: 20px; }
+  .proof-toc-label { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-toc a { display: block; padding: 5px 0 5px 12px; border-left: 2px solid rgba(28,20,34,0.1); color: var(--text-muted); text-decoration: none; line-height: 1.4; }
+  .proof-toc a:hover { color: var(--color-purple); border-left-color: var(--color-purple); }
+  .proof-toc a.is-active { color: var(--color-purple); border-left-color: var(--color-purple); font-weight: 700; }
+  @media (max-width: 1400px) { .proof-toc { display: none; } }
+  .proof-progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(28,20,34,0.08); z-index: 200; }
+  .proof-progress-bar { height: 100%; width: 0%; background: var(--color-purple); transition: width 0.1s linear; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKSZ7DQC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="proof-progress-track"><div class="proof-progress-bar" id="proofProgressBar"></div></div>
+
+<a href="/work/camunda/" class="pitch-exit" aria-label="Back to the Camunda pitch">
+  <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+</a>
+
+<nav class="proof-toc" aria-label="Section navigation">
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The battlecard</p>
+    <a href="#at-a-glance">At a glance</a>
+    <a href="#where-we-win">Where we win</a>
+    <a href="#where-theyre-strong">Where they're strong</a>
+    <a href="#objection-handling">Objection handling</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">Why I structured it this way</p>
+    <a href="#reasoning">The honest half matters</a>
+  </div>
+</nav>
+
+<div class="container proof-wrap">
+  <a class="proof-back" href="/work/camunda/">&larr; Back to the Camunda pitch</a>
+
+  <p class="proof-eyebrow">A brief for Camunda</p>
+  <h1>Battlecard: Camunda vs. Appian</h1>
+
+  <div class="proof-credit">
+    <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+    <span><strong>James Praise</strong> &middot; Marketing and GTM Operator</span>
+  </div>
+
+  <p class="proof-note">Live research pulled directly from camunda.com, appian.com, and G2.</p>
+
+  <div class="proof-draft">
+    <p class="section-label">The battlecard</p>
+
+    <h2 id="at-a-glance">At a glance</h2>
+    <table class="proof-table">
+      <tr><th></th><th>Camunda</th><th>Appian</th></tr>
+      <tr><td>Category framing</td><td>"The open platform for agentic orchestration"</td><td>"AI automation for critical processes" / "Serious AI. Built on Process."</td></tr>
+      <tr><td>2025 Gartner MQ for BOAT</td><td>Visionary</td><td>Leader</td></tr>
+      <tr><td>G2 rating</td><td>4.5/5 (327 reviews), G2 Leader badge</td><td>4.5/5 (507 reviews), G2 Leader badge</td></tr>
+      <tr><td>Years in market</td><td>Rooted in the open-source Camunda BPM engine; enterprise offering scaled more recently</td><td>25+ years automating enterprise processes</td></tr>
+      <tr><td>Pricing model</td><td>Custom quote only, no public tiers</td><td>Published per-user/per-app/per-month tiers</td></tr>
+      <tr><td>Deployment</td><td>Self-Managed or Camunda SaaS</td><td>Cloud, hybrid, or on-premises</td></tr>
+      <tr><td>Recent signal</td><td>ProcessOS unveiled live on stage</td><td>AI Value Study with Harvard Business Review Analytic Services</td></tr>
+      <tr><td>Anchor proof point</td><td>12 of the 15 leading global banks</td><td>"First app delivered in 8 weeks or less" guarantee</td></tr>
+    </table>
+
+    <h2 id="where-we-win">Where we win</h2>
+    <p>Appian's platform predates agentic AI by two decades and is adding AI capability onto an existing workflow engine. Camunda's governance model, enforcing policy, approvals, and escalation paths from outside the agent's own reasoning, was built for a world where agents already act autonomously. When a prospect asks how to let agents act without losing control, that's an architecture question, and it's one Appian's own homepage doesn't really attempt to answer. Their framing is "serious AI, built on process." Ours can be "agents you don't have to trust blindly."</p>
+    <p>The open-standards angle backs this up in a more boring but durable way. Camunda runs on BPMN 2.0 and offers a genuinely free, unrestricted self-managed development path. Appian's free tier is a sandboxed personal dev environment on Appian's own infrastructure, not a route to self-hosting anything in production. For a buyer worried about a 5-10 year lock-in decision, that's structural, not a slogan.</p>
+    <p class="proof-quote">12 of the 15 leading global banks already run on Camunda, a hard credibility anchor for a challenger platform to claim.</p>
+
+    <h2 id="where-theyre-strong">Where they're strong</h2>
+    <p>Say this part out loud, don't skip it: Appian sits as a Leader on the 2025 Gartner Magic Quadrant for BOAT. Camunda sits as a Visionary on the same report. Appian also holds a second Leader placement, Enterprise Low-Code Application Platforms, that Camunda doesn't even compete in. A CFO or procurement committee reading analyst placement as a proxy for vendor risk, and that audience does exactly that, has a genuinely strong data point here, not a hollow one. This is the specific objection worth a real answer, not a deflection.</p>
+    <p>Two smaller but real gaps sit underneath that: Appian backs its 25-year track record with a public "first app in 8 weeks or less" delivery guarantee that Camunda doesn't publish an equivalent of anywhere, and Appian's pricing page shows real tiers and feature gating while Camunda's stays "talk to sales" even for self-managed production.</p>
+
+    <h2 id="objection-handling">Objection handling</h2>
+    <p><strong>"Appian is the Gartner Leader. Why would we go with the Visionary instead?"</strong> Don't argue the placement, reframe what it measures. A Leader position on Gartner's analyst-scored axes reflects market presence and sales/support scale built over a 25-year head start, not which architecture actually suits agentic orchestration, a category that didn't exist when either vendor was first scored. The harder-to-buy counter-signal: Camunda's G2 rating sits at the same 4.5/5 as Appian's, on roughly a third of the review volume and far fewer years in market, from practitioners running real production workloads rather than analyst briefings. Then move to the real decision criterion for this deal: does the platform let agents act with enforceable policy from the outside, or is AI bolted onto a workflow engine designed before agentic execution existed.</p>
+    <p><strong>"Appian guarantees a first app in 8 weeks. What's your equivalent?"</strong> An 8-week low-code app build and standing up governed, auditable agentic orchestration across an existing process landscape aren't the same unit of work, so don't manufacture a matching number on the spot. Redirect to what a comparable Camunda proof-of-value looks like, and to the 93% cycle-time reduction and 12x faster time-to-market figures already in Camunda's own published customer outcomes.</p>
+    <p><strong>"Your pricing page just says 'talk to sales.' Appian shows me tiers."</strong> That's a fair hit, agree with it rather than argue it away. Then point to the actual substance: a free, unrestricted self-managed path lets a technical evaluator build and validate the real solution before any pricing conversation starts, closer to open-source evaluation norms than Appian's sandboxed Community Edition. Not a price list, but proof the architecture works before anyone pays for it.</p>
+  </div>
+
+  <div class="proof-body">
+    <p class="section-label">Why I structured it this way</p>
+
+    <h2 id="reasoning">The honest half matters</h2>
+    <p>A battlecard that only says "we're better" isn't one a sales team can actually use in the room, they'll hear the Gartner-Leader objection or the pricing-transparency gap from a prospect either way. The useful version names both sides plainly: what genuinely wins the deal, and what a competitor's rep will use against you, with a real answer ready for the second one, not a script that pretends it won't come up.</p>
+    <p>The Gartner Magic Quadrant placement (Visionary vs. Leader) is the sharpest finding here on purpose. Both companies state their own standing directly on their own sites, so it's independently checkable, and it's the exact audience-legibility problem this role exists to solve: an analyst-report label a CFO already trusts, sitting on the other side of the table.</p>
+  </div>
+
+  <div class="button-row" style="margin-top: 40px;">
+    <a href="/work/camunda/" class="button button-primary">Back to the pitch</a>
+    <a href="mailto:james@marketinginaction.xyz?subject=Director%2C%20Solution%20and%20Product%20Marketing%20-%20James%20Praise" class="button button-secondary">Let's Talk</a>
+  </div>
+</div>
+
+<script src="/script.js?v=11"></script>
+<script>
+(function () {
+  var bar = document.getElementById('proofProgressBar');
+  function updateProgress() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.proof-toc a'));
+  var sections = tocLinks.map(function (a) {
+    return document.getElementById(a.getAttribute('href').slice(1));
+  });
+  function updateActiveToc() {
+    var current = null;
+    sections.forEach(function (sec, i) {
+      if (sec && sec.getBoundingClientRect().top <= 140) current = i;
+    });
+    tocLinks.forEach(function (a, i) {
+      a.classList.toggle('is-active', i === current);
+    });
+  }
+  window.addEventListener('scroll', updateActiveToc, { passive: true });
+  updateActiveToc();
+})();
+</script>
+</body>
+</html>
