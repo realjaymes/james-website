@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WKSZ7DQC');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A Comparison-Page Rewrite for Dash0 — James Praise</title>
+<meta name="description" content="A drafted rewrite of Dash0's Datadog-alternatives page folding the 'Beyond Observability' story into Dash0's own self-description. By James Praise." />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+<link rel="canonical" href="https://jamespraise.xyz/work/dash0/proof/" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=20" />
+<style>
+  .proof-wrap { max-width: 720px; margin: 0 auto; padding: 100px 0 80px; }
+  .proof-eyebrow { color: var(--color-purple); font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; font-size: 13px; margin-bottom: 10px; }
+  .proof-credit { display: flex; align-items: center; gap: 10px; margin: 20px 0 40px; }
+  .proof-credit img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+  .proof-credit span { color: var(--text-muted); font-size: 14px; }
+  .proof-credit strong { color: var(--text-primary); }
+  .proof-note { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 8px; padding: 16px 20px; font-size: 14px; color: var(--text-muted); margin-bottom: 40px; }
+  .proof-draft { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 12px; padding: 40px; margin-bottom: 56px; }
+  .proof-draft h2 { margin-top: 32px; margin-bottom: 10px; }
+  .proof-draft h2:first-child { margin-top: 0; }
+  .proof-draft p { line-height: 1.7; }
+  .proof-body p { line-height: 1.7; }
+  .proof-body h2 { margin-top: 40px; margin-bottom: 12px; }
+  .proof-body strong { font-weight: 700; }
+  .proof-back { display: inline-block; margin-bottom: 24px; font-size: 14px; }
+  .section-label { font-size: 13px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-table { width: 100%; border-collapse: collapse; margin: 20px 0 32px; font-size: 14px; }
+  .proof-table th, .proof-table td { text-align: left; padding: 10px 14px; border-bottom: 1px solid rgba(28,20,34,0.08); vertical-align: top; }
+  .proof-table th { font-size: 12px; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-muted); font-weight: 800; }
+  .proof-quote { border-left: 3px solid var(--color-purple); padding: 4px 0 4px 22px; margin: 28px 0; font-size: 19px; font-weight: 600; line-height: 1.5; color: var(--text-primary); }
+  .proof-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 28px 0; }
+  .proof-stat { background: var(--bg-page); border-radius: 10px; padding: 18px; }
+  .proof-stat strong { display: block; font-size: 26px; margin-bottom: 4px; }
+  .proof-stat span { font-size: 13px; color: var(--text-muted); }
+  .proof-toc { position: fixed; top: 140px; right: 32px; width: 210px; font-size: 13px; }
+  .proof-toc-group { margin-bottom: 20px; }
+  .proof-toc-label { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-toc a { display: block; padding: 5px 0 5px 12px; border-left: 2px solid rgba(28,20,34,0.1); color: var(--text-muted); text-decoration: none; line-height: 1.4; }
+  .proof-toc a:hover { color: var(--color-purple); border-left-color: var(--color-purple); }
+  .proof-toc a.is-active { color: var(--color-purple); border-left-color: var(--color-purple); font-weight: 700; }
+  @media (max-width: 1400px) { .proof-toc { display: none; } }
+  .proof-progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(28,20,34,0.08); z-index: 200; }
+  .proof-progress-bar { height: 100%; width: 0%; background: var(--color-purple); transition: width 0.1s linear; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKSZ7DQC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="proof-progress-track"><div class="proof-progress-bar" id="proofProgressBar"></div></div>
+
+<a href="/work/dash0/" class="pitch-exit" aria-label="Back to the Dash0 pitch">
+  <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+</a>
+
+<nav class="proof-toc" aria-label="Section navigation">
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The memo</p>
+    <a href="#trigger">The pivot that hasn't landed</a>
+    <a href="#rewrite">The rewrite</a>
+    <a href="#template">Templating the fix</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">Why I structured it this way</p>
+    <a href="#reasoning">Bottom-of-funnel first</a>
+  </div>
+</nav>
+
+<div class="container proof-wrap">
+  <a class="proof-back" href="/work/dash0/">&larr; Back to the Dash0 pitch</a>
+
+  <p class="proof-eyebrow">A memo for Dash0</p>
+  <h1>Closing the Gap: Beyond Observability, on the Pages That Close the Sale</h1>
+
+  <div class="proof-credit">
+    <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+    <span><strong>James Praise</strong> &middot; Product Marketing Operator</span>
+  </div>
+
+  <p class="proof-note">Built entirely from Dash0's own public surfaces: dash0.com, the "Beyond Observability" founder post, the comparisons hub, docs, and changelog.</p>
+
+  <div class="proof-draft">
+    <p class="section-label">The memo</p>
+
+    <h2 id="trigger">The pivot that hasn't landed</h2>
+    <p>Mirko Novakovic's July 6 post, "Beyond Observability," states the repositioning plainly: <em>"We're moving beyond observability. What is needed today is a closed loop from prompt to production."</em> It's propagated to the homepage ("Ship more. Break less.") and the docs. It has not propagated to the 14 comparison pages where a buyer actively choosing between Dash0 and Datadog or Honeycomb lands and reads Dash0's own pitch for itself.</p>
+    <div class="proof-stats">
+      <div class="proof-stat"><strong>14</strong><span>comparison pages still running pre-pivot language</span></div>
+      <div class="proof-stat"><strong>2</strong><span>independently-written self-descriptions checked, both anchored pre-July</span></div>
+      <div class="proof-stat"><strong>0</strong><span>mentions of Agent0, Darkplane, or "Beyond Observability" on either</span></div>
+    </div>
+    <p>The Datadog page's self-description: <em>"Dash0 is a modern observability platform built from the ground up on open standards... don't want to be handcuffed to a vendor's proprietary tech."</em> The Honeycomb page, independently written: <em>"a next-generation observability suite built from scratch with OpenTelemetry in mind... complete independence from vendor constraints."</em> Same framing, same absence, two different pages.</p>
+
+    <h2 id="rewrite">The rewrite</h2>
+    <table class="proof-table">
+      <tr><th></th><th>Current (Datadog page)</th><th>Proposed addition</th></tr>
+      <tr><td>Core claim</td><td>"Built from the ground up on open standards... zero lock-in by design"</td><td>Keep the open-standards proof, it's still true and still matters, but lead with: "We watch the AI agents writing your code and catch what breaks in production before anyone notices"</td></tr>
+      <tr><td>Proof source</td><td>PromQL, transparent per-million pricing</td><td>Add Agent0's real capability (traces issues to the offending commit, drafts fixes as a pull request) and the Telegraph case study, which already uses this exact framing</td></tr>
+      <tr><td>Differentiation vs. Datadog</td><td>Vendor independence, a claim any OTel-native competitor (Grafana, SigNoz, Honeycomb) can also make</td><td>The AI SRE claim, which none of the 13 other listed alternatives currently own</td></tr>
+    </table>
+    <p class="proof-quote">"No proprietary lock-in" is a wedge any OpenTelemetry-native competitor can also claim. The AI SRE that fixes production before you notice is a wedge none of Dash0's listed alternatives currently own.</p>
+
+    <h2 id="template">Templating the fix</h2>
+    <p>Once the Datadog page carries this language, the same fix templates across the other 13 comparison pages without rebuilding each one from scratch. The same throughline should thread the changelog (currently a flat list, SignalControl and Agent0 Custom Skills sit ungrouped) and the pricing page's "Control the noise" tagline, which lists Agent0 credits as a line item but never connects them to the platform story.</p>
+  </div>
+
+  <div class="proof-body">
+    <p class="section-label">Why I structured it this way</p>
+
+    <h2 id="reasoning">Bottom-of-funnel first</h2>
+    <p>I picked the comparison pages over a homepage or blog fix because they're the highest-leverage real estate the pivot hasn't reached yet, closest to a buying decision, so the fix has a clear commercial rationale, not just a tone update. And I built it as a rewrite plus a short memo, not a new campaign, because the raw material (the founder's own words, Agent0's real capabilities, the Telegraph case study) already exists. The job here isn't inventing a new story, it's noticing the newest, truest story hasn't reached the page doing the actual selling, and fixing that with proof Dash0 already has.</p>
+  </div>
+
+  <div class="button-row" style="margin-top: 40px;">
+    <a href="/work/dash0/" class="button button-primary">Back to the pitch</a>
+    <a href="mailto:james@marketinginaction.xyz?subject=Senior%20Product%20Marketing%20Manager%20-%20James%20Praise" class="button button-secondary">Let's Talk</a>
+  </div>
+</div>
+
+<script src="/script.js?v=11"></script>
+<script>
+(function () {
+  var bar = document.getElementById('proofProgressBar');
+  function updateProgress() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+})();
+</script>
+</body>
+</html>

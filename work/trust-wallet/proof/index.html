@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WKSZ7DQC');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A Trust-Surface Teardown for Trust Wallet — James Praise</title>
+<meta name="description" content="A drafted teardown showing where Trust Wallet's SAFU reimbursement track record belongs across its security and extension surfaces. By James Praise." />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+<link rel="canonical" href="https://jamespraise.xyz/work/trust-wallet/proof/" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=20" />
+<style>
+  .proof-wrap { max-width: 720px; margin: 0 auto; padding: 100px 0 80px; }
+  .proof-eyebrow { color: var(--color-purple); font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; font-size: 13px; margin-bottom: 10px; }
+  .proof-credit { display: flex; align-items: center; gap: 10px; margin: 20px 0 40px; }
+  .proof-credit img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+  .proof-credit span { color: var(--text-muted); font-size: 14px; }
+  .proof-credit strong { color: var(--text-primary); }
+  .proof-note { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 8px; padding: 16px 20px; font-size: 14px; color: var(--text-muted); margin-bottom: 40px; }
+  .proof-draft { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 12px; padding: 40px; margin-bottom: 56px; }
+  .proof-draft h2 { margin-top: 32px; margin-bottom: 10px; }
+  .proof-draft h2:first-child { margin-top: 0; }
+  .proof-draft p { line-height: 1.7; }
+  .proof-body p { line-height: 1.7; }
+  .proof-body h2 { margin-top: 40px; margin-bottom: 12px; }
+  .proof-body strong { font-weight: 700; }
+  .proof-back { display: inline-block; margin-bottom: 24px; font-size: 14px; }
+  .section-label { font-size: 13px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-table { width: 100%; border-collapse: collapse; margin: 20px 0 32px; font-size: 14px; }
+  .proof-table th, .proof-table td { text-align: left; padding: 10px 14px; border-bottom: 1px solid rgba(28,20,34,0.08); vertical-align: top; }
+  .proof-table th { font-size: 12px; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-muted); font-weight: 800; }
+  .proof-quote { border-left: 3px solid var(--color-purple); padding: 4px 0 4px 22px; margin: 28px 0; font-size: 19px; font-weight: 600; line-height: 1.5; color: var(--text-primary); }
+  .proof-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 28px 0; }
+  .proof-stat { background: var(--bg-page); border-radius: 10px; padding: 18px; }
+  .proof-stat strong { display: block; font-size: 26px; margin-bottom: 4px; }
+  .proof-stat span { font-size: 13px; color: var(--text-muted); }
+  .proof-toc { position: fixed; top: 140px; right: 32px; width: 210px; font-size: 13px; }
+  .proof-toc-group { margin-bottom: 20px; }
+  .proof-toc-label { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-toc a { display: block; padding: 5px 0 5px 12px; border-left: 2px solid rgba(28,20,34,0.1); color: var(--text-muted); text-decoration: none; line-height: 1.4; }
+  .proof-toc a:hover { color: var(--color-purple); border-left-color: var(--color-purple); }
+  .proof-toc a.is-active { color: var(--color-purple); border-left-color: var(--color-purple); font-weight: 700; }
+  @media (max-width: 1400px) { .proof-toc { display: none; } }
+  .proof-progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(28,20,34,0.08); z-index: 200; }
+  .proof-progress-bar { height: 100%; width: 0%; background: var(--color-purple); transition: width 0.1s linear; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKSZ7DQC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="proof-progress-track"><div class="proof-progress-bar" id="proofProgressBar"></div></div>
+
+<a href="/work/trust-wallet/" class="pitch-exit" aria-label="Back to the Trust Wallet pitch">
+  <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+</a>
+
+<nav class="proof-toc" aria-label="Section navigation">
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The teardown</p>
+    <a href="#current">What the security page leads with</a>
+    <a href="#missing">The missing evergreen asset</a>
+    <a href="#placement">Where it belongs</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">Why I structured it this way</p>
+    <a href="#reasoning">A PMM fix, not a legal one</a>
+  </div>
+</nav>
+
+<div class="container proof-wrap">
+  <a class="proof-back" href="/work/trust-wallet/">&larr; Back to the Trust Wallet pitch</a>
+
+  <p class="proof-eyebrow">A teardown for Trust Wallet</p>
+  <h1>Trust-Surface Teardown: The SAFU Story Belongs on /security</h1>
+
+  <div class="proof-credit">
+    <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+    <span><strong>James Praise</strong> &middot; Product Marketing Operator</span>
+  </div>
+
+  <p class="proof-note">Built entirely from Trust Wallet's own public surfaces (trustwallet.com/security, fetched twice) and widely-reported news coverage of the December 2025 extension incident (TheHackerNews, CoinDesk, Forbes, CryptoSlate).</p>
+
+  <div class="proof-draft">
+    <p class="section-label">The teardown</p>
+
+    <h2 id="current">What the security page leads with</h2>
+    <p>Checked twice, consistent both times. `/security` leads with five named audit firms (Certik, Cure53, Halborn, Kudelsky Security, Quantstamp), ISO 27701 and 27001 certifications, a Bugcrowd bug bounty program, and "battle-tested since 2017." A genuinely strong, specific credential stack. Confirmed absent on both fetches: any mention of insurance, the SAFU fund, past incidents, or a reimbursement program.</p>
+    <div class="proof-stats">
+      <div class="proof-stat"><strong>5</strong><span>named audit firms on the security page</span></div>
+      <div class="proof-stat"><strong>$7-8.5M</strong><span>stolen in the Dec 2025 extension breach, per CoinDesk/Forbes/CryptoSlate</span></div>
+      <div class="proof-stat"><strong>0</strong><span>mentions of SAFU, incidents, or reimbursement on /security</span></div>
+    </div>
+    <p>That credential stack answers "who audited your code." It doesn't answer the question a visitor actually has after a well-covered breach: what happens to my money if something goes wrong, and has it actually gone wrong before, and did you pay people back.</p>
+
+    <h2 id="missing">The missing evergreen asset</h2>
+    <p>On December 24, 2025, Trust Wallet's Chrome extension (v2.68) was compromised via a leaked Chrome Web Store API key. 2,520 wallet addresses were drained, roughly $7-8.5M stolen. Binance publicly committed to full reimbursement via its SAFU (Secure Asset Fund for Users) fund, a real, established fund created in 2018 with a track record backstopping prior incidents. Binance founder CZ personally confirmed it on X: <em>"TrustWallet will cover" the losses, "user funds are SAFU."</em></p>
+    <p class="proof-quote">A fintech makes "FDIC insured up to $250,000" permanent homepage furniture. Trust Wallet has the crypto equivalent of that proof and isn't using it as standing trust infrastructure.</p>
+    <p>Right now that story lives only in reactive incident-response content, filed as crisis communication. Independent reviewers are already doing Trust Wallet's positioning work for it: CryptoSlate frames the product as "The Multichain Mobile Default With a Spotty Extension Record," meaning the market is forming this view whether or not Trust Wallet participates in shaping it.</p>
+
+    <h2 id="placement">Where it belongs</h2>
+    <table class="proof-table">
+      <tr><th>Surface</th><th>Why it matters here</th></tr>
+      <tr><td>/security page</td><td>The exact page built to answer "can I trust this with my money," currently silent on the one incident and its resolution</td></tr>
+      <tr><td>Browser-extension install/download surface</td><td>The exact product surface that actually failed, the moment a cautious user is most likely to hesitate</td></tr>
+      <tr><td>"Is Trust Wallet Safe?" blog post</td><td>The page someone searching that exact question post-breach would land on</td></tr>
+    </table>
+  </div>
+
+  <div class="proof-body">
+    <p class="section-label">Why I structured it this way</p>
+
+    <h2 id="reasoning">A PMM fix, not a legal one</h2>
+    <p>I framed this as positioning and placement, not a legal or engineering fix, because every fact underneath it is already public and already true: the audit firm list, the incident timeline, the dollar figures, CZ's own statement. The work here is closing the gap between what Trust Wallet has actually proven about itself and what its own marketing currently claims, which is the same discipline behind every repositioning I've done, find the proof a company already has and hasn't surfaced where the buyer's actually looking.</p>
+  </div>
+
+  <div class="button-row" style="margin-top: 40px;">
+    <a href="/work/trust-wallet/" class="button button-primary">Back to the pitch</a>
+    <a href="mailto:james@marketinginaction.xyz?subject=Product%20Marketing%20Manager%20-%20James%20Praise" class="button button-secondary">Let's Talk</a>
+  </div>
+</div>
+
+<script src="/script.js?v=11"></script>
+<script>
+(function () {
+  var bar = document.getElementById('proofProgressBar');
+  function updateProgress() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+})();
+</script>
+</body>
+</html>
