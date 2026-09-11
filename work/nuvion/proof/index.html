@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WKSZ7DQC');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>An Event-to-Journey Architecture for Nuvion — James Praise</title>
+<meta name="description" content="How I'd connect Nuvion's real product events, across all six customer segments, into automated lifecycle journeys, by James Praise." />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+<link rel="canonical" href="https://jamespraise.xyz/work/nuvion/proof/" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=20" />
+<style>
+  .proof-wrap { max-width: 720px; margin: 0 auto; padding: 100px 0 80px; }
+  .proof-eyebrow { color: var(--color-purple); font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; font-size: 13px; margin-bottom: 10px; }
+  .proof-credit { display: flex; align-items: center; gap: 10px; margin: 20px 0 40px; }
+  .proof-credit img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+  .proof-credit span { color: var(--text-muted); font-size: 14px; }
+  .proof-credit strong { color: var(--text-primary); }
+  .proof-note { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 8px; padding: 16px 20px; font-size: 14px; color: var(--text-muted); margin-bottom: 40px; }
+  .proof-draft { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 12px; padding: 40px; margin-bottom: 40px; }
+  .proof-draft h2 { margin-top: 28px; margin-bottom: 10px; }
+  .proof-draft h2:first-child { margin-top: 0; }
+  .proof-draft h3 { margin-top: 22px; margin-bottom: 8px; font-size: 16px; }
+  .proof-draft p { line-height: 1.7; }
+  .proof-img { border-radius: 8px; border: 1px solid rgba(0,0,0,0.08); margin: 20px 0; box-shadow: 0 4px 16px rgba(0,0,0,0.06); width: 100%; }
+  .proof-back { display: inline-block; margin-bottom: 24px; font-size: 14px; }
+  .proof-quote { border-left: 3px solid var(--color-purple); padding: 4px 0 4px 22px; margin: 24px 0; font-size: 18px; font-weight: 600; line-height: 1.5; color: var(--text-primary); }
+  .proof-segments { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 20px 0; }
+  .proof-segment { background: var(--bg-page); border: 1px solid rgba(28,20,34,0.1); border-radius: 10px; padding: 14px 16px; }
+  .proof-segment strong { display: block; font-size: 14px; color: var(--text-primary); margin-bottom: 4px; }
+  .proof-segment span { font-size: 13px; color: var(--text-muted); line-height: 1.4; display: block; }
+  .proof-table-wrap { overflow-x: auto; margin: 20px 0; }
+  .proof-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .proof-table th, .proof-table td { text-align: left; padding: 10px 12px; border-bottom: 1px solid rgba(28,20,34,0.1); vertical-align: top; }
+  .proof-table th { font-size: 12px; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-muted); }
+  .proof-progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(28,20,34,0.08); z-index: 200; }
+  .proof-progress-bar { height: 100%; width: 0%; background: var(--color-purple); transition: width 0.1s linear; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKSZ7DQC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="proof-progress-track"><div class="proof-progress-bar" id="proofProgressBar"></div></div>
+
+<a href="/work/nuvion/" class="pitch-exit" aria-label="Back to the Nuvion pitch">
+  <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+</a>
+
+<div class="container proof-wrap">
+  <a class="proof-back" href="/work/nuvion/">&larr; Back to the Nuvion pitch</a>
+
+  <p class="proof-eyebrow">A brief for Nuvion</p>
+  <h1>An Event-to-Journey Architecture for Nuvion</h1>
+
+  <div class="proof-credit">
+    <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+    <span><strong>James Praise</strong> &middot; Marketing and GTM Operator</span>
+  </div>
+
+  <p class="proof-note">Live research on nuvion.co, September 2026: all six Solutions pages, the Products page, and Nuvion's public partnership announcements.</p>
+
+  <div class="proof-draft">
+    <h2>What I found</h2>
+    <p>Nuvion's own Solutions menu names six customer segments, not the three on the homepage tagline: Creators &amp; Freelancers, Businesses, Marketplaces &amp; Platforms, E-commerce, Logistics &amp; Supply Chain, and Travel &amp; Hospitality.</p>
+
+    <img class="proof-img" src="/assets/images/case-studies/nuvion/solutions-six-segments.jpg" alt="Nuvion's live Solutions navigation showing six segments: Creators & Freelancers, Businesses, Marketplaces & platforms, E-commerce, Logistics & Supply Chain, and Travel & Hospitality" />
+
+    <p>Five of the six have real, segment-specific copy already written. E-commerce is live in the navigation but still just a waitlist form.</p>
+
+    <div class="proof-segments">
+      <div class="proof-segment"><strong>Creators &amp; Freelancers</strong><span>First value: first payment received from a global client</span></div>
+      <div class="proof-segment"><strong>Businesses</strong><span>First value: first payout sent, or first international customer payment received</span></div>
+      <div class="proof-segment"><strong>Marketplaces &amp; Platforms</strong><span>First value: a platform's own end-user onboarded or paid out through Nuvion's API</span></div>
+      <div class="proof-segment"><strong>Logistics &amp; Supply Chain</strong><span>First value: first cross-border payout to a supplier or carrier</span></div>
+      <div class="proof-segment"><strong>Travel &amp; Hospitality</strong><span>First value: first guest payment at checkout, or first partner payout</span></div>
+      <div class="proof-segment"><strong>E-commerce</strong><span>Page not yet built. My guess: first international customer payment accepted at checkout</span></div>
+    </div>
+
+    <p class="proof-quote">A single "activation" definition across all six segments undercounts most of them.</p>
+
+    <h2>The architecture I'd propose</h2>
+    <p>Before picking a CDP or ESP, I'd map the real events Nuvion's own product stack throws off, and get them resolved to one identity across web, app, the card processor, and the stablecoin rails. That identity layer is usually the actual bottleneck at this stage.</p>
+
+    <h3>Event sources</h3>
+    <p>Waitlist join tagged by segment, KYB/KYC status changes, account funding and IBAN issuance, card issuance and first transaction, first payout or stablecoin transfer, and location signals that show activity in a new market.</p>
+
+    <h3>Journeys those events should trigger</h3>
+    <div class="proof-table-wrap">
+      <table class="proof-table">
+        <thead><tr><th>Stage</th><th>Event</th><th>Trigger</th></tr></thead>
+        <tbody>
+          <tr><td>Pre-launch</td><td>Waitlist join</td><td>Welcome sequence framed around the Solutions page the signup came from</td></tr>
+          <tr><td>Onboarding</td><td>KYB/KYC started</td><td>Time-boxed completion nudges tied to compliance urgency</td></tr>
+          <tr><td>Activation</td><td>Account funded / card issued / first payment</td><td>"You're live" message plus one guided next action per segment</td></tr>
+          <tr><td>Early usage</td><td>First transaction, payout, or stablecoin transfer</td><td>Real-time confirmation, paired with a cross-sell to the natural next product</td></tr>
+          <tr><td>Risk signal</td><td>KYC approved, no account funded</td><td>Win-back sequence addressing the likely blocker</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>The same event layer should feed attribution and retargeting: crediting the channel that drove a funded account, not just a signup, and building a retargeting audience specifically from "KYC approved, never funded." Across 10+ regulated markets, that also means attribution has to tolerate different compliance timelines per market from day one. A campaign converting in three days in one market and three weeks in another is often just showing how long KYC takes in each place.</p>
+
+    <h2>What's already true that most of your public pages don't say</h2>
+    <p>Nuvion has landed three real infrastructure partnerships this year, Circle Payments Network, Visa Direct, and Ripple USD, none of which appear on the Products page or any Solutions page. That's real, earned proof sitting unused on the pages that actually convert waitlist signups.</p>
+
+    <p>I'd want to confirm three things in week one: whether a CDP or ESP is already chosen, the actual mobile-app-versus-dashboard split, and whether KYC runs in-house or through a vendor, since that changes how fast the "approved" event can actually fire.</p>
+  </div>
+
+  <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 32px;">Built from what's actually live on nuvion.co. Happy to walk through the reasoning behind any part of it.</p>
+
+  <div class="button-row" style="margin-top: 40px;">
+    <a href="/work/nuvion/" class="button button-primary">Back to the pitch</a>
+    <a href="mailto:jamesspraise@gmail.com?subject=Performance%20Marketing%20and%20CRM%2FLifecycle%20Marketing%20Manager%20-%20James%20Praise" class="button button-secondary">Let's Talk</a>
+  </div>
+</div>
+
+<script src="/script.js?v=11"></script>
+<script>
+(function () {
+  var bar = document.getElementById('proofProgressBar');
+  function updateProgress() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+})();
+</script>
+</body>
+</html>
