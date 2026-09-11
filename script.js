@@ -161,8 +161,10 @@ document.addEventListener("DOMContentLoaded", function () {
     var active = { type: "all", service: "all" };
 
     // "Blueprints" (pitch microsites) are private, one-company pitches: never part of
-    // the public "All" view or its count, only reachable by explicitly filtering to
-    // type=microsite (via the hidden button or a direct #type=microsite link).
+    // the public "All" view or its count. Clicking the visible "Blueprints" button only
+    // ever reveals the always-there "why hire me" pitch card (see "microsite-locked"
+    // below); the real per-company pitch cards only reveal via a direct #type=microsite
+    // link, which only James would actually use.
     var publicCount = 0;
     cards.forEach(function (card) {
       var types = (card.getAttribute("data-tags") || "").split(" ");
@@ -172,13 +174,24 @@ document.addEventListener("DOMContentLoaded", function () {
       el.textContent = "(" + publicCount + ")";
     });
 
+    // "microsite-locked" is an internal-only state (never a real data-tags value) used
+    // when a visitor clicks the visible "Blueprints" button directly: it matches none of
+    // the real pitch-microsite cards, so they stay hidden and only the always-visible
+    // "why hire me" pitch card (a different element entirely, untouched by this filter)
+    // shows. The real cards only reveal via a direct #type=microsite link, see below.
     function applyFilters() {
       var visibleCount = 0;
       cards.forEach(function (card) {
         var types = (card.getAttribute("data-tags") || "").split(" ");
         var isMicrosite = types.indexOf("microsite") !== -1;
         var matchesType =
-          active.type === "microsite" ? isMicrosite : active.type === "all" ? !isMicrosite : types.indexOf(active.type) !== -1;
+          active.type === "microsite"
+            ? isMicrosite
+            : active.type === "microsite-locked"
+              ? false
+              : active.type === "all"
+                ? !isMicrosite
+                : types.indexOf(active.type) !== -1;
         var services = (card.getAttribute("data-service") || "").split(" ");
         var matchesService = active.service === "all" || services.indexOf(active.service) !== -1;
         var show = matchesType && matchesService;
@@ -188,10 +201,12 @@ document.addEventListener("DOMContentLoaded", function () {
       if (empty) empty.hidden = visibleCount !== 0;
     }
 
-    function setActive(dim, value) {
+    // displayValue drives which button looks active; value is the internal filter state.
+    // They differ only for the button-click "Blueprints" case (see below).
+    function setActive(dim, value, displayValue) {
       var group = sidebar.querySelectorAll('.case-filter-btn[data-filter-dim="' + dim + '"]');
       group.forEach(function (b) {
-        b.classList.toggle("is-active", b.getAttribute("data-filter") === value);
+        b.classList.toggle("is-active", b.getAttribute("data-filter") === (displayValue || value));
       });
       active[dim] = value;
     }
@@ -201,20 +216,34 @@ document.addEventListener("DOMContentLoaded", function () {
       btn.addEventListener("click", function () {
         var dim = btn.getAttribute("data-filter-dim");
         var otherDim = dim === "type" ? "service" : "type";
-        setActive(dim, btn.getAttribute("data-filter"));
+        var clickedValue = btn.getAttribute("data-filter");
+        // A direct click on "Blueprints" never reveals the real private pitch cards,
+        // only a direct #type=microsite link does (see the hash handler below).
+        var filterValue = dim === "type" && clickedValue === "microsite" ? "microsite-locked" : clickedValue;
+        setActive(dim, filterValue, clickedValue);
         setActive(otherDim, "all");
         applyFilters();
       });
     });
 
-    // Auto-filter from URL hash, e.g. /work/#filter=positioning (service) or /work/#type=side
-    var serviceMatch = window.location.hash.match(/filter=([a-z-]+)/);
-    var typeMatch = window.location.hash.match(/type=([a-z-]+)/);
-    if (serviceMatch || typeMatch) {
+    // Auto-filter from URL hash, e.g. /work/#filter=positioning (service) or /work/#type=side.
+    // #type=microsite is the one deliberate exception to "hash just clicks the matching
+    // button": it sets the real "microsite" state directly so the actual pitch cards show,
+    // bypassing the "microsite-locked" behavior a plain button click gets.
+    // Runs on initial load AND on hashchange, since a same-document hash edit (address bar,
+    // back/forward) doesn't reload the page or re-run this script on its own.
+    function applyHashFilter() {
+      var serviceMatch = window.location.hash.match(/filter=([a-z-]+)/);
+      var typeMatch = window.location.hash.match(/type=([a-z-]+)/);
+      if (!serviceMatch && !typeMatch) return;
       if (serviceMatch) {
         var serviceBtn = sidebar.querySelector('.case-filter-btn[data-filter-dim="service"][data-filter="' + serviceMatch[1] + '"]');
         if (serviceBtn) serviceBtn.click();
-      } else if (typeMatch) {
+      } else if (typeMatch[1] === "microsite") {
+        setActive("type", "microsite", "microsite");
+        setActive("service", "all");
+        applyFilters();
+      } else {
         var typeBtn = sidebar.querySelector('.case-filter-btn[data-filter-dim="type"][data-filter="' + typeMatch[1] + '"]');
         if (typeBtn) typeBtn.click();
       }
@@ -224,6 +253,8 @@ document.addEventListener("DOMContentLoaded", function () {
       var caseStudiesSection = document.getElementById("case-studies");
       if (caseStudiesSection) caseStudiesSection.scrollIntoView();
     }
+    applyHashFilter();
+    window.addEventListener("hashchange", applyHashFilter);
   });
 
   // ---- Typewriter cycling word (e.g. homepage hero: "I build/write/speak/teach") ----
