@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WKSZ7DQC');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A Pre-Signup Teardown for ClickUp — James Praise</title>
+<meta name="description" content="A pre-signup onboarding teardown and a Brain² adoption measurement spec for ClickUp, written by James Praise from what's already public on clickup.com." />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+<link rel="canonical" href="https://jamespraise.xyz/work/clickup/proof/" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=20" />
+<style>
+  .proof-wrap { max-width: 720px; margin: 0 auto; padding: 100px 0 80px; }
+  .proof-eyebrow { color: var(--color-purple); font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; font-size: 13px; margin-bottom: 10px; }
+  .proof-credit { display: flex; align-items: center; gap: 10px; margin: 20px 0 40px; }
+  .proof-credit img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+  .proof-credit span { color: var(--text-muted); font-size: 14px; }
+  .proof-credit strong { color: var(--text-primary); }
+  .proof-note { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 8px; padding: 16px 20px; font-size: 14px; color: var(--text-muted); margin-bottom: 40px; }
+  .proof-draft { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 12px; padding: 40px; margin-bottom: 56px; }
+  .proof-draft h2 { margin-top: 32px; margin-bottom: 10px; }
+  .proof-draft h2:first-child { margin-top: 0; }
+  .proof-draft p { line-height: 1.7; }
+  .proof-img { border-radius: 8px; border: 1px solid rgba(0,0,0,0.08); margin: 20px 0; box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+  .proof-back { display: inline-block; margin-bottom: 24px; font-size: 14px; }
+  .section-label { font-size: 13px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 24px 0; }
+  .proof-card { background: var(--bg-page); border: 1px solid rgba(28,20,34,0.1); border-radius: 10px; padding: 18px; }
+  .proof-card strong { display: block; font-size: 15px; margin-bottom: 6px; color: var(--text-primary); }
+  .proof-card span { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+  .proof-quote { border-left: 3px solid var(--color-purple); padding: 4px 0 4px 22px; margin: 28px 0; font-size: 19px; font-weight: 600; line-height: 1.5; color: var(--text-primary); }
+  @media (max-width: 640px) {
+    .proof-cards { grid-template-columns: 1fr; }
+  }
+  .proof-progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(28,20,34,0.08); z-index: 200; }
+  .proof-progress-bar { height: 100%; width: 0%; background: var(--color-purple); transition: width 0.1s linear; }
+  .proof-toc { position: fixed; top: 140px; right: 32px; width: 200px; font-size: 13px; }
+  .proof-toc-group { margin-bottom: 20px; }
+  .proof-toc-label { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-toc a { display: block; padding: 5px 0 5px 12px; border-left: 2px solid rgba(28,20,34,0.1); color: var(--text-muted); text-decoration: none; line-height: 1.4; }
+  .proof-toc a:hover { color: var(--color-purple); border-left-color: var(--color-purple); }
+  .proof-toc a.is-active { color: var(--color-purple); border-left-color: var(--color-purple); font-weight: 700; }
+  @media (max-width: 1400px) { .proof-toc { display: none; } }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKSZ7DQC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="proof-progress-track"><div class="proof-progress-bar" id="proofProgressBar"></div></div>
+
+<a href="/work/clickup/" class="pitch-exit" aria-label="Back to the ClickUp pitch">
+  <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+</a>
+
+<nav class="proof-toc" aria-label="Section navigation">
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">Part 1: Onboarding teardown</p>
+    <a href="#marketing-site-complexity">Marketing site complexity</a>
+    <a href="#homepage-mechanism">The mechanism to measure</a>
+    <a href="#pricing-value-story">Pricing's value story</a>
+    <a href="#segmented-hypothesis">Segmented onboarding</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">Part 2: Brain² measurement spec</p>
+    <a href="#why-own-metric">Why its own metric</a>
+    <a href="#the-metric">The metric: TTFBV</a>
+    <a href="#trigger-logic">Trigger logic</a>
+    <a href="#what-this-proves">What this would prove</a>
+  </div>
+</nav>
+
+<div class="container proof-wrap">
+  <a class="proof-back" href="/work/clickup/">&larr; Back to the ClickUp pitch</a>
+
+  <p class="proof-eyebrow">A brief for ClickUp</p>
+  <h1>Where ClickUp's Onboarding Tension Actually Starts, and How to Prove Brain² Is Working</h1>
+
+  <div class="proof-credit">
+    <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+    <span><strong>James Praise</strong> &middot; Marketing and GTM Operator</span>
+  </div>
+
+  <p class="proof-note">Both pieces below are built entirely from what's already public on clickup.com, no account created, no internal data used. They're a starting hypothesis, not a finished audit, the kind of first-week thinking I'd bring to this role.</p>
+
+  <div class="proof-draft">
+    <p class="section-label">Part 1: Pre-Signup Onboarding Teardown</p>
+
+    <h2 id="marketing-site-complexity">The marketing site previews the exact complexity the product later has to manage</h2>
+    <p>The ClickUp homepage headline, "Software to replace all software," sits directly above a live-looking demo workspace with a fully populated sidebar: Projects, Chat, Brain MAX, AI Agents, Sprints, Time Tracking, Calendar, Docs, Whiteboards, Automations, Dashboards, Scheduling, twelve navigation items, visible before a visitor has clicked anything.</p>
+
+    <img class="proof-img" src="/assets/images/case-studies/clickup/homepage-hero-sidebar.jpg" alt="ClickUp homepage hero showing the headline 'Software to replace all software' above a demo workspace with a fully populated twelve-item sidebar" />
+
+    <p>Scrolling further, the site doubles down: a section titled "All apps, AI Agents, and humans in ClickUp" states "100+ products to replace fragmented software" directly above a dense, multi-row grid of feature tiles, Tasks, Mind Maps, Wikis, AI Notetaker, Calendar, Proofing, Portfolios, Templates, Reminders, Reporting, Goals, and more, in a single unbroken grid.</p>
+
+    <img class="proof-img" src="/assets/images/case-studies/clickup/feature-grid.jpg" alt="ClickUp homepage section titled 'All apps, AI Agents, and humans in ClickUp' showing a dense grid of 20+ feature tiles" />
+
+    <p>A visitor who scrolls the homepage before ever clicking "Get started" has already been shown more surface area than most competitors' entire onboarding flow covers. The tension independent reviews describe, real depth, real learning curve, doesn't start at first login. It starts on the marketing site itself.</p>
+
+    <h2 id="homepage-mechanism">The homepage already names the mechanism worth measuring against</h2>
+    <p>ClickUp's own "context" section cites specific, sourced numbers rather than vague claims about AI adoption.</p>
+
+    <img class="proof-img" src="/assets/images/case-studies/clickup/context-stats.jpg" alt="ClickUp homepage stats: Context Switching reduces performance by up to 32%, Context Missing means 96% of companies fail in AI value and adoption, Context Stitching wastes 2.5 hours daily" />
+
+    <div class="proof-cards">
+      <div class="proof-card"><strong>Context Switching</strong><span>Digital fatigue reduces employee performance by up to 32%</span></div>
+      <div class="proof-card"><strong>Context Missing</strong><span>96% of companies fail in AI value & adoption</span></div>
+      <div class="proof-card"><strong>Context Stitching</strong><span>2.5 hours daily wasted searching & stitching context</span></div>
+    </div>
+
+    <p class="proof-quote">The 96% figure is a sharper target to design Brain² adoption against than a generic "get people to try the AI feature" goal, a specific, named failure mode ClickUp has already put a number on.</p>
+
+    <h2 id="pricing-value-story">The pricing page&#39;s own value story doesn&#39;t map cleanly onto a self-serve signup</h2>
+    <p>The pricing page leads with "The best work solution, for the best price," above an interactive calculator that totals what a 500-person company currently spends across Slack, Google Drive, Salesforce, and similar tools ($354,000/year in the example shown), against ClickUp's cost ($72,000/year).</p>
+
+    <img class="proof-img" src="/assets/images/case-studies/clickup/pricing-page.jpg" alt="ClickUp pricing page showing Free Forever, Unlimited ($7), Business ($12), and Enterprise plans, with a cost-savings calculator comparing tool stacks" />
+
+    <p>That's a strong enterprise argument. It's a weaker self-serve one: a solo user signing up for Free isn't replacing $354,000 of tooling, usually just one lighter tool. The pricing page's consolidation story doesn't map onto the exact segment this role owns, new, low-commitment signups, which suggests that segment needs its own, smaller "why switch" narrative, not a scaled-down version of the enterprise pitch.</p>
+
+    <h2 id="segmented-hypothesis">A segmented onboarding hypothesis</h2>
+    <p>ClickUp shows the same full-breadth story to every visitor, regardless of how much of it they're ready to use. That depth is the real differentiator, so the fix is sequencing when each piece gets introduced, not hiding any of it:</p>
+
+    <div class="proof-cards">
+      <div class="proof-card"><strong>Solo signup</strong><span>First session isolates Tasks, Docs, and one view type. Automations, Dashboards, and Brain² Agents stay visible in navigation, but aren't pushed as first actions.</span></div>
+      <div class="proof-card"><strong>Team-lead signup</strong><span>First session foregrounds Spaces/Folders and assignment, since inviting a team is a distinct behavior that deserves a distinct first session.</span></div>
+      <div class="proof-card"><strong>Both segments</strong><span>Brain² surfaces contextually at the first moment a manual action could be AI-assisted, not as a separate onboarding step competing with core setup.</span></div>
+    </div>
+  </div>
+
+  <div class="proof-draft">
+    <p class="section-label">Part 2: "Time to First Brain² Value" Measurement Spec</p>
+
+    <h2 id="why-own-metric">Why Brain² adoption needs its own metric</h2>
+    <p>General activation metrics (tasks created, teammates invited) measure whether someone is using ClickUp. They don't isolate whether Brain² specifically is landing. A newly-built growth motion needs an early win that's legible on its own, not folded into a noisier aggregate number.</p>
+
+    <h2 id="the-metric">The metric: Time to First Brain² Value (TTFBV)</h2>
+    <p>The elapsed time between account creation and a user's first meaningfully AI-assisted action, an event where Brain² did something the user would otherwise have done manually. Three qualifying events, ranked by strength: an @brain query the user acts on, an AI-generated artifact the user keeps rather than discards, and a Brain² Agent completing a background action. A raw @brain invocation with no follow-through counts as a separate leading indicator rather than the primary metric, since it only proves discovery, not value delivered.</p>
+
+    <h2 id="trigger-logic">Trigger logic, drawn directly from the role&#39;s own framing</h2>
+    <p>Three trigger classes: manual-effort (a user writing a long doc or task breakdown by hand, the moment Brain² could visibly compress the work), friction (repeated searching or a stalled task, the same "2.5 hours daily" pattern from Part 1), and team-context (the moment a second teammate joins, when Brain²'s multiplayer memory actually starts to differentiate from a single-player assistant).</p>
+
+    <h2 id="what-this-proves">What this would prove</h2>
+    <p>Cross-referencing TTFBV against free-to-paid conversion tests a specific hypothesis: that reaching Brain² value early predicts conversion. If it holds, TTFBV becomes a leading indicator worth optimizing directly, instead of waiting on the slower-moving conversion number. Reported as its own weekly number, it's the kind of early, attributable win a newly-staffed growth team can point to.</p>
+  </div>
+
+  <div class="button-row" style="margin-top: 40px;">
+    <a href="/work/clickup/" class="button button-primary">Back to the pitch</a>
+    <a href="/work/clickup/files/james-praise-resume.pdf" target="_blank" class="button button-secondary">My Resume</a>
+  </div>
+</div>
+
+<script src="/script.js?v=11"></script>
+<script>
+(function () {
+  var bar = document.getElementById('proofProgressBar');
+  function updateProgress() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.proof-toc a'));
+  var sections = tocLinks.map(function (a) {
+    return document.getElementById(a.getAttribute('href').slice(1));
+  });
+  function updateActiveToc() {
+    var current = null;
+    sections.forEach(function (sec, i) {
+      if (sec && sec.getBoundingClientRect().top <= 140) current = i;
+    });
+    tocLinks.forEach(function (a, i) {
+      a.classList.toggle('is-active', i === current);
+    });
+  }
+  window.addEventListener('scroll', updateActiveToc, { passive: true });
+  updateActiveToc();
+})();
+</script>
+</body>
+</html>
