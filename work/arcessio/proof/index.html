@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WKSZ7DQC');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Arcessio Proof: Engineer Question and AI Visibility Audit — James Praise</title>
+<meta name="description" content="A workflow James Praise built and ran for Arcessio: what engineers ask, who AI answers cite, and what AI crawlers can read on arcessio.ai." />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+<link rel="canonical" href="https://jamespraise.xyz/work/arcessio/proof/" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=20" />
+<style>
+  .proof-wrap { max-width: 720px; margin: 0 auto; padding: 100px 0 80px; }
+  .proof-eyebrow { color: var(--color-purple); font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; font-size: 13px; margin-bottom: 10px; }
+  .proof-credit { display: flex; align-items: center; gap: 10px; margin: 20px 0 40px; }
+  .proof-credit img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+  .proof-credit span { color: var(--text-muted); font-size: 14px; }
+  .proof-credit strong { color: var(--text-primary); }
+  .proof-note { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 8px; padding: 16px 20px; font-size: 14px; color: var(--text-muted); margin-bottom: 40px; }
+  .proof-draft { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 12px; padding: 40px; margin-bottom: 32px; }
+  .proof-draft h2 { margin-top: 32px; margin-bottom: 10px; }
+  .proof-draft h2:first-child { margin-top: 0; }
+  .proof-draft h3 { margin-top: 24px; margin-bottom: 8px; font-size: 15px; }
+  .proof-draft p { line-height: 1.7; }
+  .proof-meta { font-size: 13px; color: var(--text-muted); margin-bottom: 24px; }
+  .proof-body p { line-height: 1.7; }
+  .proof-body h2 { margin-top: 40px; margin-bottom: 12px; }
+  .proof-body strong { font-weight: 700; }
+  .proof-back { display: inline-block; margin-bottom: 24px; font-size: 14px; }
+  .section-label { font-size: 13px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-table { width: 100%; border-collapse: collapse; margin: 16px 0 28px; font-size: 13.5px; }
+  .proof-table th, .proof-table td { text-align: left; padding: 9px 12px; border-bottom: 1px solid rgba(28,20,34,0.08); vertical-align: top; }
+  .proof-table th { font-size: 11px; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-muted); font-weight: 800; }
+  .proof-cards { display: grid; grid-template-columns: 1fr; gap: 12px; margin: 16px 0 28px; }
+  .proof-card { background: var(--bg-page); border: 1px solid rgba(28,20,34,0.1); border-radius: 10px; padding: 16px; }
+  .proof-card strong { display: block; font-size: 14.5px; margin-bottom: 5px; color: var(--text-primary); }
+  .proof-card span { font-size: 13.5px; color: var(--text-muted); line-height: 1.6; }
+  .proof-quote { border-left: 3px solid var(--color-purple); padding: 4px 0 4px 22px; margin: 24px 0; font-size: 18px; font-weight: 600; line-height: 1.5; color: var(--text-primary); }
+  .proof-tag { display: inline-block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; padding: 2px 8px; border-radius: 100px; background: rgba(28,20,34,0.06); color: var(--text-muted); margin-left: 8px; }
+  .proof-divider { border: none; border-top: 1px solid rgba(28,20,34,0.1); margin: 40px 0; }
+  .proof-toc { position: fixed; top: 130px; right: 32px; width: 200px; font-size: 13px; }
+  .proof-toc-group { margin-bottom: 18px; }
+  .proof-toc-label { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-toc a { display: block; padding: 4px 0 4px 12px; border-left: 2px solid rgba(28,20,34,0.1); color: var(--text-muted); text-decoration: none; line-height: 1.4; }
+  .proof-toc a:hover { color: var(--color-purple); border-left-color: var(--color-purple); }
+  .proof-toc a.is-active { color: var(--color-purple); border-left-color: var(--color-purple); font-weight: 700; }
+  @media (max-width: 1400px) { .proof-toc { display: none; } }
+  .proof-progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(28,20,34,0.08); z-index: 200; }
+  .proof-progress-bar { height: 100%; width: 0%; background: var(--color-purple); transition: width 0.1s linear; }
+</style>
+<style>
+  .flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 16px 0 28px; }
+  .flow-step { background: var(--bg-page); border: 1px solid rgba(28,20,34,0.1); border-radius: 10px; padding: 14px; font-size: 13px; line-height: 1.5; color: var(--text-muted); }
+  .flow-step strong { display: block; color: var(--text-primary); font-size: 14px; margin-bottom: 4px; }
+  .flow-step em { display: block; font-style: normal; font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-purple); margin-bottom: 6px; }
+  .big-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 16px 0 28px; }
+  .big-stat { background: var(--bg-page); border: 1px solid rgba(28,20,34,0.1); border-radius: 10px; padding: 16px; }
+  .big-stat strong { display: block; font-size: 28px; font-weight: 900; color: var(--text-primary); line-height: 1.1; }
+  .big-stat span { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+  .table-scroll { overflow-x: auto; }
+  @media (max-width: 720px) { .flow, .big-stats { grid-template-columns: 1fr; } .proof-draft { padding: 24px; } }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKSZ7DQC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="proof-progress-track"><div class="proof-progress-bar" id="proofProgressBar"></div></div>
+<a href="/work/arcessio/" class="pitch-exit" aria-label="Back to the Arcessio pitch">
+  <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+</a>
+<nav class="proof-toc" aria-label="Section navigation">
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The workflow</p>
+    <a href="#workflow">What I built</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">What it found</p>
+    <a href="#absent">Absent from AI answers</a>
+    <a href="#who-wins">Who the answers cite</a>
+    <a href="#crawlers">What AI crawlers read</a>
+    <a href="#content">Who the content serves</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">What I'd do</p>
+    <a href="#bets">Five content bets</a>
+    <a href="#week-one">Week one</a>
+  </div>
+</nav>
+<div class="container proof-wrap">
+  <a class="proof-back" href="/work/arcessio/">&larr; Back to the Arcessio pitch</a>
+  <p class="proof-eyebrow">Built for Arcessio</p>
+  <h1>Where engineers ask, and who answers them</h1>
+  <div class="proof-credit">
+    <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+    <span><strong>James Praise</strong> &middot; Growth and Go-to-Market</span>
+  </div>
+  <p class="proof-note">I built this workflow and ran it on 15 September 2026. AI answers change from run to run, so treat the numbers as a snapshot, and the workflow as the part that keeps working.</p>
+
+  <div class="proof-draft">
+    <p class="section-label">The workflow</p>
+    <h2 id="workflow">What I built</h2>
+    <p>Your posting asks for AI-powered systems that let a small team perform like a much larger one, and for something built. So I built a small audit workflow and pointed it at the question that matters most for the engineer track: when an engineer asks how to quote, make or source a part, does Arcessio show up in the answer?</p>
+    <div class="flow">
+      <div class="flow-step"><em>Step 1</em><strong>Collect questions</strong>17 seed searches expanded through Google autocomplete into 116 real queries engineers type.</div>
+      <div class="flow-step"><em>Step 2</em><strong>Ask an AI with web search</strong>12 questions mapped to Arcessio's agents, each answered by an OpenAI model with live search. Every company and source it cites is recorded.</div>
+      <div class="flow-step"><em>Step 3</em><strong>Crawl the site</strong>Every page in arcessio.ai's sitemap, fetched once as an AI crawler sees it and once in a real browser.</div>
+      <div class="flow-step"><em>Step 4</em><strong>Score and recommend</strong>Brand mentions, citation share by domain, readable words per page, and content bets tied to the gaps.</div>
+    </div>
+    <p>It's under 300 lines of standard-library Python plus the Codex command-line tool and headless Chrome, and a full run takes around 15 minutes. Rerun weekly, it turns "are we showing up in AI answers" into a number you can track.</p>
+
+    <p class="section-label" style="margin-top:40px;">What it found</p>
+    <h2 id="absent">1. Arcessio doesn't appear in AI answers, even for its own category</h2>
+    <div class="big-stats">
+      <div class="big-stat"><strong>0 of 12</strong><span>answers mentioned Arcessio</span></div>
+      <div class="big-stat"><strong>9 of 12</strong><span>answers cited Xometry</span></div>
+      <div class="big-stat"><strong>8 of 12</strong><span>answers cited Protolabs</span></div>
+    </div>
+    <p>The sharpest result came from the question closest to Arcessio's own claim: <em>"Is there AI software that reads engineering drawings or CAD models and recommends how to manufacture a part and which supplier to use?"</em> The answer named Xometry's Instant Quoting Engine as "the closest match," then Paperless Parts. The category Arcessio is building is currently being credited to a marketplace.</p>
+    <div class="table-scroll">
+    <table class="proof-table">
+      <tr><th>Question (theme)</th><th>Who the answer cited</th></tr>
+      <tr><td>How do I get a quote for CNC parts from my CAD file? (quoting)</td><td>Xometry, Protolabs</td></tr>
+      <tr><td>Best online quoting service for sheet metal parts? (quoting)</td><td>SendCutSend, Xometry, Protolabs, SecturaFAB, Paperless Parts</td></tr>
+      <tr><td>How much does custom CNC machining cost? (quoting)</td><td>Protolabs, Xometry, Fictiv</td></tr>
+      <tr><td>CNC machining or 3D printing for my part? (process)</td><td>Xometry, Protolabs</td></tr>
+      <tr><td>Is 3D printing cheaper than injection molding at low volume? (process)</td><td>Protolabs, Xometry</td></tr>
+      <tr><td>What design for manufacturing (DFM) tools can check my design? (manufacturability)</td><td>SOLIDWORKS, Autodesk Fusion, Protolabs, Xometry, Fictiv</td></tr>
+      <tr><td>A DFM checklist for machined parts? (manufacturability)</td><td>Xometry, Protolabs, Fictiv</td></tr>
+      <tr><td>Best 3D printing material for functional parts? (materials)</td><td>UltiMaker, Prusa</td></tr>
+      <tr><td>How do I find a good machine shop? (suppliers)</td><td>Thomasnet, Xometry, Protolabs, ASQ</td></tr>
+      <tr><td>What AI manufacturing quoting software exists? (category)</td><td>AMFG, Toolpath, AutoCut, Gridex</td></tr>
+      <tr><td>AI that reads drawings and recommends process and supplier? (category)</td><td>Xometry, Paperless Parts</td></tr>
+      <tr><td>How can the Department of Defense source obsolete spare parts faster? (defense)</td><td>DLA, JAMMEX, America Makes, 3D Systems, Phillips Federal</td></tr>
+    </table>
+    </div>
+
+    <h2 id="who-wins">2. The companies that win are answering one practical question per page</h2>
+    <p>The pages the model cited weren't brand manifestos. They were a cost calculation guide, a 3D printing vs CNC comparison, a CNC design guide, a DFM checklist, a help-center page on manufacturability analysis, and capability pages that explain what to upload. Xometry also has a page on machine learning for manufacturing, and it was cited on both AI category questions. Each of these pages answers one question an engineer already has, in plain language, which makes it easy for an AI model to quote.</p>
+
+    <h2 id="crawlers">3. AI crawlers can barely read arcessio.ai</h2>
+    <p>The site renders its content in JavaScript. A browser shows the full page, but a crawler that doesn't run JavaScript, which describes most AI answer-engine crawlers, sees little more than the page title.</p>
+    <div class="big-stats">
+      <div class="big-stat"><strong>14 of 15</strong><span>sitemap pages show a crawler fewer than 25 words</span></div>
+      <div class="big-stat"><strong>962</strong><span>words readable without JavaScript across those 15 pages</span></div>
+      <div class="big-stat"><strong>10,762</strong><span>words a browser actually renders</span></div>
+    </div>
+    <div class="table-scroll">
+    <table class="proof-table">
+      <tr><th>Page</th><th>Crawler sees</th><th>Browser shows</th></tr>
+      <tr><td>Homepage</td><td>7 words</td><td>379 words</td></tr>
+      <tr><td>When a Missing Part Becomes a Mission Problem</td><td>10 words</td><td>734 words</td></tr>
+      <tr><td>For Want of a Nail: How a Single Part Can Kill Readiness</td><td>14 words</td><td>1,211 words</td></tr>
+      <tr><td>For Suppliers</td><td>796 words</td><td>809 words</td></tr>
+    </table>
+    </div>
+    <p>The For Suppliers page is the useful exception: it already serves its text in the HTML, so the fix is possible inside the current stack. Extending that treatment to the homepage and resources would be my first technical task.</p>
+
+    <h2 id="content">4. The existing content speaks to enterprise and defense buyers, and none of it answers an engineer's question</h2>
+    <p>All 11 articles in the sitemap cover legacy aftermarket inventory, 3D printing adoption and defense readiness, several from the Accio3D era. They suit the enterprise and Department of Defense track. None of them answers the questions engineers actually search: how to get a part quoted, which process to use, what a drawing needs, or which material fits. Even the defense question went to DLA and America Makes rather than Arcessio's own defense articles, which is what you'd expect when a crawler can't read them.</p>
+
+    <p class="section-label" style="margin-top:40px;">What I'd do</p>
+    <h2 id="bets">Five content bets for the engineer track</h2>
+    <p>Each bet answers a question from the audit and shows one of Arcessio's agents doing the work, so the page earns its citation and demonstrates the product in the same place.</p>
+    <div class="proof-cards">
+      <div class="proof-card"><strong>1. CNC, 3D printing or sheet metal: a decision guide by part geometry</strong><span>Answers the process question, with a real part run through the Manufacturability and Material &amp; Equipment agents as the worked example.</span></div>
+      <div class="proof-card"><strong>2. What a shop needs to quote your part: the STEP file and drawing checklist</strong><span>Answers the quoting questions Xometry and Protolabs currently own, and ends in a drawing upload.</span></div>
+      <div class="proof-card"><strong>3. The tolerance callouts that quietly double a quote</strong><span>A design for manufacturing piece built on the tolerance checks the agent already scores.</span></div>
+      <div class="proof-card"><strong>4. Materials for functional parts, chosen by requirement</strong><span>The PEEK, PA12-CF and polycarbonate matching on the homepage, turned into a guide an engineer can cite.</span></div>
+      <div class="proof-card"><strong>5. What AI can decide from a CAD model today</strong><span>A plain explanation of the category question, with a sample agent output, so the next answer to "is there AI that reads drawings" has a page to cite besides a marketplace.</span></div>
+    </div>
+
+    <h2 id="week-one">Week one</h2>
+    <p>First, make the homepage and resources readable without JavaScript, following the For Suppliers page. Second, publish bet number two, because quoting questions carry the clearest buying intent. Third, run this audit weekly with a wider question set and track Arcessio's share of AI citations as the leading metric for the engineer track, ahead of traffic and alongside signups.</p>
+    <p>The same workflow scales to the enterprise track by swapping the question set for procurement and defense sourcing questions.</p>
+  </div>
+
+  <div class="button-row" style="margin-top: 40px;">
+    <a href="/work/arcessio/" class="button button-primary">Back to the pitch</a>
+    <a href="mailto:james@marketinginaction.xyz?subject=Founding%20Growth%20Marketing%20Lead%20-%20James%20Praise" class="button button-secondary">Let's Talk</a>
+  </div>
+</div>
+
+<script src="/script.js?v=11"></script>
+<script>
+(function () {
+  var bar = document.getElementById('proofProgressBar');
+  function updateProgress() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.proof-toc a'));
+  var sections = tocLinks.map(function (a) {
+    return document.getElementById(a.getAttribute('href').slice(1));
+  });
+  function updateActiveToc() {
+    var current = null;
+    sections.forEach(function (sec, i) {
+      if (sec && sec.getBoundingClientRect().top <= 140) current = i;
+    });
+    tocLinks.forEach(function (a, i) {
+      a.classList.toggle('is-active', i === current);
+    });
+  }
+  window.addEventListener('scroll', updateActiveToc, { passive: true });
+  updateActiveToc();
+})();
+</script>
+</body>
+</html>
