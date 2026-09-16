@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WKSZ7DQC');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Openbenchmarks: Search Position and an Enrichment Write-Up — James Praise</title>
+<meta name="description" content="A search-position audit across Openbenchmarks' twelve benchmarks, and the Company Enrichment benchmark written up with two charts, by James Praise." />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+<link rel="canonical" href="https://jamespraise.xyz/work/openbenchmarks/proof/" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=20" />
+<style>
+  .proof-wrap { max-width: 760px; margin: 0 auto; padding: 100px 0 80px; }
+  .proof-eyebrow { color: var(--color-purple); font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; font-size: 13px; margin-bottom: 10px; }
+  .proof-credit { display: flex; align-items: center; gap: 10px; margin: 20px 0 40px; }
+  .proof-credit img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+  .proof-credit span { color: var(--text-muted); font-size: 14px; }
+  .proof-credit strong { color: var(--text-primary); }
+  .proof-note { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 8px; padding: 16px 20px; font-size: 14px; color: var(--text-muted); margin-bottom: 40px; }
+  .proof-draft { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 12px; padding: 40px; margin-bottom: 56px; }
+  .proof-draft h2 { margin-top: 36px; margin-bottom: 10px; }
+  .proof-draft h2:first-of-type { margin-top: 8px; }
+  .proof-draft h3 { margin-top: 26px; margin-bottom: 8px; font-size: 18px; }
+  .proof-draft p, .proof-draft li { line-height: 1.7; }
+  .proof-draft ul, .proof-draft ol { padding-left: 22px; margin: 12px 0; }
+  .proof-body p { line-height: 1.7; }
+  .proof-body h2 { margin-top: 40px; margin-bottom: 12px; }
+  .proof-back { display: inline-block; margin-bottom: 24px; font-size: 14px; }
+  .section-label { font-size: 13px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-quote { border-left: 3px solid var(--color-purple); padding: 4px 0 4px 22px; margin: 28px 0; font-size: 19px; font-weight: 600; line-height: 1.5; color: var(--text-primary); }
+  .proof-post { background: var(--bg-page); border: 1px solid rgba(28,20,34,0.1); border-radius: 10px; padding: 22px 24px; margin: 18px 0; }
+  .proof-post p { margin: 0 0 12px; }
+  .proof-post p:last-child { margin-bottom: 0; }
+  .proof-figure { margin: 24px 0 8px; background: var(--bg-page); border: 1px solid rgba(28,20,34,0.1); border-radius: 10px; padding: 14px; }
+  .proof-caption { font-size: 13px; color: var(--text-muted); margin: 6px 0 24px; }
+  .proof-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 22px 0; }
+  .proof-stat { background: var(--bg-page); border: 1px solid rgba(28,20,34,0.1); border-radius: 10px; padding: 14px; }
+  .proof-stat strong { display: block; font-size: 26px; font-weight: 900; color: var(--text-primary); }
+  .proof-stat span { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+  .proof-table-wrap { overflow-x: auto; margin: 20px 0; }
+  .proof-table { width: 100%; border-collapse: collapse; font-size: 13px; background: var(--bg-page); border-radius: 10px; overflow: hidden; }
+  .proof-table th { background: var(--bg-surface); text-align: left; padding: 10px 12px; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-muted); border-bottom: 1px solid rgba(28,20,34,0.1); }
+  .proof-table td { padding: 10px 12px; border-bottom: 1px solid rgba(28,20,34,0.08); color: var(--text-primary); line-height: 1.5; vertical-align: top; }
+  .proof-table tr:last-child td { border-bottom: none; }
+  .proof-table code, .proof-draft code { font-size: 12px; background: var(--bg-page); padding: 2px 5px; border-radius: 4px; }
+  .proof-toc { position: fixed; top: 140px; right: 32px; width: 210px; font-size: 13px; }
+  .proof-toc-group { margin-bottom: 20px; }
+  .proof-toc-label { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-toc a { display: block; padding: 5px 0 5px 12px; border-left: 2px solid rgba(28,20,34,0.1); color: var(--text-muted); text-decoration: none; line-height: 1.4; }
+  .proof-toc a:hover { color: var(--color-purple); border-left-color: var(--color-purple); }
+  .proof-toc a.is-active { color: var(--color-purple); border-left-color: var(--color-purple); font-weight: 700; }
+  @media (max-width: 1400px) { .proof-toc { display: none; } }
+  @media (max-width: 700px) { .proof-draft { padding: 24px 18px; } }
+  .proof-progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(28,20,34,0.08); z-index: 200; }
+  .proof-progress-bar { height: 100%; width: 0%; background: var(--color-purple); transition: width 0.1s linear; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKSZ7DQC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="proof-progress-track"><div class="proof-progress-bar" id="proofProgressBar"></div></div>
+
+<a href="/work/openbenchmarks/" class="pitch-exit" aria-label="Back to the Openbenchmarks pitch">
+  <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+</a>
+
+<nav class="proof-toc" aria-label="Section navigation">
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">Part 1: Search position</p>
+    <a href="#why-position">Why position is the lever</a>
+    <a href="#method">How I checked</a>
+    <a href="#findings">What the results show</a>
+    <a href="#all-results">All 36 searches</a>
+    <a href="#fix-list">What I'd fix first</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">Part 2: Enrichment write-up</p>
+    <a href="#the-post">The post</a>
+    <a href="#chart-latency">Yield against latency</a>
+    <a href="#chart-accuracy">Blank or wrong</a>
+    <a href="#agent-summary">The version agents read</a>
+    <a href="#v2">What I'd test in v2</a>
+    <a href="#distribution">How I'd ship it</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">Part 3</p>
+    <a href="#next-benchmark">What to benchmark next</a>
+    <a href="#reasoning">Why it's built this way</a>
+  </div>
+</nav>
+
+<div class="container proof-wrap">
+  <a class="proof-back" href="/work/openbenchmarks/">&larr; Back to the Openbenchmarks pitch</a>
+
+  <p class="proof-eyebrow">Built for Openbenchmarks</p>
+  <h1>Where the Benchmarks Rank in Search, and One Benchmark Written Up</h1>
+
+  <div class="proof-credit">
+    <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+    <span><strong>James Praise</strong> &middot; Marketing and GTM Operator</span>
+  </div>
+
+  <p class="proof-note">Everything here uses public material only: search results collected on 16 September 2026, the <a href="https://openbenchmarks.com/api/benchmarks/company-enrichment">Company Enrichment benchmark data</a> published under CC-BY-4.0, and posts on the founders' public LinkedIn profiles. The charts were built in Claude Code directly from that data.</p>
+
+  <div class="proof-draft">
+    <p class="section-label">Part 1: Where the benchmarks rank in search</p>
+
+    <h2 id="why-position">Why position is the lever</h2>
+    <p>Fenil <a href="https://www.linkedin.com/in/fenilsuchak/recent-activity/all/">wrote on LinkedIn</a> that the Openbenchmarks citation rate is close to 100% when a benchmark is in the search results, and that SEO is what gets it into the context window. If that holds, every buyer search where a benchmark doesn't show up is a recommendation an agent makes from someone else's page. So I checked where the benchmarks show up.</p>
+
+    <h2 id="method">How I checked</h2>
+    <p>I wrote three buyer searches for each of the 12 benchmarks, 36 in total: a "best X" search, a head-to-head search naming two vendors, and a job-to-be-done search phrased the way a builder would ask it. I ran each through a web search tool on 16 September 2026, recorded where openbenchmarks.com appeared, and classified the top three results. The tool returns a short results list, between 5 and 10 results, and it stands in for Google and Bing, not for the retrieval inside Exa, Parallel or Perplexity. So read the positions as direction, not exact rank.</p>
+
+    <div class="proof-stats">
+      <div class="proof-stat"><strong>26 of 36</strong><span>searches where openbenchmarks.com appeared at all</span></div>
+      <div class="proof-stat"><strong>6th</strong><span>median position when it did appear</span></div>
+      <div class="proof-stat"><strong>2 of 36</strong><span>searches where it reached the top 3</span></div>
+      <div class="proof-stat"><strong>71%</strong><span>of top-3 slots held by pages written by companies selling in that category</span></div>
+    </div>
+
+    <h2 id="findings">What the results show</h2>
+    <p><strong>The pages already exist.</strong> The <a href="https://openbenchmarks.com/sitemap.xml">sitemap</a> lists 192 URLs, most of them intent pages like "best company enrichment API" and "Apollo vs People Data Labs." Every appearance in this audit came from one of them, and several searches it missed have a matching page too, including <a href="https://openbenchmarks.com/web-search/best-web-search-api-for-ai">best web search API for AI</a>. The gap is ranking, not coverage.</p>
+    <p><strong>Vendors win their own head-to-heads.</strong> On 12 searches naming two vendors, Openbenchmarks reached the top 3 1 time. On 6 of them, one of the two vendors being compared held a top-3 spot with its own page, and on 4 more a competing vendor did. On "Parallel vs Exa for research agents," Exa and Parallel took all three top spots and Openbenchmarks didn't appear. That's the exact case the benchmark exists for: a buyer comparing two tools and reading one of them grade itself.</p>
+    <p><strong>Three benchmarks are close to invisible.</strong> Structured Speech-to-Text didn't appear on any of its three searches, and <a href="https://artificialanalysis.ai/">Artificial Analysis</a> took the independent slot on the "most accurate" search. Web Search for AI and Live Speech-to-Text appeared once each, never in the top 3. Web Search for AI hurts most, since Parallel, Firecrawl and You.com rank there with their own articles, such as <a href="https://parallel.ai/articles/the-honest-2026-comparison-web-search-apis-for-ai-agents">Parallel's "honest comparison"</a>.</p>
+    <p><strong>Job-to-be-done searches are the weakest type.</strong> Five of the 10 misses were searches like "which web search API should I use to build an AI research agent." Vendor blogs and listicles have written to that phrasing for years, and the intent page titles are mostly written as "best X."</p>
+    <p><strong>Where it already works:</strong> Company Funding Data came 2nd on "best company funding data API," and Company Lookalikes appeared on all three of its searches, at 3rd, 4th and 5th. Those two show the intent pages can rank, which makes the gaps worth fixing.</p>
+
+    <h2 id="all-results">All 36 searches</h2>
+    <div class="proof-table-wrap">
+      <table class="proof-table">
+        <tr><th>Benchmark</th><th>Search</th><th>Position</th><th>Top 3 results</th></tr>
+<tr><td>Company Lookalikes</td><td>best company lookalike API (<a href="https://openbenchmarks.com/lookalikes/best-company-lookalike-tools">page</a>)</td><td>5</td><td>apify.com, blog.predictleads.com, predictleads.com</td></tr>
+<tr><td>Company Lookalikes</td><td>Seltz vs PredictLeads lookalike API (<a href="https://openbenchmarks.com/lookalikes">page</a>)</td><td>3</td><td>linkedin.com, github.com, openbenchmarks.com</td></tr>
+<tr><td>Company Lookalikes</td><td>how to find similar companies to my best customers for GTM list building (<a href="https://openbenchmarks.com/lookalikes/best-company-search-api-for-gtm-list-building">page</a>)</td><td>4</td><td>blog.predictleads.com, gtm.ai, predictleads.com</td></tr>
+<tr><td>Company Firmographic Enrichment</td><td>best company enrichment API accuracy comparison 2026 (<a href="https://openbenchmarks.com/company-enrichment/best-company-enrichment-api">page</a>)</td><td>8</td><td>abstractapi.com, autobound.ai, olostep.com</td></tr>
+<tr><td>Company Firmographic Enrichment</td><td>Apollo vs People Data Labs enrichment accuracy (<a href="https://openbenchmarks.com/company-enrichment/apollo-vs-people-data-labs">page</a>)</td><td>5</td><td>fullenrich.com, crustdata.com, autobound.ai</td></tr>
+<tr><td>Company Firmographic Enrichment</td><td>which company enrichment API has the most accurate firmographic data for my CRM (<a href="https://openbenchmarks.com/company-enrichment/best-firmographic-data-api">page</a>)</td><td>9</td><td>apify.com, coresignal.com, olostep.com</td></tr>
+<tr><td>Company Funding Data Enrichment</td><td>best company funding data API (<a href="https://openbenchmarks.com/company-funding/best-company-funding-data-api">page</a>)</td><td>2</td><td>datarade.ai, openbenchmarks.com, openbenchmarks.com</td></tr>
+<tr><td>Company Funding Data Enrichment</td><td>PredictLeads vs Apollo funding data accuracy (<a href="https://openbenchmarks.com/company-funding/predictleads-vs-apollo">page</a>)</td><td>5</td><td>datarade.ai, lagrowthmachine.com, pitchbook.com</td></tr>
+<tr><td>Company Funding Data Enrichment</td><td>how to get real-time company funding round data for my sales tool (<a href="https://openbenchmarks.com/company-funding/real-time-funding-data">page</a>)</td><td>7</td><td>datarade.ai, datarade.ai, apify.com</td></tr>
+<tr><td>Web Search for AI</td><td>best web search API for AI agents benchmark</td><td>Not in results</td><td>scrapingbee.com, you.com, parallel.ai</td></tr>
+<tr><td>Web Search for AI</td><td>Exa vs Tavily web search API accuracy (<a href="https://openbenchmarks.com/web-search/exa-vs-tavily">page</a>)</td><td>6</td><td>exa.ai, parallel.ai, linkup.so</td></tr>
+<tr><td>Web Search for AI</td><td>which web search API should I use to build an AI research agent</td><td>Not in results</td><td>firecrawl.dev, vellum.ai, parallel.ai</td></tr>
+<tr><td>Company News</td><td>best API for recent company news events funding acquisitions (<a href="https://openbenchmarks.com/company-news">page</a>)</td><td>6</td><td>apify.com, databar.ai, apify.com</td></tr>
+<tr><td>Company News</td><td>news index API vs web search API for company events (<a href="https://openbenchmarks.com/company-news">page</a>)</td><td>5</td><td>newscatcherapi.com, github.com, webz.io</td></tr>
+<tr><td>Company News</td><td>how to track company funding rounds and leadership changes with an API</td><td>Not in results</td><td>apify.com, apify.com, parallel.ai</td></tr>
+<tr><td>Multi Turn Company Search</td><td>best web search API for AI research agents multi turn (<a href="https://openbenchmarks.com/multi-turn-company-search/best-web-search-api-for-research-agents">page</a>)</td><td>8</td><td>firecrawl.dev, you.com, scrapingbee.com</td></tr>
+<tr><td>Multi Turn Company Search</td><td>Parallel vs Exa for research agents</td><td>Not in results</td><td>exa.ai, parallel.ai, parallel.ai</td></tr>
+<tr><td>Multi Turn Company Search</td><td>how to build a market map of companies by sector and location with an API (<a href="https://openbenchmarks.com/multi-turn-company-search/build-a-market-map-by-geography">page</a>)</td><td>5</td><td>harmonic.ai, mapbox.com, dealroom.co</td></tr>
+<tr><td>Web Search for Coding Agents</td><td>best web search API for coding agents (<a href="https://openbenchmarks.com/web-search-for-coding-agents">page</a>)</td><td>9</td><td>mintlify.com, exa.ai, you.com</td></tr>
+<tr><td>Web Search for Coding Agents</td><td>Firecrawl vs Exa for coding agent search (<a href="https://openbenchmarks.com/web-search/exa-vs-firecrawl">page</a>)</td><td>5</td><td>exa.ai, firecrawl.dev, gumloop.com</td></tr>
+<tr><td>Web Search for Coding Agents</td><td>most token efficient search API for AI coding assistant (<a href="https://openbenchmarks.com/web-search-for-coding-agents/most-token-efficient-search-api">page</a>)</td><td>6</td><td>firecrawl.dev, firecrawl.dev, github.com</td></tr>
+<tr><td>Inference</td><td>best serverless LLM inference provider 2026 (<a href="https://openbenchmarks.com/inference/best-inference-provider">page</a>)</td><td>4</td><td>siliconflow.com, siliconflow.com, digitalocean.com</td></tr>
+<tr><td>Inference</td><td>Baseten vs Fireworks AI inference latency (<a href="https://openbenchmarks.com/inference/baseten-vs-fireworks-ai">page</a>)</td><td>7</td><td>telnyx.com, guptadeepak.com, spheron.network</td></tr>
+<tr><td>Inference</td><td>lowest latency inference provider for my AI agent (<a href="https://openbenchmarks.com/inference/lowest-latency-llm-inference-provider">page</a>)</td><td>8</td><td>gmicloud.ai, digitalocean.com, gmicloud.ai</td></tr>
+<tr><td>Voice Agents Latency</td><td>voice AI agent latency comparison Vapi Retell ElevenLabs (<a href="https://openbenchmarks.com/voice-agent-latency/voice-agent-latency-comparison">page</a>)</td><td>6</td><td>telnyx.com, bland.ai, retellai.com</td></tr>
+<tr><td>Voice Agents Latency</td><td>Vapi vs Retell voice agent latency (<a href="https://openbenchmarks.com/voice-agent-latency/vapi-vs-retell">page</a>)</td><td>6</td><td>bland.ai, telnyx.com, retellai.com</td></tr>
+<tr><td>Voice Agents Latency</td><td>which voice AI platform has the lowest time to first audio byte (<a href="https://openbenchmarks.com/voice-agent-latency/lowest-latency-voice-agent-platform">page</a>)</td><td>5</td><td>telnyx.com, inworld.ai, inworld.ai</td></tr>
+<tr><td>Text-to-Speech</td><td>best text to speech API lowest latency TTFA (<a href="https://openbenchmarks.com/text-to-speech-benchmark-by-coval">page</a>)</td><td>7</td><td>fish.audio, gradium.ai, gradium.ai</td></tr>
+<tr><td>Text-to-Speech</td><td>ElevenLabs vs Cartesia text to speech latency (<a href="https://openbenchmarks.com/text-to-speech-benchmark-by-coval/elevenlabs-vs-cartesia">page</a>)</td><td>4</td><td>murf.ai, fish.audio, famulor.io</td></tr>
+<tr><td>Text-to-Speech</td><td>fastest text to speech API for real time voice agent</td><td>Not in results</td><td>telnyx.com, assemblyai.com, assemblyai.com</td></tr>
+<tr><td>Live Speech-to-Text</td><td>best real time speech to text API latency comparison</td><td>Not in results</td><td>modulate.ai, gladia.io, futureagi.substack.com</td></tr>
+<tr><td>Live Speech-to-Text</td><td>Deepgram vs AssemblyAI speech to text latency (<a href="https://openbenchmarks.com/speech-to-text-benchmark-by-coval/deepgram-vs-assemblyai">page</a>)</td><td>7</td><td>deepgram.com, gladia.io, assemblyai.com</td></tr>
+<tr><td>Live Speech-to-Text</td><td>lowest latency speech to text API for voice agents</td><td>Not in results</td><td>getstream.io, assemblyai.com, futureagi.substack.com</td></tr>
+<tr><td>Structured Speech-to-Text</td><td>most accurate speech to text model structured transcription</td><td>Not in results</td><td>elevenlabs.io, openrouter.ai, artificialanalysis.ai</td></tr>
+<tr><td>Structured Speech-to-Text</td><td>Deepgram vs ElevenLabs Scribe accuracy comparison</td><td>Not in results</td><td>deepgram.com, deepgram.com, peerspot.com</td></tr>
+<tr><td>Structured Speech-to-Text</td><td>which speech to text API is most accurate for structured data extraction</td><td>Not in results</td><td>rev.ai, smallest.ai, modulate.ai</td></tr>
+      </table>
+    </div>
+
+    <h2 id="fix-list">What I'd fix first</h2>
+    <ol>
+      <li><strong>Web Search for AI, "best" page.</strong> It exists and doesn't rank, while three benchmarked vendors hold the top results with their own articles. I'd rewrite the title and first paragraph to match how the search is typed, lead with the result, add the run date, and link it from every Web Search post.</li>
+      <li><strong>Head-to-head pages.</strong> Put the exact "X vs Y" phrase in the title and first heading, open with the one-line verdict and the numbers, and link each page from both vendors' rows on the benchmark. A vendor's page beats yours on its own brand name unless yours answers the question faster.</li>
+      <li><strong>Structured Speech-to-Text.</strong> The benchmark checks something no one else publishes, exact recovery of emails, phone numbers and IDs, and it's invisible. It needs a hub page written around that angle and outreach to voice agent builders who'd link to it.</li>
+      <li><strong>The two Coval-mirrored benchmarks.</strong> Text-to-Speech and Live Speech-to-Text carry Coval's data. Adding Openbenchmarks' own analysis on top gives search engines, and people who might link, a reason to prefer this page over the source.</li>
+      <li><strong>Job-to-be-done pages.</strong> Start with Web Search for AI, Inference and Live Speech-to-Text, written in the phrasing builders use: "which API should I use to..."</li>
+    </ol>
+  </div>
+
+
+  <div class="proof-draft">
+    <p class="section-label">Part 2: The Company Enrichment benchmark, written up</p>
+
+    <h2 id="the-post">The post</h2>
+    <p>The <a href="https://openbenchmarks.com/company-enrichment">benchmark</a> scores 11 APIs on 282 companies against human-reviewed ground truth. It carries a lot of numbers, so the post picks one trade-off a buyer actually faces and lets the rest live on the benchmark page.</p>
+    <div class="proof-post">
+      <p>Company enrichment APIs fail in two different ways, and the benchmark shows which one you're buying.</p>
+      <p>Seltz is right 85% of the time when it returns a field. It only returns about a third of them. You end up with a CRM full of blanks, and at least you know they're blanks.</p>
+      <p>CompanyEnrich returns 94% of fields. About one in four of those is wrong. You end up with a CRM that looks complete, and nothing tells you which rows to trust.</p>
+      <p>For a backfill, the second failure costs more. A blank field goes back through the waterfall to the next provider. A wrong headquarters or headcount sits in the record and quietly sends the account to the wrong territory.</p>
+      <p>Three providers sit where you want to be, above 93% coverage and near or above 90% accuracy: People Data Labs, Apollo and Parallel. What separates them is time. People Data Labs answers in 0.27 seconds. Parallel takes 21 seconds, about 78 times longer. That's fine for an overnight backfill and useless inside a signup form.</p>
+      <p>282 companies, 11 APIs, human-reviewed ground truth. The data and code are open. Link in the comments.</p>
+    </div>
+
+    <h2 id="chart-latency">Chart 1: correct field yield against latency</h2>
+    <div class="proof-figure"><svg viewBox="0 0 720 460" role="img" aria-labelledby="t d" style="width:100%;height:auto;font-family:inherit" xmlns="http://www.w3.org/2000/svg"><title id="t">Correct field yield against median latency</title><desc id="d">Company database APIs return in under 1.2 seconds; live web research APIs take 3.5 to 21 seconds. Only Parallel reaches the database tier's yield.</desc><line x1="64" x2="696" y1="404.0" y2="404.0" stroke="rgba(28,20,34,0.10)"/><text x="56" y="408.0" font-size="11" fill="rgba(28,20,34,0.62)" text-anchor="end">20%</text><line x1="64" x2="696" y1="309.0" y2="309.0" stroke="rgba(28,20,34,0.10)"/><text x="56" y="313.0" font-size="11" fill="rgba(28,20,34,0.62)" text-anchor="end">40%</text><line x1="64" x2="696" y1="214.0" y2="214.0" stroke="rgba(28,20,34,0.10)"/><text x="56" y="218.0" font-size="11" fill="rgba(28,20,34,0.62)" text-anchor="end">60%</text><line x1="64" x2="696" y1="119.0" y2="119.0" stroke="rgba(28,20,34,0.10)"/><text x="56" y="123.0" font-size="11" fill="rgba(28,20,34,0.62)" text-anchor="end">80%</text><line x1="64" x2="696" y1="24.0" y2="24.0" stroke="rgba(28,20,34,0.10)"/><text x="56" y="28.0" font-size="11" fill="rgba(28,20,34,0.62)" text-anchor="end">100%</text><line y1="24" y2="404" x1="121.8" x2="121.8" stroke="rgba(28,20,34,0.10)"/><text x="121.8" y="422" font-size="11" fill="rgba(28,20,34,0.62)" text-anchor="middle">0.25s</text><line y1="24" y2="404" x1="278.6" x2="278.6" stroke="rgba(28,20,34,0.10)"/><text x="278.6" y="422" font-size="11" fill="rgba(28,20,34,0.62)" text-anchor="middle">1s</text><line y1="24" y2="404" x1="435.5" x2="435.5" stroke="rgba(28,20,34,0.10)"/><text x="435.5" y="422" font-size="11" fill="rgba(28,20,34,0.62)" text-anchor="middle">4s</text><line y1="24" y2="404" x1="592.3" x2="592.3" stroke="rgba(28,20,34,0.10)"/><text x="592.3" y="422" font-size="11" fill="rgba(28,20,34,0.62)" text-anchor="middle">16s</text><text x="380.0" y="452" font-size="12" fill="rgba(28,20,34,0.62)" text-anchor="middle">Median latency per company (log scale)</text><text transform="translate(16 214.0) rotate(-90)" font-size="12" fill="rgba(28,20,34,0.62)" text-anchor="middle">Correct field yield</text><circle cx="132.2" cy="76.0" r="6" fill="#7184f1" stroke="#fff" stroke-width="1.5"/><text x="122.2" y="66.0" font-size="12" fill="#1c1422" text-anchor="end">People Data Labs</text><circle cx="230.6" cy="78.2" r="6" fill="#7184f1" stroke="#fff" stroke-width="1.5"/><text x="240.6" y="68.2" font-size="12" fill="#1c1422" text-anchor="start">Apollo</text><circle cx="624.8" cy="90.5" r="6" fill="#f171c4" stroke="#fff" stroke-width="1.5"/><text x="614.8" y="78.5" font-size="12" fill="#1c1422" text-anchor="end">Parallel</text><circle cx="212.2" cy="116.0" r="6" fill="#7184f1" stroke="#fff" stroke-width="1.5"/><text x="222.2" y="120.0" font-size="12" fill="#1c1422" text-anchor="start">Predict Leads</text><circle cx="223.8" cy="164.4" r="6" fill="#7184f1" stroke="#fff" stroke-width="1.5"/><text x="233.8" y="156.4" font-size="12" fill="#1c1422" text-anchor="start">Explorium</text><circle cx="145.8" cy="168.2" r="6" fill="#7184f1" stroke="#fff" stroke-width="1.5"/><text x="135.8" y="184.2" font-size="12" fill="#1c1422" text-anchor="end">CompanyEnrich</text><circle cx="443.0" cy="169.6" r="6" fill="#f171c4" stroke="#fff" stroke-width="1.5"/><text x="453.0" y="161.6" font-size="12" fill="#1c1422" text-anchor="start">Nimble standard</text><circle cx="292.7" cy="195.3" r="6" fill="#7184f1" stroke="#fff" stroke-width="1.5"/><text x="302.7" y="199.3" font-size="12" fill="#1c1422" text-anchor="start">ZoomInfo</text><circle cx="515.9" cy="211.9" r="6" fill="#f171c4" stroke="#fff" stroke-width="1.5"/><text x="525.9" y="215.9" font-size="12" fill="#1c1422" text-anchor="start">Exa</text><circle cx="450.9" cy="242.6" r="6" fill="#f171c4" stroke="#fff" stroke-width="1.5"/><text x="460.9" y="246.6" font-size="12" fill="#1c1422" text-anchor="start">Nimble lite</text><circle cx="422.2" cy="356.6" r="6" fill="#f171c4" stroke="#fff" stroke-width="1.5"/><text x="432.2" y="360.6" font-size="12" fill="#1c1422" text-anchor="start">Seltz</text><circle cx="72" cy="390" r="6" fill="#7184f1"/><text x="84" y="394" font-size="12" fill="rgba(28,20,34,0.62)">Company database</text><circle cx="214" cy="390" r="6" fill="#f171c4"/><text x="226" y="394" font-size="12" fill="rgba(28,20,34,0.62)">Live web research</text></svg></div>
+    <p class="proof-caption">Correct field yield counts missing and wrong fields against a provider. Latency is the median per company, on a log scale. Source: <a href="https://openbenchmarks.com/api/benchmarks/company-enrichment">Openbenchmarks Company Enrichment API</a>.</p>
+    <p>The chart splits into two groups on its own. Every provider that answers from a company database returns in under 1.2 seconds. Every provider that researches the live web takes between 3.5 and 21 seconds. Only one web research API, Parallel at 86.0%, reaches the database group's yield, and it's also the slowest point on the chart. For anyone building a real-time flow, the left side is the whole shortlist.</p>
+
+    <h2 id="chart-accuracy">Chart 2: blank or wrong</h2>
+    <div class="proof-figure"><svg viewBox="0 0 720 460" role="img" aria-labelledby="t d" style="width:100%;height:auto;font-family:inherit" xmlns="http://www.w3.org/2000/svg"><title id="t">Field accuracy when returned against field coverage</title><desc id="d">High accuracy with low coverage leaves blank CRM fields; high coverage with low accuracy writes wrong ones.</desc><line x1="64" x2="696" y1="404.0" y2="404.0" stroke="rgba(28,20,34,0.10)"/><text x="56" y="408.0" font-size="11" fill="rgba(28,20,34,0.62)" text-anchor="end">65%</text><line x1="64" x2="696" y1="340.7" y2="340.7" stroke="rgba(28,20,34,0.10)"/><text x="56" y="344.7" font-size="11" fill="rgba(28,20,34,0.62)" text-anchor="end">70%</text><line x1="64" x2="696" y1="277.3" y2="277.3" stroke="rgba(28,20,34,0.10)"/><text x="56" y="281.3" font-size="11" fill="rgba(28,20,34,0.62)" text-anchor="end">75%</text><line x1="64" x2="696" y1="214.0" y2="214.0" stroke="rgba(28,20,34,0.10)"/><text x="56" y="218.0" font-size="11" fill="rgba(28,20,34,0.62)" text-anchor="end">80%</text><line x1="64" x2="696" y1="150.7" y2="150.7" stroke="rgba(28,20,34,0.10)"/><text x="56" y="154.7" font-size="11" fill="rgba(28,20,34,0.62)" text-anchor="end">85%</text><line x1="64" x2="696" y1="87.3" y2="87.3" stroke="rgba(28,20,34,0.10)"/><text x="56" y="91.3" font-size="11" fill="rgba(28,20,34,0.62)" text-anchor="end">90%</text><line x1="64" x2="696" y1="24.0" y2="24.0" stroke="rgba(28,20,34,0.10)"/><text x="56" y="28.0" font-size="11" fill="rgba(28,20,34,0.62)" text-anchor="end">95%</text><text x="106.1" y="422" font-size="11" fill="rgba(28,20,34,0.62)" text-anchor="middle">30%</text><text x="190.4" y="422" font-size="11" fill="rgba(28,20,34,0.62)" text-anchor="middle">40%</text><text x="274.7" y="422" font-size="11" fill="rgba(28,20,34,0.62)" text-anchor="middle">50%</text><text x="358.9" y="422" font-size="11" fill="rgba(28,20,34,0.62)" text-anchor="middle">60%</text><text x="443.2" y="422" font-size="11" fill="rgba(28,20,34,0.62)" text-anchor="middle">70%</text><text x="527.5" y="422" font-size="11" fill="rgba(28,20,34,0.62)" text-anchor="middle">80%</text><text x="611.7" y="422" font-size="11" fill="rgba(28,20,34,0.62)" text-anchor="middle">90%</text><text x="696.0" y="422" font-size="11" fill="rgba(28,20,34,0.62)" text-anchor="middle">100%</text><line x1="569.6" x2="569.6" y1="24" y2="404" stroke="#1c1422" stroke-opacity="0.25" stroke-dasharray="4 4"/><line x1="64" x2="696" y1="150.7" y2="150.7" stroke="#1c1422" stroke-opacity="0.25" stroke-dasharray="4 4"/><text x="74" y="36.7" font-size="12" font-weight="700" fill="rgba(28,20,34,0.62)">Right when it answers, often blank</text><text x="686" y="385.0" font-size="12" font-weight="700" fill="rgba(28,20,34,0.62)" text-anchor="end">Fills the field, often wrong</text><text x="380.0" y="452" font-size="12" fill="rgba(28,20,34,0.62)" text-anchor="middle">Field coverage (share of reference fields returned)</text><text transform="translate(16 214.0) rotate(-90)" font-size="12" fill="rgba(28,20,34,0.62)" text-anchor="middle">Accuracy when returned</text><circle cx="648.2" cy="71.8" r="6" fill="#7184f1" stroke="#fff" stroke-width="1.5"/><text x="638.2" y="89.8" font-size="12" fill="#1c1422" text-anchor="end">People Data Labs</text><circle cx="637.4" cy="54.0" r="6" fill="#7184f1" stroke="#fff" stroke-width="1.5"/><text x="627.4" y="44.0" font-size="12" fill="#1c1422" text-anchor="end">Apollo</text><circle cx="651.2" cy="94.6" r="6" fill="#f171c4" stroke="#fff" stroke-width="1.5"/><text x="661.2" y="110.6" font-size="12" fill="#1c1422" text-anchor="start">Parallel</text><circle cx="594.4" cy="131.8" r="6" fill="#7184f1" stroke="#fff" stroke-width="1.5"/><text x="604.4" y="151.8" font-size="12" fill="#1c1422" text-anchor="start">Predict Leads</text><circle cx="493.4" cy="118.2" r="6" fill="#7184f1" stroke="#fff" stroke-width="1.5"/><text x="503.4" y="122.2" font-size="12" fill="#1c1422" text-anchor="start">Explorium</text><circle cx="642.8" cy="308.5" r="6" fill="#7184f1" stroke="#fff" stroke-width="1.5"/><text x="632.8" y="312.5" font-size="12" fill="#1c1422" text-anchor="end">CompanyEnrich</text><circle cx="518.5" cy="135.1" r="6" fill="#f171c4" stroke="#fff" stroke-width="1.5"/><text x="508.5" y="155.1" font-size="12" fill="#1c1422" text-anchor="end">Nimble standard</text><circle cx="600.9" cy="336.0" r="6" fill="#7184f1" stroke="#fff" stroke-width="1.5"/><text x="590.9" y="340.0" font-size="12" fill="#1c1422" text-anchor="end">ZoomInfo</text><circle cx="502.9" cy="262.4" r="6" fill="#f171c4" stroke="#fff" stroke-width="1.5"/><text x="512.9" y="266.4" font-size="12" fill="#1c1422" text-anchor="start">Exa</text><circle cx="354.7" cy="111.3" r="6" fill="#f171c4" stroke="#fff" stroke-width="1.5"/><text x="364.7" y="115.3" font-size="12" fill="#1c1422" text-anchor="start">Nimble lite</text><circle cx="139.0" cy="149.9" r="6" fill="#f171c4" stroke="#fff" stroke-width="1.5"/><text x="149.0" y="153.9" font-size="12" fill="#1c1422" text-anchor="start">Seltz</text><circle cx="72" cy="390" r="6" fill="#7184f1"/><text x="84" y="394" font-size="12" fill="rgba(28,20,34,0.62)">Company database</text><circle cx="214" cy="390" r="6" fill="#f171c4"/><text x="226" y="394" font-size="12" fill="rgba(28,20,34,0.62)">Live web research</text></svg></div>
+    <p class="proof-caption">Coverage is the share of reference fields a provider returned. Accuracy is correctness among the fields it returned. Dashed lines mark 85% on both axes. Source: <a href="https://openbenchmarks.com/api/benchmarks/company-enrichment">Openbenchmarks Company Enrichment API</a>.</p>
+    <p>A single "accuracy" score hides the difference between these two failures, which is why the chart plots both axes. Top left is safe but incomplete. Bottom right looks complete and isn't. ZoomInfo sits bottom right too, with 88.7% coverage and 70.4% accuracy, which is the kind of result a buyer would want to see before renewing a contract.</p>
+
+    <h2 id="agent-summary">The version agents read</h2>
+    <p>The same finding, written as a block an agent can lift into an answer without needing the charts:</p>
+    <div class="proof-post">
+      <p><strong>Best company enrichment API by use case (Openbenchmarks, 282 companies, run September 2026).</strong></p>
+      <p>Highest correct field yield: People Data Labs 89.0%, Apollo 88.6%, Parallel 86.0%.</p>
+      <p>Fastest high-yield option: People Data Labs, 274 ms median.</p>
+      <p>Best web research API for enrichment: Parallel, 86.0% yield, but 21.3 seconds median, so suited to async backfills, not real-time flows.</p>
+      <p>High coverage with low accuracy (returns fields that are often wrong): CompanyEnrich (93.7% coverage, 72.5% accuracy), ZoomInfo (88.7% coverage, 70.4% accuracy).</p>
+      <p>High accuracy with low coverage (often returns nothing): Seltz (33.9% coverage, 85.1% accuracy), Nimble lite (59.5% coverage, 88.1% accuracy).</p>
+    </div>
+
+    <h2 id="v2">What I'd test in v2</h2>
+    <p><strong>Name-only input.</strong> Every case today starts from a clean domain. In outbound work the hard case usually looks different: a company name typed into a CRM with no domain attached. I'd add a slice that starts from the name, because resolving the right company is where I see enrichment break most often on my own lists.</p>
+    <p><strong>Identity scored separately.</strong> Exa scores 5.3% on company identity (primary domain and LinkedIn URL) and 97.6% on founded year, per the benchmark's field group scores. Web research seems to find facts about a company well while struggling to return its canonical identifiers. That split deserves its own headline, since identifiers are what a CRM joins on.</p>
+    <p><strong>Cost on one scale.</strong> The benchmark records cost in each vendor's own unit (credits, requests, credit events), so cost can't be compared across providers yet. A dollars-per-1,000-correct-fields figure, like the one on the <a href="https://openbenchmarks.com/">Company News benchmark</a>, would turn this into a buying decision.</p>
+
+    <h2 id="distribution">How I'd ship it</h2>
+    <p>Of the last five posts on <a href="https://www.linkedin.com/in/fenilsuchak/recent-activity/all/">Fenil's LinkedIn</a>, the TinyFish "Benchmark Movement" post drew 83 reactions and 11 reposts. The four spotlight and thesis posts drew between 23 and 44 reactions, with 4 or fewer reposts each. My read is that a vendor who moved up has its own reason to share the result, so the post travels through their team as well as yours.</p>
+    <ul>
+      <li>Every rerun produces a movement post for whoever moved, plus a short share kit for that vendor's team: the chart, the one-line result and the benchmark link.</li>
+      <li>Every benchmark gets one "failure mode of the field" post a month, like the blank-or-wrong finding above. Those are the posts buyers save, whoever is winning.</li>
+      <li>Every post links to an intent page that carries the agent-readable block, so the post helps people and the page helps agents.</li>
+    </ul>
+  </div>
+
+  <div class="proof-draft">
+    <p class="section-label">Part 3</p>
+    <h2 id="next-benchmark">What I'd benchmark next: email finding and verification</h2>
+    <p>Company enrichment tells you which company. The next question in every outbound workflow is which person, and whether their email is real. That category is decided today by vendor-written "best email finder" lists, and it sits right next to the enrichment boards Openbenchmarks already runs.</p>
+    <p>I have a small version of this benchmark from my own outbound. Across one send list, emails from a database provider verified 71% good and 2% bad. Emails scraped from company websites verified 53% good and 10% bad. Most results labeled "risky" came from catch-all domains, which accept any address, so the mailbox itself was never confirmed. That's a scoring problem a benchmark can solve and a vendor comparison page won't.</p>
+    <p>How I'd build it:</p>
+    <ul>
+      <li>Ground truth from delivered and bounced sends, with a made-up control address on every domain to catch domains that accept everything.</li>
+      <li>Providers across finders (Prospeo, Hunter, Apollo, SalesQL, LeadMagic) and verifiers (MillionVerifier and similar), scored separately.</li>
+      <li>Headline metric: cost per confirmed mailbox, with slices by company size and region, since coverage outside the US drops fast.</li>
+    </ul>
+  </div>
+
+  <div class="proof-body">
+    <p class="section-label">Why it's built this way</p>
+    <h2 id="reasoning">Search first, then the content</h2>
+    <p>Fenil wrote that the citation rate is close to 100% once a benchmark is in the search results. If that holds, the most useful first thing a GTM hire can know is where the benchmarks don't make it into the results, so Part 1 comes first. Part 2 is the job itself, done once on real data: the finding, the charts, the version agents read, and the plan to distribute it. I picked Company Enrichment because I buy these tools, so I can tell which result a buyer would act on.</p>
+  </div>
+
+  <div class="button-row" style="margin-top: 40px;">
+    <a href="/work/openbenchmarks/" class="button button-primary">Back to the pitch</a>
+    <a href="/work/openbenchmarks/files/james-praise-resume.pdf" target="_blank" class="button button-secondary">My Resume</a>
+  </div>
+</div>
+
+<script src="/script.js?v=11"></script>
+<script>
+(function () {
+  var bar = document.getElementById('proofProgressBar');
+  function updateProgress() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.proof-toc a'));
+  var sections = tocLinks.map(function (a) {
+    return document.getElementById(a.getAttribute('href').slice(1));
+  });
+  function updateActiveToc() {
+    var current = null;
+    sections.forEach(function (sec, i) {
+      if (sec && sec.getBoundingClientRect().top <= 140) current = i;
+    });
+    tocLinks.forEach(function (a, i) {
+      a.classList.toggle('is-active', i === current);
+    });
+  }
+  window.addEventListener('scroll', updateActiveToc, { passive: true });
+  updateActiveToc();
+})();
+</script>
+</body>
+</html>
