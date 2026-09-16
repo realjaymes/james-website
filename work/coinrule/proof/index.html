@@ -41,6 +41,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .proof-quote { border-left: 3px solid var(--color-purple); padding: 4px 0 4px 22px; margin: 24px 0; font-size: 18px; font-weight: 600; line-height: 1.5; color: var(--text-primary); }
   .proof-progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(28,20,34,0.08); z-index: 200; }
   .proof-progress-bar { height: 100%; width: 0%; background: var(--color-purple); transition: width 0.1s linear; }
+  .proof-toc { position: fixed; top: 140px; right: 32px; width: 200px; font-size: 13px; }
+  .proof-toc-group { margin-bottom: 20px; }
+  .proof-toc-label { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-toc a { display: block; padding: 5px 0 5px 12px; border-left: 2px solid rgba(28,20,34,0.1); color: var(--text-muted); text-decoration: none; line-height: 1.4; }
+  .proof-toc a:hover { color: var(--color-purple); border-left-color: var(--color-purple); }
+  .proof-toc a.is-active { color: var(--color-purple); border-left-color: var(--color-purple); font-weight: 700; }
+  @media (max-width: 1400px) { .proof-toc { display: none; } }
 </style>
 </head>
 <body>
@@ -55,6 +62,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
 </a>
 
+<nav class="proof-toc" aria-label="Section navigation">
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The brief</p>
+    <a href="#whats-already-working">What's already working</a>
+    <a href="#whats-actually-missing">What's actually missing</a>
+    <a href="#what-id-build">What I'd build</a>
+  </div>
+</nav>
+
 <div class="container proof-wrap">
   <a class="proof-back" href="/work/coinrule/">&larr; Back to the Coinrule pitch</a>
 
@@ -66,29 +82,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span><strong>James Praise</strong> &middot; Marketing and GTM Operator</span>
   </div>
 
-  <p class="proof-note">Live browser research on coinrule.com, September 2026.</p>
+  <p class="proof-note">Live browser research on <a href="https://coinrule.com" target="_blank" rel="noopener">coinrule.com</a>, September 2026.</p>
 
   <div class="proof-draft">
-    <h2>What's already working</h2>
-    <p>Coinrule's affiliate program runs at real scale.</p>
+    <h2 id="whats-already-working">What's already working</h2>
+    <p>Coinrule's <a href="https://coinrule.com/affiliate" target="_blank" rel="noopener">affiliate program</a> runs at real scale.</p>
 
     <div class="proof-stats">
-      <div class="proof-stat"><strong>7,952</strong><span>total affiliates, last 5 years</span></div>
-      <div class="proof-stat"><strong>$327,212</strong><span>paid out since launch</span></div>
+      <div class="proof-stat"><strong>7,952</strong><span>affiliate rewards, last 5 years</span></div>
+      <div class="proof-stat"><strong>$327,212</strong><span>in rewards since launch</span></div>
       <div class="proof-stat"><strong>30%</strong><span>commission, up to</span></div>
     </div>
 
-    <img class="proof-img" src="/assets/images/case-studies/coinrule/affiliate-program.jpg" alt="Coinrule's live affiliate program page: 7,952 total affiliates, $327,212 paid out, named affiliates with named earnings" />
+    <img class="proof-img" src="/assets/images/case-studies/coinrule/affiliate-program.jpg" alt="Coinrule's live affiliate program page: 7,952 rewards in five years, $327,212 since launch, named affiliates with named earnings" />
 
     <p>Named affiliates with named numbers: one this year at $18,287, another having signed up 2,851 users. That's the hard part of a referral engine, already built and running.</p>
 
-    <h2>What's actually missing</h2>
-    <p>The blog is active, a post as recent as July 2026, but every single post is written by one person: the CEO, Gabriele Musella. One person can only write so many posts a month, whatever the strategy calls for.</p>
+    <h2 id="whats-actually-missing">What's actually missing</h2>
+    <p>The <a href="https://coinrule.com/blog" target="_blank" rel="noopener">blog</a> is active, with a post as recent as July 2026. Of the 40 most recent posts, 32 carry a generic "admin" byline and seven are signed by the CEO, Gabriele Musella. One more comes from a second named author. The CEO is effectively the blog's only named voice, and one person can only write so many posts a month, whatever the strategy calls for.</p>
 
-    <p class="proof-quote">A company with thousands of affiliates producing actual trading results has nobody turning those results into content.</p>
+    <p class="proof-quote">An affiliate program with thousands of rewards paid out and named results has nobody turning those results into content.</p>
 
-    <h2>What I'd build</h2>
-    <p>Feed the blog from the affiliate program instead of running the two as separate systems. Coinrule already has named affiliates with named numbers, genuine raw material for content. A monthly piece built around one affiliate's actual results takes the CEO off the hook for every post. It also gives an affiliate a reason to promote Coinrule beyond the commission: their own results, written up and shared.</p>
+    <h2 id="what-id-build">What I'd build</h2>
+    <p>Feed the blog from the affiliate program instead of running the two as separate systems. Coinrule already has named affiliates with named numbers, genuine raw material for content. A monthly piece built around one affiliate's actual results gives the blog a named voice other than the CEO's. It also gives an affiliate a reason to promote Coinrule beyond the commission: their own results, written up and shared.</p>
   </div>
 
   <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 32px;">I checked the site directly instead of assuming what a crypto trading platform's growth gaps usually look like. The affiliate program turned out to be the strong part, already proving itself at scale. The actual bottleneck sits one layer over, in who has time to write about it.</p>
@@ -112,6 +128,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   window.addEventListener('scroll', updateProgress, { passive: true });
   window.addEventListener('resize', updateProgress);
   updateProgress();
+
+  var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.proof-toc a'));
+  var sections = tocLinks.map(function (a) {
+    return document.getElementById(a.getAttribute('href').slice(1));
+  });
+  function updateActiveToc() {
+    var current = null;
+    sections.forEach(function (sec, i) {
+      if (sec && sec.getBoundingClientRect().top <= 140) current = i;
+    });
+    tocLinks.forEach(function (a, i) {
+      a.classList.toggle('is-active', i === current);
+    });
+  }
+  window.addEventListener('scroll', updateActiveToc, { passive: true });
+  updateActiveToc();
 })();
 </script>
 </body>

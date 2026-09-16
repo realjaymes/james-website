@@ -11,7 +11,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>A Trust-Surface Teardown for Trust Wallet — James Praise</title>
-<meta name="description" content="A drafted teardown showing where Trust Wallet's SAFU reimbursement track record belongs across its security and extension surfaces. By James Praise." />
+<meta name="description" content="A drafted teardown showing where Trust Wallet's reimbursement track record belongs across its security and extension surfaces. By James Praise." />
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
@@ -85,31 +85,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a class="proof-back" href="/work/trust-wallet/">&larr; Back to the Trust Wallet pitch</a>
 
   <p class="proof-eyebrow">A teardown for Trust Wallet</p>
-  <h1>Trust-Surface Teardown: The SAFU Story Belongs on /security</h1>
+  <h1>Trust-Surface Teardown: The Reimbursement Story Belongs on /security</h1>
 
   <div class="proof-credit">
     <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
     <span><strong>James Praise</strong> &middot; Product Marketing Operator</span>
   </div>
 
-  <p class="proof-note">Built entirely from Trust Wallet's own public surfaces (trustwallet.com/security, fetched twice) and widely-reported news coverage of the December 2025 extension incident (TheHackerNews, CoinDesk, Forbes, CryptoSlate).</p>
+  <p class="proof-note">Built entirely from Trust Wallet's own public surfaces (<a href="https://trustwallet.com/security" target="_blank" rel="noopener">trustwallet.com/security</a>, fetched twice), <a href="https://trustwallet.com/blog/announcements/trust-wallet-browser-extension-v268-incident-community-update" target="_blank" rel="noopener">Trust Wallet’s own incident update</a>, and widely-reported news coverage of the December 2025 extension incident (<a href="https://thehackernews.com/2025/12/trust-wallet-chrome-extension-bug.html" target="_blank" rel="noopener">The Hacker News</a>, <a href="https://www.coindesk.com/business/2025/12/26/trust-wallet-users-lose-more-than-usd7-million-to-hacked-chrome-extension" target="_blank" rel="noopener">CoinDesk</a>, <a href="https://cryptoslate.com/crypto-wallets/trust-wallet-review/" target="_blank" rel="noopener">CryptoSlate</a>).</p>
 
   <div class="proof-draft">
     <p class="section-label">The teardown</p>
 
     <h2 id="current">What the security page leads with</h2>
-    <p>Checked twice, consistent both times. `/security` leads with five named audit firms (Certik, Cure53, Halborn, Kudelsky Security, Quantstamp), ISO 27701 and 27001 certifications, a Bugcrowd bug bounty program, and "battle-tested since 2017." A genuinely strong, specific credential stack. Confirmed absent on both fetches: any mention of insurance, the SAFU fund, past incidents, or a reimbursement program.</p>
+    <p>Checked twice, consistent both times. <a href="https://trustwallet.com/security" target="_blank" rel="noopener"><code>/security</code></a> leads with five named audit firms (Certik, Cure53, Halborn, Kudelsky Security, Quantstamp), ISO 27701 and 27001 certifications, a Bugcrowd bug bounty program, and "battle-tested since 2017." A genuinely strong, specific credential stack. Confirmed absent on both fetches: any mention of insurance, SAFU, past incidents, or a reimbursement program.</p>
     <div class="proof-stats">
       <div class="proof-stat"><strong>5</strong><span>named audit firms on the security page</span></div>
-      <div class="proof-stat"><strong>$7-8.5M</strong><span>stolen in the Dec 2025 extension breach, per CoinDesk/Forbes/CryptoSlate</span></div>
+      <div class="proof-stat"><strong>$7-8.5M</strong><span>stolen in the Dec 2025 extension breach, per Trust Wallet and CoinDesk</span></div>
       <div class="proof-stat"><strong>0</strong><span>mentions of SAFU, incidents, or reimbursement on /security</span></div>
     </div>
     <p>That credential stack answers "who audited your code." It doesn't answer the question a visitor has after a well-covered breach: what happens to my money if something goes wrong, and has it gone wrong before, and did you pay people back.</p>
 
     <h2 id="missing">The missing evergreen asset</h2>
-    <p>On December 24, 2025, Trust Wallet's Chrome extension (v2.68) was compromised via a leaked Chrome Web Store API key. 2,520 wallet addresses were drained, roughly $7-8.5M stolen. Binance publicly committed to full reimbursement via its SAFU (Secure Asset Fund for Users) fund, a real, established fund created in 2018 with a track record backstopping prior incidents. Binance founder CZ personally confirmed it on X: <em>"TrustWallet will cover" the losses, "user funds are SAFU."</em></p>
-    <p class="proof-quote">A fintech makes "FDIC insured up to $250,000" permanent homepage furniture. Trust Wallet has the crypto equivalent of that proof and isn't using it as standing trust infrastructure.</p>
-    <p>Right now that story lives only in reactive incident-response content, filed as crisis communication. Independent reviewers are already doing Trust Wallet's positioning work for it: CryptoSlate frames the product as "The Multichain Mobile Default With a Spotty Extension Record," meaning the market is forming this view whether or not Trust Wallet participates in shaping it.</p>
+    <p>On December 24, 2025, Trust Wallet's Chrome extension (v2.68) was <a href="https://thehackernews.com/2025/12/trust-wallet-chrome-extension-bug.html" target="_blank" rel="noopener">compromised via a leaked Chrome Web Store API key</a>. <a href="https://trustwallet.com/blog/announcements/trust-wallet-browser-extension-v268-incident-community-update" target="_blank" rel="noopener">2,520 wallet addresses were drained</a>, with <a href="https://www.coindesk.com/business/2025/12/26/trust-wallet-users-lose-more-than-usd7-million-to-hacked-chrome-extension" target="_blank" rel="noopener">roughly $7-8.5M</a> stolen. Trust Wallet <a href="https://trustwallet.com/blog/announcements/trust-wallet-browser-extension-v268-incident-community-update" target="_blank" rel="noopener">committed to voluntarily reimbursing</a> every affected user, and Binance founder CZ confirmed it publicly <a href="https://x.com/cz_binance/status/2004397190819783013" target="_blank" rel="noopener">on X</a>: <em>"@TrustWallet will cover. User funds are SAFU."</em></p>
+    <p class="proof-quote">A fintech makes "FDIC insured up to $250,000" permanent homepage furniture. Trust Wallet has a paid-in-full reimbursement record, the crypto equivalent of that proof, and isn't using it as standing trust infrastructure.</p>
+    <p>Right now that story lives only in reactive incident-response content, filed as crisis communication. Independent reviewers are already doing Trust Wallet's positioning work for it: CryptoSlate <a href="https://cryptoslate.com/crypto-wallets/trust-wallet-review/" target="_blank" rel="noopener">frames the product</a> as "The Multichain Mobile Default With a Spotty Extension Record," meaning the market is forming this view whether or not Trust Wallet participates in shaping it.</p>
 
     <h2 id="placement">Where it belongs</h2>
     <table class="proof-table">

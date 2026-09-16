@@ -38,6 +38,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .proof-quote { border-left: 3px solid var(--color-purple); padding: 4px 0 4px 22px; margin: 24px 0; font-size: 18px; font-weight: 600; line-height: 1.5; color: var(--text-primary); }
   .proof-progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(28,20,34,0.08); z-index: 200; }
   .proof-progress-bar { height: 100%; width: 0%; background: var(--color-purple); transition: width 0.1s linear; }
+  .proof-toc { position: fixed; top: 140px; right: 32px; width: 200px; font-size: 13px; }
+  .proof-toc-group { margin-bottom: 20px; }
+  .proof-toc-label { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-toc a { display: block; padding: 5px 0 5px 12px; border-left: 2px solid rgba(28,20,34,0.1); color: var(--text-muted); text-decoration: none; line-height: 1.4; }
+  .proof-toc a:hover { color: var(--color-purple); border-left-color: var(--color-purple); }
+  .proof-toc a.is-active { color: var(--color-purple); border-left-color: var(--color-purple); font-weight: 700; }
+  @media (max-width: 1400px) { .proof-toc { display: none; } }
 </style>
 </head>
 <body>
@@ -52,6 +59,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
 </a>
 
+<nav class="proof-toc" aria-label="Section navigation">
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The brief</p>
+    <a href="#whats-running">What's running</a>
+    <a href="#the-observation">The observation</a>
+    <a href="#what-id-test">What I'd test</a>
+  </div>
+</nav>
+
 <div class="container proof-wrap">
   <a class="proof-back" href="/work/aivideo-com/">&larr; Back to the AIVideo.com pitch</a>
 
@@ -63,18 +79,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span><strong>James Praise</strong> &middot; Marketing and GTM Operator</span>
   </div>
 
-  <p class="proof-note">Live browser research via Meta Ad Library, exact-phrase "AIVideo.com" advertiser search, confirmed by the consistent logo and destination link across every result (a broad keyword search returned ~43,000 unrelated ads before narrowing).</p>
+  <p class="proof-note">Live browser research via <a href="https://www.facebook.com/ads/library/?active_status=active&amp;ad_type=all&amp;country=ALL&amp;q=%22AIVideo.com%22&amp;search_type=keyword_exact_phrase" target="_blank" rel="noopener">Meta Ad Library</a>, exact-phrase "AIVideo.com" advertiser search, confirmed by the consistent logo and destination link across every result (a broad keyword search returned ~43,000 unrelated ads before narrowing).</p>
 
   <div class="proof-draft">
-    <h2>What's running</h2>
+    <h2 id="whats-running">What's running</h2>
     <p>14 active ads, all funneling to a "Book a call" link. The video treatments actually vary, a talking-head testimonial, a text-callout style ("JAKE! You still haven't paid us."), a product-demo cut ("First, we made winning animated ads"). But almost every one opens on one of two headlines: "I spent $800k on AI ads !!" or "higher quality AI ads?"</p>
 
     <img class="proof-img" src="/assets/images/case-studies/aivideo-com/meta-ad-library-results.jpg" alt="AIVideo.com's live Meta ads: varied video treatments, all opening on one of two repeated headlines" />
 
-    <h2>The observation</h2>
+    <h2 id="the-observation">The observation</h2>
     <p class="proof-quote">A company that sells AI-made video ads to other businesses is testing video treatments on its own account but not testing the hook that has to earn the click before any of that video plays.</p>
 
-    <h2>What I'd test</h2>
+    <h2 id="what-id-test">What I'd test</h2>
     <p>Pair each existing video treatment against 2-3 new opening lines instead of running all of them under the same one or two hooks. Cheap to set up, since the video assets already exist, and it directly answers the question a prospective client would ask a video-ad company handling their account: do you test your own hooks as hard as you test your visuals.</p>
   </div>
 
@@ -97,6 +113,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   window.addEventListener('scroll', updateProgress, { passive: true });
   window.addEventListener('resize', updateProgress);
   updateProgress();
+
+  var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.proof-toc a'));
+  var sections = tocLinks.map(function (a) {
+    return document.getElementById(a.getAttribute('href').slice(1));
+  });
+  function updateActiveToc() {
+    var current = null;
+    sections.forEach(function (sec, i) {
+      if (sec && sec.getBoundingClientRect().top <= 140) current = i;
+    });
+    tocLinks.forEach(function (a, i) {
+      a.classList.toggle('is-active', i === current);
+    });
+  }
+  window.addEventListener('scroll', updateActiveToc, { passive: true });
+  updateActiveToc();
 })();
 </script>
 </body>

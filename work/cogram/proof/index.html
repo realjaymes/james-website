@@ -44,6 +44,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .proof-progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(28,20,34,0.08); z-index: 200; }
   .proof-progress-bar { height: 100%; width: 0%; background: var(--color-purple); transition: width 0.1s linear; }
   @media (max-width: 640px) { .proof-ba { grid-template-columns: 1fr; } }
+  .proof-toc { position: fixed; top: 140px; right: 32px; width: 200px; font-size: 13px; }
+  .proof-toc-group { margin-bottom: 20px; }
+  .proof-toc-label { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-toc a { display: block; padding: 5px 0 5px 12px; border-left: 2px solid rgba(28,20,34,0.1); color: var(--text-muted); text-decoration: none; line-height: 1.4; }
+  .proof-toc a:hover { color: var(--color-purple); border-left-color: var(--color-purple); }
+  .proof-toc a.is-active { color: var(--color-purple); border-left-color: var(--color-purple); font-weight: 700; }
+  @media (max-width: 1400px) { .proof-toc { display: none; } }
 </style>
 </head>
 <body>
@@ -58,6 +65,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
 </a>
 
+<nav class="proof-toc" aria-label="Section navigation">
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The brief</p>
+    <a href="#whats-already-working">What's already working</a>
+    <a href="#whats-stalled">What's stalled</a>
+    <a href="#where-id-point-the-first-60-days">Where I'd point the first 60 days</a>
+  </div>
+</nav>
+
 <div class="container proof-wrap">
   <a class="proof-back" href="/work/cogram/">&larr; Back to the Cogram pitch</a>
 
@@ -69,15 +85,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span><strong>James Praise</strong> &middot; Marketing and GTM Operator</span>
   </div>
 
-  <p class="proof-note">Live browser research on cogram.com, September 2026, cross-checked against the company's known integrations (Procore, Deltek, Autodesk) and named customers.</p>
+  <p class="proof-note">Live browser research on <a href="https://www.cogram.com" target="_blank" rel="noopener">cogram.com</a>, September 2026, cross-checked against the company's known integrations (Procore, Deltek, Autodesk) and named customers.</p>
 
   <div class="proof-draft">
-    <h2>What's already working</h2>
-    <p>Cogram's case-studies page has four named, quoted customers: CDH Partners, JacobsWyper Architects, Energyficient Systems, KIRKOR Architects and Planners. Named people, direct quotes about accuracy and repeatability. That's the hard part of B2B proof, already done.</p>
+    <h2 id="whats-already-working">What's already working</h2>
+    <p>Cogram's <a href="https://www.cogram.com/case-studies" target="_blank" rel="noopener">case-studies page</a> has four named, quoted customers: CDH Partners, JacobsWyper Architects, Energyficient Systems, KIRKOR Architects and Planners. Named people, direct quotes about accuracy and repeatability. That's the hard part of B2B proof, already done.</p>
 
     <img class="proof-img" src="/assets/images/case-studies/cogram/homepage-hero.jpg" alt="Cogram's homepage: AI-native tools for architects and engineers" />
 
-    <h2>What's stalled</h2>
+    <h2 id="whats-stalled">What's stalled</h2>
     <div class="proof-ba">
       <div class="proof-ba-col is-before">
         <p class="proof-ba-label">Case studies</p>
@@ -85,17 +101,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="proof-ba-col is-after">
         <p class="proof-ba-label">Blog</p>
-        <p>1 post, dated June 2025, over a year stale</p>
+        <p>One post in the eleven months since October 2025, and most earlier posts are <a href="https://cogram.com/blog" target="_blank" rel="noopener">release notes</a></p>
       </div>
     </div>
 
-    <p class="proof-quote">A customer-proof engine is running. The content engine that was supposed to carry it further stopped a year ago.</p>
+    <p class="proof-quote">A customer-proof engine is running. The content engine that was supposed to carry it further has nearly stopped.</p>
 
-    <h2>Where I'd point the first 60 days</h2>
-    <p>The case studies already answer the question a content strategy usually has to invent from nothing: which firms trust Cogram, and why, in their own words. I'd turn each existing case study into two or three smaller pieces before touching a new content calendar. A newsletter issue built around one firm's actual workflow. A short piece on the specific administrative task that case study solved. The raw material already exists, sitting in four case studies and one dormant blog.</p>
+    <h2 id="where-id-point-the-first-60-days">Where I'd point the first 60 days</h2>
+    <p>The case studies already answer the question a content strategy usually has to invent from nothing: which firms trust Cogram, and why, in their own words. I'd turn each existing case study into two or three smaller pieces before touching a new content calendar. A newsletter issue built around one firm's actual workflow. A short piece on the specific administrative task that case study solved. The raw material already exists, sitting in four case studies and a blog that has published once since October 2025.</p>
   </div>
 
-  <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 32px;">I checked the blog and the case-studies page separately instead of assuming one dormant page meant the whole content motion was empty. The customer-proof side is current and well-populated. The narrower finding, that proof exists but publishing stopped, points directly at what the first 60 days should be: get the existing pipeline moving again before spending time building a second one.</p>
+  <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 32px;">I checked the blog and the case-studies page separately instead of assuming one dormant page meant the whole content motion was empty. The customer-proof side is current and well-populated. The narrower finding, that proof exists but publishing has slowed to a trickle, points directly at what the first 60 days should be: get the existing pipeline moving again before spending time building a second one.</p>
 
   <div class="button-row" style="margin-top: 40px;">
     <a href="/work/cogram/" class="button button-primary">Back to the pitch</a>
@@ -116,6 +132,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   window.addEventListener('scroll', updateProgress, { passive: true });
   window.addEventListener('resize', updateProgress);
   updateProgress();
+
+  var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.proof-toc a'));
+  var sections = tocLinks.map(function (a) {
+    return document.getElementById(a.getAttribute('href').slice(1));
+  });
+  function updateActiveToc() {
+    var current = null;
+    sections.forEach(function (sec, i) {
+      if (sec && sec.getBoundingClientRect().top <= 140) current = i;
+    });
+    tocLinks.forEach(function (a, i) {
+      a.classList.toggle('is-active', i === current);
+    });
+  }
+  window.addEventListener('scroll', updateActiveToc, { passive: true });
+  updateActiveToc();
 })();
 </script>
 </body>

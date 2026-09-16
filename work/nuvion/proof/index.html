@@ -46,6 +46,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .proof-table th { font-size: 12px; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-muted); }
   .proof-progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(28,20,34,0.08); z-index: 200; }
   .proof-progress-bar { height: 100%; width: 0%; background: var(--color-purple); transition: width 0.1s linear; }
+  .proof-toc { position: fixed; top: 140px; right: 32px; width: 200px; font-size: 13px; }
+  .proof-toc-group { margin-bottom: 20px; }
+  .proof-toc-label { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-toc a { display: block; padding: 5px 0 5px 12px; border-left: 2px solid rgba(28,20,34,0.1); color: var(--text-muted); text-decoration: none; line-height: 1.4; }
+  .proof-toc a:hover { color: var(--color-purple); border-left-color: var(--color-purple); }
+  .proof-toc a.is-active { color: var(--color-purple); border-left-color: var(--color-purple); font-weight: 700; }
+  @media (max-width: 1400px) { .proof-toc { display: none; } }
 </style>
 </head>
 <body>
@@ -60,6 +67,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
 </a>
 
+<nav class="proof-toc" aria-label="Section navigation">
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The brief</p>
+    <a href="#what-i-found">What I found</a>
+    <a href="#the-architecture-id-propose">The architecture I'd propose</a>
+    <a href="#whats-already-true-that-most-of-your-pub">What's already true that most of your public pages don't say</a>
+  </div>
+</nav>
+
 <div class="container proof-wrap">
   <a class="proof-back" href="/work/nuvion/">&larr; Back to the Nuvion pitch</a>
 
@@ -71,11 +87,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span><strong>James Praise</strong> &middot; Marketing and GTM Operator</span>
   </div>
 
-  <p class="proof-note">Live research on nuvion.co, September 2026: all six Solutions pages, the Products page, and Nuvion's public partnership announcements.</p>
+  <p class="proof-note">Live research on <a href="https://nuvion.co/" target="_blank" rel="noopener">nuvion.co</a>, September 2026: all six Solutions pages, the <a href="https://nuvion.co/products" target="_blank" rel="noopener">Products page</a>, and Nuvion's public partnership announcements.</p>
 
   <div class="proof-draft">
-    <h2>What I found</h2>
-    <p>Nuvion's own Solutions menu names six customer segments, not the three on the homepage tagline: Creators &amp; Freelancers, Businesses, Marketplaces &amp; Platforms, E-commerce, Logistics &amp; Supply Chain, and Travel &amp; Hospitality.</p>
+    <h2 id="what-i-found">What I found</h2>
+    <p>Nuvion's own Solutions menu names six customer segments, not the three on the homepage tagline: <a href="https://nuvion.co/solutions/creators-and-freelancers" target="_blank" rel="noopener">Creators &amp; Freelancers</a>, <a href="https://nuvion.co/solutions/businesses" target="_blank" rel="noopener">Businesses</a>, <a href="https://nuvion.co/solutions/marketplaces-and-platforms" target="_blank" rel="noopener">Marketplaces &amp; Platforms</a>, <a href="https://nuvion.co/solutions/e-commerce" target="_blank" rel="noopener">E-commerce</a>, <a href="https://nuvion.co/solutions/logistics-and-supply-chain" target="_blank" rel="noopener">Logistics &amp; Supply Chain</a>, and <a href="https://nuvion.co/solutions/travel-and-hospitality" target="_blank" rel="noopener">Travel &amp; Hospitality</a>.</p>
 
     <img class="proof-img" src="/assets/images/case-studies/nuvion/solutions-six-segments.jpg" alt="Nuvion's live Solutions navigation showing six segments: Creators & Freelancers, Businesses, Marketplaces & platforms, E-commerce, Logistics & Supply Chain, and Travel & Hospitality" />
 
@@ -92,7 +108,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <p class="proof-quote">A single "activation" definition across all six segments undercounts most of them.</p>
 
-    <h2>The architecture I'd propose</h2>
+    <h2 id="the-architecture-id-propose">The architecture I'd propose</h2>
     <p>Before picking a CDP or ESP, I'd map the real events Nuvion's own product stack throws off, and get them resolved to one identity across web, app, the card processor, and the stablecoin rails. That identity layer is usually the actual bottleneck at this stage.</p>
 
     <h3>Event sources</h3>
@@ -112,10 +128,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </table>
     </div>
 
-    <p>The same event layer should feed attribution and retargeting: crediting the channel that drove a funded account, not just a signup, and building a retargeting audience specifically from "KYC approved, never funded." Across 10+ regulated markets, that also means attribution has to tolerate different compliance timelines per market from day one. A campaign converting in three days in one market and three weeks in another is often just showing how long KYC takes in each place.</p>
+    <p>The same event layer should feed attribution and retargeting: crediting the channel that drove a funded account, not just a signup, and building a retargeting audience specifically from "KYC approved, never funded." Across multiple regulated markets, that also means attribution has to tolerate different compliance timelines per market from day one. A campaign converting in three days in one market and three weeks in another is often just showing how long KYC takes in each place.</p>
 
-    <h2>What's already true that most of your public pages don't say</h2>
-    <p>Nuvion has landed three real infrastructure partnerships this year, Circle Payments Network, Visa Direct, and Ripple USD, none of which appear on the Products page or any Solutions page. That's real, earned proof sitting unused on the pages that actually convert waitlist signups.</p>
+    <h2 id="whats-already-true-that-most-of-your-pub">What's already true that most of your public pages don't say</h2>
+    <p>Nuvion has landed three real infrastructure partnerships this year, <a href="https://www.prnewswire.com/news-releases/nuvion-joins-circle-payments-network-to-bring-global-near-instant-payments-to-global-businesses-302793115.html" target="_blank" rel="noopener">Circle Payments Network</a>, <a href="https://www.prnewswire.com/news-releases/nuvion-O-visa-direct-expanding-real-time-money-movement-for-businesses-globally-302804289.html" target="_blank" rel="noopener">Visa Direct</a>, and <a href="https://www.prnewswire.com/news-releases/nuvion-integrates-ripple-usd-rlusd-to-expand-global-stablecoin-payments-and-blockchain-infrastructure-302817752.html" target="_blank" rel="noopener">Ripple USD</a>, none of which appear on the <a href="https://nuvion.co/products" target="_blank" rel="noopener">Products page</a> or any Solutions page. That's real, earned proof sitting unused on the pages that actually convert waitlist signups.</p>
 
     <p>I'd want to confirm three things in week one: whether a CDP or ESP is already chosen, the actual mobile-app-versus-dashboard split, and whether KYC runs in-house or through a vendor, since that changes how fast the "approved" event can actually fire.</p>
   </div>
@@ -141,6 +157,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   window.addEventListener('scroll', updateProgress, { passive: true });
   window.addEventListener('resize', updateProgress);
   updateProgress();
+
+  var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.proof-toc a'));
+  var sections = tocLinks.map(function (a) {
+    return document.getElementById(a.getAttribute('href').slice(1));
+  });
+  function updateActiveToc() {
+    var current = null;
+    sections.forEach(function (sec, i) {
+      if (sec && sec.getBoundingClientRect().top <= 140) current = i;
+    });
+    tocLinks.forEach(function (a, i) {
+      a.classList.toggle('is-active', i === current);
+    });
+  }
+  window.addEventListener('scroll', updateActiveToc, { passive: true });
+  updateActiveToc();
 })();
 </script>
 </body>
