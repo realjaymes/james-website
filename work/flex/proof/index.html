@@ -54,6 +54,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .proof-body { font-size: 16px; }
     .card { padding: 20px 18px; }
   }
+  .proof-progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(28,20,34,0.08); z-index: 200; }
+  .proof-progress-bar { height: 100%; width: 0%; background: var(--color-purple); transition: width 0.1s linear; }
+  .proof-toc { position: fixed; top: 140px; right: 32px; width: 200px; font-size: 13px; }
+  .proof-toc-group { margin-bottom: 20px; }
+  .proof-toc-label { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-toc a { display: block; padding: 5px 0 5px 12px; border-left: 2px solid rgba(28,20,34,0.1); color: var(--text-muted); text-decoration: none; line-height: 1.4; }
+  .proof-toc a:hover { color: var(--color-purple); border-left-color: var(--color-purple); }
+  .proof-toc a.is-active { color: var(--color-purple); border-left-color: var(--color-purple); font-weight: 700; }
+  h2[id], h3[id] { scroll-margin-top: 100px; }
+  @media (max-width: 1400px) { .proof-toc { display: none; } }
 </style>
 </head>
 <body>
@@ -66,6 +76,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
 </a>
 
+<div class="proof-progress-track"><div class="proof-progress-bar" id="proofProgressBar"></div></div>
+
+<nav class="proof-toc" aria-label="Section navigation">
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The brief</p>
+    <a href="#why">Why this document exists</a>
+    <a href="#competitive-set">The competitive set changed</a>
+    <a href="#category-claim">Where the category claim holds</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">Battlecards</p>
+    <a href="#ramp">Ramp</a>
+    <a href="#brex">Brex (Capital One)</a>
+    <a href="#bill">Bill.com</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">What comes next</p>
+    <a href="#first-30-days">The first 30 days</a>
+    <a href="#method">How this was put together</a>
+  </div>
+</nav>
+
 <main class="container proof-wrap">
   <a href="/work/flex/" class="proof-back">&larr; Back to the pitch</a>
   <p class="proof-eyebrow">Built for Flex</p>
@@ -76,13 +108,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <p class="proof-note">Written from outside Flex, using only public sources. Every claim that needs Flex's internal data to stand up is marked <span class="needs">proof needed</span> rather than guessed.</p>
 
-    <h2>Why this document exists</h2>
+    <h2 id="why">Why this document exists</h2>
 
     <p>Flex holds two official positions on its own competitive set, and they point in opposite directions.</p>
 
     <p>In March 2026, Head of Product Jared Thomas published <a href="https://www.flex.one/resource-hub/we-dont-sell-credit-here" target="_blank" rel="noopener">We Don't Sell Credit Here</a> on Flex's own resource hub. Its position is unambiguous: "We are not up against Brex or Ramp or Mercury or Bill.com." The argument is that Flex is creating a category, owner finance, and sells behavioral change rather than products.</p>
 
-    <p>In August 2026, the job description for Flex's first product marketer asked that person to own competitive positioning "in a market where Ramp, Brex, and Bill.com are all fighting for the same mental real estate."</p>
+    <p>In August 2026, the <a href="https://jobs.lever.co/Flex/39a67a76-74dc-494f-9890-bedf83788a01" target="_blank" rel="noopener">job description for Flex’s first product marketer</a> asked that person to own competitive positioning "in a market where Ramp, Brex, and Bill.com are all fighting for the same mental real estate."</p>
 
     <p>Both are correct. They operate at different altitudes, and nobody has written down which one applies where.</p>
 
@@ -90,17 +122,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <p>A company that only has the first sends reps into deals unarmed. A company that only has the second concedes the category it is trying to build. So this brief does both: it keeps the category claim intact and gives revenue teams something to say when a prospect names a competitor.</p>
 
-    <h2>Part 1 — The competitive set changed and the messaging has not caught up</h2>
+    <h2 id="competitive-set">Part 1 — The competitive set changed and the messaging has not caught up</h2>
 
-    <p><strong>Brex is no longer an independent company.</strong> Capital One announced its acquisition on 22 January 2026 and <a href="https://www.capitalone.com/about/newsroom/capital-one-completes-acquisition-of-brex/" target="_blank" rel="noopener">closed it on 7 April 2026</a> at $5.15 billion, roughly 60% below Brex's $12.3 billion valuation in 2021. Pedro Franceschi continues to lead Brex inside Capital One.</p>
+    <p><strong>Brex is no longer an independent company.</strong> Capital One <a href="https://investor.capitalone.com/news-releases/news-release-details/capital-one-acquire-brex" target="_blank" rel="noopener">announced its acquisition</a> on 22 January 2026 and <a href="https://www.capitalone.com/about/newsroom/capital-one-completes-acquisition-of-brex/" target="_blank" rel="noopener">closed it on 7 April 2026</a> at $5.15 billion, <a href="https://www.cnbc.com/2026/01/22/capital-one-is-buying-startup-brex-for-5point15-billion-in-credit-card-firms-latest-deal.html" target="_blank" rel="noopener">roughly 60% below</a> Brex's $12.3 billion valuation in 2021. Pedro Franceschi continues to lead Brex inside Capital One.</p>
 
-    <p>This matters more to Flex than to anyone else in the category, because Flex's entire premise is that owners are "stuck with outdated banks and fragmented tools." One of the three competitors named in Flex's own job description is now part of a large bank. That is not a talking point Flex has to manufacture. It happened.</p>
+    <p>This matters more to Flex than to anyone else in the category, because Flex's entire premise, as its <a href="https://jobs.lever.co/Flex/39a67a76-74dc-494f-9890-bedf83788a01" target="_blank" rel="noopener">own job description</a> puts it, is that owners are "stuck with outdated banks and fragmented tools." One of the three competitors named in Flex's own job description is now part of a large bank. That is not a talking point Flex has to manufacture. It happened.</p>
 
     <p>It also cuts the other way, and the brief should say so. Capital One brings Brex a balance sheet, a banking charter, and a consumer brand owners already recognize. In eighteen months, "Brex, backed by Capital One" may be a stronger competitor than Brex was alone. The window where the acquisition reads as a retreat is open now and will not stay open.</p>
 
-    <p><strong>Ramp is the real competitor.</strong> Series F at a $44 billion valuation in 2026, revenue reportedly doubling toward $1 billion, widely expected to go public. After the Brex sale, Ramp is effectively the one independent player at scale, and competitive investment should be weighted heavily toward it.</p>
+    <p><strong>Ramp is the real competitor.</strong> It <a href="https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html" target="_blank" rel="noopener">raised its Series F at a $44 billion valuation</a> in June 2026 and reports more than $1 billion in annualized revenue. After the Brex sale, Ramp is effectively the one independent player at scale, and competitive investment should be weighted heavily toward it.</p>
 
-    <h2>Part 2 — Where the category claim is actually true</h2>
+    <h2 id="category-claim">Part 2 — Where the category claim is actually true</h2>
 
     <p>The claim to defend is not "we have more products." It is that <strong>Ramp, Brex and Bill.com all stop at the company boundary, and the owner does not.</strong></p>
 
@@ -110,7 +142,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <tr><td>Primary buyer</td><td>Finance team at a US SMB</td><td>Finance team at a funded or mid-market company</td><td>Accountant or bookkeeper</td><td>The business owner</td></tr>
       <tr><td>Personal financial life</td><td>Not served</td><td>Not served</td><td>Not served</td><td>Core to the product</td></tr>
       <tr><td>Credit underwritten against</td><td>Connected business bank balances</td><td>Company financials</td><td>Not a lender</td><td>Business and personal position together</td></tr>
-      <tr><td>Multi-entity</td><td>Paid tiers only</td><td>Supported</td><td>Custom or enterprise pricing</td><td>Core to the stated ICP</td></tr>
+      <tr><td>Multi-entity</td><td><a href="https://ramp.com/pricing" target="_blank" rel="noopener">Paid tiers only</a></td><td>Supported</td><td>Custom or enterprise pricing</td><td>Core to the stated ICP</td></tr>
       <tr><td>Independent</td><td>Yes</td><td>No, since April 2026</td><td>Yes</td><td>Yes</td></tr>
     </table>
     </div>
@@ -124,7 +156,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p>One card per competitor. Never merged into a grid, because a rep needs the one card for who they are actually up against.</p>
 
     <div class="card">
-      <h3>Battlecard: Ramp</h3>
+      <h3 id="ramp">Battlecard: Ramp</h3>
       <p class="card-meta">Last verified 2026-09-16 &middot; Applies across the full $3M&ndash;$200M band, most often at the lower end</p>
 
       <p><strong>Ramp in one line.</strong> The best-funded independent spend management platform in the market, strongest with cost-conscious US companies that want a free corporate card, flat cashback and deep ERP integrations, sold to a finance team.</p>
@@ -133,14 +165,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <table class="proof-tbl">
         <tr><th>Axis</th><th>Ramp</th><th>Flex</th><th>Why the buyer cares</th></tr>
         <tr><td>Scope of financial life</td><td>Business only</td><td>Business and personal in one system</td><td>The owner's money does not stop at the company boundary</td></tr>
-        <tr><td>Credit underwriting</td><td>Monitors connected bank balances daily; limits can drop automatically when reserves fall</td><td>Underwritten against the owner's full position <span class="needs">proof needed</span></td><td>A seasonal business can lose credit exactly when it needs it</td></tr>
-        <tr><td>Access requirement</td><td>$25,000 in a US business bank account at application</td><td><span class="needs">proof needed</span></td><td>Screens out otherwise healthy owner-operated businesses</td></tr>
-        <tr><td>AP depth</td><td>Widely reported as basic next to dedicated tools</td><td>AP automation plus AI Inbox agents</td><td>Owners with real payables volume outgrow the light version</td></tr>
+        <tr><td>Credit underwriting</td><td><a href="https://www.airwallex.com/en-us/blog/ramp-card-review" target="_blank" rel="noopener">Reported to monitor connected bank balances daily</a>; limits can drop automatically when reserves fall</td><td>Underwritten against the owner's full position <span class="needs">proof needed</span></td><td>A seasonal business can lose credit exactly when it needs it</td></tr>
+        <tr><td>Access requirement</td><td><a href="https://www.airwallex.com/en-us/blog/ramp-card-review" target="_blank" rel="noopener">$25,000 in a US business bank account</a>, maintained rather than checked once</td><td><span class="needs">proof needed</span></td><td>Screens out otherwise healthy owner-operated businesses</td></tr>
+        <tr><td>AP depth</td><td><a href="https://www.stampli.com/blog/ap-automation/ramp-review/" target="_blank" rel="noopener">Reviewers report it falls short</a> of dedicated AP tools</td><td>AP automation plus AI Inbox agents</td><td>Owners with real payables volume outgrow the light version</td></tr>
         <tr><td>Private credit</td><td>Not offered</td><td>Core product line</td><td>A capability Ramp lacks, not a better version of one</td></tr>
       </table>
       </div>
 
-      <p><strong>Why we win.</strong> The owner's personal side is in scope and no competitor serves it <span class="needs">proof needed: a named customer who consolidated</span>. Credit that does not flinch when cash dips, since lumpy revenue is normal for owner-operated businesses <span class="needs">proof needed: limit-stability policy in writing</span>. And underwriting speed, where Flex has publicly cited AI-driven credit decisions moving from 25 days to 48 hours.</p>
+      <p><strong>Why we win.</strong> The owner's personal side is in scope and no competitor serves it <span class="needs">proof needed: a named customer who consolidated</span>. Credit that does not flinch when cash dips, since lumpy revenue is normal for owner-operated businesses <span class="needs">proof needed: limit-stability policy in writing</span>. And underwriting speed, where Zaid Rahman has <a href="https://howiinvestpodcast.com/episodes/D3vvykE5Lwl" target="_blank" rel="noopener">publicly described</a> AI-driven underwriting moving from 25 days to 48 hours.</p>
 
       <p><strong>Handling objections.</strong></p>
       <ul>
@@ -152,18 +184,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <p><strong>Questions to ask.</strong> When you last had a slow quarter, what happened to your credit line? Where does your personal financial picture sit today, and who sees both halves? How many entities are you running, and how many logins does that take?</p>
 
-      <p><strong>Pricing.</strong> Ramp: free tier; Plus around $15 per user per month plus a platform fee; Enterprise custom, with platform fees reported from $0 to $15,000+ per month. Sourced 2026-09-16, reverify quarterly. Flex: <span class="needs">proof needed, pricing is not public</span></p>
+      <p><strong>Pricing.</strong> Ramp: <a href="https://ramp.com/pricing" target="_blank" rel="noopener">free tier; Plus at $15 per user per month plus a platform fee based on team size; Enterprise custom</a>. Sourced 2026-09-16, reverify quarterly. Flex: <span class="needs">proof needed, pricing is not public</span></p>
 
-      <p><strong>Third-party validation.</strong> Ramp holds 4.8 on G2 across 2,000+ reviews and 3.5 on Trustpilot. That gap usually means satisfied daily users alongside unhappy buyers who needed support and could not reach it. Support access is a real soft spot.</p>
+      <p><strong>Third-party validation.</strong> Ramp holds <a href="https://www.g2.com/sellers/ramp-financial" target="_blank" rel="noopener">4.8 on G2 across 2,400+ reviews</a> and <a href="https://www.trustpilot.com/review/ramp.com" target="_blank" rel="noopener">2.4 on Trustpilot</a>, where a third of reviews are one-star. That gap usually means satisfied daily users alongside unhappy buyers who needed support and could not reach it. Support access is a real soft spot.</p>
     </div>
 
     <div class="card">
-      <h3>Battlecard: Brex (now Capital One)</h3>
+      <h3 id="brex">Battlecard: Brex (now Capital One)</h3>
       <p class="card-meta">Last verified 2026-09-16 &middot; Upper end of the band, and owners whose companies took institutional funding</p>
 
       <p><strong>Brex in one line.</strong> A corporate card and spend platform built for funded and mid-market companies, acquired by Capital One in April 2026 and now operating inside a large consumer bank.</p>
 
-      <p><strong>Why we win.</strong> Flex's founding argument just got a live example, because a competitor became the thing Flex positions against. Brex has already walked away from smaller customers once, in June 2022, which is a matter of record. And Flex's roadmap is still set by the people building it <span class="needs">proof needed: a win where acquisition uncertainty was the stated reason</span>.</p>
+      <p><strong>Why we win.</strong> Flex's founding argument just got a live example, because a competitor became the thing Flex positions against. Brex has already <a href="https://www.cnbc.com/2022/06/17/brex-drops-small-business-customers-as-silicon-valley-adjusts-to-new-reality.html" target="_blank" rel="noopener">walked away from tens of thousands of smaller customers</a> once, in June 2022, which is a matter of record. And Flex's roadmap is still set by the people building it <span class="needs">proof needed: a win where acquisition uncertainty was the stated reason</span>.</p>
 
       <p><strong>Handling objections.</strong></p>
       <ul>
@@ -177,12 +209,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <div class="card">
-      <h3>Battlecard: Bill.com</h3>
+      <h3 id="bill">Battlecard: Bill.com</h3>
       <p class="card-meta">Last verified 2026-09-16 &middot; A workflow competitor, not a platform competitor</p>
 
       <p><strong>Bill.com in one line.</strong> Accounts payable and receivable automation, distributed largely through accountants and bookkeepers, competing with one Flex product line rather than the platform.</p>
 
-      <p><strong>Why we win.</strong> Flex absorbs the workflow instead of sitting beside it, so that's one less integration and one less bill. AP pain is usually a timing problem, and Bill.com can move an invoice but cannot fund it, which is what Bill Pay Later and working capital address <span class="needs">proof needed: a customer who replaced Bill.com plus a credit line</span>. And the cost stacks: ACH at $0.59, mailed checks at $1.99 and card payments at 2.9% sit on top of a $45 to $89 per-seat fee.</p>
+      <p><strong>Why we win.</strong> Flex absorbs the workflow instead of sitting beside it, so that's one less integration and one less bill. AP pain is usually a timing problem, and Bill.com can move an invoice but cannot fund it, which is what Bill Pay Later and working capital address <span class="needs">proof needed: a customer who replaced Bill.com plus a credit line</span>. And the cost stacks: <a href="https://www.bill.com/product/pricing" target="_blank" rel="noopener">ACH at $0.59, mailed checks at $1.99 and card payments at 2.9% sit on top of a $49 to $89 per-seat fee</a>.</p>
 
       <p><strong>Handling objections.</strong></p>
       <ul>
@@ -193,15 +225,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p><strong>Questions to ask.</strong> Who owns the Bill.com relationship, you or your accountant? When you delay paying a vendor, is it because the approval is slow or because the cash isn't there yet?</p>
     </div>
 
-    <h2>Part 4 — What's missing, and how the first 30 days fix it</h2>
+    <h2 id="first-30-days">Part 4 — What's missing, and how the first 30 days fix it</h2>
 
     <p>This draft was built entirely from public sources, which means the highest-value sections are the weakest ones. That's the honest state of any competitive brief written from outside, and it's worth naming rather than papering over.</p>
 
     <p>Every <span class="needs">proof needed</span> marker falls into one of four buckets, and each has a specific internal source.</p>
 
-    <p><strong>Win/loss reality.</strong> Every "why we win" claim here is inferred from public positioning. The job description mentions Apollo call-recording data, which is the right source. The first pass would code recent closed deals into the standard taxonomy of price, product gap, competitor advantage, timing, no decision and sales experience, then keep only what three or more independent interviews support. A single interview is an anecdote.</p>
+    <p><strong>Win/loss reality.</strong> Every "why we win" claim here is inferred from public positioning. The <a href="https://jobs.lever.co/Flex/39a67a76-74dc-494f-9890-bedf83788a01" target="_blank" rel="noopener">job description</a> mentions Apollo call-recording data, which is the right source. The first pass would code recent closed deals into the standard taxonomy of price, product gap, competitor advantage, timing, no decision and sales experience, then keep only what three or more independent interviews support. A single interview is an anecdote.</p>
 
-    <p><strong>Named customer proof.</strong> The job description states there are no formal case studies. Three named owner stories, one per revenue tier, would unblock the website, the collateral and lifecycle campaigns at the same time. That's the highest-leverage missing asset in the company.</p>
+    <p><strong>Named customer proof.</strong> The <a href="https://jobs.lever.co/Flex/39a67a76-74dc-494f-9890-bedf83788a01" target="_blank" rel="noopener">job description</a> states there are no formal case studies. Three named owner stories, one per revenue tier, would unblock the website, the collateral and lifecycle campaigns at the same time. That's the highest-leverage missing asset in the company.</p>
 
     <p><strong>Flex's own pricing and qualification criteria.</strong> Not public, and a battlecard without them is incomplete.</p>
 
@@ -209,7 +241,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <p>That last one is the question worth asking before anything else gets built.</p>
 
-    <h2>A note on how this was put together</h2>
+    <h2 id="method">A note on how this was put together</h2>
 
     <p>This is a first draft built from outside the company, so the most useful thing it can demonstrate is not polish but method.</p>
 
@@ -229,5 +261,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </main>
 
+<script>
+(function () {
+  var bar = document.getElementById('proofProgressBar');
+  function updateProgress() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (docHeight > 0 ? (scrollTop / docHeight) * 100 : 0) + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.proof-toc a'));
+  var sections = tocLinks.map(function (a) { return document.getElementById(a.getAttribute('href').slice(1)); });
+  function updateActiveToc() {
+    var current = null;
+    sections.forEach(function (sec, i) { if (sec && sec.getBoundingClientRect().top <= 140) current = i; });
+    tocLinks.forEach(function (a, i) { a.classList.toggle('is-active', i === current); });
+  }
+  window.addEventListener('scroll', updateActiveToc, { passive: true });
+  updateActiveToc();
+})();
+</script>
 </body>
 </html>
