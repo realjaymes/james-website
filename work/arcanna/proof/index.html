@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WKSZ7DQC');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Arcanna's Three Definitions — James Praise</title>
+<meta name="description" content="A read of how Arcanna names its own category across its own pages, how Tines, Torq, Swimlane and D3 Security name theirs, and what AI search returns for the term today, by James Praise." />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+<link rel="canonical" href="https://jamespraise.xyz/work/arcanna/proof/" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=20" />
+<style>
+  .proof-wrap { max-width: 720px; margin: 0 auto; padding: 100px 0 80px; }
+  .proof-eyebrow { color: var(--color-purple); font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; font-size: 13px; margin-bottom: 10px; }
+  .proof-credit { display: flex; align-items: center; gap: 10px; margin: 20px 0 40px; }
+  .proof-credit img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+  .proof-credit span { color: var(--text-muted); font-size: 14px; }
+  .proof-credit strong { color: var(--text-primary); }
+  .proof-note { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 8px; padding: 16px 20px; font-size: 14px; color: var(--text-muted); margin-bottom: 40px; }
+  .proof-draft { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 12px; padding: 40px; margin-bottom: 56px; }
+  .proof-draft h2 { margin-top: 32px; margin-bottom: 10px; }
+  .proof-draft h2:first-child { margin-top: 0; }
+  .proof-draft p { line-height: 1.7; }
+  .proof-body p { line-height: 1.7; }
+  .proof-body h2 { margin-top: 40px; margin-bottom: 12px; }
+  .proof-back { display: inline-block; margin-bottom: 24px; font-size: 14px; }
+  .section-label { font-size: 13px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-cards { display: grid; grid-template-columns: 1fr; gap: 14px; margin: 24px 0; }
+  .proof-card { background: var(--bg-page); border: 1px solid rgba(28,20,34,0.1); border-radius: 10px; padding: 18px; }
+  .proof-card strong { display: block; font-size: 15px; margin-bottom: 6px; color: var(--text-primary); }
+  .proof-card span { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+  .proof-quote { border-left: 3px solid var(--color-purple); padding: 4px 0 4px 22px; margin: 28px 0; font-size: 19px; font-weight: 600; line-height: 1.5; color: var(--text-primary); }
+  .proof-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; }
+  .proof-table th, .proof-table td { text-align: left; padding: 10px 12px; border-bottom: 1px solid rgba(28,20,34,0.1); vertical-align: top; }
+  .proof-table th { font-size: 12px; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-muted); }
+  .proof-toc { position: fixed; top: 140px; right: 32px; width: 200px; font-size: 13px; }
+  .proof-toc-group { margin-bottom: 20px; }
+  .proof-toc-label { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-toc a { display: block; padding: 5px 0 5px 12px; border-left: 2px solid rgba(28,20,34,0.1); color: var(--text-muted); text-decoration: none; line-height: 1.4; }
+  .proof-toc a:hover { color: var(--color-purple); border-left-color: var(--color-purple); }
+  .proof-toc a.is-active { color: var(--color-purple); border-left-color: var(--color-purple); font-weight: 700; }
+  @media (max-width: 1400px) { .proof-toc { display: none; } }
+  .proof-progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(28,20,34,0.08); z-index: 200; }
+  .proof-progress-bar { height: 100%; width: 0%; background: var(--color-purple); transition: width 0.1s linear; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKSZ7DQC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="proof-progress-track"><div class="proof-progress-bar" id="proofProgressBar"></div></div>
+
+<a href="/work/arcanna/" class="pitch-exit" aria-label="Back to the Arcanna pitch">
+  <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+</a>
+
+<nav class="proof-toc" aria-label="Section navigation">
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The teardown</p>
+    <a href="#arcanna-self">What Arcanna calls itself</a>
+    <a href="#competitors">What the named competitors call themselves</a>
+    <a href="#ai-search">What AI search returns today</a>
+    <a href="#recommendation">What I'd test first</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">Why I structured it this way</p>
+    <a href="#reasoning">Checking before claiming</a>
+  </div>
+</nav>
+
+<div class="container proof-wrap">
+  <a class="proof-back" href="/work/arcanna/">&larr; Back to the Arcanna pitch</a>
+
+  <p class="proof-eyebrow">A category teardown for Arcanna</p>
+  <h1>Arcanna's Three Definitions</h1>
+
+  <div class="proof-credit">
+    <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+    <span><strong>James Praise</strong> &middot; Product Marketing</span>
+  </div>
+
+  <p class="proof-note">Live research on <a href="https://arcanna.ai" target="_blank" rel="noopener">arcanna.ai</a>'s own pages, the four named competitors' own sites, and live search results, run September 2026. This is a public-surface read only, I have no access to Arcanna's internal positioning debate, so it's a starting question, not a verdict.</p>
+
+  <div class="proof-draft">
+    <p class="section-label">The teardown</p>
+
+    <h2 id="arcanna-self">What Arcanna calls itself</h2>
+    <p>Arcanna's own pages don't agree with each other on the category name. Three surfaces, three different leads:</p>
+
+    <table class="proof-table">
+      <tr><th>Page</th><th>What it leads with</th></tr>
+      <tr><td><a href="https://arcanna.ai/" target="_blank" rel="noopener">Homepage</a></td><td>"Trustworthy AI for Security Operations," with the body copy calling Arcanna an "AI Platform for SOC"</td></tr>
+      <tr><td><a href="https://arcanna.ai/manifesto" target="_blank" rel="noopener">Manifesto</a></td><td>"Own the Judgment. Govern the Verdict.," anchored on "the Decision Layer for your SOC"</td></tr>
+      <tr><td><a href="https://arcanna.ai/jobs/technical-product-marketing-manager" target="_blank" rel="noopener">Careers page (this job posting)</a></td><td>the only page that calls Arcanna "the category-defining Decision Intelligence platform for security operations"</td></tr>
+    </table>
+
+    <p>The <a href="https://arcanna.ai/about-us" target="_blank" rel="noopener">About page</a> comes closest to bridging the two: it describes Arcanna's product as "a decision-intelligence layer, a way to encode analyst judgment into governed models," but that line sits in body copy, not a headline, and "AI Platform for SOC" is still the page's primary self-description. So of the four pages that make a category claim, only one uses "Decision Intelligence" as the actual headline, and it's the careers page, the one page a prospective employee reads, not a prospective buyer.</p>
+
+    <p class="proof-quote">A buyer who reads the homepage, then the manifesto, then a sales deck built from either, has no reason to ever hear the words "Decision Intelligence" said about Arcanna.</p>
+
+    <h2 id="competitors">What the named competitors call themselves</h2>
+    <p>None of the four competitors named in this job posting use "Decision Intelligence" either. Each one has picked a different lane, and all four have converged on "agentic" language faster than Arcanna has converged on its own:</p>
+
+    <table class="proof-table">
+      <tr><th>Company</th><th>What it leads with</th></tr>
+      <tr><td><a href="https://tines.com/" target="_blank" rel="noopener">Tines</a></td><td>"You told everyone to use AI. Now give them a secure place to do it." Tines calls itself a governance layer for "AI agents, apps and automation," and uses "AI SOC" only when addressing security teams specifically. It's the broadest of the four, security is one use case among several.</td></tr>
+      <tr><td><a href="https://torq.io/" target="_blank" rel="noopener">Torq</a></td><td>"Every alert needs attention. Not every alert needs a human." Torq calls itself "The AI SOC Platform," built around "Agentic SecOps" and its own named "HyperAgents" product line. Torq has committed hardest to the word "agentic" of the four.</td></tr>
+      <tr><td><a href="https://swimlane.com/" target="_blank" rel="noopener">Swimlane</a></td><td>"Agentic AI automation for every security function." Swimlane has visibly dropped "SOAR" from its own homepage language in favor of "Agentic AI automation," built around its "Turbine" platform.</td></tr>
+      <tr><td><a href="https://d3security.com/" target="_blank" rel="noopener">D3 Security</a></td><td>"The Accountable Agentic SOC Platform," built around its "Morpheus" reasoning engine. D3 explicitly distances itself from both traditional SOAR and multi-agent systems, the closest positioning analog to Arcanna's own anti-black-box stance, just framed through "accountable" rather than "governed" or "owned."</td></tr>
+    </table>
+
+    <p>Worth keeping straight for any battlecard: Swimlane is not only a competitor here. Arcanna's own <a href="https://arcanna.ai/integrations/swimlane" target="_blank" rel="noopener">Swimlane integration page</a> and <a href="https://swimlane.com/resources/joint-solution-briefs/arcanna-ai/" target="_blank" rel="noopener">Swimlane's own joint solution brief</a> both describe Arcanna as sitting on top of Swimlane's SOAR playbooks, gating them with analyst-taught decisions. So Swimlane is simultaneously the platform Arcanna integrates with and, on its own homepage, a direct "agentic AI automation" competitor. A category definition that flattens that into simple us-versus-them would be wrong on a partner relationship that's actually live.</p>
+
+    <h2 id="ai-search">What AI search returns today</h2>
+    <p>I ran two different searches to see how the category actually surfaces. Asked directly by name, "Arcanna.ai decision intelligence platform," search results confidently describe Arcanna as "a decision-intelligence platform built for security operations teams and MSSPs," pulling from <a href="https://www.newswire.com/news/arcanna-ai-announces-3-5m-investment-to-advance-decision-intelligence-22199954" target="_blank" rel="noopener">Arcanna's own funding press release</a> and its <a href="https://www.peerspot.com/products/arcanna-ai-reviews" target="_blank" rel="noopener">PeerSpot listing</a>, which tracks Arcanna's mindshare inside the "AI-SOC category," not a "Decision Intelligence" category, at 2.3%.</p>
+
+    <p>Asked the generic question a buyer would actually type, "decision intelligence SOC security operations platform," Arcanna doesn't appear in the results at all. What surfaces instead: <a href="https://seceon.com/soc-automation-platform/" target="_blank" rel="noopener">Seceon's SOC Automation Platform</a>, <a href="https://torq.io/blog/ai-soc/" target="_blank" rel="noopener">Torq's own "AI SOC, Explained" post</a>, <a href="https://www.anomali.com/" target="_blank" rel="noopener">Anomali</a> (which markets its own "Security Decision Engine"), and <a href="https://www.paloaltonetworks.com/cyberpedia/ai-soc-tools-comparison" target="_blank" rel="noopener">Palo Alto Networks' AI SOC tools comparison</a>.</p>
+
+    <p class="proof-quote">Arcanna owns the story when someone already knows its name. Nobody owns the term "Decision Intelligence" yet when someone doesn't.</p>
+
+    <p>That's the actual opportunity, not a problem to apologize for. The generic query is open. No competitor has claimed "Decision Intelligence" as its own headline either, which means the term is winnable, but only for whoever anchors it hard enough, consistently enough, and publicly enough that search and AI answer engines start attaching it to one name.</p>
+
+    <h2 id="recommendation">What I'd test first</h2>
+    <div class="proof-cards">
+      <div class="proof-card"><strong>One sentence, said out loud, approved before it's written anywhere</strong><span>Not a rewrite of the manifesto's "Own the Judgment. Govern the Verdict." line, that's a strong tagline and should stay. The gap is one plain definition underneath it: something like "Decision Intelligence is the governance layer that makes an AI-driven SOC decision explainable and auditable, not just fast," tested on a real sales call for whether a CISO repeats it back unprompted.</span></div>
+      <div class="proof-card"><strong>Homepage hero first, not the about page</strong><span>The homepage is the page a buyer actually lands on. Right now "Decision Intelligence" only appears on the careers page, the one surface a buyer never reads. I'd move the tested definition into the homepage subhead first, then the manifesto and about page, so all three finally agree.</span></div>
+      <div class="proof-card"><strong>Feed the generic query, not just the branded one</strong><span>A dedicated, plainly-titled "What is Decision Intelligence" page, linked from the main nav and cited consistently across the blog and solution pages, is what search and AI answer engines need to start attaching the term to Arcanna specifically instead of returning Seceon, Torq and Anomali for the generic question.</span></div>
+      <div class="proof-card"><strong>Same line in the deck and the RSA/Black Hat talk abstract</strong><span>Once the definition is tested and approved, it belongs verbatim in the opening line of the sales deck and any conference talk abstract, so the phrase compounds in the room, not just on the site.</span></div>
+    </div>
+  </div>
+
+  <div class="proof-body">
+    <p class="section-label">Why I structured it this way</p>
+
+    <h2 id="reasoning">Checking before claiming</h2>
+    <p>The original hypothesis, drafted from the job posting alone before I opened a single Arcanna page, was that "Decision Intelligence" simply wasn't defined anywhere. That turned out to be wrong once checked: the About page does use decision-intelligence language, just in body copy, not a headline, and not anywhere a buyer is likely to land first. I kept that correction in this document instead of quietly rewriting the hypothesis to look right in hindsight.</p>
+    <p>I also didn't write a blind "here's the definition Arcanna should use" line, on purpose. I don't have access to whatever internal debate already exists about the name, whether it's settled, contested, or still being tested against alternatives, so a confident definition written cold risks being wrong about something the team already knows. What I can show from the outside is where the language actually disagrees with itself today, and how a security buyer's search behavior treats the term right now. The actual definition is a first-week conversation, not something I'd hand over pre-written.</p>
+  </div>
+
+  <div class="button-row" style="margin-top: 40px;">
+    <a href="/work/arcanna/" class="button button-primary">Back to the pitch</a>
+    <a href="mailto:jamesspraise@gmail.com?subject=Technical%20Product%20Marketing%20Manager%20-%20James%20Praise" class="button button-secondary">Let's Talk</a>
+  </div>
+</div>
+
+<script src="/script.js?v=11"></script>
+<script>
+(function () {
+  var bar = document.getElementById('proofProgressBar');
+  function updateProgress() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.proof-toc a'));
+  var sections = tocLinks.map(function (a) {
+    return document.getElementById(a.getAttribute('href').slice(1));
+  });
+  function updateActiveToc() {
+    var current = null;
+    sections.forEach(function (sec, i) {
+      if (sec && sec.getBoundingClientRect().top <= 140) current = i;
+    });
+    tocLinks.forEach(function (a, i) {
+      a.classList.toggle('is-active', i === current);
+    });
+  }
+  window.addEventListener('scroll', updateActiveToc, { passive: true });
+  updateActiveToc();
+})();
+</script>
+</body>
+</html>

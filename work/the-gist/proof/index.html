@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WKSZ7DQC');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Non-Endemic Brand Module — James Praise</title>
+<meta name="description" content="A drafted, reusable RFP proposal module for The GIST's Partnerships team, built around a first-time sponsor category and the audience proof to back it. By James Praise." />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+<link rel="canonical" href="https://jamespraise.xyz/work/the-gist/proof/" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=20" />
+<style>
+  .proof-wrap { max-width: 720px; margin: 0 auto; padding: 100px 0 80px; }
+  .proof-eyebrow { color: var(--color-purple); font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; font-size: 13px; margin-bottom: 10px; }
+  .proof-credit { display: flex; align-items: center; gap: 10px; margin: 20px 0 40px; }
+  .proof-credit img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+  .proof-credit span { color: var(--text-muted); font-size: 14px; }
+  .proof-credit strong { color: var(--text-primary); }
+  .proof-note { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 8px; padding: 16px 20px; font-size: 14px; color: var(--text-muted); margin-bottom: 40px; }
+  .proof-draft { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 12px; padding: 40px; margin-bottom: 56px; }
+  .proof-draft h2 { margin-top: 32px; margin-bottom: 10px; }
+  .proof-draft h2:first-child { margin-top: 0; }
+  .proof-draft p { line-height: 1.7; }
+  .proof-body p { line-height: 1.7; }
+  .proof-body h2 { margin-top: 40px; margin-bottom: 12px; }
+  .proof-body strong { font-weight: 700; }
+  .proof-back { display: inline-block; margin-bottom: 24px; font-size: 14px; }
+  .section-label { font-size: 13px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-table { width: 100%; border-collapse: collapse; margin: 20px 0 32px; font-size: 14px; }
+  .proof-table th, .proof-table td { text-align: left; padding: 10px 14px; border-bottom: 1px solid rgba(28,20,34,0.08); vertical-align: top; }
+  .proof-table th { font-size: 12px; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-muted); font-weight: 800; }
+  .proof-quote { border-left: 3px solid var(--color-purple); padding: 4px 0 4px 22px; margin: 28px 0; font-size: 19px; font-weight: 600; line-height: 1.5; color: var(--text-primary); }
+  .proof-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 28px 0; }
+  .proof-stat { background: var(--bg-page); border-radius: 10px; padding: 18px; }
+  .proof-stat strong { display: block; font-size: 26px; margin-bottom: 4px; }
+  .proof-stat span { font-size: 13px; color: var(--text-muted); }
+  .proof-toc { position: fixed; top: 140px; right: 32px; width: 210px; font-size: 13px; }
+  .proof-toc-group { margin-bottom: 20px; }
+  .proof-toc-label { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-toc a { display: block; padding: 5px 0 5px 12px; border-left: 2px solid rgba(28,20,34,0.1); color: var(--text-muted); text-decoration: none; line-height: 1.4; }
+  .proof-toc a:hover { color: var(--color-purple); border-left-color: var(--color-purple); }
+  .proof-toc a.is-active { color: var(--color-purple); border-left-color: var(--color-purple); font-weight: 700; }
+  @media (max-width: 1400px) { .proof-toc { display: none; } }
+  .proof-progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(28,20,34,0.08); z-index: 200; }
+  .proof-progress-bar { height: 100%; width: 0%; background: var(--color-purple); transition: width 0.1s linear; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKSZ7DQC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="proof-progress-track"><div class="proof-progress-bar" id="proofProgressBar"></div></div>
+
+<a href="/work/the-gist/" class="pitch-exit" aria-label="Back to the The GIST pitch">
+  <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+</a>
+
+<nav class="proof-toc" aria-label="Section navigation">
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The module</p>
+    <a href="#thesis">The thesis</a>
+    <a href="#audience">The audience case</a>
+    <a href="#precedent">Precedent</a>
+    <a href="#worked">A worked opener</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">Why I structured it this way</p>
+    <a href="#reasoning">Reusable, not rebuilt</a>
+  </div>
+</nav>
+
+<div class="container proof-wrap">
+  <a class="proof-back" href="/work/the-gist/">&larr; Back to the The GIST pitch</a>
+
+  <p class="proof-eyebrow">A proposal module for The GIST</p>
+  <h1>The "Non-Endemic Brand" Module: A Reusable RFP Opener</h1>
+
+  <div class="proof-credit">
+    <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+    <span><strong>James Praise</strong> &middot; Integrated Marketing Manager, applicant</span>
+  </div>
+
+  <p class="proof-note">Built from The GIST's own public surfaces: Jacie deHoop's <a href="https://www.marketingbrew.com/stories/2024/10/08/the-gist-revenue-strategy-sports-sponsors" target="_blank" rel="noopener">Marketing Brew interview</a> (October 2024) and the audience data on the live <a href="https://www.thegistsports.com/partner-with-us/" target="_blank" rel="noopener">Partner with Us</a> page, checked on 2026-09-17. Anything that needs data I don't have access to as an outside applicant is marked <strong>[proof needed]</strong> rather than guessed.</p>
+
+  <div class="proof-draft">
+    <p class="section-label">The module</p>
+
+    <h2 id="thesis">The thesis</h2>
+    <p>Every RFP for a brand that has never sponsored sports before starts from the same objection: "we're not a sports brand, why would we sponsor sports content." Jacie deHoop already has the answer, on the record:</p>
+    <p class="proof-quote">"We certainly bring on a lot of sports-endemic partners, but it's been so fun to work with that next layer of partners too, that maybe historically haven't really put their stake in a sports tentpole or in a sponsorship." &mdash; Jacie deHoop, Co-Founder & Head of Partnerships and Revenue, <a href="https://www.marketingbrew.com/stories/2024/10/08/the-gist-revenue-strategy-sports-sponsors" target="_blank" rel="noopener">Marketing Brew, October 2024</a></p>
+    <p>That line is the argument. It just hasn't been turned into a section a seller can drop into a new RFP on a deadline. This module does that: it takes the thesis, backs it with the audience data The GIST already publishes, and gives it a repeatable shape.</p>
+
+    <h2 id="audience">The audience case</h2>
+    <p>The case for a first-time sponsor isn't "we cover sports." It's who is reading, and what they do because of what they read. Three numbers from The GIST's own <a href="https://www.thegistsports.com/partner-with-us/" target="_blank" rel="noopener">Partner with Us</a> page carry the argument:</p>
+    <div class="proof-stats">
+      <div class="proof-stat"><strong>83%</strong><span>of GISTers say they choose brands that support women's sports and media</span></div>
+      <div class="proof-stat"><strong>94%</strong><span>of women in C-suite roles played sports growing up, a buying-power signal, not just a reach number</span></div>
+      <div class="proof-stat"><strong>91%</strong><span>are interested in brands The GIST recommends to them directly</span></div>
+    </div>
+    <p>Paired with reach (1M newsletter subscribers at a 45% open rate, 582K social followers, 45M+ GISTers reached monthly across newsletter, social and podcast, all per the same live page), the pitch to a first-time category isn't "you'll get seen." It's "this specific audience already tells you, in writing, that showing up here changes what they buy."</p>
+
+    <h2 id="precedent">Precedent</h2>
+    <p>This isn't a theory. The GIST has already closed non-endemic categories against this exact thesis: Bumble, Ally, Heineken Silver, and SpringHill Suites by Marriott, named in the same Marketing Brew interview as sponsors that hadn't historically bought into sports. The current <a href="https://www.thegistsports.com/partner-with-us/" target="_blank" rel="noopener">Partner with Us</a> page carries a live testimonial from SpringHill Suites on the results. That's the proof a new RFP can point to: not "we think this works," but "here's who already said yes, and what they got."</p>
+
+    <h2 id="worked">A worked opener</h2>
+    <p>Here's the module in the shape a seller would actually paste into a deck, with the bracketed fields being the only thing that changes per RFP:</p>
+    <table class="proof-table">
+      <tr><th>Fixed (reusable every time)</th><th>Localized per RFP</th></tr>
+      <tr><td>The deHoop quote and the non-endemic thesis</td><td>Why <strong>[Brand]</strong>'s category specifically fits the pattern Bumble, Ally, Heineken Silver, and SpringHill Suites already proved out</td></tr>
+      <tr><td>The 83% / 94% / 91% audience stats and their source link</td><td>Which of those three numbers maps hardest to <strong>[Brand]</strong>'s actual buying objection</td></tr>
+      <tr><td>The reach numbers (1M newsletter, 582K social, 45M+ monthly)</td><td>Which channel mix (newsletter, social, podcast, events) fits <strong>[Brand]</strong>'s campaign goal</td></tr>
+      <tr><td>The SpringHill Suites precedent as social proof</td><td>Pricing and package tier <strong>[proof needed, internal packaging]</strong></td></tr>
+    </table>
+    <p>A seller drops in the brand name, picks the sharpest stat for that brand's specific objection, and the opening page of the proposal is done in minutes instead of rebuilt from a blank slide.</p>
+  </div>
+
+  <div class="proof-body">
+    <p class="section-label">Why I structured it this way</p>
+
+    <h2 id="reasoning">Reusable, not rebuilt</h2>
+    <p>The JD's actual ask is throughput: turning brand interest into a polished, on-brand, deadline-driven proposal fast enough to win the deal, for a Partnerships team that's grown headcount faster than it's grown proposal capacity. A one-off pitch for a hypothetical brand would show I can write a good proposal. A reusable module shows I understand the actual bottleneck, which is that the same argument gets rebuilt from scratch every time a new non-obvious category comes in. I built the fixed and localized columns as a real production template because that's the difference between writing one proposal well and building the thing that makes every proposal faster.</p>
+    <p>I didn't build a full mock RFP response or audit The GIST's own partner-facing page, both real options I considered. The GIST already runs a live, well-built Partner with Us page with its own media kit request flow, so a page audit would have been telling a team something they already know about their own site. This module does something narrower and more useful: it takes a thesis their own co-founder has already stated publicly and turns it into the specific, reusable asset that thesis doesn't have yet.</p>
+  </div>
+
+  <div class="button-row" style="margin-top: 40px;">
+    <a href="/work/the-gist/" class="button button-primary">Back to the pitch</a>
+    <a href="mailto:jamesspraise@gmail.com?subject=Integrated%20Marketing%20Manager%20-%20James%20Praise" class="button button-secondary">Let's Talk</a>
+  </div>
+</div>
+
+<script src="/script.js?v=11"></script>
+<script>
+(function () {
+  var bar = document.getElementById('proofProgressBar');
+  function updateProgress() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  var sections = document.querySelectorAll('.proof-draft h2, .proof-body h2');
+  var links = document.querySelectorAll('.proof-toc a');
+  function updateActive() {
+    var current = null;
+    sections.forEach(function (s) {
+      if (s.getBoundingClientRect().top < 160) current = s.id;
+    });
+    links.forEach(function (l) {
+      l.classList.toggle('is-active', l.getAttribute('href') === '#' + current);
+    });
+  }
+  window.addEventListener('scroll', updateActive, { passive: true });
+  updateActive();
+})();
+</script>
+</body>
+</html>
