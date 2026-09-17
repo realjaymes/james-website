@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WKSZ7DQC');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A Prompt Test for the JET Hotel Segment — James Praise</title>
+<meta name="description" content="Three versions of a research and first-line prompt, run on 25 real hotel developers for BuyerSight's Jet Hotel Solutions segment and scored blind, by James Praise." />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+<link rel="canonical" href="https://jamespraise.xyz/work/buyersight/proof/" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=20" />
+<style>
+  .proof-wrap { max-width: 760px; margin: 0 auto; padding: 100px 0 80px; }
+  .proof-eyebrow { color: var(--color-purple); font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; font-size: 13px; margin-bottom: 10px; }
+  .proof-credit { display: flex; align-items: center; gap: 10px; margin: 20px 0 40px; }
+  .proof-credit img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+  .proof-credit span { color: var(--text-muted); font-size: 14px; }
+  .proof-credit strong { color: var(--text-primary); }
+  .proof-note { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 8px; padding: 16px 20px; font-size: 14px; color: var(--text-muted); margin-bottom: 40px; }
+  .proof-draft { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 12px; padding: 40px; margin-bottom: 56px; }
+  .proof-draft h2 { margin-top: 32px; margin-bottom: 10px; }
+  .proof-draft h2:first-of-type { margin-top: 0; }
+  .proof-draft p, .proof-body p { line-height: 1.7; }
+  .proof-body h2 { margin-top: 40px; margin-bottom: 12px; }
+  .proof-back { display: inline-block; margin-bottom: 24px; font-size: 14px; }
+  .section-label { font-size: 13px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-table-wrap { overflow-x: auto; margin: 20px 0; }
+  .proof-table { width: 100%; border-collapse: collapse; font-size: 13px; background: var(--bg-page); border-radius: 10px; overflow: hidden; }
+  .proof-table th, .proof-table td { text-align: left; padding: 10px 12px; border-bottom: 1px solid rgba(28,20,34,0.08); vertical-align: top; line-height: 1.5; }
+  .proof-table th { font-weight: 800; font-size: 12px; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-muted); }
+  .proof-table tr.total td { font-weight: 800; }
+  .rows-table { min-width: 1040px; }
+  .rows-table td { width: 25%; }
+  .rows-table .sig { display: block; color: var(--text-muted); font-size: 12px; margin-top: 4px; }
+  .rows-table .score { display: block; font-weight: 800; font-size: 12px; margin-top: 6px; color: var(--color-purple); }
+  .noline { font-family: ui-monospace, Menlo, monospace; font-size: 12px; color: var(--text-muted); }
+  .proof-prompt { white-space: pre-wrap; background: var(--bg-page); border: 1px solid rgba(28,20,34,0.1); border-radius: 8px; padding: 16px 18px; font-size: 12.5px; line-height: 1.55; overflow-x: auto; }
+  .proof-example { border-left: 3px solid var(--color-purple); padding: 4px 0 4px 18px; margin: 18px 0; font-size: 16px; font-weight: 600; line-height: 1.5; color: var(--text-primary); }
+  .proof-toc { position: fixed; top: 140px; right: 32px; width: 200px; font-size: 13px; }
+  .proof-toc-group { margin-bottom: 20px; }
+  .proof-toc-label { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-toc a { display: block; padding: 5px 0 5px 12px; border-left: 2px solid rgba(28,20,34,0.1); color: var(--text-muted); text-decoration: none; line-height: 1.4; }
+  .proof-toc a:hover { color: var(--color-purple); border-left-color: var(--color-purple); }
+  .proof-toc a.is-active { color: var(--color-purple); border-left-color: var(--color-purple); font-weight: 700; }
+  @media (max-width: 1400px) { .proof-toc { display: none; } }
+  .proof-progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(28,20,34,0.08); z-index: 200; }
+  .proof-progress-bar { height: 100%; width: 0%; background: var(--color-purple); transition: width 0.1s linear; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKSZ7DQC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="proof-progress-track"><div class="proof-progress-bar" id="proofProgressBar"></div></div>
+
+<a href="/work/buyersight/" class="pitch-exit" aria-label="Back to the BuyerSight pitch">
+  <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+</a>
+
+<nav class="proof-toc" aria-label="Section navigation">
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The test</p>
+    <a href="#what-i-tested">What I tested</a>
+    <a href="#results">Results</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The prompts</p>
+    <a href="#version-1">Version 1</a>
+    <a href="#version-2">Version 2</a>
+    <a href="#version-3">Version 3</a>
+    <a href="#rubric">The rubric fix</a>
+    <a href="#all-rows">All 25 prospects</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">Next</p>
+    <a href="#limits">Limits</a>
+    <a href="#at-buyersight">Running this at BuyerSight</a>
+  </div>
+</nav>
+
+<div class="container proof-wrap">
+  <a class="proof-back" href="/work/buyersight/">&larr; Back to the BuyerSight pitch</a>
+
+  <p class="proof-eyebrow">A prompt test for BuyerSight</p>
+  <h1>Three Prompt Versions for the JET Hotel Segment</h1>
+
+  <div class="proof-credit">
+    <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+    <span><strong>James Praise</strong> &middot; GTM Engineer</span>
+  </div>
+
+  <p class="proof-note">I built this from public information only and have no access to BuyerSight's prompts, tables or campaigns, so nothing here claims to know how your current prompts perform. I also ran it outside Clay: Python fetched each prospect's website and source article, standing in for Clay's scrape step, and an AI model ran each prompt per row, standing in for an AI column. The prompts and the table structure move into Clay unchanged. No emails were sent.</p>
+
+  <div class="proof-draft">
+    <p class="section-label">The test</p>
+
+    <h2 id="what-i-tested">What I tested and why</h2>
+    <p>Your homepage features <a href="https://buyersight.io/">Jet Hotel Solutions</a> as a customer. <a href="https://www.jethotelsolutions.com/">JET</a> plans and manages low-voltage infrastructure for new-build and renovated hotels, from plans review through opening, so its buyers are the developers, owners and management companies behind hotel projects. I picked that segment because a good first line there depends on reading a project correctly, which is exactly where a generic prompt falls down.</p>
+    <p>The role asks for someone to <a href="https://careers.giighire.com/buyersight/31147">"write and optimize AI prompts to research prospects, personalize outreach, and improve campaigns at scale"</a> and to <a href="https://careers.giighire.com/buyersight/31147">"document experiments, results, and learnings"</a>. So I treated it as an experiment. I sourced 25 real US hotel developers, owner-operators and management companies, each with a public 2024 to 2026 project signal. I ran three prompt versions on every row, then had a separate pass score each first line without knowing which prompt wrote it.</p>
+
+    <h2 id="results">Results</h2>
+    <div class="proof-table-wrap">
+      <table class="proof-table">
+        <thead><tr><th>Average score</th><th>Version 1</th><th>Version 2</th><th>Version 3</th></tr></thead>
+        <tbody><tr><td>Specific (out of 2)</td><td>1.88</td><td>1.76</td><td>1.76</td></tr><tr><td>Accurate about the prospect (out of 2)</td><td>0.72</td><td>1.44</td><td>2</td></tr><tr><td>Relevant to JET (out of 2)</td><td>0</td><td>1.24</td><td>1.64</td></tr><tr><td>Sounds human (out of 2)</td><td>0.36</td><td>0</td><td>1.76</td></tr><tr class="total"><td>Total (out of 8)</td><td>2.96</td><td>4.44</td><td>7.16</td></tr></tbody>
+      </table>
+    </div>
+    <p>Version 3 scored highest on 22 of 25 rows. The other 3 rows had no hotel project in the evidence (both sides of a management deal and a corporate merger), and version 3 correctly wrote nothing for them.</p>
+  </div>
+
+  <div class="proof-body">
+    <p class="section-label">The prompts</p>
+
+    <h2 id="version-1">Version 1: a standard prompt</h2>
+    <p>This is the prompt most tables start with: research the company, then write a personalized first line.</p>
+    <pre class="proof-prompt">You are a sales research assistant. Using the company website text and the news signal below, write a short research summary about {{company_name}} that a sales rep could use for outreach. Include anything interesting about the company.
+
+Company: {{company_name}}
+Website text: {{website_text}}
+Signal: {{signal}}
+Signal source text: {{signal_source_text}}</pre>
+    <pre class="proof-prompt">Write a personalized first line for a cold email to {{contact_name_or_team}} at {{company_name}}, from JET, a hotel low-voltage infrastructure and technology project management firm. Use the research below. Make it engaging and personalized.
+
+Research: {{research}}</pre>
+    <p>Every line named the right project, but most wrapped it in praise the sources never supported, and none of them connected to anything JET does. Rows without a named contact came out addressed to "The development team," as if that were a person.</p>
+    <p class="proof-example">Greg, the 480-room Embassy Suites and Tempo project in downtown Austin is a substantial undertaking as construction moves toward its expected early 2029 opening.</p>
+
+    <h2 id="version-2">Version 2: facts only, matched to the project stage</h2>
+    <p>The research step now returns structured facts: the project, its stage with a quote that proves it, the JET service that fits that stage, and a confidence flag. The first line refuses to write when confidence is low.</p>
+    <pre class="proof-prompt">Role: you prepare facts for a cold email from JET (hotel low-voltage infrastructure, carrier services and guest-facing technology, managed from plans review through opening).
+
+Use ONLY the inputs below. If a fact is not stated in them, do not write it.
+
+Inputs:
+- Company: {{company_name}}
+- Website text: {{website_text}}
+- Signal: {{signal}}
+- Signal source text: {{signal_source_text}}
+
+Return JSON with exactly these keys:
+- &quot;project&quot;: the single most specific hotel project named in the inputs (brand, room count, city), or null
+- &quot;stage&quot;: one of &quot;announced_or_design&quot;, &quot;under_construction&quot;, &quot;recently_opened&quot;, &quot;renovation_or_conversion&quot;, &quot;unknown&quot;
+- &quot;stage_evidence&quot;: the shortest exact quote from the inputs that proves the stage, or null
+- &quot;jet_pathway&quot;: &quot;new_build_plans_review&quot; for announced_or_design or under_construction, &quot;renovation_survey&quot; for renovation_or_conversion, &quot;post_opening_tech&quot; for recently_opened, &quot;none&quot; for unknown
+- &quot;hook_fact&quot;: one concrete fact a hotel owner would recognize as theirs (not a compliment, not their mission statement), or null
+- &quot;confidence&quot;: &quot;high&quot; if project and stage_evidence are both present, &quot;low&quot; otherwise</pre>
+    <pre class="proof-prompt">Write the first sentence of a cold email from JET to {{contact_name_or_team}} at {{company_name}}.
+
+Research JSON: {{research}}
+
+Rules:
+- If confidence is &quot;low&quot; or project is null, return exactly: NO_LINE
+- Name the project using the research&#x27;s own words (brand, city or room count).
+- Tie the sentence to the stage: for design or construction, the point where cabling, MDF/IDF and carrier decisions get locked in; for renovations, what the existing building will and won&#x27;t support; for recent openings, what shows up in guest Wi-Fi once rooms fill.
+- One sentence, 30 words or fewer, plain language, no question marks.
+- No compliments (&quot;impressive&quot;, &quot;exciting&quot;, &quot;congrats&quot;), no exclamation marks, no claims about the company that the research doesn&#x27;t contain.</pre>
+    <p>Accuracy and relevance jumped, and the three rows with no project correctly returned NO_LINE. The new problem was repetition. All 22 lines came from three stock sentences, one per stage, and 14 used the same one. Every line was accurate, but sent to a list, they read as a template, and near-identical copy across a list hurts deliverability.</p>
+    <p class="proof-example">Greg, as the 480-room Embassy Suites and Tempo in downtown Austin moves through construction, cabling, MDF/IDF and carrier decisions are getting locked in.</p>
+
+    <h2 id="version-3">Version 3: one unique detail, one consequence</h2>
+    <p>Version 3 keeps the version 2 research and changes only the first line. Each line has to build on a detail unique to that project and name what it means for the building's network, cabling, carriers or Wi-Fi. The greeting moves out of the line, and stock phrases are banned.</p>
+    <pre class="proof-prompt">Write the first sentence of a cold email from JET (hotel low-voltage infrastructure, carrier services and guest-facing technology, managed from plans review through opening) to someone at {{company_name}}. The greeting is added separately, so do not start with a name or &quot;the team&quot;.
+
+Research JSON: {{research}}
+Signal: {{signal}}
+
+Rules:
+- If research confidence is &quot;low&quot; or project is null, return exactly: NO_LINE
+- Build the sentence around ONE detail that is unique to this project and stated in the research or signal: the opening date, a dual-brand or conversion setup, a campus, convention or mixed-use location, a phased renovation, or the room count only if nothing better exists.
+- Name one practical consequence of that detail for the building&#x27;s network, cabling, carrier circuits or guest Wi-Fi. Examples of the kind of link wanted (do not copy them): two brands under one roof means two sets of brand technology standards in one riser plan; a conversion inside an operating hotel means cabling paths decided around a building still taking guests; a 2027 opening puts carrier orders, which take months, inside this year&#x27;s schedule.
+- Do not reuse a stock phrase. Write it as if this were the only email you were sending today.
+- One sentence, 30 words or fewer, plain language, no question marks, no exclamation marks, no compliments, no claims the inputs don&#x27;t support.</pre>
+    <p>The same Austin tower from the examples above now reads like it was written for one developer:</p>
+    <p class="proof-example">Putting Embassy Suites and Tempo into one 30-story tower means two brand technology programs must share a coordinated riser, network and carrier plan.</p>
+    <p>A west-wing conversion in Milwaukee got a line no other prospect could receive:</p>
+    <p class="proof-example">Converting Hilton Milwaukee’s west wing into the independent Marc Hotel means separating network, cabling and carrier requirements inside a building that will still serve two hotel identities.</p>
+
+    <h2 id="rubric">The rubric, and the fix it needed</h2>
+    <p>Each line was scored 0 to 2 on four criteria: specific, accurate about the prospect, relevant to JET, and sounds human. The version labels were shuffled before scoring.</p>
+    <p>The first scoring pass marked almost every version 3 line as "unsupported," including general points like carrier circuits needing to be ordered early. The rubric hadn't separated facts about the prospect from JET's own expertise, so I rewrote the accuracy criterion to cover prospect facts only and judged domain points under relevance. That pass also gave nearly identical totals across rows, which is a sign of a lazy scorer, so the rerun told it to judge each row on its own. The scores above come from the corrected rubric. A prompt test is only as good as its scoring, so the rubric gets versioned and logged like the prompts.</p>
+
+    <h2 id="all-rows">All 25 prospects</h2>
+    <p>Company names link to the article or announcement the project signal came from.</p>
+  </div>
+</div>
+
+<div class="container" style="max-width: 1200px; margin: 0 auto 40px;">
+  <div class="proof-table-wrap">
+    <table class="proof-table rows-table">
+      <thead><tr><th>Prospect and signal</th><th>Version 1</th><th>Version 2</th><th>Version 3</th></tr></thead>
+      <tbody>
+<tr><td><a href="https://www.hospitalitynet.org/announcement/41012679/vision-hospitality-group-breaks-ground-on-dual-brand-home2-suites-and-tru-by-hilton-in-chattanoogalookout-valley-tenn">Vision Hospitality Group</a><span class="sig">Broke ground on a 150-room dual-branded Home2 Suites by Hilton and Tru by Hilton in Chattanooga&#x27;s Lookout Valley, slated to open fall 2026.</span></td><td>Mitch, the 150-room Home2 Suites and Tru project in Lookout Valley looks like a major addition to Vision&#x27;s development portfolio ahead of its planned fall 2026 opening.<span class="score">2/8</span></td><td>Mitch, as the 150-room Home2 Suites and Tru in Lookout Valley moves through construction, cabling, MDF/IDF and carrier decisions are getting locked in.<span class="score">6/8</span></td><td>A dual-branded Home2 Suites and Tru means two sets of Hilton technology standards must fit one cabling and network plan before the fall 2026 opening.<span class="score">8/8</span></td></tr>
+<tr><td><a href="https://www.hotel-online.com/news/peachtree-group-begins-construction-on-480-room-dual-branded-embassy-suites-by-hilton-and-tempo-by-hilton-in-downtown-austin">Peachtree Group</a><span class="sig">Began construction on a 30-story, 480-room dual-branded Embassy Suites by Hilton and Tempo by Hilton in downtown Austin, TX, expected to open in early 2029.</span></td><td>Greg, the 480-room Embassy Suites and Tempo project in downtown Austin is a substantial undertaking as construction moves toward its expected early 2029 opening.<span class="score">2/8</span></td><td>Greg, as the 480-room Embassy Suites and Tempo in downtown Austin moves through construction, cabling, MDF/IDF and carrier decisions are getting locked in.<span class="score">6/8</span></td><td>Putting Embassy Suites and Tempo into one 30-story tower means two brand technology programs must share a coordinated riser, network and carrier plan.<span class="score">8/8</span></td></tr>
+<tr><td><a href="https://www.jaxdailyrecord.com/news/2025/oct/01/years-in-the-making-hilton-jacksonville-at-mayo-clinic-opens/">Concord Hospitality Enterprises</a><span class="sig">Opened the 252-room Hilton Jacksonville at Mayo Clinic on the Mayo Clinic campus in Jacksonville, FL, developed with Whitman Peterson.</span></td><td>Mark, the opening of the 252-room Hilton Jacksonville at Mayo Clinic adds a distinctive campus property to Concord&#x27;s portfolio.<span class="score">2/8</span></td><td>Mark, now that the 252-room Hilton Jacksonville at Mayo Clinic is open, guest Wi-Fi performance will become clearer as rooms fill.<span class="score">5/8</span></td><td>A hotel on the Mayo Clinic campus puts guest Wi-Fi and carrier reliability in an environment where dependable connectivity extends beyond a typical leisure stay.<span class="score">7/8</span></td></tr>
+<tr><td><a href="https://finance.yahoo.com/news/groundbreaking-planned-cantio-hotel-ball-100739679.html">Schahet Hotels</a><span class="sig">Broke ground on the Cantio Hotel, a 97-room boutique hotel on Ball State University&#x27;s campus in Muncie, IN, opening in 2026.</span></td><td>Greg, the 97-room Cantio Hotel on Ball State&#x27;s campus is a distinctive project for Schahet as it heads toward a 2026 opening.<span class="score">2/8</span></td><td>Greg, as the 97-room Cantio Hotel on Ball State&#x27;s campus moves through construction, cabling, MDF/IDF and carrier decisions are getting locked in.<span class="score">6/8</span></td><td>Building the Cantio Hotel on Ball State’s campus means its cabling and guest Wi-Fi plan must account for a connectivity-heavy university setting.<span class="score">8/8</span></td></tr>
+<tr><td><a href="https://www.prnewswire.com/news-releases/plamondon-hospitality-partners-breaks-ground-on-downtown-fredericks-new-hotel--conference-center-302682748.html">Plamondon Hospitality Partners</a><span class="sig">Broke ground on the Marriott Downtown Frederick at Carroll Creek, a full-service hotel and conference center, targeted for completion in 2027.</span></td><td>Peter, the Marriott Downtown Frederick and its conference center look like a significant addition to Carroll Creek as the project moves toward 2027 completion.<span class="score">2/8</span></td><td>Peter, as Marriott Downtown Frederick at Carroll Creek moves through construction, cabling, MDF/IDF and carrier decisions are getting locked in.<span class="score">6/8</span></td><td>Combining a full-service Marriott with a conference center makes network capacity and cabling for simultaneous guest and event traffic central to the infrastructure plan.<span class="score">8/8</span></td></tr>
+<tr><td><a href="https://www.hotel-online.com/news/mckibbon-breaks-ground-on-ac-hotel-moxy-tampa-downtown">McKibbon Companies</a><span class="sig">Broke ground on the 310-key dual-branded AC Hotel &amp; Moxy Tampa Downtown in the Channel District, slated to open in early 2028.</span></td><td>J.B., the 310-key AC Hotel and Moxy project in Tampa&#x27;s Channel District is a substantial dual-brand development ahead of its early 2028 opening.<span class="score">2/8</span></td><td>J.B., as the 310-key AC Hotel and Moxy Tampa Downtown moves through construction, cabling, MDF/IDF and carrier decisions are getting locked in.<span class="score">6/8</span></td><td>The dual-branded AC Hotel and Moxy must fit two sets of brand technology requirements into one cabling, network and carrier design before early 2028.<span class="score">8/8</span></td></tr>
+<tr><td><a href="https://www.globenewswire.com/news-release/2026/07/29/3335389/0/en/white-lodging-breaks-ground-on-new-autograph-collection-hotel-in-charlotte-s-south-end.html">White Lodging</a><span class="sig">Broke ground on a 295-room Autograph Collection hotel in Charlotte&#x27;s South End neighborhood, its fifth Autograph property nationally, expected to open late 2028.</span></td><td>Conner, White Lodging&#x27;s fifth Autograph property, a 295-room hotel in Charlotte&#x27;s South End, marks another notable step in the company&#x27;s development portfolio.<span class="score">2/8</span></td><td>Conner, as the 295-room Autograph hotel in Charlotte&#x27;s South End moves through construction, cabling, MDF/IDF and carrier decisions are getting locked in.<span class="score">6/8</span></td><td>The late 2028 opening gives the South End Autograph project a long runway, but carrier routes and lead times still need to enter the construction schedule early.<span class="score">8/8</span></td></tr>
+<tr><td><a href="https://www.hotel-online.com/news/widewaters-selects-schulte-hospitality-group-to-manage-its-portfolio-of-seven-hotels">Widewaters Group</a><span class="sig">Selected Schulte Hospitality Group to manage its seven-hotel portfolio as part of its next phase of growth.</span></td><td>Bill, bringing Schulte in to manage Widewaters&#x27; seven-hotel portfolio signals a meaningful new phase for the hospitality business.<span class="score">4/8</span></td><td><span class="noline">NO_LINE</span><span class="score">2/8</span></td><td><span class="noline">NO_LINE</span><span class="score">2/8</span></td></tr>
+<tr><td><a href="https://www.hotel-online.com/news/widewaters-selects-schulte-hospitality-group-to-manage-its-portfolio-of-seven-hotels">Schulte Hospitality Group</a><span class="sig">Was selected by Widewaters to manage its seven-hotel portfolio, expanding Schulte&#x27;s third-party managed footprint.</span></td><td>Sam, the addition of Widewaters&#x27; seven hotels is a meaningful expansion of Schulte&#x27;s third-party managed footprint.<span class="score">4/8</span></td><td><span class="noline">NO_LINE</span><span class="score">2/8</span></td><td><span class="noline">NO_LINE</span><span class="score">2/8</span></td></tr>
+<tr><td><a href="https://www.prnewswire.com/news-releases/marriott-international-and-noble-investment-group-break-ground-on-their-10th-studiores-hotel-scaling-new-extended-stay-brand-302551549.html">Noble Investment Group</a><span class="sig">Broke ground with Marriott International on its 10th StudioRes extended-stay hotel, part of a 50-plus project development pipeline.</span></td><td>Mit, breaking ground on a 10th StudioRes hotel gives Noble another concrete milestone within its 50-plus-project development pipeline.<span class="score">5/8</span></td><td>Mit, as the 10th StudioRes hotel moves through construction, cabling, MDF/IDF and carrier decisions are getting locked in.<span class="score">6/8</span></td><td>As the 10th StudioRes in a 50-plus-project pipeline, this build makes a repeatable cabling and network standard especially valuable for the projects behind it.<span class="score">8/8</span></td></tr>
+<tr><td><a href="https://www.hospitalitynet.org/announcement/41011844/raines-breaks-ground-on-the-shepherd-hotel-columbia-vista-in-columbia-sc">Raines Co</a><span class="sig">Broke ground on The Shepherd Hotel Columbia Vista, a 59-room boutique hotel in Columbia, SC&#x27;s Vista district, completed fall 2025.</span></td><td>David, the 59-room Shepherd Hotel Columbia Vista brings a boutique property into one of Columbia&#x27;s best-known districts.<span class="score">2/8</span></td><td>David, as the 59-room Shepherd Hotel Columbia Vista moves through construction, cabling, MDF/IDF and carrier decisions are getting locked in.<span class="score">2/8</span></td><td>The 59-room Shepherd Hotel’s fall 2025 completion makes early guest Wi-Fi performance a useful check on whether the finished cabling design holds up in operation.<span class="score">7/8</span></td></tr>
+<tr><td><a href="https://www.hospitalitynet.org/news/4131456/charlestowne-hotels-expands-national-footprint-with-impactful-development-pipeline">Charlestowne Hotels</a><span class="sig">Announced an eight-project U.S. development pipeline, including Hotel Flora, a 27-room property opening in Santa Fe, NM in July 2026.</span></td><td>Kyle, Hotel Flora&#x27;s planned July 2026 opening gives Charlestowne&#x27;s eight-project pipeline a distinctive 27-room Santa Fe property.<span class="score">2/8</span></td><td>Kyle, as the 27-room Hotel Flora in Santa Fe advances, cabling, MDF/IDF and carrier decisions are getting locked in.<span class="score">2/8</span></td><td>Hotel Flora’s July 2026 opening target put carrier activation and guest Wi-Fi commissioning on a fixed deadline for the 27-room Santa Fe property.<span class="score">8/8</span></td></tr>
+<tr><td><a href="https://www.hotel-online.com/news/franklin-marriott-cool-springs-hotel-and-conference-center-in-tennessee-unveils-10-million-renovation">Chartwell Hospitality</a><span class="sig">Completed a $10 million renovation of the 303-room Franklin Marriott Cool Springs Hotel and Conference Center in Franklin, TN.</span></td><td>The development team, the $10 million renovation across the 303-room Franklin Marriott Cool Springs is a substantial refresh for the hotel and conference center.<span class="score">2/8</span></td><td>The development team, the 303-room Franklin Marriott Cool Springs renovation depends on understanding what the existing building will and won&#x27;t support.<span class="score">2/8</span></td><td>A $10 million renovation across the 303-room Franklin Marriott and conference center creates a clear moment to verify that legacy cabling can support current network demand.<span class="score">8/8</span></td></tr>
+<tr><td><a href="https://www.hotel-online.com/news/driftwood-hospitality-management-unveils-multimillion-dollar-transformation-at-hilton-washington-dcrockville">Driftwood Hospitality Management</a><span class="sig">Completed a multimillion-dollar renovation of the Hilton Washington DC/Rockville Hotel &amp; Executive Meeting Center, its first major renovation in a decade.</span></td><td>The development team, the Hilton Washington DC/Rockville&#x27;s first major renovation in a decade is a meaningful reset for the hotel and executive meeting center.<span class="score">2/8</span></td><td>The development team, the Hilton Washington DC/Rockville renovation depends on understanding what the existing building will and won&#x27;t support.<span class="score">2/8</span></td><td>The Rockville Hilton’s first major renovation in a decade makes legacy cabling paths and network equipment a natural focus before the refreshed property settles into operations.<span class="score">8/8</span></td></tr>
+<tr><td><a href="https://www.songyhighroads.com/news/songy-highroads-breaks-ground-on-signia-by-hilton-savannah">Songy Highroads</a><span class="sig">Broke ground on the 444-room Signia by Hilton Savannah, the headquarters hotel for the Savannah Convention Center, opening mid-2028.</span></td><td>The development team, the 444-room Signia by Hilton Savannah is a major headquarters hotel project for the convention center as it moves toward a mid-2028 opening.<span class="score">2/8</span></td><td>The development team, as the 444-room Signia by Hilton Savannah moves through construction, cabling, MDF/IDF and carrier decisions are getting locked in.<span class="score">6/8</span></td><td>Serving as the Savannah Convention Center’s headquarters hotel means the Signia’s network and cabling must handle sharp swings in guest, meeting and event connectivity demand.<span class="score">8/8</span></td></tr>
+<tr><td><a href="https://therealdeal.com/national/phoenix/2025/01/24/baywood-hotels-eyes-135-room-hotel-in-goodyear-arizona/">Baywood Hotels</a><span class="sig">Announced plans for a 135-room AC Hotel by Marriott at Civic Square in Goodyear, AZ.</span></td><td>BJ, the planned 135-room AC Hotel at Civic Square gives Baywood a clear new Marriott project in Goodyear.<span class="score">5/8</span></td><td>BJ, as the 135-room AC Hotel at Civic Square advances, cabling, MDF/IDF and carrier decisions are getting locked in.<span class="score">6/8</span></td><td>For the planned 135-room AC Hotel at Civic Square, network-room locations and carrier entry paths are easiest to protect while the design is still taking shape.<span class="score">8/8</span></td></tr>
+<tr><td><a href="https://www.hospitalitynet.org/announcement/41013167/ac-hotel-arlington-national-landing-celebrates-official-ribbon-cutting-in-the-heart-of-national-landing">HHM Hotels</a><span class="sig">Celebrated the ribbon-cutting reopening of AC Hotel Arlington National Landing in Arlington, VA after a 10-month renovation.</span></td><td>The development team, reopening AC Hotel Arlington National Landing after a 10-month renovation marks a meaningful new chapter for the property.<span class="score">2/8</span></td><td>The development team, the AC Hotel Arlington National Landing renovation depends on understanding what the existing building will and won&#x27;t support.<span class="score">2/8</span></td><td>After a 10-month renovation, the reopened AC Hotel Arlington National Landing has a clear window to test whether guest Wi-Fi coverage matches the updated spaces.<span class="score">8/8</span></td></tr>
+<tr><td><a href="https://www.hotel-online.com/news/remington-hospitality-expands-managed-portfolio-with-addition-of-sheraton-indianapolis-city-centre">Remington Hospitality</a><span class="sig">Added the 378-room Sheraton Indianapolis City Centre to its managed portfolio, with plans to renovate and convert it to a Renaissance-branded hotel.</span></td><td>Ben, adding the 378-room Sheraton Indianapolis City Centre gives Remington a substantial renovation and Renaissance conversion project to manage.<span class="score">3/8</span></td><td>Ben, the 378-room Sheraton Indianapolis City Centre conversion depends on understanding what the existing building will and won&#x27;t support.<span class="score">6/8</span></td><td>Converting the 378-room Sheraton Indianapolis into a Renaissance means the existing cabling and network must be mapped against a new brand’s technology standards.<span class="score">8/8</span></td></tr>
+<tr><td><a href="https://morongonation.org/news/morongo-marnell-hospitality-and-tharaldson-hospitality-break-ground-on-new-hotel/">Marnell Hospitality</a><span class="sig">Broke ground, in a joint venture with Tharaldson Hospitality, on a 200-room dual-branded Hampton Inn and Home2 Suites on the Morongo Indian Reservation near Palm Springs, CA, opening early 2026.</span></td><td>Greg, the 200-room Hampton Inn and Home2 Suites near Palm Springs is a significant joint-venture project as it moves toward an early 2026 opening.<span class="score">2/8</span></td><td>Greg, as the 200-room Hampton Inn and Home2 Suites near Palm Springs moves through construction, cabling, MDF/IDF and carrier decisions are getting locked in.<span class="score">6/8</span></td><td>The dual-branded Hampton Inn and Home2 Suites must accommodate two sets of brand technology standards within one network, cabling and carrier plan on the Morongo reservation.<span class="score">8/8</span></td></tr>
+<tr><td><a href="https://www.businesswire.com/news/home/20250917460298/en/introducing-the-marc-hotel-from-marcus-hotels-resorts">Marcus Hotels &amp; Resorts</a><span class="sig">Announced that the west wing of Hilton Milwaukee will convert into the independent, 175-room Marc Hotel, opening January 2026.</span></td><td>Gregory, converting Hilton Milwaukee&#x27;s west wing into the independent 175-room Marc Hotel creates a distinct new property ahead of its January 2026 opening.<span class="score">5/8</span></td><td>Gregory, the 175-room Marc Hotel conversion depends on understanding what Hilton Milwaukee&#x27;s west wing will and won&#x27;t support.<span class="score">6/8</span></td><td>Converting Hilton Milwaukee’s west wing into the independent Marc Hotel means separating network, cabling and carrier requirements inside a building that will still serve two hotel identities.<span class="score">8/8</span></td></tr>
+<tr><td><a href="https://www.hospitalitynet.org/news/4125483/first-hospitality-expands-into-new-markets-opens-multiple-new-development-properties-and-launches-portfolio-verticals">First Hospitality</a><span class="sig">Opened Hotel Ardent, a Tapestry Collection by Hilton property, in Dayton, OH as part of its 2025 expansion into new markets.</span></td><td>David, Hotel Ardent&#x27;s opening in Dayton gives First Hospitality a Tapestry Collection property as part of its expansion into new markets.<span class="score">5/8</span></td><td>David, now that Hotel Ardent in Dayton is open, guest Wi-Fi performance will become clearer as rooms fill.<span class="score">5/8</span></td><td>Hotel Ardent’s opening as part of First Hospitality’s expansion into new markets makes early guest Wi-Fi performance a practical benchmark for future properties.<span class="score">7/8</span></td></tr>
+<tr><td><a href="https://www.globenewswire.com/news-release/2025/05/06/3075347/0/en/Hotel-Equities-and-Springboard-Hospitality-Announce-Strategic-Merger.html">Hotel Equities</a><span class="sig">Completed a strategic merger with Springboard Hospitality, forming a combined hotel management and development platform.</span></td><td>Ben, the Springboard Hospitality merger brings two hotel management and development operations together on one combined platform.<span class="score">4/8</span></td><td><span class="noline">NO_LINE</span><span class="score">2/8</span></td><td><span class="noline">NO_LINE</span><span class="score">2/8</span></td></tr>
+<tr><td><a href="https://www.otodevelopment.com/company/news/development">OTO Development</a><span class="sig">Opened The Morgan Hotel in Spartanburg, SC, its first property under Hilton&#x27;s Curio Collection brand.</span></td><td>The development team, opening The Morgan Hotel in Spartanburg gives OTO its first Curio Collection property and a new milestone in its development portfolio.<span class="score">4/8</span></td><td>The development team, now that The Morgan Hotel in Spartanburg is open, guest Wi-Fi performance will become clearer as rooms fill.<span class="score">5/8</span></td><td>As OTO’s first Curio Collection property, The Morgan Hotel gives the team its first operating test of that brand’s guest Wi-Fi and network requirements.<span class="score">8/8</span></td></tr>
+<tr><td><a href="https://novacancynews.com/sage-hospitality-group-and-norwood-development-group-announce-new-project-catbird-hotel-colorado-springs/">Sage Hospitality Group</a><span class="sig">Announced a new 180-room Catbird Hotel in downtown Colorado Springs, CO with Norwood Development Group, with groundbreaking expected spring 2025.</span></td><td>Daniel, the 180-room Catbird Hotel brings Sage&#x27;s extended-stay concept to downtown Colorado Springs, with completion scheduled for fall 2027.<span class="score">5/8</span></td><td>Daniel, as the 180-room Catbird Hotel in Colorado Springs advances, cabling, MDF/IDF and carrier decisions are getting locked in.<span class="score">4/8</span></td><td>A fall 2027 completion for the downtown Colorado Springs Catbird puts carrier route decisions and circuit lead times on the project schedule well before opening.<span class="score">8/8</span></td></tr>
+<tr><td><a href="https://novacancynews.com/sage-hospitality-group-and-norwood-development-group-announce-new-project-catbird-hotel-colorado-springs/">Norwood Development Group</a><span class="sig">Partnered with Sage Hospitality Group to develop a 180-room Catbird Hotel in downtown Colorado Springs, CO, with groundbreaking expected spring 2025.</span></td><td>Chris, the 180-room Catbird Hotel gives Norwood a distinctive downtown Colorado Springs project with Sage, with completion scheduled for fall 2027.<span class="score">2/8</span></td><td>Chris, as the 180-room Catbird Hotel in Colorado Springs advances, cabling, MDF/IDF and carrier decisions are getting locked in.<span class="score">4/8</span></td><td>With the Catbird scheduled for fall 2027, downtown carrier access and network-room locations need to be resolved early enough to avoid constraining the build.<span class="score">8/8</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="container proof-wrap" style="padding-top: 20px;">
+  <div class="proof-body">
+    <p class="section-label">Next</p>
+
+    <h2 id="limits">Limits, and what I'd test next</h2>
+    <p>The same model family wrote and scored the lines, which risks it favoring its own style. Next time I'd have a person spot-check ten rows, or use a different model as the scorer.</p>
+    <p>Two signals had already passed their opening dates, but the research prompt still read them as under construction. Version 4 would pass today's date in and set the stage from the dates.</p>
+    <p>Ten of the 25 source articles blocked the fetch, so those rows relied on the one-sentence signal. In Clay, a second scrape provider or a search-based enrichment would fill that gap.</p>
+    <p>This measures copy quality before sending. Reply rates are the real test, so the next step is a live split between the winning prompt and the current one.</p>
+
+    <h2 id="at-buyersight">How I'd run this at BuyerSight</h2>
+    <p>Every new client segment would get the same loop before its first campaign: two or three prompt versions on 25 real prospects, blind scoring against a rubric written for that client's offer, and a one-page knowledge base entry on what changed and why. The winning prompt becomes the default for that client, and live reply data decides the next version.</p>
+    <p>Over time, the knowledge base becomes a record of which kinds of detail earn replies in which markets. New clients start from that record instead of a blank prompt.</p>
+  </div>
+
+  <div class="button-row" style="margin-top: 40px;">
+    <a href="/work/buyersight/" class="button button-primary">Back to the pitch</a>
+    <a href="/work/buyersight/files/james-praise-resume.pdf" target="_blank" class="button button-secondary">My Resume</a>
+  </div>
+</div>
+
+<script src="/script.js?v=11"></script>
+<script>
+(function () {
+  var bar = document.getElementById('proofProgressBar');
+  function updateProgress() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.proof-toc a'));
+  var sections = tocLinks.map(function (a) {
+    return document.getElementById(a.getAttribute('href').slice(1));
+  });
+  function updateActiveToc() {
+    var current = null;
+    sections.forEach(function (sec, i) {
+      if (sec && sec.getBoundingClientRect().top <= 140) current = i;
+    });
+    tocLinks.forEach(function (a, i) {
+      a.classList.toggle('is-active', i === current);
+    });
+  }
+  window.addEventListener('scroll', updateActiveToc, { passive: true });
+  updateActiveToc();
+})();
+</script>
+</body>
+</html>
