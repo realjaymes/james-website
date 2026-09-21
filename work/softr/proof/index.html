@@ -119,48 +119,48 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span><strong>James Praise</strong> &middot; Marketing and GTM Operator</span>
   </div>
 
-  <p class="proof-note">Everything on this page is something I verified myself. I signed up for Softr, built an app end to end with the AI Co-Builder and screenshotted all 26 steps on 9 September 2026, then checked the live pricing page, Softr's active Meta ad (Ad Library ID 934410379482637) and the Google Ads Transparency Center record for Softr Platforms GmbH. I have not seen your funnel data, your retention curves or your credit consumption. Anything that needs those to answer is in the <a href="#questions">open questions</a> at the bottom rather than dressed up as a proposal.</p>
+  <p class="proof-note">Everything on this page is something I checked myself. I signed up for Softr, built an app end to end with the AI Co-Builder and screenshotted all 26 steps on 9 September 2026, then went through the live pricing page, Softr's active Meta ad (Ad Library ID 934410379482637) and the Google Ads Transparency Center record for Softr Platforms GmbH. I haven't seen your funnel data, your retention curves or your credit consumption. Anything that needs those to answer sits in the <a href="#questions">open questions</a> at the bottom instead of being dressed up as a proposal.</p>
 
   <div class="proof-draft">
     <p class="section-label">The teardown</p>
 
     <h2 id="what-i-reviewed">What I reviewed</h2>
-    <p>I went through the funnel stage by stage, the way I review any product before I write about it. That covered the logged-out marketing site and the pricing page, one complete build inside the AI Co-Builder from a single typed prompt to a finished app, the public-facing form that build produced, and the publish flow with whatever it gates. Eleven findings came out of it. They are below in the order a user meets them.</p>
+    <p>I went through the funnel stage by stage. That covered the logged-out marketing site and the pricing page, one complete build inside the AI Co-Builder from a single typed prompt to a finished app, the public form that build produced, and the publish flow with whatever it gates. Eleven findings came out of it, and they're below in the order a user meets them.</p>
 
     <h2 id="awareness">Awareness and acquisition</h2>
 
     <h3>The marketing site and the founders say the same thing, word for word</h3>
-    <p>The homepage headline is "Build secure portals and internal tools, no developer required," with a "Looking to migrate from Airtable to Softr?" banner above the fold. That is the same Airtable displacement pitch Mariam and Artur both run personally on LinkedIn, down to the comparison points. Company voice and founder voice are genuinely aligned, which is rarer than it sounds.</p>
+    <p>The homepage headline is "Build secure portals and internal tools, no developer required," with a "Looking to migrate from Airtable to Softr?" banner above the fold. That's the same Airtable displacement pitch Mariam and Artur both run personally on LinkedIn, down to the comparison points. The company line and the founders' own posts say the same thing in the same words, which is not how it usually goes.</p>
     <figure class="proof-shot"><img src="/assets/images/case-studies/softr/homepage-hero.jpg" alt="Softr homepage hero with the Airtable migration banner above the fold" loading="lazy" /><figcaption>The logged-out homepage. Reaching it required a query parameter, for the reason in the next finding.</figcaption></figure>
-    <p>One gap is worth naming. Softr's live Meta ad creative is fully AI-native ("Build Real Business Software With AI," "No code. No developers. No prototypes"), so the homepage hero's "no developer required" framing now lags both the founders' current voice and the company's own paid acquisition messaging.</p>
+    <p>There's one gap in it. Softr's live Meta ad creative is fully AI-native ("Build Real Business Software With AI," "No code. No developers. No prototypes"), so the homepage hero's "no developer required" framing now sits behind both the founders' current voice and the company's own paid acquisition messaging.</p>
 
     <h3>For an existing user, the marketing site is not part of the funnel at all</h3>
-    <p>My first navigation to softr.io redirected straight to the dashboard, with a small toast reading "You were automatically redirected from softr.io website" and an escape hatch link. Clicking "Start for free" from the pricing page while signed in did the same thing and dropped me directly into the Co-Builder prompt box. That is a deliberate choice rather than a bug, and it means the fastest path back into the product is treated as worth more than any marketing surface.</p>
+    <p>My first navigation to softr.io redirected straight to the dashboard, with a small toast reading "You were automatically redirected from softr.io website" and an escape hatch link. Clicking "Start for free" from the pricing page while signed in did the same thing and dropped me directly into the Co-Builder prompt box. That's a deliberate choice, not a bug. It means the fastest path back into the product is treated as worth more than any marketing surface.</p>
     <figure class="proof-shot"><img src="/assets/images/case-studies/softr/logged-in-redirect.jpg" alt="Softr auto-redirecting a logged-in visitor from the marketing site to the dashboard" loading="lazy" /><figcaption>The redirect toast. Seeing the homepage a logged-out visitor sees took a manual override.</figcaption></figure>
 
     <h3>Pricing is metered by AI credits, not seats or records</h3>
-    <p>Free gives 5 credits a month. Basic is $19 a month for 10 credits and a custom domain. Pro is $99 a month for 50 credits, and it is the tier that removes Softr branding. Business is $329 a month for 100 credits and carries the "Popular" tag. Every tier headline is a credit allowance, so credits are the metering unit the whole ladder is built on.</p>
+    <p>Free gives 5 credits a month. Basic is $19 a month for 10 credits and a custom domain. Pro is $99 a month for 50 credits, and it's the tier that removes Softr branding. Business is $329 a month for 100 credits and carries the "Popular" tag. Every tier headline is a credit allowance, so credits are the metering unit the whole ladder is built on.</p>
     <figure class="proof-shot"><img src="/assets/images/case-studies/softr/pricing-credits.jpg" alt="Softr pricing page with AI credit allowances as the headline number on every tier" loading="lazy" /><figcaption>Branding removal unlocks at Pro, which is what makes every free and Basic app a branded surface.</figcaption></figure>
 
     <h2 id="activation">The build itself</h2>
 
     <h3>The Co-Builder's real value is the questions it asks, not the generation</h3>
     <p>I gave it one plain sentence: a simple app to track event feedback, a form where attendees submit a rating and comment, and a dashboard showing the average rating and a list of comments. Nothing more specific than that. Instead of generating immediately it opened a three-step flow and started asking questions.</p>
-    <p>It asked whether attendees need to sign in, whether feedback should tie to specific events, and what rating scale to use, offering stars, a ten-point scale, thumbs or Net Promoter Score. None of those were in my prompt, and none of them were generic. They were the exact decisions a product person would need settled before building this.</p>
+    <p>It asked whether attendees need to sign in, whether feedback should tie to specific events, and what rating scale to use, offering stars, a ten-point scale, thumbs or Net Promoter Score. None of that was in my prompt. They were the exact decisions a product person would need settled before building this, and it asked them in the order you'd actually hit them.</p>
     <figure class="proof-shot"><img src="/assets/images/case-studies/softr/cobuilder-question-1.jpg" alt="The Co-Builder asking whether attendees should sign in before submitting feedback" loading="lazy" /><figcaption>The first clarifying question, with numbered quick picks and a free-text option.</figcaption></figure>
-    <figure class="proof-shot"><img src="/assets/images/case-studies/softr/cobuilder-question-3.jpg" alt="The Co-Builder asking which rating scale the app should use" loading="lazy" /><figcaption>The third question. This is the moment the product stops feeling like a text box and starts feeling like a colleague.</figcaption></figure>
-    <p class="proof-quote">This is the aha moment, and it is a harder thing to market than "type a prompt, get an app," because the value only shows up once you are inside it.</p>
+    <figure class="proof-shot"><img src="/assets/images/case-studies/softr/cobuilder-question-3.jpg" alt="The Co-Builder asking which rating scale the app should use" loading="lazy" /><figcaption>The third question. By this point it's asking better questions than most briefs I get.</figcaption></figure>
+    <p class="proof-quote">This is the aha moment, and it's harder to market than "type a prompt, get an app," because you only feel it once you're inside the build.</p>
 
     <h3>Access and permissions are part of the build conversation, not a settings page</h3>
-    <p>Login method and signup policy get their own dedicated step. The live preview panel updated in real time to show an "Invite only" badge the moment I picked it. For a product whose wedge is real business software rather than prototypes, putting permissions inside the build conversation is the right call and worth saying out loud in the marketing.</p>
+    <p>Login method and signup policy get their own dedicated step. The live preview panel updated in real time to show an "Invite only" badge the moment I picked it. For a product whose wedge is working business software instead of prototypes, putting permissions inside the build conversation is the right call, and it's worth saying out loud in the marketing.</p>
     <figure class="proof-shot"><img src="/assets/images/case-studies/softr/signup-policy-step.jpg" alt="Softr asking whether people can sign up on their own, with open, invite-only and domain-restricted options" loading="lazy" /><figcaption>Signup policy asked as a first-class question during the build.</figcaption></figure>
 
     <h3>Theming is visual and immediate</h3>
-    <p>Navigation layout gets picked with real visual icons rather than a dropdown. The theme gallery uses named palettes, Fjord, Denim, Zen, Cyber and a dozen more, and selecting one renders a real typography and chart preview rather than a static swatch.</p>
+    <p>You pick navigation layout from visual icons, not a dropdown. The theme gallery uses named palettes, Fjord, Denim, Zen, Cyber and a dozen more, and picking one renders a working typography and chart preview instead of a static swatch.</p>
     <figure class="proof-shot"><img src="/assets/images/case-studies/softr/theme-gallery.jpg" alt="The Softr theme gallery showing named colour palettes with live previews" loading="lazy" /><figcaption>Named themes with live previews, not a settings page you configure blind.</figcaption></figure>
 
     <h3>The build agent has a name and narrates itself in plain English</h3>
-    <p>The agent is branded Rolli rather than "AI" or "Assistant," and its progress log reads like a person explaining their work: "I've created a new database for your event feedback app," "I've set up the relationships between your tables," "No derived fields were needed for this app's current schema." Total time from my first prompt to a working app with sample data and a live public form was well under two minutes.</p>
+    <p>The agent is branded Rolli rather than "AI" or "Assistant," and its progress log reads like a person explaining their work: "I've created a new database for your event feedback app," "I've set up the relationships between your tables," "No derived fields were needed for this app's current schema." It took well under two minutes to get from my first prompt to a working app with sample data and a live public form.</p>
     <figure class="proof-shot"><img src="/assets/images/case-studies/softr/rolli-build-plan.jpg" alt="Rolli, the Softr build agent, crafting a plan and narrating each step" loading="lazy" /><figcaption>Rolli narrating the plan before executing it.</figcaption></figure>
 
     <h2 id="attribution">The attribution gap</h2>
@@ -169,10 +169,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p>Mid-build, a small "Help me improve while I build" popup asked where I heard about Softr. The fixed list offers another AI tool, ChatGPT, an event or webinar, a newsletter, blog or article, Google, and School. Typing LinkedIn into the search box returns "No matches found."</p>
     <figure class="proof-shot"><img src="/assets/images/case-studies/softr/attribution-options.jpg" alt="The Softr attribution survey option list, which does not include LinkedIn" loading="lazy" /><figcaption>The full fixed option list.</figcaption></figure>
     <figure class="proof-shot"><img src="/assets/images/case-studies/softr/attribution-no-linkedin.jpg" alt="Typing LinkedIn into the Softr attribution survey returns no matches" loading="lazy" /><figcaption>Typing LinkedIn returns nothing.</figcaption></figure>
-    <p>LinkedIn is where Mariam and Artur post multiple times a week, and where Shiran posted the hiring call for this role. The channel the team is most visibly active on is not one the product asks new users about. Every user who arrived that way gets recorded as Other, or picks the nearest wrong answer. The wrong answer is the worse outcome, because a blank is obviously missing and a wrong attribution quietly moves budget.</p>
+    <p>LinkedIn is where Mariam and Artur post multiple times a week, and where Shiran posted the hiring call for this role. The channel the team is most visibly active on isn't one the product asks new users about. So everyone who arrived that way gets filed as Other, or picks the nearest wrong answer. The wrong answer is the one that costs you. A blank is obviously missing and somebody goes looking. A wrong attribution just quietly moves budget.</p>
 
     <h3>One permission label did not match what I chose</h3>
-    <p>I chose anonymous submission with no sign-in for the feedback form. The generated page's own access setting reads "All logged-in users." Because signup was set to invite-only there was no public account creation path to test it against, so this reads as a default label rather than an access bug. It is still the kind of small onboarding clarity gap that costs activation.</p>
+    <p>I chose anonymous submission with no sign-in for the feedback form. The generated page's own access setting reads "All logged-in users." Signup was set to invite-only, so there was no public account creation path to test it against, and this reads as a default label rather than an access bug. It's still the kind of small confusion that costs you activation.</p>
     <figure class="proof-shot"><img src="/assets/images/case-studies/softr/permission-mismatch.jpg" alt="The Submit Feedback page permission reading All logged-in users after anonymous access was selected" loading="lazy" /><figcaption>Anonymous was selected. The page setting says otherwise.</figcaption></figure>
 
     <h2 id="publish">Publishing and retention</h2>
@@ -182,13 +182,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <figure class="proof-shot"><img src="/assets/images/case-studies/softr/app-complete.jpg" alt="The finished Softr app dashboard with live stat tiles and sample feedback data" loading="lazy" /><figcaption>Two minutes from a single sentence, with sample data included.</figcaption></figure>
 
     <h3>Publishing is free, and looking like a real business is the upsell</h3>
-    <p>Publishing to a free subdomain is not gated at all, even on a fresh trial. The upsell arrives one step later, when adding a custom domain requires Basic or above. That is a clean freemium wedge. The thing that proves the product works costs nothing, and the thing that makes it look like a real business costs money. A persistent trial day counter sits in the top navigation the whole time, a low-key reminder rather than an interrupting modal.</p>
+    <p>Publishing to a free subdomain isn't gated at all, even on a fresh trial. The upsell arrives one step later, when adding a custom domain needs Basic or above. That's a clean freemium wedge: proving the product works costs nothing, and making it look like your own business is what you pay for. A trial day counter sits in the top navigation the whole time, which is a quieter way to do it than an interrupting modal.</p>
     <figure class="proof-shot"><img src="/assets/images/case-studies/softr/publish-domain-gate.jpg" alt="The Softr publish flow offering a free subdomain with custom domain gated behind a paid plan" loading="lazy" /><figcaption>Free subdomain, paid custom domain. The free subdomain is also what makes Experiment 4 possible.</figcaption></figure>
 
     <p class="section-label">The backlog</p>
 
     <h2 id="scoring">How I scored it</h2>
-    <p>I used ICEEE, which is five components each scored from one to ten. Impact and Confidence score the upside and how sure the evidence makes me. The three Effort scores, for engineering, marketing and everything else, are inverted, so ten means almost no effort and one means a large build. The total is the average. Inverting effort is the part that matters, because it keeps a cheap, certain, medium-impact test ahead of an expensive moonshot.</p>
+    <p>I used ICEEE. Five components, each scored one to ten. Impact and Confidence cover the upside and how sure the evidence makes me. The three Effort scores, for engineering, marketing and everything else, run inverted, so ten means almost no effort and one means a big build. The total is the average. Inverting effort is the part that does the work here, because it keeps a cheap, certain, medium-impact test ahead of an expensive moonshot.</p>
     <div class="proof-table-wrap">
       <table class="proof-table">
         <tr><th>Experiment</th><th>Stage</th><th>Impact</th><th>Conf.</th><th>Eng</th><th>Mktg</th><th>Other</th><th>Total</th></tr>
@@ -201,48 +201,48 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <h2 id="experiment-1">Experiment 1. Fix the self-reported attribution instrument <span class="proof-score">8.8</span></h2>
     <p><strong>The finding.</strong> Softr's in-build attribution survey asks new users where they heard about it, and LinkedIn is not one of the options.</p>
-    <p><strong>Why it matters.</strong> LinkedIn is where the founders and the marketing lead both do their public work, and where this role was posted. The company's loudest channel cannot appear in its own self-reported attribution data, so every user who arrived through a founder post is recorded as something else.</p>
-    <p><strong>The experiment.</strong> Add LinkedIn as an option, keep a free-text Other, and hold the survey otherwise identical for four weeks. Read the share of responses LinkedIn takes, and read what it takes that share from. The second number is the interesting one, because it tells you which channel has been over-credited.</p>
-    <p><strong>What it changes.</strong> This is not a growth tactic on its own. It repairs the measurement instrument that every later channel decision reads from, which is why it scores highest on this list despite being the smallest build.</p>
+    <p><strong>Why it matters.</strong> LinkedIn is where the founders and the marketing lead both do their public work, and where this role was posted. Your loudest channel can't show up in your own self-reported attribution data, so everyone who arrived through a founder post is recorded as something else.</p>
+    <p><strong>The experiment.</strong> Add LinkedIn as an option, keep a free-text Other, and hold the survey otherwise identical for four weeks. Then read two numbers: the share of responses LinkedIn takes, and what it takes that share from. The second one is the interesting one. It tells you which channel has been getting credit it didn't earn.</p>
+    <p><strong>What it changes.</strong> On its own it moves nothing. It repairs the instrument every later channel decision reads from, which is why it scores highest on the list while also being the smallest build.</p>
 
     <h2 id="experiment-2">Experiment 2. Build a share loop into the moment the app is generated <span class="proof-score">7.4</span></h2>
     <p><strong>The finding.</strong> The Co-Builder's strongest moment is the three clarifying questions it asks before it builds, and the app is live with sample data and a working public form in under two minutes.</p>
-    <p><strong>Why it matters.</strong> That two-minute mark is the "I just built software" moment, and right now nothing happens with it. Lovable, Webflow and Claude Artifacts all convert the same moment into distribution by making the output trivially shareable at the instant of pride. Softr produces the pride and lets it go.</p>
+    <p><strong>Why it matters.</strong> That two-minute mark is the "I just built software" moment, and right now nothing happens with it. Lovable, Webflow and Claude Artifacts all turn the same moment into distribution, by making the output easy to share at the exact second someone feels good about it. Softr creates that feeling and then leaves it sitting there.</p>
     <p><strong>The experiment.</strong> At build completion, offer a one-click share: a public link plus a pre-rendered image of the app, phrased in the builder's terms rather than the marketer's. Measure share rate, click-through on shared links, and signups attributed to them.</p>
-    <p><strong>The honest constraint.</strong> This is a product build, not a marketing campaign, so it needs engineering time and a product partner. That is why it scores 5 on engineering effort and sits second rather than first.</p>
+    <p><strong>The constraint.</strong> This is a product build, not a marketing campaign, so it needs engineering time and a product partner. That's why it scores 5 on engineering effort and sits second.</p>
 
     <h2 id="experiment-4">Experiment 3. Run win-back as an owned channel, not only paid search <span class="proof-score">7.0</span></h2>
     <p><strong>The finding.</strong> Softr already runs a sophisticated win-back campaign in paid search. The Google Ads Transparency Center record for Softr Platforms GmbH shows "Not The Softr You Left, No Code No Hallucinations" and "The platform you knew just got a massive upgrade," with a "Come Back To A Better Softr" link, inside 83 active ads.</p>
-    <p><strong>Why it matters.</strong> Someone has already made the strategic call that lapsed users are worth reactivating, and someone has already written the message. It is running in the most expensive channel available. From the outside I can see no sign of the same message in email or in-app, where the same audience is addressable at close to zero marginal cost.</p>
-    <p><strong>The experiment.</strong> Port the message to owned channels against the lapsed list, segmented by how far each user got before they dropped, and measure reactivation per channel against the paid baseline. A user who never finished a build and a user who published and then stopped are two different problems wearing the same label.</p>
+    <p><strong>Why it matters.</strong> Someone has already decided lapsed users are worth winning back, and someone has already written the copy. It's running in the most expensive channel available to you. From outside I can see no sign of that same message in email or in-app, where you can reach the same people for almost nothing.</p>
+    <p><strong>The experiment.</strong> Run the same message to the lapsed list over email and in-app, segmented by how far each person got before they dropped, and measure reactivation per channel against the paid baseline. Someone who never finished a build needs a different message from someone who published and then stopped, even though both show up as lapsed.</p>
 
     <h2 id="experiment-3">Experiment 4. A Made with Softr showcase <span class="proof-score">6.4</span></h2>
     <p><strong>The finding.</strong> Free and Basic apps carry Softr branding by default, because branding removal unlocks at Pro, $99 a month. Every free and Basic app published is already a branded surface in the world.</p>
-    <p><strong>Why it matters.</strong> Webflow took the identical surface and built Made in Webflow, a public, indexed, ranking gallery that converts. Softr has the badge and not the gallery, which means the distribution exists and the capture does not.</p>
+    <p><strong>Why it matters.</strong> Webflow took the same surface and built Made in Webflow, a public gallery that gets indexed, ranks, and converts. Softr already ships the badge. Nothing catches what it brings back.</p>
     <p><strong>The experiment.</strong> Build a public showcase from apps whose owners opt in, with per-app pages that can rank in search. The template gallery's existing 100-plus pages are the structural precedent, since those already have dedicated indexed pages and carry no social proof on them at all.</p>
-    <p><strong>Why it scores lowest.</strong> It needs opt-in mechanics, a moderation path and real content operations before it returns anything, and the payoff compounds slowly. It is the right project for a quarter, not for a first month.</p>
+    <p><strong>Why it scores lowest.</strong> It needs opt-in mechanics, a moderation path and someone running content operations before it returns anything, and the payoff builds slowly. I'd put it in a quarterly plan, not a first month.</p>
 
     <p class="section-label">The open questions</p>
 
     <h2 id="questions">Four things I could not answer from outside</h2>
-    <p>These came out of the research as genuine unknowns. Each one needs data Softr has and I do not, so proposing a solution would be guessing. I would rather bring you the question.</p>
+    <p>Each of these needs data you have and I don't, so proposing a fix would just be guessing. I'd rather bring you the question.</p>
     <div class="proof-cards">
       <div class="proof-card"><strong>Are any of the 100-plus templates third-party built?</strong><span>And if so, does the Expert Program's 30 percent revenue share extend to template creators? A creator economy around templates is a different growth engine from a content library, and the answer changes which one this is.</span></div>
-      <div class="proof-card"><strong>Is "Hire a Softr Partner" a manual matching service or a browsable marketplace?</strong><span>If it is manual, I would want to know whether it is hitting a ceiling, because that is usually the point where the marketplace version pays for itself.</span></div>
-      <div class="proof-card"><strong>Is Model Context Protocol (MCP) being marketed as an acquisition channel?</strong><span>Registries and developer content make it one. Shipping it as a feature and leaving it there makes it a line on a comparison table. I cannot tell from outside which decision has been made.</span></div>
-      <div class="proof-card"><strong>Does the influencer channel overlap the founder-led audience?</strong><span>The influencer programme runs at real scale, 200-plus collaborations and 800-plus deliverables. Whether that audience overlaps the one the founders reach on LinkedIn, or runs as a separate silo, decides whether the two should be coordinated or deliberately kept apart.</span></div>
+      <div class="proof-card"><strong>Is "Hire a Softr Partner" a manual matching service or a browsable marketplace?</strong><span>If it's manual, I'd want to know whether it's hitting a ceiling, because that's usually the point where building the marketplace version pays for itself.</span></div>
+      <div class="proof-card"><strong>Is Model Context Protocol (MCP) being marketed as an acquisition channel?</strong><span>Registries and developer content would make it one. Shipped as a feature and left alone, it's a line on a comparison table. I can't tell from outside which of those happened.</span></div>
+      <div class="proof-card"><strong>Does the influencer channel overlap the founder-led audience?</strong><span>The influencer programme runs at serious scale, 200-plus collaborations and 800-plus deliverables. If that audience overlaps the one the founders reach on LinkedIn, the two should be coordinated. If it doesn't, keeping them apart is the point. I can't tell which from outside.</span></div>
     </div>
 
     <p class="section-label">The first thirty days</p>
 
     <h2 id="first-30-days">What I would do in the first thirty days</h2>
-    <p>This backlog was built from the outside, which is exactly why I would not run it as written on day one. I would spend the first month replacing my assumptions with your data.</p>
+    <p>I built this backlog from outside, which is exactly why I wouldn't run it as written on day one. I'd spend the first month swapping my assumptions for your data.</p>
     <ol>
-      <li><strong>I would learn the funnel before I touch it.</strong> I want to know how Softr defines an activated user today, where the self-serve funnel actually leaks between signup and a published app, and which of these tests someone has already run.</li>
-      <li><strong>I would ship the attribution fix in week one.</strong> It is the smallest build on the list and every later channel decision reads from that instrument, so it goes first regardless of what else I learn.</li>
-      <li><strong>I would answer the four open questions with internal data.</strong> I wrote them as questions rather than proposals because guessing at them would waste your time, and each one changes which growth engine Softr is actually running.</li>
-      <li><strong>I would take the share loop to Product as a joint experiment.</strong> It is a product build, not a campaign, so it needs an engineering partner and a slot on a roadmap, not a marketing brief.</li>
-      <li><strong>I would rebuild this backlog from what I find.</strong> The scores here are honest, and they are also built on public evidence only. The version that matters is the one scored against your retention curves and your credit consumption data.</li>
+      <li><strong>I'd learn the funnel before I touch it.</strong> I want to know how Softr defines an activated user today, where the self-serve funnel actually leaks between signup and a published app, and which of these tests someone has already run and shelved.</li>
+      <li><strong>I'd ship the attribution fix in week one.</strong> It's the smallest build on the list and every later channel decision reads from it, so it goes first whatever else I find.</li>
+      <li><strong>I'd answer the four open questions with internal data.</strong> I left them as questions because guessing would waste your time, and each answer changes which growth engine Softr is actually running.</li>
+      <li><strong>I'd take the share loop to Product as a joint experiment.</strong> It's a product build, not a campaign, so it needs an engineering partner and a slot on a roadmap, not a marketing brief.</li>
+      <li><strong>I'd rebuild this backlog from what I find.</strong> These scores are the best I can do on public evidence. The version worth acting on is the one scored against your retention curves and your credit consumption.</li>
     </ol>
   </div>
 
@@ -250,8 +250,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="section-label">Why I built it this way</p>
 
     <h2 id="reasoning">Findings, not opinions</h2>
-    <p>I set one rule before I started. Everything on the pitch page and in this backlog has to be something I verified myself, with a screenshot or a public record behind it. Anything that depends on data I cannot see goes in the open questions instead, even when I have a strong hunch about the answer.</p>
-    <p>That rule is why this document is shorter than it could have been. I found other things I thought were gaps and then disproved them. I assumed the comparison content was thin until I found the 23-page comparison hub. I assumed the ambassador tier was missing until I found the programme and the person who runs it. Both ideas died, and they are not on this page, because a backlog that includes things I did not check is a backlog you cannot trust the rest of.</p>
+    <p>I set one rule before I started. Everything on the pitch page and in this backlog had to be something I'd checked myself, with a screenshot or a public record behind it. Anything resting on data I can't see went into the open questions instead, even where I had a strong hunch.</p>
+    <p>That rule is why this is shorter than it could have been. I found other things I thought were gaps and then talked myself out of them. I assumed the comparison content was thin until I found the 23-page comparison hub. I assumed there was no ambassador tier until I found the programme and the person who runs it. Both ideas died, and neither one is on this page. If I'd left them in, you'd have no way of knowing which of the rest I actually checked.</p>
   </div>
 
   <div class="button-row" style="margin-top: 40px;">
