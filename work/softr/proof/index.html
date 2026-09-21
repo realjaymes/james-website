@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WKSZ7DQC');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A Teardown and a Scored Backlog — James Praise</title>
+<meta name="description" content="A full-funnel teardown of Softr and a scored growth experiment backlog for the self-serve motion, by James Praise." />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+<link rel="canonical" href="https://jamespraise.xyz/work/softr/proof/" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=20" />
+<style>
+  .proof-wrap { max-width: 760px; margin: 0 auto; padding: 100px 0 80px; }
+  .proof-eyebrow { color: var(--color-purple); font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; font-size: 13px; margin-bottom: 10px; }
+  .proof-credit { display: flex; align-items: center; gap: 10px; margin: 20px 0 40px; }
+  .proof-credit img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+  .proof-credit span { color: var(--text-muted); font-size: 14px; }
+  .proof-credit strong { color: var(--text-primary); }
+  .proof-note { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 8px; padding: 16px 20px; font-size: 14px; color: var(--text-muted); margin-bottom: 40px; }
+  .proof-draft { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 12px; padding: 40px; margin-bottom: 56px; }
+  .proof-draft h2 { margin-top: 44px; margin-bottom: 10px; }
+  .proof-draft h2:first-of-type { margin-top: 0; }
+  .proof-draft h3 { margin-top: 28px; margin-bottom: 8px; font-size: 18px; }
+  .proof-draft p, .proof-body p, .proof-draft li { line-height: 1.7; }
+  .proof-draft ul, .proof-draft ol { padding-left: 20px; margin: 10px 0 18px; }
+  .proof-draft li { margin-bottom: 6px; }
+  .proof-body h2 { margin-top: 40px; margin-bottom: 12px; }
+  .proof-back { display: inline-block; margin-bottom: 24px; font-size: 14px; }
+  .section-label { font-size: 13px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-cards { display: grid; grid-template-columns: 1fr; gap: 14px; margin: 24px 0; }
+  .proof-card { background: var(--bg-page); border: 1px solid rgba(28,20,34,0.1); border-radius: 10px; padding: 18px; }
+  .proof-card strong { display: block; font-size: 15px; margin-bottom: 6px; color: var(--text-primary); }
+  .proof-card span { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+  .proof-quote { border-left: 3px solid var(--color-purple); padding: 4px 0 4px 22px; margin: 28px 0; font-size: 19px; font-weight: 600; line-height: 1.5; color: var(--text-primary); }
+  .proof-shot { margin: 18px 0 26px; }
+  .proof-shot img { width: 100%; border-radius: 8px; border: 1px solid rgba(28,20,34,0.12); display: block; }
+  .proof-shot figcaption { font-size: 12px; color: var(--text-muted); margin-top: 6px; }
+  .proof-table-wrap { overflow-x: auto; margin: 20px 0; }
+  .proof-table { width: 100%; border-collapse: collapse; font-size: 13px; background: var(--bg-page); border-radius: 10px; overflow: hidden; }
+  .proof-table th { background: var(--bg-surface); text-align: left; padding: 10px 12px; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-muted); border-bottom: 1px solid rgba(28,20,34,0.1); }
+  .proof-table td { padding: 10px 12px; border-bottom: 1px solid rgba(28,20,34,0.08); color: var(--text-primary); line-height: 1.5; vertical-align: top; }
+  .proof-table tr:last-child td { border-bottom: none; }
+  .proof-table td.num { text-align: right; white-space: nowrap; font-weight: 700; }
+  .proof-score { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.03em; color: var(--color-purple); background: rgba(120,60,200,0.08); padding: 1px 6px; border-radius: 4px; white-space: nowrap; }
+  .proof-toc { position: fixed; top: 140px; right: 32px; width: 200px; font-size: 13px; }
+  .proof-toc-group { margin-bottom: 20px; }
+  .proof-toc-label { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-toc a { display: block; padding: 5px 0 5px 12px; border-left: 2px solid rgba(28,20,34,0.1); color: var(--text-muted); text-decoration: none; line-height: 1.4; }
+  .proof-toc a:hover { color: var(--color-purple); border-left-color: var(--color-purple); }
+  .proof-toc a.is-active { color: var(--color-purple); border-left-color: var(--color-purple); font-weight: 700; }
+  @media (max-width: 1400px) { .proof-toc { display: none; } }
+  @media (max-width: 640px) { .proof-draft { padding: 24px 18px; } }
+  .proof-progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(28,20,34,0.08); z-index: 200; }
+  .proof-progress-bar { height: 100%; width: 0%; background: var(--color-purple); transition: width 0.1s linear; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKSZ7DQC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="proof-progress-track"><div class="proof-progress-bar" id="proofProgressBar"></div></div>
+
+<a href="/work/softr/" class="pitch-exit" aria-label="Back to the Softr pitch">
+  <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+</a>
+
+<nav class="proof-toc" aria-label="Section navigation">
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The teardown</p>
+    <a href="#what-i-reviewed">What I reviewed</a>
+    <a href="#awareness">Awareness and acquisition</a>
+    <a href="#activation">The build itself</a>
+    <a href="#attribution">The attribution gap</a>
+    <a href="#publish">Publishing and retention</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The backlog</p>
+    <a href="#scoring">How I scored it</a>
+    <a href="#experiment-1">1. Attribution instrument</a>
+    <a href="#experiment-2">2. Share loop</a>
+    <a href="#experiment-4">3. Owned win-back</a>
+    <a href="#experiment-3">4. Made with Softr</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The open questions</p>
+    <a href="#questions">Four I could not answer</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">Why I built it this way</p>
+    <a href="#reasoning">Findings, not opinions</a>
+  </div>
+</nav>
+
+<div class="container proof-wrap">
+  <a class="proof-back" href="/work/softr/">&larr; Back to the Softr pitch</a>
+
+  <p class="proof-eyebrow">A brief for Softr</p>
+  <h1>A Teardown and a Scored Backlog</h1>
+
+  <div class="proof-credit">
+    <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+    <span><strong>James Praise</strong> &middot; Marketing and GTM Operator</span>
+  </div>
+
+  <p class="proof-note">Everything on this page is something I verified myself. I signed up for Softr, built an app end to end with the AI Co-Builder and screenshotted all 26 steps on 9 September 2026, then checked the live pricing page, Softr's active Meta ad (Ad Library ID 934410379482637) and the Google Ads Transparency Center record for Softr Platforms GmbH. I have not seen your funnel data, your retention curves or your credit consumption. Anything that needs those to answer is in the <a href="#questions">open questions</a> at the bottom rather than dressed up as a proposal.</p>
+
+  <div class="proof-draft">
+    <p class="section-label">The teardown</p>
+
+    <h2 id="what-i-reviewed">What I reviewed</h2>
+    <p>I went through the funnel stage by stage, the way I review any product before I write about it. That covered the logged-out marketing site and the pricing page, one complete build inside the AI Co-Builder from a single typed prompt to a finished app, the public-facing form that build produced, and the publish flow with whatever it gates. Eleven findings came out of it. They are below in the order a user meets them.</p>
+
+    <h2 id="awareness">Awareness and acquisition</h2>
+
+    <h3>The marketing site and the founders say the same thing, word for word</h3>
+    <p>The homepage headline is "Build secure portals and internal tools, no developer required," with a "Looking to migrate from Airtable to Softr?" banner above the fold. That is the same Airtable displacement pitch Mariam and Artur both run personally on LinkedIn, down to the comparison points. Company voice and founder voice are genuinely aligned, which is rarer than it sounds.</p>
+    <figure class="proof-shot"><img src="/assets/images/case-studies/softr/homepage-hero.jpg" alt="Softr homepage hero with the Airtable migration banner above the fold" loading="lazy" /><figcaption>The logged-out homepage. Reaching it required a query parameter, for the reason in the next finding.</figcaption></figure>
+    <p>One gap is worth naming. Softr's live Meta ad creative is fully AI-native ("Build Real Business Software With AI," "No code. No developers. No prototypes"), so the homepage hero's "no developer required" framing now lags both the founders' current voice and the company's own paid acquisition messaging.</p>
+
+    <h3>For an existing user, the marketing site is not part of the funnel at all</h3>
+    <p>My first navigation to softr.io redirected straight to the dashboard, with a small toast reading "You were automatically redirected from softr.io website" and an escape hatch link. Clicking "Start for free" from the pricing page while signed in did the same thing and dropped me directly into the Co-Builder prompt box. That is a deliberate choice rather than a bug, and it means the fastest path back into the product is treated as worth more than any marketing surface.</p>
+    <figure class="proof-shot"><img src="/assets/images/case-studies/softr/logged-in-redirect.jpg" alt="Softr auto-redirecting a logged-in visitor from the marketing site to the dashboard" loading="lazy" /><figcaption>The redirect toast. Seeing the homepage a logged-out visitor sees took a manual override.</figcaption></figure>
+
+    <h3>Pricing is metered by AI credits, not seats or records</h3>
+    <p>Free gives 5 credits a month. Basic is $19 a month for 10 credits and a custom domain. Pro is $99 a month for 50 credits, and it is the tier that removes Softr branding. Business is $329 a month for 100 credits and carries the "Popular" tag. Every tier headline is a credit allowance, so credits are the metering unit the whole ladder is built on.</p>
+    <figure class="proof-shot"><img src="/assets/images/case-studies/softr/pricing-credits.jpg" alt="Softr pricing page with AI credit allowances as the headline number on every tier" loading="lazy" /><figcaption>Branding removal unlocks at Pro, which is what makes every free and Basic app a branded surface.</figcaption></figure>
+
+    <h2 id="activation">The build itself</h2>
+
+    <h3>The Co-Builder's real value is the questions it asks, not the generation</h3>
+    <p>I gave it one plain sentence: a simple app to track event feedback, a form where attendees submit a rating and comment, and a dashboard showing the average rating and a list of comments. Nothing more specific than that. Instead of generating immediately it opened a three-step flow and started asking questions.</p>
+    <p>It asked whether attendees need to sign in, whether feedback should tie to specific events, and what rating scale to use, offering stars, a ten-point scale, thumbs or Net Promoter Score. None of those were in my prompt, and none of them were generic. They were the exact decisions a product person would need settled before building this.</p>
+    <figure class="proof-shot"><img src="/assets/images/case-studies/softr/cobuilder-question-1.jpg" alt="The Co-Builder asking whether attendees should sign in before submitting feedback" loading="lazy" /><figcaption>The first clarifying question, with numbered quick picks and a free-text option.</figcaption></figure>
+    <figure class="proof-shot"><img src="/assets/images/case-studies/softr/cobuilder-question-3.jpg" alt="The Co-Builder asking which rating scale the app should use" loading="lazy" /><figcaption>The third question. This is the moment the product stops feeling like a text box and starts feeling like a colleague.</figcaption></figure>
+    <p class="proof-quote">This is the aha moment, and it is a harder thing to market than "type a prompt, get an app," because the value only shows up once you are inside it.</p>
+
+    <h3>Access and permissions are part of the build conversation, not a settings page</h3>
+    <p>Login method and signup policy get their own dedicated step. The live preview panel updated in real time to show an "Invite only" badge the moment I picked it. For a product whose wedge is real business software rather than prototypes, putting permissions inside the build conversation is the right call and worth saying out loud in the marketing.</p>
+    <figure class="proof-shot"><img src="/assets/images/case-studies/softr/signup-policy-step.jpg" alt="Softr asking whether people can sign up on their own, with open, invite-only and domain-restricted options" loading="lazy" /><figcaption>Signup policy asked as a first-class question during the build.</figcaption></figure>
+
+    <h3>Theming is visual and immediate</h3>
+    <p>Navigation layout gets picked with real visual icons rather than a dropdown. The theme gallery uses named palettes, Fjord, Denim, Zen, Cyber and a dozen more, and selecting one renders a real typography and chart preview rather than a static swatch.</p>
+    <figure class="proof-shot"><img src="/assets/images/case-studies/softr/theme-gallery.jpg" alt="The Softr theme gallery showing named colour palettes with live previews" loading="lazy" /><figcaption>Named themes with live previews, not a settings page you configure blind.</figcaption></figure>
+
+    <h3>The build agent has a name and narrates itself in plain English</h3>
+    <p>The agent is branded Rolli rather than "AI" or "Assistant," and its progress log reads like a person explaining their work: "I've created a new database for your event feedback app," "I've set up the relationships between your tables," "No derived fields were needed for this app's current schema." Total time from my first prompt to a working app with sample data and a live public form was well under two minutes.</p>
+    <figure class="proof-shot"><img src="/assets/images/case-studies/softr/rolli-build-plan.jpg" alt="Rolli, the Softr build agent, crafting a plan and narrating each step" loading="lazy" /><figcaption>Rolli narrating the plan before executing it.</figcaption></figure>
+
+    <h2 id="attribution">The attribution gap</h2>
+
+    <h3>Softr's own attribution survey has no LinkedIn option</h3>
+    <p>Mid-build, a small "Help me improve while I build" popup asked where I heard about Softr. The fixed list offers another AI tool, ChatGPT, an event or webinar, a newsletter, blog or article, Google, and School. Typing LinkedIn into the search box returns "No matches found."</p>
+    <figure class="proof-shot"><img src="/assets/images/case-studies/softr/attribution-options.jpg" alt="The Softr attribution survey option list, which does not include LinkedIn" loading="lazy" /><figcaption>The full fixed option list.</figcaption></figure>
+    <figure class="proof-shot"><img src="/assets/images/case-studies/softr/attribution-no-linkedin.jpg" alt="Typing LinkedIn into the Softr attribution survey returns no matches" loading="lazy" /><figcaption>Typing LinkedIn returns nothing.</figcaption></figure>
+    <p>LinkedIn is where Mariam and Artur post multiple times a week, and where Shiran posted the hiring call for this role. The channel the team is most visibly active on is not one the product asks new users about. Every user who arrived that way gets recorded as Other, or picks the nearest wrong answer. The wrong answer is the worse outcome, because a blank is obviously missing and a wrong attribution quietly moves budget.</p>
+
+    <h3>One permission label did not match what I chose</h3>
+    <p>I chose anonymous submission with no sign-in for the feedback form. The generated page's own access setting reads "All logged-in users." Because signup was set to invite-only there was no public account creation path to test it against, so this reads as a default label rather than an access bug. It is still the kind of small onboarding clarity gap that costs activation.</p>
+    <figure class="proof-shot"><img src="/assets/images/case-studies/softr/permission-mismatch.jpg" alt="The Submit Feedback page permission reading All logged-in users after anonymous access was selected" loading="lazy" /><figcaption>Anonymous was selected. The page setting says otherwise.</figcaption></figure>
+
+    <h2 id="publish">Publishing and retention</h2>
+
+    <h3>The finished app does more than I asked for</h3>
+    <p>The Home dashboard greeted me by name, showed live average rating and total submission tiles, and listed a newest-first comment feed with realistic sample data including source tags I never requested. The page list auto-generated a full first-run scaffold beyond my two requested pages: log in, account settings, link expired, permission denied, page not found, and an onboarding flow template marked "Not assigned."</p>
+    <figure class="proof-shot"><img src="/assets/images/case-studies/softr/app-complete.jpg" alt="The finished Softr app dashboard with live stat tiles and sample feedback data" loading="lazy" /><figcaption>Two minutes from a single sentence, with sample data included.</figcaption></figure>
+
+    <h3>Publishing is free, and looking like a real business is the upsell</h3>
+    <p>Publishing to a free subdomain is not gated at all, even on a fresh trial. The upsell arrives one step later, when adding a custom domain requires Basic or above. That is a clean freemium wedge. The thing that proves the product works costs nothing, and the thing that makes it look like a real business costs money. A persistent trial day counter sits in the top navigation the whole time, a low-key reminder rather than an interrupting modal.</p>
+    <figure class="proof-shot"><img src="/assets/images/case-studies/softr/publish-domain-gate.jpg" alt="The Softr publish flow offering a free subdomain with custom domain gated behind a paid plan" loading="lazy" /><figcaption>Free subdomain, paid custom domain. The free subdomain is also what makes Experiment 4 possible.</figcaption></figure>
+
+    <p class="section-label">The backlog</p>
+
+    <h2 id="scoring">How I scored it</h2>
+    <p>I used ICEEE, which is five components each scored from one to ten. Impact and Confidence score the upside and how sure the evidence makes me. The three Effort scores, for engineering, marketing and everything else, are inverted, so ten means almost no effort and one means a large build. The total is the average. Inverting effort is the part that matters, because it keeps a cheap, certain, medium-impact test ahead of an expensive moonshot.</p>
+    <div class="proof-table-wrap">
+      <table class="proof-table">
+        <tr><th>Experiment</th><th>Stage</th><th>Impact</th><th>Conf.</th><th>Eng</th><th>Mktg</th><th>Other</th><th>Total</th></tr>
+        <tr><td>1. Attribution instrument</td><td>Acquisition</td><td>8</td><td>9</td><td>9</td><td>9</td><td>9</td><td class="num">8.8</td></tr>
+        <tr><td>2. Share loop at generation</td><td>Activation</td><td>9</td><td>8</td><td>5</td><td>8</td><td>7</td><td class="num">7.4</td></tr>
+        <tr><td>3. Owned win-back</td><td>Reactivation</td><td>7</td><td>8</td><td>7</td><td>6</td><td>7</td><td class="num">7.0</td></tr>
+        <tr><td>4. Made with Softr showcase</td><td>Acquisition</td><td>8</td><td>7</td><td>5</td><td>6</td><td>6</td><td class="num">6.4</td></tr>
+      </table>
+    </div>
+
+    <h2 id="experiment-1">Experiment 1. Fix the self-reported attribution instrument <span class="proof-score">8.8</span></h2>
+    <p><strong>The finding.</strong> Softr's in-build attribution survey asks new users where they heard about it, and LinkedIn is not one of the options.</p>
+    <p><strong>Why it matters.</strong> LinkedIn is where the founders and the marketing lead both do their public work, and where this role was posted. The company's loudest channel cannot appear in its own self-reported attribution data, so every user who arrived through a founder post is recorded as something else.</p>
+    <p><strong>The experiment.</strong> Add LinkedIn as an option, keep a free-text Other, and hold the survey otherwise identical for four weeks. Read the share of responses LinkedIn takes, and read what it takes that share from. The second number is the interesting one, because it tells you which channel has been over-credited.</p>
+    <p><strong>What it changes.</strong> This is not a growth tactic on its own. It repairs the measurement instrument that every later channel decision reads from, which is why it scores highest on this list despite being the smallest build.</p>
+
+    <h2 id="experiment-2">Experiment 2. Build a share loop into the moment the app is generated <span class="proof-score">7.4</span></h2>
+    <p><strong>The finding.</strong> The Co-Builder's strongest moment is the three clarifying questions it asks before it builds, and the app is live with sample data and a working public form in under two minutes.</p>
+    <p><strong>Why it matters.</strong> That two-minute mark is the "I just built software" moment, and right now nothing happens with it. Lovable, Webflow and Claude Artifacts all convert the same moment into distribution by making the output trivially shareable at the instant of pride. Softr produces the pride and lets it go.</p>
+    <p><strong>The experiment.</strong> At build completion, offer a one-click share: a public link plus a pre-rendered image of the app, phrased in the builder's terms rather than the marketer's. Measure share rate, click-through on shared links, and signups attributed to them.</p>
+    <p><strong>The honest constraint.</strong> This is a product build, not a marketing campaign, so it needs engineering time and a product partner. That is why it scores 5 on engineering effort and sits second rather than first.</p>
+
+    <h2 id="experiment-4">Experiment 3. Run win-back as an owned channel, not only paid search <span class="proof-score">7.0</span></h2>
+    <p><strong>The finding.</strong> Softr already runs a sophisticated win-back campaign in paid search. The Google Ads Transparency Center record for Softr Platforms GmbH shows "Not The Softr You Left, No Code No Hallucinations" and "The platform you knew just got a massive upgrade," with a "Come Back To A Better Softr" link, inside 83 active ads.</p>
+    <p><strong>Why it matters.</strong> Someone has already made the strategic call that lapsed users are worth reactivating, and someone has already written the message. It is running in the most expensive channel available. From the outside I can see no sign of the same message in email or in-app, where the same audience is addressable at close to zero marginal cost.</p>
+    <p><strong>The experiment.</strong> Port the message to owned channels against the lapsed list, segmented by how far each user got before they dropped, and measure reactivation per channel against the paid baseline. A user who never finished a build and a user who published and then stopped are two different problems wearing the same label.</p>
+
+    <h2 id="experiment-3">Experiment 4. A Made with Softr showcase <span class="proof-score">6.4</span></h2>
+    <p><strong>The finding.</strong> Free and Basic apps carry Softr branding by default, because branding removal unlocks at Pro, $99 a month. Every free and Basic app published is already a branded surface in the world.</p>
+    <p><strong>Why it matters.</strong> Webflow took the identical surface and built Made in Webflow, a public, indexed, ranking gallery that converts. Softr has the badge and not the gallery, which means the distribution exists and the capture does not.</p>
+    <p><strong>The experiment.</strong> Build a public showcase from apps whose owners opt in, with per-app pages that can rank in search. The template gallery's existing 100-plus pages are the structural precedent, since those already have dedicated indexed pages and carry no social proof on them at all.</p>
+    <p><strong>Why it scores lowest.</strong> It needs opt-in mechanics, a moderation path and real content operations before it returns anything, and the payoff compounds slowly. It is the right project for a quarter, not for a first month.</p>
+
+    <p class="section-label">The open questions</p>
+
+    <h2 id="questions">Four things I could not answer from outside</h2>
+    <p>These came out of the research as genuine unknowns. Each one needs data Softr has and I do not, so proposing a solution would be guessing. I would rather bring you the question.</p>
+    <div class="proof-cards">
+      <div class="proof-card"><strong>Are any of the 100-plus templates third-party built?</strong><span>And if so, does the Expert Program's 30 percent revenue share extend to template creators? A creator economy around templates is a different growth engine from a content library, and the answer changes which one this is.</span></div>
+      <div class="proof-card"><strong>Is "Hire a Softr Partner" a manual matching service or a browsable marketplace?</strong><span>If it is manual, I would want to know whether it is hitting a ceiling, because that is usually the point where the marketplace version pays for itself.</span></div>
+      <div class="proof-card"><strong>Is Model Context Protocol (MCP) being marketed as an acquisition channel?</strong><span>Registries and developer content make it one. Shipping it as a feature and leaving it there makes it a line on a comparison table. I cannot tell from outside which decision has been made.</span></div>
+      <div class="proof-card"><strong>Does the influencer channel overlap the founder-led audience?</strong><span>The influencer programme runs at real scale, 200-plus collaborations and 800-plus deliverables. Whether that audience overlaps the one the founders reach on LinkedIn, or runs as a separate silo, decides whether the two should be coordinated or deliberately kept apart.</span></div>
+    </div>
+  </div>
+
+  <div class="proof-body">
+    <p class="section-label">Why I built it this way</p>
+
+    <h2 id="reasoning">Findings, not opinions</h2>
+    <p>I set one rule before I started. Everything on the pitch page and in this backlog has to be something I verified myself, with a screenshot or a public record behind it. Anything that depends on data I cannot see goes in the open questions instead, even when I have a strong hunch about the answer.</p>
+    <p>That rule is why this document is shorter than it could have been. I found other things I thought were gaps and then disproved them. I assumed the comparison content was thin until I found the 23-page comparison hub. I assumed the ambassador tier was missing until I found the programme and the person who runs it. Both ideas died, and they are not on this page, because a backlog that includes things I did not check is a backlog you cannot trust the rest of.</p>
+  </div>
+
+  <div class="button-row" style="margin-top: 40px;">
+    <a href="/work/softr/" class="button button-primary">Back to the pitch</a>
+    <a href="mailto:jamesspraise@gmail.com?subject=Senior%20Growth%20Marketer%20(Self-Serve)%20-%20James%20Praise" class="button button-secondary">Let's Talk</a>
+  </div>
+</div>
+
+<script src="/script.js?v=11"></script>
+<script>
+(function () {
+  var bar = document.getElementById('proofProgressBar');
+  function updateProgress() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.proof-toc a'));
+  var sections = tocLinks.map(function (a) {
+    return document.getElementById(a.getAttribute('href').slice(1));
+  });
+  function updateActiveToc() {
+    var current = null;
+    sections.forEach(function (sec, i) {
+      if (sec && sec.getBoundingClientRect().top <= 140) current = i;
+    });
+    tocLinks.forEach(function (a, i) {
+      a.classList.toggle('is-active', i === current);
+    });
+  }
+  window.addEventListener('scroll', updateActiveToc, { passive: true });
+  updateActiveToc();
+})();
+</script>
+</body>
+</html>
