@@ -4828,11 +4828,18 @@ body.panel-open {
 
 /* Proof page content links, same treatment as .prose and the /about hero:
    the text keeps its normal colour and the brand purple carries the underline,
-   so colour is never the only signal. The section nav sits outside .proof-wrap
-   and keeps its own styling. Full-bleed tables sit outside .proof-wrap,
-   so .proof-table-wrap is listed too. */
-.proof-wrap a:not(.proof-back):not([class*="button"]),
-.proof-table-wrap a:not([class*="button"]) {
+   so colour is never the only signal.
+
+   Deliberately scoped to the page, not to a content container. Proof pages
+   carry no site header or footer, so every link on one is either content or
+   part of a small fixed set of chrome: the section nav, the floating exit
+   button, the back link and buttons. Excluding those four and styling
+   everything else means a link is visible wherever it sits, including in
+   full-bleed sections that fall outside the usual wrapper. A new page that
+   departs from the template still gets the treatment; the failure mode is a
+   chrome link picking up an underline, which is obvious on sight, rather than
+   a content link going invisible, which is not. */
+body.proof-page a:not(:where(nav a, .pitch-exit, .proof-back, [class*="button"])) {
   color: var(--text-primary);
   text-decoration: underline;
   text-decoration-color: var(--color-purple);
@@ -4840,8 +4847,7 @@ body.panel-open {
   text-underline-offset: 2px;
 }
 
-.proof-wrap a:not(.proof-back):not([class*="button"]):hover,
-.proof-table-wrap a:not([class*="button"]):hover {
+body.proof-page a:not(:where(nav a, .pitch-exit, .proof-back, [class*="button"])):hover {
   text-decoration-thickness: 3px;
 }
 
