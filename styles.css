@@ -4826,6 +4826,25 @@ body.panel-open {
   text-decoration-color: var(--color-purple);
 }
 
+/* Proof page content links, same treatment as .prose and the /about hero:
+   the text keeps its normal colour and the brand purple carries the underline,
+   so colour is never the only signal. The section nav sits outside .proof-wrap
+   and keeps its own styling. Full-bleed tables sit outside .proof-wrap,
+   so .proof-table-wrap is listed too. */
+.proof-wrap a:not(.proof-back):not([class*="button"]),
+.proof-table-wrap a:not([class*="button"]) {
+  color: var(--text-primary);
+  text-decoration: underline;
+  text-decoration-color: var(--color-purple);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+
+.proof-wrap a:not(.proof-back):not([class*="button"]):hover,
+.proof-table-wrap a:not([class*="button"]):hover {
+  text-decoration-thickness: 3px;
+}
+
 .prose strong {
   font-weight: 800;
 }
