@@ -2,7 +2,7 @@
 
 My personal site: jamespraise.xyz
 
-I'm [James](https://www.jamespraise.xyz), a marketing and go-to-market operator, and founder of [Marketing In Action](https://marketinginaction.xyz). This is my portfolio with client case studies, a set of side projects I've built for myself, and the writing and speaking I do outside client work.
+I'm [James](https://jamespraise.xyz), a marketing and go-to-market operator, and founder of [Marketing In Action](https://marketinginaction.xyz). This is my portfolio with client case studies, a set of side projects I've built for myself, and the writing and speaking I do outside client work.
 
 I am currently experimenting with vibe coding, and this is one of the projects I'm building with that knowledge. You can also check out the vibe-coded repo of the MIA website here: [github.com/realjaymes/marketinginaction](https://github.com/realjaymes/marketinginaction).
 
