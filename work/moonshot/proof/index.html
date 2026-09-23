@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WKSZ7DQC');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A Positioning Teardown for Moonshot — James Praise</title>
+<meta name="description" content="Where Moonshot's homepage sounds like Touchy's and Roma's, the one difference worth leading with, and three headlines to test this week." />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+<link rel="canonical" href="https://jamespraise.xyz/work/moonshot/proof/" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=22" />
+<style>
+  .proof-wrap { max-width: 720px; margin: 0 auto; padding: 100px 0 80px; }
+  .proof-eyebrow { color: var(--color-purple); font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; font-size: 13px; margin-bottom: 10px; }
+  .proof-credit { display: flex; align-items: center; gap: 10px; margin: 20px 0 40px; }
+  .proof-credit img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+  .proof-credit span { color: var(--text-muted); font-size: 14px; }
+  .proof-credit strong { color: var(--text-primary); }
+  .proof-note { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 8px; padding: 16px 20px; font-size: 14px; color: var(--text-muted); margin-bottom: 40px; line-height: 1.7; }
+  .proof-body p { line-height: 1.7; }
+  .proof-body h2 { margin-top: 56px; margin-bottom: 12px; }
+  .proof-body h3 { margin-top: 32px; margin-bottom: 8px; font-size: 18px; }
+  .proof-body strong { font-weight: 700; }
+  .proof-body ul { line-height: 1.8; padding-left: 20px; }
+  .proof-img { border-radius: 8px; border: 1px solid rgba(0,0,0,0.08); margin: 20px 0 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.06); width: 100%; }
+  .proof-cap { font-size: 13px; color: var(--text-muted); line-height: 1.5; margin: 0 0 28px; }
+  .proof-back { display: inline-block; margin-bottom: 24px; font-size: 14px; }
+  .section-label { font-size: 13px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-quote { border-left: 3px solid var(--color-purple); padding: 4px 0 4px 22px; margin: 28px 0; font-size: 19px; font-weight: 600; line-height: 1.5; color: var(--text-primary); }
+  .proof-headline { background: rgba(113,132,241,0.08); border: 1px solid var(--color-purple); border-radius: 10px; padding: 22px 24px; margin: 22px 0; }
+  .proof-headline strong { display: block; font-size: 23px; line-height: 1.3; color: var(--text-primary); margin-bottom: 8px; }
+  .proof-headline span { font-size: 15px; color: var(--text-muted); line-height: 1.6; }
+  .proof-alt { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 10px; padding: 20px 22px; margin: 14px 0; }
+  .proof-alt strong { display: block; font-size: 19px; line-height: 1.3; color: var(--text-primary); margin-bottom: 6px; }
+  .proof-alt span { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+  .proof-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 13px; }
+  .proof-table th, .proof-table td { border: 1px solid rgba(28,20,34,0.12); padding: 10px 12px; text-align: left; vertical-align: top; line-height: 1.5; }
+  .proof-table th { background: var(--bg-surface); font-weight: 800; font-size: 12px; }
+  .proof-table td:first-child { font-weight: 700; white-space: nowrap; }
+  .proof-map { border-top: 1px solid rgba(28,20,34,0.1); margin: 22px 0; }
+  .proof-map div { display: grid; grid-template-columns: 150px 1fr; gap: 16px; padding: 11px 0; border-bottom: 1px solid rgba(28,20,34,0.1); font-size: 14px; line-height: 1.6; }
+  .proof-map dt { font-weight: 700; color: var(--text-muted); }
+  .proof-progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(28,20,34,0.08); z-index: 200; }
+  .proof-progress-bar { height: 100%; width: 0%; background: var(--color-purple); transition: width 0.1s linear; }
+  .proof-toc { position: fixed; top: 140px; right: 32px; width: 200px; font-size: 13px; }
+  .proof-toc-group { margin-bottom: 20px; }
+  .proof-toc-label { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-toc a { display: block; padding: 5px 0 5px 12px; border-left: 2px solid rgba(28,20,34,0.1); color: var(--text-muted); text-decoration: none; line-height: 1.4; }
+  .proof-toc a:hover { color: var(--color-purple); border-left-color: var(--color-purple); }
+  .proof-toc a.is-active { color: var(--color-purple); border-left-color: var(--color-purple); font-weight: 700; }
+  @media (max-width: 1400px) { .proof-toc { display: none; } }
+  @media (max-width: 640px) { .proof-map div { grid-template-columns: 1fr; gap: 2px; } .proof-table { font-size: 12px; } }
+</style>
+</head>
+<body class="proof-page">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKSZ7DQC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="proof-progress-track"><div class="proof-progress-bar" id="proofProgressBar"></div></div>
+
+<a href="/work/moonshot/" class="pitch-exit" aria-label="Back to the Moonshot pitch">
+  <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+</a>
+
+<nav class="proof-toc" aria-label="Section navigation">
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The teardown</p>
+    <a href="#sameness">Where you sound like them</a>
+    <a href="#difference">The difference to lead with</a>
+    <a href="#headline">A headline to test</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">Before you act on it</p>
+    <a href="#validate">How to know if it's right</a>
+    <a href="#limits">What I couldn't check</a>
+  </div>
+</nav>
+
+<div class="container proof-wrap">
+  <a class="proof-back" href="/work/moonshot/">&larr; Back to the Moonshot pitch</a>
+
+  <p class="proof-eyebrow">A positioning teardown for Moonshot</p>
+  <h1>Your category is writing to impress investors. Nobody has claimed the plain-spoken position.</h1>
+
+  <div class="proof-credit">
+    <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+    <span><strong>James Praise</strong> &middot; Marketing and GTM Operator</span>
+  </div>
+
+  <p class="proof-note">Moonshot is in a founding beta behind a Google sign-in, so I could not see the product itself. Everything below comes from your public surfaces: <a href="https://moonshot.computer/" target="_blank" rel="noopener">your homepage</a>, <a href="https://moonshot.computer/about" target="_blank" rel="noopener">your About page</a>, and <a href="https://www.ycombinator.com/companies/moonshot-computer" target="_blank" rel="noopener">your Y Combinator listing</a>, set against the live homepages of <a href="https://touchyapp.com/" target="_blank" rel="noopener">Touchy</a> (S26) and <a href="https://roma.app/" target="_blank" rel="noopener">Roma</a> (F26), the two closest neighbours in your own category.</p>
+
+  <div class="proof-body">
+
+    <h2 id="sameness">1. Where your homepage sounds like theirs</h2>
+
+    <p>The three of you are selling different products and describing them the same way: in aspirational language that reads like it was written to impress investors and technical peers rather than to be understood by the person deciding whether to install the app.</p>
+
+    <p>Here is what a visitor actually meets, word for word.</p>
+
+    <h3>Moonshot</h3>
+    <p>Above the fold: your wordmark, a Google sign-in button, and "Use your Google email to get early access." No sentence says what Moonshot is or who it's for.</p>
+    <img class="proof-img" src="/assets/images/case-studies/moonshot/moonshot-hero-signin-gate.jpg" alt="Moonshot's homepage above the fold" loading="lazy" />
+    <p class="proof-cap">Moonshot's homepage above the fold: wordmark, Google sign-in, and an early-access instruction, with no line describing the product.</p>
+
+    <h3>Touchy</h3>
+    <p>"The assistant that saves you the hassle," then "Touchy works with your apps and knows the world around you so you can stay in the moment."</p>
+    <img class="proof-img" src="/assets/images/case-studies/moonshot/touchy-homepage.jpg" alt="Touchy's homepage" loading="lazy" />
+    <p class="proof-cap">Touchy's homepage: an assistant that "saves you the hassle" and "knows the world around you."</p>
+
+    <h3>Roma</h3>
+    <p>"Your superpowered to-do list," then "Say what's on your mind and Roma gets straight to work. Come back to something real to review, finish, and keep."</p>
+    <img class="proof-img" src="/assets/images/case-studies/moonshot/roma-homepage.jpg" alt="Roma's homepage" loading="lazy" />
+    <p class="proof-cap">Roma's homepage: the same YC badge and early-access gate as Moonshot, with a category name but an unexplained difference.</p>
+
+    <p>Run all three against the five things a homepage first screen has to do.</p>
+
+    <table class="proof-table">
+      <thead>
+        <tr><th></th><th>Names who it's for</th><th>Names the category</th><th>Says concretely what it does</th><th>States a difference</th><th>Sounds like a user talking</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Moonshot</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No hero copy at all</td></tr>
+        <tr><td>Touchy</td><td>No</td><td>"assistant", generic</td><td>No: "saves you the hassle" names no hassle</td><td>No</td><td>No</td></tr>
+        <tr><td>Roma</td><td>No</td><td>"to-do list", yes, concrete</td><td>Partly: "gets straight to work," but on what, returning what?</td><td>No: "superpowered" carries the whole claim</td><td>Partly</td></tr>
+      </tbody>
+    </table>
+
+    <p>Not one of the three names a buyer. Not one states a difference. "Saves you the hassle," "knows the world around you," "stay in the moment," "superpowered," "something real." A reader finishes those sentences without learning what happens when they open the app. Roma is the strongest of the three, and only because "to-do list" is a real category a person already understands. The rest of its hero leans on "superpowered" to do work the copy never does.</p>
+
+    <p><strong>This is the actual opportunity, and it matters more than the gap.</strong> Your whole category is writing to impress investors instead of writing to be understood by customers. Nobody in it has claimed the plain-spoken position. The first one of you to write a first screen a normal person can repeat to a friend takes that ground, and right now none of you is holding it.</p>
+
+    <p>Your own gap is the widest of the three only because you have no hero sentence at all. That's also the cheapest to fix: you're adding a line where there is currently nothing, so there's no existing message to protect.</p>
+
+    <h2 id="difference">2. The one difference I'd lead with</h2>
+
+    <p>You already own a genuinely distinctive idea. It just isn't anywhere a visitor will find it.</p>
+
+    <p>Scroll past your hero and the page becomes your Y Combinator description, pasted in under the heading "An iPhone app. Early access." Five paragraphs down sits this:</p>
+
+    <p class="proof-quote">Our thesis is simple: you're only living half your life. The half that you actively remember. The other half just evaporates into your subconscious: what you said, felt, promised, and forgot.</p>
+
+    <img class="proof-img" src="/assets/images/case-studies/moonshot/moonshot-body-yc-boilerplate.jpg" alt="Moonshot's homepage body" loading="lazy" />
+    <p class="proof-cap">Moonshot's homepage body: the YC company description pasted verbatim under a generic heading, with the distinctive thesis five paragraphs down.</p>
+
+    <p>That is the one claim on your site neither Touchy nor Roma can make. The difference is not that you're proactive. It's <strong>what you act on</strong>:</p>
+
+    <ul>
+      <li><strong>Roma</strong> acts on what you type or say <em>to it</em>. You still have to remember to tell it.</li>
+      <li><strong>Touchy</strong> acts on what you ask it, plus what it can see around you. Still instruction-led.</li>
+      <li><strong>Moonshot</strong> acts on what you said to <em>someone else</em>, and never wrote down.</li>
+    </ul>
+
+    <p>So the frame of reference isn't "AI assistant." Every company in this space is an AI assistant, and the word carries no information. Your frame of reference is closer to <strong>memory</strong>. You're competing with the note a person didn't take, not with another assistant.</p>
+
+    <p>Be blunt with yourselves about "proactive," too. Roma is proactive. Touchy is proactive. Logical and jo, the two other true neighbours in your space, both pitch proactive personal agents. Leading on proactive puts you on the one axis where you're indistinguishable.</p>
+
+    <h3>A positioning statement to work from</h3>
+
+    <p class="proof-quote">For people whose day moves faster than their memory, Moonshot is a personal AI that listens on your iPhone and gives back what you said, felt and promised but never wrote down. Unlike Roma and Touchy, which act on what you remember to tell them, Moonshot catches the things you never thought to record. It turns the half of your life that usually evaporates into something you can act on.</p>
+
+    <p>What each part is doing:</p>
+
+    <dl class="proof-map">
+      <div><dt>Who it's for</dt><dd>people whose day moves faster than their memory</dd></div>
+      <div><dt>The category</dt><dd>a personal AI that listens on your iPhone</dd></div>
+      <div><dt>What it does</dt><dd>gives back what you said, felt and promised but never wrote down</dd></div>
+      <div><dt>The alternative</dt><dd>Roma and Touchy, which act on what you remember to tell them</dd></div>
+      <div><dt>The difference</dt><dd>it catches what you never thought to record</dd></div>
+      <div><dt>The payoff</dt><dd>the half of your life that usually evaporates becomes something you can act on</dd></div>
+    </dl>
+
+    <h2 id="headline">3. A rewritten headline you could test this week</h2>
+
+    <p>Your current first screen has no headline. So the test is simple: put one above the sign-in button and change nothing else.</p>
+
+    <p>The rule I'd hold every option to is that it names a concrete moment, not a feeling. "Stay in the moment" and "superpowered" are what the category already does, and they're why nobody in it sounds distinct.</p>
+
+    <h3>The one I'd run first</h3>
+
+    <div class="proof-headline">
+      <strong>You said you'd do it. Moonshot heard you.</strong>
+      <span>Moonshot listens through your day on your iPhone and brings back the promises, plans and details you never wrote down.</span>
+    </div>
+
+    <h3>Two alternates worth testing against it</h3>
+
+    <div class="proof-alt">
+      <strong>For everything you never wrote down.</strong>
+      <span>Moonshot listens through your day and turns what you said, felt and promised into something you can actually act on.</span>
+    </div>
+
+    <div class="proof-alt">
+      <strong>Your best thinking happens out loud. Then it's gone.</strong>
+      <span>Moonshot listens on your iPhone, catches what you said and promised, and hands it back before you need it.</span>
+    </div>
+
+    <h3>Supporting value propositions</h3>
+
+    <p>For the section directly beneath the hero:</p>
+
+    <ul>
+      <li>Moonshot listens through your day and gives back what you said, felt and promised but forgot.</li>
+      <li>The commitments you make out loud, captured without typing, reminded before they lapse.</li>
+      <li>Your iPhone already hears your whole life. Moonshot is what finally does something with it.</li>
+      <li>Most assistants wait to be asked. Moonshot already heard the thing you forgot to ask about.</li>
+      <li>A memory for the half of your life you never write down.</li>
+      <li>Stop trusting your memory with the promises you make in passing.</li>
+      <li>Everything you said you'd do, back in front of you at the moment it matters.</li>
+    </ul>
+
+    <p>One more fix while you're in there. Your About page is a verbatim copy of your homepage body, which is itself a verbatim copy of your YC listing. One block of text is doing three jobs, and each of those readers arrives wanting something different. The person on your homepage is deciding whether to hand over their microphone, and that decision needs its own page and its own words.</p>
+
+    <img class="proof-img" src="/assets/images/case-studies/moonshot/moonshot-about-duplicate.jpg" alt="Moonshot's About page" loading="lazy" />
+    <p class="proof-cap">Moonshot's About page: the same copy as the homepage body, word for word.</p>
+
+    <h2 id="validate">4. How to know whether any of this is right</h2>
+
+    <p>Everything above is built from the outside. I don't have your internal data, so I can't tell you how your current messaging is converting, and I won't pretend the headline I'd run first is the one that wins. Treat these as hypotheses worth testing, not answers.</p>
+
+    <p>Four ways to find out, roughly in order of how fast they pay off.</p>
+
+    <h3>Run it as an A/B test against real traffic</h3>
+    <p>You need volume pointed at the page for this to mean anything inside a week, so pair it with a traffic source you control: a small paid test, your Y Combinator directory listing, a launch, or a press or podcast mention. Measure sign-in starts per visitor, since that's your only live conversion event today. Watch sign-in <em>quality</em> as well as volume, because with 100 founding-beta seats, who signs up matters more than how many.</p>
+
+    <h3>Interview people who fit the product but have never seen it</h3>
+    <p>Show them the first screen for five seconds, take it away, and ask what the product does and who it's for. If they can't tell you, the headline isn't working, and that's a far cheaper answer than a fortnight of traffic. Do it with eight or ten people and the pattern is usually obvious.</p>
+
+    <h3>Listen to how your beta users describe it themselves</h3>
+    <p>The best homepage copy is almost always transcribed rather than written. When someone in your beta explains Moonshot to a friend, the words they reach for are the words that belong on the page. Note the problem they lead with, the moment they describe, and the phrase they use for what it gives back. If they consistently say something you'd never have written, use theirs.</p>
+
+    <h3>Mine your own support and feedback threads</h3>
+    <p>Every question about what Moonshot does is a place the messaging failed. Recurring confusion is a map of what the first screen has to answer.</p>
+
+    <p>If your beta users already describe Moonshot in the forgotten-half language, this is a homepage gap and nothing more, and fixing it only takes an afternoon. If they describe it some other way entirely, that's much more valuable to know, and it would change what I'd put in the hero.</p>
+
+    <h2 id="limits">What I couldn't check</h2>
+
+    <p>The product, the onboarding and the beta all sit behind the Google sign-in, so none of this is informed by the in-product experience itself. In-product can be a separate teardown that can be tackled later.</p>
+
+  </div>
+
+  <div class="button-row" style="margin-top: 40px;">
+    <a href="/work/moonshot/" class="button button-primary">Back to the pitch</a>
+    <a href="https://calendar.app.google/UQFiPwiBoCjA5CXf9" target="_blank" rel="noopener" class="button button-secondary">Book a call</a>
+    <a href="mailto:james@marketinginaction.xyz?subject=Moonshot%20positioning" class="button button-secondary">Let's Talk</a>
+  </div>
+</div>
+
+<script src="/script.js?v=11"></script>
+<script>
+(function () {
+  var bar = document.getElementById('proofProgressBar');
+  function updateProgress() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.proof-toc a'));
+  var sections = tocLinks.map(function (a) {
+    return document.getElementById(a.getAttribute('href').slice(1));
+  });
+  function updateActiveToc() {
+    var current = null;
+    sections.forEach(function (sec, i) {
+      if (sec && sec.getBoundingClientRect().top <= 140) current = i;
+    });
+    tocLinks.forEach(function (a, i) {
+      a.classList.toggle('is-active', i === current);
+    });
+  }
+  window.addEventListener('scroll', updateActiveToc, { passive: true });
+  updateActiveToc();
+})();
+</script>
+</body>
+</html>
