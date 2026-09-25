@@ -1,33 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://jamespraise.xyz/</loc></url>
-<url><loc>https://jamespraise.xyz/about/</loc></url>
-<url><loc>https://jamespraise.xyz/privacy/</loc></url>
-<url><loc>https://jamespraise.xyz/terms/</loc></url>
-<url><loc>https://jamespraise.xyz/work/</loc></url>
-<url><loc>https://jamespraise.xyz/work/arinka-travel/</loc></url>
-<url><loc>https://jamespraise.xyz/work/bento-africa/</loc></url>
-<url><loc>https://jamespraise.xyz/work/bujeti/</loc></url>
-<url><loc>https://jamespraise.xyz/work/cil/</loc></url>
-<url><loc>https://jamespraise.xyz/work/distrobird/</loc></url>
-<url><loc>https://jamespraise.xyz/work/forage-mail/</loc></url>
-<url><loc>https://jamespraise.xyz/work/funnelenvy/</loc></url>
-<url><loc>https://jamespraise.xyz/work/hank-robotics/</loc></url>
-<url><loc>https://jamespraise.xyz/work/james-website/</loc></url>
-<url><loc>https://jamespraise.xyz/work/job-radar-career-outreach/</loc></url>
-<url><loc>https://jamespraise.xyz/work/komfot-health/</loc></url>
-<url><loc>https://jamespraise.xyz/work/marketing-agent-skills/</loc></url>
-<url><loc>https://jamespraise.xyz/work/mia-academy/</loc></url>
-<url><loc>https://jamespraise.xyz/work/mia-newsletter/</loc></url>
-<url><loc>https://jamespraise.xyz/work/mia-website-build/</loc></url>
-<url><loc>https://jamespraise.xyz/work/personal-ai-stack/</loc></url>
-<url><loc>https://jamespraise.xyz/work/relationship-os/</loc></url>
-<url><loc>https://jamespraise.xyz/work/prospect-outbound-engine/</loc></url>
-<url><loc>https://jamespraise.xyz/work/reform/</loc></url>
-<url><loc>https://jamespraise.xyz/work/vban/</loc></url>
-<url><loc>https://jamespraise.xyz/work/wholesome-girlies/</loc></url>
-<url><loc>https://jamespraise.xyz/speaking/</loc></url>
-<url><loc>https://jamespraise.xyz/speaking/press-kit/</loc></url>
-<url><loc>https://jamespraise.xyz/speaking/speaker-profile/</loc></url>
-<url><loc>https://jamespraise.xyz/writing/</loc></url>
+  <url>
+    <loc>https://jamespraise.xyz/</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://jamespraise.xyz/about/</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://jamespraise.xyz/privacy/</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://jamespraise.xyz/speaking/</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://jamespraise.xyz/speaking/press-kit/</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://jamespraise.xyz/speaking/speaker-profile/</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://jamespraise.xyz/terms/</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://jamespraise.xyz/work/</loc>
+    <lastmod>2026-09-25</lastmod>
+  </url>
+  <url>
+    <loc>https://jamespraise.xyz/work/arinka-travel/</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://jamespraise.xyz/work/bento-africa/</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://jamespraise.xyz/work/bujeti/</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://jamespraise.xyz/work/cil/</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://jamespraise.xyz/work/distrobird/</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://jamespraise.xyz/work/forage-mail/</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://jamespraise.xyz/work/funnelenvy/</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://jamespraise.xyz/work/hank-robotics/</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://jamespraise.xyz/work/james-website/</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://jamespraise.xyz/work/job-radar-career-outreach/</loc>
+    <lastmod>2026-09-23</lastmod>
+  </url>
+  <url>
+    <loc>https://jamespraise.xyz/work/komfot-health/</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://jamespraise.xyz/work/marketing-agent-skills/</loc>
+    <lastmod>2026-09-25</lastmod>
+  </url>
+  <url>
+    <loc>https://jamespraise.xyz/work/mia-academy/</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://jamespraise.xyz/work/mia-acquisition/</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://jamespraise.xyz/work/mia-business/</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://jamespraise.xyz/work/mia-gtm/</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://jamespraise.xyz/work/mia-newsletter/</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://jamespraise.xyz/work/mia-website-build/</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://jamespraise.xyz/work/personal-ai-stack/</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://jamespraise.xyz/work/prospect-outbound-engine/</loc>
+    <lastmod>2026-09-23</lastmod>
+  </url>
+  <url>
+    <loc>https://jamespraise.xyz/work/reform/</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://jamespraise.xyz/work/relationship-os/</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://jamespraise.xyz/work/vban/</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://jamespraise.xyz/work/wholesome-girlies/</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://jamespraise.xyz/writing/</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
 </urlset>
