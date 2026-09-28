@@ -5259,6 +5259,12 @@ body.proof-page a:not(:where(nav a, .pitch-exit, .proof-back, [class*="button"])
   white-space: nowrap;
 }
 
+@media (max-width: 640px) {
+  .portrait-hero-text .eyebrow {
+    white-space: normal;
+  }
+}
+
 /* Typewriter cycling word */
 .typewriter-cursor {
   display: inline-block;
