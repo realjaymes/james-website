@@ -86,7 +86,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="#unconfirmed">Not confirmed</a>
   </div>
   <div class="proof-toc-group">
-    <p class="proof-toc-label">Why this shape</p>
+    <p class="proof-toc-label">Why it is built this way</p>
     <a href="#reasoning">The hand-off</a>
   </div>
 </nav>
@@ -102,7 +102,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span><strong>James Praise</strong> &middot; Marketing and GTM Operator</span>
   </div>
 
-  <p class="proof-note">Prepared for Justin Vaughan-Brown, VP Product Marketing &amp; Strategic Communications. Written from public sources only, so each claim names its source, and the last section lists what I could not confirm from outside.</p>
+  <p class="proof-note">Prepared for Justin Vaughan-Brown, VP Product Marketing &amp; Strategic Communications. I wrote it from public sources only. Each claim links to its source, and the last section lists what I could not confirm from outside.</p>
 
   <div class="proof-draft">
     <h2 id="motion">The motion in one paragraph</h2>
@@ -124,7 +124,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p>The account profile has three triggers. An account needs at least one, and the strongest accounts have two.</p>
     <p><strong>Trigger 1: ECC on the 2027 clock.</strong> Most ECC customers will not finish by the end of 2027, and about half expect to run ECC into 2030, according to the <a href="https://impulsant.dsag.de/formate/pressemeldung/dsag-investment-report-2026-companies-are-investing-more-selectively-ai-is-becoming-established-cloud-computing-is-being-put-to-the-test/" target="_blank" rel="noopener">DSAG Investment Report 2026</a>. Those companies will run ECC and S/4HANA side by side for years, and a process layer above both is useful on day one and survives the move. Panasonic's own description, reported by <a href="https://sapinsider.org/map/sap-s4hana-process-orchestration-process-logic" target="_blank" rel="noopener">SAPinsider</a>, is that when an ERP system changes, the process itself can remain largely untouched. The DSAG survey covers German-speaking member companies only. The EMEA-wide number is a first-week task.</p>
     <p><strong>Trigger 2: a Clean Core mandate.</strong> The customer has been told to stop customizing the ERP before it migrates. The approval chains and exception handling that lived in SAP's custom ABAP code have to go somewhere. Camunda's answer is Business Process Model and Notation (BPMN) and Decision Model and Notation (DMN) models that business and IT can both read.</p>
-    <p><strong>Trigger 3: a process that crosses systems.</strong> Panasonic's business-partner process is the example: a request starts in a form, gets validated against SAP, and records an approval path, with S/4HANA staying the source of truth. Quote-to-cash, procure-to-pay, onboarding and claims have the same shape, and any of them that touch a non-SAP system fit, as <a href="https://sapinsider.org/map/camunda-processos-brings-agentic-orchestration-to-enterprise-workflows" target="_blank" rel="noopener">SAPinsider</a> also notes.</p>
+    <p><strong>Trigger 3: a process that crosses systems.</strong> Panasonic's business-partner process is the example: a request starts in a form, gets validated against SAP, and records an approval path, with S/4HANA staying the source of truth. Quote-to-cash, procure-to-pay, onboarding and claims work the same way, and any of them that touch a non-SAP system fit, as <a href="https://sapinsider.org/map/camunda-processos-brings-agentic-orchestration-to-enterprise-workflows" target="_blank" rel="noopener">SAPinsider</a> also notes.</p>
     <p>Titles to reach: head of SAP or ERP transformation, enterprise architect, head of process excellence, and the chief information officer. These are hypotheses. The first test is whether Camunda's closed-won deals in EMEA show the same titles.</p>
 
     <h2 id="versus-sap">Where Camunda sits next to SAP's own tools</h2>
@@ -155,9 +155,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <h2 id="plays">Partner and field plays</h2>
     <h3>For Camunda's EMEA field</h3>
-    <p>A one-page SAP discovery card: five questions that find a Trigger 1, 2 or 3 account in the first call. A ten-minute demo script: start a Camunda process from a Fiori screen, render a Camunda form in Fiori, read from S/4HANA through the OData connector, and add one agent step that calls an SAP function. One environment, rehearsed, owned by a named solutions engineer. A Panasonic reference kit: a one-page summary, the four numbers, and a call the field can request. The situation table and objection sheet above, built into the sales playbook.</p>
+    <p>The field gets a one-page SAP discovery card with five questions that find a Trigger 1, 2 or 3 account in the first call. It also gets a ten-minute demo script: start a Camunda process from a Fiori screen, render a Camunda form in Fiori, read from S/4HANA through the OData connector, and add one agent step that calls an SAP function. A named solutions engineer owns one rehearsed demo environment. A Panasonic reference kit carries a one-page summary, the four numbers, and a call the field can request. The situation table and objection sheet above go into the sales playbook.</p>
     <h3>For SAP's field</h3>
-    <p>A short "when to bring Camunda in" note for SAP account executives and BTP specialists, built on the situation table. It leads with their problem: customers who cannot finish on the 2027 clock. Then a joint ninety-minute workshop for a shared customer: map five processes, mark where each touches a non-SAP system, and pick one to build. It ends with a decision. Last, a check on whether an SAP Store listing is available and worth the work. I found none from outside.</p>
+    <p>SAP's account executives and BTP specialists get a short "when to bring Camunda in" note built on the situation table. It leads with their problem: customers who cannot finish on the 2027 clock. After that comes a joint ninety-minute workshop for a shared customer, where the team maps five processes, marks where each touches a non-SAP system, and picks one to build. It ends with a decision. Last, I'd check whether an SAP Store listing is available and worth the work. I found none from outside.</p>
     <h3>For systems integrators</h3>
     <p>The <a href="https://camunda.com/case-studies/panasonic-europe/" target="_blank" rel="noopener">Panasonic case study</a> names Holisticon and cimt AG as implementation partners, and <a href="https://column2.com/2024/10/camundacon-2024-day-1-integrating-camunda-and-sap/" target="_blank" rel="noopener">CamundaCon 2024 coverage</a> mentions a Cognizant accounts-payable solution built on the OData interface. These are the first calls. Give them the demo environment, the discovery card and a clear rule on who owns the customer conversation.</p>
 
@@ -180,9 +180,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 
   <div class="proof-body">
-    <p class="section-label">Why this shape</p>
+    <p class="section-label">Why it is built this way</p>
     <h2 id="reasoning">The hand-off</h2>
-    <p>A co-sell motion fails at the hand-off. The SAP seller, the Camunda seller and the integrator each need one thing they can say and one thing they can do in the first meeting. That is why the brief is a rule, a table and a demo script before it is anything else, and why every proof point I could not source is marked instead of rounded up.</p>
+    <p>A co-sell motion fails at the hand-off. The SAP seller, the Camunda seller and the integrator each need one thing they can say and one thing they can do in the first meeting. That is why the brief is a rule, a table and a demo script before it is anything else, and why every claim I could not source is marked as unconfirmed.</p>
   </div>
 
   <div class="button-row" style="margin-top: 40px;">
