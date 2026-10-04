@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WKSZ7DQC');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Camunda + SAP BTP Co-Sell Brief | James Praise</title>
+<meta name="description" content="A co-sell brief for Camunda's EMEA motion in SAP-shop accounts, built by James Praise from public sources." />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+<link rel="canonical" href="https://jamespraise.xyz/work/camunda-emea/proof/" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=22" />
+<style>
+  .proof-wrap { max-width: 720px; margin: 0 auto; padding: 100px 0 80px; }
+  .proof-eyebrow { color: var(--color-purple); font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; font-size: 13px; margin-bottom: 10px; }
+  .proof-credit { display: flex; align-items: center; gap: 10px; margin: 20px 0 40px; }
+  .proof-credit img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+  .proof-credit span { color: var(--text-muted); font-size: 14px; }
+  .proof-credit strong { color: var(--text-primary); }
+  .proof-note { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 8px; padding: 16px 20px; font-size: 14px; color: var(--text-muted); margin-bottom: 40px; }
+  .proof-draft { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 12px; padding: 40px; margin-bottom: 32px; }
+  .proof-draft h2 { margin-top: 32px; margin-bottom: 10px; }
+  .proof-draft h2:first-child { margin-top: 0; }
+  .proof-draft h3 { margin-top: 24px; margin-bottom: 8px; font-size: 15px; }
+  .proof-draft p { line-height: 1.7; }
+  .proof-meta { font-size: 13px; color: var(--text-muted); margin-bottom: 24px; }
+  .proof-body p { line-height: 1.7; }
+  .proof-body h2 { margin-top: 40px; margin-bottom: 12px; }
+  .proof-body strong { font-weight: 700; }
+  .proof-back { display: inline-block; margin-bottom: 24px; font-size: 14px; }
+  .section-label { font-size: 13px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-table { width: 100%; border-collapse: collapse; margin: 16px 0 28px; font-size: 13.5px; }
+  .proof-table th, .proof-table td { text-align: left; padding: 9px 12px; border-bottom: 1px solid rgba(28,20,34,0.08); vertical-align: top; }
+  .proof-table th { font-size: 11px; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-muted); font-weight: 800; }
+  .proof-cards { display: grid; grid-template-columns: 1fr; gap: 12px; margin: 16px 0 28px; }
+  .proof-card { background: var(--bg-page); border: 1px solid rgba(28,20,34,0.1); border-radius: 10px; padding: 16px; }
+  .proof-card strong { display: block; font-size: 14.5px; margin-bottom: 5px; color: var(--text-primary); }
+  .proof-card span { font-size: 13.5px; color: var(--text-muted); line-height: 1.6; }
+  .proof-quote { border-left: 3px solid var(--color-purple); padding: 4px 0 4px 22px; margin: 24px 0; font-size: 18px; font-weight: 600; line-height: 1.5; color: var(--text-primary); }
+  .proof-tag { display: inline-block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; padding: 2px 8px; border-radius: 100px; background: rgba(28,20,34,0.06); color: var(--text-muted); margin-left: 8px; }
+  .proof-divider { border: none; border-top: 1px solid rgba(28,20,34,0.1); margin: 40px 0; }
+  .proof-toc { position: fixed; top: 130px; right: 32px; width: 200px; font-size: 13px; }
+  .proof-toc-group { margin-bottom: 18px; }
+  .proof-toc-label { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-toc a { display: block; padding: 4px 0 4px 12px; border-left: 2px solid rgba(28,20,34,0.1); color: var(--text-muted); text-decoration: none; line-height: 1.4; }
+  .proof-toc a:hover { color: var(--color-purple); border-left-color: var(--color-purple); }
+  .proof-toc a.is-active { color: var(--color-purple); border-left-color: var(--color-purple); font-weight: 700; }
+  @media (max-width: 1400px) { .proof-toc { display: none; } }
+  .proof-progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(28,20,34,0.08); z-index: 200; }
+  .proof-progress-bar { height: 100%; width: 0%; background: var(--color-purple); transition: width 0.1s linear; }
+</style>
+</head>
+<body class="proof-page">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKSZ7DQC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="proof-progress-track"><div class="proof-progress-bar" id="proofProgressBar"></div></div>
+
+<a href="/work/camunda-emea/" class="pitch-exit" aria-label="Back to the Camunda pitch">
+  <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+</a>
+
+<nav class="proof-toc" aria-label="Section navigation">
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The brief</p>
+    <a href="#motion">The motion</a>
+    <a href="#confirmed">What is confirmed</a>
+    <a href="#accounts">Who to go after</a>
+    <a href="#versus-sap">Next to SAP's tools</a>
+    <a href="#messaging">Joint messaging</a>
+    <a href="#plays">Partner and field plays</a>
+    <a href="#plan">First 90 days</a>
+    <a href="#measures">Measures</a>
+    <a href="#unconfirmed">Not confirmed</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">Why this shape</p>
+    <a href="#reasoning">The hand-off</a>
+  </div>
+</nav>
+
+<div class="container proof-wrap">
+  <a class="proof-back" href="/work/camunda-emea/">&larr; Back to the Camunda pitch</a>
+
+  <p class="proof-eyebrow">A brief for Camunda</p>
+  <h1>The EMEA co-sell motion for SAP-shop accounts</h1>
+
+  <div class="proof-credit">
+    <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+    <span><strong>James Praise</strong> &middot; Marketing and GTM Operator</span>
+  </div>
+
+  <p class="proof-note">Prepared for Justin Vaughan-Brown, VP Product Marketing &amp; Strategic Communications. Written from public sources only, so each claim names its source, and the last section lists what I could not confirm from outside.</p>
+
+  <div class="proof-draft">
+    <h2 id="motion">The motion in one paragraph</h2>
+    <p>Camunda has the hard part of an SAP story already. The integration is built, <a href="https://docs.camunda.io/docs/components/camunda-integrations/sap/sap-integration/" target="_blank" rel="noopener">Camunda's documentation calls it SAP Certified</a>, it runs inside the customer's own SAP Business Technology Platform (BTP) instance, and <a href="https://camunda.com/case-studies/panasonic-europe/" target="_blank" rel="noopener">Panasonic Europe</a> runs it at more than 220,000 workflow instances a year. What I could not find from outside is the motion around it: a sharp account profile, a clear line between Camunda and SAP's own process tools, and a plan for SAP's field and the systems integrators. This brief proposes all three for Europe, the Middle East and Africa (EMEA), with a 90-day plan to launch them.</p>
+
+    <h2 id="confirmed">What is confirmed today</h2>
+    <table class="proof-table">
+      <tr><th>Fact</th><th>Source</th></tr>
+      <tr><td>Three components: an Open Data Protocol (OData) connector for SAP S/4HANA and SAP ERP Central Component (ECC) systems, a Remote Function Call (RFC) connector for ECC, and a BTP plugin that renders Camunda forms in SAP Fiori and starts processes from SAP</td><td><a href="https://docs.camunda.io/docs/components/camunda-integrations/sap/sap-integration/" target="_blank" rel="noopener">Camunda documentation, SAP integration</a></td></tr>
+      <tr><td>The components run inside the customer's BTP instance and need "no proprietary Camunda setup"</td><td><a href="https://docs.camunda.io/docs/components/camunda-integrations/sap/sap-integration/" target="_blank" rel="noopener">Camunda documentation, SAP integration</a></td></tr>
+      <tr><td>The integration is described as "SAP Certified", and SAP functions can be called as tools from an AI agent sub-process</td><td><a href="https://docs.camunda.io/docs/components/camunda-integrations/sap/sap-integration/" target="_blank" rel="noopener">Camunda documentation, SAP integration</a>, and <a href="https://camunda.com/solutions/camunda-sap-integration/" target="_blank" rel="noopener">Camunda's SAP integration page</a></td></tr>
+      <tr><td>Camunda lists itself as a Technology Alliance Partner in the SAP PartnerEdge Open Ecosystem</td><td><a href="https://camunda.com/partners/sap/" target="_blank" rel="noopener">Camunda's SAP partner page</a></td></tr>
+      <tr><td>Camunda pitches the integration for "a more controlled transition to SAP S/4HANA" and for the SAP Clean Core strategy, which asks customers to remove custom code before they migrate</td><td><a href="https://camunda.com/blog/2024/10/why-camunda-sap-integration-solution/" target="_blank" rel="noopener">Camunda blog, October 2024</a>, and <a href="https://camunda.com/blog/2025/03/how-sap-customers-can-tackle-complexity-and-drive-transformation-with-camunda/" target="_blank" rel="noopener">March 2025</a></td></tr>
+      <tr><td>Panasonic Europe runs Camunda as one orchestration layer across several SAP environments while moving from SAP R/3 to S/4HANA: 220,000+ workflow instances a year, 600+ process request types, a four-person team</td><td><a href="https://camunda.com/case-studies/panasonic-europe/" target="_blank" rel="noopener">Camunda case study</a></td></tr>
+      <tr><td>37% of SAP ECC companies in the 2026 survey of the German-speaking SAP user group (DSAG) expect to be on S/4HANA by the end of 2027, and almost half expect to finish by the end of 2030</td><td><a href="https://impulsant.dsag.de/formate/pressemeldung/dsag-investment-report-2026-companies-are-investing-more-selectively-ai-is-becoming-established-cloud-computing-is-being-put-to-the-test/" target="_blank" rel="noopener">DSAG Investment Report 2026</a> (198 member companies)</td></tr>
+    </table>
+
+    <h2 id="accounts">Who to go after</h2>
+    <p>The account profile has three triggers. An account needs at least one, and the strongest accounts have two.</p>
+    <p><strong>Trigger 1: ECC on the 2027 clock.</strong> Most ECC customers will not finish by the end of 2027, and about half expect to run ECC into 2030, according to the <a href="https://impulsant.dsag.de/formate/pressemeldung/dsag-investment-report-2026-companies-are-investing-more-selectively-ai-is-becoming-established-cloud-computing-is-being-put-to-the-test/" target="_blank" rel="noopener">DSAG Investment Report 2026</a>. Those companies will run ECC and S/4HANA side by side for years, and a process layer above both is useful on day one and survives the move. Panasonic's own description, reported by <a href="https://sapinsider.org/map/sap-s4hana-process-orchestration-process-logic" target="_blank" rel="noopener">SAPinsider</a>, is that when an ERP system changes, the process itself can remain largely untouched. The DSAG survey covers German-speaking member companies only. The EMEA-wide number is a first-week task.</p>
+    <p><strong>Trigger 2: a Clean Core mandate.</strong> The customer has been told to stop customizing the ERP before it migrates. The approval chains and exception handling that lived in SAP's custom ABAP code have to go somewhere. Camunda's answer is Business Process Model and Notation (BPMN) and Decision Model and Notation (DMN) models that business and IT can both read.</p>
+    <p><strong>Trigger 3: a process that crosses systems.</strong> Panasonic's business-partner process is the example: a request starts in a form, gets validated against SAP, and records an approval path, with S/4HANA staying the source of truth. Quote-to-cash, procure-to-pay, onboarding and claims have the same shape, and any of them that touch a non-SAP system fit, as <a href="https://sapinsider.org/map/camunda-processos-brings-agentic-orchestration-to-enterprise-workflows" target="_blank" rel="noopener">SAPinsider</a> also notes.</p>
+    <p>Titles to reach: head of SAP or ERP transformation, enterprise architect, head of process excellence, and the chief information officer. These are hypotheses. The first test is whether Camunda's closed-won deals in EMEA show the same titles.</p>
+
+    <h2 id="versus-sap">Where Camunda sits next to SAP's own tools</h2>
+    <p>SAP sells its own answer. SAP Press describes <a href="https://blog.sap-press.com/what-is-sap-build-process-automation" target="_blank" rel="noopener">SAP Build Process Automation</a> as a way for business users to automate workflows and tasks without writing code, with decision logic and robotic task automation built in. <a href="https://news.sap.com/2026/02/process-conversation-joule-sap-signavio-solutions-generally-available/" target="_blank" rel="noopener">Joule with SAP Signavio</a> became generally available in February 2026, and SAP says it offers orchestration across SAP applications. SAPinsider put the difference this way in July 2026: SAP's model starts from the suite and extends outward, and Camunda's starts from the process and coordinates across the landscape.</p>
+    <p>The field needs one rule it can use in a meeting: SAP's tools win inside SAP, and Camunda wins when the process leaves it.</p>
+    <table class="proof-table">
+      <tr><th>Situation</th><th>Likely answer</th><th>Why</th></tr>
+      <tr><td>Approval flow inside one SAP application, built by a business user</td><td>SAP Build Process Automation</td><td>It is native and the builder needs no developer</td></tr>
+      <tr><td>Process crosses SAP and two or more other systems</td><td>Camunda</td><td>It was built to coordinate systems, and the SAP side is one connector</td></tr>
+      <tr><td>Long-running process with audit and recovery requirements</td><td>Camunda</td><td>State, retries and an audit trail are the product</td></tr>
+      <tr><td>AI agent steps that need a governed path</td><td>Camunda</td><td>Policy sits outside the agent's own reasoning</td></tr>
+      <tr><td>Customer wants a process that survives the S/4HANA move</td><td>Camunda</td><td>The process is not tied to either ERP version</td></tr>
+    </table>
+    <p>Three objections to prepare for.</p>
+    <p><strong>"We already have Build Process Automation."</strong> Agree with it. Ask which of the customer's processes touch a system SAP does not own, and start with that one. Camunda does not have to replace anything to start.</p>
+    <p><strong>"We will sort processes out after the S/4HANA move."</strong> The process work is what makes the move smaller. Camunda's own claim, in its <a href="https://camunda.com/blog/2024/10/why-camunda-sap-integration-solution/" target="_blank" rel="noopener">October 2024 blog</a>, is that moving in stages reduces testing effort and risk. The Panasonic case is the evidence to use, with the caveat that it is Camunda's own case study.</p>
+    <p><strong>"One more platform to run on BTP."</strong> The components deploy into the customer's BTP instance. A <a href="https://column2.com/2024/10/camundacon-2024-day-1-integrating-camunda-and-sap/" target="_blank" rel="noopener">CamundaCon 2024 write-up</a> reports that no additional Camunda licensing fee applies for customers already on BTP. <em>[proof needed: confirm the licensing position with Camunda's pricing owners before this goes in front of a customer]</em></p>
+
+    <h2 id="messaging">Joint messaging</h2>
+    <p class="proof-quote">Keep SAP as your system of record. Run the process around it on Camunda.</p>
+    <table class="proof-table">
+      <tr><th>Audience</th><th>What they need to hear</th><th>Proof to carry</th></tr>
+      <tr><td>SAP architect or Basis lead</td><td>Nothing to install outside BTP, standard OData and RFC calls, no custom code in the core</td><td>The SAP Certified claim and the component list</td></tr>
+      <tr><td>Process owner or business lead</td><td>One task list, one place to see where a request is stuck, rules the business can read</td><td>Panasonic: "one place to go to do workflows; one task list"</td></tr>
+      <tr><td>Chief information officer or finance lead</td><td>The migration gets smaller, audits get easier, and AI agents get a governed route into SAP</td><td>The DSAG timeline, Panasonic's scale, and the <a href="https://camunda.com/press-releases/camunda-named-a-visionary-in-2025-gartner-magic-quadrant-for-business-orchestration-and-automation-technologies/" target="_blank" rel="noopener">Gartner Visionary placement in the 2025 Business Orchestration and Automation Technologies Magic Quadrant</a></td></tr>
+    </table>
+    <p>The message must not attack SAP. SAP's field is a source of introductions, and the customer's system of record is SAP. The tone is "we make your SAP investment go further."</p>
+
+    <h2 id="plays">Partner and field plays</h2>
+    <h3>For Camunda's EMEA field</h3>
+    <p>A one-page SAP discovery card: five questions that find a Trigger 1, 2 or 3 account in the first call. A ten-minute demo script: start a Camunda process from a Fiori screen, render a Camunda form in Fiori, read from S/4HANA through the OData connector, and add one agent step that calls an SAP function. One environment, rehearsed, owned by a named solutions engineer. A Panasonic reference kit: a one-page summary, the four numbers, and a call the field can request. The situation table and objection sheet above, built into the sales playbook.</p>
+    <h3>For SAP's field</h3>
+    <p>A short "when to bring Camunda in" note for SAP account executives and BTP specialists, built on the situation table. It leads with their problem: customers who cannot finish on the 2027 clock. Then a joint ninety-minute workshop for a shared customer: map five processes, mark where each touches a non-SAP system, and pick one to build. It ends with a decision. Last, a check on whether an SAP Store listing is available and worth the work. I found none from outside.</p>
+    <h3>For systems integrators</h3>
+    <p>The <a href="https://camunda.com/case-studies/panasonic-europe/" target="_blank" rel="noopener">Panasonic case study</a> names Holisticon and cimt AG as implementation partners, and <a href="https://column2.com/2024/10/camundacon-2024-day-1-integrating-camunda-and-sap/" target="_blank" rel="noopener">CamundaCon 2024 coverage</a> mentions a Cognizant accounts-payable solution built on the OData interface. These are the first calls. Give them the demo environment, the discovery card and a clear rule on who owns the customer conversation.</p>
+
+    <h2 id="plan">First 90 days</h2>
+    <table class="proof-table">
+      <tr><th>Weeks</th><th>Work</th><th>Output</th></tr>
+      <tr><td>1 to 2</td><td>Eight to ten calls: EMEA account executives, solutions engineers, the SAP integration product owner, two integrators, and the Panasonic contact if Camunda allows it. Pull every SAP-tagged opportunity from the customer relationship management system for the last two years.</td><td>Baseline and the real questions</td></tr>
+      <tr><td>3 to 4</td><td>Fix the account profile against closed-won data. Write the message house and the situation table. Review both with product and the regional sales leaders.</td><td>One-page positioning, signed off</td></tr>
+      <tr><td>5 to 8</td><td>Build the discovery card, demo script, Panasonic kit and objection sheet. Train the EMEA field in one session and record it. Brief two integrators.</td><td>Enablement kit in use</td></tr>
+      <tr><td>9 to 13</td><td>Pilot on twenty named accounts, with two joint workshops. Review what the field used and what it skipped. Decide on the SAP Store listing and the partner asks.</td><td>Pilot read-out and a decision</td></tr>
+    </table>
+
+    <h2 id="measures">How to tell whether it worked</h2>
+    <p><strong>Leading measures, checked every two weeks:</strong> the share of EMEA SAP-tagged opportunities where the discovery card was used, workshops held with named accounts and how many ended with a chosen process, and integrator-sourced opportunities.</p>
+    <p><strong>Lagging measures, checked at day 90 and day 180:</strong> SAP-tagged pipeline created and its win rate against other pipeline, sales cycle length for SAP-tagged deals, and reference calls requested and completed.</p>
+    <p>I have no baseline for any of these. Week one produces it, and the targets get set from it. <em>[proof needed: Camunda's customer relationship management data]</em></p>
+
+    <h2 id="unconfirmed">What I could not confirm from outside</h2>
+    <p>Whether Camunda holds any SAP partner tier above Technology Alliance Partner, and whether SAP's sellers co-sell Camunda today. Whether a Camunda listing exists in the SAP Store; I searched and found none. What share of Camunda's EMEA pipeline already touches SAP. What EMEA means for this role, a product area or a region. SAP's placement in the 2025 Gartner Magic Quadrant for Business Orchestration and Automation Technologies: SAP is among the vendors Gartner assessed, and I did not find its position.</p>
+  </div>
+
+  <div class="proof-body">
+    <p class="section-label">Why this shape</p>
+    <h2 id="reasoning">The hand-off</h2>
+    <p>A co-sell motion fails at the hand-off. The SAP seller, the Camunda seller and the integrator each need one thing they can say and one thing they can do in the first meeting. That is why the brief is a rule, a table and a demo script before it is anything else, and why every proof point I could not source is marked instead of rounded up.</p>
+  </div>
+
+  <div class="button-row" style="margin-top: 40px;">
+    <a href="/work/camunda-emea/" class="button button-primary">Back to the pitch</a>
+    <a href="mailto:jamesspraise@gmail.com?subject=Senior%20Product%20Marketing%20Manager%20EMEA%20-%20James%20Praise" class="button button-secondary">Let's Talk</a>
+  </div>
+</div>
+
+<script src="/script.js?v=11"></script>
+<script>
+(function () {
+  var bar = document.getElementById('proofProgressBar');
+  function updateProgress() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.proof-toc a'));
+  var sections = tocLinks.map(function (a) {
+    return document.getElementById(a.getAttribute('href').slice(1));
+  });
+  function updateActiveToc() {
+    var current = null;
+    sections.forEach(function (sec, i) {
+      if (sec && sec.getBoundingClientRect().top <= 140) current = i;
+    });
+    tocLinks.forEach(function (a, i) {
+      a.classList.toggle('is-active', i === current);
+    });
+  }
+  window.addEventListener('scroll', updateActiveToc, { passive: true });
+  updateActiveToc();
+})();
+</script>
+</body>
+</html>
