@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WKSZ7DQC');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Trade Country Map and Launch Brief | James Praise</title>
+<meta name="description" content="A country by product map of MetaMask's four Trade products, the places where MetaMask's own pages disagree, and a launch plan that starts in Nigeria, by James Praise." />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+<link rel="canonical" href="https://jamespraise.xyz/work/metamask/proof/" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=22" />
+<style>
+  .proof-wrap { max-width: 720px; margin: 0 auto; padding: 100px 0 80px; }
+  .proof-eyebrow { color: var(--color-purple); font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; font-size: 13px; margin-bottom: 10px; }
+  .proof-credit { display: flex; align-items: center; gap: 10px; margin: 20px 0 40px; }
+  .proof-credit img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+  .proof-credit span { color: var(--text-muted); font-size: 14px; }
+  .proof-credit strong { color: var(--text-primary); }
+  .proof-note { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 8px; padding: 16px 20px; font-size: 14px; color: var(--text-muted); margin-bottom: 40px; }
+  .proof-draft { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 12px; padding: 40px; margin-bottom: 32px; }
+  .proof-draft h2 { margin-top: 40px; margin-bottom: 10px; }
+  .proof-draft h2:first-child { margin-top: 0; }
+  .proof-draft h3 { margin-top: 28px; margin-bottom: 8px; font-size: 15px; }
+  .proof-draft p, .proof-draft li { line-height: 1.7; }
+  .proof-draft ul { padding-left: 20px; margin: 10px 0 16px; }
+  .proof-body p { line-height: 1.7; }
+  .proof-body h2 { margin-top: 40px; margin-bottom: 12px; }
+  .proof-body strong { font-weight: 700; }
+  .proof-back { display: inline-block; margin-bottom: 24px; font-size: 14px; }
+  .proof-table-wrap { overflow-x: auto; margin: 16px 0 28px; }
+  .proof-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .proof-table th, .proof-table td { text-align: left; padding: 9px 10px; border-bottom: 1px solid rgba(28,20,34,0.08); vertical-align: top; line-height: 1.5; }
+  .proof-table th { font-size: 11px; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-muted); font-weight: 800; }
+  .proof-table.matrix td, .proof-table.matrix th { padding: 7px 8px; font-size: 12.5px; }
+  .cell { display: inline-block; padding: 1px 8px; border-radius: 100px; font-size: 11.5px; font-weight: 700; white-space: nowrap; }
+  .c-open { background: rgba(31,138,90,0.12); color: #17704a; }
+  .c-blocked { background: rgba(200,50,60,0.12); color: #a82a34; }
+  .c-split { background: rgba(214,150,20,0.16); color: #8a5d00; }
+  .proof-quote { border-left: 3px solid var(--color-purple); padding: 4px 0 4px 22px; margin: 24px 0; font-size: 18px; font-weight: 600; line-height: 1.5; color: var(--text-primary); }
+  .proof-figure { margin: 20px 0 28px; }
+  .proof-figure img { width: 100%; height: auto; border: 1px solid rgba(28,20,34,0.12); border-radius: 8px; display: block; }
+  .proof-figure figcaption { font-size: 12.5px; color: var(--text-muted); margin-top: 8px; line-height: 1.5; }
+  .proof-toc { position: fixed; top: 130px; right: 32px; width: 200px; font-size: 13px; }
+  .proof-toc-group { margin-bottom: 18px; }
+  .proof-toc-label { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-toc a { display: block; padding: 4px 0 4px 12px; border-left: 2px solid rgba(28,20,34,0.1); color: var(--text-muted); text-decoration: none; line-height: 1.4; }
+  .proof-toc a:hover { color: var(--color-purple); border-left-color: var(--color-purple); }
+  .proof-toc a.is-active { color: var(--color-purple); border-left-color: var(--color-purple); font-weight: 700; }
+  @media (max-width: 1400px) { .proof-toc { display: none; } }
+  @media (max-width: 640px) { .proof-draft { padding: 24px 18px; } }
+  .proof-progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(28,20,34,0.08); z-index: 200; }
+  .proof-progress-bar { height: 100%; width: 0%; background: var(--color-purple); transition: width 0.1s linear; }
+</style>
+</head>
+<body class="proof-page">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKSZ7DQC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="proof-progress-track"><div class="proof-progress-bar" id="proofProgressBar"></div></div>
+
+<a href="/work/metamask/" class="pitch-exit" aria-label="Back to the MetaMask pitch">
+  <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+</a>
+
+<nav class="proof-toc" aria-label="Section navigation">
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The brief</p>
+    <a href="#finding">The finding</a>
+    <a href="#disagree">Where the pages disagree</a>
+    <a href="#screenshots">The screenshots</a>
+    <a href="#matrix">The country map</a>
+    <a href="#groups">Four country groups</a>
+    <a href="#launch">Launch order</a>
+    <a href="#measures">Measures</a>
+    <a href="#unconfirmed">Not confirmed</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">Why it is built this way</p>
+    <a href="#reasoning">How I built it</a>
+  </div>
+</nav>
+
+<div class="container proof-wrap">
+  <a class="proof-back" href="/work/metamask/">&larr; Back to the MetaMask pitch</a>
+
+  <p class="proof-eyebrow">A brief for MetaMask</p>
+  <h1>The Trade country map and launch brief</h1>
+
+  <div class="proof-credit">
+    <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+    <span><strong>James Praise</strong> &middot; Marketing and GTM Operator</span>
+  </div>
+
+  <p class="proof-note">Prepared for MetaMask's Product Marketing Director. I wrote it from public pages only, read in Chrome on 5 October 2026. I did not test the app. Each claim links to its source, screenshots show where two pages disagree, and the last section lists what I could not confirm from outside.</p>
+
+  <div class="proof-draft">
+    <h2 id="finding">The finding</h2>
+    <p>MetaMask's pages for <a href="https://metamask.io/swaps" target="_blank" rel="noopener">swaps</a>, <a href="https://metamask.io/perps" target="_blank" rel="noopener">perps</a>, <a href="https://metamask.io/prediction-markets" target="_blank" rel="noopener">prediction markets</a> and <a href="https://metamask.io/rwa" target="_blank" rel="noopener">tokenized stocks</a> each say where the product is available. They do not say the same thing. The two prediction market pages name different blocked countries. The two tokenized stock pages do the same. Neither pair matches the third-party page it points to for the latest list. The <a href="https://metamask.io/" target="_blank" rel="noopener">homepage</a> Trade section carries no regional wording at all.</p>
+    <p>This brief puts the four products on one map for 25 countries, marks every cell where the sources split, and uses the map to set a launch order that starts in Nigeria.</p>
+
+    <h2 id="disagree">Where MetaMask's own pages disagree</h2>
+    <div class="proof-table-wrap">
+    <table class="proof-table">
+      <tr><th>What</th><th>One source says</th><th>Another source says</th><th>Why it matters</th></tr>
+      <tr><td><strong>Prediction markets, blocked countries</strong></td><td>The <a href="https://support.metamask.io/trade/predict/how-to-trade-predictions/" target="_blank" rel="noopener">support page</a> names 12 countries, then "countries on the USA sanctions list, and more." Romania is on this list only.</td><td>The <a href="https://metamask.io/prediction-markets" target="_blank" rel="noopener">product page FAQ</a> names 18 countries plus sanctioned countries. Brazil, Burundi, Ethiopia, Iraq, Italy, Japan and Myanmar are on this list only.</td><td>A user in Brazil, Ethiopia or Japan reads the support page and sees no warning. A user in Romania reads the product page and sees none.</td></tr>
+      <tr><td><strong>Prediction markets, the venue's own list</strong></td><td>Both MetaMask pages tell readers to check Polymarket for the full list.</td><td><a href="https://docs.polymarket.com/api-reference/geoblock" target="_blank" rel="noopener">Polymarket's documentation</a> names 34 countries and territories as close-only (users can close positions but not open new ones) and 5 more on its own website only. Ireland, Malta (sports only), the Netherlands, New Zealand, Slovakia and South Korea are on it and on neither MetaMask page. It lists four Canadian provinces, where both MetaMask pages say Canada.</td><td>The full list lives off MetaMask's pages, and it is longer than either one.</td></tr>
+      <tr><td><strong>Prediction markets, how many countries</strong></td><td>The <a href="https://metamask.io/news/metamask-vs-phantom-vs-rabby" target="_blank" rel="noopener">comparison post of 29 September</a> says predictions are "currently blocked in 39 countries."</td><td>The product page names 18 and the support page names 12. Neither prints a sanctions list.</td><td>I could not reproduce 39 from any page.</td></tr>
+      <tr><td><strong>Prediction markets, the fee</strong></td><td>The <a href="https://metamask.io/prediction-markets" target="_blank" rel="noopener">product page FAQ</a> says "a 4% transaction fee."</td><td>The <a href="https://support.metamask.io/trade/predict/how-to-trade-predictions/" target="_blank" rel="noopener">support page</a> lists a fixed 4% fee plus a variable taker fee of 0% to 7%, set by Polymarket.</td><td>A reader of the product page expects 4% in total.</td></tr>
+      <tr><td><strong>Tokenized stocks, unavailable countries</strong></td><td>The <a href="https://metamask.io/rwa" target="_blank" rel="noopener">product page FAQ</a> lists 26 entries, with Hong Kong named.</td><td>The <a href="https://support.metamask.io/trade/real-world-assets/" target="_blank" rel="noopener">support page</a> lists 31 entries. It adds Algeria, China, Eritrea, Morocco, Nepal and Venezuela.</td><td>A user in Morocco or Algeria gets a different answer from each page.</td></tr>
+      <tr><td><strong>Tokenized stocks, the page both cite</strong></td><td>Both MetaMask pages link <a href="https://docs.ondo.finance/ondo-stocks/eligibility" target="_blank" rel="noopener">Ondo's eligibility page</a> for the latest list.</td><td>Ondo's page does not name Algeria, China, Eritrea, Morocco, Nepal or Venezuela. It treats Brazil, the European Economic Area (EEA), Hong Kong, Malaysia, Singapore, Switzerland and the UK as restricted, with access for qualified, professional or accredited investors, and for institutions only in Switzerland.</td><td>The six extra countries on the support page come from a source I could not find.</td></tr>
+      <tr><td><strong>Tokenized stocks, one page, two claims</strong></td><td>The <a href="https://metamask.io/rwa" target="_blank" rel="noopener">product page</a> says "from any supported country around the world" and "US markets, now available to anyone."</td><td>The same page carries the line "This feature is not supported in your region" and a list of 26 unavailable places.</td><td>The headline promise and the footnote point in opposite directions.</td></tr>
+    </table>
+    </div>
+
+    <h3>Smaller mismatches next to the country question</h3>
+    <div class="proof-table-wrap">
+    <table class="proof-table">
+      <tr><th>What</th><th>Sources</th></tr>
+      <tr><td><strong>How many perps markets</strong></td><td>The <a href="https://metamask.io/perps" target="_blank" rel="noopener">product page</a> says "150+ tokens," plus US equities, commodities and currencies. The <a href="https://support.metamask.io/trade/perps/how-to-trade-perps/" target="_blank" rel="noopener">support page</a> says "over 180." The <a href="https://metamask.io/news/metamask-vs-phantom-vs-rabby" target="_blank" rel="noopener">comparison post</a> says "270+ assets."</td></tr>
+      <tr><td><strong>How many tokenized assets</strong></td><td>The <a href="https://metamask.io/rwa" target="_blank" rel="noopener">product page</a> headline says "400+ ways to invest" and its FAQ on the same page says "200+ RWAs." The <a href="https://metamask.io/news/metamask-vs-phantom-vs-rabby" target="_blank" rel="noopener">comparison post</a> says "400+." The <a href="https://support.metamask.io/trade/real-world-assets/" target="_blank" rel="noopener">support page</a> says "hundreds."</td></tr>
+      <tr><td><strong>Perps fee</strong></td><td>The <a href="https://metamask.io/news/metamask-vs-phantom-vs-rabby" target="_blank" rel="noopener">comparison post</a> says "no MetaMask fee." The <a href="https://support.metamask.io/trade/perps/how-to-trade-perps/" target="_blank" rel="noopener">support page</a> shows a total taker fee of 0.1432% at Rewards levels 1 to 3, with no split between Hyperliquid and MetaMask.</td></tr>
+      <tr><td><strong>Money Account yield (outside Trade)</strong></td><td>The <a href="https://metamask.io/" target="_blank" rel="noopener">homepage</a> says "Earn up to 4%." The <a href="https://metamask.io/news/metamask-vs-phantom-vs-rabby" target="_blank" rel="noopener">comparison post</a> says "up to 6% APY."</td></tr>
+    </table>
+    </div>
+
+    <h3 id="screenshots">The screenshots</h3>
+    <p>Each image below was captured on 5 October 2026 and sits next to the row it supports.</p>
+    <figure class="proof-figure">
+      <img src="images/predictions-product-page.jpg" alt="MetaMask prediction markets product page FAQ listing 18 countries where prediction markets are not available" loading="lazy" />
+      <figcaption>Prediction markets product page, FAQ: 18 named countries plus sanctioned countries.</figcaption>
+    </figure>
+    <figure class="proof-figure">
+      <img src="images/predictions-support-page.jpg" alt="MetaMask support page for prediction markets listing 12 countries where the feature is not available, with Romania included and Brazil absent" loading="lazy" />
+      <figcaption>Prediction markets support page: 12 named countries, "and more." Romania appears here and not on the product page. Brazil, Ethiopia and Japan appear on the product page and not here.</figcaption>
+    </figure>
+    <figure class="proof-figure">
+      <img src="images/rwa-product-page-hero.jpg" alt="MetaMask tokenized assets product page hero reading from any supported country around the world, with a disclaimer that the feature is not supported in your region" loading="lazy" />
+      <figcaption>Tokenized assets product page: "from any supported country around the world," and a few lines below it, "This feature is not supported in your region."</figcaption>
+    </figure>
+    <figure class="proof-figure">
+      <img src="images/rwa-product-page.jpg" alt="MetaMask tokenized assets product page FAQ listing 26 unavailable regions" loading="lazy" />
+      <figcaption>Tokenized assets product page, FAQ: 26 unavailable regions.</figcaption>
+    </figure>
+    <figure class="proof-figure">
+      <img src="images/rwa-support-page.jpg" alt="MetaMask support page for tokenized stocks listing unavailable regions including Algeria, China, Eritrea, Morocco, Nepal and Venezuela" loading="lazy" />
+      <figcaption>Tokenized stocks support page: 31 entries, including Algeria, China, Eritrea, Morocco, Nepal and Venezuela.</figcaption>
+    </figure>
+    <figure class="proof-figure">
+      <img src="images/comparison-post-availability.jpg" alt="MetaMask comparison post section on availability, stating swaps in 150+ countries, perps in 150+ countries, tokenized assets in 140+ countries, and prediction markets blocked in 39 countries" loading="lazy" />
+      <figcaption>Comparison post, availability section: the one place that gives country counts for all four products.</figcaption>
+    </figure>
+
+    <h2 id="matrix">The country by product map</h2>
+    <p>"Open" means the country is on no excluded list in any source I read. It does not mean I tested the app. "Split" means at least one source blocks the country and at least one does not. Swaps are marked open because the <a href="https://metamask.io/news/metamask-vs-phantom-vs-rabby" target="_blank" rel="noopener">comparison post</a> says swaps are "blocked only in countries on the US sanctions list." No swaps page I read names a single country, on the <a href="https://metamask.io/swaps" target="_blank" rel="noopener">product page</a> or in the <a href="https://support.metamask.io/trade/swap/user-guide-swaps/" target="_blank" rel="noopener">support guide</a>. I treat Germany, France and Romania as inside the EEA. That is my assumption, since no page lists the members.</p>
+    <div class="proof-table-wrap">
+    <table class="proof-table matrix">
+      <tr><th>Country</th><th>Swaps</th><th>Perps</th><th>Predictions</th><th>Tokenized stocks</th><th>What decides it</th></tr>
+      <tr><td><strong>Nigeria</strong></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td>On no list in any source.</td></tr>
+      <tr><td><strong>Ghana</strong></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td>On no list in any source.</td></tr>
+      <tr><td><strong>Kenya</strong></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td>On no list in any source.</td></tr>
+      <tr><td><strong>South Africa</strong></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td>On no list in any source.</td></tr>
+      <tr><td><strong>Argentina</strong></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td>On no list in any source.</td></tr>
+      <tr><td><strong>Mexico</strong></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td>On no list in any source.</td></tr>
+      <tr><td><strong>Philippines</strong></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td>On no list in any source.</td></tr>
+      <tr><td><strong>Vietnam</strong></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td>On no list in any source.</td></tr>
+      <tr><td><strong>India</strong></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td>On no list in any source.</td></tr>
+      <tr><td><strong>Turkey</strong></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td>On no list in any source.</td></tr>
+      <tr><td><strong>United Arab Emirates</strong></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td>On no list in any source.</td></tr>
+      <tr><td><strong>Ethiopia</strong></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-split">Split</span></td><td><span class="cell c-open">Open</span></td><td>Product page and Polymarket block predictions. Support page does not.</td></tr>
+      <tr><td><strong>Morocco</strong></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-split">Split</span></td><td>Support page blocks tokenized stocks. Product page and Ondo do not name it.</td></tr>
+      <tr><td><strong>Brazil</strong></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-split">Split</span></td><td><span class="cell c-blocked">Blocked</span></td><td>Product page and Polymarket block predictions. Support page does not. Both pages block tokenized stocks.</td></tr>
+      <tr><td><strong>Japan</strong></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-split">Split</span></td><td><span class="cell c-open">Open</span></td><td>Product page blocks predictions. Support page does not. Polymarket's website is close-only.</td></tr>
+      <tr><td><strong>South Korea</strong></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-split">Split</span></td><td><span class="cell c-open">Open</span></td><td>Neither MetaMask page names it. Polymarket's website is close-only.</td></tr>
+      <tr><td><strong>Romania</strong></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-split">Split</span></td><td><span class="cell c-blocked">Blocked</span></td><td>Support page alone blocks predictions. Tokenized stocks blocked as EEA.</td></tr>
+      <tr><td><strong>Thailand</strong></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-blocked">Blocked</span></td><td><span class="cell c-open">Open</span></td><td>Named for predictions on both pages and by Polymarket.</td></tr>
+      <tr><td><strong>Australia</strong></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-blocked">Blocked</span></td><td><span class="cell c-open">Open</span></td><td>Blocked for predictions everywhere. Named on no tokenized stock list.</td></tr>
+      <tr><td><strong>Singapore</strong></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-blocked">Blocked</span></td><td><span class="cell c-blocked">Blocked</span></td><td>Named on every list.</td></tr>
+      <tr><td><strong>Germany</strong></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-blocked">Blocked</span></td><td><span class="cell c-blocked">Blocked</span></td><td>Named for predictions. Tokenized stocks blocked as EEA.</td></tr>
+      <tr><td><strong>France</strong></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-blocked">Blocked</span></td><td><span class="cell c-blocked">Blocked</span></td><td>Named for predictions. Tokenized stocks blocked as EEA.</td></tr>
+      <tr><td><strong>Canada</strong></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-split">Ontario only</span></td><td><span class="cell c-blocked">Blocked</span></td><td><span class="cell c-blocked">Blocked</span></td><td>Perps blocked in Ontario only. Both prediction pages say Canada.</td></tr>
+      <tr><td><strong>United Kingdom</strong></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-blocked">Blocked</span></td><td><span class="cell c-blocked">Blocked</span></td><td><span class="cell c-blocked">Blocked</span></td><td>Named on every list. Perps and predictions pages say "Not intended for UK persons."</td></tr>
+      <tr><td><strong>United States</strong></td><td><span class="cell c-open">Open</span></td><td><span class="cell c-blocked">Blocked</span></td><td><span class="cell c-blocked">Blocked</span></td><td><span class="cell c-blocked">Blocked</span></td><td>Named on every list.</td></tr>
+    </table>
+    </div>
+    <p>The perps column rests on two pages that agree: the <a href="https://metamask.io/perps" target="_blank" rel="noopener">product page</a> and the <a href="https://support.metamask.io/trade/perps/how-to-trade-perps/" target="_blank" rel="noopener">support page</a> both exclude the USA, UK, Ontario, Belgium and sanctioned countries.</p>
+
+    <h2 id="groups">Four country groups</h2>
+    <h3>Group 1: all four products open (11 countries)</h3>
+    <p>Nigeria, Ghana, Kenya, South Africa, Argentina, Mexico, the Philippines, Vietnam, India, Turkey and the United Arab Emirates. This is the only group where the Trade section can show all four products without a footnote, and it is the group where one screen carries four price tags. A swap shows <a href="https://metamask.io/swaps" target="_blank" rel="noopener">gas fees in the quote</a>. A perps market order costs <a href="https://support.metamask.io/trade/perps/how-to-trade-perps/" target="_blank" rel="noopener">0.1432% at Rewards levels 1 to 3</a>. A tokenized stock costs <a href="https://support.metamask.io/trade/real-world-assets/" target="_blank" rel="noopener">87.5 basis points</a> (0.875%). A prediction costs <a href="https://support.metamask.io/trade/predict/how-to-trade-predictions/" target="_blank" rel="noopener">4% plus a variable fee of up to 7%</a>. A user who sees all four will compare them, so the message for this group is a cost explainer on the Trade screen before it is a feature launch for any one product.</p>
+    <p>Lifecycle follows what the user has already done. A holder who swaps is shown perps or tokenized stocks next. Predictions are <a href="https://support.metamask.io/trade/predict/how-to-trade-predictions/" target="_blank" rel="noopener">live on MetaMask Mobile</a>, while <a href="https://support.metamask.io/trade/perps/how-to-trade-perps/" target="_blank" rel="noopener">perps</a> and <a href="https://support.metamask.io/trade/real-world-assets/" target="_blank" rel="noopener">tokenized stocks</a> run on mobile and the extension, so an extension-only user never receives a predictions message. The predictions message leads with what the support page already says: pay with any Ethereum Virtual Machine (EVM) token, no need to hold Polygon's POL token, and MetaMask covers the fee to claim winnings and withdraw. It states the 4% and the variable fee in the same breath.</p>
+
+    <h3>Group 2: three or two products open, nothing contested (5 countries)</h3>
+    <p>Thailand and Australia get swaps, perps and tokenized stocks. Singapore, Germany and France get swaps and perps. Predictions never appear in an email, an ad or a push message for any of them, because every source blocks them. Tokenized stocks stay out for Singapore, Germany and France too. The lead product is perps for experienced traders and swaps for everyone else, and the leverage explainer sits in front of the first perps screen. Australia is the useful test case. Every source blocks predictions there and none blocks tokenized stocks, so it is the cleanest place to prove the tokenized stock message on its own.</p>
+
+    <h3>Group 3: the pages disagree (6 countries)</h3>
+    <p>Ethiopia, Morocco, Brazil, Japan, South Korea and Romania. The rule for this group is conservative. If any page names the country for a product, that product stays out of lifecycle and paid until Product and Legal say which page is right. That costs a few impressions. Promoting a blocked product costs more, because the support page says restricted users <a href="https://support.metamask.io/trade/predict/how-to-trade-predictions/" target="_blank" rel="noopener">may notice that "trades are blocked at checkout."</a> Brazil is the first row to settle, because the product page, Polymarket and both tokenized stock pages all block something there.</p>
+
+    <h3>Group 4: swaps first, perps only where allowed (3 countries)</h3>
+    <p>The United Kingdom, the United States and Canada. Swaps lead. Perps run in Canada outside Ontario, though I could not confirm that from any page beyond the Ontario exclusion. The <a href="https://metamask.io/news/metamask-vs-phantom-vs-rabby" target="_blank" rel="noopener">comparison post</a> says it is "not for UK audiences" and the <a href="https://support.metamask.io/trade/perps/how-to-trade-perps/" target="_blank" rel="noopener">perps</a> and <a href="https://support.metamask.io/trade/predict/how-to-trade-predictions/" target="_blank" rel="noopener">predictions</a> pages say "Not intended for UK persons," so UK copy stays at the level of swaps and wallet features. No Trade campaign for this group names a product the country is blocked from.</p>
+
+    <h2 id="launch">Launch order, starting with Nigeria</h2>
+    <p>I used the method from <a href="/work/reform/">Reform's Feature Launch Plan Framework</a>: a priority matrix to pick the order, then a channel map for each wave. The matrix has four tests. How many products are open, where more is better. Whether the sources agree, where agreement goes first. The language the team can run the market in. Whether Trade has measurable users there. The last test needs MetaMask data that I do not have, so the order below rests on the first three.</p>
+    <div class="proof-table-wrap">
+    <table class="proof-table">
+      <tr><th>Wave</th><th>Countries</th><th>Why this order</th><th>Work</th></tr>
+      <tr><td>0, weeks 1 to 2</td><td>None. Internal.</td><td>Every later wave depends on one answer to "where is each product available."</td><td>Write one availability table that Product and Legal own. The support site, the product pages and the comparison post all read from it, and lifecycle and paid pull their exclusions from it. Settle the Group 3 rows first.</td></tr>
+      <tr><td>1, weeks 3 to 8</td><td>Nigeria</td><td>All four products clear on every source. English-language. I live in Lagos, so I can test the flows in the market and read the replies.</td><td>A cost explainer on the Trade screen. A tokenized stock first-trade flow written around the real steps: swap <a href="https://support.metamask.io/trade/real-world-assets/" target="_blank" rel="noopener">USDC on Ethereum or USDT on BNB Chain, with a $5 minimum</a>. A perps leverage explainer shown before the first leveraged trade. Predictions to mobile users only, with the full fee in the headline. Education content and two or three creators, briefed on the exclusions list, as the job description asks for <a href="https://job-boards.greenhouse.io/consensys/jobs/8048308" target="_blank" rel="noopener">"particularly among emerging market segments."</a></td></tr>
+      <tr><td>2, weeks 9 to 12</td><td>Ghana, Kenya, South Africa</td><td>Same footprint as Nigeria and the same language, so the Wave 1 assets move with local examples swapped in.</td><td>Reuse the Nigeria explainers. Run the same two tests before spending more.</td></tr>
+      <tr><td>3, weeks 13 to 20</td><td>Philippines, Vietnam, India, Turkey, the United Arab Emirates, Argentina, Mexico</td><td>All four open on every source, but each needs a local language or a local partner. This wave also covers the Asia audience the job description names.</td><td>Translate the cost explainer first. Add local creators only where Waves 1 and 2 show the education content moves first trades.</td></tr>
+      <tr><td>4, after Wave 0 closes</td><td>Group 3</td><td>Cannot start before Legal settles which list wins.</td><td>Run product by product launches for whichever countries clear.</td></tr>
+    </table>
+    </div>
+    <p>Channel map for Nigeria. In the app, mobile cards on the Trade screen and a message at the funding step, because the funding step is where each product asks for something different. By email, lifecycle flows split by which products a user has already tried. In education, a plain explainer for each fee and for liquidation, written for someone deciding with their own savings. In community and with creators, short briefs that list what each product is, what it costs and where it is blocked, so no creator promises predictions in a country that blocks them.</p>
+
+    <h2 id="measures">How to tell whether it worked</h2>
+    <p>I have no baselines. Week 2 produces them, and the targets get set from them.</p>
+    <p><strong>Leading measures, checked every two weeks:</strong></p>
+    <ul>
+      <li>The share of country and product cells where the support page, the product page and the app agree. This starts below 100% and is the first number to fix.</li>
+      <li>The share of first Trade sessions in a country that end on a screen blocking the product the user picked.</li>
+      <li>Support tickets per 1,000 trades that mention a fee or a blocked product, by product.</li>
+    </ul>
+    <p><strong>Lagging measures, checked at day 30 and day 90:</strong></p>
+    <ul>
+      <li>Share of new wallets making a first trade within 7 days, by country group.</li>
+      <li>Share of first-time traders making a second trade within 30 days, by product.</li>
+      <li>Trade volume per active user by country group.</li>
+    </ul>
+    <p>Every baseline above needs MetaMask's analytics data. I do not have it.</p>
+
+    <h2 id="unconfirmed">What I could not confirm from outside</h2>
+    <ul>
+      <li><strong>App behavior.</strong> I read pages, not the app. What the Trade tab shows a user in Nigeria, Brazil or Japan may differ from every page.</li>
+      <li><strong>Nigeria.</strong> No source lists Nigeria as available. It is on no excluded list, and I did not confirm it as supported.</li>
+      <li><strong>Which page is right.</strong> I can show where the pages differ. Only MetaMask, Polymarket and Ondo can say which one is current.</li>
+      <li><strong>The number 39.</strong> I could not reproduce it. Counting Polymarket's list gives a different figure depending on how provinces and close-only entries are counted.</li>
+      <li><strong>Sanctions lists.</strong> Both MetaMask pages exclude "countries on the USA sanctions list" without printing the list. Some of the countries Polymarket names may fall under it. I treated only the countries MetaMask names as excluded.</li>
+      <li><strong>Swaps availability.</strong> One sentence in the comparison post states it. No swaps page names a country.</li>
+      <li><strong>Whether the tokenized stock disclaimer shows to every visitor.</strong> I saw it from one browser and did not test other locations.</li>
+      <li><strong>Whether the homepage Trade section changes by visitor location.</strong> I read it from one browser, and it showed no regional wording.</li>
+      <li><strong>EEA membership.</strong> I treated Germany, France and Romania as inside the EEA. No page lists the members.</li>
+      <li><strong>The perps fee.</strong> The post says there is no MetaMask fee and the support page shows a 0.1432% total. I could not tell whether those conflict.</li>
+      <li><strong>Phantom's footprint.</strong> The comparison post says Phantom's tokenized equities are available worldwide except France, Germany, the Netherlands, the UK and the US. That would reach Brazil, Canada and Singapore, where MetaMask's do not. I read this on MetaMask's page and did not check Phantom's own.</li>
+      <li><strong>Trade user counts by country.</strong> Not public. The wave order uses only what the sources show.</li>
+    </ul>
+  </div>
+
+  <div class="proof-body">
+    <p class="section-label">Why it is built this way</p>
+    <h2 id="reasoning">How I built it</h2>
+    <p>I read each page in Chrome on 5 October 2026, opened every collapsed FAQ item, and saved a screenshot wherever two pages disagree. The disagreement table came before the matrix, because the matrix is only worth trusting where the sources agree. The group rules follow from the table. A country is only as open as the most cautious page says it is, until MetaMask decides otherwise.</p>
+    <p>The brief is outside-in. It does not claim to know what MetaMask's Legal or Product teams have already decided, and it names the places where only they can say.</p>
+  </div>
+
+  <div class="button-row" style="margin-top: 40px;">
+    <a href="/work/metamask/" class="button button-primary">Back to the pitch</a>
+    <a href="mailto:jamesspraise@gmail.com?subject=Product%20Marketing%20Lead%20-%20Trade%20-%20James%20Praise" class="button button-secondary">Let's Talk</a>
+  </div>
+</div>
+
+<script src="/script.js?v=11"></script>
+<script>
+(function () {
+  var bar = document.getElementById('proofProgressBar');
+  function updateProgress() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.proof-toc a'));
+  var sections = tocLinks.map(function (a) {
+    return document.getElementById(a.getAttribute('href').slice(1));
+  });
+  function updateActiveToc() {
+    var current = null;
+    sections.forEach(function (sec, i) {
+      if (sec && sec.getBoundingClientRect().top <= 140) current = i;
+    });
+    tocLinks.forEach(function (a, i) {
+      a.classList.toggle('is-active', i === current);
+    });
+  }
+  window.addEventListener('scroll', updateActiveToc, { passive: true });
+  updateActiveToc();
+})();
+</script>
+</body>
+</html>
