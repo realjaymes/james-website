@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WKSZ7DQC');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Flowbackdesk: the PostHog Wizard, Hands On — James Praise</title>
+<meta name="description" content="A hands-on run of the PostHog AI setup wizard on a mock Next.js app, and how James Praise would launch it." />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+<link rel="canonical" href="https://jamespraise.xyz/work/posthog/proof/" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=22" />
+<style>
+  .proof-wrap { max-width: 720px; margin: 0 auto; padding: 100px 0 80px; }
+  .proof-eyebrow { color: var(--color-purple); font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; font-size: 13px; margin-bottom: 10px; }
+  .proof-credit { display: flex; align-items: center; gap: 10px; margin: 20px 0 40px; }
+  .proof-credit img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+  .proof-credit span { color: var(--text-muted); font-size: 14px; }
+  .proof-credit strong { color: var(--text-primary); }
+  .proof-note { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 8px; padding: 16px 20px; font-size: 14px; color: var(--text-muted); margin-bottom: 40px; }
+  .proof-draft { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 12px; padding: 40px; margin-bottom: 56px; }
+  .proof-draft h2 { margin-top: 32px; margin-bottom: 10px; }
+  .proof-draft h2:first-child { margin-top: 0; }
+  .proof-draft p { line-height: 1.7; }
+  .proof-body p { line-height: 1.7; }
+  .proof-body h2 { margin-top: 40px; margin-bottom: 12px; }
+  .proof-body strong { font-weight: 700; }
+  .proof-back { display: inline-block; margin-bottom: 24px; font-size: 14px; }
+  .section-label { font-size: 13px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-cards { display: grid; grid-template-columns: 1fr; gap: 14px; margin: 24px 0; }
+  .proof-card { background: var(--bg-page); border: 1px solid rgba(28,20,34,0.1); border-radius: 10px; padding: 18px; }
+  .proof-card strong { display: block; font-size: 15px; margin-bottom: 6px; color: var(--text-primary); }
+  .proof-card span { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+  .proof-quote { border-left: 3px solid var(--color-purple); padding: 4px 0 4px 22px; margin: 28px 0; font-size: 19px; font-weight: 600; line-height: 1.5; color: var(--text-primary); }
+  .proof-table-wrap { overflow-x: auto; margin: 20px 0; }
+  .proof-table { width: 100%; border-collapse: collapse; font-size: 13px; background: var(--bg-page); border-radius: 10px; overflow: hidden; }
+  .proof-table th { background: var(--bg-surface); text-align: left; padding: 10px 12px; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-muted); border-bottom: 1px solid rgba(28,20,34,0.1); }
+  .proof-table td { padding: 10px 12px; border-bottom: 1px solid rgba(28,20,34,0.08); color: var(--text-primary); line-height: 1.5; vertical-align: top; }
+  .proof-table tr:last-child td { border-bottom: none; }
+  .proof-table code { font-size: 12px; background: var(--bg-surface); padding: 2px 5px; border-radius: 4px; }
+  .proof-toc { position: fixed; top: 140px; right: 32px; width: 200px; font-size: 13px; }
+  .proof-toc-group { margin-bottom: 20px; }
+  .proof-toc-label { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-toc a { display: block; padding: 5px 0 5px 12px; border-left: 2px solid rgba(28,20,34,0.1); color: var(--text-muted); text-decoration: none; line-height: 1.4; }
+  .proof-toc a:hover { color: var(--color-purple); border-left-color: var(--color-purple); }
+  .proof-toc a.is-active { color: var(--color-purple); border-left-color: var(--color-purple); font-weight: 700; }
+  @media (max-width: 1400px) { .proof-toc { display: none; } }
+  .proof-progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(28,20,34,0.08); z-index: 200; }
+  .proof-progress-bar { height: 100%; width: 0%; background: var(--color-purple); transition: width 0.1s linear; }
+  .proof-shot { margin: 20px 0 28px; }
+  .proof-shot img { width: 100%; border: 1px solid rgba(28,20,34,0.12); border-radius: 8px; display: block; }
+  .proof-shot figcaption { font-size: 13px; color: var(--text-muted); margin-top: 8px; line-height: 1.5; }
+</style>
+</head>
+<body class="proof-page">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKSZ7DQC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="proof-progress-track"><div class="proof-progress-bar" id="proofProgressBar"></div></div>
+
+<a href="/work/posthog/" class="pitch-exit" aria-label="Back to the PostHog pitch">
+  <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+</a>
+
+<nav class="proof-toc" aria-label="Section navigation">
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The run</p>
+    <a href="#why">Why I built an app</a>
+    <a href="#what-it-did">What the wizard did</a>
+    <a href="#events">The events it wrote</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">What it means</p>
+    <a href="#takeaways">What a developer notices</a>
+    <a href="#launch">How I'd launch it</a>
+  </div>
+</nav>
+
+<div class="container proof-wrap">
+  <a class="proof-back" href="/work/posthog/">&larr; Back to the PostHog pitch</a>
+
+  <p class="proof-eyebrow">A build for PostHog</p>
+  <h1>Flowbackdesk: running the PostHog wizard from the developer's chair</h1>
+
+  <div class="proof-credit">
+    <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+    <span><strong>James Praise</strong> &middot; Marketing and GTM Operator</span>
+  </div>
+
+  <p class="proof-note">Flowbackdesk is a mock product I built for this test. The <a href="https://github.com/realjaymes/flowbackdesk-posthog-demo" target="_blank" rel="noopener">code is public on GitHub</a>, including the setup report the wizard wrote.</p>
+
+  <div class="proof-draft">
+    <p class="section-label">The run</p>
+
+    <h2 id="why">Why I built an app</h2>
+    <p>I wanted to judge the onboarding by using it, so I needed a project the <a href="https://github.com/PostHog/wizard" target="_blank" rel="noopener">PostHog wizard</a> could work on. My own site is static HTML, and the wizard installs into framework apps. I built Flowbackdesk instead: a three-page Next.js funnel with a landing page, a pricing page and a signup form. The pages follow a real conversion path, so the events would form a funnel worth reading.</p>
+
+    <figure class="proof-shot">
+      <img src="/work/posthog/proof/img/flowbackdesk-landing.jpg" alt="Flowbackdesk landing page with two call-to-action buttons" loading="lazy" />
+      <figcaption>The landing page, with two call-to-action buttons.</figcaption>
+    </figure>
+
+    <figure class="proof-shot">
+      <img src="/work/posthog/proof/img/flowbackdesk-pricing.jpg" alt="Flowbackdesk pricing page with two plan cards" loading="lazy" />
+      <figcaption>The pricing page, with two plan cards.</figcaption>
+    </figure>
+
+    <figure class="proof-shot">
+      <img src="/work/posthog/proof/img/flowbackdesk-signup.jpg" alt="Flowbackdesk signup form" loading="lazy" />
+      <figcaption>The signup form, the last step of the funnel.</figcaption>
+    </figure>
+
+    <h2 id="what-it-did">What the wizard did</h2>
+    <p>I ran one command from the project root: <code>npx -y @posthog/wizard@latest</code>. Then the wizard did the rest.</p>
+    <ol>
+      <li>It detected the Next.js App Router on its own.</li>
+      <li>It opened a browser so I could log in to PostHog Cloud and pick a project and region.</li>
+      <li>It installed <code>posthog-js</code> and created <code>instrumentation-client.ts</code> to start PostHog.</li>
+      <li>It wrote the project key into <code>.env.local</code>, a file git ignores, so the key never entered the repo.</li>
+      <li>It added an <code>/ingest</code> reverse proxy in <code>next.config.ts</code>, so events still send when an ad blocker is running.</li>
+      <li>It turned on autocapture for pageviews and clicks.</li>
+      <li>It read my components and wrote three custom events and an identify call, without being told where they belonged.</li>
+    </ol>
+
+    <h2 id="events">The events it wrote</h2>
+    <div class="proof-table-wrap">
+      <table class="proof-table">
+        <tr><th>Event</th><th>Where it fires</th><th>Properties</th></tr>
+        <tr><td><code>cta_clicked</code></td><td>Landing page buttons</td><td><code>cta_label</code>, <code>destination</code></td></tr>
+        <tr><td><code>plan_selected</code></td><td>Pricing cards</td><td><code>plan</code></td></tr>
+        <tr><td><code>signup_completed</code></td><td>Signup submit</td><td><code>plan</code>, <code>email</code></td></tr>
+      </table>
+    </div>
+    <p>On signup it also called <code>posthog.identify(email)</code>. Then it built a starting set in the project: an Analytics basics dashboard, a three-step signup funnel from button click to completed signup, signups over time, a plan breakdown and a homepage button comparison. All of it is listed in the <a href="https://github.com/realjaymes/flowbackdesk-posthog-demo/blob/main/posthog-setup-report.md" target="_blank" rel="noopener">setup report</a> it left in the repo.</p>
+    <p class="proof-quote">I never opened the docs to find where the init call goes. The wizard found the funnel in my code and instrumented it.</p>
+  </div>
+
+  <div class="proof-body">
+    <p class="section-label">What it means</p>
+
+    <h2 id="takeaways">What a developer notices</h2>
+    <div class="proof-cards">
+      <div class="proof-card"><strong>It's an agent that reads your code</strong><span>The wizard runs on AI models through PostHog's own gateway, per its <a href="https://github.com/PostHog/wizard" target="_blank" rel="noopener">README</a>, so the developer brings no API key. It read the code and decided where tracking belonged. Time to first event was minutes.</span></div>
+      <div class="proof-card"><strong>Autocapture and named events, together</strong><span>Autocapture fills the dashboard on day one, so nobody stares at an empty chart. Named events like <code>signup_completed</code> are what make funnels and retention worth reading. The wizard sets up both.</span></div>
+      <div class="proof-card"><strong>The proxy is a quiet win</strong><span>Routing events through the app's own <code>/ingest</code> path stops ad blockers from dropping them. Most teams find that problem late. The wizard ships the fix by default.</span></div>
+      <div class="proof-card"><strong>Identify turns traffic into people</strong><span>One identify call on signup turns an anonymous event stream into a history for each user. Cohorts and lifecycle work start there.</span></div>
+    </div>
+
+    <h2 id="launch">How I'd launch it</h2>
+    <p>Developers trust what they can watch on code that looks like theirs, so the launch would show the wizard working and let the diff speak.</p>
+    <div class="proof-cards">
+      <div class="proof-card"><strong>An uncut recording on a real repo</strong><span>Run the wizard on a known open-source Next.js project, start to finish, with no edits. The length is the claim.</span></div>
+      <div class="proof-card"><strong>The diff in the docs</strong><span>A changelog entry and a docs page that show the exact files the wizard wrote, so a skeptical engineer can check every line before running it.</span></div>
+      <div class="proof-card"><strong>Seed it where PostHog's launches already land</strong><span>PostHog's own <a href="https://posthog.com/blog/minimum-viable-product-marketing" target="_blank" rel="noopener">launch guide</a> names what works for it: Hacker News, newsletters, small events and posts from real people. The recording fits all four, posted by the engineer who ran it.</span></div>
+      <div class="proof-card"><strong>Measure installs that reach an insight</strong><span>Count wizard runs that end with a first insight viewed. Runs started only show that the video got clicked. Runs that reach an insight show the story held up in real projects.</span></div>
+    </div>
+    <p>The wizard now has a self-driving mode that also connects GitHub, turns on Session Replay and Error Tracking, and sets up Signals, per the <a href="https://github.com/PostHog/wizard" target="_blank" rel="noopener">same README</a>. That's the bigger next story. I'd run it on the same kind of app first and write down what happened before saying anything public about it. Each launch gets its own plan, the way PostHog's launch guide describes, so the self-driving launch would be written from that run.</p>
+  </div>
+
+  <div class="button-row" style="margin-top: 40px;">
+    <a href="/work/posthog/" class="button button-primary">Back to the pitch</a>
+    <a href="/work/posthog/files/james-praise-resume.pdf" target="_blank" class="button button-secondary">My Resume</a>
+  </div>
+</div>
+
+<script src="/script.js?v=11"></script>
+<script>
+(function () {
+  var bar = document.getElementById('proofProgressBar');
+  function updateProgress() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.proof-toc a'));
+  var sections = tocLinks.map(function (a) {
+    return document.getElementById(a.getAttribute('href').slice(1));
+  });
+  function updateActiveToc() {
+    var current = null;
+    sections.forEach(function (sec, i) {
+      if (sec && sec.getBoundingClientRect().top <= 140) current = i;
+    });
+    tocLinks.forEach(function (a, i) {
+      a.classList.toggle('is-active', i === current);
+    });
+  }
+  window.addEventListener('scroll', updateActiveToc, { passive: true });
+  updateActiveToc();
+})();
+</script>
+</body>
+</html>
