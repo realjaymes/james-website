@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WKSZ7DQC');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>One Story per Buyer: A Message Hierarchy for Kredete — James Praise</title>
+<meta name="description" content="An outside-in message hierarchy for Kredete, with one story for diaspora senders and one for business buyers, by James Praise." />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+<link rel="canonical" href="https://jamespraise.xyz/work/kredete/proof/" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=22" />
+<style>
+  .proof-wrap { max-width: 760px; margin: 0 auto; padding: 100px 0 80px; }
+  .proof-eyebrow { color: var(--color-purple); font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; font-size: 13px; margin-bottom: 10px; }
+  .proof-credit { display: flex; align-items: center; gap: 10px; margin: 20px 0 40px; }
+  .proof-credit img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+  .proof-credit span { color: var(--text-muted); font-size: 14px; }
+  .proof-credit strong { color: var(--text-primary); }
+  .proof-note { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 8px; padding: 16px 20px; font-size: 14px; color: var(--text-muted); margin-bottom: 40px; line-height: 1.6; }
+  .proof-draft { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 12px; padding: 40px; margin-bottom: 56px; }
+  .proof-draft h2 { margin-top: 40px; margin-bottom: 12px; }
+  .proof-draft h2:first-of-type { margin-top: 8px; }
+  .proof-draft h3 { margin-top: 28px; margin-bottom: 8px; font-size: 18px; }
+  .proof-draft p, .proof-body p, .proof-draft li { line-height: 1.7; }
+  .proof-draft ol, .proof-draft ul { padding-left: 22px; margin: 12px 0 18px; }
+  .proof-body h2 { margin-top: 40px; margin-bottom: 12px; }
+  .proof-back { display: inline-block; margin-bottom: 24px; font-size: 14px; }
+  .section-label { font-size: 13px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-cards { display: grid; grid-template-columns: 1fr; gap: 14px; margin: 24px 0; }
+  .proof-card { background: var(--bg-page); border: 1px solid rgba(28,20,34,0.1); border-radius: 10px; padding: 18px; }
+  .proof-card strong { display: block; font-size: 15px; margin-bottom: 6px; color: var(--text-primary); }
+  .proof-card span { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+  .proof-quote { border-left: 3px solid var(--color-purple); padding: 4px 0 4px 22px; margin: 28px 0; font-size: 19px; font-weight: 600; line-height: 1.5; color: var(--text-primary); }
+  .proof-hero { background: var(--bg-page); border: 1px solid rgba(28,20,34,0.12); border-radius: 12px; padding: 26px 28px; margin: 20px 0 28px; }
+  .proof-hero .ph-label { font-size: 11px; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; color: var(--color-purple); margin-bottom: 10px; }
+  .proof-hero .ph-h1 { font-size: 26px; font-weight: 800; line-height: 1.2; color: var(--text-primary); margin-bottom: 10px; }
+  .proof-hero .ph-sub { font-size: 15px; color: var(--text-muted); line-height: 1.6; margin-bottom: 10px; }
+  .proof-hero .ph-row { font-size: 13px; color: var(--text-muted); }
+  .needed { display: inline-block; background: rgba(124,58,237,0.1); color: var(--color-purple); font-size: 12px; font-weight: 700; padding: 1px 7px; border-radius: 4px; white-space: nowrap; }
+  .proof-table-wrap { overflow-x: auto; margin: 20px 0; }
+  .proof-table { width: 100%; border-collapse: collapse; font-size: 13px; background: var(--bg-page); border-radius: 10px; overflow: hidden; }
+  .proof-table th { background: var(--bg-surface); text-align: left; padding: 10px 12px; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-muted); border-bottom: 1px solid rgba(28,20,34,0.1); }
+  .proof-table td { padding: 10px 12px; border-bottom: 1px solid rgba(28,20,34,0.08); color: var(--text-primary); line-height: 1.5; vertical-align: top; }
+  .proof-table tr:last-child td { border-bottom: none; }
+  .proof-shot { margin: 20px 0 28px; }
+  .proof-shot img { width: 100%; border: 1px solid rgba(28,20,34,0.12); border-radius: 8px; display: block; }
+  .proof-shot figcaption { font-size: 13px; color: var(--text-muted); margin-top: 8px; line-height: 1.5; }
+  .proof-toc { position: fixed; top: 140px; right: 32px; width: 200px; font-size: 13px; }
+  .proof-toc-group { margin-bottom: 20px; }
+  .proof-toc-label { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-toc a { display: block; padding: 5px 0 5px 12px; border-left: 2px solid rgba(28,20,34,0.1); color: var(--text-muted); text-decoration: none; line-height: 1.4; }
+  .proof-toc a:hover { color: var(--color-purple); border-left-color: var(--color-purple); }
+  .proof-toc a.is-active { color: var(--color-purple); border-left-color: var(--color-purple); font-weight: 700; }
+  @media (max-width: 1400px) { .proof-toc { display: none; } }
+  @media (max-width: 640px) { .proof-draft { padding: 22px; } .proof-hero .ph-h1 { font-size: 22px; } }
+  .proof-progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(28,20,34,0.08); z-index: 200; }
+  .proof-progress-bar { height: 100%; width: 0%; background: var(--color-purple); transition: width 0.1s linear; }
+</style>
+</head>
+<body class="proof-page">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKSZ7DQC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="proof-progress-track"><div class="proof-progress-bar" id="proofProgressBar"></div></div>
+
+<a href="/work/kredete/" class="pitch-exit" aria-label="Back to the Kredete pitch">
+  <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+</a>
+
+<nav class="proof-toc" aria-label="Section navigation">
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">Today</p>
+    <a href="#short-version">The short version</a>
+    <a href="#today">What the pages say</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The hierarchy</p>
+    <a href="#senders">Diaspora senders</a>
+    <a href="#business">Business buyers</a>
+    <a href="#numbers">One set of numbers</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">Next</p>
+    <a href="#test">How I'd test it</a>
+    <a href="#method">Method and limits</a>
+  </div>
+</nav>
+
+<div class="container proof-wrap">
+  <a class="proof-back" href="/work/kredete/">&larr; Back to the Kredete pitch</a>
+
+  <p class="proof-eyebrow">A message hierarchy for Kredete</p>
+  <h1>One Story per Buyer</h1>
+
+  <div class="proof-credit">
+    <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+    <span><strong>James Praise</strong> &middot; Growth and Product Marketing, Lagos</span>
+  </div>
+
+  <p class="proof-note">On 5 October 2026 I read Kredete's homepage, credit page and business page in a desktop browser, plus the App Store listing and press coverage of the Series A and the Gravv acquisition. This uses no internal data. Anything that needs Kredete's own numbers is marked <span class="needed">proof needed</span>.</p>
+
+  <div class="proof-draft">
+    <p class="section-label">Today</p>
+
+    <h2 id="short-version">The short version</h2>
+    <p>Kredete's homepage sells transfers, a Visa card, dollar savings, credit building, stocks, prediction markets and travel accounts in one scroll. The headline, "The autonomous way to ___ money globally," rotates through six verbs in the same spot: move, spend, receive, save, grow and trade.</p>
+    <p>Since <a href="https://techcentral.co.za/kredete-acquires-gravv-stablecoin-infrastructure/286339/" target="_blank" rel="noopener">the Gravv acquisition</a>, two very different buyers land on the same domain: a nurse in Houston sending $300 home, and a finance lead paying suppliers in four currencies. They decide on different proof. So I'd split the story in two, with one lead promise each, and let every other product become a reason to stay.</p>
+    <div class="proof-cards">
+      <div class="proof-card"><strong>Diaspora senders</strong><span>Send money home. Build your US credit.</span></div>
+      <div class="proof-card"><strong>Business buyers</strong><span>Pay and get paid across emerging markets, settled locally.</span></div>
+    </div>
+
+    <h2 id="today">What the pages say today</h2>
+    <div class="proof-table-wrap">
+      <table class="proof-table">
+        <tr><th>Surface</th><th>What it says</th><th>Read</th></tr>
+        <tr><td><a href="https://kredete.io/" target="_blank" rel="noopener">Homepage</a> headline</td><td>"The autonomous way to [move / spend / receive / save / grow / trade] money globally," rotating every few seconds</td><td>No single promise. "Autonomous" is product language, not the words a sender uses</td></tr>
+        <tr><td>Homepage subhead</td><td>"Send money across 60+ markets, spend from your card, earn on your savings, and build your credit, all in one app"</td><td>Four products in one sentence</td></tr>
+        <tr><td>Homepage hero stats</td><td>6M+ users, 15B+ annual volume, 60+ markets, 20+ global licenses</td><td><a href="https://techcentral.co.za/kredete-acquires-gravv-stablecoin-infrastructure/286339/" target="_blank" rel="noopener">The Gravv coverage</a> said $18 billion annualised</td></tr>
+        <tr><td>Homepage sections</td><td>Rate calculator, Visa card, savings, credit, "Stocks, ETFs, predictions," travel accounts</td><td>Credit, the founding idea, is the fourth section</td></tr>
+        <tr><td>Homepage social proof</td><td>"5 million people already know," then "Join 6M+ people moving money globally"</td><td>Two user counts on one page</td></tr>
+        <tr><td><a href="https://kredete.io/credit" target="_blank" rel="noopener">Credit page</a></td><td>"Your path to better Credit." FAQ: "up to a 50-point increase in their credit score within the first 90 days"</td><td>The clearest page on the site. No bureau named, no baseline</td></tr>
+        <tr><td><a href="https://kredete.io/business" target="_blank" rel="noopener">Business page</a></td><td>"Built for business, across borders." Accounts, team cards, payouts, invoicing, "Your AI CFO"</td><td>No customer named. No mention of Gravv or stablecoin settlement</td></tr>
+        <tr><td><a href="https://apps.apple.com/us/app/kredete/id1660925127" target="_blank" rel="noopener">App Store</a></td><td>"Kredete Send Spend Save Credit," 4.0 stars from 96 US ratings</td><td>A fourth way of naming the product</td></tr>
+      </table>
+    </div>
+    <figure class="proof-shot"><img src="/work/kredete/proof/img/kredete-homepage-hero.jpg" alt="Kredete homepage hero reading The autonomous way to save money globally, with 6M+ users and 15B+ annual volume stats" loading="lazy" /><figcaption>kredete.io, 5 October 2026: the headline verb on this frame is "save." It changes every few seconds.</figcaption></figure>
+    <figure class="proof-shot"><img src="/work/kredete/proof/img/kredete-homepage-predictions.jpg" alt="Kredete homepage section showing a basketball championship prediction market next to S&amp;P 500 and Apple stock cards" loading="lazy" /><figcaption>kredete.io: a featured prediction market and stock cards, on the same homepage a first-time sender sees.</figcaption></figure>
+    <p class="proof-quote">Each section is good on its own. Together they leave a first-time visitor to work out what Kredete is for.</p>
+  </div>
+
+  <div class="proof-draft">
+    <p class="section-label">The hierarchy</p>
+
+    <h2 id="senders">Branch 1: Diaspora senders</h2>
+    <p><strong>Positioning.</strong> For African immigrants in the US who send money home every month and have little or no US credit history, Kredete is the money app that turns those transfers into a US credit file. The other transfer apps compete on rate and speed. Kredete makes money you already send count toward your credit score, and the rate, card and savings make it the app you keep.</p>
+    <p><strong>Why credit leads.</strong> It is the founding story: Adeola Adedewe <a href="https://afridigest.com/how-adeola-adedewe-is-pioneering-a-new-fintech-category-by-turning-debits-into-credit/" target="_blank" rel="noopener">was turned down for 17 credit cards</a> after moving to the US. It is the one claim in the category that no other transfer app leads with. And <a href="https://kredete.io/credit" target="_blank" rel="noopener">the credit page</a> is already the clearest page on the site.</p>
+    <figure class="proof-shot"><img src="/work/kredete/proof/img/kredete-credit-hero.jpg" alt="Kredete credit page hero reading Your path to better Credit" loading="lazy" /><figcaption>kredete.io/credit: the strongest single page Kredete has, one click away from the homepage.</figcaption></figure>
+
+    <h3>What leads, and what keeps them</h3>
+    <ol>
+      <li><strong>Lead:</strong> send money home and build US credit from it.</li>
+      <li><strong>First reason to stay:</strong> the rate shown up front. The homepage already promises "the number on screen is exactly what they receive."</li>
+      <li><strong>Second:</strong> rent reporting, a second way to build the same score.</li>
+      <li><strong>Third:</strong> the Visa card and dollar savings.</li>
+      <li><strong>In the app, off the sender homepage:</strong> stocks, ETFs and prediction markets. Someone deciding who to trust with family money may read a featured basketball market as a different kind of product. That's a hypothesis to test, not a verdict.</li>
+    </ol>
+
+    <h3>By market</h3>
+    <ul>
+      <li><strong>US senders:</strong> credit leads, because the credit product builds a US file and starts with an SSN.</li>
+      <li><strong>UK and EU senders:</strong> US credit doesn't apply. Lead with the rate and the local account. The homepage already has the copy for it ("GBP account live," "SEPA in. SEPA out.").</li>
+      <li><strong>Receivers in Nigeria, Ghana and Kenya:</strong> a separate, later story, kept off the sender homepage.</li>
+    </ul>
+
+    <div class="proof-hero">
+      <p class="ph-label">Rewritten hero, US</p>
+      <p class="ph-h1">Send money home. Build your US credit.</p>
+      <p class="ph-sub">Every eligible transfer to family can count toward your US credit score. See exactly what they receive before you send. <span class="needed">proof needed: corridors and bureaus</span></p>
+      <p class="ph-row">[N] users &middot; up to [X] points in [Y] days, with method &middot; [N] licences <span class="needed">proof needed: one dated figure each</span></p>
+    </div>
+    <div class="proof-hero">
+      <p class="ph-label">Rewritten hero, UK</p>
+      <p class="ph-h1">Send money home at the rate you see.</p>
+      <p class="ph-sub">A GBP account, a Visa card and transfers to 60+ markets in one app.</p>
+    </div>
+
+    <h2 id="business">Branch 2: Business buyers</h2>
+    <p><strong>Positioning.</strong> For finance leads at businesses that pay and get paid across emerging markets, Kredete for Business is a multi-currency operating account running on its own settlement rails. A bank wire or a patchwork of payout providers can't settle locally in 60+ countries from one account. Gravv <a href="https://techcentral.co.za/kredete-acquires-gravv-stablecoin-infrastructure/286339/" target="_blank" rel="noopener">already processes more than $3 billion a year for over a thousand businesses</a> in more than 100 countries, and today the business page doesn't say so.</p>
+    <figure class="proof-shot"><img src="/work/kredete/proof/img/kredete-business-hero.jpg" alt="Kredete business page hero reading Built for business, across borders" loading="lazy" /><figcaption>kredete.io/business: the features are there. The buyer and the proof aren't.</figcaption></figure>
+
+    <h3>Four segments, four pages</h3>
+    <div class="proof-table-wrap">
+      <table class="proof-table">
+        <tr><th>Segment</th><th>Buyer</th><th>Lead line</th><th>Proof it needs</th></tr>
+        <tr><td>Payouts</td><td>Ops or finance lead paying suppliers and contractors abroad</td><td>Pay suppliers and teams in 60+ countries. Settle like a local.</td><td>One named customer, settlement time by corridor <span class="needed">proof needed</span></td></tr>
+        <tr><td>Treasury</td><td>Founder or CFO holding foreign currency</td><td>Hold USD, GBP, EUR and CAD in your business name.</td><td>Banking partners, how funds are held <span class="needed">proof needed</span></td></tr>
+        <tr><td>Collections</td><td>Exporters and agencies billing abroad</td><td>Invoice in their currency. Get paid in yours.</td><td>A customer story with days to cash <span class="needed">proof needed</span></td></tr>
+        <tr><td>Infrastructure</td><td>Fintechs and platforms that need payout rails</td><td>The rails behind $3 billion a year in emerging-market payments.</td><td>Gravv's volume and partners after the acquisition, API docs <span class="needed">proof needed</span></td></tr>
+      </table>
+    </div>
+    <p><strong>Page tree.</strong> /business becomes a segment chooser, then /business/payouts, /business/treasury, /business/collections, /business/infrastructure, and /business/customers with one named story per segment. "Your AI CFO" and team cards stay as reasons to stay inside each page.</p>
+
+    <div class="proof-hero">
+      <p class="ph-label">Rewritten hero, business</p>
+      <p class="ph-h1">Pay and get paid across emerging markets, settled locally.</p>
+      <p class="ph-sub">Accounts in your business name, cards for your team, and the payout rails behind more than $3 billion a year for over a thousand businesses.</p>
+      <p class="ph-row">Three customer logos <span class="needed">proof needed</span></p>
+    </div>
+
+    <h2 id="numbers">One set of numbers for both</h2>
+    <p>Both branches lean on the same few figures, and today those figures differ depending on where you read them.</p>
+    <div class="proof-table-wrap">
+      <table class="proof-table">
+        <tr><th>Claim</th><th>Where it appears</th><th>What differs</th></tr>
+        <tr><td>Users</td><td>Homepage hero 6M+; homepage band "5 million"; <a href="https://techcentral.co.za/kredete-acquires-gravv-stablecoin-infrastructure/286339/" target="_blank" rel="noopener">Gravv coverage</a> 6.5 million+; <a href="https://fintech.global/2025/09/16/fintech-firm-kredete-raises-22m-series-a-for-global-expansion/" target="_blank" rel="noopener">Series A coverage</a> 700,000 monthly users</td><td>Total users or monthly actives, and as of when</td></tr>
+        <tr><td>Volume</td><td>Homepage 15B+ annual; Gravv coverage $18 billion annualised</td><td>Which figure, and its date</td></tr>
+        <tr><td>Credit lift</td><td><a href="https://pulse2.com/kredete-2-25-million-seed-raised-to-help-african-immigrants-build-credit-and-send-money-home/" target="_blank" rel="noopener">23 points in six months</a> (2024); <a href="https://fintech.global/2025/09/16/fintech-firm-kredete-raises-22m-series-a-for-global-expansion/" target="_blank" rel="noopener">58 points on average</a> (2025); <a href="https://kredete.io/credit" target="_blank" rel="noopener">up to 50 points in 90 days</a> (credit page)</td><td>Method, bureau and baseline for each</td></tr>
+        <tr><td>Licences</td><td>Homepage 20+ global licenses</td><td>Which licences, in which countries</td></tr>
+      </table>
+    </div>
+    <p>I'd publish one numbers page with each figure, its definition and an "as of" date, and point every page, ad and press release at it. For a regulated product, that page does trust work for customers, partners and journalists at once.</p>
+  </div>
+
+  <div class="proof-body">
+    <p class="section-label">Next</p>
+
+    <h2 id="test">How I'd test it in the first 30 days</h2>
+    <p>I'd publish the numbers page first, so every variant cites the same figures. Then I'd run the current rotating headline against "Send money home. Build your US credit." on US diaspora paid traffic and the homepage for two weeks, split by source, and measure install starts and first transfers. The UK rate-led hero would run the same way on UK traffic. On the business side, the payouts page would go first with one named customer, measured on qualified demo requests against today's business page.</p>
+    <p>If the plain credit line wins, it becomes the lead for paid creative and the App Store listing the same week. If it loses, that tells us the credit claim needs its proof page before it can lead.</p>
+
+    <h2 id="method">Method and limits</h2>
+    <p>I read the pages from Lagos on 5 October 2026 and took the screenshots on this page. I checked the headline by sampling it every half second for twelve seconds, which is how I found the six rotating verbs. I haven't seen Kredete's analytics, research or any internal positioning work, so this is a starting draft built from the outside. Which product leads in each market should come from Kredete's own retention and margin data, and that's the first thing I'd ask for.</p>
+  </div>
+
+  <div class="button-row" style="margin-top: 40px;">
+    <a href="/work/kredete/" class="button button-primary">Back to the pitch</a>
+    <a href="/work/kredete/files/james-praise-resume.pdf" target="_blank" class="button button-secondary">My Resume</a>
+  </div>
+</div>
+
+<script src="/script.js?v=11"></script>
+<script>
+(function () {
+  var bar = document.getElementById('proofProgressBar');
+  function updateProgress() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.proof-toc a'));
+  var sections = tocLinks.map(function (a) {
+    return document.getElementById(a.getAttribute('href').slice(1));
+  });
+  function updateActiveToc() {
+    var current = null;
+    sections.forEach(function (sec, i) {
+      if (sec && sec.getBoundingClientRect().top <= 140) current = i;
+    });
+    tocLinks.forEach(function (a, i) {
+      a.classList.toggle('is-active', i === current);
+    });
+  }
+  window.addEventListener('scroll', updateActiveToc, { passive: true });
+  updateActiveToc();
+})();
+</script>
+</body>
+</html>
