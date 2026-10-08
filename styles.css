@@ -4935,7 +4935,28 @@ body.proof-page a:not(:where(nav a, .pitch-exit, .proof-back, [class*="button"])
    pattern as .cs-fact-tag--gray earlier this session. */
 .cs-hero-card .talk-link {
   color: rgba(255, 255, 255, 0.92);
-  text-decoration-color: var(--color-accent);
+}
+
+/* Case study content links (.text-yellow is only ever used on links), same
+   treatment as .prose, /about and the proof pages: the text keeps its normal
+   colour and the brand purple carries the underline. On the dark hero, final
+   and testimonial cards the text inherits the card's light colour. */
+a.text-yellow {
+  color: var(--text-primary);
+  text-decoration: underline;
+  text-decoration-color: var(--color-purple);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+
+a.text-yellow:hover {
+  text-decoration-thickness: 3px;
+}
+
+.cs-hero-card a.text-yellow,
+.cs-final-card a.text-yellow,
+.cs-testimonial-panel a.text-yellow {
+  color: inherit;
 }
 
 @media (max-width: 640px) {
