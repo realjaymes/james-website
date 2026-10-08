@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WKSZ7DQC');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Signal to Build — James Praise</title>
+<meta name="description" content="Signal to Build is James Praise's series on work built in response to a company's signal. Each item gets a short motion video made in code from its proof page." />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="canonical" href="https://jamespraise.xyz/work/signal-to-build/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Signal to Build — James Praise" />
+<meta property="og:description" content="Signal to Build is James Praise's series on work built in response to a company's signal. Each item gets a short motion video made in code from its proof page." />
+<meta property="og:url" content="https://jamespraise.xyz/work/signal-to-build/" />
+<meta property="og:image" content="https://jamespraise.xyz/assets/images/james-headshot.jpeg" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Signal to Build — James Praise" />
+<meta name="twitter:description" content="Signal to Build is James Praise's series on work built in response to a company's signal. Each item gets a short motion video made in code from its proof page." />
+<meta name="twitter:image" content="https://jamespraise.xyz/assets/images/james-headshot.jpeg" />
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=22" />
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKSZ7DQC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="/" aria-label="James Praise Home">
+      <img src="/assets/images/james-headshot.jpeg" alt="James Praise" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; display: block;" />
+    </a>
+
+    <button class="menu-button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+      <span class="menu-icon" aria-hidden="true"></span>
+    </button>
+
+    <nav id="primary-nav" class="nav-links" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/work/" aria-current="page">Work</a>
+      <a href="/about/">About</a>
+      <a href="/speaking/">Speaking</a>
+      <a href="/writing/">Writing</a>
+    </nav>
+
+    <a href="mailto:james@marketinginaction.xyz?subject=Let%27s%20Work%20Together&body=Hi%20James%2C%0A%0AI%20saw%20your%20Signal%20to%20Build%20project%20and%20I%27m%20interested%20in%20working%20together.%0A%0AHere%27s%20a%20bit%20about%20what%20I%20need%3A%0A%0A%0A%0ALooking%20forward%20to%20hearing%20from%20you." class="button nav-cta">Talk to James</a>
+  </div>
+</header>
+
+<main id="main">
+
+<style>
+  .blv-head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: var(--space-md); margin-bottom: var(--space-lg); }
+  .blv-head h2 { margin: 0; font-size: 22px; }
+  .blv-head p { margin: 4px 0 0; color: var(--text-muted); font-size: 15px; }
+  .blv-filters { display: flex; flex-wrap: wrap; gap: 8px; }
+  .blv-chip { font: inherit; font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--border); background: var(--bg-surface); color: var(--text-primary); cursor: pointer; }
+  .blv-chip[aria-pressed="true"] { background: var(--color-black); border-color: var(--color-black); color: var(--color-white); }
+  .blv-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-xl) var(--space-lg); }
+  @media (max-width: 760px) { .blv-grid { grid-template-columns: 1fr; } }
+  .blv-media { position: relative; aspect-ratio: 16 / 9; border-radius: var(--radius-md); overflow: hidden; background: var(--color-black); box-shadow: var(--shadow); }
+  .blv-media video, .blv-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+  .blv-play { position: absolute; inset: 0; width: 100%; padding: 0; border: 0; background: none; cursor: pointer; }
+  .blv-play::after { content: ""; position: absolute; left: 50%; top: 50%; width: 64px; height: 64px; margin: -32px 0 0 -32px; border-radius: 50%;
+    background: var(--color-black) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 7l9 5-9 5z' fill='%23f7f4fa'/%3E%3C/svg%3E") center / 30px no-repeat;
+    box-shadow: 0 6px 20px rgba(16, 10, 22, 0.35); transition: transform var(--ease); }
+  .blv-play:hover::after, .blv-play:focus-visible::after { transform: scale(1.08); }
+  .blv-time { position: absolute; right: 10px; bottom: 10px; padding: 2px 8px; border-radius: 6px; background: rgba(16, 10, 22, 0.78); color: var(--color-white); font-size: 12px; font-weight: 500; pointer-events: none; }
+  .blv-meta { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; margin-top: var(--space-md); }
+  .blv-meta h3 { margin: 0; font-size: 18px; }
+  .blv-style { font-size: 12px; color: var(--text-muted); }
+  .blv-card p { margin: 6px 0 8px; font-size: 15px; }
+  .blv-card a.blv-proof { font-size: 14px; font-weight: 500; color: var(--text-primary); }
+  .blv-more { display: block; margin: var(--space-xl) auto 0; }
+  .blv-more[hidden] { display: none; }
+</style>
+
+<section class="section">
+  <div class="container">
+    <p class="cs-breadcrumb"><a href="/work/">Work</a> / <a href="/work/#type=side">Side Projects</a> / Signal to Build</p>
+
+    <div style="max-width: 820px; margin: 0 auto;">
+      <div class="cs-hero-card">
+        <p class="cs-eyebrow reveal-blur">Side Project — Signal to Build</p>
+        <h1 class="cs-headline reveal-blur">Short motion videos built in code from my proof pages</h1>
+        <p class="cs-subhead reveal-blur">Signal to Build is my series about work I build in response to a company's signal. Each item gets a short video made from its proof page, and one command adds the finished video to this gallery.</p>
+        <div class="cs-stats">
+          <div class="cs-stat reveal-blur card-lift"><strong>10</strong><span>videos so far, one for each item in the series</span></div>
+          <div class="cs-stat reveal-blur card-lift"><strong>10</strong><span>visual styles, so no two items in a row look alike</span></div>
+          <div class="cs-stat reveal-blur card-lift"><strong>1</strong><span>command to add a finished video to this page</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="blv-head">
+      <div>
+        <h2>The videos</h2>
+        <p>The newest videos come first. Each one links to the full breakdown it was made from.</p>
+      </div>
+      <div class="blv-filters" id="blv-filters" role="group" aria-label="Filter by style"></div>
+    </div>
+    <div class="blv-grid" id="blv-grid" aria-live="polite"></div>
+    <button class="button button-secondary blv-more" id="blv-more" type="button" hidden>Show more videos</button>
+    <noscript><p>The gallery needs JavaScript. Each video's full breakdown is linked from the <a href="/work/">Work</a> page.</p></noscript>
+
+    <div style="max-width: 820px; margin: var(--space-2xl) auto 0;">
+      <div class="cs-body-section reveal-blur">
+        <h2>What It Is</h2>
+        <p>Signal to Build is a series of posts about work I build in response to a company's signal. A signal might be a launch, a hiring post or a founder's post. I find the problem behind it and build something that solves part of it. Each item has a proof page on this site, and that page holds the full document with the research, the plan and the numbers. Each item also gets a written post and then a short video, and this page holds every one of those videos.</p>
+        <p>Each video runs 30 to 40 seconds in 16:9, with music and on-screen text and no voiceover. Every screen in it comes from the item's proof page, and every video links back to that page.</p>
+      </div>
+      <div class="cs-body-section reveal-blur">
+        <h2>Why I Built It</h2>
+        <p>The work behind each item lives in a long proof document. A tracking plan or an account list takes a few minutes to read, and most people scrolling a feed will not open one. A short video shows the signal, the problem and the result first, so a reader can decide whether the full document is worth their time.</p>
+        <p>I also wanted every video in one place. LinkedIn and X bury a post within days. Hosting the files on this site keeps them all playable on one page, with no suggested videos or ads around them.</p>
+      </div>
+
+      <div class="cs-body-section reveal-blur">
+        <h2>What It Does</h2>
+        <p>I build the videos with a motion kit I made on Remotion, a tool for making video with code. A capture script loads each proof page in a headless browser and saves the page's real text, layout and images. The kit animates that capture, so a video never shows a table, number or sentence the page does not contain.</p>
+        <p>Each video starts as a brief with the story, the lines of text, the scenes and the music. Read in order, the lines have to tell the whole story to someone who has never heard of the company. Ten styles keep the series varied, and the filter above the gallery lists them. I took each one apart from a different launch film and rebuilt it as its own template in my site's colours and type.</p>
+        <p>Before a full render, the kit renders one still for each line of the story and lays them out on a single sheet. I check every sheet for exact wording, type sizes, margins, highlights and colours, and a video renders only after its sheet passes. A render script then renders the video, brings the music to the same steady loudness in every video, and saves a sheet of frames for a last look.</p>
+        <p>A publish script connects the motion kit to this site. One command takes the newest render, encodes a web copy and a poster frame, and writes the video's entry into a manifest file. This page builds its gallery from that manifest, newest first, with a filter for each style. A video loads only when someone presses play, so the page stays light as the gallery grows.</p>
+      </div>
+
+      <div class="cs-body-section reveal-blur">
+        <h2>What It Taught Me</h2>
+        <p>A video can pass every still and still break in the full render. The PostHog video looked right on its review sheet. In the full render, its screenshot cards flickered between the whole card and the caption alone. The kit renders frames in parallel browser tabs, and a plain image tag does not make a tab wait for its image to load. I now draw every screenshot with Remotion's own image component, which holds the frame until the image is ready, and I scan each finished video frame by frame for flicker.</p>
+        <p>Poster frames taught me a smaller version of the same lesson. A fixed timestamp gave some posters half-typed lines or empty screens, so I now pick each poster from a finished moment in its video.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  var PAGE = 6;
+  var grid = document.getElementById("blv-grid");
+  var filters = document.getElementById("blv-filters");
+  var more = document.getElementById("blv-more");
+  var videos = [], style = "All", shown = PAGE;
+
+  function el(tag, attrs, text) {
+    var n = document.createElement(tag);
+    for (var k in attrs) n.setAttribute(k, attrs[k]);
+    if (text) n.textContent = text;
+    return n;
+  }
+  function mmss(s) { return Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0"); }
+
+  // One video plays at a time.
+  document.addEventListener("play", function (e) {
+    grid.querySelectorAll("video").forEach(function (v) { if (v !== e.target) v.pause(); });
+  }, true);
+
+  function card(v) {
+    var c = el("article", { class: "blv-card" });
+    var media = el("div", { class: "blv-media" });
+    media.appendChild(el("img", { src: v.poster, alt: "Poster frame of the " + v.company + " Signal to Build video", loading: "lazy", width: "1280", height: "720" }));
+    var play = el("button", { class: "blv-play", type: "button", "aria-label": "Play the " + v.company + " video (" + mmss(v.duration) + ")" });
+    play.addEventListener("click", function () {
+      var vid = el("video", { src: v.video, poster: v.poster, controls: "", playsinline: "", preload: "auto" });
+      media.replaceChildren(vid);
+      vid.play().catch(function () {});
+    });
+    media.appendChild(play);
+    media.appendChild(el("span", { class: "blv-time", "aria-hidden": "true" }, mmss(v.duration)));
+    c.appendChild(media);
+    var meta = el("div", { class: "blv-meta" });
+    meta.appendChild(el("h3", {}, v.company));
+    meta.appendChild(el("span", { class: "blv-style" }, v.style));
+    c.appendChild(meta);
+    c.appendChild(el("p", {}, v.summary));
+    c.appendChild(el("a", { class: "blv-proof", href: v.proof }, "Read the full breakdown →"));
+    return c;
+  }
+
+  function render() {
+    var list = videos.filter(function (v) { return style === "All" || v.style === style; });
+    grid.replaceChildren.apply(grid, list.slice(0, shown).map(card));
+    more.hidden = list.length <= shown;
+    filters.querySelectorAll("button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.textContent === style)); });
+  }
+
+  function chips() {
+    var styles = ["All"];
+    videos.forEach(function (v) { if (styles.indexOf(v.style) < 0) styles.push(v.style); });
+    styles.forEach(function (s) {
+      var b = el("button", { class: "blv-chip", type: "button", "aria-pressed": "false" }, s);
+      b.addEventListener("click", function () { style = s; shown = PAGE; render(); });
+      filters.appendChild(b);
+    });
+  }
+
+  more.addEventListener("click", function () { shown += PAGE; render(); });
+
+  fetch("/work/signal-to-build/videos.json")
+    .then(function (r) { return r.json(); })
+    .then(function (m) {
+      // Newest first. Videos that share a date keep the manifest's order.
+      videos = m.videos.slice().sort(function (a, b) { return a.added < b.added ? 1 : a.added > b.added ? -1 : 0; });
+      chips();
+      render();
+    })
+    .catch(function () { grid.textContent = "The videos could not load. Please refresh the page."; });
+})();
+</script>
+
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+    <div class="cs-final-card reveal-blur">
+      <div class="cs-final-top">
+        <div class="cs-final-main">
+          <h2>Want something like this?</h2>
+          <p>I'm open to full-time or in-house work where you need an ongoing plan or someone to lead marketing for the long term. I also offer specific marketing and sales services for teams that need help with the work itself: <a class="text-yellow" href="https://marketinginaction.xyz/services/" target="_blank" rel="noopener">marketinginaction.xyz/services</a>.</p>
+          <div class="button-row">
+            <a href="mailto:james@marketinginaction.xyz?subject=Let%27s%20Work%20Together&body=Hi%20James%2C%0A%0AI%20saw%20your%20Signal%20to%20Build%20project%20and%20I%27m%20interested%20in%20working%20together.%0A%0AHere%27s%20a%20bit%20about%20what%20I%20need%3A%0A%0A%0A%0ALooking%20forward%20to%20hearing%20from%20you." class="button button-primary">Work with James</a>
+            <a href="/work/#case-studies" class="button button-secondary">See All Case Studies</a>
+          </div>
+        </div>
+        <a class="cs-final-preview card-lift" href="/work/ai-content-engine/">
+          <div class="cs-final-preview-name">AI Content Engine &rarr;</div>
+          <div class="cs-final-preview-stats">
+            <div><strong>36</strong><span>tool shorts rendered with the same motion kit</span></div>
+            <div><strong>7</strong><span>visual styles across three formats</span></div>
+          </div>
+        </a>
+      </div>
+      <div class="cs-logo-strip">
+        <div class="cs-logo-strip-track">
+        <a href="/work/marketing-agent-skills/">Marketing Agent Skills</a>
+        <a href="/work/prospect-outbound-engine/">Prospect & Outbound Engine</a>
+        <a href="/work/mia-academy/">MIA Academy</a>
+        <a href="/work/mia-newsletter/">MIA Newsletter</a>
+        <a href="/work/mia-website-build/">MIA Website Build</a>
+        <a href="/work/james-website/">James Website</a>
+        <a href="/work/marketing-agent-skills/" aria-hidden="true">Marketing Agent Skills</a>
+        <a href="/work/prospect-outbound-engine/" aria-hidden="true">Prospect & Outbound Engine</a>
+        <a href="/work/mia-academy/" aria-hidden="true">MIA Academy</a>
+        <a href="/work/mia-newsletter/" aria-hidden="true">MIA Newsletter</a>
+        <a href="/work/mia-website-build/" aria-hidden="true">MIA Website Build</a>
+        <a href="/work/james-website/" aria-hidden="true">James Website</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-title">James Praise</div>
+        <p class="muted">
+          Marketing and GTM operator since 2018. Founder of Marketing In Action.
+        </p>
+
+        <div class="footer-social">
+          <a href="https://linkedin.com/in/jamespraise" aria-label="LinkedIn" target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24">
+              <path d="M4.98 3.5a2.48 2.48 0 110 4.96 2.48 2.48 0 010-4.96zM3 8.98h3.96V21H3zM9.5 8.98h3.8v1.64h.05c.53-1 1.82-2.05 3.75-2.05 4.01 0 4.75 2.64 4.75 6.08V21h-3.96v-5.45c0-1.3-.03-2.98-1.82-2.98-1.83 0-2.11 1.42-2.11 2.89V21H9.5z" />
+            </svg>
+          </a>
+          <a href="https://x.com/realjaymes" aria-label="Twitter" target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24">
+              <path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.27 4.27 0 001.88-2.36 8.48 8.48 0 01-2.7 1.03A4.24 4.24 0 0016.1 4c-2.36 0-4.27 1.91-4.27 4.27 0 .33.04.66.11.97A12.05 12.05 0 013 5.1a4.27 4.27 0 001.32 5.69 4.2 4.2 0 01-1.93-.53v.05c0 2.07 1.47 3.8 3.42 4.19a4.3 4.3 0 01-1.92.07 4.27 4.27 0 003.99 2.96A8.5 8.5 0 012 19.54a12.02 12.02 0 006.53 1.91c7.84 0 12.13-6.5 12.13-12.13l-.01-.55A8.7 8.7 0 0022.46 6z" />
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/realjaymes" aria-label="Instagram" target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.97.24 2.43.4.6.23 1.03.5 1.48.95.45.45.72.88.95 1.48.16.46.35 1.26.4 2.43.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.24 1.97-.4 2.43-.23.6-.5 1.03-.95 1.48-.45.45-.88.72-1.48.95-.46.16-1.26.35-2.43.4-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.97-.24-2.43-.4-.6-.23-1.03-.5-1.48-.95-.45-.45-.72-.88-.95-1.48-.16-.46-.35-1.26-.4-2.43-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.24-1.97.4-2.43.23-.6.5-1.03.95-1.48.45-.45.88-.72 1.48-.95.46-.16 1.26-.35 2.43-.4 1.27-.06 1.65-.07 4.85-.07zm0 3.24a6.6 6.6 0 100 13.2 6.6 6.6 0 000-13.2zm0 10.88a4.28 4.28 0 110-8.56 4.28 4.28 0 010 8.56zm6.84-11.14a1.54 1.54 0 110 3.08 1.54 1.54 0 010-3.08z" />
+            </svg>
+          </a>
+          <a href="https://www.youtube.com/@realjaymes" aria-label="YouTube" target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24">
+              <path d="M23.5 6.5s-.23-1.62-.93-2.34c-.88-.93-1.87-.93-2.33-.98C16.97 3 12 3 12 3h-.01s-4.97 0-8.24.18c-.46.05-1.45.05-2.33.98C.72 4.88.5 6.5.5 6.5S0 8.41 0 10.33v1.34c0 1.91.5 3.83.5 3.83s.23 1.62.93 2.34c.88.93 2.04.9 2.56 1C5.86 19 12 19 12 19s4.97 0 8.24-.18c.46-.05 1.45-.05 2.33-.98.7-.72.93-2.34.93-2.34s.5-1.91.5-3.83v-1.34c0-1.91-.5-3.83-.5-3.83zM9.75 14.57V8.93l5.5 2.82-5.5 2.82z" />
+            </svg>
+          </a>
+          <a href="https://github.com/realjaymes" aria-label="GitHub" target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.58 2 12.2c0 4.5 2.87 8.32 6.84 9.67.5.1.68-.22.68-.49 0-.24-.01-1.05-.01-1.9-2.78.62-3.37-1.2-3.37-1.2-.45-1.18-1.1-1.49-1.1-1.49-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.55 2.34 1.1 2.91.84.09-.66.35-1.1.63-1.36-2.22-.26-4.55-1.13-4.55-5.03 0-1.11.38-2.02 1.02-2.73-.1-.26-.44-1.3.1-2.7 0 0 .84-.27 2.75 1.05a9.36 9.36 0 015 0c1.9-1.32 2.74-1.05 2.74-1.05.55 1.4.2 2.44.1 2.7.64.71 1.03 1.62 1.03 2.73 0 3.91-2.34 4.77-4.57 5.02.36.32.68.94.68 1.9 0 1.37-.01 2.48-.01 2.82 0 .27.18.6.69.49A10.02 10.02 0 0022 12.2C22 6.58 17.52 2 12 2z" />
+            </svg>
+          </a>
+          <a href="mailto:james@marketinginaction.xyz?subject=Let%27s%20Work%20Together&body=Hi%20James%2C%0A%0AI%20saw%20your%20Signal%20to%20Build%20project%20and%20I%27m%20interested%20in%20working%20together.%0A%0AHere%27s%20a%20bit%20about%20what%20I%20need%3A%0A%0A%0A%0ALooking%20forward%20to%20hearing%20from%20you." aria-label="Email">
+            <svg viewBox="0 0 24 24">
+              <path d="M2 5a2 2 0 012-2h16a2 2 0 012 2v14a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm2 .383V6l8 5.333L20 6v-.617L12 10 4 5.383zM20 8.383l-7.4 4.934a1 1 0 01-1.2 0L4 8.383V19h16V8.383z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-title">Explore</div>
+        <ul class="footer-list">
+          <li><a href="/work/">Work</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/speaking/">Speaking</a></li>
+          <li><a href="/writing/">Writing</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-title">Community</div>
+        <ul class="footer-list">
+          <li><a href="https://marketinginaction.xyz" target="_blank" rel="noreferrer">Marketing In Action</a></li>
+          <li><a href="https://realjaymes.substack.com" target="_blank" rel="noreferrer">RealTalk</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="muted">Copyright <span id="year"></span>, James Praise.</div>
+      <div class="footer-legal">
+        <span class="muted">We're all here to contribute to the collective human experience.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+<script src="/script.js?v=11"></script>
+</body>
+</html>
