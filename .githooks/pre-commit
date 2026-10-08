@@ -1,0 +1,6 @@
+#!/bin/sh
+# Blocks a commit when /work/ filter tags drift from the case study proof bank.
+# Enable once per clone: git config core.hooksPath .githooks
+if git diff --cached --name-only | grep -q '^work/'; then
+  python3 tools/check-work-tags.py || exit 1
+fi
