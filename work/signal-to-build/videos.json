@@ -1,6 +1,32 @@
 {
   "videos": [
     {
+      "id": "SparkLoop",
+      "company": "SparkLoop",
+      "slug": "sparkloop",
+      "style": "Agent Progress",
+      "summary": "I wrote a case study page for a made-up operator and a $10K launch plan with five hooks to sell SparkLoop's Welcome Surveys.",
+      "duration": 36,
+      "posterSec": 3,
+      "added": "2026-10-08",
+      "video": "/assets/videos/signal-to-build/sparkloop.mp4",
+      "poster": "/assets/images/signal-to-build/sparkloop.jpg",
+      "proof": "/work/sparkloop/proof/"
+    },
+    {
+      "id": "Prerender",
+      "company": "Prerender",
+      "slug": "prerender",
+      "style": "Tilted 3D Page",
+      "summary": "I built a demo that puts a price on the gap when AI crawlers can't read a JavaScript-heavy store: $8.4M a year at risk and $7.1M recoverable on a made-up store.",
+      "duration": 35,
+      "posterSec": 3,
+      "added": "2026-10-08",
+      "video": "/assets/videos/signal-to-build/prerender.mp4",
+      "poster": "/assets/images/signal-to-build/prerender.jpg",
+      "proof": "/work/prerender/proof/"
+    },
+    {
       "id": "Todoist",
       "company": "Todoist",
       "slug": "todoist",
