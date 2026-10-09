@@ -5565,3 +5565,13 @@ body:has(.portrait-hero--flush) {
 .pitch-deck .button-secondary:hover {
   background: rgba(255, 255, 255, 0.1);
 }
+
+/* Awards & Recognition: blue accent, distinct from Speaking (purple) and Media (pink) */
+.talk-tab.is-active[data-tab-target="awards"] {
+  border-bottom-color: var(--color-blue);
+}
+
+[data-tab-panel="awards"] .csc-tag {
+  color: #1f7fb3;
+  background: rgba(113, 196, 241, 0.16);
+}
