@@ -11,7 +11,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Arcessio Proof: Engineer Question and AI Visibility Audit — James Praise</title>
-<meta name="description" content="A workflow James Praise built and ran for Arcessio: what engineers ask, who AI answers cite, and what AI crawlers can read on arcessio.ai." />
+<meta name="description" content="A workflow James Praise built and ran for Arcessio: what engineers ask, and who AI answers cite." />
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
@@ -90,13 +90,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="proof-toc-label">What it found</p>
     <a href="#absent">Absent from AI answers</a>
     <a href="#who-wins">Who the answers cite</a>
-    <a href="#crawlers">What AI crawlers read</a>
     <a href="#content">Who the content serves</a>
-  </div>
-  <div class="proof-toc-group">
-    <p class="proof-toc-label">What I'd do</p>
-    <a href="#bets">Five content bets</a>
-    <a href="#week-one">Week one</a>
   </div>
 </nav>
 <div class="container proof-wrap">
@@ -150,43 +144,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 id="who-wins">2. The companies that win are answering one practical question per page</h2>
     <p>The pages the model cited weren't brand manifestos. They were a cost calculation guide, a 3D printing vs CNC comparison, a CNC design guide, a DFM checklist, a help-center page on manufacturability analysis, and capability pages that explain what to upload. Xometry also has a page on machine learning for manufacturing, and it was cited on both AI category questions. Each of these pages answers one question an engineer already has, in plain language, which makes it easy for an AI model to quote.</p>
 
-    <h2 id="crawlers">3. AI crawlers can barely read arcessio.ai</h2>
-    <p>The site renders its content in JavaScript. A browser shows the full page, but a crawler that doesn't run JavaScript, which describes most AI answer-engine crawlers, sees little more than the page title.</p>
-    <div class="big-stats">
-      <div class="big-stat"><strong>14 of 15</strong><span>sitemap pages show a crawler fewer than 25 words</span></div>
-      <div class="big-stat"><strong>962</strong><span>words readable without JavaScript across those 15 pages</span></div>
-      <div class="big-stat"><strong>10,762</strong><span>words a browser actually renders</span></div>
-    </div>
-    <div class="table-scroll">
-    <table class="proof-table">
-      <tr><th>Page</th><th>Crawler sees</th><th>Browser shows</th></tr>
-      <tr><td>Homepage</td><td>7 words</td><td>379 words</td></tr>
-      <tr><td>When a Missing Part Becomes a Mission Problem</td><td>10 words</td><td>734 words</td></tr>
-      <tr><td>For Want of a Nail: How a Single Part Can Kill Readiness</td><td>14 words</td><td>1,211 words</td></tr>
-      <tr><td>For Suppliers</td><td>796 words</td><td>809 words</td></tr>
-    </table>
-    </div>
-    <p>The For Suppliers page is the useful exception: it already serves its text in the HTML, so the fix is possible inside the current stack. Extending that treatment to the homepage and resources would be my first technical task.</p>
-
-    <h2 id="content">4. The existing content speaks to enterprise and defense buyers, and none of it answers an engineer's question</h2>
-    <p>All 11 articles in the sitemap cover legacy aftermarket inventory, 3D printing adoption and defense readiness, several from the Accio3D era. They suit the enterprise and Department of Defense track. None of them answers the questions engineers actually search: how to get a part quoted, which process to use, what a drawing needs, or which material fits. Even the defense question went to DLA and America Makes rather than Arcessio's own defense articles, which is what you'd expect when a crawler can't read them.</p>
-
-    <p class="section-label" style="margin-top:40px;">What I'd do</p>
-    <h2 id="bets">Five content bets for the engineer track</h2>
-    <p>Each bet answers a question from the audit and shows one of Arcessio's agents doing the work, so the page earns its citation and demonstrates the product in the same place.</p>
-    <div class="proof-cards">
-      <div class="proof-card"><strong>1. CNC, 3D printing or sheet metal: a decision guide by part geometry</strong><span>Answers the process question, with a real part run through the Manufacturability and Material &amp; Equipment agents as the worked example.</span></div>
-      <div class="proof-card"><strong>2. What a shop needs to quote your part: the STEP file and drawing checklist</strong><span>Answers the quoting questions Xometry and Protolabs currently own, and ends in a drawing upload.</span></div>
-      <div class="proof-card"><strong>3. The tolerance callouts that quietly double a quote</strong><span>A design for manufacturing piece built on the tolerance checks the agent already scores.</span></div>
-      <div class="proof-card"><strong>4. Materials for functional parts, chosen by requirement</strong><span>The PEEK, PA12-CF and polycarbonate matching on the homepage, turned into a guide an engineer can cite.</span></div>
-      <div class="proof-card"><strong>5. What AI can decide from a CAD model today</strong><span>A plain explanation of the category question, with a sample agent output, so the next answer to "is there AI that reads drawings" has a page to cite besides a marketplace.</span></div>
-    </div>
-
-    <h2 id="week-one">Week one</h2>
-    <p>First, make the homepage and resources readable without JavaScript, following the For Suppliers page. Second, publish bet number two, because quoting questions carry the clearest buying intent. Third, run this audit weekly with a wider question set and track Arcessio's share of AI citations as the leading metric for the engineer track, ahead of traffic and alongside signups.</p>
+    <h2 id="content">3. The existing content speaks to enterprise and defense buyers, and none of it answers an engineer's question</h2>
+    <p>The sitemap lists nine articles on legacy aftermarket inventory, 3D printing adoption and defense readiness, several from the Accio3D era. They suit the enterprise and Department of Defense track. None of them answers the questions engineers actually search: how to get a part quoted, which process to use, what a drawing needs, or which material fits. On 15 September, the defense question went to DLA and America Makes rather than to Arcessio's own defense articles.</p>
     <p>The same workflow scales to the enterprise track by swapping the question set for procurement and defense sourcing questions.</p>
   </div>
-
   <div class="button-row" style="margin-top: 40px;">
     <a href="/work/arcessio/" class="button button-primary">Back to the pitch</a>
     <a href="https://github.com/realjaymes/ai-answer-visibility-audit" target="_blank" class="button button-secondary">View the code on GitHub</a>

@@ -76,7 +76,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="cs-stats">
           <div class="cs-stat reveal-blur card-lift"><strong>9+</strong><span>offers and niches tested end to end</span></div>
           <div class="cs-stat reveal-blur card-lift"><strong>409</strong><span>companies enriched and scored in a single live run</span></div>
-          <div class="cs-stat reveal-blur card-lift"><strong>71%</strong><span>deliverable rate once I added a verified decision-maker tier</span></div>
+          <div class="cs-stat reveal-blur card-lift"><strong>71%</strong><span>of database-tier addresses came back good in the pre-send check</span></div>
         </div>
 
       </div>
@@ -102,7 +102,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <div class="cs-body-section reveal-blur">
         <h2>What It Taught Me</h2>
-        <p>Sending live emails taught me where the paid tools are worth the money. An email checked by a paid database bounced about 2 percent of the time. An email guessed by a free tool bounced 10 percent of the time, which was five times worse. I also learned what "catch-all" means. It is a setting that makes an email checker unsure whether a specific address exists. MillionVerifier cannot always confirm those addresses, so I use another tool that can check them and keep the good ones. I learned all of this by running live campaigns, watching the bounce numbers, and fixing the system when the data proved me wrong.</p>
+        <p>Sending live emails taught me where the paid tools are worth the money. On a 280-address agency list, I ran every address through a verifier before sending. Of the 42 addresses that came from a paid database, 71 percent came back good and 2 percent came back bad. Of the 238 that came from my own free website scraper, 53 percent came back good and 10 percent came back bad. The scraper produced 24 of the 25 bad addresses. I also learned what "catch-all" means. It is a setting that makes an email checker unsure whether a specific address exists. MillionVerifier cannot always confirm those addresses, so I use another tool that can check them and keep the good ones. I learned all of this by running live campaigns, watching the verifier results and the bounces, and fixing the system when the data proved me wrong.</p>
         <p>The alerting layer taught me a separate lesson. Two live replies came in early on, and the workflow reported success on both, but neither alert sent. The cause was a hand-built message string with manually escaped quotes, and real replies carry contractions and quoted email threads that broke it in ways my test payloads never did. I rebuilt the message using structured fields instead of a raw string, then replayed the exact reply content that broke it the first time to confirm the fix held. A workflow reporting success only confirms it ran end to end. It says nothing about whether the email behind it went out, and I only learned to check that second part by watching it fail once in production.</p>
       </div>
     </div>
