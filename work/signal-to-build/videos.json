@@ -1,6 +1,32 @@
 {
   "videos": [
     {
+      "id": "Skylar",
+      "company": "Skylar",
+      "slug": "skylar",
+      "style": "Split Numbered",
+      "summary": "I wrote a note on the three companies that sell AI sales practice, and found that only Skylar sells a version training companies can deliver under their own brand.",
+      "duration": 39,
+      "posterSec": 3,
+      "added": "2026-10-10",
+      "video": "/assets/videos/signal-to-build/skylar.mp4",
+      "poster": "/assets/images/signal-to-build/skylar.jpg",
+      "proof": "/work/skylar/proof/"
+    },
+    {
+      "id": "HotelRank",
+      "company": "HotelRank",
+      "slug": "hotelrank",
+      "style": "Floating Card",
+      "summary": "I built a seller's battlecard for HotelRank.ai that sets its €58 a month price against Otterly.ai, Profound and Scrunch AI and opens on questions for the buyer.",
+      "duration": 39,
+      "posterSec": 3,
+      "added": "2026-10-10",
+      "video": "/assets/videos/signal-to-build/hotelrank.mp4",
+      "poster": "/assets/images/signal-to-build/hotelrank.jpg",
+      "proof": "/work/hotelrank/proof/"
+    },
+    {
       "id": "SparkLoop",
       "company": "SparkLoop",
       "slug": "sparkloop",
