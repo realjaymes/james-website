@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WKSZ7DQC');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A Positioning Teardown for Control Seat | James Praise</title>
+<meta name="description" content="Where the public record and the website describe Control Seat differently in October 2026, which description to lead with for a plant buyer, and a homepage line to test." />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+<link rel="canonical" href="https://jamespraise.xyz/work/control-seat/proof/" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=23" />
+<style>
+  .proof-wrap { max-width: 720px; margin: 0 auto; padding: 100px 0 80px; }
+  .proof-eyebrow { color: var(--color-purple); font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; font-size: 13px; margin-bottom: 10px; }
+  .proof-credit { display: flex; align-items: center; gap: 10px; margin: 20px 0 40px; }
+  .proof-credit img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+  .proof-credit span { color: var(--text-muted); font-size: 14px; }
+  .proof-credit strong { color: var(--text-primary); }
+  .proof-note { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 8px; padding: 16px 20px; font-size: 14px; color: var(--text-muted); margin-bottom: 40px; line-height: 1.7; }
+  .proof-body p { line-height: 1.7; }
+  .proof-body h2 { margin-top: 56px; margin-bottom: 12px; }
+  .proof-body h3 { margin-top: 32px; margin-bottom: 8px; font-size: 18px; }
+  .proof-body strong { font-weight: 700; }
+  .proof-body ul { line-height: 1.8; padding-left: 20px; }
+  .proof-img { border-radius: 8px; border: 1px solid rgba(0,0,0,0.08); margin: 20px 0 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.06); width: 100%; }
+  .proof-cap { font-size: 13px; color: var(--text-muted); line-height: 1.5; margin: 0 0 28px; }
+  .proof-back { display: inline-block; margin-bottom: 24px; font-size: 14px; }
+  .section-label { font-size: 13px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-quote { border-left: 3px solid var(--color-purple); padding: 4px 0 4px 22px; margin: 28px 0; font-size: 19px; font-weight: 600; line-height: 1.5; color: var(--text-primary); }
+  .proof-headline { background: rgba(113,132,241,0.08); border: 1px solid var(--color-purple); border-radius: 10px; padding: 22px 24px; margin: 22px 0; }
+  .proof-headline strong { display: block; font-size: 23px; line-height: 1.3; color: var(--text-primary); margin-bottom: 8px; }
+  .proof-headline span { font-size: 15px; color: var(--text-muted); line-height: 1.6; }
+  .proof-alt { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 10px; padding: 20px 22px; margin: 14px 0; }
+  .proof-alt strong { display: block; font-size: 19px; line-height: 1.3; color: var(--text-primary); margin-bottom: 6px; }
+  .proof-alt span { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+  .proof-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 13px; }
+  .proof-table th, .proof-table td { border: 1px solid rgba(28,20,34,0.12); padding: 10px 12px; text-align: left; vertical-align: top; line-height: 1.5; }
+  .proof-table th { background: var(--bg-surface); font-weight: 800; font-size: 12px; }
+  .proof-table td:first-child { font-weight: 700; white-space: nowrap; }
+  .proof-map { border-top: 1px solid rgba(28,20,34,0.1); margin: 22px 0; }
+  .proof-map div { display: grid; grid-template-columns: 150px 1fr; gap: 16px; padding: 11px 0; border-bottom: 1px solid rgba(28,20,34,0.1); font-size: 14px; line-height: 1.6; }
+  .proof-map dt { font-weight: 700; color: var(--text-muted); }
+  .proof-progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(28,20,34,0.08); z-index: 200; }
+  .proof-progress-bar { height: 100%; width: 0%; background: var(--color-purple); transition: width 0.1s linear; }
+  .proof-toc { position: fixed; top: 140px; right: 32px; width: 200px; font-size: 13px; }
+  .proof-toc-group { margin-bottom: 20px; }
+  .proof-toc-label { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-toc a { display: block; padding: 5px 0 5px 12px; border-left: 2px solid rgba(28,20,34,0.1); color: var(--text-muted); text-decoration: none; line-height: 1.4; }
+  .proof-toc a:hover { color: var(--color-purple); border-left-color: var(--color-purple); }
+  .proof-toc a.is-active { color: var(--color-purple); border-left-color: var(--color-purple); font-weight: 700; }
+  @media (max-width: 1400px) { .proof-toc { display: none; } }
+  @media (max-width: 640px) { .proof-map div { grid-template-columns: 1fr; gap: 2px; } .proof-table { font-size: 12px; } }
+  .proof-table td:first-child { white-space: normal; min-width: 120px; }
+  .proof-table td a { word-break: break-word; }
+</style>
+</head>
+<body class="proof-page">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKSZ7DQC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="proof-progress-track"><div class="proof-progress-bar" id="proofProgressBar"></div></div>
+
+<a href="/work/control-seat/" class="pitch-exit" aria-label="Back to the Control Seat pitch">
+  <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+</a>
+
+<nav class="proof-toc" aria-label="Section navigation">
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The teardown</p>
+    <a href="#pages">What each page says</a>
+    <a href="#buyer">What a plant buyer meets</a>
+    <a href="#lead">What I'd lead with</a>
+    <a href="#test">A homepage test</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">Before you act on it</p>
+    <a href="#validate">How to know if it's right</a>
+    <a href="#limits">What I couldn't check</a>
+  </div>
+</nav>
+
+<div class="container proof-wrap">
+  <a class="proof-back" href="/work/control-seat/">&larr; Back to the Control Seat pitch</a>
+
+  <p class="proof-eyebrow">A positioning teardown for Control Seat</p>
+  <h1>Most of the public record describes a platform that runs factories. Your website sells predictive maintenance.</h1>
+
+  <div class="proof-credit">
+    <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+    <span><strong>James Praise</strong> &middot; Marketing and GTM Operator</span>
+  </div>
+
+  <p class="proof-note">I wrote this from public pages only, all opened on October 14, 2026: <a href="https://www.ycombinator.com/companies/control-seat" target="_blank" rel="noopener">your Y Combinator listing</a>, <a href="https://founderland.ai/articles/control-seat-launches-ai-platform-to-run-factory-operations-mu84kxy1" target="_blank" rel="noopener">the Founderland article of September 19</a>, <a href="https://www.linkedin.com/company/control-seat/" target="_blank" rel="noopener">your LinkedIn page</a>, <a href="https://x.com/Control_Seat" target="_blank" rel="noopener">your X profile</a> and <a href="https://www.controlseat.com/" target="_blank" rel="noopener">your website</a>, including each of the 18 pages in <a href="https://www.controlseat.com/sitemap.xml" target="_blank" rel="noopener">its sitemap</a>. I did not see the product, the login or any customer data.</p>
+
+  <div class="proof-body">
+
+    <h2 id="pages">1. What each page says about Control Seat</h2>
+
+    <p>Each of these descriptions is accurate on its own page. Read together, they describe a company that sells to different people for different reasons. Here is each one as it stood on October 14, 2026.</p>
+
+    <table class="proof-table">
+      <thead>
+        <tr><th>Where</th><th>What it says Control Seat is</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><a href="https://www.ycombinator.com/companies/control-seat" target="_blank" rel="noopener">Y Combinator listing</a></td><td>The tagline is "AI that runs factories." The text says you built a full Supervisory Control and Data Acquisition (SCADA) system to replace Ignition, WinCC and FactoryTalk, and that you are also an AI-native industrial integrator. The ask is aimed at people exploring controls, programmable logic controller (PLC) programming, SCADA or system integration.</td></tr>
+        <tr><td><a href="https://www.linkedin.com/company/control-seat/" target="_blank" rel="noopener">Warren's launch post</a>, reposted on your LinkedIn page about three months before October 14</td><td>"The operating system for the physical world." The first product is an AI-native controls and SCADA platform, with a stated goal of expanding into PLC hardware.</td></tr>
+        <tr><td><a href="https://founderland.ai/articles/control-seat-launches-ai-platform-to-run-factory-operations-mu84kxy1" target="_blank" rel="noopener">Founderland, September 19</a></td><td>FactoryOS, launched in July 2026 as four modules on one data layer: Predictive Intelligence, SCADA and human machine interface (HMI), Virtual PLC, and Operations Intelligence. It is framed as a challenge to Siemens and Rockwell Automation.</td></tr>
+        <tr><td><a href="https://x.com/Control_Seat" target="_blank" rel="noopener">X profile</a></td><td>"The AI-native industrial systems company." It has one post, from July 8, tagged #SCADA and #PLC.</td></tr>
+        <tr><td><a href="https://www.linkedin.com/company/control-seat/" target="_blank" rel="noopener">LinkedIn page</a></td><td>The headline is "AI for Industrial Failure Prediction." The overview describes a predictive maintenance platform for manufacturers, system integrators adding machine health to customer sites, and marine fleets. A post from about a week before October 14 says you deployed FactoryOS at Precision Associates and that predictive maintenance is "one part of FactoryOS."</td></tr>
+        <tr><td><a href="https://www.controlseat.com/" target="_blank" rel="noopener">Website homepage</a></td><td>"Catch equipment problems before they stop production." The page title is "Predictive maintenance &amp; machine health." FactoryOS, a SCADA product and a virtual PLC are not named on it or on any of the other 17 sitemap pages.</td></tr>
+        <tr><td><a href="https://www.controlseat.com/blog/predictive-maintenance-deployment-precision-associates" target="_blank" rel="noopener">Website blog, September 30</a></td><td>The same Precision Associates deployment, titled "Deploying predictive maintenance at Precision Associates." No mention of FactoryOS.</td></tr>
+      </tbody>
+    </table>
+
+    <p>Your site does carry the larger ambition in one place. The <a href="https://www.controlseat.com/mission" target="_blank" rel="noopener">mission page</a> says the work starts with the equipment keeping production moving, and that the long-term mission is to become the operating system for the physical world. It reads as a plan for later, and no page on the site describes a control product.</p>
+
+    <p>Three buyers are named across these pages: a maintenance team (your website), a controls engineer or system integrator (your Y Combinator listing) and a marine fleet (your LinkedIn overview). Only the first is spoken to on the homepage.</p>
+
+    <h2 id="buyer">2. What a plant buyer meets</h2>
+
+    <p>Take someone who hears about Control Seat at a conference. <a href="https://www.linkedin.com/company/control-seat/" target="_blank" rel="noopener">Your LinkedIn page</a> shows Warren speaking on a "Modern SCADA for Utilities" panel in Atlanta, and a repost of his Grand Rapids post saying PLCs, SCADA, historians, alarm systems and predictive maintenance are "unified under one platform." That person types in controlseat.com and meets a first screen about vibration, ultrasound and temperature sensors. Nothing links the two.</p>
+
+    <p>Now take a controls engineer who read "replace Ignition, WinCC and FactoryTalk" on your Y Combinator page. Your <a href="https://www.controlseat.com/intelligence" target="_blank" rel="noopener">connected data page</a> tells them the software can "monitor without replacing your existing controls," and your <a href="https://www.controlseat.com/pricing" target="_blank" rel="noopener">pricing page</a> answers "Do we have to connect our PLCs or SCADA?" with "No." Both lines are fine for a maintenance manager. For someone who came to evaluate a control system, they read like a different product.</p>
+
+    <p>Narrowing to predictive maintenance may be the right strategy. Maintenance teams can buy sensors this quarter, and Precision Associates is a published example. The <a href="https://www.controlseat.com/terms" target="_blank" rel="noopener">terms</a> say the software reads plant data and does not write values back to control systems, and a plant that has been burned by software glitches will want to hear that. The gap is that your own channels do not agree on whether it is the whole company or one module of a larger one.</p>
+
+    <h2 id="lead">3. What I'd lead with</h2>
+
+    <p>I would lead with predictive maintenance, because it is what a plant can buy today and the only part with a published customer that I could find. I would name the platform once, as the place it is heading, and I would pick one name for each thing.</p>
+
+    <p class="proof-quote">For maintenance teams at manufacturers who learn about a failing machine only after it stops production, Control Seat is predictive maintenance that starts with wireless sensors, reads the plant data you already collect and never writes to your controls. It is one module of FactoryOS, the platform Control Seat is building to bring equipment data, monitoring and control into one system.</p>
+
+    <p>What each part is doing:</p>
+
+    <dl class="proof-map">
+      <div><dt>Who it's for</dt><dd>maintenance teams at manufacturers, the buyer your homepage already speaks to</dd></div>
+      <div><dt>The category</dt><dd>predictive maintenance</dd></div>
+      <div><dt>What it does</dt><dd>flags developing equipment problems, explains likely causes and shows what to check (your homepage's own words)</dd></div>
+      <div><dt>The alternative</dt><dd>finding out when the machine stops</dd></div>
+      <div><dt>The difference</dt><dd>read-only by design, built by founders who worked on plant control systems at SpaceX and Tesla, <a href="https://founderland.ai/articles/control-seat-launches-ai-platform-to-run-factory-operations-mu84kxy1" target="_blank" rel="noopener">according to Founderland</a></dd></div>
+      <div><dt>The payoff</dt><dd>one platform for the rest of the plant floor data, later</dd></div>
+    </dl>
+
+    <p>One question decides what changes, and only you can answer it. If the SCADA and Virtual PLC modules the article describes are live, your website undersells three of your four modules, and the line above is the start of fixing that. If they are paused, the Y Combinator listing, the LinkedIn headline and the X bio are the pages to change, and the website is already right. Either way, the Precision Associates deployment should have one name. Today it is FactoryOS on LinkedIn and predictive maintenance on your blog.</p>
+
+    <h2 id="test">4. A homepage test for this week</h2>
+
+    <p>Keep your current headline. It names a concrete outcome in plain words. The test is one added line beneath it, with everything else unchanged, against the page as it stands.</p>
+
+    <h3>The line I'd run first</h3>
+
+    <div class="proof-headline">
+      <strong>Predictive maintenance is one module of FactoryOS, the platform Control Seat is building for the whole plant floor.</strong>
+      <span>It connects the buyer who reads the coverage to the product the website sells, and it names the platform once without asking a maintenance manager to evaluate a control system.</span>
+    </div>
+
+    <h3>Two alternates worth testing against it</h3>
+
+    <div class="proof-alt">
+      <strong>Read-only. Control Seat reads your plant data and never writes to your controls.</strong>
+      <span>This is already in your <a href="https://www.controlseat.com/terms" target="_blank" rel="noopener">terms</a>. Moving it to the homepage turns a legal sentence into the reassurance a cautious plant is looking for.</span>
+    </div>
+
+    <div class="proof-alt">
+      <strong>Precision Associates monitors vibration, ultrasound and temperature on critical equipment with Control Seat.</strong>
+      <span>Taken from your <a href="https://www.controlseat.com/blog/predictive-maintenance-deployment-precision-associates" target="_blank" rel="noopener">September 30 post</a>. A named customer on the first screen answers "does anyone use this" before a visitor has to ask.</span>
+    </div>
+
+    <p>Measure demo bookings and quote requests per visitor, since the homepage sends people to both a <a href="https://calendly.com/d/cynm-ct8-965/control-seat" target="_blank" rel="noopener">demo booking link</a> and a quote form. The conference and Founderland traffic is the audience this test is for, so segment those visits if your analytics allow.</p>
+
+    <h2 id="validate">5. How to know whether any of this is right</h2>
+
+    <p>I built this from the outside and have no internal data. Treat it as a set of hypotheses. Here are four ways to check them, fastest first.</p>
+
+    <h3>Read your own demo and quote notes</h3>
+    <p>Look for the question "do you replace our SCADA?" or "is this the FactoryOS thing?" in your Calendly notes and quote requests. Each time it appears, a visitor hit the gap described above. A few of them in a month is enough to act on.</p>
+
+    <h3>Ask the Precision Associates team how they describe you</h3>
+    <p>Their words for what Control Seat does are the best homepage copy you can get. Note whether they say sensors, predictive maintenance or platform, and use whichever they reach for first.</p>
+
+    <h3>Run a five second test with maintenance managers</h3>
+    <p>Show eight or ten of them the current first screen and the one with the added line. Take it away and ask what the company sells and what it plans to sell. If the answers match the page, it works.</p>
+
+    <h3>Run the homepage test above against real traffic</h3>
+    <p>Pair it with a source you control, such as a conference follow-up email or a post that links to the site. Watch who books, since the first customers set the story everyone else hears.</p>
+
+    <h2 id="limits">What I couldn't check</h2>
+
+    <p>I could not see the product, the login, which FactoryOS modules are live or what is on your roadmap, so I cannot say which of the two answers in section 3 is true. The Founderland article describes the platform from its own reporting and says connectors for Rockwell FactoryTalk and Siemens WinCC appear on your website as "coming soon." I did not find that on any website page on October 14. LinkedIn shows post ages as "1w" and "3mo," so those dates are approximate. Warren's launch post is quoted from its repost on your company page, not from his own profile.</p>
+
+  </div>
+
+  <div class="button-row" style="margin-top: 40px;">
+    <a href="/work/control-seat/" class="button button-primary">Back to the pitch</a>
+    <a href="https://calendar.app.google/UQFiPwiBoCjA5CXf9" target="_blank" rel="noopener" class="button button-secondary">Book a call</a>
+    <a href="mailto:james@marketinginaction.xyz?subject=Control%20Seat%20positioning" class="button button-secondary">Let's Talk</a>
+  </div>
+</div>
+
+<script src="/script.js?v=11"></script>
+<script>
+(function () {
+  var bar = document.getElementById('proofProgressBar');
+  function updateProgress() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.proof-toc a'));
+  var sections = tocLinks.map(function (a) {
+    return document.getElementById(a.getAttribute('href').slice(1));
+  });
+  function updateActiveToc() {
+    var current = null;
+    sections.forEach(function (sec, i) {
+      if (sec && sec.getBoundingClientRect().top <= 140) current = i;
+    });
+    tocLinks.forEach(function (a, i) {
+      a.classList.toggle('is-active', i === current);
+    });
+  }
+  window.addEventListener('scroll', updateActiveToc, { passive: true });
+  updateActiveToc();
+})();
+</script>
+</body>
+</html>

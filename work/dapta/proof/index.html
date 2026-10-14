@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WKSZ7DQC');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A Homepage Teardown for Dapta — James Praise</title>
+<meta name="description" content="The audience numbers that disagree across Dapta's own pages, a first screen that sells one agent and then shows eight, and three headlines to test this week." />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+<link rel="canonical" href="https://jamespraise.xyz/work/dapta/proof/" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=23" />
+<style>
+  .proof-wrap { max-width: 720px; margin: 0 auto; padding: 100px 0 80px; }
+  .proof-eyebrow { color: var(--color-purple); font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; font-size: 13px; margin-bottom: 10px; }
+  .proof-credit { display: flex; align-items: center; gap: 10px; margin: 20px 0 40px; }
+  .proof-credit img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+  .proof-credit span { color: var(--text-muted); font-size: 14px; }
+  .proof-credit strong { color: var(--text-primary); }
+  .proof-note { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 8px; padding: 16px 20px; font-size: 14px; color: var(--text-muted); margin-bottom: 40px; line-height: 1.7; }
+  .proof-body p { line-height: 1.7; }
+  .proof-body h2 { margin-top: 56px; margin-bottom: 12px; }
+  .proof-body h3 { margin-top: 32px; margin-bottom: 8px; font-size: 18px; }
+  .proof-body strong { font-weight: 700; }
+  .proof-body ul { line-height: 1.8; padding-left: 20px; }
+  .proof-img { border-radius: 8px; border: 1px solid rgba(0,0,0,0.08); margin: 20px 0 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.06); width: 100%; }
+  .proof-cap { font-size: 13px; color: var(--text-muted); line-height: 1.5; margin: 0 0 28px; }
+  .proof-back { display: inline-block; margin-bottom: 24px; font-size: 14px; }
+  .section-label { font-size: 13px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-quote { border-left: 3px solid var(--color-purple); padding: 4px 0 4px 22px; margin: 28px 0; font-size: 19px; font-weight: 600; line-height: 1.5; color: var(--text-primary); }
+  .proof-headline { background: rgba(113,132,241,0.08); border: 1px solid var(--color-purple); border-radius: 10px; padding: 22px 24px; margin: 22px 0; }
+  .proof-headline strong { display: block; font-size: 23px; line-height: 1.3; color: var(--text-primary); margin-bottom: 8px; }
+  .proof-headline span { font-size: 15px; color: var(--text-muted); line-height: 1.6; }
+  .proof-alt { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 10px; padding: 20px 22px; margin: 14px 0; }
+  .proof-alt strong { display: block; font-size: 19px; line-height: 1.3; color: var(--text-primary); margin-bottom: 6px; }
+  .proof-alt span { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+  .proof-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 13px; }
+  .proof-table th, .proof-table td { border: 1px solid rgba(28,20,34,0.12); padding: 10px 12px; text-align: left; vertical-align: top; line-height: 1.5; }
+  .proof-table th { background: var(--bg-surface); font-weight: 800; font-size: 12px; }
+  .proof-table td:first-child { font-weight: 700; white-space: nowrap; }
+  .proof-map { border-top: 1px solid rgba(28,20,34,0.1); margin: 22px 0; }
+  .proof-map div { display: grid; grid-template-columns: 150px 1fr; gap: 16px; padding: 11px 0; border-bottom: 1px solid rgba(28,20,34,0.1); font-size: 14px; line-height: 1.6; }
+  .proof-map dt { font-weight: 700; color: var(--text-muted); }
+  .proof-progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(28,20,34,0.08); z-index: 200; }
+  .proof-progress-bar { height: 100%; width: 0%; background: var(--color-purple); transition: width 0.1s linear; }
+  .proof-toc { position: fixed; top: 140px; right: 32px; width: 200px; font-size: 13px; }
+  .proof-toc-group { margin-bottom: 20px; }
+  .proof-toc-label { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-toc a { display: block; padding: 5px 0 5px 12px; border-left: 2px solid rgba(28,20,34,0.1); color: var(--text-muted); text-decoration: none; line-height: 1.4; }
+  .proof-toc a:hover { color: var(--color-purple); border-left-color: var(--color-purple); }
+  .proof-toc a.is-active { color: var(--color-purple); border-left-color: var(--color-purple); font-weight: 700; }
+  @media (max-width: 1400px) { .proof-toc { display: none; } }
+  @media (max-width: 640px) { .proof-map div { grid-template-columns: 1fr; gap: 2px; } .proof-table { font-size: 12px; } }
+</style>
+</head>
+<body class="proof-page">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKSZ7DQC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="proof-progress-track"><div class="proof-progress-bar" id="proofProgressBar"></div></div>
+
+<a href="/work/dapta/" class="pitch-exit" aria-label="Back to the Dapta pitch">
+  <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+</a>
+
+<nav class="proof-toc" aria-label="Section navigation">
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The teardown</p>
+    <a href="#signal">Why the homepage matters now</a>
+    <a href="#numbers">Five audience figures</a>
+    <a href="#agents">One agent or eight</a>
+    <a href="#spanish">The Spanish page</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">What to change</p>
+    <a href="#headline">Headlines to test</a>
+    <a href="#scope">What this leaves alone</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">Before you act on it</p>
+    <a href="#validate">How to know if it's right</a>
+    <a href="#limits">What I couldn't check</a>
+  </div>
+</nav>
+
+<div class="container proof-wrap">
+  <a class="proof-back" href="/work/dapta/">&larr; Back to the Dapta pitch</a>
+
+  <p class="proof-eyebrow">A homepage teardown for Dapta</p>
+  <h1>Your launch post says 200K businesses. Your homepage says 50,000 and sells eight agents at once.</h1>
+
+  <div class="proof-credit">
+    <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+    <span><strong>James Praise</strong> &middot; Marketing and Go-to-Market Operator</span>
+  </div>
+
+  <p class="proof-note">I read these public pages on October 14, 2026: <a href="https://www.globenewswire.com/news-release/2026/10/13/3379778/0/en/dapta-raises-6m-to-accelerate-the-adoption-of-ai-sales-agents-to-smbs-across-the-u-s-and-latin-america.html" target="_blank" rel="noopener">your seed round announcement</a>, <a href="https://dapta.ai/" target="_blank" rel="noopener">your homepage</a>, <a href="https://dapta.ai/es/" target="_blank" rel="noopener">your Spanish homepage</a>, <a href="https://dapta.ai/blog-posts/dapta-acquires-beezion/" target="_blank" rel="noopener">your Beezion acquisition post</a> and <a href="https://careers.dapta.ai/jobs" target="_blank" rel="noopener">your careers page</a>. I could not see the product, your analytics or your ad accounts, so everything below comes from what a first-time visitor, a journalist or an investor can see. I checked each figure in Chrome that day, and pages change, so the text says where I am quoting.</p>
+
+  <div class="proof-body">
+
+    <h2 id="signal">1. The money is meant for customer acquisition, and the homepage is where that gets tested</h2>
+
+    <p>On October 13, 2026, Dapta announced a $6 million seed round led by Chingona Ventures. The <a href="https://www.globenewswire.com/news-release/2026/10/13/3379778/0/en/dapta-raises-6m-to-accelerate-the-adoption-of-ai-sales-agents-to-smbs-across-the-u-s-and-latin-america.html" target="_blank" rel="noopener">announcement</a> says the funding will go toward expansion across the U.S. and Latin America, product development and "driving customer acquisition and growth of the team." It also says Dapti is used by more than 200K users, adds upwards of 4K new users a week, and that the vast majority of them arrive through your own social channels, where you have more than 400K followers.</p>
+
+    <p>Anyone who reads that announcement next opens your homepage. A journalist checks it, an investor checks it, and a small business owner who followed you on social lands on it. Everything below is about what that page tells them.</p>
+
+    <h2 id="numbers">2. Your own pages give five different audience figures, and none says what it counts</h2>
+
+    <p>Here is every figure I found for the size of your audience, in your own words.</p>
+
+    <table class="proof-table">
+      <thead>
+        <tr><th>Where</th><th>What it says</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><a href="https://www.globenewswire.com/news-release/2026/10/13/3379778/0/en/dapta-raises-6m-to-accelerate-the-adoption-of-ai-sales-agents-to-smbs-across-the-u-s-and-latin-america.html" target="_blank" rel="noopener">Announcement, founder quote</a></td><td>"Dapti is already used by more than 200K users, growing by upwards of 4K new users every week"</td></tr>
+        <tr><td><a href="https://www.globenewswire.com/news-release/2026/10/13/3379778/0/en/dapta-raises-6m-to-accelerate-the-adoption-of-ai-sales-agents-to-smbs-across-the-u-s-and-latin-america.html" target="_blank" rel="noopener">Announcement, About Dapta</a></td><td>"already used by more than 200K businesses across the U.S. and Latin America"</td></tr>
+        <tr><td><a href="https://dapta.ai/" target="_blank" rel="noopener">Homepage, trust line</a></td><td>"TRUSTED BY 50,000+ COMPANIES" (the <a href="https://dapta.ai/es/" target="_blank" rel="noopener">Spanish page</a> says the same in Spanish)</td></tr>
+        <tr><td><a href="https://dapta.ai/" target="_blank" rel="noopener">Homepage, stat row</a></td><td>"50 platform users", with no unit and no "K"</td></tr>
+        <tr><td><a href="https://dapta.ai/blog-posts/dapta-acquires-beezion/" target="_blank" rel="noopener">Beezion post, "Dapta by the numbers"</a></td><td>"Total users 187,000+" and "Monthly active users 70,000+" across 24 countries</td></tr>
+      </tbody>
+    </table>
+
+    <img class="proof-img" src="/assets/images/case-studies/dapta/dapta-homepage-hero.jpg" alt="Dapta's homepage above the fold" loading="lazy" />
+    <p class="proof-cap">Dapta's homepage above the fold on October 14, 2026: the headline promises one AI sales agent, and the trust line under it says 50,000+ companies.</p>
+
+    <p>These count different things. One counts users, one counts companies, one counts users who were active in the last month, and one has no unit at all. I am not claiming any of them is wrong. The problem is that a reader cannot tell which number to repeat, and a reporter or an investor may quote whichever one they see first. The Beezion post mentions the seed round, so it was written after the announcement, which means the figures are not simply out of date.</p>
+
+    <p>The stat row has a second problem. It reads "120 faster reach", "7 setup time" and "50 platform users." The Spanish version spells the first one out as "Contacta clientes potenciales, 120 veces más rápido," so the English version appears to be missing its unit. I cannot tell whether the 7 means minutes, days or steps, and neither can a visitor.</p>
+
+    <img class="proof-img" src="/assets/images/case-studies/dapta/dapta-homepage-stats.jpg" alt="Dapta's homepage stat row showing 120 faster reach, 7 setup time and 50 platform users" loading="lazy" />
+    <p class="proof-cap">The English stat row on October 14, 2026, still showing bare numbers after the page had finished loading.</p>
+
+    <h3>What I'd put instead</h3>
+
+    <p>Choose one definition and use it on the homepage, the announcement, the About page and every investor deck. For example: "[Number] businesses use Dapti, and [number] of them were active last month." You hold the real data, so you can pick the numbers. Your own post already gives two that could fill the slots: 187,000+ total users and 70,000+ active in a month. Then give each stat in the row a unit a stranger can read.</p>
+
+    <h2 id="agents">3. The first screen sells one agent, then the page shows eight</h2>
+
+    <p>The homepage headline reads "Create your first AI sales agent in 2 minutes." Further down, the page lays out eight cards: AI Receptionist, AI Lead Qualifier, AI Sales Follow Up, AI Customer Support, AI Onboarding Specialist, AI HR Candidate Screener, AI Collections Specialist and Build Your Own.</p>
+
+    <img class="proof-img" src="/assets/images/case-studies/dapta/dapta-homepage-agent-cards.jpg" alt="The first four of Dapta's eight agent cards on the homepage" loading="lazy" />
+    <p class="proof-cap">The first four of the eight agent cards on the English homepage.</p>
+
+    <p>The announcement describes one product. Dapti is "an AI sales agent for small-and-medium sized businesses designed to convert inbound leads faster," and it "instantly answers, qualifies and schedules meetings without human intervention the moment a prospect reaches out." The text of both the English and the Spanish homepage never uses the name Dapti.</p>
+
+    <p>The homepage customer stories point to the same agent. Colwell Law Group says "no missed calls," Aether Mechanical's story is titled "How Aether Mechanical Turned Missed Calls Into New Revenue," and Miami Tech &amp; Arts University's says it doubled connections and boosted bookings by 50% in one month. The industry list is looser than the announcement. The homepage names education, software as a service, real estate, fintech, law firms and home services. The announcement says your strength is in financial services, home services, law firms and insurance brokers, and insurance brokers do not appear in the homepage list.</p>
+
+    <p>I'd lead the page with the agent that answers, qualifies and books, because that is the one your announcement, your customers and your investor's quote all describe. The other six can sit under "More agents" for people who go looking. A visitor who arrives from a social video about missed calls should not have to decide between a candidate screener and a collections agent before they see the thing they came for.</p>
+
+    <h2 id="spanish">4. The Spanish page is where your audience started, and part of it is still in English</h2>
+
+    <p>The announcement says Dapta "first found traction among Spanish-speaking SMB owners in the U.S.," and your <a href="https://careers.dapta.ai/jobs/performance-lead" target="_blank" rel="noopener">Performance Lead listing</a> describes the company as building sales agents "para negocios hispanohablantes en EE.UU. y LATAM," which means for Spanish-speaking businesses in the U.S. and Latin America.</p>
+
+    <p>On the <a href="https://dapta.ai/es/" target="_blank" rel="noopener">Spanish homepage</a>, the headline, the body and the buttons are translated. The eight agent cards are not: the titles and every bullet ("Handle every call," "Book appointments," "Update CRM") are still in English under a "Contratar Ahora" button. So is the support paragraph that begins "We don't just hand you software and step back."</p>
+
+    <img class="proof-img" src="/assets/images/case-studies/dapta/dapta-es-agent-cards.jpg" alt="Dapta's Spanish homepage with agent cards still in English" loading="lazy" />
+    <p class="proof-cap">The Spanish homepage on October 14, 2026: Spanish buttons under English card titles and bullets.</p>
+
+    <p>The two pages also open with different proof. The English page leads with a law firm's missed-call story. The Spanish page leads with Bold, a Colombian company, and a collections story, so the two languages open with different proof. That may be deliberate, but it is worth deciding on purpose.</p>
+
+    <h2 id="headline">5. Three headlines to test this week</h2>
+
+    <p>Your current headline promises speed of setup. It speaks to a person who has already decided to build an agent, and it is a good control. These three speak to the owner who is losing leads, using the moments your own customers describe. Each names a concrete moment a business owner recognizes.</p>
+
+    <h3>The one I'd run first</h3>
+
+    <div class="proof-headline">
+      <strong>Every lead gets an answer in seconds, even when you can't pick up.</strong>
+      <span>Dapti answers calls and texts, qualifies the lead and books the meeting on your calendar, day or night.</span>
+    </div>
+
+    <h3>Two alternates worth testing against it</h3>
+
+    <div class="proof-alt">
+      <strong>Your next customer called while you were busy. Dapti picked up.</strong>
+      <span>Dapti answers the call or the text, asks the questions you would ask and books the meeting.</span>
+    </div>
+
+    <div class="proof-alt">
+      <strong>Stop losing leads to whoever answers first.</strong>
+      <span>Dapti replies to every new lead by call or text the moment they reach out, qualifies them and books the meeting.</span>
+    </div>
+
+    <p>The supporting line under each one comes straight from the announcement's description of what Dapti does. The third headline borrows the point Aether Mechanical's chief operating officer makes in the announcement: "If customers don't hear from you immediately, they move on to a competitor."</p>
+
+    <h2 id="scope">6. What this leaves alone</h2>
+
+    <p>Your <a href="https://careers.dapta.ai/jobs" target="_blank" rel="noopener">careers page</a> lists six open roles: Implementations Specialist, Software Engineer, Performance Lead, Junior Video Editor, Account Executive and In House Legal Counsel. The <a href="https://careers.dapta.ai/jobs/performance-lead" target="_blank" rel="noopener">Performance Lead listing</a>, posted September 22, 2026, covers Google and Meta ads, tracking, conversion funnels and HubSpot reporting. None of the six titles is a positioning, messaging or website role.</p>
+
+    <p>Your <a href="https://dapta.ai/blog-posts/dapta-acquires-beezion/" target="_blank" rel="noopener">Beezion post</a> says growth now sits in-house under Alejandro Sarmiento, the founder of the paid-media agency you acquired in May 2026, who became Head of Growth. This teardown stays on the words on the page and says nothing about your ad accounts, your spend or how your funnel performs, because I have not seen any of that.</p>
+
+    <h2 id="validate">7. How to know whether any of this is right</h2>
+
+    <p>I built all of this from the outside, and I don't have your conversion data. Treat it as a set of hypotheses worth testing.</p>
+
+    <h3>Run the headline as an A/B test</h3>
+    <p>Your announcement says social channels bring in upwards of 4K new users a week. If even part of that traffic passes through the homepage, you can get a result in days. Keep the current headline as the control, change only the headline and the line under it, and measure free sign-ups per visitor. Look at which visitors go on to build an agent, because a headline can raise sign-ups from people who never activate.</p>
+
+    <h3>Show the first screen to people who have never seen it</h3>
+    <p>Show it for five seconds, take it away, and ask what Dapti does and who it is for. If they cannot say, the page has not done its job, and that is a faster answer than a test.</p>
+
+    <h3>Listen to your own demos</h3>
+    <p>Your Beezion post says you run more than 1,000 demos a month. The words a buyer uses to describe the problem in the first five minutes of those calls are the best headline material you have. If they say "missed calls," the first headline above is right. If they say "slow follow-up" or "no one answers after hours," use that.</p>
+
+    <h3>Settle the audience number once</h3>
+    <p>This needs no test. Pick the definition, update the homepage, the About page and the announcement boilerplate on the same day, and give the stat row its units.</p>
+
+    <h2 id="limits">What I couldn't check</h2>
+
+    <p>I did not see the product, the sign-up flow, the pricing page or any analytics. The stat row may be an animated counter that shows its units on some devices. It showed bare numbers in my Chrome session after the page finished loading, in both English and Spanish. The user and company figures may count different things in ways Dapta's data makes obvious and its public pages do not. If so, the fix is only a line of explanation on the page.</p>
+
+  </div>
+
+  <div class="button-row" style="margin-top: 40px;">
+    <a href="/work/dapta/" class="button button-primary">Back to the pitch</a>
+    <a href="https://calendar.app.google/UQFiPwiBoCjA5CXf9" target="_blank" rel="noopener" class="button button-secondary">Book a call</a>
+    <a href="mailto:james@marketinginaction.xyz?subject=Dapta%20homepage" class="button button-secondary">Let's Talk</a>
+  </div>
+</div>
+
+<script src="/script.js?v=11"></script>
+<script>
+(function () {
+  var bar = document.getElementById('proofProgressBar');
+  function updateProgress() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.proof-toc a'));
+  var sections = tocLinks.map(function (a) {
+    return document.getElementById(a.getAttribute('href').slice(1));
+  });
+  function updateActiveToc() {
+    var current = null;
+    sections.forEach(function (sec, i) {
+      if (sec && sec.getBoundingClientRect().top <= 140) current = i;
+    });
+    tocLinks.forEach(function (a, i) {
+      a.classList.toggle('is-active', i === current);
+    });
+  }
+  window.addEventListener('scroll', updateActiveToc, { passive: true });
+  updateActiveToc();
+})();
+</script>
+</body>
+</html>

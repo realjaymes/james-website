@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WKSZ7DQC');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A Positioning Teardown for TODAY | James Praise</title>
+<meta name="description" content="What TODAY's announcement, homepage, product pages, pricing, About page and use-case pages each say the product is, as of October 14, 2026, and the one description I'd test on all of them." />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+<link rel="canonical" href="https://jamespraise.xyz/work/today-ai/proof/" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=23" />
+<style>
+  .proof-wrap { max-width: 720px; margin: 0 auto; padding: 100px 0 80px; }
+  .proof-eyebrow { color: var(--color-purple); font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; font-size: 13px; margin-bottom: 10px; }
+  .proof-credit { display: flex; align-items: center; gap: 10px; margin: 20px 0 40px; }
+  .proof-credit img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+  .proof-credit span { color: var(--text-muted); font-size: 14px; }
+  .proof-credit strong { color: var(--text-primary); }
+  .proof-note { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 8px; padding: 16px 20px; font-size: 14px; color: var(--text-muted); margin-bottom: 40px; line-height: 1.7; }
+  .proof-body p { line-height: 1.7; }
+  .proof-body h2 { margin-top: 56px; margin-bottom: 12px; }
+  .proof-body h3 { margin-top: 32px; margin-bottom: 8px; font-size: 18px; }
+  .proof-body strong { font-weight: 700; }
+  .proof-body ul { line-height: 1.8; padding-left: 20px; }
+  .proof-img { border-radius: 8px; border: 1px solid rgba(0,0,0,0.08); margin: 20px 0 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.06); width: 100%; }
+  .proof-cap { font-size: 13px; color: var(--text-muted); line-height: 1.5; margin: 0 0 28px; }
+  .proof-back { display: inline-block; margin-bottom: 24px; font-size: 14px; }
+  .section-label { font-size: 13px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-quote { border-left: 3px solid var(--color-purple); padding: 4px 0 4px 22px; margin: 28px 0; font-size: 19px; font-weight: 600; line-height: 1.5; color: var(--text-primary); }
+  .proof-headline { background: rgba(113,132,241,0.08); border: 1px solid var(--color-purple); border-radius: 10px; padding: 22px 24px; margin: 22px 0; }
+  .proof-headline strong { display: block; font-size: 23px; line-height: 1.3; color: var(--text-primary); margin-bottom: 8px; }
+  .proof-headline span { font-size: 15px; color: var(--text-muted); line-height: 1.6; }
+  .proof-alt { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 10px; padding: 20px 22px; margin: 14px 0; }
+  .proof-alt strong { display: block; font-size: 19px; line-height: 1.3; color: var(--text-primary); margin-bottom: 6px; }
+  .proof-alt span { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+  .proof-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 13px; }
+  .proof-table th, .proof-table td { border: 1px solid rgba(28,20,34,0.12); padding: 10px 12px; text-align: left; vertical-align: top; line-height: 1.5; }
+  .proof-table th { background: var(--bg-surface); font-weight: 800; font-size: 12px; }
+  .proof-table td:first-child { font-weight: 700; white-space: nowrap; }
+  .proof-map { border-top: 1px solid rgba(28,20,34,0.1); margin: 22px 0; }
+  .proof-map div { display: grid; grid-template-columns: 150px 1fr; gap: 16px; padding: 11px 0; border-bottom: 1px solid rgba(28,20,34,0.1); font-size: 14px; line-height: 1.6; }
+  .proof-map dt { font-weight: 700; color: var(--text-muted); }
+  .proof-progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(28,20,34,0.08); z-index: 200; }
+  .proof-progress-bar { height: 100%; width: 0%; background: var(--color-purple); transition: width 0.1s linear; }
+  .proof-toc { position: fixed; top: 140px; right: 32px; width: 200px; font-size: 13px; }
+  .proof-toc-group { margin-bottom: 20px; }
+  .proof-toc-label { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-toc a { display: block; padding: 5px 0 5px 12px; border-left: 2px solid rgba(28,20,34,0.1); color: var(--text-muted); text-decoration: none; line-height: 1.4; }
+  .proof-toc a:hover { color: var(--color-purple); border-left-color: var(--color-purple); }
+  .proof-toc a.is-active { color: var(--color-purple); border-left-color: var(--color-purple); font-weight: 700; }
+  @media (max-width: 1400px) { .proof-toc { display: none; } }
+  @media (max-width: 640px) { .proof-map div { grid-template-columns: 1fr; gap: 2px; } .proof-table { font-size: 12px; } }
+  .proof-table-wrap { overflow-x: auto; margin: 24px 0; }
+  .proof-table-wrap .proof-table { margin: 0; min-width: 640px; }
+  .proof-table td:first-child { white-space: normal; min-width: 130px; }
+  .proof-table td:nth-child(2) { font-weight: 400; }
+</style>
+</head>
+<body class="proof-page">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKSZ7DQC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="proof-progress-track"><div class="proof-progress-bar" id="proofProgressBar"></div></div>
+
+<a href="/work/today-ai/" class="pitch-exit" aria-label="Back to the TODAY pitch">
+  <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+</a>
+
+<nav class="proof-toc" aria-label="Section navigation">
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The teardown</p>
+    <a href="#surfaces">What each page says TODAY is</a>
+    <a href="#announcement">Why a buyer reads both</a>
+    <a href="#usecases">The four empty pages</a>
+    <a href="#customers">Your customers' words</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">What I'd change</p>
+    <a href="#description">The description to test</a>
+    <a href="#headlines">Three headlines to test</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">Before you act on it</p>
+    <a href="#validate">How to know if it's right</a>
+    <a href="#limits">What I couldn't check</a>
+  </div>
+</nav>
+
+<div class="container proof-wrap">
+  <a class="proof-back" href="/work/today-ai/">&larr; Back to the TODAY pitch</a>
+
+  <p class="proof-eyebrow">A positioning teardown for TODAY</p>
+  <h1>TODAY's own pages describe the product six different ways. One sentence can replace all of them.</h1>
+
+  <div class="proof-credit">
+    <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+    <span><strong>James Praise</strong> &middot; Marketing and GTM Operator</span>
+  </div>
+
+  <p class="proof-note">I read these pages on October 14, 2026, all of them public: <a href="https://www.usetoday.io/" target="_blank" rel="noopener">your homepage</a>, <a href="https://www.usetoday.io/blog/today-secures-2-8m-seed-funding/" target="_blank" rel="noopener">your seed announcement</a>, the <a href="https://www.usetoday.io/assistant" target="_blank" rel="noopener">Assistant</a>, <a href="https://www.usetoday.io/simulations" target="_blank" rel="noopener">Simulations</a>, <a href="https://www.usetoday.io/pricing" target="_blank" rel="noopener">Pricing</a> and <a href="https://www.usetoday.io/about-us" target="_blank" rel="noopener">About</a> pages, the German <a href="https://www.usetoday.io/de" target="_blank" rel="noopener">homepage</a> and <a href="https://www.usetoday.io/de/blog/today-secures-2-8m-seed-funding/" target="_blank" rel="noopener">announcement</a>, your <a href="https://www.linkedin.com/company/usetoday/" target="_blank" rel="noopener">LinkedIn page</a> and your <a href="https://join.com/companies/usetodayio/16800187-founding-account-executive-deutschland" target="_blank" rel="noopener">Founding Account Executive posting</a>. The product sits behind your login, so I have not used it. Every quote is word for word, and the German ones are in German.</p>
+
+  <div class="proof-body">
+
+    <h2 id="surfaces">1. What each page says TODAY is</h2>
+
+    <p>Congratulations on the seed round. Reading your pages in order, the product changes name nearly every time. This is what each one says, in its own words.</p>
+
+    <div class="proof-table-wrap">
+    <table class="proof-table">
+      <thead>
+        <tr><th>Where</th><th>What it says TODAY is</th><th>What it leads with</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><a href="https://www.usetoday.io/" target="_blank" rel="noopener">Homepage</a></td><td>"More revenue per advisor through individual AI coaching"</td><td>Coaching. Simulations and documentation come second.</td></tr>
+        <tr><td><a href="https://www.usetoday.io/de" target="_blank" rel="noopener">Homepage, German</a></td><td>"Mehr Umsatz pro Berater durch individuelles KI-Coaching"</td><td>Coaching. The Danish, Norwegian and Portuguese homepages carry the same line.</td></tr>
+        <tr><td><a href="https://www.usetoday.io/assistant" target="_blank" rel="noopener">Assistant page</a></td><td>"AI Assistant for Financial Sales." Headline: "Lead the conversation. The follow-up work is already done."</td><td>The meeting write-up, the client email and the system update.</td></tr>
+        <tr><td><a href="https://www.usetoday.io/simulations" target="_blank" rel="noopener">Simulations page</a></td><td>"AI training simulations, for financial advice"</td><td>Practice conversations with AI customers.</td></tr>
+        <tr><td><a href="https://www.usetoday.io/pricing" target="_blank" rel="noopener">Pricing page</a></td><td>Pro: "For advisors who want to get rid of paperwork after every meeting." Performance: "For teams that scale top performance with coaching."</td><td>Paperwork on one plan, coaching on the other.</td></tr>
+        <tr><td><a href="https://www.usetoday.io/about-us" target="_blank" rel="noopener">About page</a></td><td>"AI agents empowering advisors"</td><td>Agents, and the claim that TODAY is the only AI tool that measurably helps advisors reach 10% higher revenues.</td></tr>
+        <tr><td><a href="https://www.usetoday.io/blog/today-secures-2-8m-seed-funding/" target="_blank" rel="noopener">Seed announcement, English</a></td><td>"The AI Sales Operating System for financial and insurance advisors." Headline: "Agentic AI Platform ... with compliant agents."</td><td>A Sales Operating System made of agents.</td></tr>
+        <tr><td><a href="https://www.usetoday.io/de/blog/today-secures-2-8m-seed-funding/" target="_blank" rel="noopener">Seed announcement, German</a></td><td>First sentence: "die KI-Plattform für Finanz- und Versicherungsberater." Later: "Ihr Betriebssystem für Finanzvertrieb."</td><td>A platform in the first sentence and an operating system further down.</td></tr>
+        <tr><td><a href="https://www.linkedin.com/company/usetoday/" target="_blank" rel="noopener">LinkedIn page</a></td><td>Tagline: "The AI Platform for Financial Advisors." Overview: "the AI Sales Assistant for Financial and insurance Advice."</td><td>A platform in the tagline and an assistant in the overview.</td></tr>
+        <tr><td><a href="https://join.com/companies/usetodayio/16800187-founding-account-executive-deutschland" target="_blank" rel="noopener">Account Executive posting</a></td><td>"TODAY baut die agentische Vertriebsplattform für Finanzberatung."</td><td>An agentic sales platform.</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <p>That is coaching, an assistant, a platform, a Sales Operating System, agents and an agentic sales platform. They may all be true at once. A reader who sees two of them in one visit cannot tell.</p>
+
+    <p>The words that carry your investor story appear in the places buyers rarely start. "Operating System," "Sales OS" and "agentic" appear nowhere on the English homepage or on the Assistant, Simulations and Pricing pages, and "Betriebssystem" does not appear on the German homepage. The About page says "AI agents" once. The announcement and the job posting carry that language.</p>
+
+    <p>Your numbers hold up better than your names. "3,500" advisors reads the same on the homepage, the Assistant page, the Pricing page and the announcement, and "10%" more revenue reads the same on the homepage, the Assistant page, the About page and the announcement. One figure stands alone: the About page's "Designed to make advisors 30% more effective" is not explained anywhere else. Within the announcement itself, one paragraph says advisors "save on average 5 hours per week" and the boilerplate at the bottom says "up to 5 hours per week." Pick one.</p>
+
+    <h2 id="announcement">2. Why a buyer reads both</h2>
+
+    <p>Every page I opened on usetoday.io, including the homepage, the About page and the use-case pages, carries a purple bar at the top that links to the announcement. A buyer who clicks it moves from the homepage's coaching line to the announcement's Sales Operating System in one step.</p>
+
+    <img class="proof-img" src="/assets/images/case-studies/today-ai/today-homepage.jpg" alt="TODAY's homepage above the fold" loading="lazy" />
+    <p class="proof-cap">Your homepage on October 14, 2026. The bar at the top links to the seed announcement. The headline underneath says individual AI coaching.</p>
+
+    <img class="proof-img" src="/assets/images/case-studies/today-ai/today-press-release.jpg" alt="TODAY's seed announcement above the fold" loading="lazy" />
+    <p class="proof-cap">The page that bar opens, the same day. The headline says Agentic AI Platform with compliant agents, and the first sentence says AI Sales Operating System.</p>
+
+    <img class="proof-img" src="/assets/images/case-studies/today-ai/today-assistant.jpg" alt="TODAY's Assistant page above the fold" loading="lazy" />
+    <p class="proof-cap">The Assistant page, which your Solutions menu links to first. It describes the write-up and follow-up work, and it uses neither word from the announcement.</p>
+
+    <p>Putting investor language in a funding announcement is normal. It becomes a problem when it is the only place the language exists, because the buyer then has two versions of the company and no sentence that joins them. The announcement says the funding is for expanding in Germany, Austria and Switzerland. Advisory groups there will compare vendors, and they need one sentence they can repeat to their head of sales.</p>
+
+    <h2 id="usecases">3. The four empty pages</h2>
+
+    <p>Your <a href="https://www.usetoday.io/sitemap.xml" target="_blank" rel="noopener">sitemap</a> lists four use-case pages: <a href="https://www.usetoday.io/use-cases/financial-services" target="_blank" rel="noopener">financial services</a>, <a href="https://www.usetoday.io/use-cases/brokers-agents" target="_blank" rel="noopener">brokers and agents</a>, <a href="https://www.usetoday.io/use-cases/insurer" target="_blank" rel="noopener">insurers</a> and <a href="https://www.usetoday.io/use-cases/banks" target="_blank" rel="noopener">banks</a>. Each one has a title, a one-line description such as "TODAY for banks," a "Schedule a demo" link in the footer and nothing else. The German and Danish versions are the same. Your Solutions menu links only to the Assistant and Simulations pages, so a visitor reaches these four from a search result or a shared link.</p>
+
+    <img class="proof-img" src="/assets/images/case-studies/today-ai/today-use-case-banks.jpg" alt="TODAY's banks use-case page, with a title and one line" loading="lazy" />
+    <p class="proof-cap">The banks use-case page on October 14, 2026, the whole page between the menu and the footer.</p>
+
+    <img class="proof-img" src="/assets/images/case-studies/today-ai/today-solutions-menu.jpg" alt="TODAY's Solutions menu, listing the Assistant and Simulations" loading="lazy" />
+    <p class="proof-cap">The Solutions menu lists two items, the Assistant and Simulations. The use-case pages are not in it.</p>
+
+    <p>These are the pages where a head of sales at an insurer, a broker group or a bank checks that TODAY is built for their kind of firm. You have two options. Fill each one with the description below and one customer story, or take them out of the sitemap until they are ready. </p>
+
+    <h2 id="customers">4. Your customers describe three products too</h2>
+
+    <p>Three customer quotes sit on your homepage. One advisor credits <a href="https://www.usetoday.io/" target="_blank" rel="noopener">revenue and admin time</a>. A second credits the simulations, and the <a href="https://www.usetoday.io/success-stories/koenigswege/" target="_blank" rel="noopener">Königswege story</a> puts a number on it: 80 hours of onboarding effort saved a month. A third credits the coaching for helping lead a team without micro-management.</p>
+
+    <p>That is a useful finding for your positioning. Different buyers arrive for different features, so the homepage cannot lead with only one of them. The first sentence has to name the job all three have in common, which is what happens around every client meeting. Then each feature gets its own page for the buyer who came for it, and the use-case pages are the natural place for that.</p>
+
+    <h2 id="description">5. The description I'd test</h2>
+
+    <p>Start from what three of your own surfaces already agree on. The Assistant page, the Pro and Performance plans, and the LinkedIn overview all describe a product that writes up the meeting and coaches the advisor. Simulations and <a href="https://www.usetoday.io/" target="_blank" rel="noopener">TODAY Voice</a>, the phone assistant on your homepage, are two more things the same platform does.</p>
+
+    <h3>One description for every surface</h3>
+
+    <p class="proof-quote">For insurers, brokers and banks that sell advice through advisors, TODAY is the AI assistant that writes up every client meeting, updates the client record and coaches the advisor on the next one. Unlike a tool that stops at the notes, TODAY also trains new advisors with AI client simulations, so the same product that gives the hours back also raises revenue per advisor.</p>
+
+    <p>What each part is doing, and where it comes from:</p>
+
+    <dl class="proof-map">
+      <div><dt>Who it's for</dt><dd>insurers, brokers and banks that sell advice through advisors, the firm types on your use-case pages and in your homepage FAQ</dd></div>
+      <div><dt>The category</dt><dd>an AI assistant, the word your Assistant page title and your LinkedIn overview already use</dd></div>
+      <div><dt>What it does</dt><dd>writes up every client meeting, updates the client record and coaches the advisor, the three jobs on your Assistant page</dd></div>
+      <div><dt>The alternative</dt><dd>a tool that stops at the notes. This is the line I would check first, because I did not research your competitors for this teardown</dd></div>
+      <div><dt>The difference</dt><dd>the same product trains new advisors with AI client simulations</dd></div>
+      <div><dt>The payoff</dt><dd>hours back and up to 10% more revenue per advisor, both from your announcement</dd></div>
+    </dl>
+
+    <h3>Where the Sales Operating System goes</h3>
+
+    <p>If Sales Operating System is the name you want to own, give it one job: the name for the whole platform. Put it in the second sentence, after the plain description. For example: "The Assistant, Simulations and TODAY Voice together make up the TODAY Sales Operating System." A reader then meets the name after they know what it covers, and each of your three product names ends up under a single roof.</p>
+
+    <p>If you would rather keep "agentic" and "Operating System" as the roadmap story for investors, that is a legitimate choice too. In that case the announcement boilerplate should lead with the plain description as well, so the two documents describe one product.</p>
+
+    <h3>One line each for the four use-case pages</h3>
+
+    <p>Drafts to check against what the product does:</p>
+
+    <ul>
+      <li><strong>Insurers:</strong> every agent gets coaching along your own advisory logic, and every meeting leaves compliant documentation behind.</li>
+      <li><strong>Brokers and agents:</strong> the meeting notes, the client email and the system update are ready seconds after the meeting ends.</li>
+      <li><strong>Banks:</strong> your advisors practise the difficult conversation with an AI customer before it counts, and each advisor's results sit in one dashboard.</li>
+      <li><strong>Financial services:</strong> a new advisor trains with realistic AI clients instead of waiting for a mentor's free hour.</li>
+    </ul>
+
+    <h2 id="headlines">6. Three headlines to test</h2>
+
+    <p>Each one is a plain statement of what TODAY does for a named buyer, or a question a buyer would ask. I would change only the headline and the line under it and leave the rest of the page as it is.</p>
+
+    <h3>The one I'd run first</h3>
+
+    <div class="proof-headline">
+      <strong>TODAY writes up every client meeting and coaches your advisor on the next one.</strong>
+      <span>For insurers, brokers and banks in Germany, Austria and Switzerland. Advisors using TODAY see up to 10% more revenue and save up to 5 hours a week on admin.</span>
+    </div>
+
+    <h3>Two alternates worth testing against it</h3>
+
+    <div class="proof-alt">
+      <strong>How many hours a week do your advisors spend on meeting notes?</strong>
+      <span>TODAY writes them, updates the client record and coaches the advisor, so that time goes back to clients.</span>
+    </div>
+
+    <div class="proof-alt">
+      <strong>Pilot TODAY with one team in 90 minutes.</strong>
+      <span>Your <a href="https://www.usetoday.io/" target="_blank" rel="noopener">homepage FAQ</a> says you onboard pilot customers in 90 minutes per team and 3 minutes per advisor. That is the sentence a head of sales takes to a buying committee.</span>
+    </div>
+
+    <p>"Individual AI coaching" and "Sales Operating System" describe the product from the inside. Neither tells a head of sales what changes for an advisor after a meeting.</p>
+
+    <h2 id="validate">7. How to know whether any of this is right</h2>
+
+    <p>This is built from the outside. I don't have your traffic, your demo requests or your win history, so I can't say how the current homepage converts, and I won't pretend the headline I'd run first is the one that wins. Treat these as hypotheses.</p>
+
+    <h3>Show the first screen to heads of sales for five seconds</h3>
+    <p>Pick eight or ten people who run sales at an insurer, a broker group or a bank and who have never seen TODAY. Show the first screen for five seconds, take it away, and ask what the product does and who it is for. Run the current homepage and each new headline on different people. If they cannot answer, the headline is not working, and that is a cheaper answer than a month of traffic.</p>
+
+    <h3>Listen to how customers describe TODAY to a peer</h3>
+    <p>The best description is usually transcribed rather than written. Ask five customers to explain TODAY to a colleague at another firm, and note the first job they name and the phrase they use for it. Your three published quotes already suggest they will say three different things. The words that come up most often belong in the sentence.</p>
+
+    <h3>Run it as an A/B test on the homepage</h3>
+    <p>Change only the headline and the line under it. Measure clicks on "Try for free" and "Book a demo" per visitor, and read the quality of the demos as well as the count, because the people who book a demo first set what you hear about the product. If your traffic is too low for a result in a few weeks, use the five-second test and the customer calls first.</p>
+
+    <h3>Give the new Account Executive the same sentence</h3>
+    <p>Your posting asks the hire to "Agentische KI glaubwürdig erklären, ohne Buzzwords und ohne zu überverkaufen" (explain agentic AI credibly, without buzzwords and without overselling). Whoever takes the role will explain the product in meetings, and one agreed sentence makes their first week shorter. The website has to do the same job for every buyer who never books a meeting.</p>
+
+    <h2 id="limits">What I couldn't check</h2>
+
+    <p>The product, the onboarding and the demo flow sit behind your login, and what I know of the product comes from your public pages. I did not research competitors for this teardown, so the "alternative" line in the description is a hypothesis to check against your lost deals. I could not see your traffic, your sales calls or which pages bring in demo requests. The LinkedIn page is a public page, and the German, Danish, Norwegian and Portuguese checks covered the homepage titles and descriptions, the German announcement, the German About page and the German and Danish banks page, not every page in every language.</p>
+
+  </div>
+
+  <div class="button-row" style="margin-top: 40px;">
+    <a href="/work/today-ai/" class="button button-primary">Back to the pitch</a>
+    <a href="https://calendar.app.google/UQFiPwiBoCjA5CXf9" target="_blank" rel="noopener" class="button button-secondary">Book a call</a>
+    <a href="mailto:james@marketinginaction.xyz?subject=TODAY%20positioning" class="button button-secondary">Let's Talk</a>
+  </div>
+</div>
+
+<script src="/script.js?v=11"></script>
+<script>
+(function () {
+  var bar = document.getElementById('proofProgressBar');
+  function updateProgress() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.proof-toc a'));
+  var sections = tocLinks.map(function (a) {
+    return document.getElementById(a.getAttribute('href').slice(1));
+  });
+  function updateActiveToc() {
+    var current = null;
+    sections.forEach(function (sec, i) {
+      if (sec && sec.getBoundingClientRect().top <= 140) current = i;
+    });
+    tocLinks.forEach(function (a, i) {
+      a.classList.toggle('is-active', i === current);
+    });
+  }
+  window.addEventListener('scroll', updateActiveToc, { passive: true });
+  updateActiveToc();
+})();
+</script>
+</body>
+</html>

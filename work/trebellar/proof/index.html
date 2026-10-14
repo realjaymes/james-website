@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WKSZ7DQC');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A Go-to-Market Teardown for Trebellar — James Praise</title>
+<meta name="description" content="What a corporate real estate buyer can and cannot find on trebellar.com before booking a demo, what an AI assistant says when buyers ask, and three pages to publish first." />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+<link rel="canonical" href="https://jamespraise.xyz/work/trebellar/proof/" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=23" />
+<style>
+  .proof-wrap { max-width: 720px; margin: 0 auto; padding: 100px 0 80px; }
+  .proof-eyebrow { color: var(--color-purple); font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; font-size: 13px; margin-bottom: 10px; }
+  .proof-credit { display: flex; align-items: center; gap: 10px; margin: 20px 0 40px; }
+  .proof-credit img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+  .proof-credit span { color: var(--text-muted); font-size: 14px; }
+  .proof-credit strong { color: var(--text-primary); }
+  .proof-note { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 8px; padding: 16px 20px; font-size: 14px; color: var(--text-muted); margin-bottom: 40px; line-height: 1.7; }
+  .proof-body p { line-height: 1.7; }
+  .proof-body h2 { margin-top: 56px; margin-bottom: 12px; }
+  .proof-body h3 { margin-top: 32px; margin-bottom: 8px; font-size: 18px; }
+  .proof-body strong { font-weight: 700; }
+  .proof-body ul { line-height: 1.8; padding-left: 20px; }
+  .proof-img { border-radius: 8px; border: 1px solid rgba(0,0,0,0.08); margin: 20px 0 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.06); width: 100%; }
+  .proof-cap { font-size: 13px; color: var(--text-muted); line-height: 1.5; margin: 0 0 28px; }
+  .proof-back { display: inline-block; margin-bottom: 24px; font-size: 14px; }
+  .section-label { font-size: 13px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-quote { border-left: 3px solid var(--color-purple); padding: 4px 0 4px 22px; margin: 28px 0; font-size: 19px; font-weight: 600; line-height: 1.5; color: var(--text-primary); }
+  .proof-headline { background: rgba(113,132,241,0.08); border: 1px solid var(--color-purple); border-radius: 10px; padding: 22px 24px; margin: 22px 0; }
+  .proof-headline strong { display: block; font-size: 23px; line-height: 1.3; color: var(--text-primary); margin-bottom: 8px; }
+  .proof-headline span { font-size: 15px; color: var(--text-muted); line-height: 1.6; }
+  .proof-alt { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 10px; padding: 20px 22px; margin: 14px 0; }
+  .proof-alt strong { display: block; font-size: 19px; line-height: 1.3; color: var(--text-primary); margin-bottom: 6px; }
+  .proof-alt span { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+  .proof-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 13px; }
+  .proof-table th, .proof-table td { border: 1px solid rgba(28,20,34,0.12); padding: 10px 12px; text-align: left; vertical-align: top; line-height: 1.5; }
+  .proof-table th { background: var(--bg-surface); font-weight: 800; font-size: 12px; }
+  .proof-table td:first-child { font-weight: 700; white-space: nowrap; }
+  .proof-map { border-top: 1px solid rgba(28,20,34,0.1); margin: 22px 0; }
+  .proof-map div { display: grid; grid-template-columns: 150px 1fr; gap: 16px; padding: 11px 0; border-bottom: 1px solid rgba(28,20,34,0.1); font-size: 14px; line-height: 1.6; }
+  .proof-map dt { font-weight: 700; color: var(--text-muted); }
+  .proof-table.wrap-first td:first-child { white-space: normal; }
+  .proof-table-scroll { overflow-x: auto; }
+  .proof-progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(28,20,34,0.08); z-index: 200; }
+  .proof-progress-bar { height: 100%; width: 0%; background: var(--color-purple); transition: width 0.1s linear; }
+  .proof-toc { position: fixed; top: 140px; right: 32px; width: 200px; font-size: 13px; }
+  .proof-toc-group { margin-bottom: 20px; }
+  .proof-toc-label { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-toc a { display: block; padding: 5px 0 5px 12px; border-left: 2px solid rgba(28,20,34,0.1); color: var(--text-muted); text-decoration: none; line-height: 1.4; }
+  .proof-toc a:hover { color: var(--color-purple); border-left-color: var(--color-purple); }
+  .proof-toc a.is-active { color: var(--color-purple); border-left-color: var(--color-purple); font-weight: 700; }
+  @media (max-width: 1400px) { .proof-toc { display: none; } }
+  @media (max-width: 640px) { .proof-map div { grid-template-columns: 1fr; gap: 2px; } .proof-table { font-size: 12px; } }
+</style>
+</head>
+<body class="proof-page">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKSZ7DQC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="proof-progress-track"><div class="proof-progress-bar" id="proofProgressBar"></div></div>
+
+<a href="/work/trebellar/" class="pitch-exit" aria-label="Back to the Trebellar pitch">
+  <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+</a>
+
+<nav class="proof-toc" aria-label="Section navigation">
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The teardown</p>
+    <a href="#works">What already works</a>
+    <a href="#gaps">What a buyer can't find</a>
+    <a href="#assistant">What an assistant says</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">What I'd publish first</p>
+    <a href="#build">The three pages</a>
+    <a href="#comparison">A comparison page</a>
+    <a href="#pricing">How pricing works</a>
+    <a href="#stories">Customer stories</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">Before you act on it</p>
+    <a href="#check">How to check it</a>
+    <a href="#limits">What I couldn't check</a>
+  </div>
+</nav>
+
+<div class="container proof-wrap">
+  <a class="proof-back" href="/work/trebellar/">&larr; Back to the Trebellar pitch</a>
+
+  <p class="proof-eyebrow">A go-to-market teardown for Trebellar</p>
+  <h1>A corporate real estate buyer can't compare Trebellar, price it or read a case study before booking a demo.</h1>
+
+  <div class="proof-credit">
+    <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+    <span><strong>James Praise</strong> &middot; Positioning, Messaging and Go-to-Market</span>
+  </div>
+
+  <p class="proof-note">I wrote this from Trebellar's public pages on October 14, 2026: <a href="https://trebellar.com/" target="_blank" rel="noopener">the homepage</a>, <a href="https://trebellar.com/blog/" target="_blank" rel="noopener">the blog</a>, <a href="https://trebellar.com/about/" target="_blank" rel="noopener">the About page</a>, <a href="https://trebellar.com/security/" target="_blank" rel="noopener">the security page</a>, <a href="https://trebellar.com/demo/" target="_blank" rel="noopener">the demo page</a>, <a href="https://trebellar.com/sitemap.xml" target="_blank" rel="noopener">the sitemap</a> and <a href="https://jobs.ashbyhq.com/trebellar" target="_blank" rel="noopener">the Ashby jobs board</a>. I have not seen the product, a demo or a sales call, so everything here describes what a buyer sees before talking to anyone at Trebellar.</p>
+
+  <div class="proof-body">
+
+    <h2 id="works">1. What already works</h2>
+
+    <p>The three things below are done well, and I would leave them alone.</p>
+
+    <ul>
+      <li>The first screen of the <a href="https://trebellar.com/" target="_blank" rel="noopener">homepage</a> names the job. Trebellar unifies a team's corporate real estate data and puts AI agents to work planning, analyzing and executing.</li>
+      <li>The <a href="https://trebellar.com/security/" target="_blank" rel="noopener">security page</a> answers a buyer's information technology (IT) review in advance. It states System and Organization Controls (SOC) 2 Type II, certified since July 2024, and gives typical setup times of two to three weeks for a manual comma-separated values (CSV) upload and two to four weeks for a direct warehouse connection.</li>
+      <li>The <a href="https://trebellar.com/demo/" target="_blank" rel="noopener">demo page</a> promises a reply within 20 minutes on business days, and the site publishes an <a href="https://trebellar.com/llms.txt" target="_blank" rel="noopener">llms.txt file</a> written for AI assistants.</li>
+    </ul>
+
+    <img class="proof-img" src="/assets/images/case-studies/trebellar/trebellar-homepage.jpg" alt="Trebellar's homepage first screen with the navigation, the Series A video and four customer logos" loading="lazy" />
+    <p class="proof-cap">trebellar.com's first screen on October 14, 2026. The navigation holds Platform, About, Blog, Log In and Request Demo. The four logos under the video are Meta, Uber, Merck and Cohesity.</p>
+
+    <h2 id="gaps">2. What a buyer can't find</h2>
+
+    <p>The <a href="https://trebellar.com/sitemap.xml" target="_blank" rel="noopener">sitemap</a> lists 21 pages. Seven are blog posts. The rest are the homepage, six product and platform pages, the blog index, About, Security, Careers, the demo form and two legal pages. None is a comparison page, a pricing page or a customer story, and trebellar.com/pricing returns a not-found page.</p>
+
+    <h3>Nobody on the page says how Trebellar differs from the alternatives</h3>
+    <p>The seven posts all argue for Trebellar's approach, and the three co-founders wrote every one. I searched them for Eptura, Serraview, VergeSense, MRI, Archibus, Visual Lease, Mapiq, JLL, CBRE, Workplacer and Planon and found none. A buyer who already has two or three platforms on a list learns nothing from the site about how Trebellar compares.</p>
+
+    <div class="proof-table-scroll"><table class="proof-table">
+      <thead>
+        <tr><th>Date</th><th>Post</th><th>Written by</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Jul 14</td><td><a href="https://trebellar.com/blog/engineering-principles/" target="_blank" rel="noopener">Building Trebellar: the engineering principles behind a governed AI platform</a></td><td>David Garcia Quintas</td></tr>
+        <tr><td>Jul 28</td><td><a href="https://trebellar.com/blog/lease-abstract-to-decision/" target="_blank" rel="noopener">From lease abstract to decision: how governed data compounds</a></td><td>Diego Ferreiro Val</td></tr>
+        <tr><td>Aug 11</td><td><a href="https://trebellar.com/blog/introducing-explorer/" target="_blank" rel="noopener">Introducing Explorer: score any location against your own portfolio</a></td><td>David Garcia Quintas</td></tr>
+        <tr><td>Aug 20</td><td><a href="https://trebellar.com/blog/five-questions-portfolio-review/" target="_blank" rel="noopener">Five questions every portfolio review should answer in under an hour</a></td><td>Adam Sewall</td></tr>
+        <tr><td>Aug 28</td><td><a href="https://trebellar.com/blog/agents-alongside-your-team/" target="_blank" rel="noopener">Agents that work alongside your team, not instead of it</a></td><td>David Garcia Quintas</td></tr>
+        <tr><td>Sep 4</td><td><a href="https://trebellar.com/blog/ontology-not-another-dashboard/" target="_blank" rel="noopener">Why corporate real estate needs an ontology, not another dashboard</a></td><td>Diego Ferreiro Val</td></tr>
+        <tr><td>Sep 24</td><td><a href="https://trebellar.com/blog/trebellar-series-a/" target="_blank" rel="noopener">We raised $18M to build the AI-native platform for corporate real estate</a></td><td>Diego Ferreiro Val</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3>Nobody on the page says what it costs or what a first project involves</h3>
+    <p>The navigation and footer have no pricing page. The page I would add has no price list. It explains what drives the cost and what a pilot involves, which a buyer needs before spending a meeting on it. Eptura, a platform the assistant names for the same questions below, puts Pricing in its top navigation, and that link opens a <a href="https://eptura.com/pricing/" target="_blank" rel="noopener">plans page</a> that lists Serraview by Eptura.</p>
+
+    <h3>Nobody on the page shows what a customer did</h3>
+    <p>The homepage shows four logos, and the <a href="https://trebellar.com/blog/trebellar-series-a/" target="_blank" rel="noopener">Series A post</a> thanks Meta, Uber, Merck, Cohesity "and others". The homepage carousel holds four quotes credited to Andrew P., Jeremy K., Mark G. and Laura D. The <a href="https://trebellar.com/platform/" target="_blank" rel="noopener">platform page</a> and the <a href="https://trebellar.com/platform/agents/" target="_blank" rel="noopener">agents page</a> each carry one quote credited to a name and a title, a VP of Global Workplace Services and a Global Head of Places. No quote names a company, so a buyer cannot tell whether any of them works at one of the four logo companies, and no page says what any customer did with Trebellar or what changed.</p>
+
+    <h3>No open role owns these pages</h3>
+    <p>The <a href="https://jobs.ashbyhq.com/trebellar" target="_blank" rel="noopener">Ashby board</a> lists five roles: a Forward Deployed Engineer, a Senior Software Engineer, a Customer Success Manager, a Forward Deployed Expert and a Sales Engineer. Three sit under Sales &amp; Marketing, and none of the five is a marketing role. The <a href="https://trebellar.com/careers/" target="_blank" rel="noopener">careers page</a> carries a search description that says Trebellar is hiring marketers, and the board has no marketing posting. I read all three Sales &amp; Marketing descriptions. The <a href="https://jobs.ashbyhq.com/trebellar/e07442f9-328c-4361-ad32-d0778bde2735" target="_blank" rel="noopener">Sales Engineer</a> owns the demo environment, proof of concept, data readiness audit and security reviews. The <a href="https://jobs.ashbyhq.com/trebellar/bdd086a5-e898-41b5-b729-123c626905ec" target="_blank" rel="noopener">Customer Success Manager</a> works with accounts after the contract is signed. The <a href="https://jobs.ashbyhq.com/trebellar/b9108c2f-3b9a-4f38-a840-79b202511476" target="_blank" rel="noopener">Forward Deployed Expert</a> works with customers after implementation. All three start at the demo or later, and none writes the pages a buyer reads before it.</p>
+
+    <img class="proof-img" src="/assets/images/case-studies/trebellar/trebellar-jobs-board.jpg" alt="Trebellar's Ashby jobs board listing five open positions" loading="lazy" />
+    <p class="proof-cap">Trebellar's Ashby board on October 14, 2026: two engineering roles and three under Sales &amp; Marketing, with no marketing posting.</p>
+
+    <h2 id="assistant">3. What an AI assistant says when a buyer asks</h2>
+
+    <p>On October 14, 2026 I put three questions a corporate real estate buyer would ask to an AI assistant with live web search. Trebellar was named in none of the three answers.</p>
+
+    <div class="proof-table-scroll"><table class="proof-table wrap-first">
+      <thead>
+        <tr><th>Question</th><th>Platforms the answer named</th><th>Trebellar named</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>What is the best AI platform for corporate real estate portfolio management and lease optimization for enterprise workplace teams?</td><td>MRI Software (MRI Prolease), Eptura (Serraview and Archibus), Workplacer.AI</td><td>No</td></tr>
+        <tr><td>What are the best alternatives to Trebellar for corporate real estate portfolio planning and workplace analytics?</td><td>VergeSense Meridian, Eptura Serraview, Eptura Envision</td><td>No</td></tr>
+        <tr><td>How do I decide which offices to consolidate using lease, headcount and utilization data across a corporate real estate portfolio?</td><td>JLL (including its Azara platform), Visual Lease, Mapiq</td><td>No</td></tr>
+      </tbody>
+    </table></div>
+
+    <p>The pages the answers cited are the shortlist's own: <a href="https://eptura.com/our-platform/serraview-by-eptura/" target="_blank" rel="noopener">Eptura Serraview</a>, <a href="https://eptura.com/our-platform/envision/" target="_blank" rel="noopener">Eptura Envision</a>, <a href="https://www.vergesense.com/meridian" target="_blank" rel="noopener">VergeSense Meridian</a>, <a href="https://www.mapiq.com/features/workplace-analytics" target="_blank" rel="noopener">Mapiq's workplace analytics page</a> and <a href="https://www.workplacer.ai/" target="_blank" rel="noopener">Workplacer</a>, plus a <a href="https://www.jll.com/en-us/guides/6-steps-to-get-started-with-portfolio-optimization" target="_blank" rel="noopener">JLL guide to portfolio optimization</a>. The third answer also cited a <a href="https://www.jll.com/en-sea/client-stories/lenovo-portfolio-transformation-success" target="_blank" rel="noopener">JLL client story about Lenovo</a>, which shows what an assistant reaches for when it wants to back an answer with a real customer.</p>
+
+    <p>Two readings of this matter. The first is that the brand is new. Its earliest blog post is dated July 14, so an absence from the answers is a starting position and not a verdict. The second is that Workplacer, an AI-native platform the assistant called promising, was named in the first answer. A new name can get into these answers, and it gets there with pages that answer the question being asked.</p>
+
+    <h2 id="build">4. The three pages I'd publish first</h2>
+
+    <p>The order follows what a buyer asks in turn: who else is on the shortlist, what it costs, and who has already done it. Each page is written for the person who has to defend the purchase to a chief financial officer and a head of IT. Everything below is an outline. The facts I could verify are filled in with their source, and everything else is marked for Trebellar to supply.</p>
+
+    <h3 id="comparison">A comparison page</h3>
+
+    <p>One hub page, with a short page per platform added later. The opening paragraph would read:</p>
+
+    <p class="proof-quote">If you are choosing a platform for your corporate real estate portfolio, you are probably weighing Trebellar against a planning suite such as Eptura Serraview and an occupancy analytics tool such as VergeSense Meridian. This page sets out how each describes itself, what to ask every vendor, and where Trebellar is a worse fit.</p>
+
+    <p>Headlines to test, in the order I'd try them:</p>
+
+    <div class="proof-headline">
+      <strong>Trebellar compared with Eptura Serraview and VergeSense Meridian</strong>
+      <span>The version that matches how a buyer types the question.</span>
+    </div>
+    <div class="proof-alt">
+      <strong>How to choose a corporate real estate platform: six things to ask every vendor</strong>
+      <span>A buying guide that ranks for the question before the buyer has named a vendor.</span>
+    </div>
+    <div class="proof-alt">
+      <strong>Trebellar and the other platforms on your shortlist</strong>
+      <span>The plainest version, with no vendor names in the headline.</span>
+    </div>
+
+    <p>The body is a table of the six things a buyer scores. The Trebellar column below uses only what Trebellar already says in public:</p>
+
+    <div class="proof-table-scroll"><table class="proof-table wrap-first">
+      <thead>
+        <tr><th>What the buyer is scoring</th><th>What Trebellar says today</th><th>Still to supply</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Where an answer comes from</td><td>Every number an agent cites traces back to the customer's own unified data (<a href="https://trebellar.com/platform/agents/" target="_blank" rel="noopener">agents page</a>).</td><td>A worked example with a real lease question.</td></tr>
+        <tr><td>How data gets in, and how long it takes</td><td>CSV upload in two to three weeks, warehouse connection in two to four (<a href="https://trebellar.com/security/" target="_blank" rel="noopener">security page</a>).</td><td>What the first two weeks contain.</td></tr>
+        <tr><td>Security and AI data handling</td><td>SOC 2 Type II since July 2024, and personal identifiers removed before data reaches a large language model (<a href="https://trebellar.com/security/" target="_blank" rel="noopener">security page</a>).</td><td>The report request process.</td></tr>
+        <tr><td>Fit with the AI tools a team already uses</td><td>Connection through Model Context Protocol (MCP) (<a href="https://trebellar.com/platform/" target="_blank" rel="noopener">platform page</a>).</td><td>One named tool and what it does with the data.</td></tr>
+        <tr><td>What it replaces</td><td>Weeks of reassembling the picture by hand at the start of every major decision (<a href="https://trebellar.com/blog/trebellar-series-a/" target="_blank" rel="noopener">Series A post</a>).</td><td>The time a customer saved, with their permission.</td></tr>
+        <tr><td>Price basis and first project</td><td>Not published.</td><td>See the pricing page below.</td></tr>
+      </tbody>
+    </table></div>
+
+    <p>Beside that table, the page sets out the shortlist using each vendor's own description. <a href="https://eptura.com/our-platform/serraview-by-eptura/" target="_blank" rel="noopener">Serraview</a> describes right-sizing a portfolio with real-time workplace insights. <a href="https://eptura.com/our-platform/envision/" target="_blank" rel="noopener">Envision</a> describes dashboards that bring workplace and real estate data into a single view. <a href="https://www.vergesense.com/meridian" target="_blank" rel="noopener">Meridian</a> describes turning real-time occupancy signals into forecasts. The page would keep those descriptions in each vendor's own words and add one line on what Trebellar does differently, which only your team can confirm. I have not written any claim about a competitor's weakness, because I can't verify one from outside.</p>
+
+    <h3 id="pricing">A page on how pricing works</h3>
+
+    <p>No number on it. It answers the five things a buyer needs before a second meeting:</p>
+
+    <ul>
+      <li><strong>What drives the cost.</strong> Number of sites, users, data sources or agents. Trebellar to supply.</li>
+      <li><strong>What a first project includes.</strong> The data the buyer sends, the weeks involved and what they have at the end. The setup times on the security page are the starting point.</li>
+      <li><strong>Who has to be involved.</strong> Workplace, finance, IT and security, and the hours each is asked for.</li>
+      <li><strong>What is not included.</strong> Stated plainly, so the buyer does not find it in the contract.</li>
+      <li><strong>What happens next.</strong> The demo, then a proof of concept, then a contract, with the usual length of each.</li>
+    </ul>
+
+    <p>The Sales Engineer job description already names the proof of concept and the data readiness audit as parts of the sales process, so most of this page describes steps your team has defined and a buyer has not been shown.</p>
+
+    <h3 id="stories">A customer story for each logo that will go on record</h3>
+
+    <p>One template, repeated. Each story carries a named person with a title and company, the data that was connected, the decision it supported and one number the customer approved.</p>
+
+    <dl class="proof-map">
+      <div><dt>The decision</dt><dd>The portfolio question the team had to answer and by when.</dd></div>
+      <div><dt>The starting point</dt><dd>Where the lease, space and headcount data sat before Trebellar.</dd></div>
+      <div><dt>The first project</dt><dd>What was connected first and how long it took.</dd></div>
+      <div><dt>What changed</dt><dd>The decision made, and the time or cost involved, with a number the customer has approved.</dd></div>
+      <div><dt>The quote</dt><dd>One sentence from a named person at the named company.</dd></div>
+    </dl>
+
+    <p>I would start with whichever of Meta, Uber, Merck and Cohesity will go on record. If none will yet, I would start with the people already quoted on the site, add their company, title and one number each, and publish those as short stories. The homepage quote about saving $10 million for every 1% better decision is a strong claim, and a buyer will want the story behind it.</p>
+
+    <h2 id="check">5. How to know whether any of this is right</h2>
+
+    <p>I built this from the outside and I don't have your first-call data, so treat the three pages as hypotheses. Four ways to test them, in order of speed.</p>
+
+    <h3>List the questions your first calls already raise</h3>
+    <p>Ask Adam and the account executives for the questions that come up on every first call. Each repeated question is a section of one of the three pages, and it is the most reliable input available.</p>
+
+    <h3>Ask who else the buyer is evaluating, in the demo form</h3>
+    <p>The <a href="https://trebellar.com/demo/" target="_blank" rel="noopener">demo form</a> has an open field labelled "Anything we should know?". A required line asking which other platforms the buyer is weighing tells you which comparison to write first, from your own pipeline.</p>
+
+    <h3>Rerun the three questions every month</h3>
+    <p>Record which platforms are named and which pages are cited. A comparison page earns its place when Trebellar starts appearing in the answer to the alternatives question.</p>
+
+    <h3>Compare buyers who read the pages with buyers who did not</h3>
+    <p>Track demo-to-proof-of-concept conversion for visitors who viewed a comparison, pricing or customer page against those who did not. Volume is low at this stage, so read it as direction until there are enough demos to be sure.</p>
+
+    <h2 id="limits">What I couldn't check</h2>
+
+    <p>I have not seen the product, a demo or a sales call, so I can't say which of these pages would move a deal. The assistant's answers come from one run on October 14, 2026 and change from run to run, so the useful number is the one you collect monthly. I could not load MRI Software's page, so I report only that the assistant named it. I have not seen Trebellar's analytics or its demo requests, which is where the real answer to which comparison comes first is sitting.</p>
+
+  </div>
+
+  <div class="button-row" style="margin-top: 40px;">
+    <a href="/work/trebellar/" class="button button-primary">Back to the pitch</a>
+    <a href="https://calendar.app.google/UQFiPwiBoCjA5CXf9" target="_blank" rel="noopener" class="button button-secondary">Book a call</a>
+    <a href="mailto:james@marketinginaction.xyz?subject=Trebellar%20go-to-market" class="button button-secondary">Let's Talk</a>
+  </div>
+</div>
+
+<script src="/script.js?v=11"></script>
+<script>
+(function () {
+  var bar = document.getElementById('proofProgressBar');
+  function updateProgress() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.proof-toc a'));
+  var sections = tocLinks.map(function (a) {
+    return document.getElementById(a.getAttribute('href').slice(1));
+  });
+  function updateActiveToc() {
+    var current = null;
+    sections.forEach(function (sec, i) {
+      if (sec && sec.getBoundingClientRect().top <= 140) current = i;
+    });
+    tocLinks.forEach(function (a, i) {
+      a.classList.toggle('is-active', i === current);
+    });
+  }
+  window.addEventListener('scroll', updateActiveToc, { passive: true });
+  updateActiveToc();
+})();
+</script>
+</body>
+</html>
