@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WKSZ7DQC');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Klarent Proof: AI Answer Visibility Audit | James Praise</title>
+<meta name="description" content="An audit James Praise ran on 16 October 2026: what ChatGPT, Perplexity, Gemini and Google say when a quality assurance lead asks for an autonomous testing tool." />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+<link rel="canonical" href="https://jamespraise.xyz/work/klarent/proof/" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=23" />
+<style>
+  .proof-wrap { max-width: 760px; margin: 0 auto; padding: 100px 0 80px; }
+  .proof-eyebrow { color: var(--color-purple); font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; font-size: 13px; margin-bottom: 10px; }
+  .proof-credit { display: flex; align-items: center; gap: 10px; margin: 20px 0 40px; }
+  .proof-credit img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+  .proof-credit span { color: var(--text-muted); font-size: 14px; }
+  .proof-credit strong { color: var(--text-primary); }
+  .proof-note { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 8px; padding: 16px 20px; font-size: 14px; color: var(--text-muted); margin-bottom: 40px; line-height: 1.6; }
+  .proof-draft { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 12px; padding: 40px; margin-bottom: 32px; }
+  .proof-draft h2 { margin-top: 40px; margin-bottom: 12px; }
+  .proof-draft h2:first-of-type { margin-top: 8px; }
+  .proof-draft h3 { margin-top: 24px; margin-bottom: 8px; font-size: 16px; }
+  .proof-draft p { line-height: 1.7; }
+  .proof-back { display: inline-block; margin-bottom: 24px; font-size: 14px; }
+  .section-label { font-size: 13px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; margin-top: 40px; }
+  .section-label:first-child { margin-top: 0; }
+  .proof-table { width: 100%; border-collapse: collapse; margin: 16px 0 28px; font-size: 13.5px; }
+  .proof-table th, .proof-table td { text-align: left; padding: 9px 12px; border-bottom: 1px solid rgba(28,20,34,0.08); vertical-align: top; line-height: 1.5; }
+  .proof-table th { font-size: 11px; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-muted); font-weight: 800; }
+  .cell-sub { font-size: 12px; color: var(--text-muted); }
+  .proof-cards { display: grid; grid-template-columns: 1fr; gap: 12px; margin: 16px 0 28px; }
+  .proof-card { background: var(--bg-page); border: 1px solid rgba(28,20,34,0.1); border-radius: 10px; padding: 16px; }
+  .proof-card strong { display: block; font-size: 14.5px; margin-bottom: 5px; color: var(--text-primary); }
+  .proof-card span { font-size: 13.5px; color: var(--text-muted); line-height: 1.6; display: block; }
+  .proof-card span + span { margin-top: 8px; }
+  .proof-toc { position: fixed; top: 130px; right: 32px; width: 200px; font-size: 13px; }
+  .proof-toc-group { margin-bottom: 18px; }
+  .proof-toc-label { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-toc a { display: block; padding: 4px 0 4px 12px; border-left: 2px solid rgba(28,20,34,0.1); color: var(--text-muted); text-decoration: none; line-height: 1.4; }
+  .proof-toc a:hover { color: var(--color-purple); border-left-color: var(--color-purple); }
+  .proof-toc a.is-active { color: var(--color-purple); border-left-color: var(--color-purple); font-weight: 700; }
+  @media (max-width: 1400px) { .proof-toc { display: none; } }
+  .proof-progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(28,20,34,0.08); z-index: 200; }
+  .proof-progress-bar { height: 100%; width: 0%; background: var(--color-purple); transition: width 0.1s linear; }
+  .flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 16px 0 28px; }
+  .flow-step { background: var(--bg-page); border: 1px solid rgba(28,20,34,0.1); border-radius: 10px; padding: 14px; font-size: 13px; line-height: 1.5; color: var(--text-muted); }
+  .flow-step strong { display: block; color: var(--text-primary); font-size: 14px; margin-bottom: 4px; }
+  .flow-step em { display: block; font-style: normal; font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-purple); margin-bottom: 6px; }
+  .big-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 16px 0 28px; }
+  .big-stat { background: var(--bg-page); border: 1px solid rgba(28,20,34,0.1); border-radius: 10px; padding: 16px; }
+  .big-stat strong { display: block; font-size: 28px; font-weight: 900; color: var(--text-primary); line-height: 1.1; }
+  .big-stat span { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+  .table-scroll { overflow-x: auto; }
+  .bars { margin: 16px 0 12px; }
+  .bar-title { font-size: 13px; font-weight: 800; color: var(--text-primary); margin: 20px 0 8px; }
+  .bar-row { display: grid; grid-template-columns: 190px 1fr 40px; gap: 10px; align-items: center; font-size: 13.5px; margin: 6px 0; }
+  .bar-label { color: var(--text-primary); }
+  .bar-track { display: block; background: rgba(28,20,34,0.06); border-radius: 6px; height: 16px; overflow: hidden; }
+  .bar-fill { display: block; height: 100%; background: var(--color-purple); border-radius: 6px; }
+  .bar-val { text-align: right; font-weight: 800; color: var(--text-primary); }
+  .bar-row.is-zero .bar-label, .bar-row.is-zero .bar-val { color: var(--color-purple); font-weight: 900; }
+  .c-yes { color: #1f7a4d; font-weight: 700; }
+  .c-no { color: var(--text-muted); }
+  .c-na { color: var(--text-muted); font-size: 12px; }
+  .all-q td, .all-q th { padding: 7px 8px; font-size: 12.5px; }
+  @media (max-width: 720px) {
+    .flow, .big-stats { grid-template-columns: 1fr; }
+    .proof-draft { padding: 24px; }
+    .bar-row { grid-template-columns: 120px 1fr 32px; }
+  }
+</style>
+</head>
+<body class="proof-page">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKSZ7DQC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="proof-progress-track"><div class="proof-progress-bar" id="proofProgressBar"></div></div>
+<a href="/work/klarent/" class="pitch-exit" aria-label="Back to the Klarent pitch">
+  <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+</a>
+<nav class="proof-toc" aria-label="Section navigation">
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The result</p>
+    <a href="#short-version">The short version</a>
+    <a href="#workflow">How I ran it</a>
+    <a href="#by-engine">Engine by engine</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">Who wins</p>
+    <a href="#who-named">Who the answers name</a>
+    <a href="#who-cited">Who the answers cite</a>
+    <a href="#determinism">Determinism and flaky tests</a>
+    <a href="#winning-pages">The pages that win</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">Klarent's site</p>
+    <a href="#site-check">What a crawler sees</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The plan</p>
+    <a href="#fixes">Five fixes, ranked</a>
+    <a href="#rename">Rename cleanup</a>
+    <a href="#method-limits">Method and limits</a>
+    <a href="#questions">All 30 questions</a>
+  </div>
+</nav>
+<div class="container proof-wrap">
+  <a class="proof-back" href="/work/klarent/">&larr; Back to the Klarent pitch</a>
+  <p class="proof-eyebrow">Built for Klarent</p>
+  <h1>When a quality assurance lead asks an AI assistant for a tool, the answer does not name Klarent</h1>
+  <div class="proof-credit">
+    <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+    <span><strong>James Praise</strong> &middot; Product Marketing, Search and AI Answer Visibility</span>
+  </div>
+  <p class="proof-note">I ran this audit on 16 October 2026 for Asheem Panakkat and the Klarent team. It is one run, and AI answers change between runs, so read the numbers as a snapshot. The method repeats every week. Every number on this page comes from that run, and I saved every answer and every source. The method is the open source audit I built for Arcessio: <a href="https://github.com/realjaymes/ai-answer-visibility-audit">github.com/realjaymes/ai-answer-visibility-audit</a>.</p>
+
+  <div class="proof-draft">
+    <p class="section-label">The result</p>
+    <h2 id="short-version">The short version</h2>
+    <p>The posting asks the marketing hire to make sure Klarent is "visible and accurately represented" in ChatGPT, Perplexity and Google AI Overviews. So I measured it. I wrote 30 questions that a quality assurance (QA) lead or engineering lead would type, grounded in Google autocomplete, and ran each one through ChatGPT, Perplexity, Gemini and Google. That gave me 117 AI answers and 30 Google results pages.</p>
+    <div class="big-stats">
+      <div class="big-stat"><strong>0 of 71</strong><span>AI answers to the 18 questions without the name Klarent that named Klarent</span></div>
+      <div class="big-stat"><strong>0 of 18</strong><span>of those questions where klarent.ai reached Google's top 20 results</span></div>
+      <div class="big-stat"><strong>40 of 46</strong><span>answers that named Klarent when the question contained the name</span></div>
+    </div>
+    <p>Twelve of the 30 questions contain the name Klarent or fore ai, such as "Klarent vs mabl." The other 18 are what a buyer types before knowing Klarent exists, such as "autonomous QA agent," "best AI testing tools 2026" and "alternatives to testRigor." On those 18, the four AI engines gave 71 answers (Google showed no AI Overview for one of them), and none named Klarent or cited klarent.ai.</p>
+    <p>Once someone types the name, the engines find the product. They named Klarent in 40 of 46 answers and cited klarent.ai in 27 of them. A buyer who is still choosing hears about mabl, QA Wolf, Tricentis, Katalon and testRigor instead. The work sits in the 18 questions, because those buyers have not heard of Klarent yet.</p>
+
+    <p class="section-label">The method</p>
+    <h2 id="workflow">How I ran it</h2>
+    <div class="flow">
+      <div class="flow-step"><em>Step 1</em><strong>Write the questions</strong>30 questions in four groups: 8 about the problem, 7 about the category, 10 that compare vendors and 5 name checks. Wording comes from Google autocomplete where it had material.</div>
+      <div class="flow-step"><em>Step 2</em><strong>Ask four engines</strong>ChatGPT through Codex, Perplexity, Gemini and Google AI Overviews, plus Google's top 20 results. Every answer, source and search is saved.</div>
+      <div class="flow-step"><em>Step 3</em><strong>Check the site</strong>All 219 pages in the klarent.ai sitemap, fetched the way an AI crawler fetches them, plus robots.txt, llms.txt and structured data.</div>
+      <div class="flow-step"><em>Step 4</em><strong>Score and rank</strong>Mention rate per engine, citation share by domain, who owns each question, then a ranked fix list.</div>
+    </div>
+    <p>Two engines did not run the way I planned, and you should know that before you trust the numbers. My OpenAI account had no credit today, so the ChatGPT answers come from the Codex command line tool, which runs an OpenAI model (gpt-5.6-sol) with live web search. It stands in for the ChatGPT app, and I could not set its location to the United States. Gemini decides for itself when to search the web. It searched for 17 of the 30 questions and for 5 of the 18 without the name, so 13 of its 18 answers to those questions come from the model's memory. Perplexity and Gemini ran through DataForSEO's service. Google results and AI Overviews are for the United States, in English, on desktop.</p>
+
+    <h2 id="by-engine">Engine by engine</h2>
+    <div class="table-scroll">
+    <table class="proof-table">
+      <tr><th>Engine</th><th>Answers</th><th>Klarent named, 18 questions without the name</th><th>Klarent named, 12 questions with the name</th><th>Old name "fore ai" in those answers</th></tr>
+      <tr><td>ChatGPT, through Codex (gpt-5.6-sol, live web search)</td><td>30</td><td><strong>0 of 18</strong></td><td>9 of 12</td><td>6 of 9</td></tr>
+<tr><td>Perplexity (sonar-pro)</td><td>30</td><td><strong>0 of 18</strong></td><td>11 of 12</td><td>3 of 11</td></tr>
+<tr><td>Gemini (3.6 flash)</td><td>30</td><td><strong>0 of 18</strong></td><td>12 of 12</td><td>6 of 12</td></tr>
+<tr><td>Google AI Overviews</td><td>27 of 30 queries</td><td><strong>0 of 17</strong></td><td>8 of 10</td><td>3 of 8</td></tr>
+<tr><td>Google results, top 20</td><td>30 queries</td><td><strong>0 of 18</strong></td><td>4 of 12</td><td>not applicable</td></tr>
+    </table>
+    </div>
+    <p>Google showed an AI Overview for 27 of the 30 questions. The three without one were "how to handle flaky tests in automation," "Klarent" and "foreai." The old name travels with the new one. The ChatGPT answers described Klarent as a product "from," "by" or "built by" fore ai in 5 of the 9 answers that named it. Perplexity and Gemini did not.</p>
+
+    <p class="section-label">Who wins</p>
+    <h2 id="who-named">Who the answers name</h2>
+    <p class="bar-title">Answers that name each tool, out of 71 answers to the 18 questions without the name</p>
+    <div class="bars">
+<div class="bar-row"><span class="bar-label">Playwright (open source)</span><span class="bar-track"><span class="bar-fill" style="width:100.0%"></span></span><span class="bar-val">48</span></div>
+<div class="bar-row"><span class="bar-label">mabl</span><span class="bar-track"><span class="bar-fill" style="width:64.6%"></span></span><span class="bar-val">31</span></div>
+<div class="bar-row"><span class="bar-label">Cypress (open source)</span><span class="bar-track"><span class="bar-fill" style="width:54.2%"></span></span><span class="bar-val">26</span></div>
+<div class="bar-row"><span class="bar-label">Selenium (open source)</span><span class="bar-track"><span class="bar-fill" style="width:54.2%"></span></span><span class="bar-val">26</span></div>
+<div class="bar-row"><span class="bar-label">Tricentis (Tosca, Testim)</span><span class="bar-track"><span class="bar-fill" style="width:47.9%"></span></span><span class="bar-val">23</span></div>
+<div class="bar-row"><span class="bar-label">QA Wolf</span><span class="bar-track"><span class="bar-fill" style="width:35.4%"></span></span><span class="bar-val">17</span></div>
+<div class="bar-row"><span class="bar-label">Katalon</span><span class="bar-track"><span class="bar-fill" style="width:35.4%"></span></span><span class="bar-val">17</span></div>
+<div class="bar-row"><span class="bar-label">testRigor</span><span class="bar-track"><span class="bar-fill" style="width:33.3%"></span></span><span class="bar-val">16</span></div>
+<div class="bar-row"><span class="bar-label">Appium (open source)</span><span class="bar-track"><span class="bar-fill" style="width:33.3%"></span></span><span class="bar-val">16</span></div>
+<div class="bar-row"><span class="bar-label">Applitools</span><span class="bar-track"><span class="bar-fill" style="width:27.1%"></span></span><span class="bar-val">13</span></div>
+<div class="bar-row"><span class="bar-label">BrowserStack</span><span class="bar-track"><span class="bar-fill" style="width:27.1%"></span></span><span class="bar-val">13</span></div>
+<div class="bar-row"><span class="bar-label">ACCELQ</span><span class="bar-track"><span class="bar-fill" style="width:27.1%"></span></span><span class="bar-val">13</span></div>
+<div class="bar-row"><span class="bar-label">Momentic</span><span class="bar-track"><span class="bar-fill" style="width:25.0%"></span></span><span class="bar-val">12</span></div>
+<div class="bar-row"><span class="bar-label">Testsigma</span><span class="bar-track"><span class="bar-fill" style="width:20.8%"></span></span><span class="bar-val">10</span></div>
+<div class="bar-row is-zero"><span class="bar-label">Klarent</span><span class="bar-track"><span class="bar-fill" style="width:0.0%"></span></span><span class="bar-val">0</span></div>
+    </div>
+    <p>Counts are answers, so a tool named by all four engines on one question counts four times. mabl came up for all seven category questions, and QA Wolf and Tricentis for six of seven. On the eight problem questions the answers lean on open source tools: Playwright appeared for seven of the eight, Cypress and Selenium for six. On the three "alternatives" questions, Katalon, mabl, Tricentis, ACCELQ and Functionize came up for every one.</p>
+    <p>Klarent has comparison pages for mabl, Momentic, QA Wolf, SmartBear, testRigor and Tricentis Tosca. It has none for Katalon or Testsigma, which the answers named in 17 and 10 of the 71 answers.</p>
+
+    <h2 id="who-cited">Who the answers cite</h2>
+    <p class="bar-title">Answers that cite each domain, out of 58 answers with sources</p>
+    <div class="bars">
+<div class="bar-row"><span class="bar-label">momentic.ai</span><span class="bar-track"><span class="bar-fill" style="width:100.0%"></span></span><span class="bar-val">15</span></div>
+<div class="bar-row"><span class="bar-label">qawolf.com</span><span class="bar-track"><span class="bar-fill" style="width:100.0%"></span></span><span class="bar-val">15</span></div>
+<div class="bar-row"><span class="bar-label">reddit.com</span><span class="bar-track"><span class="bar-fill" style="width:93.3%"></span></span><span class="bar-val">14</span></div>
+<div class="bar-row"><span class="bar-label">playwright.dev</span><span class="bar-track"><span class="bar-fill" style="width:66.7%"></span></span><span class="bar-val">10</span></div>
+<div class="bar-row"><span class="bar-label">mabl.com</span><span class="bar-track"><span class="bar-fill" style="width:66.7%"></span></span><span class="bar-val">10</span></div>
+<div class="bar-row"><span class="bar-label">testrigor.com</span><span class="bar-track"><span class="bar-fill" style="width:66.7%"></span></span><span class="bar-val">10</span></div>
+<div class="bar-row"><span class="bar-label">medium.com</span><span class="bar-track"><span class="bar-fill" style="width:66.7%"></span></span><span class="bar-val">10</span></div>
+<div class="bar-row"><span class="bar-label">accelq.com</span><span class="bar-track"><span class="bar-fill" style="width:60.0%"></span></span><span class="bar-val">9</span></div>
+<div class="bar-row"><span class="bar-label">virtuosoqa.com</span><span class="bar-track"><span class="bar-fill" style="width:60.0%"></span></span><span class="bar-val">9</span></div>
+<div class="bar-row"><span class="bar-label">testsprite.com</span><span class="bar-track"><span class="bar-fill" style="width:60.0%"></span></span><span class="bar-val">9</span></div>
+<div class="bar-row"><span class="bar-label">youtube.com</span><span class="bar-track"><span class="bar-fill" style="width:60.0%"></span></span><span class="bar-val">9</span></div>
+<div class="bar-row"><span class="bar-label">applitools.com</span><span class="bar-track"><span class="bar-fill" style="width:46.7%"></span></span><span class="bar-val">7</span></div>
+<div class="bar-row"><span class="bar-label">browserstack.com</span><span class="bar-track"><span class="bar-fill" style="width:46.7%"></span></span><span class="bar-val">7</span></div>
+<div class="bar-row is-zero"><span class="bar-label">klarent.ai</span><span class="bar-track"><span class="bar-fill" style="width:0.0%"></span></span><span class="bar-val">0</span></div>
+    </div>
+    <p>The 71 answers carried 369 citations across 150 domains, and 58 of the answers cited at least one source. Momentic and QA Wolf lead with 15 answers each, and Reddit follows with 14. Klarent's own comparison pages were cited in 10 answers, and every one of those answers was to a question that contained the name Klarent.</p>
+
+    <h2 id="determinism">What the answers say about determinism and flaky tests</h2>
+    <p>Flaky tests and determinism are Klarent's argument, so I recorded what each answer says about them. Of the 71 answers, 34 mention flaky tests and 28 mention determinism. When an answer ties a vendor to the word deterministic, it names QA Wolf in four answers and Applitools in two. It never names Klarent. The ChatGPT answer to "AI software testing agent" recommends QA Wolf for deterministic automation, and the answer to "deterministic AI test automation" points to Applitools and a "Deterministic Language Model."</p>
+    <p>When the name is typed, the engines split. Gemini ties Klarent to determinism in 10 of its 12 answers, and Google AI Overviews do it in 2 of 8. The ChatGPT route and Perplexity do it in none of their 20. They describe Klarent as no code, plain English and self healing, the same words mabl, testRigor and Testsigma use. I did not test why the engines differ. The homepage, the about page and the Frequently Asked Questions (FAQ) page never use the word, and the funding announcement does.</p>
+
+    <h2 id="winning-pages">The pages that win citations</h2>
+    <p>These are the pages cited most often in the answers to the 18 questions without the name. I fetched each one on 16 October.</p>
+    <div class="table-scroll">
+    <table class="proof-table">
+      <tr><th>Page</th><th>Answers citing it</th><th>Words</th><th>2026 in title</th><th>FAQPage schema</th></tr>
+      <tr><td><a href="https://momentic.ai/" target="_blank" rel="noopener nofollow">momentic.ai</a><br><span class="cell-sub">AI Testing Platform: 117k Bugs Caught | Momentic</span></td><td>8</td><td>3,046</td><td>No</td><td>No</td></tr>
+<tr><td><a href="https://www.qawolf.com/automation-ai" target="_blank" rel="noopener nofollow">qawolf.com/automation-ai</a><br><span class="cell-sub">AI Automation Agent for Deep Coverage in Software Testing | QA Wolf</span></td><td>3</td><td>2,021</td><td>No</td><td>No</td></tr>
+<tr><td><a href="https://www.mabl.com/platform" target="_blank" rel="noopener nofollow">mabl.com/platform</a><br><span class="cell-sub">Agentic Testing Platform for Web, Mobile, and APIs | mabl</span></td><td>3</td><td>935</td><td>No</td><td>No</td></tr>
+<tr><td><a href="https://testrigor.com/" target="_blank" rel="noopener nofollow">testrigor.com</a><br><span class="cell-sub">AI-Based Test Automation Tool [2026] | testRigor Software Testing</span></td><td>3</td><td>2,293</td><td>Yes</td><td>Yes</td></tr>
+<tr><td><a href="https://docs.pytest.org/en/stable/explanation/flaky.html" target="_blank" rel="noopener nofollow">docs.pytest.org/en/stable/explanation/flaky.html</a><br><span class="cell-sub">Flaky tests | pytest documentation</span></td><td>3</td><td>1,638</td><td>No</td><td>No</td></tr>
+<tr><td><a href="https://www.testrail.com/blog/flaky-tests/" target="_blank" rel="noopener nofollow">testrail.com/blog/flaky-tests</a><br><span class="cell-sub">Flaky Tests: What They Are and How to Fix Them | TestRail by Sembi</span></td><td>3</td><td>3,138</td><td>No</td><td>No</td></tr>
+<tr><td><a href="https://www.qawolf.com/blog/the-12-best-ai-testing-tools-in-2026" target="_blank" rel="noopener nofollow">qawolf.com/blog/the-12-best-ai-testing-tools-in-2026</a><br><span class="cell-sub">AI Testing Tools 2026: 12 Compared by How They Really Work</span></td><td>3</td><td>3,722</td><td>Yes</td><td>Yes</td></tr>
+<tr><td><a href="https://testgrid.io/blog/ai-testing-tools/" target="_blank" rel="noopener nofollow">testgrid.io/blog/ai-testing-tools</a><br><span class="cell-sub">Top 25+ AI Testing Tools and Platforms for QA in 2026</span></td><td>3</td><td>9,760</td><td>Yes</td><td>No</td></tr>
+<tr><td><a href="https://www.testrail.com/blog/ai-testing-tools/" target="_blank" rel="noopener nofollow">testrail.com/blog/ai-testing-tools</a><br><span class="cell-sub">8 Best AI Testing Tools in 2026: Compared and Reviewed | TestRail</span></td><td>3</td><td>6,812</td><td>Yes</td><td>No</td></tr>
+<tr><td><a href="https://www.accelq.com/blog/ai-testing-tools/" target="_blank" rel="noopener nofollow">accelq.com/blog/ai-testing-tools</a><br><span class="cell-sub">6 Best AI Testing Tools in 2026: AI-Native vs. AI-Augmented</span></td><td>3</td><td>4,618</td><td>Yes</td><td>No</td></tr>
+<tr><td><a href="https://testguild.com/7-innovative-ai-test-automation-tools-future-third-wave/" target="_blank" rel="noopener nofollow">testguild.com/7-innovative-ai-test-automation-tools-future-third-wave</a><br><span class="cell-sub">12 BEST AI Test Automation Tools for 2026 The Third Wave</span></td><td>3</td><td>7,213</td><td>Yes</td><td>Yes</td></tr>
+<tr><td><a href="https://hashnode.com/blog/best-generative-ai-testing-tools-2026" target="_blank" rel="noopener nofollow">hashnode.com/blog/best-generative-ai-testing-tools-2026</a><br><span class="cell-sub">12 best generative AI testing tools (2026): Ranked and reviewed for QA engineers</span></td><td>3</td><td>5,110</td><td>Yes</td><td>No</td></tr>
+    </table>
+    </div>
+    <p>Three kinds of page win. The first is a vendor homepage that says what the product is in its opening line. Momentic's title carries a proof number: "AI Testing Platform: 117k Bugs Caught." The second is a ranked list with the year in the title. All six list pages above carry 2026 in the title and run 3,722 to 9,760 words, and five of the six show a last modified date between 26 July and 16 October 2026. QA Wolf published one of them on its own site, so a vendor's own list can win. The third is a plain explainer. For the flaky test questions the answers cite pytest, TestRail, Sauce Labs, the Google Testing Blog and Telerik, and for the how to questions they cite Playwright's documentation. I cannot show these traits cause the citations. They are what the winners share.</p>
+    <p>Klarent has product pages for web testing, mobile testing, test management and test data, but no page about flaky tests and no ranked list for 2026, and only 2 of its 219 page titles carry 2026. Its comparison pages are titled "mabl vs Klarent," and buyers ask for "mabl alternatives." For "Klarent vs mabl," "Klarent vs testRigor" and "Klarent vs Tricentis Tosca," none of Klarent's own comparison pages reached Google's top 20, although all three pages exist.</p>
+
+    <p class="section-label">Klarent's site</p>
+    <h2 id="site-check">What a crawler sees on klarent.ai</h2>
+    <p>I fetched all 219 pages in the klarent.ai sitemap on 16 October 2026 the way an AI crawler does, without running JavaScript.</p>
+    <div class="table-scroll">
+    <table class="proof-table">
+      <tr><th>Check</th><th>Result</th></tr>
+      <tr><td>Crawler access</td><td>robots.txt has one rule, "User-agent: * Allow: /," and lists the sitemap. The homepage returned a normal page (status 200) to the GPTBot, ClaudeBot, PerplexityBot, Google-Extended, OAI-SearchBot and Bytespider user agents.</td></tr>
+      <tr><td>Readable text</td><td>All 219 pages return 200 with their text in the page source. The shortest page has 213 words, the median is 1,126 and the homepage has 2,699.</td></tr>
+      <tr><td>llms.txt</td><td>It lists 114 pages, and all of them exist. It leaves out the 7 comparison pages (the index plus six), 70 glossary pages and 14 author pages. Its summary names natural language tests, self healing, multiple agents and enterprise security as the differentiators. It does not say deterministic.</td></tr>
+      <tr><td>Organization schema</td><td>The name is "Klarent" and "fore ai" is the alternate name, on all 219 pages. The LinkedIn link inside it still uses the company page slug "fore-ai."</td></tr>
+      <tr><td>The old name in page text</td><td>The FAQ page mentions fore ai 15 times (7 in visible text, 8 in structured data). The homepage mentions it 4 times (3 visible, 1 in structured data) and the about page 8 times. Visible text across the whole site mentions it 41 times on 9 pages, with the largest counts in the privacy policy (16) and the terms (5), which name fore ai AG as the company.</td></tr>
+      <tr><td>FAQPage schema</td><td>It is on the FAQ page, the about page, the six comparison pages and 19 of the 30 blog posts. The 11 posts without it include "Code review is dying. Shift left won't save it.," "What is autonomous testing?," "Where every QA dollar goes," the build versus buy analysis and the funding announcement.</td></tr>
+      <tr><td>The word determinism</td><td>It appears zero times on the homepage, the about page and the FAQ page. It appears 50 times in 8 blog posts, 27 of them in one post about automated testing and 6 in the funding announcement.</td></tr>
+    </table>
+    </div>
+
+    <p class="section-label">The plan</p>
+    <h2 id="fixes">Five fixes, ranked by how likely they are to earn citations</h2>
+    <div class="proof-cards">
+      <div class="proof-card"><strong>1. A guide to flaky tests that carries Asheem's math</strong><span>Publish "What causes flaky tests, and how to stop them (2026)." Open with the math: a suite of 100 tests that are each right 99% of the time fails at least once in about 63% of runs. Show how a deterministic engine removes the cause, add FAQPage markup, and link the guide from the homepage, llms.txt and the comparison pages.</span><span>Why first: 34 of the 71 answers mention flaky tests, the answers to the eight problem questions cite pytest, TestRail, Sauce Labs, the Google Testing Blog and Telerik, and no page on klarent.ai is about flaky tests. The 99% math is not on any blog, glossary or author page.</span></div>
+      <div class="proof-card"><strong>2. A page that defines deterministic AI test automation</strong><span>Title it with the phrase buyers use. Say in the first paragraph that AI writes the tests and a fixed engine runs them, and show the exported test code. Add the word to the homepage, the FAQ, the about page and the opening lines of llms.txt, where it appears zero times today.</span><span>Why second: the question "deterministic AI test automation" returned Applitools and general frameworks and never Klarent. QA Wolf is tied to the word in four other answers. Gemini repeats Klarent's claim when the name is typed, and the other engines do not.</span></div>
+      <div class="proof-card"><strong>3. Alternatives pages for the five vendors buyers compare against</strong><span>Publish "testRigor alternatives," "mabl alternatives," "Tricentis Tosca alternatives," "Katalon alternatives" and "Testsigma alternatives," each with an honest comparison table and a dated stamp.</span><span>Why third: none of the 12 answers to the three alternatives questions named Klarent. The most cited domains there were g2.com, testsigma.com and reddit.com. Katalon and Testsigma have no Klarent page at all, and the answers named them in 17 and 10 of 71 answers.</span></div>
+      <div class="proof-card"><strong>4. One ranked list of autonomous QA tools for 2026</strong><span>Publish "Best autonomous QA and AI testing tools in 2026," comparing 12 tools on how they work: who writes the test, what runs it, who reviews it and whether the code can be exported. Rank Klarent honestly inside the field.</span><span>Why fourth: six ranked lists with 2026 in the title were each cited in 3 answers, and QA Wolf published one of them on its own site.</span></div>
+      <div class="proof-card"><strong>5. Same day changes to llms.txt and FAQ schema</strong><span>Add the seven comparison pages, the glossary and the author index to llms.txt. Rewrite its opening summary to lead with determinism. Add FAQPage markup to the 11 blog posts that lack it, starting with the founder posts.</span><span>This ships in a day. I have not tested that either change earns a citation, so I rank it last and would measure it on the next run.</span></div>
+    </div>
+    <p>What I would do next is put these 30 questions on a weekly run, report the share of the 18 questions where Klarent is named, and tie each fix to a change in that number.</p>
+
+    <h2 id="rename">Rename cleanup checklist</h2>
+    <p>Klarent's own pages disagree about the old name, and the AI answers repeat the disagreement. This is the order I would work through it.</p>
+    <div class="proof-cards">
+      <div class="proof-card"><strong>1. Decide what the company is called, then say it one way</strong><span>The August post "Introducing Klarent by fore ai" says "our company remains fore ai." The FAQ says "fore ai is the company's former name." The privacy policy and terms still name fore ai AG and link to www.foreai.co. If the legal entity is still fore ai AG, say "fore ai AG, trading as Klarent" once in the legal pages and nowhere else.</span></div>
+      <div class="proof-card"><strong>2. Rewrite the FAQ and homepage answers that treat fore ai as the company</strong><span>The answer that begins "Klarent is fore ai's autonomous" and the phrases "Contact the fore ai team" and "the fore ai Trust Center" sit in both the FAQ and the homepage questions, and in their structured data. That is 15 mentions on the FAQ page and 4 on the homepage. Keep the one answer to "Is Klarent the same as fore ai?"</span></div>
+      <div class="proof-card"><strong>3. Keep the alternate name and fix the links</strong><span>The Organization data names Klarent and lists fore ai as an alternate name. I would keep that, because it ties old mentions to the new name. Rename the LinkedIn company page and update its link, which still uses the slug fore-ai, and update the trust center link (foreai.eu.trust.site). Every one of the 219 pages carries at least one link or address with the old name.</span></div>
+      <div class="proof-card"><strong>4. Turn foreai.co into a redirect</strong><span>The old domain shows a note that it will redirect to klarent.ai in 15 seconds, stays open to indexing and names itself as canonical. Deep links such as foreai.co/products/test-management/ return a 404, yet AI answers cited that address three times. AI answers cited foreai.co 9 times across the 30 questions. Send every path to its klarent.ai equivalent with a server redirect, or at minimum point the canonical at klarent.ai. The documentation subdomain already does the second.</span></div>
+      <div class="proof-card"><strong>5. Update the profiles that still use the old name</strong><span>These appeared in Google on 16 October: the Microsoft Marketplace listing (its address still contains fore-ai, and 10 answers cited it), the GitHub organization named fore ai, startup.ch, joinup.ch, Dealroom and PeerSpot.</span></div>
+      <div class="proof-card"><strong>6. Separate Klarent from Klarent Hospitality</strong><span>Google's first four results for "Klarent" are about Klarent Hospitality, and klarent.ai appears fifth with its documentation page. The homepage does not appear in the top 20. Five of the ten autocomplete suggestions for "klarent" are about the hotel company, and Gemini answered the bare name with two companies. Put "Klarent" first in the homepage title, repeat one phrase such as "Klarent autonomous QA" in titles and profile descriptions, and link the Crunchbase, LinkedIn and Microsoft Marketplace profiles from the Organization data.</span></div>
+      <div class="proof-card"><strong>7. Run the 12 name questions again</strong><span>The ChatGPT answers called Klarent a product from or by fore ai in 5 of the 9 answers that named it. Re-run those questions after the changes above and compare.</span></div>
+    </div>
+
+    <h2 id="method-limits">Method and limits</h2>
+    <p>I wrote the questions and grounded them in Google autocomplete where it had material. Autocomplete returned no extra suggestions for "test automation maintenance," "mabl alternatives," "testRigor alternatives" or "deterministic test automation," so those questions use my wording. Autocomplete for "klarent" and "fore ai" is where I found the name collisions.</p>
+    <p>Twelve of the 30 questions contain Klarent or fore ai, so the headline numbers use the 18 that do not. A citation count of one means an answer cited the domain at least once. The ChatGPT route lists the sources the model says it used. Perplexity, Gemini and Google list the sources attached to the answer.</p>
+    <p>I ran each question once. AI answers vary between runs, and a weekly rerun turns this snapshot into a trend. I did not test whether any fix earns a citation, what the ChatGPT app itself would say, or other countries, languages and engines such as Copilot and Claude.</p>
+
+    <h2 id="questions">All 30 questions</h2>
+    <p>"Named" means the answer named Klarent. The last column lists the vendors named most often for that question across the engines, with the number of engines in brackets.</p>
+    <div class="table-scroll">
+    <table class="proof-table all-q">
+      <tr><th>#</th><th>Group</th><th>Question</th><th>ChatGPT</th><th>Perplexity</th><th>Gemini</th><th>AI Overview</th><th>Google top 20</th><th>Most named vendors</th></tr>
+      <tr><td>1</td><td>Problem</td><td>how to handle flaky tests in automation</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-na">No AI Overview</td><td class="c-no">No</td><td></td></tr>
+<tr><td>2</td><td>Problem</td><td>what causes flaky tests</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td>Functionize (1), Testrail / Zephyr (1)</td></tr>
+<tr><td>3</td><td>Problem</td><td>how to avoid flaky tests in playwright</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td></td></tr>
+<tr><td>4</td><td>Problem</td><td>how do I reduce test maintenance when the UI changes every sprint</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td>Applitools (2), mabl (1)</td></tr>
+<tr><td>5</td><td>Problem</td><td>why do AI generated end to end tests give different results on each run</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td>Katalon (1), Momentic (1)</td></tr>
+<tr><td>6</td><td>Problem</td><td>can AI write end to end tests I can trust in CI</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td>mabl (3), Applitools (2)</td></tr>
+<tr><td>7</td><td>Problem</td><td>how to test iOS and Android apps with the same automated tests</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td>BrowserStack (3), Sauce Labs (3)</td></tr>
+<tr><td>8</td><td>Problem</td><td>how to automate regression testing for a bank or insurance app</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td>BrowserStack (2), Tricentis (Tosca, Testim) (1)</td></tr>
+<tr><td>9</td><td>Category</td><td>autonomous QA agent</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td>QA Wolf (2), Tricentis (Tosca, Testim) (2)</td></tr>
+<tr><td>10</td><td>Category</td><td>AI software testing agent</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td>QA Wolf (3), mabl (3)</td></tr>
+<tr><td>11</td><td>Category</td><td>best AI testing tools 2026</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td>Applitools (3), Tricentis (Tosca, Testim) (3)</td></tr>
+<tr><td>12</td><td>Category</td><td>best AI agent for QA testing</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td>mabl (4), testRigor (3)</td></tr>
+<tr><td>13</td><td>Category</td><td>what is an autonomous QA platform</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td>mabl (2), ACCELQ (2)</td></tr>
+<tr><td>14</td><td>Category</td><td>deterministic AI test automation</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td>Applitools (2), Tricentis (Tosca, Testim) (2)</td></tr>
+<tr><td>15</td><td>Category</td><td>best AI test automation tool for engineering teams that need reviewable tests</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td>Momentic (2), QA Wolf (2)</td></tr>
+<tr><td>16</td><td>Comparison</td><td>Klarent vs mabl</td><td class="c-yes">Named</td><td class="c-yes">Named</td><td class="c-yes">Named</td><td class="c-yes">Named</td><td class="c-no">No</td><td>mabl (4), Katalon (1)</td></tr>
+<tr><td>17</td><td>Comparison</td><td>Klarent vs Momentic</td><td class="c-yes">Named</td><td class="c-yes">Named</td><td class="c-yes">Named</td><td class="c-yes">Named</td><td class="c-yes">#1</td><td>Momentic (4), testRigor (1)</td></tr>
+<tr><td>18</td><td>Comparison</td><td>Klarent vs QA Wolf</td><td class="c-yes">Named</td><td class="c-yes">Named</td><td class="c-yes">Named</td><td class="c-yes">Named</td><td class="c-yes">#1</td><td>QA Wolf (4)</td></tr>
+<tr><td>19</td><td>Comparison</td><td>Klarent vs testRigor</td><td class="c-yes">Named</td><td class="c-yes">Named</td><td class="c-yes">Named</td><td class="c-yes">Named</td><td class="c-no">No</td><td>testRigor (4)</td></tr>
+<tr><td>20</td><td>Comparison</td><td>Klarent vs Tricentis Tosca</td><td class="c-yes">Named</td><td class="c-yes">Named</td><td class="c-yes">Named</td><td class="c-yes">Named</td><td class="c-no">No</td><td>Tricentis (Tosca, Testim) (4)</td></tr>
+<tr><td>21</td><td>Comparison</td><td>Klarent vs Katalon</td><td class="c-yes">Named</td><td class="c-yes">Named</td><td class="c-yes">Named</td><td class="c-yes">Named</td><td class="c-no">No</td><td>Katalon (4)</td></tr>
+<tr><td>22</td><td>Comparison</td><td>Klarent vs Testsigma</td><td class="c-yes">Named</td><td class="c-yes">Named</td><td class="c-yes">Named</td><td class="c-yes">Named</td><td class="c-no">No</td><td>Testsigma (4), LambdaTest / TestMu (1)</td></tr>
+<tr><td>23</td><td>Comparison</td><td>alternatives to testRigor</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td>ACCELQ (4), testRigor (4)</td></tr>
+<tr><td>24</td><td>Comparison</td><td>mabl alternatives</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td>Katalon (4), Tricentis (Tosca, Testim) (4)</td></tr>
+<tr><td>25</td><td>Comparison</td><td>Tricentis Tosca alternatives</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-no">No</td><td>Katalon (4), Tricentis (Tosca, Testim) (3)</td></tr>
+<tr><td>26</td><td>Name check</td><td>Klarent</td><td class="c-yes">Named</td><td class="c-yes">Named</td><td class="c-yes">Named</td><td class="c-na">No AI Overview</td><td class="c-yes">#5</td><td></td></tr>
+<tr><td>27</td><td>Name check</td><td>what is Klarent software testing</td><td class="c-yes">Named</td><td class="c-yes">Named</td><td class="c-yes">Named</td><td class="c-yes">Named</td><td class="c-yes">#1</td><td></td></tr>
+<tr><td>28</td><td>Name check</td><td>fore ai</td><td class="c-no">No</td><td class="c-yes">Named</td><td class="c-yes">Named</td><td class="c-no">No</td><td class="c-no">No</td><td></td></tr>
+<tr><td>29</td><td>Name check</td><td>foreai</td><td class="c-no">No</td><td class="c-no">No</td><td class="c-yes">Named</td><td class="c-na">No AI Overview</td><td class="c-no">No</td><td></td></tr>
+<tr><td>30</td><td>Name check</td><td>fore ai autonomous testing</td><td class="c-no">No</td><td class="c-yes">Named</td><td class="c-yes">Named</td><td class="c-no">No</td><td class="c-no">No</td><td>Testsigma (1), UiPath (1)</td></tr>
+    </table>
+    </div>
+  </div>
+  <div class="button-row" style="margin-top: 40px;">
+    <a href="/work/klarent/" class="button button-primary">Back to the pitch</a>
+    <a href="https://github.com/realjaymes/ai-answer-visibility-audit" target="_blank" class="button button-secondary">View the open source method</a>
+    <a href="mailto:jamesspraise@gmail.com?subject=Founding%20Marketing%20Manager%2C%20James%20Praise" class="button button-secondary">Let's Talk</a>
+  </div>
+</div>
+
+<script src="/script.js?v=11"></script>
+<script>
+(function () {
+  var bar = document.getElementById('proofProgressBar');
+  function updateProgress() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.proof-toc a'));
+  var sections = tocLinks.map(function (a) {
+    return document.getElementById(a.getAttribute('href').slice(1));
+  });
+  function updateActiveToc() {
+    var current = null;
+    sections.forEach(function (sec, i) {
+      if (sec && sec.getBoundingClientRect().top <= 140) current = i;
+    });
+    tocLinks.forEach(function (a, i) {
+      a.classList.toggle('is-active', i === current);
+    });
+  }
+  window.addEventListener('scroll', updateActiveToc, { passive: true });
+  updateActiveToc();
+})();
+</script>
+</body>
+</html>
