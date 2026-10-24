@@ -8,6 +8,7 @@ keeps the site-wide image from tools/og-image.py.
 
     python3 tools/og-work-cards.py --look a|b|c --out DIR work/lightsprint/proof ...   # preview
     python3 tools/og-work-cards.py --apply [work/<slug> ...]                          # ship
+    python3 tools/og-work-cards.py --check                                            # pre-commit
 
 --apply renders each card to assets/images/og/work/<slug>[-proof].jpg and points the
 page's og:image and twitter:image at it, adding the full set of share tags to pages
@@ -165,7 +166,25 @@ def apply(rel: str) -> str:
     return f"{info['label']:<40} {jpg.relative_to(ROOT)}"
 
 
+def check() -> int:
+    """Fail when a /work page that should have a card points anywhere else, or its card file is missing."""
+    bad = []
+    for rel in card_pages():
+        info = page_info(rel)
+        if not info:
+            continue
+        name = info["rel"].split("/", 1)[1].replace("/", "-")
+        t = (ROOT / rel / "index.html").read_text()
+        if f"/assets/images/og/work/{name}.jpg" not in t or not (CARD_DIR / f"{name}.jpg").exists():
+            bad.append(rel)
+    for rel in bad:
+        print(f"no share card: {rel}  (run: python3 tools/og-work-cards.py --apply {rel})")
+    return 1 if bad else 0
+
+
 if __name__ == "__main__":
+    if "--check" in sys.argv:
+        sys.exit(check())
     if "--apply" in sys.argv:
         for rel in [a for a in sys.argv[1:] if a != "--apply"] or card_pages():
             print(apply(rel))

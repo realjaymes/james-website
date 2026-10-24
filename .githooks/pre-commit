@@ -1,8 +1,10 @@
 #!/bin/sh
 # Blocks a commit when /work/ filter tags drift from the case study proof bank,
-# or when a marked Signal to Build video count no longer matches the gallery manifest.
+# when a marked Signal to Build video count no longer matches the gallery manifest,
+# or when a /work page has no share card of its own.
 # Enable once per clone: git config core.hooksPath .githooks
 if git diff --cached --name-only | grep -q '^work/'; then
   python3 tools/check-work-tags.py || exit 1
   python3 tools/sync-video-count.py --check || exit 1
+  python3 tools/og-work-cards.py --check || exit 1
 fi
