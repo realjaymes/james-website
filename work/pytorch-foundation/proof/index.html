@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WKSZ7DQC');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A Contributor Overlap Note for PyTorch, vLLM, DeepSpeed and Ray | James Praise</title>
+<meta name="description" content="A count of the people who commit to more than one of PyTorch, vLLM, DeepSpeed and Ray, from a year of public commits, with five findings, by James Praise. A proposal, not affiliated with the PyTorch Foundation." />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="A Contributor Overlap Note for PyTorch, vLLM, DeepSpeed and Ray | James Praise" />
+<meta property="og:description" content="A count of the people who commit to more than one of PyTorch, vLLM, DeepSpeed and Ray, from a year of public commits, with five findings, by James Praise. A proposal, not affiliated with the PyTorch Foundation." />
+<meta property="og:url" content="https://jamespraise.xyz/work/pytorch-foundation/proof/" />
+<meta property="og:image" content="https://jamespraise.xyz/assets/images/og/work/pytorch-foundation-proof.jpg?v=20261024" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="A Contributor Overlap Note for PyTorch, vLLM, DeepSpeed and Ray | James Praise" />
+<meta name="twitter:description" content="A count of the people who commit to more than one of PyTorch, vLLM, DeepSpeed and Ray, from a year of public commits, with five findings, by James Praise. A proposal, not affiliated with the PyTorch Foundation." />
+<meta name="twitter:image" content="https://jamespraise.xyz/assets/images/og/work/pytorch-foundation-proof.jpg?v=20261024" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+<link rel="canonical" href="https://jamespraise.xyz/work/pytorch-foundation/proof/" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=23" />
+<style>
+  .proof-wrap { max-width: 720px; margin: 0 auto; padding: 100px 0 80px; }
+  .proof-eyebrow { color: var(--color-purple); font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; font-size: 13px; margin-bottom: 10px; }
+  .proof-credit { display: flex; align-items: center; gap: 10px; margin: 20px 0 40px; }
+  .proof-credit img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+  .proof-credit span { color: var(--text-muted); font-size: 14px; }
+  .proof-credit strong { color: var(--text-primary); }
+  .proof-note { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 8px; padding: 16px 20px; font-size: 14px; color: var(--text-muted); margin-bottom: 40px; }
+  .proof-draft { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 12px; padding: 40px; margin-bottom: 40px; }
+  .proof-draft h2 { margin-top: 28px; margin-bottom: 10px; }
+  .proof-draft h2:first-child { margin-top: 0; }
+  .proof-draft h3 { margin-top: 22px; margin-bottom: 8px; font-size: 16px; }
+  .proof-draft p { line-height: 1.7; }
+  .proof-img { border-radius: 8px; border: 1px solid rgba(0,0,0,0.08); margin: 20px 0; box-shadow: 0 4px 16px rgba(0,0,0,0.06); width: 100%; }
+  .proof-back { display: inline-block; margin-bottom: 24px; font-size: 14px; }
+  .proof-quote { border-left: 3px solid var(--color-purple); padding: 4px 0 4px 22px; margin: 24px 0; font-size: 18px; font-weight: 600; line-height: 1.5; color: var(--text-primary); }
+  .proof-segments { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 20px 0; }
+  .proof-segment { background: var(--bg-page); border: 1px solid rgba(28,20,34,0.1); border-radius: 10px; padding: 14px 16px; }
+  .proof-segment strong { display: block; font-size: 14px; color: var(--text-primary); margin-bottom: 4px; }
+  .proof-segment span { font-size: 13px; color: var(--text-muted); line-height: 1.4; display: block; }
+  .proof-table-wrap { overflow-x: auto; margin: 20px 0; }
+  .proof-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .proof-table th, .proof-table td { text-align: left; padding: 10px 12px; border-bottom: 1px solid rgba(28,20,34,0.1); vertical-align: top; }
+  .proof-table th { font-size: 12px; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-muted); }
+  .proof-progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(28,20,34,0.08); z-index: 200; }
+  .proof-progress-bar { height: 100%; width: 0%; background: var(--color-purple); transition: width 0.1s linear; }
+  .proof-toc { position: fixed; top: 140px; right: 32px; width: 200px; font-size: 13px; }
+  .proof-toc-group { margin-bottom: 20px; }
+  .proof-toc-label { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-toc a { display: block; padding: 5px 0 5px 12px; border-left: 2px solid rgba(28,20,34,0.1); color: var(--text-muted); text-decoration: none; line-height: 1.4; }
+  .proof-toc a:hover { color: var(--color-purple); border-left-color: var(--color-purple); }
+  .proof-toc a.is-active { color: var(--color-purple); border-left-color: var(--color-purple); font-weight: 700; }
+  @media (max-width: 1400px) { .proof-toc { display: none; } }
+  .proof-draft h2, .proof-draft h3 { scroll-margin-top: 90px; }
+  @media (max-width: 600px) { .proof-draft { padding: 24px 18px; } }
+</style>
+</head>
+<body class="proof-page">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKSZ7DQC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="proof-progress-track"><div class="proof-progress-bar" id="proofProgressBar"></div></div>
+
+<a href="/work/pytorch-foundation/" class="pitch-exit" aria-label="Back to the PyTorch Foundation pitch">
+  <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+</a>
+
+<nav class="proof-toc" aria-label="Section navigation">
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The note</p>
+    <a href="#the-question">The question</a>
+    <a href="#method">Method</a>
+    <a href="#results">Results</a>
+    <a href="#findings">Five findings</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The plan</p>
+    <a href="#what-to-do-with-it">What to do with it</a>
+    <a href="#first-90-days">The first 90 days</a>
+    <a href="#first-30-days-learning">What I'd learn first</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">Reference</p>
+    <a href="#not-verified">What I could not verify</a>
+    <a href="#sources">Sources</a>
+  </div>
+</nav>
+
+<div class="container proof-wrap">
+  <a class="proof-back" href="/work/pytorch-foundation/">&larr; Back to the PyTorch Foundation pitch</a>
+
+  <p class="proof-eyebrow">A note for the PyTorch Foundation</p>
+  <h1>Who Connects PyTorch, vLLM, DeepSpeed and Ray: A Contributor Overlap Note</h1>
+
+  <div class="proof-credit">
+    <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+    <span><strong>James Praise</strong> &middot; Marketing and Go-to-Market Operator</span>
+  </div>
+
+  <p class="proof-note">Built from public GitHub commit data for the four projects, pulled on 4 November 2026, the Foundation's 2025 year in review, and the <a href="https://careers.linuxfoundation.org/jobs/600455-senior-director-of-community-pytorch-foundation" target="_blank" rel="noopener">Senior Director of Community posting</a>. I have no access to forum, chat or membership data, so the note counts code contributors only, and the plan is a set of hypotheses to test, not a diagnosis. A proposal, not affiliated with the PyTorch Foundation.</p>
+
+  <div class="proof-draft">
+
+    <h2 id="the-question">The question the posting asks</h2>
+    <p>The <a href="https://careers.linuxfoundation.org/jobs/600455-senior-director-of-community-pytorch-foundation" target="_blank" rel="noopener">posting</a> asks the Senior Director of Community to "build bridges between different project communities to encourage collaboration and innovation." The Foundation now hosts four projects: PyTorch, vLLM, DeepSpeed and Ray. It added vLLM and DeepSpeed in May 2025 and Ray in September 2025 (<a href="https://pytorch.org/blog/pytorch-foundation-in-2025-a-year-in-review/" target="_blank" rel="noopener">2025 year in review</a>). The year in review counts conferences, members and content. I found no number for the people who connect one project to another, so I counted them.</p>
+
+    <p class="proof-quote">Out of 4,263 people who committed code to the four projects in a year, 182 worked in more than one, and only 29 had five or more commits in each of two projects. Most of the overlap runs between PyTorch and vLLM.</p>
+
+    <p>This is a count of code contributors from public data. It is a floor for the whole community, and the section on limits says what it cannot see.</p>
+
+    <h2 id="method">Method</h2>
+    <p>I used the <a href="https://docs.github.com/en/rest/commits/commits" target="_blank" rel="noopener">GitHub commits API</a> to list every commit on the default branch of <a href="https://github.com/pytorch/pytorch" target="_blank" rel="noopener">pytorch/pytorch</a>, <a href="https://github.com/vllm-project/vllm" target="_blank" rel="noopener">vllm-project/vllm</a>, <a href="https://github.com/deepspeedai/DeepSpeed" target="_blank" rel="noopener">deepspeedai/DeepSpeed</a> and <a href="https://github.com/ray-project/ray" target="_blank" rel="noopener">ray-project/ray</a> from 1 November 2025 to 31 October 2026, and counted distinct GitHub accounts that authored at least one commit. I left out bot accounts and commits whose email is not linked to a GitHub account, which is 0.7 percent of PyTorch's commits, 0.3 percent of vLLM's, 0.2 percent of DeepSpeed's and 1.5 percent of Ray's. A squash-merged pull request credits its author. One person with two accounts counts twice, and I cannot see anyone's employer from a commit. I ran the count once on 4 November 2026, and the script is mine and reruns in under an hour.</p>
+
+    <h2 id="results">Results</h2>
+    <div class="proof-table-wrap"><table class="proof-table"><thead><tr><th>Project</th><th>Commits</th><th>Code authors</th><th>Share who also committed to another project</th></tr></thead><tbody><tr><td>PyTorch</td><td>18,135</td><td>1,487</td><td>9.3%</td></tr><tr><td>vLLM</td><td>13,391</td><td>2,370</td><td>7.0%</td></tr><tr><td>DeepSpeed</td><td>627</td><td>123</td><td>24.4%</td></tr><tr><td>Ray</td><td>4,514</td><td>478</td><td>9.2%</td></tr><tr><td><strong>All four</strong></td><td><strong>36,667</strong></td><td><strong>4,263 distinct accounts</strong></td><td><strong>4.3% (182 accounts)</strong></td></tr></tbody></table></div>
+    <p>Pairs of projects, counting accounts with at least one commit in both:</p>
+    <div class="proof-table-wrap"><table class="proof-table"><thead><tr><th>Pair</th><th>Accounts in both</th><th>Of those, with 3+ commits in each</th></tr></thead><tbody><tr><td>PyTorch and vLLM</td><td>125</td><td>37</td></tr><tr><td>vLLM and Ray</td><td>33</td><td>6</td></tr><tr><td>vLLM and DeepSpeed</td><td>20</td><td>5</td></tr><tr><td>PyTorch and Ray</td><td>12</td><td>1</td></tr><tr><td>PyTorch and DeepSpeed</td><td>11</td><td>3</td></tr><tr><td>DeepSpeed and Ray</td><td>9</td><td>2</td></tr></tbody></table></div>
+    <p>How deep the overlap goes, counting accounts that meet the bar in at least two projects:</p>
+    <div class="proof-table-wrap"><table class="proof-table"><thead><tr><th>Bar</th><th>Accounts</th></tr></thead><tbody><tr><td>At least 1 commit in two or more projects</td><td>182</td></tr><tr><td>At least 3 commits in each of two or more projects</td><td>49</td></tr><tr><td>At least 5 commits in each of two or more projects</td><td>29</td></tr><tr><td>At least 10 commits in each of two or more projects</td><td>16</td></tr><tr><td>Any commits in three or more projects</td><td>11</td></tr><tr><td>Any commits in all four projects</td><td>2</td></tr></tbody></table></div>
+
+    <h2 id="findings">Five findings</h2>
+
+    <h3 id="finding-1">Finding 1: Fewer than one contributor in twenty works across projects</h3>
+    <p>182 of 4,263 accounts is 4.3 percent. The four projects share a Foundation, a Technical Advisory Council and conference stages, and their code communities are still almost entirely separate. The chair of the Technical Advisory Council wrote in the year in review that the aim is to keep growth "organic across all projects" and to support "ongoing cooperation among all PyTorch Foundation projects." This count gives that aim a starting number.</p>
+
+    <h3 id="finding-2">Finding 2: The overlap is one corridor, from PyTorch to vLLM</h3>
+    <p>125 of the 182 accounts, 69 percent, are in both PyTorch and vLLM. No other pair has more than 33. The projects fit together technically, since vLLM runs models that people build in PyTorch, and the people already follow that path.</p>
+
+    <h3 id="finding-3">Finding 3: Ray and DeepSpeed barely touch PyTorch's contributors</h3>
+    <p>12 accounts commit to both Ray and PyTorch, which is 2.5 percent of Ray's 478 authors. 11 commit to both DeepSpeed and PyTorch, 9 percent of DeepSpeed's 123. Both joined in 2025, so a year is a short time, and this is where a person whose job is to build bridges has the most to do. DeepSpeed has the highest share of authors who also work elsewhere (24 percent), mostly in vLLM, and it is the smallest project by authors.</p>
+
+    <h3 id="finding-4">Finding 4: The people who really bridge projects number a few dozen</h3>
+    <p>Only 29 accounts have five or more commits in each of two projects, 16 have ten or more, and 2 work in all four. A community lead could know these people by name. I would call them first, ask what they wish the projects shared, and ask the strongest of them whether they would run a session at a PyTorch Day or join the Ambassadors program. I am not publishing the account list here. I would hand it to the Foundation.</p>
+
+    <h3 id="finding-5">Finding 5: This count cannot see most of the community</h3>
+    <p>It covers code only. It does not cover forum posts, chat servers, documentation fixes, issue triage, event attendance or the researchers who use the projects and never commit. It cannot tell me an account's employer, so some of the overlap is one company's engineers working on two projects, and some is individuals. The next step is to add those other sources, and the Foundation holds some of them.</p>
+
+    <h2 id="what-to-do-with-it">What the Foundation could do with it</h2>
+    <p>First, treat people active in more than one project as a named list, owned by the community lead and refreshed every quarter, so the 4.3 percent becomes a number that moves. Second, aim the cross-project work at the weakest links: Ray and DeepSpeed to PyTorch, through shared sessions and a monthly digest that picks five pieces across all four projects. Third, use the Ambassadors program, which the <a href="https://pytorch.org/programs/ambassadors" target="_blank" rel="noopener">Ambassadors page</a> says supports projects such as PyTorch and vLLM, to bring Ray and DeepSpeed users into local events.</p>
+
+    <h2 id="first-90-days">The first 90 days</h2>
+    <p>In the first 30 days I would speak to about ten current ambassadors about what stopped them from running one more event, learn who owns each project's community and what each wants from the Foundation, and call the people on the bridge list. In days 31 to 60 I would write the ambassador event kit and send the first monthly cross-project digest. In days 61 to 90 I would repeat the overlap count with forum and chat data added, and set community targets from that baseline. I would not set a target before I see it.</p>
+
+    <h2 id="first-30-days-learning">What I would want to learn in the first 30 days</h2>
+    <p>What the Foundation measures for community today, and who sees it. What staff and budget sit behind the Ambassadors program. How community programs connect to membership value and to certification revenue. Which of the hosted projects have community managers of their own. Which ecosystem projects the Foundation is already considering for hosting, and who decides.</p>
+
+    <h2 id="not-verified">What I could not verify</h2>
+    <p>I could not count forum, chat or documentation contributors, and I could not see anyone's employer. A person with two GitHub accounts counts twice. The window is one year, and the share of overlap may differ across a longer one. Commit authorship is a rough proxy for contribution. I did not check the commit data against the Foundation's own contributor numbers because I have no access to them.</p>
+
+    <h2 id="sources">Sources</h2>
+    <p>Data pulled on 4 November 2026 from the <a href="https://docs.github.com/en/rest/commits/commits" target="_blank" rel="noopener">GitHub commits API</a> for <a href="https://github.com/pytorch/pytorch" target="_blank" rel="noopener">pytorch/pytorch</a>, <a href="https://github.com/vllm-project/vllm" target="_blank" rel="noopener">vllm-project/vllm</a>, <a href="https://github.com/deepspeedai/DeepSpeed" target="_blank" rel="noopener">deepspeedai/DeepSpeed</a> and <a href="https://github.com/ray-project/ray" target="_blank" rel="noopener">ray-project/ray</a>. PyTorch Foundation: <a href="https://pytorch.org/blog/pytorch-foundation-in-2025-a-year-in-review/" target="_blank" rel="noopener">PyTorch Foundation in 2025: A Year in Review</a>, last updated 15 January 2026, and the <a href="https://pytorch.org/programs/ambassadors" target="_blank" rel="noopener">Ambassadors program page</a>. Job posting: <a href="https://careers.linuxfoundation.org/jobs/600455-senior-director-of-community-pytorch-foundation" target="_blank" rel="noopener">Linux Foundation careers 600455</a>.</p>
+
+  </div>
+
+  <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 32px;">Built from public GitHub data and pytorch.org. I would be glad to walk through the method or share the account list with the Foundation.</p>
+
+  <div class="button-row" style="margin-top: 40px;">
+    <a href="/work/pytorch-foundation/" class="button button-primary">Back to the pitch</a>
+    <a href="mailto:jamesspraise@gmail.com?subject=Senior%20Director%20of%20Community%20-%20James%20Praise" class="button button-secondary">Let's Talk</a>
+  </div>
+</div>
+
+<script src="/script.js?v=11"></script>
+<script>
+(function () {
+  var bar = document.getElementById('proofProgressBar');
+  function updateProgress() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.proof-toc a'));
+  var sections = tocLinks.map(function (a) {
+    return document.getElementById(a.getAttribute('href').slice(1));
+  });
+  function updateActiveToc() {
+    var current = null;
+    sections.forEach(function (sec, i) {
+      if (sec && sec.getBoundingClientRect().top <= 140) current = i;
+    });
+    tocLinks.forEach(function (a, i) {
+      a.classList.toggle('is-active', i === current);
+    });
+  }
+  window.addEventListener('scroll', updateActiveToc, { passive: true });
+  updateActiveToc();
+})();
+</script>
+</body>
+</html>

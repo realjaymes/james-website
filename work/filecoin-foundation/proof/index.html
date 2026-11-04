@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WKSZ7DQC');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A Pricing Teardown of Filecoin Onchain Cloud | James Praise</title>
+<meta name="description" content="What a buyer pays for Filecoin Onchain Cloud against Backblaze B2, Storj and four other providers, five findings, and an onramp funnel report, by James Praise. A proposal, not affiliated with the Filecoin Foundation." />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="A Pricing Teardown of Filecoin Onchain Cloud | James Praise" />
+<meta property="og:description" content="What a buyer pays for Filecoin Onchain Cloud against Backblaze B2, Storj and four other providers, five findings, and an onramp funnel report, by James Praise. A proposal, not affiliated with the Filecoin Foundation." />
+<meta property="og:url" content="https://jamespraise.xyz/work/filecoin-foundation/proof/" />
+<meta property="og:image" content="https://jamespraise.xyz/assets/images/og/work/filecoin-foundation-proof.jpg?v=20261024" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="A Pricing Teardown of Filecoin Onchain Cloud | James Praise" />
+<meta name="twitter:description" content="What a buyer pays for Filecoin Onchain Cloud against Backblaze B2, Storj and four other providers, five findings, and an onramp funnel report, by James Praise. A proposal, not affiliated with the Filecoin Foundation." />
+<meta name="twitter:image" content="https://jamespraise.xyz/assets/images/og/work/filecoin-foundation-proof.jpg?v=20261024" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+<link rel="canonical" href="https://jamespraise.xyz/work/filecoin-foundation/proof/" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=23" />
+<style>
+  .proof-wrap { max-width: 720px; margin: 0 auto; padding: 100px 0 80px; }
+  .proof-eyebrow { color: var(--color-purple); font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; font-size: 13px; margin-bottom: 10px; }
+  .proof-credit { display: flex; align-items: center; gap: 10px; margin: 20px 0 40px; }
+  .proof-credit img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+  .proof-credit span { color: var(--text-muted); font-size: 14px; }
+  .proof-credit strong { color: var(--text-primary); }
+  .proof-note { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 8px; padding: 16px 20px; font-size: 14px; color: var(--text-muted); margin-bottom: 40px; }
+  .proof-draft { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 12px; padding: 40px; margin-bottom: 40px; }
+  .proof-draft h2 { margin-top: 28px; margin-bottom: 10px; }
+  .proof-draft h2:first-child { margin-top: 0; }
+  .proof-draft h3 { margin-top: 22px; margin-bottom: 8px; font-size: 16px; }
+  .proof-draft p { line-height: 1.7; }
+  .proof-img { border-radius: 8px; border: 1px solid rgba(0,0,0,0.08); margin: 20px 0; box-shadow: 0 4px 16px rgba(0,0,0,0.06); width: 100%; }
+  .proof-back { display: inline-block; margin-bottom: 24px; font-size: 14px; }
+  .proof-quote { border-left: 3px solid var(--color-purple); padding: 4px 0 4px 22px; margin: 24px 0; font-size: 18px; font-weight: 600; line-height: 1.5; color: var(--text-primary); }
+  .proof-segments { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 20px 0; }
+  .proof-segment { background: var(--bg-page); border: 1px solid rgba(28,20,34,0.1); border-radius: 10px; padding: 14px 16px; }
+  .proof-segment strong { display: block; font-size: 14px; color: var(--text-primary); margin-bottom: 4px; }
+  .proof-segment span { font-size: 13px; color: var(--text-muted); line-height: 1.4; display: block; }
+  .proof-table-wrap { overflow-x: auto; margin: 20px 0; }
+  .proof-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .proof-table th, .proof-table td { text-align: left; padding: 10px 12px; border-bottom: 1px solid rgba(28,20,34,0.1); vertical-align: top; }
+  .proof-table th { font-size: 12px; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-muted); }
+  .proof-progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(28,20,34,0.08); z-index: 200; }
+  .proof-progress-bar { height: 100%; width: 0%; background: var(--color-purple); transition: width 0.1s linear; }
+  .proof-toc { position: fixed; top: 140px; right: 32px; width: 200px; font-size: 13px; }
+  .proof-toc-group { margin-bottom: 20px; }
+  .proof-toc-label { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-toc a { display: block; padding: 5px 0 5px 12px; border-left: 2px solid rgba(28,20,34,0.1); color: var(--text-muted); text-decoration: none; line-height: 1.4; }
+  .proof-toc a:hover { color: var(--color-purple); border-left-color: var(--color-purple); }
+  .proof-toc a.is-active { color: var(--color-purple); border-left-color: var(--color-purple); font-weight: 700; }
+  @media (max-width: 1400px) { .proof-toc { display: none; } }
+  .proof-draft h2, .proof-draft h3 { scroll-margin-top: 90px; }
+  @media (max-width: 600px) { .proof-draft { padding: 24px 18px; } }
+</style>
+</head>
+<body class="proof-page">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKSZ7DQC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="proof-progress-track"><div class="proof-progress-bar" id="proofProgressBar"></div></div>
+
+<a href="/work/filecoin-foundation/" class="pitch-exit" aria-label="Back to the Filecoin Foundation pitch">
+  <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+</a>
+
+<nav class="proof-toc" aria-label="Section navigation">
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The teardown</p>
+    <a href="#the-question">The question a buyer asks first</a>
+    <a href="#what-filecoin-lists">What Filecoin lists</a>
+    <a href="#what-the-buyer-pays">What a buyer pays</a>
+    <a href="#the-findings">Five findings</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The plan</p>
+    <a href="#the-three-pods">The three pods</a>
+    <a href="#the-onramp-funnel-report">The onramp funnel report</a>
+    <a href="#first-90-days">The first 90 days</a>
+    <a href="#first-30-days-learning">What I'd learn first</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">Reference</p>
+    <a href="#not-verified">What I could not verify</a>
+    <a href="#sources">Sources</a>
+  </div>
+</nav>
+
+<div class="container proof-wrap">
+  <a class="proof-back" href="/work/filecoin-foundation/">&larr; Back to the Filecoin Foundation pitch</a>
+
+  <p class="proof-eyebrow">A teardown for the Filecoin Foundation</p>
+  <h1>What a Buyer Pays for Filecoin Onchain Cloud, and What That Does to the Demand Plan</h1>
+
+  <div class="proof-credit">
+    <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+    <span><strong>James Praise</strong> &middot; Marketing and Go-to-Market Operator</span>
+  </div>
+
+  <p class="proof-note">Built from Filecoin's public documentation, six providers' public pricing pages, the Foundation's year in review, all read on 4 November 2026, and the <a href="https://job-boards.greenhouse.io/filecoinfoundation/jobs/4660971006" target="_blank" rel="noopener">Head of Demand &amp; Commercial Growth posting</a>. I have no access to onramp, wallet or pipeline data, so the findings describe what a buyer sees from outside, and the plan is a set of hypotheses to test, not a diagnosis. A proposal, not affiliated with the Filecoin Foundation.</p>
+
+  <div class="proof-draft">
+
+    <h2 id="the-question">The question a buyer asks first</h2>
+    <p>The Foundation's <a href="https://job-boards.greenhouse.io/filecoinfoundation/jobs/4660971006" target="_blank" rel="noopener">posting</a> asks for a first commercial growth hire who turns announcements into revenue, with 50 percent or more of pipeline sourced from inbound and ecosystem channels. An infrastructure buyer who meets a new storage option does one thing before anything else: compare its price with what they pay today. So I did that sum, using Filecoin's own documentation and the public pricing pages of six other providers.</p>
+
+    <p class="proof-quote">Filecoin Onchain Cloud lists storage at $2.50. The lowest bill a buyer can build from its documentation starts at $5.00 per tebibyte a month, and whether that beats Backblaze B2 or Storj depends on how often the data is read. I found no page that says so.</p>
+
+    <p>I found five things. Three of them change what the Web2 Object Storage pod should lead with, and one changes how the Foundation should count progress.</p>
+
+    <h2 id="what-filecoin-lists">What Filecoin lists</h2>
+    <p>The <a href="https://docs.filecoin.cloud/introduction/about/" target="_blank" rel="noopener">overview page</a> and the <a href="https://docs.filecoin.cloud/developer-guides/storage/storage-costs/" target="_blank" rel="noopener">Storage Costs page</a> give three recurring rates. A month means 30 days. Payment is in USDFC, a stablecoin backed by FIL, and the buyer prepays 30 days of service as a lockup (<a href="https://docs.filecoin.cloud/core-concepts/fwss-overview/" target="_blank" rel="noopener">Warm Storage Service overview</a>).</p>
+    <div class="proof-table-wrap"><table class="proof-table"><thead><tr><th>Component</th><th>Listed rate</th><th>Note from the docs</th></tr></thead><tbody><tr><td>Storage</td><td>$2.50 per TiB per month, per copy</td><td>The overview adds "minimum 2 copies". Empty data sets cost nothing.</td></tr><tr><td>Proving service</td><td>$0.12 per data set per month</td><td>Flat fee, added on top of the storage rate. Each copy is its own data set.</td></tr><tr><td>Content delivery egress</td><td>Up to $14 per TiB downloaded</td><td>Optional, through Filecoin Beam. About half this when served from cache.</td></tr></tbody></table></div>
+    <p>The overview describes two tiers. The base tier has retrieval "seconds to minutes" and the content delivery network (CDN) tier has retrieval in "milliseconds." I found no egress price for the base tier, so my table below shows it as not listed and does not assume it is free.</p>
+    <p>A tebibyte (TiB) is 1.0995 terabytes (TB). The competitors list prices per TB, so I converted Filecoin to TB to compare like with like.</p>
+
+    <h2 id="what-the-buyer-pays">What a buyer pays</h2>
+    <p>This table shows the monthly cost of keeping one terabyte stored, at three read patterns: never read, read in full once a month, and read in full three times a month. All prices were read on 4 November 2026. The arithmetic is mine.</p>
+    <div class="proof-table-wrap"><table class="proof-table"><thead><tr><th>Provider</th><th>No reads</th><th>Read once a month</th><th>Read three times a month</th></tr></thead><tbody><tr><td>Filecoin, base tier, 2 copies</td><td>$4.55</td><td>$4.55 plus egress not listed</td><td>$4.55 plus egress not listed</td></tr><tr><td>Filecoin, CDN tier, every read a cache miss</td><td>$4.55</td><td>$17.28</td><td>$42.75</td></tr><tr><td>Filecoin, CDN tier, half the egress price</td><td>$4.55</td><td>$10.91</td><td>$23.65</td></tr><tr><td><a href="https://www.backblaze.com/cloud-storage/pricing" target="_blank" rel="noopener">Backblaze B2</a></td><td>$6.95</td><td>$6.95</td><td>$6.95</td></tr><tr><td><a href="https://www.storj.io/pricing" target="_blank" rel="noopener">Storj Standard</a></td><td>$7.00</td><td>$14.00</td><td>$28.00</td></tr><tr><td><a href="https://wasabi.com/pricing" target="_blank" rel="noopener">Wasabi</a></td><td>$7.99</td><td>$7.99</td><td>$7.99</td></tr><tr><td><a href="https://developers.cloudflare.com/r2/pricing/" target="_blank" rel="noopener">Cloudflare R2</a></td><td>$15.00</td><td>$15.00</td><td>$15.00</td></tr><tr><td><a href="https://fil.one/pricing" target="_blank" rel="noopener">Fil One</a></td><td>$5.99</td><td>$5.99</td><td>$5.99</td></tr><tr><td><a href="https://www.akave.com/pricing" target="_blank" rel="noopener">Akave Cloud</a></td><td>$14.99</td><td>$14.99</td><td>$14.99</td></tr></tbody></table></div>
+    <p>How each row was built. Filecoin is $5.00 per TiB for two copies, converted to $4.55 per TB, with the flat $0.12 data set fee ignored because it is small at scale. CDN egress is $14 per TiB, or $12.73 per TB, and half of that when cached. Backblaze B2 charges $6.95 per TB and gives free egress up to 3 times the average data stored, then $0.01 per GB. Storj Standard charges $7 per TB stored and $7 per TB of egress. Wasabi charges no egress, with a 90 day minimum storage duration and a 1 TB minimum per account. Cloudflare R2 charges $0.015 per GB stored and no egress. Fil One charges $5.99 per TB with a $5.99 monthly minimum and $0 egress "subject to reasonable use." Akave charges $14.99 and lists no egress or request fees. Akave's FAQ writes its unit as TiB, and I used the figure as listed.</p>
+    <p>On the CDN tier, Filecoin stays under Backblaze B2 only while monthly reads stay below about 19 percent of the data stored if every read misses the cache, and about 38 percent if half the egress price applies.</p>
+
+    <h2 id="the-findings">Five findings</h2>
+
+    <h3 id="finding-1">Finding 1: The listed price is per copy, and the minimum is two copies</h3>
+    <p>The overview lists $2.50 per TiB "per copy" with "minimum 2 copies." The Storage Costs page says the default two-copy setup "roughly doubles the recurring cost." The homepage mentions "2 independent replicas across separate storage providers" in its mainnet section. The entry price a buyer meets in the software development kit is therefore $5.00, plus $0.24 a month in flat fees. A buyer who sees $2.50 in a deck and $5.00 in a quote will wonder what else moved.</p>
+    <p>The <a href="https://www.filecoin.cloud" target="_blank" rel="noopener">homepage</a> carries no price and no comparison with any named cloud. Its cost question has no answer in the page text I could read. The fix is one price page that shows the two-copy price first and puts two named alternatives beside it.</p>
+
+    <h3 id="finding-2">Finding 2: Egress decides who Filecoin beats</h3>
+    <p>For data that is stored and rarely read, such as archives, backups and datasets, Filecoin's $4.55 per TB is 35 percent under Backblaze B2 and Storj. For data a customer reads often, the optional CDN tier at up to $14 per TiB is the most expensive row in the table in the worst case, while Backblaze B2, Wasabi, Cloudflare R2, Fil One and Akave charge nothing for the same reads, within their stated limits. So the Web2 buyer who matters most should be asked one thing before any price is shown: how often the data is read.</p>
+
+    <h3 id="finding-3">Finding 3: A buyer who arrives through an onramp sees a different price list</h3>
+    <p>The homepage lists Akave Cloud and Storacha as projects running on Filecoin Onchain Cloud. Akave's <a href="https://www.akave.com/pricing" target="_blank" rel="noopener">pricing page</a> shows $14.99 per TB and zero egress and request fees, and does not name Filecoin. The <a href="https://storacha.network/pricing" target="_blank" rel="noopener">Storacha pricing address</a> redirects with a permanent (301) redirect to <a href="https://fil.one/pricing" target="_blank" rel="noopener">fil.one/pricing</a>, which lists $5.99 per TB and $0 egress, shows no operator name, does not describe itself as built on Filecoin, and says "We do not currently accept FIL." I could not tell from either page which network service sits underneath.</p>
+    <p>That makes the onramps the likely place where a Web2 buyer first sees a Filecoin-backed price, and it is a dollar price. The network's $2.50 and the buyer's $5.99 or $14.99 are different numbers set by different parties. A demand plan that tracks only the network price will miss what the buyer actually sees.</p>
+
+    <h3 id="finding-4">Finding 4: The deal counts in the year in review are testnet counts</h3>
+    <p>The <a href="https://filecoin.io/blog/filecoin-in-2025-year-in-review" target="_blank" rel="noopener">2025 year in review</a> reports "nearly 4,000 onchain service deals" from 170+ wallets and 500+ developers on the Synapse SDK. It also says that testnet transactions "have locked 4.5k test-USDFC in ~8,000 onchain storage deals." That is about $0.56 per deal in test tokens. It is real activity and a fair measure of developer interest, but none of it is revenue, and the review gives no revenue figure. The posting's line "Announcements don't count. Revenue does." needs a definition of a paid deal that excludes test tokens, and the report below uses one.</p>
+
+    <h3 id="finding-5">Finding 5: A Web2 buyer's first payment is a wallet task</h3>
+    <p>To store data a buyer funds an account with USDFC, approves the Warm Storage operator, and keeps 30 days of prepayment locked. The Storage Costs page says that if the account falls underfunded, the provider may terminate the agreement. Each step is a question for a procurement or security team. An onramp that quotes dollars and does not accept FIL, as Fil One's page does, can take those steps away from the buyer. That is a reason to measure onramps separately from direct wallets.</p>
+
+    <h2 id="the-three-pods">What this means for the three pods</h2>
+    <p>The year in review names three product-market-fit pods. The table is my reading of the price sum for each. These are hypotheses to test against win and loss notes, not findings.</p>
+    <div class="proof-table-wrap"><table class="proof-table"><thead><tr><th>Pod</th><th>Buyer</th><th>What the price sum says</th><th>Claim I would test first</th></tr></thead><tbody><tr><td>Web3 Builders</td><td>A developer who already holds tokens and wants storage, proof and payment in one set of tools</td><td>Price matters less than time to first working deal. They already pay in tokens.</td><td>Store, verify and pay from one wallet, in a few lines of code. Measure time from install to first deal.</td></tr><tr><td>Web2 Object Storage</td><td>An infrastructure lead with procurement, security review and an incumbent</td><td>Wins on low-read data, loses on read-heavy data, and sees the onramp price, not the network price.</td><td>Verifiable archives and backups that are read less than they are stored. Needs one reference customer and a service level agreement (SLA).</td></tr><tr><td>Public Data</td><td>An archive or research institution keeping data for decades</td><td>Reads are light and retention is long, so the price sum favours Filecoin most.</td><td>Permanence and proof of possession, with two independent copies. Needs one named archive partner telling the story.</td></tr></tbody></table></div>
+    <p>Each row would become one page, tested in outbound to 100 named accounts per pod, and the claim that earns replies stays.</p>
+
+    <h2 id="the-onramp-funnel-report">The onramp funnel report</h2>
+    <p>My first project would be one report that follows each onramp from wallet to first paid deal to repeat deal. Without it, the 50 percent inbound goal has no baseline. These are the stages and what each one decides.</p>
+    <div class="proof-table-wrap"><table class="proof-table"><thead><tr><th>Stage</th><th>Definition I would propose</th><th>Who holds the data</th><th>Decision it supports</th></tr></thead><tbody><tr><td>Wallet or account created</td><td>A new wallet funded with USDFC, or a new account at an onramp</td><td>Onchain data, plus each onramp</td><td>Which onramps bring new buyers</td></tr><tr><td>First paid deal</td><td>A deal paid in real money, not test tokens, with the 30 day lockup funded</td><td>Onchain data, plus onramp invoices</td><td>Which pod carries the inbound goal</td></tr><tr><td>Repeat deal</td><td>A second paid deal, or a renewal, within 90 days of the first</td><td>Onchain data, plus onramp invoices</td><td>Pilot or customer, and where to invest</td></tr><tr><td>Revenue per onramp and pod</td><td>Paid amount by month, split by pod</td><td>Onramp reports to the Foundation</td><td>Which two onramps get more weight</td></tr></tbody></table></div>
+    <p>The docs say every transaction is onchain, so the part of this report that covers direct wallets should be readable by anyone. The onramp part needs each partner to share counts, and only the Foundation can ask for them. I have not built the direct wallet part, because I could not confirm the contract addresses from public pages.</p>
+
+    <h2 id="first-90-days">The first 90 days</h2>
+    <p>In the first 30 days I would agree the stage definitions above with the Foundation and each onramp, publish one price page with the two-copy price first, and tier a named account list for each pod. In days 31 to 60 I would ship the first funnel report and run outbound to the slowest pod, enterprise object storage, myself. In days 61 to 90 I would score every integration and marketplace listing on activated developers and paid deals per quarter, move effort to the ones that produce them, and set the first inbound target per pod from the baseline. I would not promise a pipeline number before I see that baseline.</p>
+
+    <h2 id="first-30-days-learning">What I would want to learn in the first 30 days</h2>
+    <p>Which pod the Foundation expects to carry the inbound target. What a paid deal means today, and how much testnet volume has converted on mainnet. Which onramps report their conversion numbers and which do not. Who owns enterprise conversations now, and what budget, tools and data access come with the role. Whether the two-copy default can be changed, and what share of buyers change it.</p>
+
+    <h2 id="not-verified">What I could not verify</h2>
+    <p>I could not find an egress price for the base tier, so the table does not assume one. I do not know the share of CDN reads served from cache. I could not read an answer to the homepage's cost question. I could not tell who operates Fil One or which network service sits under Fil One or Akave. I have no access to onramp, wallet or pipeline data, so every number about the funnel is a definition and not a result. Prices change, and the table reflects the pages as read on 4 November 2026.</p>
+
+    <h2 id="sources">Sources</h2>
+    <p>All pages read on 4 November 2026. Filecoin: <a href="https://www.filecoin.cloud" target="_blank" rel="noopener">Filecoin Onchain Cloud homepage</a>, <a href="https://docs.filecoin.cloud/introduction/about/" target="_blank" rel="noopener">About Filecoin Onchain Cloud</a>, <a href="https://docs.filecoin.cloud/developer-guides/storage/storage-costs/" target="_blank" rel="noopener">Storage Costs</a>, <a href="https://docs.filecoin.cloud/core-concepts/fwss-overview/" target="_blank" rel="noopener">Filecoin Warm Storage Service</a> and the <a href="https://filecoin.io/blog/filecoin-in-2025-year-in-review" target="_blank" rel="noopener">Filecoin in 2025 year in review</a>, published 12 January 2026. Competitors: <a href="https://www.backblaze.com/cloud-storage/pricing" target="_blank" rel="noopener">Backblaze B2</a>, <a href="https://www.storj.io/pricing" target="_blank" rel="noopener">Storj</a>, <a href="https://wasabi.com/pricing" target="_blank" rel="noopener">Wasabi</a>, <a href="https://developers.cloudflare.com/r2/pricing/" target="_blank" rel="noopener">Cloudflare R2</a>, <a href="https://www.akave.com/pricing" target="_blank" rel="noopener">Akave</a>, <a href="https://fil.one/pricing" target="_blank" rel="noopener">Fil One</a> and <a href="https://storacha.network/pricing" target="_blank" rel="noopener">Storacha</a>. Job posting: <a href="https://job-boards.greenhouse.io/filecoinfoundation/jobs/4660971006" target="_blank" rel="noopener">Greenhouse 4660971006</a>.</p>
+
+  </div>
+
+  <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 32px;">Built from what is publicly live on the Filecoin, Backblaze, Storj, Wasabi, Cloudflare, Akave and Fil One sites. I would be glad to walk through the reasoning behind any part of it.</p>
+
+  <div class="button-row" style="margin-top: 40px;">
+    <a href="/work/filecoin-foundation/" class="button button-primary">Back to the pitch</a>
+    <a href="mailto:jamesspraise@gmail.com?subject=Head%20of%20Demand%20%26%20Commercial%20Growth%20-%20James%20Praise" class="button button-secondary">Let's Talk</a>
+  </div>
+</div>
+
+<script src="/script.js?v=11"></script>
+<script>
+(function () {
+  var bar = document.getElementById('proofProgressBar');
+  function updateProgress() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.proof-toc a'));
+  var sections = tocLinks.map(function (a) {
+    return document.getElementById(a.getAttribute('href').slice(1));
+  });
+  function updateActiveToc() {
+    var current = null;
+    sections.forEach(function (sec, i) {
+      if (sec && sec.getBoundingClientRect().top <= 140) current = i;
+    });
+    tocLinks.forEach(function (a, i) {
+      a.classList.toggle('is-active', i === current);
+    });
+  }
+  window.addEventListener('scroll', updateActiveToc, { passive: true });
+  updateActiveToc();
+})();
+</script>
+</body>
+</html>
