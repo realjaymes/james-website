@@ -190,6 +190,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .calc[data-layout] .calc-funnel em { margin: 0 0 0 auto; }
     .calc[data-layout] .calc-funnel div:not(:last-child)::after { content: "\2193"; right: auto; left: 28px; top: auto; bottom: -15px; transform: none; font-size: 12px; }
   }
+
+  .fl { margin: 22px 0 28px; }
+  .fl-box { display: block; }
+  .fl-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .fl figcaption { font-size: 14px; line-height: 1.55; margin-top: 12px; color: var(--text-muted); }
+  .fl-h { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin: 0 0 8px; }
+  .fl-card { background: var(--bg-page); border: 1px solid rgba(28,20,34,0.14); border-radius: 10px; padding: 10px 12px; font-size: 13px; line-height: 1.45; color: var(--text-muted); }
+  .fl-card strong { display: block; font-size: 13.5px; color: var(--text-primary); margin-bottom: 2px; }
+  .fl-card + .fl-card { margin-top: 8px; }
+  .fl-card.is-later { border-style: dashed; }
+  .fl-step { background: var(--color-purple); color: #fff; border-radius: 10px; padding: 14px; font-size: 13px; line-height: 1.45; }
+  .fl-step em { display: block; font-style: normal; font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; opacity: 0.85; margin-bottom: 6px; }
+  .fl-step strong { display: block; font-size: 15px; color: #fff; margin-bottom: 6px; }
+  .fl-arrow { display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 900; color: var(--text-muted); }
+  .fl-arrow::before { content: "\2192"; }
+  .fl-tier { border: 2px solid var(--color-purple); border-radius: 10px; background: var(--bg-page); padding: 10px 12px; font-size: 13px; line-height: 1.45; color: var(--text-muted); }
+  .fl-tier + .fl-tier { margin-top: 8px; }
+  .fl-tier b { display: block; font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-purple); }
+  .fl-tier strong { display: block; font-size: 14px; color: var(--text-primary); margin: 2px 0 4px; }
+  .fl-tier span { display: block; }
+  .fl-tier span + span { margin-top: 3px; }
+  .fl-tier.t2 { border-style: dashed; }
+  .fl-tier.t3 { border-color: rgba(28,20,34,0.3); }
+  .fl-a-grid { display: grid; grid-template-columns: minmax(0, 1fr) 26px minmax(0, 0.85fr) 26px minmax(0, 1.2fr); align-items: center; }
+  .fl-a-grid > div:not(.fl-arrow) { align-self: stretch; }
+  .fl-a-grid > .fl-mid { display: flex; flex-direction: column; justify-content: center; }
+  @media (max-width: 720px) {
+    .fl-a-grid { grid-template-columns: minmax(0, 1fr); gap: 0; }
+    .fl-a-grid > .fl-mid { display: block; }
+    .fl-arrow { height: 30px; }
+    .fl-arrow::before { content: "\2193"; }
+  }
 </style>
 </head>
 <body class="proof-page">
@@ -351,6 +383,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="aw-row"><div class="aw-head"><div class="aw-bar" style="--w:76%"><strong>Problem aware</strong></div><p><em>Feels the pain.</em></p></div><div class="aw-chips"><span class="chip cre"><b>Create</b> Problem content and SEO · 15</span><span class="chip cre"><b>Create</b> Founder content on LinkedIn · 13</span><span class="chip cre"><b>Create</b> X replies, alongside LinkedIn · 8</span><span class="chip cre"><b>Create</b> Community · 11</span><span class="chip cre"><b>Create</b> Newsletter · 11</span><span class="chip cre"><b>Create</b> Hosted dinners · 12</span><span class="chip cre"><b>Create</b> City mixers · 11</span><span class="chip cre"><b>Create</b> Reddit answers · 5</span><span class="chip cre"><b>Create</b> Creators and customer stories · 7</span></div></div>
       <div class="aw-row"><div class="aw-head"><div class="aw-bar" style="--w:100%"><strong>Unaware</strong></div><p><em>Does not know the problem has a name.</em></p></div><div class="aw-chips"><span class="chip cre"><b>Create</b> IT week · 8</span><span class="chip cre"><b>Create</b> January gift boxes · 10</span><span class="chip cre"><b>Create</b> Sponsored booths · 6</span></div></div>
     </div>
+
+<h3>How every channel feeds one outbound flow</h3>
+    <p>Signal-led outbound ties these channels together. Everyone a channel reaches, whether they engage with a founder post, visit your site, download a guide or come to a mixer, goes into one list scored on fit. The score sets how much effort goes into each lead, and the source and the content each person responded to give your team a relevant reason to reach out.</p>
+    <figure class="fl fl-a" id="flow-a">
+      <div class="fl-box" role="img" aria-labelledby="fla-t fla-d">
+        <span class="fl-sr" id="fla-t">Every lead source feeds one scoring step that splits into three tiers</span>
+        <span class="fl-sr" id="fla-d">Leads from warm signals, the named account list, events, the podcast, paid ads and AI search, and later webinars all enter one step that scores fit out of 5 and reads the source and content. Tier 1 is by hand, Tier 2 is semi-automated and Tier 3 is fully automated email.</span>
+        <div class="fl-a-grid">
+          <div>
+            <p class="fl-h">Where leads come from</p>
+            <div class="fl-card"><strong>Warm signals</strong>Post engagers, website visitors, newsletter subscribers, guide and tool downloaders</div>
+            <div class="fl-card"><strong>Named account list</strong>Cold, with a trigger</div>
+            <div class="fl-card"><strong>Events and dinners</strong>Mixer and dinner guests, event attendees</div>
+            <div class="fl-card"><strong>Podcast</strong>Guests and listeners who engage</div>
+            <div class="fl-card"><strong>Paid ads and AI search</strong>People who click through</div>
+            <div class="fl-card is-later"><strong>Webinars</strong>A future input only</div>
+          </div>
+          <div class="fl-arrow" aria-hidden="true"></div>
+          <div class="fl-mid">
+            <div class="fl-step"><em>One flow</em><strong>Score on fit, read the source and content</strong>Fit is out of 5. The source and the content they responded to set the message angle.</div>
+          </div>
+          <div class="fl-arrow" aria-hidden="true"></div>
+          <div>
+            <p class="fl-h">What each lead gets</p>
+            <div class="fl-tier t1"><b>Tier 1 · fit 4 or 5</b><strong>By hand</strong><span>Personal emails, LinkedIn, calls, gifts</span><span>Sales team, with marketing prep</span></div>
+            <div class="fl-tier t2"><b>Tier 2 · fit 3 to 3.5</b><strong>Semi-automated</strong><span>Email, LinkedIn, calls</span><span>Marketing runs it, a person approves</span></div>
+            <div class="fl-tier t3"><b>Tier 3 · fit under 3</b><strong>Fully automated</strong><span>Email only</span><span>Marketing</span></div>
+          </div>
+        </div>
+      </div>
+      <figcaption>Every source lands in the same scoring step. The score on fit sets the tier, and the source and content set the first message. Tier 1 is done by hand, Tier 2 is semi-automated and Tier 3 is email only.</figcaption>
+    </figure>
+
 
     
     <p class="section-label">Question 3</p>
