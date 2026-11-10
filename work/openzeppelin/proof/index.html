@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WKSZ7DQC');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A Proof Map for OpenZeppelin's Institutional Buyers | James Praise</title>
+<meta name="description" content="A proof map for OpenZeppelin's six financial-institution pages, with a sample bank one-pager, by James Praise." />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="A Proof Map for OpenZeppelin's Institutional Buyers | James Praise" />
+<meta property="og:description" content="A proof map for OpenZeppelin's six financial-institution pages, with a sample bank one-pager, by James Praise." />
+<meta property="og:url" content="https://jamespraise.xyz/work/openzeppelin/proof/" />
+<meta property="og:image" content="https://jamespraise.xyz/assets/images/og/work/openzeppelin-proof.jpg?v=20261024" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="A Proof Map for OpenZeppelin's Institutional Buyers | James Praise" />
+<meta name="twitter:description" content="A proof map for OpenZeppelin's six financial-institution pages, with a sample bank one-pager, by James Praise." />
+<meta name="twitter:image" content="https://jamespraise.xyz/assets/images/og/work/openzeppelin-proof.jpg?v=20261024" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+<link rel="canonical" href="https://jamespraise.xyz/work/openzeppelin/proof/" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=23" />
+<style>
+  .proof-wrap { max-width: 720px; margin: 0 auto; padding: 100px 0 80px; }
+  .proof-eyebrow { color: var(--color-purple); font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; font-size: 13px; margin-bottom: 10px; }
+  .proof-credit { display: flex; align-items: center; gap: 10px; margin: 20px 0 40px; }
+  .proof-credit img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+  .proof-credit span { color: var(--text-muted); font-size: 14px; }
+  .proof-credit strong { color: var(--text-primary); }
+  .proof-note { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 8px; padding: 16px 20px; font-size: 14px; color: var(--text-muted); margin-bottom: 40px; }
+  .proof-draft { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 12px; padding: 40px; margin-bottom: 56px; }
+  .proof-draft p { line-height: 1.7; }
+  .proof-body p, .proof-body li { line-height: 1.7; }
+  .proof-body h2 { margin-top: 40px; margin-bottom: 12px; }
+  .proof-body strong { font-weight: 700; }
+  .proof-back { display: inline-block; margin-bottom: 24px; font-size: 14px; }
+  .section-label { font-size: 13px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-table-wrap { overflow-x: auto; margin: 20px 0; }
+  .proof-table { width: 100%; border-collapse: collapse; font-size: 13px; background: var(--bg-page); border-radius: 10px; overflow: hidden; }
+  .proof-table th { background: var(--bg-surface); text-align: left; padding: 10px 12px; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-muted); border-bottom: 1px solid rgba(28,20,34,0.1); }
+  .proof-table td { padding: 10px 12px; border-bottom: 1px solid rgba(28,20,34,0.08); color: var(--text-primary); line-height: 1.5; vertical-align: top; }
+  .proof-table tr:last-child td { border-bottom: none; }
+  .proof-needed { color: var(--color-purple); font-weight: 700; }
+  .proof-toc { position: fixed; top: 140px; right: 32px; width: 200px; font-size: 13px; }
+  .proof-toc-group { margin-bottom: 20px; }
+  .proof-toc-label { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-toc a { display: block; padding: 5px 0 5px 12px; border-left: 2px solid rgba(28,20,34,0.1); color: var(--text-muted); text-decoration: none; line-height: 1.4; }
+  .proof-toc a:hover { color: var(--color-purple); border-left-color: var(--color-purple); }
+  .proof-toc a.is-active { color: var(--color-purple); border-left-color: var(--color-purple); font-weight: 700; }
+  @media (max-width: 1400px) { .proof-toc { display: none; } }
+  .proof-progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(28,20,34,0.08); z-index: 200; }
+  .proof-progress-bar { height: 100%; width: 0%; background: var(--color-purple); transition: width 0.1s linear; }
+</style>
+</head>
+<body class="proof-page">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKSZ7DQC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="proof-progress-track"><div class="proof-progress-bar" id="proofProgressBar"></div></div>
+
+<a href="/work/openzeppelin/" class="pitch-exit" aria-label="Back to the OpenZeppelin pitch">
+  <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+</a>
+
+<nav class="proof-toc" aria-label="Section navigation">
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The map</p>
+    <a href="#found">What I found</a>
+    <a href="#map">The map</a>
+    <a href="#one-pager">A sample bank one-pager</a>
+    <a href="#current">How it stays current</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">Appendix</p>
+    <a href="#questions">What I'd want to know</a>
+  </div>
+</nav>
+
+<div class="container proof-wrap">
+  <a class="proof-back" href="/work/openzeppelin/">&larr; Back to the OpenZeppelin pitch</a>
+
+  <p class="proof-eyebrow">A proof map for OpenZeppelin</p>
+  <h1>Six buyer pages, one set of proof</h1>
+  <div class="proof-credit">
+    <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+    <span><strong>James Praise</strong> &middot; Product marketing, go-to-market and AI systems</span>
+  </div>
+
+  <p class="proof-note">I built this from openzeppelin.com only, read on 10 November 2026. I have seen none of your internal proof, so the items marked "proof needed" are where your own data would go.</p>
+
+  <div class="proof-body">
+    <h2 id="found">What I found</h2>
+    <p>OpenZeppelin now has a page for each institutional buyer: <a href="https://www.openzeppelin.com/solutions/banks" target="_blank" rel="noopener">banks</a>, <a href="https://www.openzeppelin.com/solutions/asset-managers" target="_blank" rel="noopener">asset managers</a>, <a href="https://www.openzeppelin.com/solutions/payment-networks" target="_blank" rel="noopener">payment networks</a>, <a href="https://www.openzeppelin.com/solutions/tokenization-platforms" target="_blank" rel="noopener">tokenization platforms</a>, <a href="https://www.openzeppelin.com/solutions/capital-markets-infrastructure" target="_blank" rel="noopener">capital markets infrastructure</a>, and <a href="https://www.openzeppelin.com/solutions/fintechs-and-neobanks" target="_blank" rel="noopener">fintechs and neobanks</a>. Each page speaks to its buyer's risks in that buyer's language. The proof underneath is the same everywhere.</p>
+    <p>All six pages carry the same two quotes, from Jason Guthrie at WisdomTree and Zach Short at DTCC. None links to a customer story. Of the ten <a href="https://www.openzeppelin.com/customer-stories" target="_blank" rel="noopener">customer stories</a> on the site, two are financial institutions, Crédit Agricole CACEIS and WisdomTree. The strongest institutional story, <a href="https://www.openzeppelin.com/customer-stories/credit-agricole-caceis" target="_blank" rel="noopener">CACEIS Bank's euro stablecoin</a>, does not appear on the banks page.</p>
+    <p>One number also changes inside each page. The body copy says 10 of the top 10 tokenized money market funds build on OpenZeppelin Contracts, and the stat block on the same page says 9 of the top 10. The <a href="https://www.openzeppelin.com/" target="_blank" rel="noopener">home page</a> uses 9. A risk reader who sees a figure change on one page starts checking the rest.</p>
+
+    <h2 id="map">The map</h2>
+    <div class="proof-table-wrap">
+      <table class="proof-table">
+        <thead><tr><th>Segment page</th><th>Proof on the page today</th><th>Strongest proof already public</th><th>Proof to collect next</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Banks</strong></td><td>WisdomTree and DTCC quotes</td><td>CACEIS Bank, euro stablecoin EURXT ahead of MiCA issuance: no critical, high or medium issues, 18 findings and recommendations, 48 hours from review to first report</td><td>A bank reference on deposit tokens or settlement</td></tr>
+          <tr><td><strong>Asset managers</strong></td><td>Same two quotes</td><td>WisdomTree, tokenized funds on Ethereum and Solana: 4 critical findings resolved before deployment, $790M in tokenized fund assets onchain. ERC-7540 asynchronous vaults with the Tokenized Vault Foundation</td><td>A second fund manager, ideally on a money market fund</td></tr>
+          <tr><td><strong>Payment networks</strong></td><td>Same two quotes</td><td>USDT0: 110 issues found, 0 security incidents since launch, 20+ networks secured</td><td>A payment network or payment provider reference</td></tr>
+          <tr><td><strong>Tokenization platforms</strong></td><td>Same two quotes</td><td>ONCHAINID rebuilt as a smart account for regulated assets with T-REX Network. RWA Wizard for issuing regulated assets on Stellar</td><td>A platform customer quote</td></tr>
+          <tr><td><strong>Capital markets infrastructure</strong></td><td>Same two quotes</td><td>The DTCC quote belongs here most of all. Canton support and the Chainlink partnership</td><td>A DTCC story, if DTCC agrees</td></tr>
+          <tr><td><strong>Fintechs and neobanks</strong></td><td>Same two quotes</td><td>9 of the top 10 stablecoins build on OpenZeppelin Contracts</td><td>A fintech launch reference</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>The rule behind the map: every segment page leads with the proof closest to that buyer, even when the best available item is a launch or a partnership. The shared quotes move to a single trust block lower on each page.</p>
+
+    <h2 id="one-pager">A sample: the bank one-pager</h2>
+    <p>This is the shape of the per-account kit Sales would send after a first call with a bank. Items marked <span class="proof-needed">[proof needed]</span> need internal data.</p>
+    <div class="proof-draft">
+      <p><strong>Take your digital asset program from pilot to production, with assurance your risk committee can sign.</strong></p>
+      <p><strong>The problem.</strong> Tokenized deposits, settlement and collateral are moving from innovation teams into core operations. The question is no longer whether the code works. It is whether the program meets the security, compliance and risk standards the bank is held to, across its whole life.</p>
+      <p><strong>What OpenZeppelin covers.</strong> Architecture and standards before code is written, audits across contracts, infrastructure and operations, Technical Risk Assessments built for MiCA, DORA and Basel reviews, and monitoring after launch. Available as a defined project or the Continuous Security Program.</p>
+      <p><strong>Proof for a bank.</strong> CACEIS Bank had its euro stablecoin audited ahead of issuance under MiCA. The review found no critical, high or medium issues and delivered the first report within 48 hours. <span class="proof-needed">[proof needed: a second bank reference on deposit tokens or settlement]</span></p>
+      <p><strong>Why OpenZeppelin.</strong> 9 of the top 10 stablecoins build on OpenZeppelin Contracts. SOC 2 Type II. A seat at ISO, the Enterprise Ethereum Alliance and Linux Foundation Decentralized Trust. <span class="proof-needed">[proof needed: one sourced, dated money market fund figure]</span></p>
+      <p><strong>For this account.</strong> <span class="proof-needed">[the bank's own program, regulator and timeline, filled per account]</span></p>
+      <p><strong>Next step.</strong> A scoping call with a Dedicated Blockchain Architect.</p>
+    </div>
+
+    <h2 id="current">How it stays current</h2>
+    <p>A map like this goes stale the week a new story publishes. The workflow I would build keeps it current.</p>
+    <p>First, when a customer story, launch, partnership or research post goes live, an agent reads it and tags the segments it proves.</p>
+    <p>Second, it drafts the change: a new proof line for each tagged segment page and an updated proof block for each segment's one-pager.</p>
+    <p>Third, it checks every figure against one source list, so a number that appears two ways gets flagged before it ships.</p>
+    <p>Fourth, a marketer approves each change before it reaches the website or a sales kit. Nothing publishes without a person signing off.</p>
+    <p>The Chainlink partnership (20 October) and confidential balances on Stellar (22 October), both on your <a href="https://www.openzeppelin.com/news" target="_blank" rel="noopener">news page</a>, would have been the first two items through it.</p>
+
+    <h2 id="questions">Appendix: what I'd want to know</h2>
+    <p>Which institutional customers have cleared their names for use, and on which channels.</p>
+    <p>Whether S&amp;P Global's brand and compliance review now applies to customer proof.</p>
+    <p>Which segment Sales is working hardest this quarter, so the first one-pager goes where deals are.</p>
+  </div>
+
+  <div class="button-row" style="margin-top: 40px;">
+    <a href="mailto:jamesspraise@gmail.com?subject=Lead%20Product%20Marketer%2C%20Financial%20Institutions%20-%20James%20Praise" class="button button-primary">Let's Talk</a>
+    <a href="/work/openzeppelin/" class="button button-secondary">Back to the Pitch</a>
+  </div>
+</div>
+
+<script src="/script.js?v=11"></script>
+<script>
+(function () {
+  var bar = document.getElementById('proofProgressBar');
+  var links = Array.prototype.slice.call(document.querySelectorAll('.proof-toc a'));
+  var targets = links.map(function (a) { return document.querySelector(a.getAttribute('href')); });
+  function onScroll() {
+    var doc = document.documentElement;
+    var max = doc.scrollHeight - window.innerHeight;
+    if (bar) bar.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + '%';
+    var active = -1;
+    targets.forEach(function (t, i) { if (t && t.getBoundingClientRect().top < 160) active = i; });
+    links.forEach(function (a, i) { a.classList.toggle('is-active', i === active); });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+</script>
+</body>
+</html>
