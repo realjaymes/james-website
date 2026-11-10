@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WKSZ7DQC');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A Hiring-Signal Scan for Niuro | James Praise</title>
+<meta name="description" content="A working scan of 40 US software companies' public job feeds that ranks which ones have engineering roles stuck open, with what broke and how it was fixed. By James Praise." />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="A Hiring-Signal Scan for Niuro | James Praise" />
+<meta property="og:description" content="A working scan of 40 US software companies' public job feeds that ranks which ones have engineering roles stuck open, with what broke and how it was fixed. By James Praise." />
+<meta property="og:url" content="https://jamespraise.xyz/work/niuro/proof/" />
+<meta property="og:image" content="https://jamespraise.xyz/assets/images/og/work/niuro-proof.jpg?v=20261024" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="A Hiring-Signal Scan for Niuro | James Praise" />
+<meta name="twitter:description" content="A working scan of 40 US software companies' public job feeds that ranks which ones have engineering roles stuck open, with what broke and how it was fixed. By James Praise." />
+<meta name="twitter:image" content="https://jamespraise.xyz/assets/images/og/work/niuro-proof.jpg?v=20261024" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+<link rel="canonical" href="https://jamespraise.xyz/work/niuro/proof/" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=23" />
+<style>
+  .proof-wrap { max-width: 760px; margin: 0 auto; padding: 100px 0 80px; }
+  .proof-eyebrow { color: var(--color-purple); font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; font-size: 13px; margin-bottom: 10px; }
+  .proof-credit { display: flex; align-items: center; gap: 10px; margin: 20px 0 40px; }
+  .proof-credit img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+  .proof-credit span { color: var(--text-muted); font-size: 14px; }
+  .proof-credit strong { color: var(--text-primary); }
+  .proof-note { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 8px; padding: 16px 20px; font-size: 14px; color: var(--text-muted); margin-bottom: 40px; }
+  .proof-body p, .proof-body li { line-height: 1.7; }
+  .proof-body ol, .proof-body ul { padding-left: 22px; margin: 12px 0 18px; }
+  .proof-body h2 { margin-top: 44px; margin-bottom: 12px; }
+  .proof-body h3 { margin-top: 28px; margin-bottom: 8px; font-size: 18px; }
+  .proof-body strong { font-weight: 700; }
+  .proof-back { display: inline-block; margin-bottom: 24px; font-size: 14px; }
+  .proof-table-wrap { overflow-x: auto; margin: 20px 0; }
+  .proof-table { width: 100%; border-collapse: collapse; font-size: 13px; background: var(--bg-page); border-radius: 10px; overflow: hidden; }
+  .proof-table th { background: var(--bg-surface); text-align: left; padding: 10px 12px; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-muted); border-bottom: 1px solid rgba(28,20,34,0.1); }
+  .proof-table td { padding: 9px 12px; border-bottom: 1px solid rgba(28,20,34,0.08); color: var(--text-primary); line-height: 1.5; vertical-align: top; }
+  .proof-table tr:last-child td { border-bottom: none; }
+  .proof-body code { font-size: 13px; background: var(--bg-surface); padding: 2px 5px; border-radius: 4px; }
+  .proof-toc { position: fixed; top: 140px; right: 32px; width: 200px; font-size: 13px; }
+  .proof-toc-group { margin-bottom: 20px; }
+  .proof-toc-label { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-toc a { display: block; padding: 5px 0 5px 12px; border-left: 2px solid rgba(28,20,34,0.1); color: var(--text-muted); text-decoration: none; line-height: 1.4; }
+  .proof-toc a:hover { color: var(--color-purple); border-left-color: var(--color-purple); }
+  .proof-toc a.is-active { color: var(--color-purple); border-left-color: var(--color-purple); font-weight: 700; }
+  @media (max-width: 1400px) { .proof-toc { display: none; } }
+  .proof-progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(28,20,34,0.08); z-index: 200; }
+  .proof-progress-bar { height: 100%; width: 0%; background: var(--color-purple); transition: width 0.1s linear; }
+</style>
+</head>
+<body class="proof-page">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKSZ7DQC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="proof-progress-track"><div class="proof-progress-bar" id="proofProgressBar"></div></div>
+
+<a href="/work/niuro/" class="pitch-exit" aria-label="Back to the Niuro pitch">
+  <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+</a>
+
+<nav class="proof-toc" aria-label="Section navigation">
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The scan</p>
+    <a href="#built">What I built</a>
+    <a href="#found">What it found</a>
+    <a href="#broke">What broke</a>
+    <a href="#niuro">Running it at Niuro</a>
+    <a href="#tests">First tests</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">Appendix</p>
+    <a href="#all">Every company scored</a>
+    <a href="#code">Code and data</a>
+  </div>
+</nav>
+
+<div class="container proof-wrap">
+  <a class="proof-back" href="/work/niuro/">&larr; Back to the Niuro pitch</a>
+
+  <p class="proof-eyebrow">Built for Niuro</p>
+  <h1>A hiring-signal scan, what it found and what broke</h1>
+  <div class="proof-credit">
+    <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+    <span><strong>James Praise</strong> &middot; Growth, go-to-market and AI systems</span>
+  </div>
+
+  <p class="proof-note">I ran this on 10 November 2026 against public job feeds only. I haven't seen Niuro's customer records or Hiring OS data, so the seed list is my guess at a Niuro buyer, and the scores are a starting point to test against the accounts that already bought from you.</p>
+
+  <div class="proof-body">
+    <p>Carlos <a href="https://www.linkedin.com/in/carlos-waech-osses/recent-activity/all/" target="_blank" rel="noopener">wrote</a> that he wants to meet people who can show something they've built, explain why it worked and say what broke. This page does that for one small system, built for Niuro. It finds US software companies whose engineering roles are not filling, which is the problem your <a href="https://niuro.io/" target="_blank" rel="noopener">homepage</a> sells against: "backend work keeps slipping and we can't ship fast enough."</p>
+
+    <h2 id="built">What I built</h2>
+    <p>Most US tech companies post jobs through an applicant tracking system (ATS) such as Greenhouse, Ashby or Lever. All three publish a public job feed in JSON that anyone can read without a login. The scan reads those feeds and does four things for each company.</p>
+    <ol>
+      <li>It keeps the engineering roles and drops sales engineers, solutions architects, recruiters and other titles that only look technical.</li>
+      <li>It sorts each role by age: posted in the last 21 days, open between 60 days and a year, or open more than a year.</li>
+      <li>It counts how many roles are in AI, ML, backend, platform or data work, and how many are remote.</li>
+      <li>It gives the company a score and a tier, then writes a table and a JSON file.</li>
+    </ol>
+    <p>A role open between two months and a year scores highest. That is a real opening the company has not filled, and the hiring manager feels it every week. Fresh roles score a little. The share of AI or backend roles and the share of remote roles add a little more, because those are the roles a nearshore team can fill.</p>
+    <p>The tiers are a commercial call. <strong>Tier 1</strong> is 5 to 40 open engineering roles with at least two stuck: big enough to need outside help, small enough not to run a large recruiting team. <strong>Tier 2</strong> is more than 40 open roles. Those companies already have recruiters, so the pitch is staffing for overflow, not a search. <strong>Tier 3</strong> is everything else.</p>
+
+    <h2 id="found">What it found</h2>
+    <p>I seeded 40 venture-backed US software companies. 30 boards answered. 19 companies landed in Tier 1, 5 in Tier 2 and 6 in Tier 3.</p>
+    <div class="proof-table-wrap">
+      <table class="proof-table">
+        <thead><tr><th>Company</th><th>Eng roles open</th><th>Stuck 60 to 365 days</th><th>Oldest stuck role</th></tr></thead>
+        <tbody>
+          <tr><td>Baseten</td><td>39</td><td>18</td><td>Software Engineer, Model Performance Systems (307 days)</td></tr>
+          <tr><td>Ramp</td><td>39</td><td>17</td><td>Applied AI Engineer (301 days)</td></tr>
+          <tr><td>Vanta</td><td>27</td><td>16</td><td>Senior Software Engineer, AI Product (353 days)</td></tr>
+          <tr><td>Replit</td><td>17</td><td>9</td><td>Software Engineer, Enterprise (289 days)</td></tr>
+          <tr><td>Attio</td><td>12</td><td>12</td><td>Staff Product Engineer (223 days)</td></tr>
+          <tr><td>Clay</td><td>13</td><td>11</td><td>Software Engineer, Developer Experience (AI) (238 days)</td></tr>
+          <tr><td>Hex</td><td>11</td><td>8</td><td>Cloud Security Engineer (276 days)</td></tr>
+          <tr><td>Modal</td><td>11</td><td>8</td><td>Member of Technical Staff, Product (Backend) (304 days)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Attio stands out. Every one of its 12 open engineering roles has been open between two months and a year. A message to Attio can name the Staff Product Engineer role and its 223 days, which is a better first line than "need engineering capacity?".</p>
+    <p>Tier 2 is a different conversation. Harvey has 140 open engineering roles, 68 of them stuck. Perplexity, Fivetran, Sierra and Brex each have more than 50. A company hiring at that pace already has a recruiting team, and the offer that fits is engineers who start next month.</p>
+
+    <h2 id="broke">What broke, and how I fixed it</h2>
+    <h3>1. Evergreen posts looked like pain</h3>
+    <p>The first version counted every engineering role open longer than 60 days as stuck. Linear came out with nine stuck roles, and one of them had been posted 2,022 days earlier. That isn't a role Linear can't fill. Many companies keep a standing post open for years to collect applicants. I added a third age bucket for roles over a year old, which scores nothing. Linear dropped from nine stuck roles to three, and 40 roles across the list moved into the evergreen bucket.</p>
+    <h3>2. The title filter let the wrong people in</h3>
+    <p>The first filter matched any title with "engineer", "data" or "architect" in it. It counted a Head of Sales Data Science at Gusto, a Developer Relations Engineer at Modal, a Senior Solutions Architect at Airtable and an AI deployment engineer at Writer, who works with customers. None of those are roles a nearshore engineering team fills. I added those patterns, plus director and head of titles, to the exclusion list.</p>
+    <h3>3. An empty board is not a company that stopped hiring</h3>
+    <p>Mercury's Ashby board and Webflow's Greenhouse board answered with zero roles. Both companies are hiring. They moved to a different board. The first version scored them zero and moved on, which would have quietly dropped two good accounts. Now an empty board is logged as a failure to fix, the same as a 404.</p>
+    <h3>4. Board names have to be found, not guessed</h3>
+    <p>I guessed each company's board name, and 8 of 40 returned 404 (Hebbia, Retool, Grammarly, dbt Labs, Temporal, Plaid, Anyscale and Weaviate). With an empty board counted too, that's 10 failures out of 40. In production I'd resolve each board once from the company's careers page, store it, and run a weekly health check that flags any board that starts failing.</p>
+    <h3>Still open</h3>
+    <p>Two weak spots remain, and I'd fix them in the first week. Writer's 15 engineering roles were all posted in the last 21 days, which looks like a mass repost. A repost resets the date, so a stuck role can look fresh. And Greenhouse feeds only say "remote" in the location text, so Vercel shows 1 remote role out of 25 when its real policy may differ. Both are fixed by storing every role with the date the scan first saw it, then counting age from that date.</p>
+
+    <h2 id="niuro">How I'd run it at Niuro</h2>
+    <ol>
+      <li><strong>Start from what already bought.</strong> Score Niuro's closed hiring processes from the last year with the same signals, and find which tier and which role mix converts. Then build the seed list from lookalikes of those accounts instead of my guess.</li>
+      <li><strong>Run it weekly and keep history.</strong> Store each role with its first-seen date, so age is true even when a company reposts. A role that crosses 60 days becomes a trigger.</li>
+      <li><strong>Pick the person.</strong> The engineering manager or head of engineering for that team first, then the recruiter. Enrich through a waterfall, then check every address with a live deliverability check before it can send.</li>
+      <li><strong>Draft with an AI model, approve with a person.</strong> A large language model (LLM) drafts from the stuck role, its age and one Niuro shortlist that matches the stack. A person approves every send of a new message until the error rate is known, then reviews a sample. Every draft is checked for the right role, a true age and no invented claims.</li>
+      <li><strong>Measure what the business counts.</strong> Hiring processes started, conversion from reply to process, cost per process (data, enrichment, model and sending costs divided by processes started), and reliability (boards read, failures and bounce rate).</li>
+    </ol>
+    <p>Your MCP launch fits the same list. The recruiters in Tier 2 accounts already work at volume, and some of them already work in Claude. They are the first people I'd show the <a href="https://www.linkedin.com/in/carlos-waech-osses/recent-activity/all/" target="_blank" rel="noopener">Niuro MCP</a>, "11M+ people inside Claude", to.</p>
+
+    <h2 id="tests">First tests</h2>
+    <p>Each test has one hypothesis, one metric and a date to decide.</p>
+    <div class="proof-table-wrap">
+      <table class="proof-table">
+        <thead><tr><th>Test</th><th>Hypothesis</th><th>Metric</th><th>Decide in</th></tr></thead>
+        <tbody>
+          <tr><td>Stuck-role message</td><td>Naming the exact role and how long it has been open gets more replies than a general capacity pitch</td><td>Positive reply rate, 200 accounts per arm</td><td>3 weeks</td></tr>
+          <tr><td>Tier 2 overflow</td><td>Accounts with 40+ open roles start more processes from a staffing offer than from a search offer</td><td>Processes started per 100 accounts</td><td>4 weeks</td></tr>
+          <tr><td>MCP first</td><td>Recruiters who post about AI tools reply more to an MCP demo than to a shortlist offer</td><td>Demo calls booked</td><td>4 weeks</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="all">Appendix: every company scored</h2>
+    <p>Score is 2 points per stuck role and 1 per fresh role (each capped at 8), plus up to 4 for the share of AI or backend roles and up to 2 for the share of remote roles. Run on 10 November 2026.</p>
+    <div class="proof-table-wrap">
+      <table class="proof-table">
+        <thead><tr><th>Company</th><th>Eng open</th><th>Fresh</th><th>Stuck</th><th>Evergreen</th><th>Remote</th><th>Score</th><th>Oldest stuck role</th></tr></thead>
+        <tbody>
+          <tr><td colspan="8"><strong>Tier 1</strong></td></tr>
+          <tr><td>Baseten</td><td>39</td><td>10</td><td>18</td><td>5</td><td>39</td><td>28.2</td><td>Software Engineer, Model Performance Systems (307 days)</td></tr>
+          <tr><td>Ramp</td><td>39</td><td>9</td><td>17</td><td>4</td><td>37</td><td>27.6</td><td>Applied AI Engineer (301 days)</td></tr>
+          <tr><td>Notion</td><td>35</td><td>10</td><td>17</td><td>0</td><td>27</td><td>27.1</td><td>Software Engineer, Collections Experience (200 days)</td></tr>
+          <tr><td>Replit</td><td>17</td><td>6</td><td>9</td><td>0</td><td>17</td><td>26.1</td><td>Software Engineer, Enterprise (289 days)</td></tr>
+          <tr><td>Vanta</td><td>27</td><td>6</td><td>16</td><td>2</td><td>27</td><td>25.9</td><td>Senior Software Engineer, AI Product (353 days)</td></tr>
+          <tr><td>Supabase</td><td>29</td><td>6</td><td>13</td><td>1</td><td>13</td><td>24.6</td><td>Software Engineer, Auth (215 days)</td></tr>
+          <tr><td>Gusto</td><td>31</td><td>5</td><td>15</td><td>0</td><td>3</td><td>22.7</td><td>Enterprise Application AI Engineer (353 days)</td></tr>
+          <tr><td>Vercel</td><td>25</td><td>5</td><td>12</td><td>2</td><td>1</td><td>22.2</td><td>Site Engineer (333 days)</td></tr>
+          <tr><td>Hex</td><td>11</td><td>1</td><td>8</td><td>0</td><td>11</td><td>21.2</td><td>Cloud Security Engineer (276 days)</td></tr>
+          <tr><td>Attio</td><td>12</td><td>0</td><td>12</td><td>0</td><td>12</td><td>20.0</td><td>Staff Product Engineer (223 days)</td></tr>
+          <tr><td>Clay</td><td>13</td><td>0</td><td>11</td><td>1</td><td>11</td><td>19.8</td><td>Software Engineer, Developer Experience (AI) (238 days)</td></tr>
+          <tr><td>Modal</td><td>11</td><td>0</td><td>8</td><td>0</td><td>0</td><td>18.5</td><td>Member of Technical Staff, Product (Backend) (304 days)</td></tr>
+          <tr><td>Decagon</td><td>35</td><td>1</td><td>25</td><td>1</td><td>3</td><td>18.4</td><td>Senior Software Engineer, Agent Platform (355 days)</td></tr>
+          <tr><td>Cursor</td><td>12</td><td>10</td><td>2</td><td>0</td><td>7</td><td>13.5</td><td>Software Engineer, Model Routing &amp; Inference (216 days)</td></tr>
+          <tr><td>Pylon</td><td>6</td><td>0</td><td>6</td><td>0</td><td>0</td><td>13.3</td><td>Software Engineer, Product (123 days)</td></tr>
+          <tr><td>Resend</td><td>12</td><td>0</td><td>3</td><td>0</td><td>12</td><td>10.7</td><td>Backend Engineer, MTA (164 days)</td></tr>
+          <tr><td>LaunchDarkly</td><td>5</td><td>1</td><td>3</td><td>0</td><td>5</td><td>10.6</td><td>Senior Infrastructure Engineer (248 days)</td></tr>
+          <tr><td>Cartesia</td><td>7</td><td>0</td><td>4</td><td>1</td><td>0</td><td>9.7</td><td>Enterprise Engineer (305 days)</td></tr>
+          <tr><td>Linear</td><td>8</td><td>0</td><td>3</td><td>4</td><td>8</td><td>8.5</td><td>Senior / Staff Product Engineer (251 days)</td></tr>
+          <tr><td colspan="8"><strong>Tier 2</strong></td></tr>
+          <tr><td>Harvey</td><td>140</td><td>54</td><td>68</td><td>3</td><td>127</td><td>27.1</td><td>Staff Software Engineer, Site Reliability Engineer (343 days)</td></tr>
+          <tr><td>Perplexity</td><td>56</td><td>11</td><td>28</td><td>5</td><td>13</td><td>26.8</td><td>Member of Technical Staff (Software Engineer, Security) (342 days)</td></tr>
+          <tr><td>Fivetran</td><td>58</td><td>15</td><td>26</td><td>0</td><td>5</td><td>24.8</td><td>Sr. Principal AI Systems Architect (251 days)</td></tr>
+          <tr><td>Sierra</td><td>56</td><td>13</td><td>24</td><td>8</td><td>1</td><td>24.5</td><td>Software Engineer, Agent (Arabic speaking) (340 days)</td></tr>
+          <tr><td>Brex</td><td>63</td><td>7</td><td>31</td><td>0</td><td>0</td><td>24.4</td><td>Senior Security Operations Engineer (332 days)</td></tr>
+          <tr><td colspan="8"><strong>Tier 3</strong></td></tr>
+          <tr><td>Writer</td><td>15</td><td>15</td><td>0</td><td>0</td><td>15</td><td>11.6</td><td>&ndash;</td></tr>
+          <tr><td>PostHog</td><td>3</td><td>1</td><td>2</td><td>0</td><td>3</td><td>8.3</td><td>Site Reliability Engineer, US Pacific time (95 days)</td></tr>
+          <tr><td>Runway</td><td>3</td><td>0</td><td>2</td><td>1</td><td>3</td><td>7.3</td><td>Senior/Staff Platform Engineer (291 days)</td></tr>
+          <tr><td>Browserbase</td><td>4</td><td>0</td><td>1</td><td>2</td><td>0</td><td>4.0</td><td>Software Engineer (Dashboard), San Francisco (130 days)</td></tr>
+          <tr><td>Airtable</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.0</td><td>&ndash;</td></tr>
+          <tr><td>Cockroach Labs</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.0</td><td>&ndash;</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Failed boards: Hebbia, Retool, Grammarly, dbt Labs, Temporal, Plaid, Anyscale and Weaviate returned 404 on the guessed board name. Mercury and Webflow answered with zero roles.</p>
+
+    <h2 id="code">Appendix: code and data</h2>
+    <p>The scan is one Python file with no outside libraries. It makes one request at a time with a short pause, so it never puts load on a job board.</p>
+    <ul>
+      <li><a href="/work/niuro/proof/hiring_signal_scan.py">hiring_signal_scan.py</a>, the scan</li>
+      <li><a href="/work/niuro/proof/niuro_seeds.txt">niuro_seeds.txt</a>, the 40 seed companies and their board names</li>
+      <li><a href="/work/niuro/proof/scan-2026-11-10.json">scan-2026-11-10.json</a>, the full output of this run</li>
+    </ul>
+    <p>Run it with <code>python3 hiring_signal_scan.py --seeds niuro_seeds.txt --out scan.json --md scan.md</code>.</p>
+  </div>
+
+  <div class="button-row" style="margin-top: 40px;">
+    <a href="mailto:jamesspraise@gmail.com?subject=GTM%20Engineer%20-%20James%20Praise" class="button button-primary">Let's Talk</a>
+    <a href="/work/niuro/" class="button button-secondary">Back to the Pitch</a>
+  </div>
+</div>
+
+<script src="/script.js?v=11"></script>
+<script>
+(function () {
+  var bar = document.getElementById('proofProgressBar');
+  var links = Array.prototype.slice.call(document.querySelectorAll('.proof-toc a'));
+  var targets = links.map(function (a) { return document.querySelector(a.getAttribute('href')); });
+  function onScroll() {
+    var doc = document.documentElement;
+    var max = doc.scrollHeight - window.innerHeight;
+    if (bar) bar.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + '%';
+    var active = -1;
+    targets.forEach(function (t, i) { if (t && t.getBoundingClientRect().top < 160) active = i; });
+    links.forEach(function (a, i) { a.classList.toggle('is-active', i === active); });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+</script>
+</body>
+</html>

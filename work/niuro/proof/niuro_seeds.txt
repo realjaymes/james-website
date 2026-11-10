@@ -1,0 +1,43 @@
+# Seed list for the Niuro sample scan, 2026-11-10.
+# US-headquartered software companies, mostly Series A to C, guessed board slugs.
+# A slug that does not resolve is logged as a failure, not dropped silently.
+ashby:linear:Linear
+ashby:ramp:Ramp
+ashby:vanta:Vanta
+ashby:hex:Hex
+ashby:modal:Modal
+ashby:baseten:Baseten
+ashby:cartesia:Cartesia
+ashby:decagon:Decagon
+ashby:sierra:Sierra
+ashby:harvey:Harvey
+ashby:hebbia:Hebbia
+ashby:claylabs:Clay
+ashby:attio:Attio
+ashby:pylon-labs:Pylon
+ashby:browserbase:Browserbase
+ashby:supabase:Supabase
+ashby:posthog:PostHog
+ashby:resend:Resend
+ashby:replit:Replit
+ashby:perplexity:Perplexity
+ashby:mercury:Mercury
+ashby:runway:Runway
+ashby:notion:Notion
+ashby:cursor:Cursor
+ashby:writer:Writer
+greenhouse:airtable:Airtable
+greenhouse:brex:Brex
+greenhouse:gusto:Gusto
+greenhouse:retool:Retool
+greenhouse:vercel:Vercel
+greenhouse:webflow:Webflow
+greenhouse:grammarly:Grammarly
+greenhouse:fivetran:Fivetran
+greenhouse:dbtlabsinc:dbt Labs
+greenhouse:temporaltechnologies:Temporal
+greenhouse:cockroachlabs:Cockroach Labs
+greenhouse:launchdarkly:LaunchDarkly
+lever:plaid:Plaid
+lever:anyscale:Anyscale
+lever:weaviate:Weaviate
