@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WKSZ7DQC');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A Postgres Exit Play for Aiven | James Praise</title>
+<meta name="description" content="A proposed campaign that gives Postgres the exit play Aiven already built for Kafka, by James Praise." />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="A Postgres Exit Play for Aiven | James Praise" />
+<meta property="og:description" content="A proposed campaign that gives Postgres the exit play Aiven already built for Kafka, by James Praise." />
+<meta property="og:url" content="https://jamespraise.xyz/work/aiven/proof/" />
+<meta property="og:image" content="https://jamespraise.xyz/assets/images/og/work/aiven-proof.jpg?v=20261024" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="A Postgres Exit Play for Aiven | James Praise" />
+<meta name="twitter:description" content="A proposed campaign that gives Postgres the exit play Aiven already built for Kafka, by James Praise." />
+<meta name="twitter:image" content="https://jamespraise.xyz/assets/images/og/work/aiven-proof.jpg?v=20261024" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+<link rel="canonical" href="https://jamespraise.xyz/work/aiven/proof/" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=23" />
+<style>
+  .proof-wrap { max-width: 720px; margin: 0 auto; padding: 100px 0 80px; }
+  .proof-eyebrow { color: var(--color-purple); font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; font-size: 13px; margin-bottom: 10px; }
+  .proof-credit { display: flex; align-items: center; gap: 10px; margin: 20px 0 40px; }
+  .proof-credit img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+  .proof-credit span { color: var(--text-muted); font-size: 14px; }
+  .proof-credit strong { color: var(--text-primary); }
+  .proof-note { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 8px; padding: 16px 20px; font-size: 14px; color: var(--text-muted); margin-bottom: 40px; }
+  .proof-draft { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 12px; padding: 40px; margin-bottom: 56px; }
+  .proof-draft h2 { margin-top: 32px; margin-bottom: 10px; }
+  .proof-draft h2:first-child { margin-top: 0; }
+  .proof-draft p { line-height: 1.7; }
+  .proof-body p { line-height: 1.7; }
+  .proof-body h2 { margin-top: 40px; margin-bottom: 12px; }
+  .proof-body strong { font-weight: 700; }
+  .proof-back { display: inline-block; margin-bottom: 24px; font-size: 14px; }
+  .section-label { font-size: 13px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-table-wrap { overflow-x: auto; margin: 20px 0; }
+  .proof-table { width: 100%; border-collapse: collapse; font-size: 13px; background: var(--bg-page); border-radius: 10px; overflow: hidden; }
+  .proof-table th { background: var(--bg-surface); text-align: left; padding: 10px 12px; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-muted); border-bottom: 1px solid rgba(28,20,34,0.1); }
+  .proof-table td { padding: 10px 12px; border-bottom: 1px solid rgba(28,20,34,0.08); color: var(--text-primary); line-height: 1.5; vertical-align: top; }
+  .proof-table tr:last-child td { border-bottom: none; }
+  .proof-table code { font-size: 12px; background: var(--bg-surface); padding: 2px 5px; border-radius: 4px; }
+  .proof-toc { position: fixed; top: 140px; right: 32px; width: 200px; font-size: 13px; }
+  .proof-toc-group { margin-bottom: 20px; }
+  .proof-toc-label { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-toc a { display: block; padding: 5px 0 5px 12px; border-left: 2px solid rgba(28,20,34,0.1); color: var(--text-muted); text-decoration: none; line-height: 1.4; }
+  .proof-toc a:hover { color: var(--color-purple); border-left-color: var(--color-purple); }
+  .proof-toc a.is-active { color: var(--color-purple); border-left-color: var(--color-purple); font-weight: 700; }
+  @media (max-width: 1400px) { .proof-toc { display: none; } }
+  .proof-progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(28,20,34,0.08); z-index: 200; }
+  .proof-progress-bar { height: 100%; width: 0%; background: var(--color-purple); transition: width 0.1s linear; }
+</style>
+</head>
+<body class="proof-page">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKSZ7DQC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="proof-progress-track"><div class="proof-progress-bar" id="proofProgressBar"></div></div>
+
+<a href="/work/aiven/" class="pitch-exit" aria-label="Back to the Aiven pitch">
+  <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+</a>
+
+<nav class="proof-toc" aria-label="Section navigation">
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The play</p>
+    <a href="#kafka">What you built for Kafka</a>
+    <a href="#postgres">Postgres today</a>
+    <a href="#audiences">Two audiences</a>
+    <a href="#drafts">The drafts</a>
+    <a href="#routing">Sending leads to the right funnel</a>
+    <a href="#offer">One offer line</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">Appendix</p>
+    <a href="#measures">Measures and stop rules</a>
+    <a href="#method">How I checked</a>
+  </div>
+</nav>
+
+<div class="container proof-wrap">
+  <a class="proof-back" href="/work/aiven/">&larr; Back to the Aiven pitch</a>
+
+  <p class="proof-eyebrow">A plan for Aiven</p>
+  <h1>A Postgres exit play</h1>
+  <div class="proof-credit">
+    <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+    <span><strong>James Praise</strong> &middot; Growth, go-to-market and AI systems</span>
+  </div>
+
+  <p class="proof-note">I built this from public sources only, checked on 10 November 2026. I have seen none of your sales data, so demand for this play is a hypothesis. The first step below tests it before anything gets built.</p>
+
+  <div class="proof-body">
+    <p>When IBM bought Confluent, you gave Kafka buyers a reason and a route to move. Postgres went through the same kind of ownership change in 2025. I propose the same play for Postgres, split into a self-serve campaign and a sales-led campaign.</p>
+
+    <h2 id="kafka">What you built for Kafka</h2>
+    <p>Your Kafka play includes migration, comparison, cost, proof and outreach content. The table sets it beside what I could find for Postgres.</p>
+    <div class="proof-table-wrap">
+      <table class="proof-table">
+        <thead><tr><th>Piece</th><th>Kafka</th><th>Postgres</th></tr></thead>
+        <tbody>
+          <tr><td>Migration page</td><td><a href="https://aiven.io/aiven-migrate-off-confluent" target="_blank" rel="noopener">Zero-risk migration, up to 6 months off the bill</a></td><td>None found. <code>/aiven-migrate-off-neon</code> and <code>/aiven-migrate-off-rds</code> return 404</td></tr>
+          <tr><td>Comparison page</td><td><a href="https://aiven.io/aiven-vs-confluent" target="_blank" rel="noopener">Aiven vs Confluent</a></td><td>None found. <code>/aiven-vs-neon</code>, <code>/aiven-vs-rds</code> and <code>/aiven-vs-supabase</code> return 404</td></tr>
+          <tr><td>Cost argument</td><td><a href="https://aiven.io/cut-your-apache-kafka-costs-with-aiven-by-up-to-40-percent" target="_blank" rel="noopener">Up to 40% lower Kafka costs</a></td><td><a href="https://aiven.io/tools/rds-calculator" target="_blank" rel="noopener">An RDS calculator</a>, with no page making the switching case</td></tr>
+          <tr><td>Live proof</td><td><a href="https://aiven.io/webinar/live-kafka-migration-from-confluent-to-aiven" target="_blank" rel="noopener">Live migration webinar</a></td><td>No webinar URL names Neon or Crunchy Data</td></tr>
+          <tr><td>A leader's view</td><td><a href="https://aiven.io/blog/ibm-confluent-acquisition-future-of-kafka-streaming" target="_blank" rel="noopener">Jeff Mery's post on IBM and Confluent</a></td><td>No URL names either Postgres deal</td></tr>
+          <tr><td>Paid outreach</td><td><a href="https://www.linkedin.com/ad-library/search?accountOwner=aiven&keyword=confluent" target="_blank" rel="noopener">29 ads mention Confluent</a>, including a message ad from Conor Forde</td><td><a href="https://www.linkedin.com/ad-library/search?accountOwner=aiven&keyword=neon" target="_blank" rel="noopener">No ads mention Neon</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="postgres">Postgres today</h2>
+    <p>Databricks <a href="https://www.databricks.com/company/newsroom/press-releases/databricks-agrees-acquire-neon-help-developers-deliver-ai-systems" target="_blank" rel="noopener">agreed to buy Neon</a> in May 2025, and <a href="https://neon.com/pricing" target="_blank" rel="noopener">Neon's pricing page</a> now reads "from Databricks". Snowflake <a href="https://www.techtarget.com/searchdatamanagement/news/366625068/Snowflake-acquisition-of-Crunchy-Data-adds-Postgres-database" target="_blank" rel="noopener">bought Crunchy Data</a> a few weeks later.</p>
+    <p>A buyer who chose an independent Postgres vendor now has a vendor inside a data platform company. Some of those buyers will be happy about it. Others will want to keep their database separate from their analytics vendor, and those are the people this play is for.</p>
+    <p>Your <a href="https://aiven.io/postgresql" target="_blank" rel="noopener">Postgres page</a> describes the product well and names no rival. Your <a href="https://www.linkedin.com/ad-library/search?accountOwner=aiven&keyword=postgres" target="_blank" rel="noopener">66 Postgres ads</a> that I sampled sell the product on its features. None of what I found speaks to someone reconsidering a vendor.</p>
+
+    <h2 id="audiences">Two audiences, one market event</h2>
+    <p>The two acquired companies sell in very different ways. The same market event could support separate campaigns for your self-serve and sales-led funnels.</p>
+    <div class="proof-table-wrap">
+      <table class="proof-table">
+        <thead><tr><th></th><th>Neon users</th><th>Crunchy Data customers</th></tr></thead>
+        <tbody>
+          <tr><td><strong>What I can see</strong></td><td><a href="https://neon.com/pricing" target="_blank" rel="noopener">Free, Launch and Scale plans</a> a developer can start alone</td><td><a href="https://www.crunchydata.com/" target="_blank" rel="noopener">Healthcare, government and financial services</a></td></tr>
+          <tr><td><strong>Likely question</strong></td><td>Will this stay simple and portable now that it's part of Databricks?</td><td>Who controls my database, and where does my data sit?</td></tr>
+          <tr><td><strong>Your answer</strong></td><td>Start free, on any cloud you like, with <a href="https://aiven.io/free-tier" target="_blank" rel="noopener">no expiry</a></td><td>Run in your own cloud account, with <a href="https://aiven.io/solutions/data/sovereignty" target="_blank" rel="noopener">data sovereignty</a> options</td></tr>
+          <tr><td><strong>Channel</strong></td><td>Comparison page, migration guide, developer communities</td><td>Message ad from a revenue leader, account list, field events</td></tr>
+          <tr><td><strong>Funnel</strong></td><td>Signup, then the Growth team</td><td>Sales meeting</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Before building either, I would check your sales notes for how often Neon and Crunchy Data come up, and hold 10 customer conversations. If those names rarely appear, I would point the same play at Amazon RDS, where you already have a calculator.</p>
+
+    <h2 id="drafts">The drafts</h2>
+    <p class="section-label">Page brief: Aiven vs Neon</p>
+    <div class="proof-table-wrap">
+      <table class="proof-table">
+        <tbody>
+          <tr><td><strong>Reader</strong></td><td>A developer on Neon who has seen the Databricks news and wants to know their options.</td></tr>
+          <tr><td><strong>The page must say</strong></td><td>What changed, what stays the same, and when staying on Neon is the better choice. Developers will check every claim, so one of your engineers should review it.</td></tr>
+          <tr><td><strong>Proof</strong></td><td>Your 50+ extensions, the 99.99% uptime agreement, multi-cloud options and a migration walkthrough.</td></tr>
+          <tr><td><strong>Call to action</strong></td><td>Start free, using the same offer line as the ad that sent them.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="section-label">LinkedIn message ad, for regulated accounts</p>
+    <div class="proof-draft">
+      <p>Hi %FIRSTNAME%, I'm Conor, Chief Revenue Officer at Aiven.</p>
+      <p>Crunchy Data is now part of Snowflake. If that change has raised questions about control or where your data sits, we can help you compare your options.</p>
+      <p>Aiven runs Postgres on the cloud you choose, including inside your own cloud account. If you want to compare options, my team will map the migration with you and cost it before you commit to anything.</p>
+      <p>Would a short migration review be useful?</p>
+    </div>
+    <p>I wrote this in the format of your Confluent ad. Your Kafka ad offers 2 to 6 months free, and the Postgres offer is for your finance team to set.</p>
+
+    <h2 id="routing">Sending leads to the right funnel</h2>
+    <p>A play that reaches both audiences needs an agreed rule for who goes where. This is my starting table for a working session with your Growth team and sales leaders. Your product data would replace these guesses.</p>
+    <div class="proof-table-wrap">
+      <table class="proof-table">
+        <thead><tr><th>Signal</th><th>Goes to</th><th>First step</th></tr></thead>
+        <tbody>
+          <tr><td>Free or Developer signup with no company match</td><td>Growth team</td><td>Activation emails and migration guide</td></tr>
+          <tr><td>Signup from a company on the account list</td><td>Sales, with Growth informed</td><td>Account owner gets the signup and the source campaign</td></tr>
+          <tr><td>Move to a Startup or Business plan after a migration</td><td>Growth team first</td><td>Offer a second service. Sales joins if the account grows</td></tr>
+          <tr><td>Visits to bring-your-own-cloud or data sovereignty pages from a target account</td><td>Sales</td><td>Message ad follow-up and migration review offer</td></tr>
+          <tr><td>Reply to the message ad</td><td>Sales</td><td>Migration review with a solutions engineer</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="offer">One offer line before more spend</h2>
+    <p>Your start offer currently reads differently depending on where someone meets it.</p>
+    <div class="proof-table-wrap">
+      <table class="proof-table">
+        <thead><tr><th>Where</th><th>What it says</th></tr></thead>
+        <tbody>
+          <tr><td><a href="https://aiven.io/free-tier" target="_blank" rel="noopener">Free tier page</a></td><td>"No 30-day trial, no expiry"</td></tr>
+          <tr><td><a href="https://www.linkedin.com/ad-library/search?accountOwner=aiven&keyword=postgres" target="_blank" rel="noopener">LinkedIn Postgres ads</a></td><td>"Product-Ready Postgres. 30 Day Free Trial."</td></tr>
+          <tr><td><a href="https://aiven.io/aiven-vs-confluent" target="_blank" rel="noopener">Confluent comparison</a></td><td>"Start for free" and "Includes $300 in free credits"</td></tr>
+          <tr><td><a href="https://aiven.io/" target="_blank" rel="noopener">Home page</a></td><td>"Start trial" and "Book a demo"</td></tr>
+          <tr><td><a href="https://aiven.io/postgresql" target="_blank" rel="noopener">Postgres page</a></td><td>"Get building" and "See it in action"</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>There may be good reasons for some of these. I would agree one line per product with the Growth team and test it first on the live Postgres ads. A person who clicks a trial ad should land on a page that promises the same thing.</p>
+
+    <h2 id="measures">Appendix: measures and stop rules</h2>
+    <p><strong>Main measure.</strong> Qualified pipeline with a Postgres exit source, split between the self-serve and sales-led campaigns. I would read it against the Confluent play at the same age, since you already hold those numbers.</p>
+    <p><strong>Early signals.</strong> For the developer campaign, I would watch comparison-page visit to signup and signup to first running service. For the regulated campaign, I would watch message ad replies and migration reviews booked.</p>
+    <p><strong>Before building.</strong> If sales notes and the 10 conversations show little interest in leaving Neon or Crunchy Data, the play moves to Amazon RDS.</p>
+    <p><strong>After launch.</strong> I would stop paid spend on either audience if its cost per qualified conversation is clearly worse than the Kafka play's at the same age, and keep the pages live for search.</p>
+
+    <h2 id="method">Appendix: how I checked</h2>
+    <p>I read your sitemap on 10 November 2026. Its 1,530 URLs include no address containing neon, supabase, crunchy, databricks or instaclustr. I then tried 14 likely addresses directly, and all returned 404.</p>
+    <p>The ad counts come from LinkedIn's Ad Library, searching advertiser "aiven". LinkedIn matches names loosely, so a count can include a similarly named advertiser. I read the first results of each search and they were yours.</p>
+    <p>A public check can't see sales decks, private emails or campaigns planned for next month. If this campaign is already in progress, the routing table and offer review may still be useful.</p>
+  </div>
+
+  <div class="button-row" style="margin-top: 40px;">
+    <a href="mailto:jamesspraise@gmail.com?subject=Director%20of%20Revenue%20Marketing%20-%20James%20Praise" class="button button-primary">Let's Talk</a>
+    <a href="/work/aiven/" class="button button-secondary">Back to the Pitch</a>
+  </div>
+</div>
+
+<script src="/script.js?v=11"></script>
+<script>
+(function () {
+  var bar = document.getElementById('proofProgressBar');
+  var links = Array.prototype.slice.call(document.querySelectorAll('.proof-toc a'));
+  var targets = links.map(function (a) { return document.querySelector(a.getAttribute('href')); });
+  function onScroll() {
+    var doc = document.documentElement;
+    var max = doc.scrollHeight - window.innerHeight;
+    if (bar) bar.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + '%';
+    var active = -1;
+    targets.forEach(function (t, i) { if (t && t.getBoundingClientRect().top < 160) active = i; });
+    links.forEach(function (a, i) { a.classList.toggle('is-active', i === active); });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+</script>
+</body>
+</html>
