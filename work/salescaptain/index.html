@@ -167,6 +167,10 @@
     .pitch-slide { padding: 60px 16px 70px; }
   }
 
+  @media (max-width: 640px), (hover: none) and (pointer: coarse) {
+    .hint, #backflow, body.in-appx #backflow { display: none; }
+  }
+
   .progress { position: fixed; left: 0; bottom: 0; height: 3px; width: 100%; z-index: 105; background: rgba(255,255,255,0.1); }
   .progress .fill { height: 100%; width: 0; background: var(--color-accent); transition: width .4s ease; }
   .nav { position: fixed; z-index: 106; right: 24px; bottom: 24px; display: flex; gap: 10px; transition: opacity .4s; }
