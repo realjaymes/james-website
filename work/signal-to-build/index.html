@@ -59,6 +59,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </header>
 
 <main id="main">
+<style>
+.smap-break { width: min(1100px, calc(100vw - 32px)); margin: 8px 0 28px 50%; transform: translateX(-50%); background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 22px 18px; }
+@media (max-width: 760px) { .smap-break { background: none; border: none; padding: 0; } }
+</style>
 
 <style>
   .blv-head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: var(--space-md); margin-bottom: var(--space-lg); }
@@ -105,7 +109,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="blv-head">
       <div>
-        <h2>The videos</h2>
+        <h2 id="the-videos">The videos</h2>
         <p>The newest videos come first. Each one links to the full breakdown it was made from.</p>
       </div>
       <div class="blv-filters" id="blv-filters" role="group" aria-label="Filter by style"></div>
@@ -127,7 +131,58 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <div class="cs-body-section reveal-blur">
-        <h2>What It Does</h2>
+        <h2 id="what-it-does">What It Does</h2>
+        <p>The map shows how it runs. On a computer, the boxes with links jump to the section of this page that explains them.</p>
+        <div class="smap-break">
+<!-- smap:signal-to-build -->
+<div class="smap-wrap" data-smap="signal-to-build" data-theme="light">
+<style>
+.smap-wrap[data-smap="signal-to-build"] { --sm-ink:#100a16; --sm-text:rgba(28,20,34,0.72); --sm-line:rgba(28,20,34,0.45); --sm-accent:#100a16; --sm-loop:#7184f1; }
+.smap-wrap[data-smap="signal-to-build"] .smap-d { width:100%; height:auto; display:block; }
+.smap-wrap[data-smap="signal-to-build"] .smap-d text { font-family:inherit; }
+.smap-wrap[data-smap="signal-to-build"] .st { fill:#ffffff; stroke:rgba(28,20,34,0.22); stroke-width:1.1; }
+.smap-wrap[data-smap="signal-to-build"] .sr { fill:#FBF3C6; stroke:#100a16; stroke-width:1.2; }
+.smap-wrap[data-smap="signal-to-build"] .dc { fill:rgba(113,132,241,0.12); stroke:#7184f1; stroke-width:1.2; }
+.smap-wrap[data-smap="signal-to-build"] .br { fill:rgba(113,241,158,0.16); stroke:#3aa866; stroke-width:1.1; }
+.smap-wrap[data-smap="signal-to-build"] rect.ot { fill:#ffffff; stroke:rgba(28,20,34,0.18); stroke-width:1; }
+.smap-wrap[data-smap="signal-to-build"] .ex { fill:none; stroke:rgba(28,20,34,0.4); stroke-width:1; stroke-dasharray:4 3; }
+.smap-wrap[data-smap="signal-to-build"] .t { fill:var(--sm-text); font-size:11.5px; }
+.smap-wrap[data-smap="signal-to-build"] .h { fill:var(--sm-ink); font-weight:700; font-size:12.5px; }
+.smap-wrap[data-smap="signal-to-build"] .dt { fill:#2b2f6b; font-size:11.5px; font-weight:700; }
+.smap-wrap[data-smap="signal-to-build"] .et { fill:var(--sm-text); font-size:11px; }
+.smap-wrap[data-smap="signal-to-build"] .pt { fill:#14532d; font-size:11.5px; font-weight:600; }
+.smap-wrap[data-smap="signal-to-build"] text.ot { fill:var(--sm-text); font-size:11px; }
+.smap-wrap[data-smap="signal-to-build"] .lb { fill:var(--sm-text); font-size:10.5px; }
+.smap-wrap[data-smap="signal-to-build"] .sg { fill:var(--sm-accent); font-size:11px; font-weight:700; letter-spacing:.12em; }
+.smap-wrap[data-smap="signal-to-build"] .lg { fill:var(--sm-loop); font-size:12px; }
+.smap-wrap[data-smap="signal-to-build"] .kt { fill:var(--sm-text); font-size:11px; }
+.smap-wrap[data-smap="signal-to-build"] .ln { stroke:var(--sm-line); stroke-width:1.3; fill:none; }
+.smap-wrap[data-smap="signal-to-build"] .lp { stroke:var(--sm-loop); stroke-width:1.4; fill:none; stroke-dasharray:6 5; }
+.smap-wrap[data-smap="signal-to-build"] .mk { fill:var(--sm-line); }
+.smap-wrap[data-smap="signal-to-build"] .mkg { fill:var(--sm-loop); }
+.smap-wrap[data-smap="signal-to-build"] .hot { fill:transparent; stroke:none; cursor:pointer; }
+.smap-wrap[data-smap="signal-to-build"] .hot:hover { fill:rgba(241,222,113,0.25); stroke:var(--sm-accent); stroke-width:1.5; }
+.smap-wrap[data-smap="signal-to-build"] .smap-m { display:none; color:var(--sm-ink); }
+.smap-wrap[data-smap="signal-to-build"] .smap-m-row { margin:0 0 18px; }
+.smap-wrap[data-smap="signal-to-build"] .smap-m-label { font-size:12px; font-weight:700; letter-spacing:.12em; margin:0 0 8px; color:var(--sm-accent); }
+.smap-wrap[data-smap="signal-to-build"] .smap-m ol, .smap-wrap[data-smap="signal-to-build"] .smap-m ul { list-style:none; margin:0; padding:0; }
+.smap-wrap[data-smap="signal-to-build"] .smap-m li { position:relative; background:#ffffff; border:1px solid rgba(28,20,34,0.22); border-radius:10px; padding:10px 12px; margin:0 0 18px; font-size:14px; line-height:1.45; }
+.smap-wrap[data-smap="signal-to-build"] .smap-m ol > li:not(:last-child)::after { content:"\2193"; position:absolute; left:50%; bottom:-18px; transform:translateX(-50%); color:var(--sm-line); font-size:13px; line-height:18px; }
+.smap-wrap[data-smap="signal-to-build"] .smap-m li strong { display:block; }
+.smap-wrap[data-smap="signal-to-build"] .smap-m li span { color:var(--sm-text); }
+.smap-wrap[data-smap="signal-to-build"] .smap-m li.k-sr { background:#FBF3C6; border-color:#100a16; }
+.smap-wrap[data-smap="signal-to-build"] .smap-m li.k-dc { background:rgba(113,132,241,0.12); border-color:#7184f1; }
+.smap-wrap[data-smap="signal-to-build"] .smap-m li.k-fan, .smap-wrap[data-smap="signal-to-build"] .smap-m li.k-routes { background:none; border:none; padding:0; }
+.smap-wrap[data-smap="signal-to-build"] .smap-m li.k-fan li, .smap-wrap[data-smap="signal-to-build"] .smap-m li.k-routes li { background:rgba(113,241,158,0.16); border-color:#3aa866; margin-bottom:6px; }
+.smap-wrap[data-smap="signal-to-build"] .smap-m a { color:inherit; text-decoration:underline; text-underline-offset:2px; }
+.smap-wrap[data-smap="signal-to-build"] .smap-m-loop { color:var(--sm-loop); font-size:14px; margin:4px 0 0; }
+@media (max-width:760px) { .smap-wrap[data-smap="signal-to-build"] .smap-d { display:none; } .smap-wrap[data-smap="signal-to-build"] .smap-m { display:block; } }
+</style>
+<svg class="smap-d" viewBox="0 0 871 516" role="img" aria-label="How a Signal to Build video is made: capture the proof page, write the brief, check a review sheet, render, then publish to the gallery with one command"><defs><marker id="ah-signaltobuild" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="mk" d="M0,0 L10,5 L0,10 z"/></marker><marker id="ah-signaltobuild-g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="mkg" d="M0,0 L10,5 L0,10 z"/></marker></defs><rect class="sr" x="26.0" y="30.0" width="187.4" height="72.0" rx="10"/><text class="t" x="36.0" y="48.0"><tspan x="36.0" dy="0" class="h">1A Proof page</tspan><tspan x="36.0" dy="14">Each item has one on</tspan><tspan x="36.0" dy="14">this site, with the</tspan><tspan x="36.0" dy="14">research, plan and numbers</tspan></text><path class="ln" d="M213.4,66.0 L237.4,66.0" marker-end="url(#ah-signaltobuild)"/><rect class="st" x="239.4" y="30.0" width="174.6" height="72.0" rx="10"/><text class="t" x="249.4" y="48.0"><tspan x="249.4" dy="0" class="h">1B Capture the page</tspan><tspan x="249.4" dy="14">A headless browser saves</tspan><tspan x="249.4" dy="14">its real text, layout</tspan><tspan x="249.4" dy="14">and images</tspan></text><path class="ln" d="M414.0,66.0 L438.0,66.0" marker-end="url(#ah-signaltobuild)"/><rect class="st" x="440.0" y="30.0" width="181.0" height="72.0" rx="10"/><text class="t" x="450.0" y="48.0"><tspan x="450.0" dy="0" class="h">1C Write the brief</tspan><tspan x="450.0" dy="14">Story, lines of text,</tspan><tspan x="450.0" dy="14">scenes and music. It must</tspan><tspan x="450.0" dy="14">make sense to a stranger</tspan></text><path class="ln" d="M621.0,66.0 L645.0,66.0" marker-end="url(#ah-signaltobuild)"/><rect class="st" x="647.0" y="30.0" width="198.2" height="72.0" rx="10"/><text class="t" x="657.0" y="48.0"><tspan x="657.0" dy="0" class="h">1D Pick style and music</tspan><tspan x="657.0" dy="14">One of 20 styles and</tspan><tspan x="657.0" dy="14">one of 48 licensed tracks.</tspan><tspan x="657.0" dy="14">No repeats in a row</tspan></text><text class="sg" x="26.0" y="21.0"><tspan x="26.0" dy="0">1  PLAN</tspan></text><rect class="st" x="654.8" y="183.0" width="190.5" height="72.0" rx="10"/><text class="t" x="664.8" y="201.0"><tspan x="664.8" dy="0" class="h">2A Make a review sheet</tspan><tspan x="664.8" dy="14">One still for each line</tspan><tspan x="664.8" dy="14">of the story, on a</tspan><tspan x="664.8" dy="14">single sheet</tspan></text><path class="ln" d="M654.8,219.0 L630.8,219.0" marker-end="url(#ah-signaltobuild)"/><polygon class="dc" points="578.8,180.0 528.8,219.0 578.8,258.0 628.8,219.0"/><text class="dt" x="578.8" y="209.0" text-anchor="middle"><tspan x="578.8" dy="0">2B</tspan><tspan x="578.8" dy="14">Sheet</tspan><tspan x="578.8" dy="14">passes?</tspan></text><rect class="ex" x="527.9" y="282.0" width="101.7" height="42.0" rx="8"/><text class="et" x="578.8" y="299.0" text-anchor="middle"><tspan x="578.8" dy="0">Fixed, then a</tspan><tspan x="578.8" dy="14">new sheet</tspan></text><path class="ln" d="M578.8,258.0 L578.8,280.0" marker-end="url(#ah-signaltobuild)"/><text class="lb" x="570.8" y="273.0" text-anchor="end"><tspan x="570.8" dy="0">No</tspan></text><path class="ln" d="M528.8,219.0 L504.8,219.0" marker-end="url(#ah-signaltobuild)"/><text class="lb" x="515.8" y="212.0" text-anchor="middle"><tspan x="515.8" dy="0">Yes</tspan></text><rect class="st" x="328.2" y="183.0" width="174.6" height="72.0" rx="10"/><text class="t" x="338.2" y="201.0"><tspan x="338.2" dy="0" class="h">2C Render the video</tspan><tspan x="338.2" dy="14">Music brought to the</tspan><tspan x="338.2" dy="14">same loudness, plus a</tspan><tspan x="338.2" dy="14">sheet of frames to check</tspan></text><path class="ln" d="M328.2,219.0 L304.2,219.0" marker-end="url(#ah-signaltobuild)"/><rect class="st" x="134.9" y="190.0" width="167.2" height="58.0" rx="10"/><text class="t" x="144.9" y="208.0"><tspan x="144.9" dy="0" class="h">2D Scan every frame</tspan><tspan x="144.9" dy="14">Frame by frame,</tspan><tspan x="144.9" dy="14">looking for flicker</tspan></text><text class="sg" x="738.0" y="171.0" text-anchor="end"><tspan x="738.0" dy="0">2  CHECK AND RENDER</tspan></text><path class="ln" d="M845.2,66.0 L859.2,66.0 L859.2,130.0 L750.0,130.0 L750.0,181.0" marker-end="url(#ah-signaltobuild)"/><rect class="sr" x="26.0" y="409.0" width="159.5" height="58.0" rx="10"/><text class="t" x="36.0" y="427.0"><tspan x="36.0" dy="0" class="h">3A Run one command</tspan><tspan x="36.0" dy="14">It takes the newest</tspan><tspan x="36.0" dy="14">render</tspan></text><path class="ln" d="M185.5,438.0 L209.5,438.0" marker-end="url(#ah-signaltobuild)"/><rect class="st" x="211.5" y="402.0" width="168.1" height="72.0" rx="10"/><text class="t" x="221.5" y="420.0"><tspan x="221.5" dy="0" class="h">3B Make web files</tspan><tspan x="221.5" dy="14">A web copy of the video</tspan><tspan x="221.5" dy="14">and a poster frame from</tspan><tspan x="221.5" dy="14">a finished moment</tspan></text><path class="ln" d="M379.6,438.0 L403.6,438.0" marker-end="url(#ah-signaltobuild)"/><rect class="st" x="405.6" y="402.0" width="190.5" height="72.0" rx="10"/><text class="t" x="415.6" y="420.0"><tspan x="415.6" dy="0" class="h">3C Add to the manifest</tspan><tspan x="415.6" dy="14">The video&#x27;s entry is</tspan><tspan x="415.6" dy="14">written into a manifest</tspan><tspan x="415.6" dy="14">file</tspan></text><path class="ln" d="M596.1,438.0 L620.1,438.0" marker-end="url(#ah-signaltobuild)"/><rect class="sr" x="622.1" y="402.0" width="174.6" height="72.0" rx="10"/><text class="t" x="632.1" y="420.0"><tspan x="632.1" dy="0" class="h">3D Gallery updates</tspan><tspan x="632.1" dy="14">Built from the manifest,</tspan><tspan x="632.1" dy="14">newest first, with a</tspan><tspan x="632.1" dy="14">filter for each style</tspan></text><a href="#the-videos" data-goto="the-videos"><rect class="hot" x="622.1" y="402.0" width="174.6" height="72.0" rx="10"><title>Show detail</title></rect></a><text class="sg" x="117.8" y="393.0"><tspan x="117.8" dy="0">3  PUBLISH</tspan></text><path class="ln" d="M134.9,219.0 L120.9,219.0 L120.9,352.0 L105.8,352.0 L105.8,407.0" marker-end="url(#ah-signaltobuild)"/><rect class="sr" x="26" y="490.0" width="24" height="18" rx="5"/><text class="kt" x="58.0" y="503.0"><tspan x="58.0" dy="0">Start or review</tspan></text><rect class="st" x="177.0" y="490.0" width="24" height="18" rx="5"/><text class="kt" x="209.0" y="503.0"><tspan x="209.0" dy="0">Step</tspan></text><polygon class="dc" points="269.8,490.0 279.8,499.0 269.8,508.0 259.8,499.0"/><text class="kt" x="291.8" y="503.0"><tspan x="291.8" dy="0">Decision</tspan></text><rect class="ex" x="367.4" y="490.0" width="24" height="18" rx="5"/><text class="kt" x="399.4" y="503.0"><tspan x="399.4" dy="0">Exit or fallback</tspan></text></svg>
+<div class="smap-m"><div class="smap-m-row"><p class="smap-m-label">1  PLAN</p><ol><li class="k-sr"><strong>1A Proof page</strong><span>Each item has one on this site, with the research, plan and numbers</span></li><li class="k-st"><strong>1B Capture the page</strong><span>A headless browser saves its real text, layout and images</span></li><li class="k-st"><strong>1C Write the brief</strong><span>Story, lines of text, scenes and music. It must make sense to a stranger</span></li><li class="k-st"><strong>1D Pick style and music</strong><span>One of 20 styles and one of 48 licensed tracks. No repeats in a row</span></li></ol></div><div class="smap-m-row"><p class="smap-m-label">2  CHECK AND RENDER</p><ol><li class="k-st"><strong>2A Make a review sheet</strong><span>One still for each line of the story, on a single sheet</span></li><li class="k-dc"><strong>2B Sheet passes?</strong><span>Yes: carry on. No: Fixed, then a new sheet.</span></li><li class="k-st"><strong>2C Render the video</strong><span>Music brought to the same loudness, plus a sheet of frames to check</span></li><li class="k-st"><strong>2D Scan every frame</strong><span>Frame by frame, looking for flicker</span></li></ol></div><div class="smap-m-row"><p class="smap-m-label">3  PUBLISH</p><ol><li class="k-sr"><strong>3A Run one command</strong><span>It takes the newest render</span></li><li class="k-st"><strong>3B Make web files</strong><span>A web copy of the video and a poster frame from a finished moment</span></li><li class="k-st"><strong>3C Add to the manifest</strong><span>The video&#x27;s entry is written into a manifest file</span></li><li class="k-sr"><strong><a href="#the-videos" data-goto="the-videos">3D Gallery updates</a></strong><span>Built from the manifest, newest first, with a filter for each style</span></li></ol></div></div>
+</div>
+<!-- /smap:signal-to-build -->
+</div>
         <p>I build the videos with a motion kit I made on Remotion, a tool for making video with code. A capture script loads each proof page in a headless browser and saves the page's real text, layout and images. The kit animates that capture, so a video never shows a table, number or sentence the page does not contain.</p>
         <p>Each video starts as a brief with the story, the lines of text, the scenes and the music. Read in order, the lines have to tell the whole story to someone who has never heard of the company. Twenty styles keep the series varied, and the filter above the gallery lists the ones used so far. I took each one apart from a different launch film and rebuilt it as its own template in my site's colours and type. The music comes from a library of 48 licensed Mixkit tracks, more than two for every style, so two videos in a row never share a track. A few tracks open quietly, and the kit starts each of those where its music picks up.</p>
         <p>Before a full render, the kit renders one still for each line of the story and lays them out on a single sheet. I check every sheet for exact wording, type sizes, margins, highlights and colours, and a video renders only after its sheet passes. A render script then renders the video, brings the music to the same steady loudness in every video, and saves a sheet of frames for a last look.</p>
@@ -135,7 +190,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <div class="cs-body-section reveal-blur">
-        <h2>What It Taught Me</h2>
+        <h2 id="what-it-taught-me">What It Taught Me</h2>
         <p>A video can pass every still and still break in the full render. The PostHog video looked right on its review sheet. In the full render, its screenshot cards flickered between the whole card and the caption alone. The kit renders frames in parallel browser tabs, and a plain image tag does not make a tab wait for its image to load. I now draw every screenshot with Remotion's own image component, which holds the frame until the image is ready, and I scan each finished video frame by frame for flicker.</p>
         <p>Poster frames taught me a smaller version of the same lesson. A fixed timestamp gave some posters half-typed lines or empty screens, so I now pick each poster from a finished moment in its video.</p>
       </div>
