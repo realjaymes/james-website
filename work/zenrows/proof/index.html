@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WKSZ7DQC');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Zenrows in the Agent Developer's Stack: A Baseline and a First 90 Days | James Praise</title>
+<meta name="description" content="A measured developer footprint for Zenrows and a first 90-day developer relations plan, by James Praise." />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Zenrows in the Agent Developer's Stack: A Baseline and a First 90 Days | James Praise" />
+<meta property="og:description" content="A measured developer footprint for Zenrows and a first 90-day developer relations plan, by James Praise." />
+<meta property="og:url" content="https://jamespraise.xyz/work/zenrows/proof/" />
+<meta property="og:image" content="https://jamespraise.xyz/assets/images/og/work/zenrows-proof.jpg?v=20261024" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Zenrows in the Agent Developer's Stack: A Baseline and a First 90 Days | James Praise" />
+<meta name="twitter:description" content="A measured developer footprint for Zenrows and a first 90-day developer relations plan, by James Praise." />
+<meta name="twitter:image" content="https://jamespraise.xyz/assets/images/og/work/zenrows-proof.jpg?v=20261024" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Zenrows in the Agent Developer's Stack | James Praise" />
+<meta property="og:description" content="A measured developer footprint for Zenrows and a first 90-day developer relations plan, by James Praise." />
+<meta property="og:url" content="https://jamespraise.xyz/work/zenrows/proof/" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Zenrows in the Agent Developer's Stack | James Praise" />
+<meta name="twitter:description" content="A measured developer footprint for Zenrows and a first 90-day developer relations plan, by James Praise." />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+<link rel="canonical" href="https://jamespraise.xyz/work/zenrows/proof/" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=23" />
+<style>
+  .proof-wrap { max-width: 720px; margin: 0 auto; padding: 100px 0 80px; }
+  .proof-eyebrow { color: var(--color-purple); font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; font-size: 13px; margin-bottom: 10px; }
+  .proof-credit { display: flex; align-items: center; gap: 10px; margin: 20px 0 40px; }
+  .proof-credit img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+  .proof-credit span { color: var(--text-muted); font-size: 14px; }
+  .proof-credit strong { color: var(--text-primary); }
+  .proof-note { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 8px; padding: 16px 20px; font-size: 14px; color: var(--text-muted); margin-bottom: 40px; }
+  .proof-draft { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 12px; padding: 40px; margin-bottom: 56px; }
+  .proof-draft h2 { margin-top: 32px; margin-bottom: 10px; }
+  .proof-draft h2:first-child { margin-top: 0; }
+  .proof-draft p { line-height: 1.7; }
+  .proof-body p { line-height: 1.7; }
+  .proof-body h2 { margin-top: 40px; margin-bottom: 12px; }
+  .proof-body strong { font-weight: 700; }
+  .proof-back { display: inline-block; margin-bottom: 24px; font-size: 14px; }
+  .section-label { font-size: 13px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-cards { display: grid; grid-template-columns: 1fr; gap: 14px; margin: 24px 0; }
+  .proof-card { background: var(--bg-page); border: 1px solid rgba(28,20,34,0.1); border-radius: 10px; padding: 18px; }
+  .proof-card .proof-card-head { font-size: 18px; font-weight: 800; color: var(--text-primary); line-height: 1.3; margin: 0 0 6px; }
+  .proof-card p { font-size: 15px; margin: 0; }
+  .proof-quote { border-left: 3px solid var(--color-purple); padding: 4px 0 4px 22px; margin: 28px 0; font-size: 19px; font-weight: 600; line-height: 1.5; color: var(--text-primary); }
+  .proof-table-wrap { overflow-x: auto; margin: 20px 0; }
+  .proof-table { width: 100%; border-collapse: collapse; font-size: 13px; background: var(--bg-page); border-radius: 10px; overflow: hidden; }
+  .proof-table th { background: var(--bg-surface); text-align: left; padding: 10px 12px; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-muted); border-bottom: 1px solid rgba(28,20,34,0.1); }
+  .proof-table td { padding: 10px 12px; border-bottom: 1px solid rgba(28,20,34,0.08); color: var(--text-primary); line-height: 1.5; vertical-align: top; }
+  .proof-table tr:last-child td { border-bottom: none; }
+  .proof-table tr.is-us td { font-weight: 700; }
+  .proof-toc { position: fixed; top: 140px; right: 32px; width: 200px; font-size: 13px; }
+  .proof-toc-group { margin-bottom: 20px; }
+  .proof-toc-label { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-toc a { display: block; padding: 5px 0 5px 12px; border-left: 2px solid rgba(28,20,34,0.1); color: var(--text-muted); text-decoration: none; line-height: 1.4; }
+  .proof-toc a:hover { color: var(--color-purple); border-left-color: var(--color-purple); }
+  .proof-toc a.is-active { color: var(--color-purple); border-left-color: var(--color-purple); font-weight: 700; }
+  @media (max-width: 1400px) { .proof-toc { display: none; } }
+  .proof-progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(28,20,34,0.08); z-index: 200; }
+  .proof-progress-bar { height: 100%; width: 0%; background: var(--color-purple); transition: width 0.1s linear; }
+</style>
+</head>
+<body class="proof-page">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKSZ7DQC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="proof-progress-track"><div class="proof-progress-bar" id="proofProgressBar"></div></div>
+
+<a href="/work/zenrows/" class="pitch-exit" aria-label="Back to the Zenrows pitch">
+  <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+</a>
+
+<nav class="proof-toc" aria-label="Section navigation">
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The plan</p>
+    <a href="#baseline">The baseline</a>
+    <a href="#what-it-means">What the numbers say</a>
+    <a href="#week-one">Week one</a>
+    <a href="#ninety-days">The first 90 days</a>
+    <a href="#measurement">How I'd measure it</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">Appendix</p>
+    <a href="#appendix-method">How I counted</a>
+    <a href="#appendix-need">What I need from you</a>
+    <a href="#appendix-sources">What I read</a>
+  </div>
+</nav>
+
+<div class="container proof-wrap">
+  <a class="proof-back" href="/work/zenrows/">&larr; Back to the Zenrows pitch</a>
+
+  <p class="proof-eyebrow">A plan for Zenrows</p>
+  <h1>Zenrows in the Agent Developer's Stack: A Baseline and a First 90 Days</h1>
+
+  <div class="proof-credit">
+    <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+    <span><strong>James Praise</strong> &middot; Marketing and GTM Operator</span>
+  </div>
+
+  <p class="proof-note">Everything here comes from public data I pulled on 14 November 2026: package downloads, GitHub search and the reading lists agent developers use to pick tools. I can't see your signups, your API traffic by source or which integrations people use, so anything that needs your data is marked [proof needed]. An MCP (Model Context Protocol) server is the plug that lets an AI agent such as Claude or Cursor call a tool.</p>
+
+  <div class="proof-draft">
+    <p class="section-label">The plan</p>
+
+    <h2 id="baseline">The baseline</h2>
+    <p>Your <a href="https://job-boards.greenhouse.io/zenrows/jobs/5029834101" target="_blank" rel="noopener">job posting</a> says the goal is to make Zenrows "part of every agentic developer's stack" and that success is measured on adoption. So I measured where adoption shows up in public today, for Zenrows and four tools developers compare you with.</p>
+    <div class="proof-table-wrap">
+      <table class="proof-table">
+        <tr><th>Tool</th><th>Python SDK downloads, last month</th><th>JavaScript SDK downloads, last month</th><th>GitHub repositories that mention it</th><th>Lines in 5 agent tool lists</th></tr>
+        <tr class="is-us"><td>Zenrows</td><td>135,692</td><td>138,052</td><td>1,810</td><td>0</td></tr>
+        <tr><td>ScrapingBee</td><td>284,717</td><td>242,669</td><td>2,583</td><td>1</td></tr>
+        <tr><td>Browserbase</td><td>2,958,320</td><td>10,744,856</td><td>4,604</td><td>10</td></tr>
+        <tr><td>Apify</td><td>3,074,963</td><td>2,173,830</td><td>42,966</td><td>10</td></tr>
+        <tr><td>Firecrawl</td><td>6,459,959</td><td>5,408,028</td><td>29,282</td><td>12</td></tr>
+      </table>
+    </div>
+    <p>Downloads come from <a href="https://pypistats.org/packages/zenrows" target="_blank" rel="noopener">PyPI Stats</a> and the <a href="https://www.npmjs.com/package/zenrows" target="_blank" rel="noopener">npm registry</a>. Repository counts come from GitHub search. The five lists are named in the appendix.</p>
+
+    <h2 id="what-it-means">What the numbers say</h2>
+    <p>Your product is not the problem. Your posting reports more than 10 billion requests a month, and much of that traffic probably calls your API directly, which no download count sees. The gap sits further up: Firecrawl's Python package is downloaded about 48 times as often as yours, and agent developers meet it first.</p>
+    <p>The clearest finding is the last column. Your <a href="https://github.com/ZenRows/zenrows-mcp" target="_blank" rel="noopener">official MCP server</a>, your CLI and your Cursor and Copilot plugins are all live on GitHub. None of them appears in <a href="https://github.com/punkpeye/awesome-mcp-servers" target="_blank" rel="noopener">awesome-mcp-servers</a> or <a href="https://github.com/VoltAgent/awesome-agent-skills" target="_blank" rel="noopener">awesome-agent-skills</a>, the lists where agent developers go to choose tools. Firecrawl is listed in both, and Browserbase has ten lines in the skills list.</p>
+
+    <h2 id="week-one">Week one</h2>
+    <p>The first week costs no budget. I would submit the MCP server, the CLI and the agent skills to the main agent tool lists and MCP directories, each with a short working example. Then I would add a "used by agents" check to every tool comparison you already publish, so a developer who finds you through a list lands on a page that answers the same question.</p>
+
+    <h2 id="ninety-days">The first 90 days</h2>
+    <div class="proof-cards">
+      <div class="proof-card">
+        <p class="proof-card-head">Days 1 to 30: get listed and get a baseline</p>
+        <p>I'd finish the listings and set up a monthly footprint report from the script behind this page. Then I'd talk to ten developers who signed up in the last quarter about what they were building and where they found you.</p>
+      </div>
+      <div class="proof-card">
+        <p class="proof-card-head">Days 31 to 60: starter kits and demos</p>
+        <p>I'd build three starter kits around the jobs agent developers ask about most, such as an agent that reads a protected product page and a research agent that cites live pages. Each kit becomes a video, a GitHub repository and a post where people already talk about scraping, starting with r/webscraping.</p>
+      </div>
+      <div class="proof-card">
+        <p class="proof-card-head">Days 61 to 90: first hackathon and a creator loop</p>
+        <p>I'd pick one AI agent hackathon where the projects need live web data, and go in person. I'd also invite the developers who write about Zenrows into your creator program, which already pays a fee on delivery and 35% recurring.</p>
+      </div>
+    </div>
+
+    <h2 id="measurement">How I'd measure it</h2>
+    <p>I'd judge the work on adoption, as your posting asks. The leading numbers are monthly SDK and CLI downloads, MCP server installs and GitHub repositories that use Zenrows. The number that matters is new paying accounts whose first request came from an SDK, the CLI or the MCP server. The baseline for that one is [proof needed].</p>
+  </div>
+
+  <div class="proof-body">
+    <p class="section-label">Appendix</p>
+
+    <h2 id="appendix-method">How I counted</h2>
+    <p>I wrote a small Python script that calls four public sources: the <a href="https://pypistats.org/api/" target="_blank" rel="noopener">PyPI Stats API</a> for last-month downloads, the <a href="https://github.com/npm/registry/blob/main/docs/download-counts.md" target="_blank" rel="noopener">npm download counts API</a>, the <a href="https://docs.github.com/en/rest/search/search" target="_blank" rel="noopener">GitHub repository search API</a> for repositories whose name, description or README mentions each tool, and the README of each agent tool list.</p>
+    <p>The packages counted are zenrows, firecrawl-py and @mendable/firecrawl-js, scrapingbee, browserbase and @browserbasehq/sdk, and apify-client. The five lists are awesome-mcp-servers, awesome-llm-apps, awesome-agent-skills, awesome-claude-code and awesome-ai-agents. A line counts when it names the tool.</p>
+    <p>These numbers have limits. Downloads include automated installs from build pipelines. Apify is also a common word in repository text, so its repository count runs high. None of it measures paying customers. I use it as a footprint, a number that moves when developer relations works, and I would rerun the same script each month.</p>
+
+    <h2 id="appendix-need">What I need from you</h2>
+    <p>I would need signups and paying accounts by first-request source (API, SDK, CLI or MCP), which integrations drive the most usage, and the questions support hears most often. Those decide which starter kits come first and which hackathons are worth the travel.</p>
+
+    <h2 id="appendix-sources">What I read</h2>
+    <p>I read your <a href="https://job-boards.greenhouse.io/zenrows/jobs/5029834101" target="_blank" rel="noopener">job posting</a>, your <a href="https://www.zenrows.com/about" target="_blank" rel="noopener">About page</a>, your <a href="https://www.zenrows.com/community" target="_blank" rel="noopener">Community page</a> with the creator program offer, and the public repositories in your <a href="https://github.com/ZenRows" target="_blank" rel="noopener">GitHub organisation</a>, all on 14 November 2026. Your Community page lists GitHub, X, Reddit, the blog and LinkedIn. It does not list a Discord or a forum you run.</p>
+    <p>My own work behind this approach: I built a <a href="/work/prospect-outbound-engine/">prospect data engine</a> in Python, including a GitHub search and Hacker News adapter that pulled 784 repositories for developer-traction targeting. I also publish 34<!--skills:published--> of my agent skills at <a href="https://github.com/realjaymes/marketingagentskills" target="_blank" rel="noopener">github.com/realjaymes/marketingagentskills</a>.</p>
+  </div>
+
+  <div class="button-row" style="margin-top: 40px;">
+    <a href="/work/zenrows/" class="button button-primary">Back to the pitch</a>
+    <a href="/work/zenrows/files/james-praise-resume.pdf" target="_blank" rel="noopener" class="button button-secondary">My Resume</a>
+  </div>
+</div>
+
+<script src="/script.js?v=11"></script>
+<script>
+(function () {
+  var bar = document.getElementById('proofProgressBar');
+  function updateProgress() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.proof-toc a'));
+  var sections = tocLinks.map(function (a) {
+    return document.getElementById(a.getAttribute('href').slice(1));
+  });
+  function updateActiveToc() {
+    var current = null;
+    sections.forEach(function (sec, i) {
+      if (sec && sec.getBoundingClientRect().top <= 140) current = i;
+    });
+    tocLinks.forEach(function (a, i) {
+      a.classList.toggle('is-active', i === current);
+    });
+  }
+  window.addEventListener('scroll', updateActiveToc, { passive: true });
+  updateActiveToc();
+})();
+</script>
+</body>
+</html>
