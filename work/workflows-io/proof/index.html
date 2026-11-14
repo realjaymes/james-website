@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WKSZ7DQC');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>One client campaign, worked through the engineer's calls | James Praise</title>
+<meta name="description" content="A worked example for Workflows.io by James Praise: one sample client campaign taken through the seven calls a GTM engineer makes, built from public pages only. Not affiliated with Workflows.io." />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="One client campaign, worked through the engineer's calls | James Praise" />
+<meta property="og:description" content="A worked example for Workflows.io by James Praise: one sample client campaign taken through the seven calls a GTM engineer makes, built from public pages only." />
+<meta property="og:url" content="https://jamespraise.xyz/work/workflows-io/proof/" />
+<meta property="og:image" content="https://jamespraise.xyz/assets/images/og/work/workflows-io-proof.jpg?v=20261024" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="One client campaign, worked through the engineer's calls | James Praise" />
+<meta name="twitter:description" content="A worked example for Workflows.io by James Praise: one sample client campaign taken through the seven calls a GTM engineer makes, built from public pages only." />
+<meta name="twitter:image" content="https://jamespraise.xyz/assets/images/og/work/workflows-io-proof.jpg?v=20261024" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+<link rel="canonical" href="https://jamespraise.xyz/work/workflows-io/proof/" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=23" />
+<style>
+  .proof-wrap { max-width: 720px; margin: 0 auto; padding: 100px 0 80px; }
+  .proof-eyebrow { color: var(--color-purple); font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; font-size: 13px; margin-bottom: 10px; }
+  .proof-credit { display: flex; align-items: center; gap: 10px; margin: 20px 0 40px; }
+  .proof-credit img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+  .proof-credit span { color: var(--text-muted); font-size: 14px; }
+  .proof-credit strong { color: var(--text-primary); }
+  .proof-note { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 8px; padding: 16px 20px; font-size: 14px; color: var(--text-muted); margin-bottom: 40px; }
+  .proof-draft { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 12px; padding: 40px; margin-bottom: 56px; }
+  .proof-draft h2 { margin-top: 40px; margin-bottom: 10px; }
+  .proof-draft h2:first-child { margin-top: 0; }
+  .proof-draft h3 { margin-top: 24px; margin-bottom: 8px; font-size: 17px; }
+  .proof-draft p, .proof-draft li { line-height: 1.7; }
+  .proof-draft ul, .proof-draft ol { padding-left: 20px; margin: 12px 0; }
+  .proof-back { display: inline-block; margin-bottom: 24px; font-size: 14px; }
+  .section-label { font-size: 13px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-cards { display: grid; grid-template-columns: 1fr; gap: 14px; margin: 24px 0; }
+  .proof-card { background: var(--bg-page); border: 1px solid rgba(28,20,34,0.1); border-radius: 10px; padding: 18px; }
+  .proof-card strong { display: block; font-size: 15px; margin-bottom: 6px; color: var(--text-primary); }
+  .proof-card span { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+  .proof-copy { background: var(--bg-page); border: 1px dashed rgba(28,20,34,0.25); border-radius: 10px; padding: 22px; margin: 16px 0 24px; }
+  .proof-copy p { margin: 0 0 10px; }
+  .proof-copy p:last-child { margin-bottom: 0; }
+  .proof-copy .copy-label { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); }
+  .proof-table-wrap { overflow-x: auto; margin: 20px 0; }
+  .proof-table { width: 100%; border-collapse: collapse; font-size: 13px; background: var(--bg-page); border-radius: 10px; overflow: hidden; }
+  .proof-table th { background: var(--bg-surface); text-align: left; padding: 10px 12px; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-muted); border-bottom: 1px solid rgba(28,20,34,0.1); }
+  .proof-table td { padding: 10px 12px; border-bottom: 1px solid rgba(28,20,34,0.08); color: var(--text-primary); line-height: 1.5; vertical-align: top; }
+  .proof-table tr:last-child td { border-bottom: none; }
+  .yes { color: #15803d; font-weight: 700; }
+  .no { color: #b91c1c; font-weight: 700; }
+  .smap-break { width: min(900px, calc(100vw - 32px)); margin: 8px 0 28px 50%; transform: translateX(-50%); background: #fff; border: 1px solid rgba(28,20,34,0.1); border-radius: 12px; padding: 22px 18px; }
+  @media (max-width: 760px) { .smap-break { background: none; border: none; padding: 0; } }
+  .proof-toc { position: fixed; top: 140px; right: 32px; width: 200px; font-size: 13px; }
+  .proof-toc-group { margin-bottom: 20px; }
+  .proof-toc-label { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-toc a { display: block; padding: 5px 0 5px 12px; border-left: 2px solid rgba(28,20,34,0.1); color: var(--text-muted); text-decoration: none; line-height: 1.4; }
+  .proof-toc a:hover { color: var(--color-purple); border-left-color: var(--color-purple); }
+  .proof-toc a.is-active { color: var(--color-purple); border-left-color: var(--color-purple); font-weight: 700; }
+  @media (max-width: 1400px) { .proof-toc { display: none; } }
+  @media (max-width: 640px) { .proof-draft { padding: 24px 18px; } }
+  .proof-progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(28,20,34,0.08); z-index: 200; }
+  .proof-progress-bar { height: 100%; width: 0%; background: var(--color-purple); transition: width 0.1s linear; }
+</style>
+</head>
+<body class="proof-page">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKSZ7DQC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="proof-progress-track"><div class="proof-progress-bar" id="proofProgressBar"></div></div>
+
+<a href="/work/workflows-io/" class="pitch-exit" aria-label="Back to the Workflows.io pitch">
+  <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+</a>
+
+<nav class="proof-toc" aria-label="Section navigation">
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">Overview</p>
+    <a href="#client">The sample client</a>
+    <a href="#map">The seven stages</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The campaign</p>
+    <a href="#icp">1. ICP and tiers</a>
+    <a href="#qualifier">2. Qualifier test</a>
+    <a href="#signals">3. Signals</a>
+    <a href="#copy">4. Copy</a>
+    <a href="#preflight">5. Pre-flight</a>
+    <a href="#replies">6. Replies</a>
+    <a href="#weekly">7. Weekly call</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">Evidence</p>
+    <a href="#done">Where I have done this</a>
+    <a href="#appendix">Appendix: qualifier test</a>
+  </div>
+</nav>
+
+<div class="container proof-wrap">
+  <a class="proof-back" href="/work/workflows-io/">&larr; Back to the Workflows.io pitch</a>
+
+  <p class="proof-eyebrow">A worked example for Workflows.io</p>
+  <h1>One client campaign, worked through the engineer's calls</h1>
+
+  <div class="proof-credit">
+    <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+    <span><strong>James Praise</strong> &middot; GTM Engineer</span>
+  </div>
+
+  <p class="proof-note">Built from public pages only, as if your team had handed me this client in week one. Public customer logos stand in for the closed-won deals I would not have. Pylon is not one of your clients.</p>
+
+  <div class="proof-draft">
+    <p class="section-label">The plan</p>
+
+    <h2 id="client">The sample client</h2>
+    <p>Pylon sells support software to business-to-business (B2B) software companies. In August 2025 it announced a <a href="https://www.usepylon.com/blog/announcing-our-31m-series-b" target="_blank" rel="noopener">$31 million Series B co-led by Andreessen Horowitz and Bain Capital Ventures</a>, with General Catalyst and Y Combinator also investing. Its <a href="https://www.usepylon.com/" target="_blank" rel="noopener">homepage</a> claims 1,800+ B2B customers. That is the kind of venture-backed, fast-growing client you already work with.</p>
+    <p><a href="https://www.linkedin.com/in/williamhellawell/recent-activity/all/" target="_blank" rel="noopener">William Hellawell's 13 November LinkedIn post</a> describes how you now run a client campaign. The automations handle the repetitive work, and the engineer makes the call at each stage. He also wrote that getting a campaign to work once is easy, and that building a system that holds up is the hard part. This page walks one campaign through those calls.</p>
+    <p>The map shows the seven stages. Yellow boxes are the engineer's calls, and white boxes are automated. Each numbered box links to its section.</p>
+
+    <h2 id="map">The seven stages</h2>
+    <div class="smap-break">
+<!-- smap:workflows-io -->
+<div class="smap-wrap" data-smap="workflows-io" data-theme="light">
+<style>
+.smap-wrap[data-smap="workflows-io"] { --sm-ink:#100a16; --sm-text:rgba(28,20,34,0.72); --sm-line:rgba(28,20,34,0.45); --sm-accent:#100a16; --sm-loop:#7184f1; }
+.smap-wrap[data-smap="workflows-io"] .smap-d { width:100%; height:auto; display:block; }
+.smap-wrap[data-smap="workflows-io"] .smap-d text { font-family:inherit; }
+.smap-wrap[data-smap="workflows-io"] .st { fill:#ffffff; stroke:rgba(28,20,34,0.22); stroke-width:1.1; }
+.smap-wrap[data-smap="workflows-io"] .sr { fill:#FBF3C6; stroke:#100a16; stroke-width:1.2; }
+.smap-wrap[data-smap="workflows-io"] .dc { fill:rgba(113,132,241,0.12); stroke:#7184f1; stroke-width:1.2; }
+.smap-wrap[data-smap="workflows-io"] .br { fill:rgba(113,241,158,0.16); stroke:#3aa866; stroke-width:1.1; }
+.smap-wrap[data-smap="workflows-io"] rect.ot { fill:#ffffff; stroke:rgba(28,20,34,0.18); stroke-width:1; }
+.smap-wrap[data-smap="workflows-io"] .ex { fill:none; stroke:rgba(28,20,34,0.4); stroke-width:1; stroke-dasharray:4 3; }
+.smap-wrap[data-smap="workflows-io"] .t { fill:var(--sm-text); font-size:11.5px; }
+.smap-wrap[data-smap="workflows-io"] .h { fill:var(--sm-ink); font-weight:700; font-size:12.5px; }
+.smap-wrap[data-smap="workflows-io"] .dt { fill:#2b2f6b; font-size:11.5px; font-weight:700; }
+.smap-wrap[data-smap="workflows-io"] .et { fill:var(--sm-text); font-size:11px; }
+.smap-wrap[data-smap="workflows-io"] .pt { fill:#14532d; font-size:11.5px; font-weight:600; }
+.smap-wrap[data-smap="workflows-io"] text.ot { fill:var(--sm-text); font-size:11px; }
+.smap-wrap[data-smap="workflows-io"] .lb { fill:var(--sm-text); font-size:10.5px; }
+.smap-wrap[data-smap="workflows-io"] .sg { fill:var(--sm-accent); font-size:11px; font-weight:700; letter-spacing:.12em; }
+.smap-wrap[data-smap="workflows-io"] .lg { fill:var(--sm-loop); font-size:12px; }
+.smap-wrap[data-smap="workflows-io"] .kt { fill:var(--sm-text); font-size:11px; }
+.smap-wrap[data-smap="workflows-io"] .ln { stroke:var(--sm-line); stroke-width:1.3; fill:none; }
+.smap-wrap[data-smap="workflows-io"] .lp { stroke:var(--sm-loop); stroke-width:1.4; fill:none; stroke-dasharray:6 5; }
+.smap-wrap[data-smap="workflows-io"] .mk { fill:var(--sm-line); }
+.smap-wrap[data-smap="workflows-io"] .mkg { fill:var(--sm-loop); }
+.smap-wrap[data-smap="workflows-io"] .hot { fill:transparent; stroke:none; cursor:pointer; }
+.smap-wrap[data-smap="workflows-io"] .hot:hover { fill:rgba(241,222,113,0.25); stroke:var(--sm-accent); stroke-width:1.5; }
+.smap-wrap[data-smap="workflows-io"] .smap-m { display:none; color:var(--sm-ink); }
+.smap-wrap[data-smap="workflows-io"] .smap-m-row { margin:0 0 18px; }
+.smap-wrap[data-smap="workflows-io"] .smap-m-label { font-size:12px; font-weight:700; letter-spacing:.12em; margin:0 0 8px; color:var(--sm-accent); }
+.smap-wrap[data-smap="workflows-io"] .smap-m ol, .smap-wrap[data-smap="workflows-io"] .smap-m ul { list-style:none; margin:0; padding:0; }
+.smap-wrap[data-smap="workflows-io"] .smap-m li { position:relative; background:#ffffff; border:1px solid rgba(28,20,34,0.22); border-radius:10px; padding:10px 12px; margin:0 0 18px; font-size:14px; line-height:1.45; }
+.smap-wrap[data-smap="workflows-io"] .smap-m ol > li:not(:last-child)::after { content:"\2193"; position:absolute; left:50%; bottom:-18px; transform:translateX(-50%); color:var(--sm-line); font-size:13px; line-height:18px; }
+.smap-wrap[data-smap="workflows-io"] .smap-m li strong { display:block; }
+.smap-wrap[data-smap="workflows-io"] .smap-m li span { color:var(--sm-text); }
+.smap-wrap[data-smap="workflows-io"] .smap-m li.k-sr { background:#FBF3C6; border-color:#100a16; }
+.smap-wrap[data-smap="workflows-io"] .smap-m li.k-dc { background:rgba(113,132,241,0.12); border-color:#7184f1; }
+.smap-wrap[data-smap="workflows-io"] .smap-m li.k-fan, .smap-wrap[data-smap="workflows-io"] .smap-m li.k-routes { background:none; border:none; padding:0; }
+.smap-wrap[data-smap="workflows-io"] .smap-m li.k-fan li, .smap-wrap[data-smap="workflows-io"] .smap-m li.k-routes li { background:rgba(113,241,158,0.16); border-color:#3aa866; margin-bottom:6px; }
+.smap-wrap[data-smap="workflows-io"] .smap-m a { color:inherit; text-decoration:underline; text-underline-offset:2px; }
+.smap-wrap[data-smap="workflows-io"] .smap-m-loop { color:var(--sm-loop); font-size:14px; margin:4px 0 0; }
+@media (max-width:760px) { .smap-wrap[data-smap="workflows-io"] .smap-d { display:none; } .smap-wrap[data-smap="workflows-io"] .smap-m { display:block; } }
+</style>
+<svg class="smap-d" viewBox="0 0 1027 672" role="img" aria-label="One client campaign in seven stages. Automations do the repetitive work and the engineer makes the call at each stage: set the ideal customer profile and tiers, test the qualifier, pick the signals, write the angle, run the pre-flight, read the replies and run the weekly call"><defs><marker id="ah-workflowsio" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="mk" d="M0,0 L10,5 L0,10 z"/></marker><marker id="ah-workflowsio-g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="mkg" d="M0,0 L10,5 L0,10 z"/></marker></defs><rect class="st" x="40.0" y="33.0" width="198.2" height="72.0" rx="10"/><text class="t" x="50.0" y="51.0"><tspan x="50.0" dy="0" class="h">A Workspace and warm-up</tspan><tspan x="50.0" dy="14">Workspace, brief and</tspan><tspan x="50.0" dy="14">inbox warm-up run</tspan><tspan x="50.0" dy="14">by themselves</tspan></text><path class="ln" d="M238.2,69.0 L262.2,69.0" marker-end="url(#ah-workflowsio)"/><rect class="sr" x="264.2" y="40.0" width="167.2" height="58.0" rx="10"/><text class="t" x="274.2" y="58.0"><tspan x="274.2" dy="0" class="h">1 Set ICP and tiers</tspan><tspan x="274.2" dy="14">Engineer works with</tspan><tspan x="274.2" dy="14">the client&#x27;s team</tspan></text><a href="#icp" data-goto="icp"><rect class="hot" x="264.2" y="40.0" width="167.2" height="58.0" rx="10"><title>Show detail</title></rect></a><path class="ln" d="M431.5,69.0 L455.5,69.0" marker-end="url(#ah-workflowsio)"/><rect class="st" x="457.5" y="40.0" width="174.6" height="58.0" rx="10"/><text class="t" x="467.5" y="58.0"><tspan x="467.5" dy="0" class="h">B Build the list</tspan><tspan x="467.5" dy="14">Agents pull and clean</tspan><tspan x="467.5" dy="14">accounts from 5+ sources</tspan></text><path class="ln" d="M632.1,69.0 L656.1,69.0" marker-end="url(#ah-workflowsio)"/><rect class="sr" x="658.1" y="40.0" width="175.0" height="58.0" rx="10"/><text class="t" x="668.1" y="58.0"><tspan x="668.1" dy="0" class="h">2 Test the qualifier</tspan><tspan x="668.1" dy="14">Run it on closed-won</tspan><tspan x="668.1" dy="14">deals first</tspan></text><a href="#qualifier" data-goto="qualifier"><rect class="hot" x="658.1" y="40.0" width="175.0" height="58.0" rx="10"><title>Show detail</title></rect></a><path class="ln" d="M833.1,69.0 L857.1,69.0" marker-end="url(#ah-workflowsio)"/><polygon class="dc" points="922.9,30.0 986.8,69.0 922.9,108.0 859.1,69.0"/><text class="dt" x="922.9" y="59.0" text-anchor="middle"><tspan x="922.9" dy="0">C</tspan><tspan x="922.9" dy="14">95%+ of deals</tspan><tspan x="922.9" dy="14">pass?</tspan></text><a href="#qualifier" data-goto="qualifier"><rect class="hot" x="859.1" y="30.0" width="127.7" height="78.0" rx="10"><title>Show detail</title></rect></a><rect class="ex" x="865.6" y="132.0" width="114.6" height="42.0" rx="8"/><text class="et" x="922.9" y="149.0" text-anchor="middle"><tspan x="922.9" dy="0">Fix the prompt,</tspan><tspan x="922.9" dy="14">run it again</tspan></text><path class="ln" d="M922.9,108.0 L922.9,130.0" marker-end="url(#ah-workflowsio)"/><text class="lb" x="930.9" y="123.0" text-anchor="start"><tspan x="930.9" dy="0">No</tspan></text><text class="sg" x="40.0" y="21.0"><tspan x="40.0" dy="0">1  SET UP AND BUILD THE LIST</tspan></text><text class="lb" x="992.8" y="62.0" text-anchor="start"><tspan x="992.8" dy="0">Yes</tspan></text><rect class="sr" x="827.3" y="252.0" width="159.5" height="58.0" rx="10"/><text class="t" x="837.3" y="270.0"><tspan x="837.3" dy="0" class="h">3 Pick the signals</tspan><tspan x="837.3" dy="14">Which signals are</tspan><tspan x="837.3" dy="14">worth acting on</tspan></text><a href="#signals" data-goto="signals"><rect class="hot" x="827.3" y="252.0" width="159.5" height="58.0" rx="10"><title>Show detail</title></rect></a><path class="ln" d="M827.3,281.0 L803.3,281.0" marker-end="url(#ah-workflowsio)"/><rect class="st" x="639.6" y="252.0" width="161.7" height="58.0" rx="10"/><text class="t" x="649.6" y="270.0"><tspan x="649.6" dy="0" class="h">D Track and route</tspan><tspan x="649.6" dy="14">Tracked 24/7, leads go</tspan><tspan x="649.6" dy="14">to the right campaign</tspan></text><path class="ln" d="M639.6,281.0 L615.6,281.0" marker-end="url(#ah-workflowsio)"/><rect class="sr" x="461.8" y="252.0" width="151.8" height="58.0" rx="10"/><text class="t" x="471.8" y="270.0"><tspan x="471.8" dy="0" class="h">4 Write the angle</tspan><tspan x="471.8" dy="14">Offers and copy</tspan><tspan x="471.8" dy="14">written by hand</tspan></text><a href="#copy" data-goto="copy"><rect class="hot" x="461.8" y="252.0" width="151.8" height="58.0" rx="10"><title>Show detail</title></rect></a><path class="ln" d="M461.8,281.0 L437.8,281.0" marker-end="url(#ah-workflowsio)"/><rect class="st" x="267.7" y="252.0" width="168.1" height="58.0" rx="10"/><text class="t" x="277.7" y="270.0"><tspan x="277.7" dy="0" class="h">E Adapt to segments</tspan><tspan x="277.7" dy="14">Agents rewrite it</tspan><tspan x="277.7" dy="14">for every other segment</tspan></text><path class="ln" d="M267.7,281.0 L243.7,281.0" marker-end="url(#ah-workflowsio)"/><rect class="sr" x="82.2" y="252.0" width="159.5" height="58.0" rx="10"/><text class="t" x="92.2" y="270.0"><tspan x="92.2" dy="0" class="h">4b Review versions</tspan><tspan x="92.2" dy="14">Engineer reviews,</tspan><tspan x="92.2" dy="14">client approves</tspan></text><a href="#copy" data-goto="copy"><rect class="hot" x="82.2" y="252.0" width="159.5" height="58.0" rx="10"><title>Show detail</title></rect></a><text class="sg" x="895.0" y="243.0" text-anchor="end"><tspan x="895.0" dy="0">2  SIGNALS AND COPY</tspan></text><path class="ln" d="M986.8,69.0 L1000.8,69.0 L1000.8,202.0 L907.0,202.0 L907.0,250.0" marker-end="url(#ah-workflowsio)"/><rect class="st" x="40.0" y="388.0" width="168.1" height="58.0" rx="10"/><text class="t" x="50.0" y="406.0"><tspan x="50.0" dy="0" class="h">F Build and checks</tspan><tspan x="50.0" dy="14">Build and pre-launch</tspan><tspan x="50.0" dy="14">checks run on their own</tspan></text><path class="ln" d="M208.1,417.0 L232.1,417.0" marker-end="url(#ah-workflowsio)"/><rect class="sr" x="234.1" y="388.0" width="175.0" height="58.0" rx="10"/><text class="t" x="244.1" y="406.0"><tspan x="244.1" dy="0" class="h">5 Run the pre-flight</tspan><tspan x="244.1" dy="14">Final check, then</tspan><tspan x="244.1" dy="14">choose what goes first</tspan></text><a href="#preflight" data-goto="preflight"><rect class="hot" x="234.1" y="388.0" width="175.0" height="58.0" rx="10"><title>Show detail</title></rect></a><path class="ln" d="M409.1,417.0 L433.1,417.0" marker-end="url(#ah-workflowsio)"/><rect class="st" x="435.1" y="388.0" width="198.2" height="58.0" rx="10"/><text class="t" x="445.1" y="406.0"><tspan x="445.1" dy="0" class="h">G Send and sort replies</tspan><tspan x="445.1" dy="14">Positive replies reach</tspan><tspan x="445.1" dy="14">the client in seconds</tspan></text><text class="sg" x="136.1" y="379.0"><tspan x="136.1" dy="0">3  LAUNCH</tspan></text><path class="ln" d="M82.2,281.0 L68.2,281.0 L68.2,338.0 L124.1,338.0 L124.1,386.0" marker-end="url(#ah-workflowsio)"/><rect class="sr" x="827.3" y="524.0" width="159.5" height="58.0" rx="10"/><text class="t" x="837.3" y="542.0"><tspan x="837.3" dy="0" class="h">6 Read the replies</tspan><tspan x="837.3" dy="14">Decide where to</tspan><tspan x="837.3" dy="14">double down</tspan></text><a href="#replies" data-goto="replies"><rect class="hot" x="827.3" y="524.0" width="159.5" height="58.0" rx="10"><title>Show detail</title></rect></a><path class="ln" d="M827.3,553.0 L803.3,553.0" marker-end="url(#ah-workflowsio)"/><rect class="st" x="626.7" y="524.0" width="174.6" height="58.0" rx="10"/><text class="t" x="636.7" y="542.0"><tspan x="636.7" dy="0" class="h">H Draft the recap</tspan><tspan x="636.7" dy="14">Agents draft the agenda,</tspan><tspan x="636.7" dy="14">recap and weekly report</tspan></text><path class="ln" d="M626.7,553.0 L602.7,553.0" marker-end="url(#ah-workflowsio)"/><rect class="sr" x="418.0" y="524.0" width="182.8" height="58.0" rx="10"/><text class="t" x="428.0" y="542.0"><tspan x="428.0" dy="0" class="h">7 Run the weekly call</tspan><tspan x="428.0" dy="14">The call is spent</tspan><tspan x="428.0" dy="14">on strategy</tspan></text><a href="#weekly" data-goto="weekly"><rect class="hot" x="418.0" y="524.0" width="182.8" height="58.0" rx="10"><title>Show detail</title></rect></a><text class="sg" x="895.0" y="515.0" text-anchor="end"><tspan x="895.0" dy="0">4  LEARN AND REPORT</tspan></text><path class="ln" d="M633.4,417.0 L647.4,417.0 L647.4,474.0 L907.0,474.0 L907.0,522.0" marker-end="url(#ah-workflowsio)"/><path class="lp" d="M509.3,582.0 L509.3,604.0 L20.0,604.0 L20.0,69.0 L38.0,69.0" marker-end="url(#ah-workflowsio-g)"/><text class="lg" x="513.4" y="622.0" text-anchor="middle"><tspan x="513.4" dy="0">Each week&#x27;s call changes the next lists and copy</tspan></text><rect class="sr" x="40" y="646.0" width="24" height="18" rx="5"/><text class="kt" x="72.0" y="659.0"><tspan x="72.0" dy="0">Engineer&#x27;s call</tspan></text><rect class="st" x="191.0" y="646.0" width="24" height="18" rx="5"/><text class="kt" x="223.0" y="659.0"><tspan x="223.0" dy="0">Automated</tspan></text><polygon class="dc" points="314.8,646.0 324.8,655.0 314.8,664.0 304.8,655.0"/><text class="kt" x="336.8" y="659.0"><tspan x="336.8" dy="0">Decision</tspan></text><rect class="ex" x="412.4" y="646.0" width="24" height="18" rx="5"/><text class="kt" x="444.4" y="659.0"><tspan x="444.4" dy="0">Exit or fallback</tspan></text></svg>
+<div class="smap-m"><div class="smap-m-row"><p class="smap-m-label">1  SET UP AND BUILD THE LIST</p><ol><li class="k-st"><strong>A Workspace and warm-up</strong><span>Workspace, brief and inbox warm-up run by themselves</span></li><li class="k-sr"><strong><a href="#icp" data-goto="icp">1 Set ICP and tiers</a></strong><span>Engineer works with the client&#x27;s team</span></li><li class="k-st"><strong>B Build the list</strong><span>Agents pull and clean accounts from 5+ sources</span></li><li class="k-sr"><strong><a href="#qualifier" data-goto="qualifier">2 Test the qualifier</a></strong><span>Run it on closed-won deals first</span></li><li class="k-dc"><strong>C 95%+ of deals pass?</strong><span>Yes: carry on. No: Fix the prompt, run it again.</span></li></ol></div><div class="smap-m-row"><p class="smap-m-label">2  SIGNALS AND COPY</p><ol><li class="k-sr"><strong><a href="#signals" data-goto="signals">3 Pick the signals</a></strong><span>Which signals are worth acting on</span></li><li class="k-st"><strong>D Track and route</strong><span>Tracked 24/7, leads go to the right campaign</span></li><li class="k-sr"><strong><a href="#copy" data-goto="copy">4 Write the angle</a></strong><span>Offers and copy written by hand</span></li><li class="k-st"><strong>E Adapt to segments</strong><span>Agents rewrite it for every other segment</span></li><li class="k-sr"><strong><a href="#copy" data-goto="copy">4b Review versions</a></strong><span>Engineer reviews, client approves</span></li></ol></div><div class="smap-m-row"><p class="smap-m-label">3  LAUNCH</p><ol><li class="k-st"><strong>F Build and checks</strong><span>Build and pre-launch checks run on their own</span></li><li class="k-sr"><strong><a href="#preflight" data-goto="preflight">5 Run the pre-flight</a></strong><span>Final check, then choose what goes first</span></li><li class="k-st"><strong>G Send and sort replies</strong><span>Positive replies reach the client in seconds</span></li></ol></div><div class="smap-m-row"><p class="smap-m-label">4  LEARN AND REPORT</p><ol><li class="k-sr"><strong><a href="#replies" data-goto="replies">6 Read the replies</a></strong><span>Decide where to double down</span></li><li class="k-st"><strong>H Draft the recap</strong><span>Agents draft the agenda, recap and weekly report</span></li><li class="k-sr"><strong><a href="#weekly" data-goto="weekly">7 Run the weekly call</a></strong><span>The call is spent on strategy</span></li></ol></div><p class="smap-m-loop">&#8634; Each week&#x27;s call changes the next lists and copy</p></div>
+</div>
+<!-- /smap:workflows-io -->
+    </div>
+
+    <h2 id="icp">1. ICP and tiers: who Pylon writes to first</h2>
+    <p>Pylon calls itself the only agentic support platform <a href="https://www.usepylon.com/" target="_blank" rel="noopener">purpose-built for B2B</a>. Its case studies show who feels the problem. Hightouch supports customers in <a href="https://www.usepylon.com/case-study/hightouch" target="_blank" rel="noopener">more than 300 shared Slack channels</a>. At Wispr Flow, one person handled about 500 support tickets a week, and a six-person team now handles more than 2,000, <a href="https://www.usepylon.com/case-study/wispr-flow" target="_blank" rel="noopener">according to its case study</a>.</p>
+    <p>The engineer sets the ideal customer profile (ICP) and the tiers with the client's team in week one. I tier by account value, which here means the size of the support problem. These numbers are my starting point from the case studies, and the first call would correct them.</p>
+    <div class="proof-table-wrap">
+      <table class="proof-table">
+        <tr><th>Tier</th><th>Criteria</th><th>Example account type</th><th>How they are reached</th></tr>
+        <tr><td>Tier 1</td><td>B2B software or AI company with 100+ business customers in shared Slack or Teams channels, or a support team of five or more</td><td>A data platform supporting hundreds of customer Slack channels</td><td>One to one: hand-written email, LinkedIn note, call</td></tr>
+        <tr><td>Tier 2</td><td>Same buyer, with 20 to 100 business customers and one to four support staff</td><td>A Series A developer tool with an enterprise plan and a Slack community</td><td>One to few: one email written for each segment</td></tr>
+        <tr><td>Tier 3</td><td>Early company where a founder still answers support</td><td>A seed-stage API company with a docs site and no support hire yet</td><td>One to many: a short email sequence</td></tr>
+      </table>
+    </div>
+
+    <h2 id="qualifier">2. The qualifier test: does the prompt recognize real customers?</h2>
+    <p>The qualifier is a short prompt an agent runs on every account before it enters a campaign. This is the version I would test. It reads only the company's own public pages.</p>
+    <div class="proof-copy">
+      <p class="copy-label">Qualifier prompt, version 2</p>
+      <p>Company: {{name}}, {{domain}}. Read only this company's own public pages. Answer PASS or FAIL, then give one line of evidence quoted from a page.</p>
+      <p>PASS only if all three are true.</p>
+      <p>1. It sells software or an application programming interface (API) to businesses, and businesses pay for it through a team, business or enterprise plan or a sales contact.</p>
+      <p>2. Customers use it every day or in production, so they will ask for help often.</p>
+      <p>3. The site shows an ongoing business relationship. That means a support route (help center, support link, community, shared Slack or status page). It can also be a sales-led enterprise path with contract terms or a service-level agreement (SLA), or named business customers.</p>
+      <p>FAIL if the company is a consumer product, hardware or a service business.</p>
+    </div>
+    <p>The engineer tests the qualifier on the client's closed-won deals first, and 95% or more should pass. I do not have Pylon's deal list, so I used 19 customers from its <a href="https://www.usepylon.com/customers" target="_blank" rel="noopener">public customers page</a> and read each company's own site.</p>
+    <p>Version 1 also required a visible support route on the public pages. It passed 12 of 19 (63%). Seven real customers failed. Six of them keep support behind a login or a sales form: Linear, Together AI, Retool, AssemblyAI, Applied Intuition and CodeRabbit. The seventh, Wispr Flow, leads with a consumer app, yet it sells team and enterprise plans.</p>
+    <p>I changed two rules. A sales-led enterprise path with contract terms, or named business customers, now counts as a business relationship. A consumer app passes if it also sells a paid team or enterprise plan. Version 2 passed 19 of 19. The <a href="#appendix">appendix</a> shows every account.</p>
+    <p>That result is weaker than it looks. I changed the rules after seeing the failures, and a test on real customers only shows the prompt does not reject good accounts. As a spot check, <a href="https://www.onepeloton.com/" target="_blank" rel="noopener">Peloton</a>, a consumer fitness brand, fails the first rule. Before a live list, I would run a fresh set of customers and a set of non-customers.</p>
+
+    <h2 id="signals">3. Signals: the three worth acting on</h2>
+    <p>I would act on three signals. Each one points to a growing support load.</p>
+    <div class="proof-cards">
+      <div class="proof-card"><strong>A support or customer success job post</strong><span>A company hiring its first support or success people has outgrown founder-led support. The source is the company's own careers page, checked weekly. Tier 1 and Tier 2 accounts get the first email within days of the post.</span></div>
+      <div class="proof-card"><strong>A funding round</strong><span>New money usually brings new customers within months and a larger support load. The source is the company's own announcement. LangChain, for example, states on its <a href="https://www.langchain.com/" target="_blank" rel="noopener">homepage</a> that it raised a $300 million Series C at a $3 billion valuation.</span></div>
+      <div class="proof-card"><strong>A competing support tool named in the company's own pages</strong><span>A job post or help center that names Zendesk, Front or Intercom marks an account that may be ready to switch. Pylon says <a href="https://www.usepylon.com/blog/announcing-our-31m-series-b" target="_blank" rel="noopener">more than 150 companies have migrated</a> from older platforms, and one case study is titled <a href="https://www.usepylon.com/case-study/sardine" target="_blank" rel="noopener">How Sardine replaced Zendesk in 5 Days</a>.</span></div>
+    </div>
+    <p>The engineer decides which signal goes into which campaign. A hiring signal goes to the head of support. A migration signal gets its own email.</p>
+
+    <h2 id="copy">4. Copy: one email by hand, two versions by agent</h2>
+    <p>The engineer writes the Tier 1 email by hand, because that segment has the clearest proof point. Agents then adapt it to the other segments.</p>
+    <div class="proof-copy">
+      <p class="copy-label">Tier 1: head of support at a company with 100+ customer Slack channels</p>
+      <p>Subject: 300 Slack channels, one queue</p>
+      <p>{{first_name}}, {{company}} supports customers in shared Slack channels, and every new customer adds one more to watch.</p>
+      <p>Hightouch reached more than 300 of them. Its team now gets every support question into one queue, and says it saves about 100 hours a month finding and tracking questions across channels.</p>
+      <p>Customers stay in Slack, and your team works from one queue. Would 15 minutes next week be useful?</p>
+    </div>
+    <p>The Hightouch numbers come from its <a href="https://www.usepylon.com/case-study/hightouch" target="_blank" rel="noopener">case study</a>, which Pylon published. The agent adapts the email for two segments.</p>
+    <div class="proof-copy">
+      <p class="copy-label">Tier 2: head of customer success at a Series A developer tool</p>
+      <p>{{first_name}}, when customers reach {{company}} in Slack, email and chat, the first person to see a question is often luck.</p>
+      <p>Wispr Flow's support work grew from one person handling about 500 tickets a week to six people handling more than 2,000. Its team says it can now promise response times because it sees what is coming in.</p>
+      <p>Would a short look at how your channels would work be useful?</p>
+    </div>
+    <div class="proof-copy">
+      <p class="copy-label">Migration signal: head of support whose own pages name Zendesk or Front</p>
+      <p>{{first_name}}, {{company}}'s help center runs on {{tool}}.</p>
+      <p>Sardine replaced Zendesk with Pylon in five days, according to its case study, and Pylon says more than 150 companies have moved from older platforms. If a switch is on your list this year, I can show you what the first week looks like.</p>
+    </div>
+    <p>The engineer checks these in every agent version:</p>
+    <ul>
+      <li>Every number and customer name still matches its case study.</li>
+      <li>The customer named is not a competitor of the recipient, and the client has approved using the name.</li>
+      <li>The opening line matches the signal that put the account on the list.</li>
+      <li>The email asks one question.</li>
+      <li>No claim has crept in that the client has not published.</li>
+    </ul>
+
+    <h2 id="preflight">5. Pre-flight: the checks before anything goes live</h2>
+    <p>The build and the basic checks are automated. The engineer runs the last check by hand, in this order:</p>
+    <ol>
+      <li>Send five emails to my own inboxes at different mail providers, and read each one filled in.</li>
+      <li>Scan the list for blank or odd first names and company names.</li>
+      <li>Remove invalid addresses, and anyone on the client's customer, open-deal or do-not-contact lists in its customer relationship management (CRM) system.</li>
+      <li>Confirm the sending domains have their email authentication records and have finished warm-up.</li>
+      <li>Check that each inbox's daily send count is inside its warm-up limit.</li>
+      <li>Confirm each customer named in an email is public and approved.</li>
+      <li>Confirm replies reach the client's inbox and the unsubscribe link works.</li>
+    </ol>
+    <h3>What goes first</h3>
+    <p>Tier 1 goes first, with a small batch of about 40 contacts and the hand-written email only. A small batch shows delivery and the angle before more volume goes out. The 40 is my number, to set with the client. The other tiers follow once I have read the first replies.</p>
+
+    <h2 id="replies">6. Replies: what I read in week two, and when to double down</h2>
+    <p>In week two the engineer reads every reply in full, not only the labels agents put on them. The order is delivery first, meaning bounces and spam complaints. Then come positive replies by segment, and last the wording of the negative ones. A reply such as "we are on Zendesk until March" is a timing signal, and "wrong person" often names the right one.</p>
+    <p>My rule for doubling down is to raise a segment's volume when three or more people ask for a call and their replies describe the problem the email named. If replies are positive but vague, I keep the volume and test a sharper angle. The three is a starting rule to set with the client, and it is not a benchmark.</p>
+
+    <h2 id="weekly">7. The weekly call: one agenda that spends the time on strategy</h2>
+    <p>Agents draft the agenda, the recap and the weekly report from the client workspace. The engineer reads and corrects them before the call, so the call itself is for decisions. One 30-minute agenda:</p>
+    <ol>
+      <li>Five minutes on the recap, and the one number that changed.</li>
+      <li>Ten minutes on which segment to double, hold or stop, and why.</li>
+      <li>Ten minutes on three reply quotes word for word, and what they say about the offer.</li>
+      <li>Five minutes on next week's list, and the one decision the client owes us, such as approving a new customer name for emails.</li>
+    </ol>
+
+    <h2 id="done">Where I have done this</h2>
+    <p>At <a href="https://jamespraise.xyz/work/funnelenvy/">FunnelEnvy</a> I built an outbound stack on Clay that lifted reply rates 27%, and an account-based playbook that lifted enterprise meeting bookings 31%. The <a href="https://jamespraise.xyz/work/funnelenvy-outbound/">client outbound case study</a> shows the weekly review loop this page follows.</p>
+    <p>I built the <a href="https://jamespraise.xyz/work/prospect-outbound-engine/">Prospect &amp; Outbound Engine</a> myself, with scrapers, enrichment and my own email verifier. In one run it scored and checked 409 agencies. I also built 83<!--skills:built--> Claude Code skills and published 34<!--skills:published--> of them as <a href="https://jamespraise.xyz/work/marketing-agent-skills/">Marketing Agent Skills</a>. At <a href="https://jamespraise.xyz/work/reform/">Reform</a> I lifted trial activation 34%.</p>
+
+    <h2 id="appendix">Appendix: the qualifier test, account by account</h2>
+    <p>Each row reads the company's own site. Version 1 required a visible support route. Version 2 is the prompt above. Writer was on the customers page, but its site blocked automated reading, so Rootly took its place. Cognition's support route sits on its documentation site, not its homepage.</p>
+    <div class="proof-table-wrap">
+      <table class="proof-table">
+        <tr><th>Account</th><th>What its own pages show</th><th>Version 1</th><th>Version 2</th></tr>
+        <tr><td><a href="https://linear.app" target="_blank" rel="noopener">Linear</a></td><td>Project tracking for product teams, "over 50,000 product teams". Sales contact and named customers, no support route on public pages.</td><td class="no">Fail</td><td class="yes">Pass</td></tr>
+        <tr><td><a href="https://www.together.ai" target="_blank" rel="noopener">Together AI</a></td><td>AI platform for developers. A 99% uptime SLA on reserved capacity and a sales contact, no support route.</td><td class="no">Fail</td><td class="yes">Pass</td></tr>
+        <tr><td><a href="https://cognition.com/" target="_blank" rel="noopener">Cognition</a></td><td>Devin, an AI software engineer. Support email and Slack Connect for team plans, listed in its <a href="https://docs.devin.ai" target="_blank" rel="noopener">documentation</a>.</td><td class="yes">Pass</td><td class="yes">Pass</td></tr>
+        <tr><td><a href="https://www.ashbyhq.com" target="_blank" rel="noopener">Ashby</a></td><td>Recruiting software. Support link, public status page, enterprise plan.</td><td class="yes">Pass</td><td class="yes">Pass</td></tr>
+        <tr><td><a href="https://www.airtable.com" target="_blank" rel="noopener">Airtable</a></td><td>Workflow platform. Help center, Contact Support, enterprise plan.</td><td class="yes">Pass</td><td class="yes">Pass</td></tr>
+        <tr><td><a href="https://fal.ai" target="_blank" rel="noopener">fal</a></td><td>Generative media application programming interfaces. Support page, status page, enterprise hub.</td><td class="yes">Pass</td><td class="yes">Pass</td></tr>
+        <tr><td><a href="https://incident.io" target="_blank" rel="noopener">incident.io</a></td><td>Incident response software. Slack community and documentation, named customers.</td><td class="yes">Pass</td><td class="yes">Pass</td></tr>
+        <tr><td><a href="https://retool.com" target="_blank" rel="noopener">Retool</a></td><td>Internal tools builder. Documentation only, no support route. A "why enterprises choose Retool" section and named customers.</td><td class="no">Fail</td><td class="yes">Pass</td></tr>
+        <tr><td><a href="https://www.assemblyai.com" target="_blank" rel="noopener">AssemblyAI</a></td><td>Speech recognition API. Documentation only. Its <a href="https://www.assemblyai.com/pricing" target="_blank" rel="noopener">pricing page</a> sends enterprise terms to sales.</td><td class="no">Fail</td><td class="yes">Pass</td></tr>
+        <tr><td><a href="https://www.ada.cx" target="_blank" rel="noopener">Ada</a></td><td>AI customer service. Documentation, status page, "350+ global businesses".</td><td class="yes">Pass</td><td class="yes">Pass</td></tr>
+        <tr><td><a href="https://amplitude.com" target="_blank" rel="noopener">Amplitude</a></td><td>Product analytics. Help center, community, customer success, enterprise tier.</td><td class="yes">Pass</td><td class="yes">Pass</td></tr>
+        <tr><td><a href="https://www.appliedintuition.com" target="_blank" rel="noopener">Applied Intuition</a></td><td>Software for vehicles and machines. A contact form for sales only. Named partners include Toyota and Komatsu.</td><td class="no">Fail</td><td class="yes">Pass</td></tr>
+        <tr><td><a href="https://wisprflow.ai" target="_blank" rel="noopener">Wispr Flow</a></td><td>Voice dictation. A consumer app leads, with team and enterprise plans, a help center and a "talk to support" link.</td><td class="no">Fail</td><td class="yes">Pass</td></tr>
+        <tr><td><a href="https://www.baseten.co" target="_blank" rel="noopener">Baseten</a></td><td>Inference platform. Documentation, status page, "talk to an engineer".</td><td class="yes">Pass</td><td class="yes">Pass</td></tr>
+        <tr><td><a href="https://www.langchain.com" target="_blank" rel="noopener">LangChain</a></td><td>Agent platform. Support link, community, status page, "7K+" active LangSmith customers.</td><td class="yes">Pass</td><td class="yes">Pass</td></tr>
+        <tr><td><a href="https://www.braintrust.dev" target="_blank" rel="noopener">Braintrust</a></td><td>AI evaluation tools. Documentation, Discord community, trust center.</td><td class="yes">Pass</td><td class="yes">Pass</td></tr>
+        <tr><td><a href="https://www.hightouch.com" target="_blank" rel="noopener">Hightouch</a></td><td>Customer data platform. Documentation, status page, demo path.</td><td class="yes">Pass</td><td class="yes">Pass</td></tr>
+        <tr><td><a href="https://www.coderabbit.ai" target="_blank" rel="noopener">CodeRabbit</a></td><td>AI code review. No support route on its homepage or documentation. Named customers include Swiggy, Visma and Clerk.</td><td class="no">Fail</td><td class="yes">Pass</td></tr>
+        <tr><td><a href="https://rootly.com" target="_blank" rel="noopener">Rootly</a></td><td>Incident management. Documentation, status page, "650+ companies".</td><td class="yes">Pass</td><td class="yes">Pass</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="button-row" style="margin-top: 40px;">
+    <a href="/work/workflows-io/" class="button button-primary">Back to the pitch</a>
+    <a href="/work/workflows-io/files/james-praise-resume.pdf" target="_blank" class="button button-secondary">My Resume</a>
+  </div>
+</div>
+
+<script src="/script.js?v=11"></script>
+<script>
+(function () {
+  var bar = document.getElementById('proofProgressBar');
+  function updateProgress() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.proof-toc a'));
+  var sections = tocLinks.map(function (a) {
+    return document.getElementById(a.getAttribute('href').slice(1));
+  });
+  function updateActiveToc() {
+    var current = null;
+    sections.forEach(function (sec, i) {
+      if (sec && sec.getBoundingClientRect().top <= 140) current = i;
+    });
+    tocLinks.forEach(function (a, i) {
+      a.classList.toggle('is-active', i === current);
+    });
+  }
+  window.addEventListener('scroll', updateActiveToc, { passive: true });
+  updateActiveToc();
+})();
+</script>
+</body>
+</html>
