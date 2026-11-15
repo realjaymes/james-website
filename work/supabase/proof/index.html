@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WKSZ7DQC');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Planning Supabase's GTM Around What Developers Need Next | James Praise</title>
+<meta name="description" content="A segmentation, coverage and capacity model for Supabase's go-to-market, by James Praise." />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Planning Supabase's GTM Around What Developers Need Next | James Praise" />
+<meta property="og:description" content="A segmentation, coverage and capacity model for Supabase's go-to-market, by James Praise." />
+<meta property="og:url" content="https://jamespraise.xyz/work/supabase/proof/" />
+<meta property="og:image" content="https://jamespraise.xyz/assets/images/og/work/supabase-proof.jpg?v=20261024" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Planning Supabase's GTM Around What Developers Need Next | James Praise" />
+<meta name="twitter:description" content="A segmentation, coverage and capacity model for Supabase's go-to-market, by James Praise." />
+<meta name="twitter:image" content="https://jamespraise.xyz/assets/images/og/work/supabase-proof.jpg?v=20261024" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Planning Supabase's GTM Around What Developers Need Next | James Praise" />
+<meta property="og:description" content="A segmentation, coverage and capacity model for Supabase's go-to-market, by James Praise." />
+<meta property="og:url" content="https://jamespraise.xyz/work/supabase/proof/" />
+<meta name="twitter:card" content="summary" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+<link rel="canonical" href="https://jamespraise.xyz/work/supabase/proof/" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=23" />
+<style>
+  .proof-wrap { max-width: 720px; margin: 0 auto; padding: 100px 0 80px; }
+  .proof-eyebrow { color: var(--color-purple); font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; font-size: 13px; margin-bottom: 10px; }
+  .proof-credit { display: flex; align-items: center; gap: 10px; margin: 20px 0 40px; }
+  .proof-credit img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+  .proof-credit span { color: var(--text-muted); font-size: 14px; }
+  .proof-credit strong { color: var(--text-primary); }
+  .proof-note { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 8px; padding: 16px 20px; font-size: 14px; color: var(--text-muted); margin-bottom: 40px; }
+  .proof-draft { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 12px; padding: 40px; margin-bottom: 56px; }
+  .proof-draft h2 { margin-top: 32px; margin-bottom: 10px; }
+  .proof-draft h2:first-child { margin-top: 0; }
+  .proof-draft p { line-height: 1.7; }
+  .proof-body p { line-height: 1.7; }
+  .proof-body h2 { margin-top: 40px; margin-bottom: 12px; }
+  .proof-body strong { font-weight: 700; }
+  .proof-back { display: inline-block; margin-bottom: 24px; font-size: 14px; }
+  .section-label { font-size: 13px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-cards { display: grid; grid-template-columns: 1fr; gap: 14px; margin: 24px 0; }
+  .proof-card { background: var(--bg-page); border: 1px solid rgba(28,20,34,0.1); border-radius: 10px; padding: 18px; }
+  .proof-card .proof-card-head { font-size: 18px; font-weight: 800; color: var(--text-primary); line-height: 1.3; margin: 0 0 6px; }
+  .proof-card p { font-size: 15px; margin: 0; }
+  .proof-table-wrap { overflow-x: auto; margin: 20px 0; }
+  .proof-table { width: 100%; border-collapse: collapse; font-size: 13px; background: var(--bg-page); border-radius: 10px; overflow: hidden; }
+  .proof-table th { background: var(--bg-surface); text-align: left; padding: 10px 12px; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-muted); border-bottom: 1px solid rgba(28,20,34,0.1); }
+  .proof-table td { padding: 10px 12px; border-bottom: 1px solid rgba(28,20,34,0.08); color: var(--text-primary); line-height: 1.5; vertical-align: top; }
+  .proof-table tr:last-child td { border-bottom: none; }
+  .proof-code { background: #1c1422; color: #f4eefa; border-radius: 10px; padding: 18px 20px; font-size: 12.5px; line-height: 1.6; overflow-x: auto; white-space: pre; margin: 20px 0; }
+  .proof-toc { position: fixed; top: 140px; right: 32px; width: 200px; font-size: 13px; }
+  .proof-toc-group { margin-bottom: 20px; }
+  .proof-toc-label { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-toc a { display: block; padding: 5px 0 5px 12px; border-left: 2px solid rgba(28,20,34,0.1); color: var(--text-muted); text-decoration: none; line-height: 1.4; }
+  .proof-toc a:hover { color: var(--color-purple); border-left-color: var(--color-purple); }
+  .proof-toc a.is-active { color: var(--color-purple); border-left-color: var(--color-purple); font-weight: 700; }
+  @media (max-width: 1400px) { .proof-toc { display: none; } }
+  .proof-progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(28,20,34,0.08); z-index: 200; }
+  .proof-progress-bar { height: 100%; width: 0%; background: var(--color-purple); transition: width 0.1s linear; }
+</style>
+</head>
+<body class="proof-page">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKSZ7DQC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="proof-progress-track"><div class="proof-progress-bar" id="proofProgressBar"></div></div>
+
+<a href="/work/supabase/" class="pitch-exit" aria-label="Back to the Supabase pitch">
+  <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+</a>
+
+<nav class="proof-toc" aria-label="Section navigation">
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The model</p>
+    <a href="#starting-point">Where I'd start</a>
+    <a href="#price-step">The step that decides coverage</a>
+    <a href="#segments">Five segments</a>
+    <a href="#capacity">Capacity from signal volume</a>
+    <a href="#territories">Territories inside segments</a>
+    <a href="#source-of-truth">One source of truth</a>
+    <a href="#metrics">What I'd track</a>
+    <a href="#ninety-days">The first 90 days</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">Appendix</p>
+    <a href="#appendix-sql">A first segment query</a>
+    <a href="#appendix-need">What I need from you</a>
+    <a href="#appendix-sources">What I read</a>
+  </div>
+</nav>
+
+<div class="container proof-wrap">
+  <a class="proof-back" href="/work/supabase/">&larr; Back to the Supabase pitch</a>
+
+  <p class="proof-eyebrow">A planning model for Supabase</p>
+  <h1>Planning Supabase's GTM Around What Developers Need Next</h1>
+
+  <div class="proof-credit">
+    <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+    <span><strong>James Praise</strong> &middot; Marketing and GTM Operator</span>
+  </div>
+
+  <p class="proof-note">This is built from public information read on 16 November 2026: your pricing page, the job posting and what your team has said publicly. I can't see your usage data, pipeline or headcount plan, so every threshold below is a starting guess to test against your data, and anything that needs your numbers is marked [proof needed]. PLS means product-led sales: sales outreach triggered by what an account does in the product.</p>
+
+  <div class="proof-draft">
+    <p class="section-label">The model</p>
+
+    <h2 id="starting-point">Where I'd start</h2>
+    <p>The <a href="https://jobs.ashbyhq.com/supabase/1dfafad5-e177-4d31-bc94-e8b6d0a7a046" target="_blank" rel="noopener">GTM, Strategic Planning posting</a> asks for coverage models and segmentation "that reflect how developers actually buy." When Roman Gruhn <a href="https://www.linkedin.com/in/romangruhn/recent-activity/all/" target="_blank" rel="noopener">announced he was joining</a>, he named new motions "for enterprise, new customers, partners, and platforms." So I started with one question: what tells you a developer account is about to need a person?</p>
+
+    <h2 id="price-step">The step that decides coverage</h2>
+    <p>Your <a href="https://supabase.com/pricing" target="_blank" rel="noopener">pricing page</a> answers most of it. Pro starts at $25 a month. Team starts at $599, about 24 times more, and what it adds is mostly security and access control: SOC 2 and ISO 27001, single sign-on to the dashboard, read-only and project-scoped roles, and HIPAA as a paid add-on.</p>
+    <p>Usage alone rarely moves a team across that step, because Pro already scales by usage. A security review, a compliance deadline or a growing team does. So I'd segment on the need that triggers the next plan, and treat company size as a tiebreaker.</p>
+
+    <h2 id="segments">Five segments</h2>
+    <div class="proof-table-wrap">
+      <table class="proof-table">
+        <tr><th>Segment</th><th>How an account enters</th><th>Who covers it</th></tr>
+        <tr><td>Builders</td><td>Free or Pro, one or two projects, no team or security signals</td><td>The product and lifecycle email, no person</td></tr>
+        <tr><td>Scaling</td><td>Pro with compute at Large or above, spend cap switched off, or three or more projects</td><td>A pooled PLS team, reaching out on the usage signal</td></tr>
+        <tr><td>Security-ready</td><td>Reads the SOC 2, HIPAA or SSO pages, asks for a security questionnaire, or has five or more members</td><td>Account executives, selling Team and Enterprise</td></tr>
+        <tr><td>Strategic</td><td>Enterprise contracts and the top spenders</td><td>A named account executive and technical account manager</td></tr>
+        <tr><td>Platforms and partners</td><td>Companies that build their own product on Supabase and bring their users with them</td><td>Partnerships, with its own targets</td></tr>
+      </table>
+    </div>
+    <p>Each threshold is a guess to test [proof needed]. The useful part is that every account carries one segment and one reason, so a rep can see why it is in their queue.</p>
+
+    <h2 id="capacity">Capacity from signal volume</h2>
+    <p>For segments that move fast, I'd size the team from how many accounts enter each month, not from a list of named accounts. The sum is simple: accounts entering a segment each month, times the hours each one needs, divided by the selling hours one rep has in a month.</p>
+    <p>With made-up inputs, 400 Scaling accounts a month at an hour and a half each, against 100 selling hours per rep, needs six reps. Your real entry rates set the hiring plan [proof needed].</p>
+
+    <h2 id="territories">Territories inside segments</h2>
+    <p>Geography still matters, but only inside the segments that get a person. You work across 60+ countries, so I'd split Security-ready and Strategic into time zone pods for the Americas, Europe and Africa, and Asia Pacific. A rep then covers accounts awake during their working day. Strategic accounts stay named, and Builders and Scaling stay pooled worldwide.</p>
+
+    <h2 id="source-of-truth">One source of truth</h2>
+    <p>Usage lives in BigQuery and the sales team works in HubSpot. I'd write the segment logic once, as a model in BigQuery that outputs each organization's segment, the reason and the date it changed. Hightouch syncs those fields to the HubSpot company record, and Hex holds the planning views. Sales, finance and talent acquisition then plan from the same numbers.</p>
+
+    <h2 id="metrics">What I'd track</h2>
+    <p>Four numbers each month: how many accounts move from Scaling or Security-ready to a paid upgrade, the time from a signal to the first human touch, pipeline and win rate by segment, and the share of each rep's capacity in use. I'd review thresholds quarterly and move any that send reps accounts that never convert.</p>
+
+    <h2 id="ninety-days">The first 90 days</h2>
+    <div class="proof-cards">
+      <div class="proof-card">
+        <p class="proof-card-head">Days 1 to 30: agree the definitions</p>
+        <p>I'd map how HubSpot and BigQuery describe an account today, sit with sales, success and finance to agree what each segment means, and backtest the thresholds against the last year of upgrades.</p>
+      </div>
+      <div class="proof-card">
+        <p class="proof-card-head">Days 31 to 60: ship the model</p>
+        <p>With GTM Engineering, I'd put the segment model into production, sync it to HubSpot and build the first coverage and capacity views in Hex.</p>
+      </div>
+      <div class="proof-card">
+        <p class="proof-card-head">Days 61 to 90: plan the next year</p>
+        <p>I'd turn entry rates into next year's targets and headcount by segment and pod, then agree the hiring order with talent acquisition and finance.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="proof-body">
+    <p class="section-label">Appendix</p>
+
+    <h2 id="appendix-sql">A first segment query</h2>
+    <p>This is how the first version of the segment model could look. The table and column names are placeholders, because I haven't seen your warehouse.</p>
+<div class="proof-code">-- One row per organization: its segment, the reason, and when it was computed
+with org_signals as (
+  select
+    o.org_id,
+    o.plan,                                   -- free, pro, team, enterprise
+    count(distinct p.project_id)               as projects,
+    max(p.compute_size_rank)                   as max_compute_rank,  -- micro = 1, large = 4, 16xl = 10
+    max(cast(o.spend_cap_enabled as int64))    as spend_cap_on,
+    count(distinct m.member_id)                as members,
+    countif(v.page in ('soc2','hipaa','sso')
+            and v.viewed_at >= date_sub(current_date(), interval 30 day)) as security_views,
+    sum(b.mrr_usd)                             as mrr_usd
+  from orgs o
+  left join projects p     using (org_id)
+  left join org_members m  using (org_id)
+  left join page_views v   using (org_id)
+  left join billing b      using (org_id)
+  group by 1, 2
+)
+select
+  org_id,
+  case
+    when is_platform_partner(org_id)                       then 'platforms_partners'
+    when plan = 'enterprise' or mrr_usd >= 5000              then 'strategic'
+    when security_views > 0 or members >= 5                  then 'security_ready'
+    when max_compute_rank >= 4 or spend_cap_on = 0
+         or projects >= 3                                    then 'scaling'
+    else 'builders'
+  end as segment,
+  current_timestamp() as computed_at
+from org_signals;</div>
+    <p>In production each rule would also write its reason, so the HubSpot record says "five or more members" rather than only "Security-ready." The $5,000 strategic line is a placeholder.</p>
+
+    <h2 id="appendix-need">What I need from you</h2>
+    <p>The last 12 months of plan upgrades with the usage leading up to each one, current rep headcount and quota by team, how HubSpot defines an account and an owner today, and the planning calendar finance runs on. Those decide every threshold above.</p>
+
+    <h2 id="appendix-sources">What I read</h2>
+    <p>Your <a href="https://supabase.com/pricing" target="_blank" rel="noopener">pricing page</a> and plan comparison, the <a href="https://jobs.ashbyhq.com/supabase/1dfafad5-e177-4d31-bc94-e8b6d0a7a046" target="_blank" rel="noopener">job posting</a> with its team facts (about 400 people in 60+ countries), and <a href="https://www.linkedin.com/in/romangruhn/recent-activity/all/" target="_blank" rel="noopener">Roman Gruhn's post</a> on joining, all on 16 November 2026.</p>
+    <p>My own work behind this approach: at <a href="/work/cil/">Cecure Intelligence</a> I ran revenue operations across five African countries, with 1,646 MQLs and 406 SQLs. At <a href="/work/bento-africa/">Bento Africa</a>, a payroll platform, the lead scoring I built lifted SQL volume 50%. At <a href="/work/funnelenvy/">FunnelEnvy</a> I built the HubSpot, GA4 and Lightdash reporting that cut reporting time in half.</p>
+  </div>
+
+  <div class="button-row" style="margin-top: 40px;">
+    <a href="/work/supabase/" class="button button-primary">Back to the pitch</a>
+    <a href="/work/supabase/files/james-praise-resume.pdf" target="_blank" rel="noopener" class="button button-secondary">My Resume</a>
+  </div>
+</div>
+
+<script src="/script.js?v=11"></script>
+<script>
+(function () {
+  var bar = document.getElementById('proofProgressBar');
+  function updateProgress() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.proof-toc a'));
+  var sections = tocLinks.map(function (a) {
+    return document.getElementById(a.getAttribute('href').slice(1));
+  });
+  function updateActiveToc() {
+    var current = null;
+    sections.forEach(function (sec, i) {
+      if (sec && sec.getBoundingClientRect().top <= 140) current = i;
+    });
+    tocLinks.forEach(function (a, i) {
+      a.classList.toggle('is-active', i === current);
+    });
+  }
+  window.addEventListener('scroll', updateActiveToc, { passive: true });
+  updateActiveToc();
+})();
+</script>
+</body>
+</html>
