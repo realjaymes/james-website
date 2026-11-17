@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WKSZ7DQC');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A first growth backlog for Bitrise | James Praise</title>
+<meta name="description" content="James Praise's first growth backlog for Bitrise: the React Native answer Expo's comparison page is missing, a cross-sell test for Remote Dev Environments, and the scored list behind them." />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="A first growth backlog for Bitrise | James Praise" />
+<meta property="og:description" content="James Praise's first growth backlog for Bitrise: the React Native answer Expo's comparison page is missing, a cross-sell test for Remote Dev Environments, and the scored list behind them." />
+<meta property="og:url" content="https://jamespraise.xyz/work/bitrise/proof/" />
+<meta property="og:image" content="https://jamespraise.xyz/assets/images/og/work/bitrise-proof.jpg?v=20261117" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="A first growth backlog for Bitrise | James Praise" />
+<meta name="twitter:description" content="James Praise's first growth backlog for Bitrise: the React Native answer Expo's comparison page is missing, a cross-sell test for Remote Dev Environments, and the scored list behind them." />
+<meta name="twitter:image" content="https://jamespraise.xyz/assets/images/og/work/bitrise-proof.jpg?v=20261117" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+<link rel="canonical" href="https://jamespraise.xyz/work/bitrise/proof/" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=23" />
+<style>
+  .proof-wrap { max-width: 720px; margin: 0 auto; padding: 100px 0 80px; }
+  .proof-eyebrow { color: var(--color-purple); font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; font-size: 13px; margin-bottom: 10px; }
+  .proof-credit { display: flex; align-items: center; gap: 10px; margin: 20px 0 40px; }
+  .proof-credit img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+  .proof-credit span { color: var(--text-muted); font-size: 14px; }
+  .proof-credit strong { color: var(--text-primary); }
+  .proof-draft { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 12px; padding: 40px; margin-bottom: 56px; }
+  .proof-draft h2 { margin-top: 32px; margin-bottom: 10px; }
+  .proof-draft h2:first-child { margin-top: 0; }
+  .proof-draft p, .proof-draft li { line-height: 1.7; }
+  .proof-body p { line-height: 1.7; }
+  .proof-body h2 { margin-top: 40px; margin-bottom: 12px; }
+  .proof-back { display: inline-block; margin-bottom: 24px; font-size: 14px; }
+  .section-label { font-size: 13px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-quote { border-left: 3px solid var(--color-purple); padding: 4px 0 4px 16px; margin: 16px 0; color: var(--text-primary); }
+  .proof-table-wrap { overflow-x: auto; margin: 20px 0; }
+  .proof-table { width: 100%; border-collapse: collapse; font-size: 13px; background: var(--bg-page); border-radius: 10px; overflow: hidden; }
+  .proof-table th { background: var(--bg-surface); text-align: left; padding: 10px 12px; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-muted); border-bottom: 1px solid rgba(28,20,34,0.1); }
+  .proof-table td { padding: 10px 12px; border-bottom: 1px solid rgba(28,20,34,0.08); color: var(--text-primary); line-height: 1.5; vertical-align: top; }
+  .proof-table tr:last-child td { border-bottom: none; }
+  .proof-toc { position: fixed; top: 140px; right: 32px; width: 200px; font-size: 13px; }
+  .proof-toc-group { margin-bottom: 20px; }
+  .proof-toc-label { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-toc a { display: block; padding: 5px 0 5px 12px; border-left: 2px solid rgba(28,20,34,0.1); color: var(--text-muted); text-decoration: none; line-height: 1.4; }
+  .proof-toc a:hover { color: var(--color-purple); border-left-color: var(--color-purple); }
+  .proof-toc a.is-active { color: var(--color-purple); border-left-color: var(--color-purple); font-weight: 700; }
+  @media (max-width: 1400px) { .proof-toc { display: none; } }
+  .proof-progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(28,20,34,0.08); z-index: 200; }
+  .proof-progress-bar { height: 100%; width: 0%; background: var(--color-purple); transition: width 0.1s linear; }
+</style>
+</head>
+<body class="proof-page">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKSZ7DQC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="proof-progress-track"><div class="proof-progress-bar" id="proofProgressBar"></div></div>
+
+<a href="/work/bitrise/" class="pitch-exit" aria-label="Back to the Bitrise pitch">
+  <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+</a>
+
+<nav class="proof-toc" aria-label="Section navigation">
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The backlog</p>
+    <a href="#intro">Intro</a>
+    <a href="#expo">React Native: Expo's claim</a>
+    <a href="#rde">Remote Dev Environments</a>
+    <a href="#codemagic">The missing comparison</a>
+    <a href="#backlog">The scored backlog</a>
+    <a href="#agent">The agent that keeps it current</a>
+    <a href="#plan">The first 90 days</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">Appendix</p>
+    <a href="#appendix-scoring">How I scored it</a>
+    <a href="#appendix-checked">What I checked</a>
+  </div>
+</nav>
+
+<div class="container proof-wrap">
+  <a class="proof-back" href="/work/bitrise/">&larr; Back to the Bitrise pitch</a>
+
+  <p class="proof-eyebrow">Bitrise growth: a first backlog</p>
+  <h1>A first growth backlog for Bitrise</h1>
+
+  <div class="proof-credit">
+    <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+    <span><strong>James Praise</strong> &middot; Product marketing, growth experiments and GTM</span>
+  </div>
+
+  <div class="proof-draft">
+    <p class="section-label">The backlog</p>
+
+    <h2 id="intro">Intro</h2>
+    <p>The <a href="https://bitrise.bamboohr.com/careers/149" target="_blank" rel="noopener">Growth PMM posting</a> starts with turning research into "a prioritised hypothesis backlog." This page is my first version of one, written from Bitrise's public pages and its competitors' pages on 17 November 2026. It leads with three findings, then scores eight tests. I had no product analytics, so every score is a starting guess for month one to replace.</p>
+
+    <h2 id="expo">React Native: Expo's claim is out of date, and only your blog says so</h2>
+    <p><strong>What I found.</strong> Expo runs a <a href="https://expo.dev/grow/expo-vs-bitrise_g" target="_blank" rel="noopener">comparison page aimed at React Native teams</a>. Its first point reads:</p>
+    <p class="proof-quote">"Fingerprint and repack. Bitrise has neither. ... Bitrise has no equivalent, so every push gets a full 10 to 20 minute build no matter what changed."</p>
+    <p>On 14 October, your blog published <a href="https://bitrise.io/blog/post/react-native-fingerprint-caching" target="_blank" rel="noopener">"Make React Native builds 4x faster with fingerprint-based caching on Bitrise"</a>, and the <a href="https://bitrise.io/integrations/steps/react-native-fingerprint" target="_blank" rel="noopener">React Native fingerprint step</a> is live. Your <a href="https://bitrise.io/solutions/technologies/react-native" target="_blank" rel="noopener">React Native page</a> does not mention fingerprinting at all.</p>
+    <p><strong>Why it matters to you.</strong> A React Native lead comparing the two tools reads Expo's claim, then lands on your React Native page and finds nothing that answers it. The answer exists, but it sits in a blog post most buyers will never open. That is a product-channel fit problem, and it is cheap to fix.</p>
+    <p><strong>What I'd test.</strong> Put fingerprint caching and the 4x number at the top of the React Native page. Then publish an "Expo Workflows vs Bitrise for React Native" page, built the same way as your <a href="https://bitrise.io/resources/compare/bitrise-codepush-vs-expo-eas-update" target="_blank" rel="noopener">CodePush vs EAS Update page</a>. I'd measure React Native trial starts and first green builds from both pages.</p>
+
+    <h2 id="rde">Remote Dev Environments: start with the teams already building with AI</h2>
+    <p><strong>What I found.</strong> Remote Dev Environments (RDE) became <a href="https://bitrise.io/blog/post/q3-2026-product-update" target="_blank" rel="noopener">generally available in Q3</a> and reached #2 Product of the Day on Product Hunt. The <a href="https://bitrise.io/platform/remote-dev-environments" target="_blank" rel="noopener">RDE page</a> carries no customer story yet. Your <a href="https://bitrise.io/reports/state-of-mobile-development-2026" target="_blank" rel="noopener">State of Mobile Development 2026</a> report says AI-attributed builds grew 161 times in a year.</p>
+    <p><strong>Why it matters to you.</strong> The cheapest first RDE customers are probably CI customers whose builds already come from AI agents. They have the problem RDE solves, and they already trust Bitrise with their pipeline. A new product with no playbook needs that first group before it needs paid campaigns.</p>
+    <p><strong>What I'd test.</strong> If the product can see which workspaces run AI-attributed builds, offer those workspaces an RDE trial in the app and by email, with a ready-made setup for Claude Code. Compare trial starts and first sessions within seven days against workspaces with no AI builds. The first three teams that stay become the customer stories the RDE page is missing.</p>
+
+    <h2 id="codemagic">The comparison Bitrise hasn't written</h2>
+    <p><strong>What I found.</strong> Bitrise has comparison pages for <a href="https://bitrise.io/resources/compare/bitrise-vs-github" target="_blank" rel="noopener">GitHub</a>, <a href="https://bitrise.io/resources/compare/bitrise-vs-jenkins" target="_blank" rel="noopener">Jenkins</a>, <a href="https://bitrise.io/resources/compare/bitrise-vs-circle-ci" target="_blank" rel="noopener">CircleCI</a> and <a href="https://bitrise.io/resources/compare/app-center" target="_blank" rel="noopener">App Center</a>, but none for Codemagic. <a href="https://codemagic.io/" target="_blank" rel="noopener">Codemagic's homepage</a> links straight to its own <a href="https://codemagic.io/codemagic-vs-bitrise/" target="_blank" rel="noopener">Codemagic vs Bitrise page</a>.</p>
+    <p><strong>Why it matters to you.</strong> When a buyer searches the two names together, the only page written for that search is Codemagic's. Bitrise has the proof to answer it: more than 40 <a href="https://bitrise.io/customers" target="_blank" rel="noopener">customer stories</a>, Build Cache results and the step library.</p>
+    <p><strong>What I'd test.</strong> Write the page with a clear "choose Codemagic if" section, because a fair page earns more trust than a one-sided one. Track its search impressions and trial starts for 60 days.</p>
+
+    <h2 id="backlog">The scored backlog</h2>
+    <p>These are the eight tests I'd bring to week one, scored 1 to 10 on impact, confidence and ease. The appendix explains the scores. The top three are the findings above.</p>
+    <div class="proof-table-wrap">
+      <table class="proof-table">
+        <tr><th>#</th><th>Hypothesis</th><th>Channel</th><th>Metric</th><th>Score</th></tr>
+        <tr><td>1</td><td>Putting fingerprint caching and the 4x number on the React Native page lifts React Native trial starts</td><td>Website</td><td>React Native trial starts</td><td>8.0</td></tr>
+        <tr><td>2</td><td>An RDE trial offer to workspaces with AI-attributed builds converts better than a general offer</td><td>Product, email</td><td>RDE trials and first sessions in 7 days</td><td>7.7</td></tr>
+        <tr><td>3</td><td>A fair Codemagic comparison page wins searches that compare the two names</td><td>Search</td><td>Impressions, trial starts</td><td>7.3</td></tr>
+        <tr><td>4</td><td>An "Expo Workflows vs Bitrise for React Native" page answers Expo's claims point by point</td><td>Search, sales</td><td>Page-assisted trials</td><td>7.0</td></tr>
+        <tr><td>5</td><td>A build-time savings calculator, built on the Build Cache Time Savings Report, brings in teams on other CI tools</td><td>Free tool</td><td>Calculator leads, Build Cache trials</td><td>6.3</td></tr>
+        <tr><td>6</td><td>Offering CodePush to React Native CI customers without it raises Release Management adoption</td><td>Product</td><td>CodePush activations</td><td>6.0</td></tr>
+        <tr><td>7</td><td>Turning the GitHub Universe booth playbook into a repeatable event kit lifts pipeline per conference</td><td>Events</td><td>Meetings per event</td><td>5.7</td></tr>
+        <tr><td>8</td><td>A monthly React Native build-speed benchmark from Bitrise's own build data earns developer links and mentions</td><td>Content, community</td><td>Links, signups from the report</td><td>5.3</td></tr>
+      </table>
+    </div>
+
+    <h2 id="agent">The agent that keeps the backlog current</h2>
+    <p>Expo's page shows how a competitor claim goes stale. Bitrise shipped the answer in October, but nothing told anyone that a rival page now said something untrue. I would build a small agent for that job. Each week it reads competitor comparison pages and Bitrise's changelog, flags any claim that Bitrise's own releases now contradict, and drafts the page change. A person approves every edit before it goes live.</p>
+    <p>The same agent can turn each flag into a backlog row with a draft score. That keeps the list tied to what is actually happening in the market, not to what we remembered in a planning meeting.</p>
+
+    <h2 id="plan">The first 90 days</h2>
+    <p><strong>Days 1 to 30: check the guesses.</strong> Read product analytics for signup, first build and paid conversion by framework. Interview ten React Native and five RDE users. Re-score the backlog with real numbers and agree the top three tests with you.</p>
+    <p><strong>Days 31 to 60: run the first tests.</strong> Ship the React Native page change and the Codemagic page. Launch the RDE cross-sell test if the AI-build data is there. Start the comparison-watch agent.</p>
+    <p><strong>Days 61 to 90: read and repeat.</strong> Report what moved trial starts and first builds, kill what didn't, and write the next eight tests. Turn the strongest RDE teams into the first customer stories.</p>
+  </div>
+
+  <div class="proof-body">
+    <p class="section-label">Appendix</p>
+
+    <h2 id="appendix-scoring">Appendix: how I scored it</h2>
+    <p>Each test gets 1 to 10 for impact (how much it could move trial starts or adoption), confidence (how much public evidence backs it) and ease (how fast one person can ship it). The score is the average.</p>
+    <p>Test 1 scores high on ease because the proof already exists in your blog. Test 2 scores lower on confidence because I can't see whether workspaces are tagged by AI-attributed builds. Test 8 scores low on ease because it needs data engineering time.</p>
+    <p>I left out tests that need paid budget, because I don't know the budget. Paid tests go in after month one.</p>
+
+    <h2 id="appendix-checked">Appendix: what I checked</h2>
+    <p>Pages read on 17 November 2026: the <a href="https://bitrise.io/" target="_blank" rel="noopener">Bitrise homepage</a>, the <a href="https://bitrise.io/solutions/technologies/react-native" target="_blank" rel="noopener">React Native page</a>, the <a href="https://bitrise.io/blog/post/react-native-fingerprint-caching" target="_blank" rel="noopener">fingerprint caching post</a>, the <a href="https://bitrise.io/platform/remote-dev-environments" target="_blank" rel="noopener">RDE page</a>, the <a href="https://bitrise.io/blog/post/q3-2026-product-update" target="_blank" rel="noopener">Q3 2026 product update</a>, the <a href="https://bitrise.io/reports/state-of-mobile-development-2026" target="_blank" rel="noopener">State of Mobile Development 2026</a>, <a href="https://bitrise.io/pricing" target="_blank" rel="noopener">pricing</a>, <a href="https://bitrise.io/customers" target="_blank" rel="noopener">customers</a>, Bitrise's <a href="https://bitrise.io/sitemap.xml" target="_blank" rel="noopener">sitemap</a> for every comparison page, <a href="https://expo.dev/grow/expo-vs-bitrise_g" target="_blank" rel="noopener">Expo's comparison page</a> and <a href="https://codemagic.io/codemagic-vs-bitrise/" target="_blank" rel="noopener">Codemagic's</a>. I searched the sitemap for "codemagic" and found no Bitrise page. I had no access to product analytics, so the scores are guesses for month one to test.</p>
+  </div>
+
+  <div class="button-row" style="margin-top: 40px;">
+    <a href="/work/bitrise/" class="button button-primary">Back to the pitch</a>
+    <a href="/work/bitrise/files/james-praise-resume.pdf" target="_blank" rel="noopener" class="button button-secondary">My Resume</a>
+  </div>
+</div>
+
+<script src="/script.js?v=11"></script>
+<script>
+(function () {
+  var bar = document.getElementById('proofProgressBar');
+  function updateProgress() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.proof-toc a'));
+  var sections = tocLinks.map(function (a) {
+    return document.getElementById(a.getAttribute('href').slice(1));
+  });
+  function updateActiveToc() {
+    var current = null;
+    sections.forEach(function (sec, i) {
+      if (sec && sec.getBoundingClientRect().top <= 140) current = i;
+    });
+    tocLinks.forEach(function (a, i) {
+      a.classList.toggle('is-active', i === current);
+    });
+  }
+  window.addEventListener('scroll', updateActiveToc, { passive: true });
+  updateActiveToc();
+})();
+</script>
+</body>
+</html>
