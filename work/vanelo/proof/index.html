@@ -498,7 +498,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <p><strong>Cost per paying founder at base, cash only:</strong> about &pound;26 across all channels (about &pound;2,430 for about 92 founders).</p>
 
-    <p><strong>Fully loaded, with my fee:</strong> my floor for full-time work is $2,000 a month, which I gave on our first call. For the 60 days that is about &pound;3,160. Adding it brings the cost per paying founder to about &pound;61, against a lifetime value of about &pound;400. You can switch the fee off in the calculator.</p>
 
     <p><strong>Lean option without ads.</strong> Dropping the &pound;2,000 of ad spend gives about 73 founders for about &pound;300 to &pound;560 in tools. It also gives up the paid test that tells PitchHub whether ads can scale toward the year-one target.</p>
 
@@ -654,9 +653,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       { k: 'day60', l: 'Day-60 target (new paying founders)', v: 92, src: 'Starts at what the base case gives. Type your own.' },
       { k: 'target', l: 'Year-one target (paying founders)', v: 2500, src: 'PitchHub\u2019s target.' }
     ]},
-    { id: 'gap', title: 'My fee and the long-run gap', fields: [
-      { k: 'fee', l: 'My fee per month ($)', v: 2000, src: 'My floor for full-time work, stated on our first call.' },
-      { k: 'fx', l: 'Pounds per dollar', v: 0.79, src: 'About 79p. Checked on the day.' },
+    { id: 'gap', title: 'Long-run gap', fields: [
       { k: 'other', l: 'Founders a month from the other channels after day 60', v: 60, src: 'Estimate: about 20 from cold email, LinkedIn, Reddit, X and SEO, plus about 40 from the first partners. Set so the ad budget matches my earlier working.' },
       { k: 'goalcac', l: 'Cost per founder from ads you hope to reach (£)', v: 60, src: 'Estimate. The 60 days exist to find out.' }
     ]}
@@ -669,7 +666,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   var state = {};
   var fieldDefs = {};
   var presetIdx = 1;
-  var includeFee = true;
   var hasSender = true;
 
   function el(id) { return document.getElementById(id); }
@@ -713,8 +709,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     r.cashBy = { paid: s.spend, warm: s.emailplat, cold: s.tools, li: s.salesnav, rx: 0, pt: 0, ref: 0, seo: 0 };
     r.cash = s.spend + s.tools + s.salesnav + s.emailplat;
-    r.feeGbp = includeFee ? s.fee * 2 * s.fx : 0;
-    r.loaded = r.cash + r.feeGbp;
+    r.loaded = r.cash;
 
     r.cacPaid = r.paid > 0 ? s.spend / r.paid : Infinity;
     r.cacCash = r.total > 0 ? r.cash / r.total : Infinity;
@@ -753,6 +748,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   // ---------- Build the inputs ----------
   var groupsEl = el('groups');
   GROUPS.forEach(function (g) {
+    if (g.id === 'gap') {
+      g.fields.forEach(function (f) { fieldDefs[f.k] = f; f.hidden = true; });
+      return;
+    }
     if (g.box) {
       g.fields.forEach(function (f) {
         fieldDefs[f.k] = f;
@@ -782,12 +781,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         '<small>' + f.src + '</small>';
       wrap.appendChild(div);
     });
-    if (g.id === 'gap') {
-      var ck = document.createElement('div');
-      ck.className = 'vn-f';
-      ck.innerHTML = '<label class="vn-check"><input type="checkbox" id="in_includefee" checked> Include my fee in the fully loaded numbers</label><small>Switch off to see cash costs only.</small>';
-      wrap.appendChild(ck);
-    }
     d.appendChild(wrap);
     groupsEl.appendChild(d);
   });
@@ -800,7 +793,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       var f = fieldDefs[k];
       if (onlyScenario && !Array.isArray(f.v)) return;
       state[k] = valueFor(f, idx);
-      el('in_' + k).value = state[k];
+      if (el('in_' + k)) el('in_' + k).value = state[k];
     });
     markPreset();
     render();
@@ -816,7 +809,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   function onInput(e) {
     var t = e.target;
-    if (t.id === 'in_includefee') { includeFee = t.checked; render(); return; }
     if (t.id === 'in_hassender') { hasSender = t.checked; render(); return; }
     var k = t.getAttribute('data-k');
     if (!k) return;
@@ -834,10 +826,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     presetBtns[pi].addEventListener('click', function () { applyPreset(parseInt(this.getAttribute('data-preset'), 10), true); });
   }
   el('resetAll').addEventListener('click', function () {
-    includeFee = true;
     hasSender = true;
     el('in_hassender').checked = true;
-    el('in_includefee').checked = true;
     applyPreset(1, false);
   });
 
@@ -875,17 +865,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     // money table
     var m = '';
     m += row(['Total cash budget (ads, tools, optional lines)', { t: gbp(r.cash), num: 1 }]);
-    m += row(['My fee for 60 days' + (includeFee ? '' : ' (switched off)'), { t: includeFee ? gbp(r.feeGbp) : '£0', num: 1 }]);
-    m += row(['Total with my fee (fully loaded)', { t: gbp(r.loaded), num: 1 }], 'vn-total');
     m += row(['Revenue given up on referral free months (not cash)', { t: gbp(r.refGiven), num: 1 }]);
     m += row(['Cost per paying founder from ads (CAC)', { t: gbp(r.cacPaid), num: 1 }]);
     m += row(['Cost per paying founder, all channels, cash only', { t: gbp(r.cacCash), num: 1 }]);
-    m += row(['Cost per paying founder, all channels, fully loaded', { t: gbp(r.cacLoaded), num: 1 }]);
     m += row(['Lifetime value (LTV) of a paying founder', { t: gbp(r.ltv), num: 1 }], 'vn-total');
     m += row(['LTV to CAC, ads only', { t: isFinite(r.ratioPaid) ? fmt(r.ratioPaid, 1) + ' to 1' : 'n/a', num: 1 }]);
-    m += row(['LTV to CAC, all channels, fully loaded', { t: isFinite(r.ratioLoaded) ? fmt(r.ratioLoaded, 1) + ' to 1' : 'n/a', num: 1 }]);
+    m += row(['LTV to CAC, all channels', { t: isFinite(r.ratioLoaded) ? fmt(r.ratioLoaded, 1) + ' to 1' : 'n/a', num: 1 }]);
     m += row(['Months to pay back, ads only', { t: isFinite(r.payPaid) ? fmt(r.payPaid, 1) + ' months' : 'n/a', num: 1 }]);
-    m += row(['Months to pay back, all channels, fully loaded', { t: isFinite(r.payLoaded) ? fmt(r.payLoaded, 1) + ' months' : 'n/a', num: 1 }]);
+    m += row(['Months to pay back, all channels', { t: isFinite(r.payLoaded) ? fmt(r.payLoaded, 1) + ' months' : 'n/a', num: 1 }]);
     el('moneyRows').innerHTML = m;
 
     // gap table
