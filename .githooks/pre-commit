@@ -2,8 +2,12 @@
 # Blocks a commit when /work/ filter tags drift from the case study proof bank,
 # when a marked Signal to Build video count no longer matches the gallery manifest,
 # when a /work page has no share card of its own, or when a side project page
-# that explains a running process has no system map.
+# that explains a running process has no system map. It also blocks a commit that
+# leaves any page without Google Tag Manager (tools/check-analytics.py).
 # Enable once per clone: git config core.hooksPath .githooks
+if git diff --cached --name-only | grep -q '\.html$'; then
+  python3 tools/check-analytics.py || exit 1
+fi
 if git diff --cached --name-only | grep -q '^work/'; then
   python3 tools/check-work-tags.py || exit 1
   python3 tools/sync-video-count.py --check || exit 1

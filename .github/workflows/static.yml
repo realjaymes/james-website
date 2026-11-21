@@ -36,6 +36,11 @@ jobs:
           # Full history: generate-sitemap.py dates each <lastmod> from the file's
           # last commit. A shallow clone would collapse every page to one date.
           fetch-depth: 0
+      - name: Check analytics wiring
+        # Every page loads GTM-WKSZ7DQC in <head> with its noscript iframe after
+        # <body>, and never loads GA4 directly. A failure stops the deploy, so the
+        # live site keeps its last good version.
+        run: python3 tools/check-analytics.py
       - name: Generate sitemap
         # The sitemap is a derived artifact, rebuilt from the pages actually on
         # disk so it can never drift from the site. Regenerating here (rather
