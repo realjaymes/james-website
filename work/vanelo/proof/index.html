@@ -77,6 +77,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .vn-stage strong { font-size: 14px; display: block; margin-bottom: 2px; }
   .vn-stage.vn-last { background: var(--color-accent); border-color: var(--color-black); }
   .vn-down { text-align: center; color: var(--color-purple); font-size: 16px; line-height: 1; padding: 3px 0; font-weight: 800; }
+  .vn-flow.is-pilot .vn-next { opacity: 0.5; }
+  .vn-flow.is-pilot .vn-next .vn-d, .vn-flow.is-pilot .vn-next i { display: none; }
+  .vn-seg.vn-scope { margin-bottom: 4px; }
+  .vn-seg.vn-scope button { font-size: 14px; line-height: 1.25; padding: 6px 8px; }
   .vn-caption { font-size: 13px; color: var(--text-muted); line-height: 1.5; margin: 6px 0 0; }
 
   /* Flowchart 2 */
@@ -160,6 +164,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
 
   .vn-back { display: inline-block; margin-bottom: 20px; font-size: 14px; }
+  .proof-toc { position: fixed; top: 130px; right: 32px; width: 200px; font-size: 13px; max-height: calc(100vh - 160px); overflow-y: auto; }
+  .proof-toc-group { margin-bottom: 18px; }
+  .proof-toc-label { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-toc a { display: block; padding: 4px 0 4px 12px; border-left: 2px solid rgba(28,20,34,0.1); color: var(--text-muted); text-decoration: none; line-height: 1.4; }
+  .proof-toc a:hover { color: var(--color-purple); border-left-color: var(--color-purple); }
+  .proof-toc a.is-active { color: var(--color-purple); border-left-color: var(--color-purple); font-weight: 700; }
+  @media (max-width: 1400px) { .proof-toc { display: none; } }
+  .proof-progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(28,20,34,0.08); z-index: 200; }
+  .proof-progress-bar { height: 100%; width: 0%; background: var(--color-purple); transition: width 0.1s linear; }
 </style>
 </head>
 <body class="proof-page">
@@ -168,13 +181,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<a href="/" class="pitch-exit" aria-label="James Praise home">
+<div class="proof-progress-track"><div class="proof-progress-bar" id="proofProgressBar"></div></div>
+
+<a href="/work/vanelo/" class="pitch-exit" aria-label="Back to the Vanelo pitch">
   <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
 </a>
 
+<nav class="proof-toc" aria-label="Section navigation">
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The plan</p>
+    <a href="#scope">What the 60 days cover</a>
+    <a href="#goal">The goal</a>
+    <a href="#channels">The five channels</a>
+    <a href="#page">Your founders page</a>
+    <a href="#meta-campaign">How the ads are built</a>
+    <a href="#maps">How the system fits</a>
+    <a href="#social">LinkedIn, X and Reddit</a>
+    <a href="#market">Market size</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">Numbers and delivery</p>
+    <a href="#calculator">The calculator</a>
+    <a href="#who">Who does what</a>
+    <a href="#budget">Budget</a>
+    <a href="#timeline">The 60-day timeline</a>
+    <a href="#next-phase">Next phase</a>
+    <a href="#week1">What I need in week 1</a>
+  </div>
+</nav>
+
 <div class="container vn-wrap">
 
-  <a class="vn-back" href="/work/vanelo/">&larr; Back to the Vanelo slides</a>
+  <a class="vn-back" href="/work/vanelo/">&larr; Back to the Vanelo pitch</a>
   <p class="vn-eyebrow">Prepared for Davies Okeowo</p>
   <h1>Vanelo 60-day growth plan</h1>
 
@@ -189,16 +227,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <p class="vn-note">Every default number on this page is either marked as an estimate or names its source. In week 1 I replace the estimates with Vanelo's real numbers wherever PitchHub has them.</p>
 
+    <h2 id="scope">What the 60 days cover, and what comes next</h2>
+
+    <p>The 60 days are an outbound pilot. I build the outbound system for two channels, outbound to founders and outbound to partners. It comes first because it needs no ad spend, and it builds the repeatable system PitchHub asked for: email sequences, follow-up emails that move a lead toward paying (nurture), messaging and outreach routines that keep running after day 60.</p>
+
+    <div class="vn-cards vn-two">
+      <div class="vn-card">
+        <span class="vn-tag">In the 60-day pilot</span>
+        <h3>Outbound to founders and to partners</h3>
+        <p>Email to PitchHub's own founders, cold email to founders who are raising, the LinkedIn, X and Reddit playbook, and outreach to about 150 UK partners.</p>
+      </div>
+      <div class="vn-card">
+        <span class="vn-tag">Next phase</span>
+        <h3>SEO, founder referrals and paid Meta ads</h3>
+        <p>These are part of the plan and described in full below, together with the founders page changes and the ad structure. They start once the outbound pilot has shown results, as a separate engagement.</p>
+      </div>
+    </div>
+
     <h2 id="goal">The goal and where you start</h2>
 
     <ul>
       <li>Vanelo went live about two weeks ago and has 17 sign-ups. Vanelo has no free plan, so I treat all 17 as paying. A few may have come through an accelerator's free access, and week 1 confirms that.</li>
       <li>PitchHub's year-one target is 2,500 founders, about 210 a month.</li>
-      <li>There is no ad budget today. Davies wants ads to amplify what already works, so the plan starts with a small ad test with a fixed budget.</li>
+      <li>There is no ad budget today. Davies wants ads to amplify what already works, so paid ads wait for the next phase, after outbound shows what converts.</li>
       <li>Success at day 60 is two things. First, founders signed up and paying. Second, a repeatable system: email sequences, follow-up emails that move a lead toward paying (nurture), messaging and outreach routines that keep running after day 60.</li>
     </ul>
 
-    <p>This is what the plan projects for the base case. Base is the most likely case. The low case uses the weakest rate at every step, and the high case uses the strongest.</p>
+    <p>This is what the 60-day pilot projects for the base case. Base is the most likely case. The low case uses the weakest rate at every step, and the high case uses the strongest.</p>
+
+    <div class="vn-stats">
+      <div class="vn-stat"><strong>67</strong><span>new paying founders by day 60 in the pilot at base. Low is 22 and high is 150.</span></div>
+      <div class="vn-stat"><strong>17 to about 84</strong><span>paying founders on Vanelo at base, counting the 17 you have today.</span></div>
+      <div class="vn-stat"><strong>about &pound;430</strong><span>cash for the 60 days at base, all of it tools. The pilot has no ad spend.</span></div>
+      <div class="vn-stat"><strong>about &pound;6</strong><span>cash for each new paying founder at base.</span></div>
+    </div>
+
+    <p>Once the next phase runs alongside the pilot, the full plan projects this at base.</p>
 
     <div class="vn-stats">
       <div class="vn-stat"><strong>92</strong><span>new paying founders by day 60 at base. Low is 26 and high is 235.</span></div>
@@ -207,44 +271,46 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="vn-stat"><strong>about &pound;2,430</strong><span>cash for the 60 days at base, with &pound;2,000 of it going to ads. Without ads it is about &pound;430. Referrals cost no cash.</span></div>
     </div>
 
-    <p>A paying founder is worth about &pound;400 over their lifetime at base. That comes from the subscription price, an estimated 6% of founders cancelling each month, and an estimated 1 in 10 founders buying the &pound;357 showcase review. The calculator shows the working. I leave the advisor programme out because it is not built yet.</p>
+    <p>A paying founder is worth about &pound;400 over their lifetime at base. That comes from the subscription price, an estimated 6% of founders cancelling each month, and an estimated 1 in 10 founders buying the <a href="https://vanelo.io/pricing" target="_blank" rel="noopener">&pound;357 showcase review</a>. The calculator shows the working. I leave the advisor programme out because it is not built yet.</p>
 
-    <h2 id="channels">The five channels in scope, and the work that stays with your team</h2>
+    <h2 id="channels">The five channels: two in the pilot, three in the next phase</h2>
+
+    <p>Channels 1 and 2 are the 60-day pilot. Channels 3, 4 and 5 are the next phase, and I describe them in full so you can see the whole plan.</p>
 
     <div class="vn-cards">
       <div class="vn-card">
-        <span class="vn-tag">Channel 1</span>
-        <h3>Paid Meta ads to your founders page</h3>
-        <p>Facebook and Instagram ads (Meta) send founders to vanelo.io/founders, with a free first step such as the Fundraising Readiness scorecard or a live session with Davies. Your page already carries Davies's 2 minute 40 second video, so no new video sales letter is needed. The page does need some changes before ads send traffic to it, set out below.</p>
-        <p>Ads never go straight to the sign-up form, because a &pound;240 a year product rarely sells to a stranger on the first visit. The page changes, the Meta pixel and the first set of ads are built in weeks 1 and 2. Ads run in weeks 3 to 8.</p>
-      </div>
-      <div class="vn-card">
-        <span class="vn-tag">Channel 2</span>
+        <span class="vn-tag">Channel 1: In the 60-day pilot</span>
         <h3>Outbound to founders</h3>
         <p>Four routes. Email to PitchHub's own founders, about 5,000 reached so far. Cold email to founders who are raising. LinkedIn from Davies's profile. Helpful answers in founder threads on Reddit and X, with no cold direct messages, because Reddit treats them as spam.</p>
       </div>
       <div class="vn-card">
-        <span class="vn-tag">Channel 3</span>
+        <span class="vn-tag">Channel 2: In the 60-day pilot</span>
         <h3>Outbound to partners</h3>
         <p>A list of about 150 UK partners: accelerators, incubators, university enterprise teams, angel networks, startup accountants and lawyers, and bank startup teams. Each gets an offer: a discount code for their founders, a co-hosted session with Davies, or a mention in their newsletter.</p>
         <p>Partners decide slowly, so most of the result lands in weeks 5 to 8. The bigger value comes after day 60, when a partner sends every new cohort.</p>
       </div>
-      <div class="vn-card">
-        <span class="vn-tag">Channel 4</span>
+      <div class="vn-card" id="next-seo">
+        <span class="vn-tag">Channel 3: Next phase</span>
         <h3>Search engine optimization (SEO)</h3>
-        <p>Pages and free tools aimed at UK searches about SEIS and EIS tax relief, angel investors, pitch decks and funding stages. A young site rarely ranks within 60 days, so SEO adds 0 to 5 paying founders by day 60. Its value is the following 12 months. The 60 days build a SEIS eligibility checker, a valuation calculator on top of Vanelo's own valuation feature, and 8 to 12 articles.</p>
+        <p>Pages and free tools aimed at UK searches about SEIS and EIS tax relief, angel investors, pitch decks and funding stages. A young site rarely ranks within 60 days, so SEO adds 0 to 5 paying founders by day 60. Its value is the following 12 months. The first 60 days of this channel build a SEIS eligibility checker, a valuation calculator on top of Vanelo's own valuation feature, and 8 to 12 articles.</p>
       </div>
-      <div class="vn-card">
-        <span class="vn-tag">Channel 5</span>
+      <div class="vn-card" id="next-referrals">
+        <span class="vn-tag">Channel 4: Next phase</span>
         <h3>Founder referrals</h3>
         <p>A paying founder invites another founder with a personal link. Once the invited founder pays, both get one free month. That gives up about &pound;22 of revenue on each side, about &pound;44 for each referred founder, and costs no cash.</p>
         <p>We ask for the invite at a moment of value, not at sign-up. Examples are the first time an investor views a founder's data room, or the day their showcase goes live. Vanelo's developer adds the referral links in the app. If billing runs on Stripe, coupon codes can carry most of it. I confirm that in week 1.</p>
-        <p>Referrals launch in week 3 and run through week 8. They belong to the repeatable system because they grow with the number of paying founders.</p>
+        <p>Referrals launch early in the next phase, once the pilot's founders are paying, and run alongside the other channels. They belong to the repeatable system because they grow with the number of paying founders.</p>
+      </div>
+      <div class="vn-card" id="next-meta">
+        <span class="vn-tag">Channel 5: Next phase</span>
+        <h3>Paid Meta ads to your founders page</h3>
+        <p>Facebook and Instagram ads (Meta) send founders to <a href="https://vanelo.io/founders" target="_blank" rel="noopener">vanelo.io/founders</a>, with a free first step such as the Fundraising Readiness scorecard or a live session with Davies. Your page already carries Davies's 2 minute 40 second video, so no new video sales letter is needed. The page does need some changes before ads send traffic to it, set out below.</p>
+        <p>Ads never go straight to the sign-up form, because a <a href="https://vanelo.io/pricing" target="_blank" rel="noopener">&pound;240 a year product</a> rarely sells to a stranger on the first visit. The page changes, the Meta pixel and the first set of ads are built in the first two weeks of the next phase, and ads run for about six weeks after that.</p>
       </div>
     </div>
 
     <h3 id="page">Your founders page before ads</h3>
-    <p>I looked at vanelo.io/founders on desktop and at phone width on 20 November. Davies's video is a real asset. These are the things I found that would waste ad spend if we left them as they are.</p>
+    <p>I looked at <a href="https://vanelo.io/founders" target="_blank" rel="noopener">vanelo.io/founders</a> on desktop and at phone width on 20 November. Davies's video is a real asset. These are the things I found that would waste ad spend if we left them as they are.</p>
     <ul>
       <li>The video sits below the hero, so a visitor can sign up or leave without seeing it.</li>
       <li>There is no button after the video.</li>
@@ -252,7 +318,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <li>On phones the header shows only the logo, with no button, and the hero headline runs off the right edge of the screen.</li>
       <li>I found no Meta pixel in the page source or its main script. Microsoft Clarity is installed, so its recordings can show how far visitors scroll and whether they play the video.</li>
     </ul>
-    <p>Here are the eight changes I would make in weeks 1 and 2, before any ad runs.</p>
+    <p>Here are the eight changes I would make at the start of the next phase, before any ad runs.</p>
     <ol>
       <li>Put the video in the hero, next to or under the headline, so paid visitors see it first.</li>
       <li>Put a button directly under the video.</li>
@@ -265,7 +331,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </ol>
     <p>I write the changes and the copy. Your developer ships them, unless you give me access to the site.</p>
 
-    <h3 id="ads">How the ads are built</h3>
+    <h3 id="meta-campaign">How the ads are built</h3>
     <p>Boosting one organic video or image gives Meta one creative and one signal, so Meta can only find the narrow group of founders who respond to that one piece. Meta's delivery system decides who sees an ad from the creative itself. The campaign therefore needs several clearly different ads, and Meta works out which founders respond to each.</p>
     <p>The structure is one campaign and one ad set, with broad UK targeting, optimised for the lead event, and 8 to 10 ads. You already have most of the assets to build them from.</p>
     <div class="vn-cards vn-two">
@@ -284,25 +350,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 id="maps">How the system fits together</h2>
 
     <h3>The growth system</h3>
-    <p>Seven channels bring founders to one funnel. The number on each arrow is how many people that channel puts in front of Vanelo at base. These numbers update when you change the calculator.</p>
+    <p>Five channels, split into eight routes, bring founders to one funnel. The number on each arrow is how many people that route puts in front of Vanelo at base. These numbers update when you change the calculator. The faded routes are the next phase, so they show as zero in the 60-day pilot view and count in the full-plan view.</p>
 
-    <div class="vn-flow" id="flow1" aria-label="Growth system map: six channels flow into one funnel of touch, lead, nurture and paid sign-up">
-      <div class="vn-ch" style="grid-column:1;grid-row:1">Paid Meta ads</div>
-      <div class="vn-arrow" style="grid-column:2;grid-row:1"><b data-bind="f_paid">1,600</b>founders page visits<i>&rarr;</i></div>
-      <div class="vn-ch" style="grid-column:1;grid-row:2">Email to PitchHub's founders</div>
-      <div class="vn-arrow" style="grid-column:2;grid-row:2"><b data-bind="f_warm">160</b>visits<i>&rarr;</i></div>
-      <div class="vn-ch" style="grid-column:1;grid-row:3">Cold email to raising founders</div>
-      <div class="vn-arrow" style="grid-column:2;grid-row:3"><b data-bind="f_cold">61</b>replies<i>&rarr;</i></div>
-      <div class="vn-ch" style="grid-column:1;grid-row:4">LinkedIn from Davies</div>
-      <div class="vn-arrow" style="grid-column:2;grid-row:4"><b data-bind="f_li">48</b>replies<i>&rarr;</i></div>
-      <div class="vn-ch" style="grid-column:1;grid-row:5">Reddit and X answers</div>
-      <div class="vn-arrow" style="grid-column:2;grid-row:5"><b data-bind="f_rx">240</b>visits<i>&rarr;</i></div>
-      <div class="vn-ch" style="grid-column:1;grid-row:6">Partner outreach</div>
-      <div class="vn-arrow" style="grid-column:2;grid-row:6"><b data-bind="f_pt">1,688</b>founders reached<i>&rarr;</i></div>
-      <div class="vn-ch" style="grid-column:1;grid-row:7">SEO pages and free tools</div>
-      <div class="vn-arrow" style="grid-column:2;grid-row:7"><b data-bind="f_seo">2</b>paying by day 60<i>&rarr;</i></div>
-      <div class="vn-ch" style="grid-column:1;grid-row:8">Founder referrals</div>
-      <div class="vn-arrow" style="grid-column:2;grid-row:8"><b data-bind="f_ref">18</b>invites sent<i>&rarr;</i></div>
+    <div class="vn-flow is-pilot" id="flow1" aria-label="Growth system map: eight routes from five channels flow into one funnel of touch, lead, nurture and paid sign-up">
+      <div class="vn-ch" style="grid-column:1;grid-row:1">Email to PitchHub's founders</div>
+      <div class="vn-arrow" style="grid-column:2;grid-row:1"><b data-bind="f_warm">160</b>visits<i>&rarr;</i></div>
+      <div class="vn-ch" style="grid-column:1;grid-row:2">Cold email to raising founders</div>
+      <div class="vn-arrow" style="grid-column:2;grid-row:2"><b data-bind="f_cold">61</b>replies<i>&rarr;</i></div>
+      <div class="vn-ch" style="grid-column:1;grid-row:3">LinkedIn from Davies</div>
+      <div class="vn-arrow" style="grid-column:2;grid-row:3"><b data-bind="f_li">48</b>replies<i>&rarr;</i></div>
+      <div class="vn-ch" style="grid-column:1;grid-row:4">Reddit and X answers</div>
+      <div class="vn-arrow" style="grid-column:2;grid-row:4"><b data-bind="f_rx">240</b>visits<i>&rarr;</i></div>
+      <div class="vn-ch" style="grid-column:1;grid-row:5">Partner outreach</div>
+      <div class="vn-arrow" style="grid-column:2;grid-row:5"><b data-bind="f_pt">1,688</b>founders reached<i>&rarr;</i></div>
+      <div class="vn-ch vn-next" style="grid-column:1;grid-row:6">SEO pages and free tools</div>
+      <div class="vn-arrow vn-next" style="grid-column:2;grid-row:6"><b data-bind="f_seo">2</b><span class="vn-d">paying by day 60</span><i>&rarr;</i></div>
+      <div class="vn-ch vn-next" style="grid-column:1;grid-row:7">Founder referrals</div>
+      <div class="vn-arrow vn-next" style="grid-column:2;grid-row:7"><b data-bind="f_ref">18</b><span class="vn-d">invites sent</span><i>&rarr;</i></div>
+      <div class="vn-ch vn-next" style="grid-column:1;grid-row:8">Paid Meta ads</div>
+      <div class="vn-arrow vn-next" style="grid-column:2;grid-row:8"><b data-bind="f_paid">1,600</b><span class="vn-d">founders page visits</span><i>&rarr;</i></div>
       <div class="vn-funnel">
         <div class="vn-stage"><strong>1. Touch</strong>A founder sees Vanelo through an ad, email, reply, post, partner mention or search result.</div>
         <div class="vn-down">&darr;</div>
@@ -319,9 +385,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p>Cold email and LinkedIn run on one engine that I build in weeks 1 and 2 and PitchHub keeps. The numbers are base case.</p>
 
     <div class="vn-steps">
-      <div class="vn-step"><h3>Signals</h3><p>I find founders who are raising from public signs: accelerator cohort lists, Crowdcube and Seedrs campaigns, fundraising posts on LinkedIn and X, young companies hiring, and Companies House filings. About 4,000 founders over the two months (estimate).</p></div>
+      <div class="vn-step"><h3>Signals</h3><p>I find founders who are raising from public signs: accelerator cohort lists, Crowdcube and Seedrs campaigns, fundraising posts on LinkedIn and X, young companies hiring, and <a href="https://find-and-update.company-information.service.gov.uk/" target="_blank" rel="noopener">Companies House</a> filings. About 4,000 founders over the two months (estimate).</p></div>
       <div class="vn-down">&darr;</div>
-      <div class="vn-step"><h3>Enrichment and checks</h3><p>Prospeo finds a verified work email for about 45% of them, about 1,800 founders. That is my estimate, between the 62% and 17% I saw in my own runs on two other groups. MillionVerifier checks every address again on the day it is sent. Founders without an email go to LinkedIn.</p></div>
+      <div class="vn-step"><h3>Enrichment and checks</h3><p><a href="https://prospeo.io/" target="_blank" rel="noopener">Prospeo</a> finds a verified work email for about 45% of them, about 1,800 founders. That is my estimate, between the 62% and 17% I saw in my own runs on two other groups. MillionVerifier checks every address again on the day it is sent. Founders without an email go to LinkedIn.</p></div>
       <div class="vn-down">&darr;</div>
       <div class="vn-step"><h3>Sequences</h3><p>Three emails per founder, about 5,400 in six sending weeks, from six inboxes on three secondary domains at 30 a day each, warmed up for two weeks first. On LinkedIn, Davies's profile sends about 100 connection requests a week, then two follow-up messages.</p></div>
       <div class="vn-down">&darr;</div>
@@ -332,7 +398,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <h3 id="social">How we use LinkedIn, X and Reddit</h3>
     <p>Today PitchHub posts on LinkedIn and Reddit and waits for founders to find the posts. The plan finds founders who are raising and starts a conversation with each one. The posts support that by giving new connections a reason to accept and reply.</p>
-    <p>I build the system once: the target rules, saved searches, keyword alerts, message and comment templates, and a daily checklist. Davies or a team member he names runs it every day, about 30 minutes, from Davies's accounts. I never log in as Davies. These channels count in the projection only if PitchHub names that person. The daily work is mostly replying, not posting: commenting on founders' raising posts, answering threads, replying to everyone who comments on Davies's posts, and following up in messages. Without a named person, these channels drop to Davies's normal posting with no daily replies, and the base case falls from about 92 to about 80 new paying founders.</p>
+    <p>I build the system once: the target rules, saved searches, keyword alerts, message and comment templates, and a daily checklist. Davies or a team member he names runs it every day, about 30 minutes, from Davies's accounts. I never log in as Davies. These channels count in the projection only if PitchHub names that person. The daily work is mostly replying, not posting: commenting on founders' raising posts, answering threads, replying to everyone who comments on Davies's posts, and following up in messages. Without a named person, these channels drop to Davies's normal posting with no daily replies, and the pilot's base case falls from about 67 to about 55 new paying founders, and the full plan's from about 92 to about 80.</p>
 
     <div class="vn-cards">
       <div class="vn-card">
@@ -352,7 +418,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span class="vn-tag">Reddit, a named account for Davies</span>
         <p><strong>Where:</strong> founder communities such as r/startups, r/Entrepreneur and r/venturecapital, plus UK small business communities. I check each community's rules on self-promotion in week 1, because some ban links.</p>
         <p><strong>How:</strong> detailed answers to fundraising questions, with no link in most of them. A link goes in only where the rules allow it and it directly answers the question. If a community allows it, Davies runs an "ask me anything" on SEIS and pre-seed raising, using PitchHub's &pound;14m+ track record.</p>
-        <p><strong>Finding threads:</strong> free keyword alerts such as F5Bot on "SEIS", "angel investors", "pre-seed", "pitch deck" and "fundraising UK".</p>
+        <p><strong>Finding threads:</strong> free keyword alerts such as <a href="https://f5bot.com/" target="_blank" rel="noopener">F5Bot</a> on "SEIS", "angel investors", "pre-seed", "pitch deck" and "fundraising UK".</p>
         <p><strong>No cold direct messages.</strong> Reddit treats them as spam and bans accounts for them.</p>
         <p><strong>Why it lasts:</strong> Reddit threads rank in Google and get quoted by AI answer tools, so a good answer keeps bringing visits for months.</p>
       </div>
@@ -370,17 +436,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <h2 id="market">Market size</h2>
 
-    <p>The outbound volumes come from the size of the market, not from a number I picked. The main source is His Majesty's Revenue and Customs (HMRC), the UK tax authority. It publishes how many companies raise under the Seed Enterprise Investment Scheme (SEIS) and the Enterprise Investment Scheme (EIS). Both give investors tax relief.</p>
+    <p>The outbound volumes come from the size of the market, not from a number I picked. The main source is His Majesty's Revenue and Customs (HMRC), the UK tax authority, whose <a href="https://www.gov.uk/government/statistics/enterprise-investment-scheme-and-seed-enterprise-investment-scheme-may-2026/enterprise-investment-scheme-and-seed-enterprise-investment-scheme-2026" target="_blank" rel="noopener">May 2026 statistics</a> are the source of the first four rows below. It publishes how many companies raise under the Seed Enterprise Investment Scheme (SEIS) and the Enterprise Investment Scheme (EIS). Both give investors tax relief.</p>
 
     <div class="vn-table-wrap">
       <table class="vn-table">
         <thead><tr><th>Layer</th><th class="num">Number</th><th>Source</th></tr></thead>
         <tbody>
-          <tr><td>UK companies that raised under SEIS in 2024-25</td><td class="num">2,430</td><td>About 1,775 for the first time. <a href="https://www.gov.uk/government/statistics/enterprise-investment-scheme-and-seed-enterprise-investment-scheme-may-2026/enterprise-investment-scheme-and-seed-enterprise-investment-scheme-2026" target="_blank" rel="noopener">HMRC statistics, May 2026</a></td></tr>
-          <tr><td>UK companies that raised under EIS in 2024-25</td><td class="num">3,735</td><td>1,145 for the first time. Overlaps with SEIS, so I do not add the two. Same HMRC release</td></tr>
-          <tr><td>SEIS advance assurance applications in 2025-26</td><td class="num">4,085</td><td>Founders preparing to raise. Provisional, up from 3,285. Same HMRC release</td></tr>
-          <tr><td>EIS advance assurance applications in 2025-26</td><td class="num">3,310</td><td>Provisional. Same HMRC release</td></tr>
-          <tr><td>Equity deals in private UK companies in 2025</td><td class="num">5,887</td><td>2,489 were companies raising for the first time. Beauhurst data as reported by <a href="https://www.mercia.co.uk/fewer-but-bigger-deals-as-investors-refocus-on-fundamentals/" target="_blank" rel="noopener">Mercia</a> (secondary source)</td></tr>
+          <tr><td><a href="https://www.gov.uk/government/statistics/enterprise-investment-scheme-and-seed-enterprise-investment-scheme-may-2026/enterprise-investment-scheme-and-seed-enterprise-investment-scheme-2026" target="_blank" rel="noopener">UK companies that raised under SEIS in 2024-25</a></td><td class="num">2,430</td><td>About 1,775 for the first time. HMRC statistics, May 2026</td></tr>
+          <tr><td><a href="https://www.gov.uk/government/statistics/enterprise-investment-scheme-and-seed-enterprise-investment-scheme-may-2026/enterprise-investment-scheme-and-seed-enterprise-investment-scheme-2026" target="_blank" rel="noopener">UK companies that raised under EIS in 2024-25</a></td><td class="num">3,735</td><td>1,145 for the first time. Overlaps with SEIS, so I do not add the two. Same HMRC release</td></tr>
+          <tr><td><a href="https://www.gov.uk/government/statistics/enterprise-investment-scheme-and-seed-enterprise-investment-scheme-may-2026/enterprise-investment-scheme-and-seed-enterprise-investment-scheme-2026" target="_blank" rel="noopener">SEIS advance assurance applications in 2025-26</a></td><td class="num">4,085</td><td>Founders preparing to raise. Provisional, up from 3,285. Same HMRC release</td></tr>
+          <tr><td><a href="https://www.gov.uk/government/statistics/enterprise-investment-scheme-and-seed-enterprise-investment-scheme-may-2026/enterprise-investment-scheme-and-seed-enterprise-investment-scheme-2026" target="_blank" rel="noopener">EIS advance assurance applications in 2025-26</a></td><td class="num">3,310</td><td>Provisional. Same HMRC release</td></tr>
+          <tr><td><a href="https://www.mercia.co.uk/fewer-but-bigger-deals-as-investors-refocus-on-fundamentals/" target="_blank" rel="noopener">Equity deals in private UK companies in 2025</a></td><td class="num">5,887</td><td>2,489 were companies raising for the first time. Beauhurst data as reported by Mercia (secondary source)</td></tr>
         </tbody>
       </table>
     </div>
@@ -389,16 +455,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <p><strong>Raising right now.</strong> A raise usually runs three to six months, so I estimate 3,000 to 5,000 founders are in the middle of one at any point.</p>
 
-    <p><strong>Partner pool.</strong> The UK has at least 700 to 900 programmes and networks that could promote Vanelo. The Centre for Entrepreneurs counted more than 400 incubators and 300 accelerators in 2022 (<a href="https://www.nesta.org.uk/press-release/increase-in-uks-incubator-and-accelerator-network-to-support-start-ups-across-the-uk/" target="_blank" rel="noopener">Nesta reports the same network</a>). The UK Business Angels Association counted 86 angel networks in 2023 (<a href="https://committees.parliament.uk/writtenevidence/124016/html/" target="_blank" rel="noopener">evidence to Parliament</a>).</p>
+    <p><strong>Partner pool.</strong> The UK has at least 700 to 900 programmes and networks that could promote Vanelo. The Centre for Entrepreneurs counted <a href="https://d3brk8rkzvc45n.cloudfront.net/s3fs-public/2024-02/CFE-Incubation-Nation-The-acceleration-of-UK-startup-support.pdf" target="_blank" rel="noopener">more than 400 incubators and 300 accelerators in 2022</a>, up from the <a href="https://www.nesta.org.uk/press-release/increase-in-uks-incubator-and-accelerator-network-to-support-start-ups-across-the-uk/" target="_blank" rel="noopener">205 incubators and 163 accelerators Nesta counted in 2017</a>. The UK Business Angels Association, the trade body for angel investors, listed <a href="https://committees.parliament.uk/writtenevidence/124016/html/" target="_blank" rel="noopener">86 angel networks among its members in 2023</a>.</p>
 
     <p>I found no reliable count for university enterprise teams, startup accountants and lawyers, or bank startup teams. My list of 150 is the most relevant of them: programmes for pre-seed and seed founders, angel networks, and the accountants who file SEIS advance assurance.</p>
 
     <h2 id="calculator">The calculator</h2>
 
-    <p>Change any number and everything below updates. Start with the switch: Low uses the weakest rate at every step, Base is my most likely case, and High uses the strongest. Then open any channel and set the rates you believe. Each input names its source or says it is an estimate.</p>
+    <p>Change any number and everything below updates. Start with the switch: Low uses the weakest rate at every step, Base is my most likely case, and High uses the strongest. Then open any channel and set the rates you believe. Each input names its source or says it is an estimate. The calculator opens on the 60-day pilot. The scope switch adds the next phase to show the full plan.</p>
 
     <div class="vn-calc" id="calc">
       <div class="vn-target" id="targetBox"><h3>Your target</h3><div class="vn-fields" id="targetFields"></div><label class="vn-check" style="margin-top:10px"><input type="checkbox" id="in_hassender" checked> Someone at PitchHub runs LinkedIn, X and Reddit daily</label><small style="display:block;font-size:12px;color:var(--text-muted)">Switch off to see the plan without those channels. Without a named daily sender they drop out.</small></div>
+
+      <div class="vn-seg vn-scope" role="group" aria-label="Plan scope">
+        <button type="button" data-scope="pilot" aria-pressed="true">60-day pilot (outbound)</button>
+        <button type="button" data-scope="full" aria-pressed="false">Full plan with the next phase</button>
+      </div>
+      <p class="vn-presetline"><span id="scopeLabel"></span></p>
 
       <div class="vn-seg" role="group" aria-label="Scenario preset">
         <button type="button" data-preset="0" aria-pressed="false">Low</button>
@@ -414,7 +486,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="vn-kpis">
           <div class="vn-kpi vn-hot"><strong id="o_total">0</strong><span>new paying founders at day 60</span></div>
           <div class="vn-kpi"><strong id="o_after">0</strong><span>paying founders on Vanelo in total (17 plus new)</span></div>
-          <div class="vn-kpi"><strong id="o_cac_paid">0</strong><span>cost per paying founder from ads (CAC)</span></div>
+          <div class="vn-kpi"><strong id="o_cac_paid">0</strong><span id="o_cac_label">cost per paying founder from ads (CAC)</span></div>
           <div class="vn-kpi"><strong id="o_ltv">0</strong><span>lifetime value (LTV) of one paying founder</span></div>
         </div>
 
@@ -459,47 +531,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <h2 id="who">Who does what</h2>
 
-    <p>I build each system once and check the numbers every week. Your team runs the daily work.</p>
+    <p>I build each system once and check the numbers every week. Your team runs the daily work. This table covers the 60-day pilot, and the next phase adds its own work, listed after the timeline.</p>
 
     <div class="vn-who">
       <div class="vn-wrow vn-whead"><div>Work</div><div>I build</div><div>Your team runs</div></div>
-      <div class="vn-wrow"><div class="vn-wa">Founders page and Meta pixel</div><div data-l="I build">Writes the 8 changes and the copy</div><div data-l="Your team runs">Vanelo's developer ships them</div></div>
-      <div class="vn-wrow"><div class="vn-wa">Meta ads</div><div data-l="I build">Sets up the campaign, writes the ad briefs, reads the numbers weekly and swaps the weakest ads</div><div data-l="Your team runs">The video editor and designer cut the ads. Davies records new hooks when asked</div></div>
       <div class="vn-wrow"><div class="vn-wa">Email to PitchHub's founders</div><div data-l="I build">Writes and sets up the sequence</div><div data-l="Your team runs">Exports the list. Davies approves the emails</div></div>
       <div class="vn-wrow"><div class="vn-wa">Cold email to founders</div><div data-l="I build">Builds the lists, inboxes, sequences and automatic reply sorting once. The emails then send on their own</div><div data-l="Your team runs">Melissa-Jane or Davies answers interested founders</div></div>
       <div class="vn-wrow"><div class="vn-wa">LinkedIn, X and Reddit</div><div data-l="I build">Writes the playbook, target rules, saved searches, keyword alerts and templates</div><div data-l="Your team runs">Davies or a named team member replies, comments, messages and posts daily, about 30 minutes</div></div>
       <div class="vn-wrow"><div class="vn-wa">Partners</div><div data-l="I build">Builds the list and sends the email sequence</div><div data-l="Your team runs">Davies takes partner calls and runs co-hosted sessions</div></div>
-      <div class="vn-wrow"><div class="vn-wa">Referrals</div><div data-l="I build">Designs the offer and the in-app wording</div><div data-l="Your team runs">Vanelo's developer builds the links</div></div>
-      <div class="vn-wrow"><div class="vn-wa">SEO</div><div data-l="I build">Writes the keyword plan, drafts the articles with AI and specs the free tools</div><div data-l="Your team runs">Davies reviews articles. The developer ships the tools</div></div>
       <div class="vn-wrow"><div class="vn-wa">Nurture emails</div><div data-l="I build">Writes them once</div><div data-l="Your team runs">Davies runs the live sessions</div></div>
       <div class="vn-wrow"><div class="vn-wa">Reporting</div><div data-l="I build">One short weekly read of every channel against the targets</div><div data-l="Your team runs">Shares sign-up and payment numbers</div></div>
     </div>
 
     <h2 id="budget">Budget for the 60 days</h2>
 
-    <p>PitchHub pays every tool and all ad spend in its own name, with no markup from me.</p>
+    <p>PitchHub pays for every tool in its own name, with no markup from me. The pilot has no ad spend.</p>
 
     <div class="vn-table-wrap">
       <table class="vn-table">
         <thead><tr><th>Line</th><th class="num">Base budget</th><th>Notes</th></tr></thead>
         <tbody>
-          <tr><td>Meta ad spend</td><td class="num">&pound;2,000</td><td>Weeks 3 to 8, about &pound;330 a week. Stops early if the week-4 read fails the stop rule.</td></tr>
-          <tr><td>Outbound tools</td><td class="num">about &pound;300</td><td>Six inboxes on three secondary domains, the sending tool, contact credits for about 4,000 founders and email checking. MIA's <a href="https://marketinginaction.xyz/resources/outbound-cost-calculator/" target="_blank" rel="noopener">outbound cost calculator</a> gave about $130 to $190 a month at a similar volume for another client. Estimate, priced exactly in week 1.</td></tr>
-          <tr><td>LinkedIn Sales Navigator for Davies</td><td class="num">&pound;0 to &pound;160</td><td>Optional. It makes finding founders who are raising faster, and the free search works. Estimate of about &pound;80 a month.</td></tr>
-          <tr><td>Email platform for the nurture sequences</td><td class="num">&pound;0 to &pound;100</td><td>&pound;0 if PitchHub already has one. To confirm.</td></tr>
-          <tr><td>Founders page changes and ad creatives</td><td class="num">&pound;0 cash</td><td>The video sales letter already exists. I write the page changes and the ad briefs, your developer ships the page, and your video editor and designer cut the ads.</td></tr>
-          <tr><td>SEO</td><td class="num">&pound;0 cash</td><td>I already have keyword data access. The free tools are built on Vanelo's site.</td></tr>
+          <tr><td>Outbound tools</td><td class="num">about &pound;300</td><td>Paid by Vanelo. Six inboxes on three secondary domains, a sending tool such as Instantly, contact credits for about 4,000 founders and email checking. MIA's <a href="https://marketinginaction.xyz/resources/outbound-cost-calculator/" target="_blank" rel="noopener">outbound cost calculator</a> gave about $130 to $190 a month at a similar volume for another client. Estimate, priced exactly in week 1.</td></tr>
+          <tr><td>LinkedIn Sales Navigator for Davies</td><td class="num">&pound;0 to &pound;160</td><td>Paid by Vanelo. Optional. It makes finding founders who are raising faster, and the free search works. Estimate of about &pound;80 a month.</td></tr>
+          <tr><td>Email platform for the nurture sequences</td><td class="num">&pound;0 to &pound;100</td><td>Paid by Vanelo. &pound;0 if PitchHub already has one. To confirm.</td></tr>
           <tr><td>Partner discount codes</td><td class="num">no cash</td><td>Revenue given up: at 20% off the first three months, about &pound;15 per partner-sourced founder, about &pound;390 at base.</td></tr>
-          <tr><td>Referral free months</td><td class="num">no cash</td><td>Revenue given up: one free month for each side, about &pound;44 per referred founder, about &pound;200 at base.</td></tr>
-          <tr class="vn-total"><td>Total cash</td><td class="num">about &pound;2,300 to &pound;2,560</td><td>Without ads, about &pound;300 to &pound;560. The calculator uses the middle of the two optional lines.</td></tr>
+          <tr class="vn-total"><td>Total cash</td><td class="num">about &pound;300 to &pound;560</td><td>The calculator uses the middle of the two optional lines, about &pound;430. No ad spend.</td></tr>
         </tbody>
       </table>
     </div>
 
-    <p><strong>Cost per paying founder at base, cash only:</strong> about &pound;26 across all channels (about &pound;2,430 for about 92 founders).</p>
-
-
-    <p><strong>Lean option without ads.</strong> Dropping the &pound;2,000 of ad spend gives about 73 founders for about &pound;300 to &pound;560 in tools. It also gives up the paid test that tells PitchHub whether ads can scale toward the year-one target.</p>
+    <p><strong>Cost per paying founder at base, cash only:</strong> about &pound;6 across the pilot's channels (about &pound;430 for about 67 founders).</p>
 
     <h2 id="timeline">The 60-day timeline</h2>
 
@@ -508,7 +569,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h3>Weeks 1 and 2: build and warm up</h3>
         <ul>
           <li>Replace the estimates with Vanelo's real numbers (the list under What I need in week 1).</li>
-          <li>Make the eight changes to the founders page, install the Meta pixel and build the first set of 8 to 10 ads. Your developer ships the page, and your video editor and designer cut the ads from my briefs.</li>
           <li>Set up the secondary domains and six inboxes and start the two-week warm-up. Write the three-email cold sequence and the five-email nurture sequence.</li>
           <li>Build the list of 150 partners and the partner offer.</li>
           <li>Start the work that needs no warm-up: Davies's LinkedIn requests (about 100 a week) and helpful answers on Reddit and X (about 15 a week).</li>
@@ -517,20 +577,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div>
         <h3>Weeks 3 to 8: run</h3>
         <ul>
-          <li>Ads run at about &pound;330 a week, &pound;2,000 in all.</li>
           <li>Cold email goes to about 1,800 founders, three emails each.</li>
           <li>Partner outreach runs, with most promotions landing in weeks 5 to 8.</li>
-          <li>Week 3: referral links go live in the app. Founders are asked for an invite at a moment of value, and referrals run through week 8.</li>
-          <li>The first SEO tools and 8 to 12 articles go live.</li>
+          <li>LinkedIn, X and Reddit replies run daily.</li>
         </ul>
       </div>
       <div>
-        <h3>Week 4: the first read, with a stop rule</h3>
-        <p>I compare each channel's real numbers to this plan. For ads, the rule is simple. If the cost per lead is above &pound;15 after &pound;500 of spend, I change the offer or the audience once. If it is still above &pound;15 after the next &pound;500, the ads stop. At base, the ads pay back about three times against about &pound;300 of year-one value. In the low case they lose money, which is why the read exists.</p>
+        <h3>Week 4: the first read</h3>
+        <p>I compare each channel's real numbers to this plan: replies, interested founders, sign-ups and cost. I move effort to the channels doing best and change the weakest message or list once.</p>
       </div>
       <div>
         <h3>Day 60: the review</h3>
-        <p>We compare each channel's real cost per paying founder to this plan. We decide which channels keep running and where any new budget goes. I hand over the sequences, messaging and routines as the repeatable system. The 60 days answer one question: which channels work, at what cost, before real money goes into ads.</p>
+        <p>We compare each channel's real cost per paying founder to this plan. We decide which channels keep running and whether to start the next phase. I hand over the sequences, messaging and routines as the repeatable system. The 60 days answer one question: which outbound channels work, and at what cost, before the next phase adds ads.</p>
+      </div>
+    </div>
+
+    <h2 id="next-phase">Next phase</h2>
+
+    <p>These channels are part of the plan, and they are not part of the 60-day pilot. They start once the outbound pilot has shown results, as a separate engagement. Each one links to its full detail above. Vanelo pays for the tools in this phase too, with no markup from me.</p>
+
+    <div class="vn-cards vn-two">
+      <div class="vn-card">
+        <span class="vn-tag">Next phase</span>
+        <h3><a href="#next-seo">SEO</a></h3>
+        <p>Pages and free tools that rank for UK searches about raising investment. It adds 0 to 5 paying founders by day 60 and builds value over the following 12 months. Vanelo would pay for a keyword data tool such as DataForSEO, about &pound;0 to &pound;50 for 60 days (estimate).</p>
+      </div>
+      <div class="vn-card">
+        <span class="vn-tag">Next phase</span>
+        <h3><a href="#next-referrals">Founder referrals</a></h3>
+        <p>A paying founder invites another, and both get one free month. It adds about 5 paying founders at base and grows as the number of paying founders grows. It costs no cash.</p>
+      </div>
+      <div class="vn-card">
+        <span class="vn-tag">Next phase</span>
+        <h3><a href="#next-meta">Paid Meta ads</a></h3>
+        <p>Facebook and Instagram ads to your founders page, with 8 to 10 clearly different ads (<a href="#meta-campaign">how the ads are built</a>). It adds about 19 paying founders at base and shows whether ads can scale toward the year-one target. PitchHub would need to release the ad spend after a test passes.</p>
+      </div>
+      <div class="vn-card">
+        <span class="vn-tag">Next phase</span>
+        <h3><a href="#page">Founders page changes</a></h3>
+        <p>Eight changes to vanelo.io/founders before any ad runs, such as moving the video up, adding buttons after it and installing the Meta pixel. Ads waste money without them.</p>
       </div>
     </div>
 
@@ -541,15 +626,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <li>Vanelo's real visit, sign-up and paying numbers, and where the 17 came from.</li>
       <li>How many founders buy the showcase review.</li>
       <li>Davies's hours a week for LinkedIn, live sessions and partner calls.</li>
-      <li>The ad spend PitchHub would release after a test passes.</li>
     </ul>
 
-    <h2 id="contact">Talk to me</h2>
-
-    <p>If the plan looks right, or if any number looks wrong, tell me and I will change it. Reply to this email thread or write to me directly.</p>
-
-    <div class="button-row">
-      <a href="mailto:james@marketinginaction.xyz?subject=Vanelo%2060-day%20growth%20plan" class="button button-primary">james@marketinginaction.xyz</a>
+    <div class="button-row" style="margin-top: 40px;">
+      <a href="/work/vanelo/" class="button button-primary">Back to the pitch</a>
+      <a href="mailto:james@marketinginaction.xyz?subject=Vanelo%2060-day%20growth%20plan" class="button button-secondary">Let's Talk</a>
     </div>
 
   </div>
@@ -557,10 +638,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="vn-bar" id="vnBar" aria-hidden="true">
   <div><b id="b_total">0</b>new paying founders</div>
-  <div><b id="b_cac">0</b>cost per founder from ads</div>
+  <div><b id="b_cac">0</b><span id="b_cac_l">cost per founder from ads</span></div>
   <div><b id="b_ratio">0</b>LTV to CAC</div>
 </div>
 
+<script src="/script.js?v=11"></script>
+<script>
+(function () {
+  var bar = document.getElementById('proofProgressBar');
+  function updateProgress() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.proof-toc a'));
+  var sections = tocLinks.map(function (a) {
+    return document.getElementById(a.getAttribute('href').slice(1));
+  });
+  function updateActiveToc() {
+    var current = null;
+    sections.forEach(function (sec, i) {
+      if (sec && sec.getBoundingClientRect().top <= 140) current = i;
+    });
+    tocLinks.forEach(function (a, i) {
+      a.classList.toggle('is-active', i === current);
+    });
+  }
+  window.addEventListener('scroll', updateActiveToc, { passive: true });
+  updateActiveToc();
+})();
+</script>
 <script>
 (function () {
   'use strict';
@@ -568,15 +680,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   // ---------- Inputs ----------
   // v is a single number, or [low, base, high]. pct: shown as a percent, divided by 100 in the maths.
   var GROUPS = [
-    { id: 'paid', title: 'Paid Meta ads', open: true, fields: [
-      { k: 'spend', l: 'Ad spend over the 60 days (£)', v: 2000, src: 'Set by PitchHub. £2,000 is my base, about £330 a week for weeks 3 to 8.' },
-      { k: 'cpm', l: 'Cost per 1,000 ad views (CPM, £)', v: [12, 10, 8], src: 'Estimate for UK founder audiences.' },
-      { k: 'ctr', l: 'Click-through rate (%)', v: [0.8, 1.0, 1.3], src: '1% is the target I set on MIA Meta campaigns.' },
-      { k: 'lpv', l: 'Clicks that load the page (%)', v: 80, src: 'Estimate.' },
-      { k: 'lead', l: 'Page visitors who become leads (%)', v: [12, 20, 25], src: 'Estimate for a free scorecard or live session offer.' },
-      { k: 'paidrate', l: 'Leads who become paying founders (%)', v: [3, 6, 10], src: 'Estimate, with nurture emails and a live session.' }
-    ]},
-    { id: 'warm', title: 'Email to PitchHub’s own founders', fields: [
+    { id: 'warm', title: 'Email to PitchHub’s own founders', open: true, fields: [
       { k: 'list', l: 'Founders who can be emailed', v: [1000, 2000, 3000], src: 'Estimate. PitchHub has reached about 5,000 founders. Week 1 confirms how many agreed to emails.' },
       { k: 'wclick', l: 'Click through the three-email sequence (%)', v: [5, 8, 10], src: 'Estimate.' },
       { k: 'wconv', l: 'Visitors who pay (%)', v: [8, 12, 15], src: 'Estimate. Set above cold traffic because these founders already trust PitchHub.' }
@@ -607,13 +711,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       { k: 'reach', l: 'Founders reached per promoting partner', v: 300, src: 'Estimate.' },
       { k: 'pconv', l: 'Founders reached who pay (%)', v: [1.0, 1.5, 2.0], src: 'Estimate. Founders on free programme access are not counted.' }
     ]},
+    { id: 'seo', title: 'SEO', fields: [
+      { k: 'seo', l: 'Paying founders from SEO by day 60', v: [0, 2, 5], src: 'Estimate. A young site rarely ranks within 60 days.' }
+    ]},
     { id: 'ref', title: 'Founder referrals', fields: [
       { k: 'refshare', l: 'Founders who refer someone (%)', v: [10, 15, 20], src: 'Estimate.' },
       { k: 'refinv', l: 'Invites sent per referrer', v: [1, 2, 2], src: 'Estimate.' },
       { k: 'refpaid', l: 'Invited founders who pay (%)', v: [20, 25, 30], src: 'Estimate.' }
     ]},
-    { id: 'seo', title: 'SEO', fields: [
-      { k: 'seo', l: 'Paying founders from SEO by day 60', v: [0, 2, 5], src: 'Estimate. A young site rarely ranks within 60 days.' }
+    { id: 'paid', title: 'Paid Meta ads', fields: [
+      { k: 'spend', l: 'Ad spend over the 60 days (£)', v: 2000, src: 'Set by PitchHub. £2,000 is my base, about £330 a week for weeks 3 to 8.' },
+      { k: 'cpm', l: 'Cost per 1,000 ad views (CPM, £)', v: [12, 10, 8], src: 'Estimate for UK founder audiences.' },
+      { k: 'ctr', l: 'Click-through rate (%)', v: [0.8, 1.0, 1.3], src: '1% is the target I set on MIA Meta campaigns.' },
+      { k: 'lpv', l: 'Clicks that load the page (%)', v: 80, src: 'Estimate.' },
+      { k: 'lead', l: 'Page visitors who become leads (%)', v: [12, 20, 25], src: 'Estimate for a free scorecard or live session offer.' },
+      { k: 'paidrate', l: 'Leads who become paying founders (%)', v: [3, 6, 10], src: 'Estimate, with nurture emails and a live session.' }
     ]},
     { id: 'money', title: 'Price, value and tools', fields: [
       { k: 'price', l: 'Average price per founder per month (£)', v: 22, src: 'Estimate. Plans are £26 a month or £240 a year (£20 a month). £22 assumes about 1 in 3 pays monthly.' },
@@ -641,7 +753,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   var state = {};
   var fieldDefs = {};
   var presetIdx = 1;
+  var PILOT_TARGET = 67;
   var hasSender = true;
+  var scope = 'pilot';
+  var TARGET60 = { pilot: PILOT_TARGET, full: 92 };
 
   function el(id) { return document.getElementById(id); }
   function fmt(n, d) { return Number(n).toLocaleString('en-GB', { minimumFractionDigits: d || 0, maximumFractionDigits: d || 0 }); }
@@ -655,6 +770,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     r.paidVisits = clicks * s.lpv / 100;
     r.paidLeads = r.paidVisits * s.lead / 100;
     r.paid = r.paidLeads * s.paidrate / 100;
+    if (scope === 'pilot') { r.paidVisits = 0; r.paidLeads = 0; r.paid = 0; }
 
     r.warmVisits = s.list * s.wclick / 100;
     r.warm = r.warmVisits * s.wconv / 100;
@@ -674,19 +790,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     r.ptReached = r.ptPartners * s.reach;
     r.pt = r.ptReached * s.pconv / 100;
 
-    r.seo = s.seo;
+    r.seo = scope === 'pilot' ? 0 : s.seo;
     r.others = r.paid + r.warm + r.cold + r.li + r.rx + r.pt + r.seo;
     r.avgBase = 17 + r.others / 2; // average paying founders during the window
     r.refInvites = r.avgBase * s.refshare / 100 * s.refinv;
     r.ref = r.refInvites * s.refpaid / 100;
+    if (scope === 'pilot') { r.refInvites = 0; r.ref = 0; }
     r.refGiven = r.ref * 2 * s.price; // revenue given up: one free month each side
     r.total = r.others + r.ref;
 
-    r.cashBy = { paid: s.spend, warm: s.emailplat, cold: s.tools, li: s.salesnav, rx: 0, pt: 0, ref: 0, seo: 0 };
-    r.cash = s.spend + s.tools + s.salesnav + s.emailplat;
+    var adSpend = scope === 'pilot' ? 0 : s.spend;
+    r.cashBy = { paid: adSpend, warm: s.emailplat, cold: s.tools, li: s.salesnav, rx: 0, pt: 0, ref: 0, seo: 0 };
+    r.cash = adSpend + s.tools + s.salesnav + s.emailplat;
     r.loaded = r.cash;
 
-    r.cacPaid = r.paid > 0 ? s.spend / r.paid : Infinity;
+    r.cacPaid = r.paid > 0 ? adSpend / r.paid : Infinity;
     r.cacCash = r.total > 0 ? r.cash / r.total : Infinity;
     r.cacLoaded = r.total > 0 ? r.loaded / r.total : Infinity;
 
@@ -702,7 +820,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     r.budgetNow = r.needPaid * r.cacPaid;
     r.budgetGoal = r.needPaid * s.goalcac;
     r.after = 17 + r.total;
-    r.gap = s.day60 - r.total;
+    r.gap = s.day60 - Math.round(r.total);
     var perContact = s.contacts > 0 ? r.cold / s.contacts : 0;
     var perPartner = r.ptPartners > 0 ? r.pt / r.ptPartners : 0;
     var perReq = s.req > 0 ? r.li / s.req : 0;
@@ -768,9 +886,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       var f = fieldDefs[k];
       if (onlyScenario && !Array.isArray(f.v)) return;
       state[k] = valueFor(f, idx);
+      if (k === 'day60') state[k] = TARGET60[scope];
       if (el('in_' + k)) el('in_' + k).value = state[k];
     });
     markPreset();
+    render();
+  }
+
+  function markScope() {
+    var btns = document.querySelectorAll('[data-scope]');
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].setAttribute('aria-pressed', String(btns[i].getAttribute('data-scope') === scope));
+    }
+    el('flow1').className = 'vn-flow' + (scope === 'pilot' ? ' is-pilot' : '');
+    el('scopeLabel').textContent = scope === 'pilot' ? 'Showing the 60-day pilot: outbound to founders and partners, with no ad spend.' : 'Showing the full plan: the pilot plus SEO, founder referrals and paid Meta ads from the next phase.';
+  }
+
+  function setScope(next) {
+    var old = scope;
+    scope = next;
+    if (state.day60 === TARGET60[old]) {
+      state.day60 = TARGET60[next];
+      if (el('in_day60')) el('in_day60').value = state.day60;
+    }
+    markScope();
     render();
   }
 
@@ -800,22 +939,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   for (var pi = 0; pi < presetBtns.length; pi++) {
     presetBtns[pi].addEventListener('click', function () { applyPreset(parseInt(this.getAttribute('data-preset'), 10), true); });
   }
+  var scopeBtns = document.querySelectorAll('[data-scope]');
+  for (var si = 0; si < scopeBtns.length; si++) {
+    scopeBtns[si].addEventListener('click', function () { setScope(this.getAttribute('data-scope')); });
+  }
   el('resetAll').addEventListener('click', function () {
     hasSender = true;
+    scope = 'pilot';
     el('in_hassender').checked = true;
+    markScope();
     applyPreset(1, false);
   });
 
   // ---------- Render ----------
   var CHANNELS = [
-    ['paid', 'Paid Meta ads'],
     ['warm', 'Email to PitchHub’s founders'],
     ['cold', 'Cold email'],
     ['li', 'LinkedIn'],
     ['rx', 'Reddit and X'],
     ['pt', 'Partners'],
+    ['seo', 'SEO'],
     ['ref', 'Founder referrals'],
-    ['seo', 'SEO']
+    ['paid', 'Paid Meta ads']
   ];
 
   function row(cells, cls) {
@@ -839,14 +984,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     // money table
     var m = '';
-    m += row(['Total cash budget (ads, tools, optional lines)', { t: gbp(r.cash), num: 1 }]);
+    var nx = 'Next phase';
+    var pilot = scope === 'pilot';
+    m += row([pilot ? 'Total cash budget (tools and optional lines, no ad spend)' : 'Total cash budget (ads, tools, optional lines)', { t: gbp(r.cash), num: 1 }]);
     m += row(['Revenue given up on referral free months (not cash)', { t: gbp(r.refGiven), num: 1 }]);
-    m += row(['Cost per paying founder from ads (CAC)', { t: gbp(r.cacPaid), num: 1 }]);
+    m += row(['Cost per paying founder from ads (CAC)', { t: pilot ? nx : gbp(r.cacPaid), num: 1 }]);
     m += row(['Cost per paying founder, all channels, cash only', { t: gbp(r.cacCash), num: 1 }]);
     m += row(['Lifetime value (LTV) of a paying founder', { t: gbp(r.ltv), num: 1 }], 'vn-total');
-    m += row(['LTV to CAC, ads only', { t: isFinite(r.ratioPaid) ? fmt(r.ratioPaid, 1) + ' to 1' : 'n/a', num: 1 }]);
+    m += row(['LTV to CAC, ads only', { t: pilot ? nx : (isFinite(r.ratioPaid) ? fmt(r.ratioPaid, 1) + ' to 1' : 'n/a'), num: 1 }]);
     m += row(['LTV to CAC, all channels', { t: isFinite(r.ratioLoaded) ? fmt(r.ratioLoaded, 1) + ' to 1' : 'n/a', num: 1 }]);
-    m += row(['Months to pay back, ads only', { t: isFinite(r.payPaid) ? fmt(r.payPaid, 1) + ' months' : 'n/a', num: 1 }]);
+    m += row(['Months to pay back, ads only', { t: pilot ? nx : (isFinite(r.payPaid) ? fmt(r.payPaid, 1) + ' months' : 'n/a'), num: 1 }]);
     m += row(['Months to pay back, all channels', { t: isFinite(r.payLoaded) ? fmt(r.payLoaded, 1) + ' months' : 'n/a', num: 1 }]);
     el('moneyRows').innerHTML = m;
 
@@ -858,10 +1005,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     g += row(['Founders needed a month to hit the target', { t: '≈ ' + fmt(r.monthlyTarget, 0), num: 1 }]);
     g += row(['Founders a month from the other channels after day 60', { t: fmt(state.other, 0), num: 1 }]);
     g += row(['Founders a month ads must bring', { t: fmt(r.needPaid, 0), num: 1 }], 'vn-total');
-    g += row(['Monthly ad budget at the current ad CAC', { t: r.needPaid === 0 ? '£0' : gbp(r.budgetNow), num: 1 }], 'vn-total');
-    g += row(['Monthly ad budget if ad CAC falls to ' + gbp(state.goalcac), { t: gbp(r.budgetGoal), num: 1 }]);
+    g += row(['Monthly ad budget at the current ad CAC', { t: pilot ? nx : (r.needPaid === 0 ? '£0' : gbp(r.budgetNow)), num: 1 }], 'vn-total');
+    g += row(['Monthly ad budget if ad CAC falls to ' + gbp(state.goalcac), { t: pilot ? nx : gbp(r.budgetGoal), num: 1 }]);
     el('gapRows').innerHTML = g;
-    el('gapNote').textContent = isFinite(r.cacPaid)
+    el('gapNote').textContent = pilot
+      ? 'In the pilot, partners are the main lever. Ads, SEO and founder referrals belong to the next phase, and the full-plan view of this calculator prices them. After day 60, the cold email, LinkedIn, Reddit and X work keeps running at about 15 to 25 founders a month (estimate), and the first partners add more.'
+      : isFinite(r.cacPaid)
       ? 'Partners and ads are the only channels that can close this gap. After day 60, the cold email, LinkedIn, Reddit, X and SEO work keeps running at about 15 to 25 founders a month (estimate), and the first partners add more.'
       : 'Set an ad spend above £0 to see the ad budget needed.';
 
@@ -873,8 +1022,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       c = row(['Day-60 target of ' + tgt, 'Met at current rates, ' + by + '.']);
       v60 = 'At current rates you reach about ' + fmt(r.total, 0) + ' new paying founders by day 60, so your target of ' + tgt + ' is met' + (-r.gap < 0.5 ? ' with no extra work.' : ', with ' + fmt(-r.gap, 0) + ' to spare.');
     } else {
-      var gp = fmt(r.gap, 0);
-      c += row(['Extra ad spend', isFinite(r.xAds) ? '<b>' + gbp(r.xAds) + '</b> more in ads, in cash, at the current ad CAC of ' + gbp(r.cacPaid) + '. Total ad spend ' + gbp(state.spend + r.xAds) + '.' : 'Set an ad spend above \u00a30 to price this.']);
+      var gp = fmt(r.gap, 0), adRow = '';
+      adRow = pilot ? row(['Extra ad spend', 'Next phase. Ads are not part of the 60-day pilot.']) : row(['Extra ad spend', isFinite(r.xAds) ? '<b>' + gbp(r.xAds) + '</b> more in ads, in cash, at the current ad CAC of ' + gbp(r.cacPaid) + '. Total ad spend ' + gbp(state.spend + r.xAds) + '.' : 'Set an ad spend above \u00a30 to price this.']);
       if (isFinite(r.xContacts)) {
         var nc = state.contacts + r.xContacts, ib = r.inboxesFor(nc), ib0 = r.inboxesFor(state.contacts);
         c += row(['Extra cold-email founders to contact', '<b>' + fmt(r.xContacts, 0) + '</b> more founders, ' + fmt(nc, 0) + ' in all against a reachable pool of about ' + fmt(POOL, 0) + '. Needs about ' + ib + ' inboxes against ' + ib0 + ' now.' + (nc > POOL ? '<span class="vn-flag">More than the pool. It needs a wider list or more months.</span>' : '')]);
@@ -887,13 +1036,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       } else if (isFinite(r.xReq)) {
         c += row(['Extra LinkedIn connection requests', '<b>' + fmt(r.xReq, 0) + '</b> more requests, about ' + fmt(r.reqPerWeek, 0) + ' a week over 8 weeks.' + (r.reqPerWeek > 100 ? '<span class="vn-flag">One profile can send about 100 a week, so this needs about ' + r.profiles + ' profiles.</span>' : '')]);
       } else c += row(['Extra LinkedIn connection requests', 'n/a at current rates.']);
-      if (r.mixBase > 0 && isFinite(r.cacPaid)) {
+      c += adRow;
+      if (r.mixBase > 0 && (pilot || isFinite(r.cacPaid))) {
         var sa = r.paid / r.mixBase, sc = r.cold / r.mixBase, sp = r.pt / r.mixBase;
         var mixCold = r.perContact > 0 ? r.gap * sc / r.perContact : 0, mixPart = r.perPartner > 0 ? r.gap * sp / r.perPartner : 0;
         var mixOver = (state.contacts + mixCold) > POOL;
-        c += row(['A balanced mix', 'Split the ' + gp + ' founders in proportion to what each channel brings now. <b>Ads:</b> ' + fmt(r.gap * sa, 0) + ' founders for ' + gbp(r.gap * sa * r.cacPaid) + ' more in cash. <b>Cold email:</b> ' + fmt(r.gap * sc, 0) + ' founders from ' + fmt(mixCold, 0) + ' more contacts' + (mixOver ? ' (more than the pool of about ' + fmt(POOL, 0) + ')' : '') + '. <b>Partners:</b> ' + fmt(r.gap * sp, 0) + ' founders from ' + fmt(mixPart, 1) + ' more promoting partners.']);
+        c += row(['A balanced mix', 'Split the ' + gp + ' founders in proportion to what each channel brings now. <b>Cold email:</b> ' + fmt(r.gap * sc, 0) + ' founders from ' + fmt(mixCold, 0) + ' more contacts' + (mixOver ? ' (more than the pool of about ' + fmt(POOL, 0) + ')' : '') + '. <b>Partners:</b> ' + fmt(r.gap * sp, 0) + ' founders from ' + fmt(mixPart, 1) + ' more promoting partners.' + (pilot ? ' <b>Ads:</b> next phase.' : ' <b>Ads:</b> ' + fmt(r.gap * sa, 0) + ' founders for ' + gbp(r.gap * sa * r.cacPaid) + ' more in cash.')]);
       } else c += row(['A balanced mix', 'n/a at current rates.']);
-      v60 = 'At current rates, ' + tgt + ' new paying founders by day 60 needs ' + gp + ' more than the plan gives. That takes ' + (isFinite(r.xAds) ? 'about ' + gbp(r.xAds) + ' more in ads' : 'more ad spend') + (isFinite(r.xContacts) ? ', or contacting about ' + fmt(r.xContacts, 0) + ' more founders' : '') + '.' + (flagPool ? ' That is more than the reachable pool of about ' + fmt(POOL, 0) + ' founders, so cold email alone cannot close it.' : '');
+      v60 = 'At current rates, ' + tgt + ' new paying founders by day 60 needs ' + gp + ' more than the plan gives. That takes ' + (isFinite(r.xContacts) ? 'contacting about ' + fmt(r.xContacts, 0) + ' more founders' : 'more outbound volume') + (pilot ? '. Ads come in the next phase.' : (isFinite(r.xAds) ? ', or about ' + gbp(r.xAds) + ' more in ads.' : ', or more ad spend.')) + (flagPool ? ' That is more than the reachable pool of about ' + fmt(POOL, 0) + ' founders, so cold email alone cannot close it.' : '');
     }
     el('closeRows').innerHTML = c;
     el('closeNote').textContent = 'Each lever is the gap closed on its own, at the rates above, so you compare them and do not add them. Each assumes the rate stays the same as volume grows, which gets harder at scale. Extra tools and inboxes are not priced. The small knock-on from referrals is ignored.';
@@ -904,7 +1054,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     var oneTitle = 'The gap to ' + fmt(state.target, 0) + ' a year';
     el('gapTitle').textContent = oneTitle;
     var v1;
-    if (r.needPaid === 0) {
+    if (pilot && r.needPaid > 0) {
+      v1 = 'Without ads, the other channels reach about ' + fmt(state.other, 0) + ' founders a month, against about ' + fmt(r.monthlyTarget, 0) + ' needed for ' + fmt(state.target, 0) + ' a year. Reaching the year-one target needs the next phase, with paid ads at its centre. The full-plan view of this calculator prices it.';
+    } else if (r.needPaid === 0) {
       v1 = 'At current rates, the other channels alone reach the year-one target of ' + fmt(state.target, 0) + ' (about ' + fmt(r.monthlyTarget, 0) + ' a month) without ads.';
     } else {
       v1 = 'Without ads, the other channels reach about ' + fmt(state.other, 0) + ' founders a month, against about ' + fmt(r.monthlyTarget, 0) + ' needed for ' + fmt(state.target, 0) + ' a year, so the year-one target is not reachable without ads. ' + (isFinite(r.cacPaid) ? 'A monthly ad budget of about ' + gbp(r.budgetNow) + ' closes the rest at the current ad CAC.' : 'Set an ad spend above \u00a30 to price the rest.');
@@ -914,13 +1066,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     // KPIs
     el('o_total').textContent = fmt(r.total, 0);
     el('o_after').textContent = fmt(r.after, 0);
-    el('o_cac_paid').textContent = gbp(r.cacPaid);
+    el('o_cac_paid').textContent = pilot ? gbp(r.cacCash) : gbp(r.cacPaid);
+    el('o_cac_label').textContent = pilot ? 'cash cost per paying founder, all channels' : 'cost per paying founder from ads (CAC)';
     el('o_ltv').textContent = gbp(r.ltv);
 
     // group summaries
     Object.keys(RESULT_IN_SUMMARY).forEach(function (k) {
       var s = el('res_' + k);
-      if (s) s.textContent = fmt(r[k], 0) + ' founders';
+      if (s) s.textContent = (pilot && (k === 'paid' || k === 'seo' || k === 'ref')) ? 'Next phase' : fmt(r[k], 0) + ' founders';
     });
 
     // flowchart
@@ -929,6 +1082,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       f_li: fmt(hasSender ? r.liReplies : 0, 0), f_rx: fmt(hasSender ? r.rxVisits : 0, 0), f_pt: fmt(r.ptReached, 0),
       f_seo: fmt(r.seo, 0), f_ref: fmt(r.refInvites, 0), f_total: fmt(r.total, 0)
     };
+    if (pilot) { bind.f_paid = nx; bind.f_seo = nx; bind.f_ref = nx; }
     Object.keys(bind).forEach(function (k) {
       var nodes = document.querySelectorAll('[data-bind="' + k + '"]');
       for (var i = 0; i < nodes.length; i++) nodes[i].textContent = bind[k];
@@ -936,8 +1090,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     // sticky bar
     el('b_total').textContent = fmt(r.total, 0);
-    el('b_cac').textContent = gbp(r.cacPaid);
-    el('b_ratio').textContent = isFinite(r.ratioPaid) ? fmt(r.ratioPaid, 1) + 'x' : 'n/a';
+    el('b_cac').textContent = pilot ? gbp(r.cacCash) : gbp(r.cacPaid);
+    el('b_cac_l').textContent = pilot ? 'cash per founder' : 'cost per founder from ads';
+    var rat = pilot ? r.ratioLoaded : r.ratioPaid;
+    el('b_ratio').textContent = isFinite(rat) ? fmt(rat, 1) + 'x' : 'n/a';
 
     window.__vanelo = r; // for checking the base case
   }
@@ -950,6 +1106,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }, { threshold: 0 }).observe(el('calc'));
   }
 
+  markScope();
   applyPreset(1, false);
 })();
 </script>
