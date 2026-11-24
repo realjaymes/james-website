@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WKSZ7DQC');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A signal map for InEight's target accounts | James Praise</title>
+<meta name="description" content="A signal map and account scoring model for InEight, with eight real capital-construction accounts scored from public sources, a Clay and Salesforce build and an evaluation plan, by James Praise." />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="A signal map for InEight's target accounts | James Praise" />
+<meta property="og:description" content="A signal map and account scoring model for InEight, with eight real capital-construction accounts scored from public sources, a Clay and Salesforce build and an evaluation plan, by James Praise." />
+<meta property="og:url" content="https://jamespraise.xyz/work/ineight/proof/" />
+<meta property="og:image" content="https://jamespraise.xyz/assets/images/og/work/ineight-proof.jpg?v=20261024" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="A signal map for InEight's target accounts | James Praise" />
+<meta name="twitter:description" content="A signal map and account scoring model for InEight, with eight real capital-construction accounts scored from public sources, a Clay and Salesforce build and an evaluation plan, by James Praise." />
+<meta name="twitter:image" content="https://jamespraise.xyz/assets/images/og/work/ineight-proof.jpg?v=20261024" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="A signal map for InEight's target accounts | James Praise" />
+<meta property="og:description" content="A signal map and account scoring model for InEight, with eight real capital-construction accounts scored from public sources, by James Praise." />
+<meta property="og:url" content="https://jamespraise.xyz/work/ineight/proof/" />
+<meta name="twitter:card" content="summary" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+<link rel="canonical" href="https://jamespraise.xyz/work/ineight/proof/" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=23" />
+<style>
+  .proof-wrap { max-width: 760px; margin: 0 auto; padding: 100px 0 80px; }
+  .proof-eyebrow { color: var(--color-purple); font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; font-size: 13px; margin-bottom: 10px; }
+  .proof-credit { display: flex; align-items: center; gap: 10px; margin: 20px 0 40px; }
+  .proof-credit img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+  .proof-credit span { color: var(--text-muted); font-size: 14px; }
+  .proof-credit strong { color: var(--text-primary); }
+  .proof-draft { background: var(--bg-surface); border: 1px solid rgba(28,20,34,0.1); border-radius: 12px; padding: 40px; margin-bottom: 56px; }
+  .proof-draft h2 { margin-top: 32px; margin-bottom: 10px; }
+  .proof-draft h2:first-child { margin-top: 0; }
+  .proof-draft h3 { margin-top: 22px; margin-bottom: 8px; font-size: 17px; }
+  .proof-draft p, .proof-draft li { line-height: 1.7; }
+  .proof-draft ul, .proof-draft ol { margin: 0 0 16px 20px; }
+  .proof-body p, .proof-body li { line-height: 1.7; }
+  .proof-body ul { margin: 0 0 16px 20px; }
+  .proof-body h2 { margin-top: 40px; margin-bottom: 12px; }
+  .proof-back { display: inline-block; margin-bottom: 24px; font-size: 14px; }
+  .section-label { font-size: 13px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-table-wrap { overflow-x: auto; margin: 20px 0; }
+  .proof-table { width: 100%; border-collapse: collapse; font-size: 13px; background: var(--bg-page); border-radius: 10px; overflow: hidden; }
+  .proof-table th { background: var(--bg-surface); text-align: left; padding: 10px 12px; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-muted); border-bottom: 1px solid rgba(28,20,34,0.1); }
+  .proof-table td { padding: 10px 12px; border-bottom: 1px solid rgba(28,20,34,0.08); color: var(--text-primary); line-height: 1.5; vertical-align: top; }
+  .proof-table tr:last-child td { border-bottom: none; }
+  .score-calc { background: var(--bg-page); border: 1px solid rgba(28,20,34,0.12); border-radius: 10px; padding: 20px 24px; margin: 16px 0 20px; }
+  .score-calc label { display: flex; align-items: center; gap: 8px; font-size: 14px; margin: 6px 0; }
+  .score-calc select { padding: 6px 8px; border: 1px solid rgba(28,20,34,0.2); border-radius: 8px; font: inherit; font-size: 14px; background: #fff; }
+  .score-calc-out { margin-top: 14px; font-size: 15px; }
+  .score-calc-out strong { font-size: 18px; }
+  @media (max-width: 640px) { .proof-draft { padding: 24px; } }
+  .proof-toc { position: fixed; top: 140px; right: 32px; width: 200px; font-size: 13px; }
+  .proof-toc-group { margin-bottom: 20px; }
+  .proof-toc-label { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .proof-toc a { display: block; padding: 5px 0 5px 12px; border-left: 2px solid rgba(28,20,34,0.1); color: var(--text-muted); text-decoration: none; line-height: 1.4; }
+  .proof-toc a:hover { color: var(--color-purple); border-left-color: var(--color-purple); }
+  .proof-toc a.is-active { color: var(--color-purple); border-left-color: var(--color-purple); font-weight: 700; }
+  @media (max-width: 1400px) { .proof-toc { display: none; } }
+  .proof-progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(28,20,34,0.08); z-index: 200; }
+  .proof-progress-bar { height: 100%; width: 0%; background: var(--color-purple); transition: width 0.1s linear; }
+</style>
+</head>
+<body class="proof-page">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKSZ7DQC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="proof-progress-track"><div class="proof-progress-bar" id="proofProgressBar"></div></div>
+
+<a href="/work/ineight/" class="pitch-exit" aria-label="Back to the InEight pitch">
+  <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+</a>
+
+<nav class="proof-toc" aria-label="Section navigation">
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">The signal map</p>
+    <a href="#intro">Intro</a>
+    <a href="#signals">The signals that matter</a>
+    <a href="#score">The score</a>
+    <a href="#accounts">Eight accounts, scored</a>
+    <a href="#build">How it runs in Clay and Salesforce</a>
+    <a href="#inbound">The same score on inbound</a>
+    <a href="#evals">How I'd test it</a>
+  </div>
+  <div class="proof-toc-group">
+    <p class="proof-toc-label">Appendix</p>
+    <a href="#appendix-sources">Sources for each signal</a>
+    <a href="#appendix-limits">What I could not see</a>
+  </div>
+</nav>
+
+<div class="container proof-wrap">
+  <a class="proof-back" href="/work/ineight/">&larr; Back to the InEight pitch</a>
+
+  <p class="proof-eyebrow">Account intelligence for capital construction</p>
+  <h1>A signal map that tells InEight's reps which capital project accounts to call this month</h1>
+
+  <div class="proof-credit">
+    <img src="/assets/images/james-headshot.jpeg" alt="James Praise" />
+    <span><strong>James Praise</strong> &middot; GTM engineering</span>
+  </div>
+
+  <div class="proof-draft">
+    <p class="section-label">The signal map</p>
+
+    <h2 id="intro">Intro</h2>
+    <p>The role asks for account intelligence models that move into production, and <a href="https://www.linkedin.com/in/samanthamarsilla/recent-activity/all/" target="_blank" rel="noopener">your post</a> talks about Clay workflows that "help us find and win the right accounts." So I built a first version from public data: the signals that suggest a contractor or owner needs project controls software soon, a score, and eight real accounts scored with sources.</p>
+    <p>Your market is a few thousand large accounts, not millions of small ones. A good quarter comes from reaching the right contractor in the month it wins a big project, before a competitor does.</p>
+
+    <h2 id="signals">The signals that matter</h2>
+    <p>Each signal is public, dated and checkable, so a rep can open the source before the call. I ranked them by how close they sit to a software decision.</p>
+    <div class="proof-table-wrap">
+      <table class="proof-table">
+        <tr><th>Signal</th><th>Why it points to a project controls need</th><th>Where Clay finds it</th></tr>
+        <tr><td><strong>Procurement notice</strong> for project controls or capital program software (RFI, RFP)</td><td>The buyer has already decided to buy. The only question is from whom</td><td>Public procurement portals and agency board minutes</td></tr>
+        <tr><td><strong>Major project award or capital program approval</strong></td><td>A new multi-year project needs an estimate, a schedule and cost control set up in weeks</td><td>Press releases, earnings releases, filings, owner board approvals</td></tr>
+        <tr><td><strong>Acquisition</strong></td><td>New teams arrive with their own estimating and scheduling tools, which have to be folded in</td><td>Press releases and filings</td></tr>
+        <tr><td><strong>New leader</strong> in operations, project controls, IT or digital</td><td>New leaders review the tool stack in their first months</td><td>LinkedIn job changes (Sales Navigator), press releases</td></tr>
+        <tr><td><strong>Project controls hiring</strong> (schedulers, cost engineers, estimators)</td><td>More controls people means more projects, and often a spreadsheet or Primavera P6 setup straining at scale</td><td>Job postings, especially ones that name the current tools</td></tr>
+        <tr><td><strong>Public statement</strong> on digital delivery, AI or tool consolidation</td><td>The buyer has said out loud that the current setup is changing</td><td>Interviews, conference talks, annual reports</td></tr>
+      </table>
+    </div>
+
+    <h2 id="score">The score</h2>
+    <p>The score adds three parts out of 100. Fit says whether the account could ever buy. Timing says whether now is the moment. Engagement says whether they already know InEight.</p>
+    <div class="proof-table-wrap">
+      <table class="proof-table">
+        <tr><th>Part</th><th>Points</th></tr>
+        <tr><td><strong>Fit</strong> (up to 40)</td><td>Backlog or capital plan over $5B: 30. $1B to $5B: 20. Under $1B: 10. In an industry and region InEight serves: +10</td></tr>
+        <tr><td><strong>Timing</strong> (up to 40, last 12 months)</td><td>Procurement notice: 40. Project award or program approval: 20. Acquisition: 10. New leader: 10. Project controls hiring: 10. Public statement: 5</td></tr>
+        <tr><td><strong>Engagement</strong> (up to 20, InEight's own data)</td><td>Demo or pricing page visit by a known account: 10. Webinar or content download: 5. Email engagement: 5</td></tr>
+      </table>
+    </div>
+    <p><strong>Tiers.</strong> Tier 1 is 60 or more, Tier 2 is 40 to 59 and Tier 3 is under 40. Any procurement notice goes straight to Tier 1. Two separate signals within 30 days move an account up one tier, because a cluster of news means things are moving.</p>
+    <p>Try it on an account you know:</p>
+    <div class="score-calc" id="scoreCalc">
+      <label>Size <select id="scSize"><option value="30">Over $5B backlog or capital plan</option><option value="20" selected>$1B to $5B</option><option value="10">Under $1B</option></select></label>
+      <label><input type="checkbox" id="scServed" checked /> Industry and region InEight serves</label>
+      <label><input type="checkbox" id="scRfp" /> Procurement notice for project controls software</label>
+      <label><input type="checkbox" id="scAward" checked /> Major project award or program approval</label>
+      <label><input type="checkbox" id="scAcq" /> Acquisition</label>
+      <label><input type="checkbox" id="scLeader" /> New leader in operations, controls, IT or digital</label>
+      <label><input type="checkbox" id="scHiring" /> Project controls hiring</label>
+      <label><input type="checkbox" id="scStatement" /> Public statement on digital, AI or tool consolidation</label>
+      <label><input type="checkbox" id="scCluster" /> Two signals within 30 days</label>
+      <div class="score-calc-out" id="scOut"></div>
+    </div>
+
+    <h2 id="accounts">Eight accounts, scored</h2>
+    <p>Five contractors and three owners, all with news from the last 14 months. Engagement is zero for every account, because only your data can fill it. I checked none against your customer list, so step one in a real build is to remove customers and open opportunities.</p>
+    <div class="proof-table-wrap">
+      <table class="proof-table">
+        <tr><th>Account</th><th>Signals found</th><th>Score</th><th>Tier</th></tr>
+        <tr><td><strong>Dominion Energy</strong><br>Owner, electric utility, US</td><td><a href="https://finviz.com/news/319103/dominion-energy-expands-spending-plan-to-fuel-explosive-data-center-growth" target="_blank" rel="noopener">Capital plan for 2026 to 2030 raised to $64.7B</a> (Feb 2026). <a href="https://aimmediahouse.com/leadership-moves/dominion-energy-appoints-john-russell-as-chief-ai-and-digital-officer" target="_blank" rel="noopener">New Chief AI and Digital Officer</a> (Jul 2026)</td><td>70</td><td>1</td></tr>
+        <tr><td><strong>Aecon Group</strong><br>Contractor, Canada</td><td><a href="https://www.webull.com/news/15837587111255040" target="_blank" rel="noopener">Pickering nuclear refurbishment</a>, a $3B contract with $1.75B to Aecon, and a record $14.6B backlog (Oct 2026)</td><td>60</td><td>1</td></tr>
+        <tr><td><strong>Newmont</strong><br>Owner, mining, Red Chris in Canada</td><td><a href="https://news.gov.bc.ca/releases/2026MCM0029-000727" target="_blank" rel="noopener">Permits for the Red Chris block cave</a>, "several billion dollars" of capital (Jun 2026). <a href="https://im-mining.com/2026/07/03/government-of-canada-pledges-to-invest-c500-million-in-red-chris-block-cave-development/" target="_blank" rel="noopener">C$500M federal pledge</a> two weeks later</td><td>50, moved up by the 30-day rule</td><td>1</td></tr>
+        <tr><td><strong>Granite Construction</strong><br>Contractor, US</td><td><a href="https://www.sec.gov/Archives/edgar/data/861459/000086145925000051/gva-20250930xexx991.htm" target="_blank" rel="noopener">Record $6.3B backlog and $705M of acquisitions</a> in nine months (Nov 2025)</td><td>50</td><td>2</td></tr>
+        <tr><td><strong>Primoris Services</strong><br>Contractor, US</td><td><a href="https://www.rttnews.com/3580348/primoris-services-names-koti-vadlamudi-president-and-ceo.aspx" target="_blank" rel="noopener">New CEO</a>, previously EVP of Operations at Jacobs (Oct 2025). <a href="https://www.sec.gov/Archives/edgar/data/1361538/000136153825000038/prim-20251029xex99.htm" target="_blank" rel="noopener">$11.1B backlog</a></td><td>50</td><td>2</td></tr>
+        <tr><td><strong>Bird Construction</strong><br>Contractor, Canada</td><td><a href="https://www.bird.ca/?p=10223" target="_blank" rel="noopener">Backlog above $5B and the Fraser River Pile &amp; Dredge acquisition</a> (closed Oct 2025)</td><td>50</td><td>2</td></tr>
+        <tr><td><strong>San Antonio Water System</strong><br>Owner, water utility, US</td><td><a href="https://www.tpr.org/2026-08-04/after-city-council-delays-vote-on-water-rate-increase-saws-cuts-capital-plan-by-594m" target="_blank" rel="noopener">$2.6B five-year capital plan approved</a> after $594M of cuts (Aug 2026), <a href="https://www.tpr.org/economy-and-labor/2026-10-06/saws-board-oks-2027-budget-with-a-rate-increase-city-council-has-the-final-vote-thursday" target="_blank" rel="noopener">funded by the October rate vote</a></td><td>50</td><td>2</td></tr>
+        <tr><td><strong>Sterling Infrastructure</strong><br>Contractor, US</td><td><a href="https://www.sec.gov/Archives/edgar/data/0000874238/000087423825000125/a20250902ex991pressrelease.htm" target="_blank" rel="noopener">Bought CEC Facilities Group</a> (Sep 2025). <a href="https://www.strlco.com/?p=10590" target="_blank" rel="noopener">Backlog $3.01B, up 78%</a></td><td>40</td><td>2</td></tr>
+      </table>
+    </div>
+    <p><strong>What a rep does with it.</strong> Dominion is the first call: a capital plan that grew by $14.6B and a new executive whose job is data and AI, a natural opening for InEight Intelligence. Newmont is a watch, because its final investment decision may slip into 2027.</p>
+
+    <h2 id="build">How it runs in Clay and Salesforce</h2>
+    <ol>
+      <li><strong>Accounts in.</strong> The target list comes from Salesforce. Customers and open opportunities are removed by a lookup before anything else runs.</li>
+      <li><strong>Fit.</strong> A waterfall of company data providers fills size, industry and region, with backlog or capital plan taken from filings where public.</li>
+      <li><strong>Timing.</strong> One AI research column per signal type. Each must return a date, a one-line fact and the source address, or "none." A signal with no source is dropped.</li>
+      <li><strong>Score and tier.</strong> A formula column applies the points and the 30-day rule.</li>
+      <li><strong>Out to Salesforce.</strong> Five account fields: score, tier, latest signal, its date and its source link. When an account moves up a tier, the owner gets a task with the source attached.</li>
+      <li><strong>Refresh.</strong> The table reruns weekly. Signals older than 12 months stop counting.</li>
+    </ol>
+    <p>The source link on every signal is the part I would not skip. A rep trusts a score they can check in ten seconds, and ignores one they can't.</p>
+
+    <h2 id="inbound">The same score on inbound</h2>
+    <p>Your <a href="https://ineight.com/request-a-demo/" target="_blank" rel="noopener">demo form</a> asks for name, work email, company, phone and country, and nothing about the project. So the speed-to-lead flow should enrich the company the moment the form arrives and look up its tier. A Tier 1 account goes to its named owner within minutes. A new company gets scored on the spot and routed by tier.</p>
+
+    <h2 id="evals">How I'd test it</h2>
+    <ul>
+      <li><strong>Signal precision.</strong> Each week someone checks 25 random signals against their sources. Precision is the share where the source says what the column says. I'd ship at 90% and roll back to the last prompt version if it falls under 80% two weeks running. Each prompt version is logged with its date.</li>
+      <li><strong>Backtest before launch.</strong> Run the model on the last four quarters. If won accounts didn't show a timing signal in the six months before the opportunity opened more often than other accounts, the weights change before any rep sees a score.</li>
+      <li><strong>Rep feedback.</strong> A one-click "useful" or "not useful" on each tier-change task, reviewed monthly with Sales Ops.</li>
+    </ul>
+  </div>
+
+  <div class="proof-body">
+    <p class="section-label">Appendix</p>
+
+    <h2 id="appendix-sources">Sources for each signal</h2>
+    <ul>
+      <li>Dominion Energy: <a href="https://finviz.com/news/319103/dominion-energy-expands-spending-plan-to-fuel-explosive-data-center-growth" target="_blank" rel="noopener">capital plan</a> (23 Feb 2026, up from $50.1B); <a href="https://aimmediahouse.com/leadership-moves/dominion-energy-appoints-john-russell-as-chief-ai-and-digital-officer" target="_blank" rel="noopener">Chief AI and Digital Officer</a> (announced 20 Jul 2026, secondary report). Fit 40, timing 30.</li>
+      <li>Aecon: <a href="https://www.bnnbloomberg.ca/investing/investor-outlook/2026/04/29/investor-outlook-aecon-backlog-hits-record-109b-as-q1-revenue-rises/" target="_blank" rel="noopener">record C$10.9B backlog</a> (29 Apr 2026); <a href="https://www.webull.com/news/15837587111255040" target="_blank" rel="noopener">Pickering award and $14.6B backlog</a> (30 Oct 2026). Fit 40, timing 20.</li>
+      <li>Newmont: <a href="https://news.gov.bc.ca/releases/2026MCM0029-000727" target="_blank" rel="noopener">BC permits</a> (19 Jun 2026); <a href="https://im-mining.com/2026/07/03/government-of-canada-pledges-to-invest-c500-million-in-red-chris-block-cave-development/" target="_blank" rel="noopener">federal pledge</a> (3 Jul 2026). Fit scored on the project's "several billion" at 30, timing 20, then moved up one tier by the 30-day rule. A trade report says the investment decision may slip to early 2027; I could not open it.</li>
+      <li>Granite: both signals from one <a href="https://www.sec.gov/Archives/edgar/data/861459/000086145925000051/gva-20250930xexx991.htm" target="_blank" rel="noopener">earnings release</a> (6 Nov 2025), so they count as one event. Fit 40, timing 10.</li>
+      <li>Primoris: <a href="https://www.rttnews.com/3580348/primoris-services-names-koti-vadlamudi-president-and-ceo.aspx" target="_blank" rel="noopener">CEO announcement</a> (7 Oct 2025); <a href="https://www.sec.gov/Archives/edgar/data/1361538/000136153825000038/prim-20251029xex99.htm" target="_blank" rel="noopener">Q3 release</a> (3 Nov 2025). Fit 40, timing 10.</li>
+      <li>Bird: one <a href="https://www.bird.ca/?p=10223" target="_blank" rel="noopener">Q3 release</a> (12 Nov 2025). Fit 40, timing 10.</li>
+      <li>San Antonio Water System: <a href="https://www.tpr.org/2026-08-04/after-city-council-delays-vote-on-water-rate-increase-saws-cuts-capital-plan-by-594m" target="_blank" rel="noopener">plan approved</a> (4 Aug 2026); <a href="https://www.tpr.org/economy-and-labor/2026-10-06/saws-board-oks-2027-budget-with-a-rate-increase-city-council-has-the-final-vote-thursday" target="_blank" rel="noopener">rate plan</a> (Oct 2026), more than 30 days apart. Fit 30, timing 20.</li>
+      <li>Sterling: <a href="https://www.sec.gov/Archives/edgar/data/0000874238/000087423825000125/a20250902ex991pressrelease.htm" target="_blank" rel="noopener">CEC acquisition</a> (2 Sep 2025); <a href="https://www.strlco.com/?p=10590" target="_blank" rel="noopener">year-end backlog</a> (25 Feb 2026). Fit 30, timing 10.</li>
+    </ul>
+
+    <h2 id="appendix-limits">What I could not see</h2>
+    <p>I had no access to your Salesforce data, your customer list or your web traffic, so engagement is zero for every account and some of these companies may already be customers or open deals. Job postings for project controls roles blocked automated reading, so no hiring signal is scored here; in Clay that signal would come from a job-posting source. The point values are a starting point to replace with what the backtest shows.</p>
+  </div>
+
+  <div class="button-row" style="margin-top: 40px;">
+    <a href="/work/ineight/" class="button button-primary">Back to the pitch</a>
+    <a href="/work/ineight/files/james-praise-resume.pdf" target="_blank" rel="noopener" class="button button-secondary">My Resume</a>
+  </div>
+</div>
+
+<script src="/script.js?v=11"></script>
+<script>
+(function () {
+  function on(id) { return document.getElementById(id).checked; }
+  function calc() {
+    var fit = parseInt(document.getElementById('scSize').value, 10) + (on('scServed') ? 10 : 0);
+    var timing = 0;
+    if (on('scRfp')) timing += 40;
+    if (on('scAward')) timing += 20;
+    if (on('scAcq')) timing += 10;
+    if (on('scLeader')) timing += 10;
+    if (on('scHiring')) timing += 10;
+    if (on('scStatement')) timing += 5;
+    timing = Math.min(timing, 40);
+    var score = fit + timing;
+    var tier = score >= 60 ? 1 : (score >= 40 ? 2 : 3);
+    if (on('scCluster') && tier > 1) tier -= 1;
+    if (on('scRfp')) tier = 1;
+    document.getElementById('scOut').innerHTML = 'Fit ' + fit + ' + timing ' + timing + ' = <strong>' + score + '</strong> (engagement not included) &middot; <strong>Tier ' + tier + '</strong>';
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('#scoreCalc input, #scoreCalc select'), function (el) {
+    el.addEventListener('change', calc);
+  });
+  calc();
+})();
+(function () {
+  var bar = document.getElementById('proofProgressBar');
+  function updateProgress() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.proof-toc a'));
+  var sections = tocLinks.map(function (a) {
+    return document.getElementById(a.getAttribute('href').slice(1));
+  });
+  function updateActiveToc() {
+    var current = null;
+    sections.forEach(function (sec, i) {
+      if (sec && sec.getBoundingClientRect().top <= 140) current = i;
+    });
+    tocLinks.forEach(function (a, i) {
+      a.classList.toggle('is-active', i === current);
+    });
+  }
+  window.addEventListener('scroll', updateActiveToc, { passive: true });
+  updateActiveToc();
+})();
+</script>
+</body>
+</html>
