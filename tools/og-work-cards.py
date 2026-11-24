@@ -37,7 +37,7 @@ def page_info(rel: str) -> dict:
     slug = rel.split("/")[1]
     if rel.endswith("/proof"):
         kind, label = "proof", "BREAKDOWN"
-    elif 'name="robots" content="noindex' in t and title.startswith("Hello "):
+    elif 'name="robots" content="noindex' in t and title.startswith(("Hello ", "Bonjour ")):
         kind, label = "pitch", "PITCH"
     else:
         grid = (ROOT / "work" / "index.html").read_text()
